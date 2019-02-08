@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% include scripts.html %}
+{% unless page.tags contains "summary" %}
+<div style="text-align:right">
+  <div>
+    <a href="/"> Αρχική </a> > 
+    <a href="/{{ page.contest_url }}">{{ page.contest }} </a>
+  </div>
+</div>
+{% endunless %}
+<div class="main-content">
+  <div id="post">
+    <h1 class="title">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>
