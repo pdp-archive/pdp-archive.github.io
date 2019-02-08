@@ -1,0 +1,47 @@
+sch:
+   full_name: "Πανελλήνιο σχολικό δίκτυο"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/open?id=1kkWc73NffywjBr8T3v9v06KgyUMtnrS1"
+   testcases_url: "https://drive.google.com/open?id=1qmqCKtic2rs_BXkSD79XvDqon9QuzdzT"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1t1_ndmIVJTWIFE7vaL8j4AHiRTctBW8t"
+   
+colors:
+   full_name: "Πολύχρωμη κορδέλα"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=1oXByaXubqmPMBjulEaT1oKNhDcRraSTh"
+   testcases_url: "https://drive.google.com/open?id=1hrpoR0REwtgNJbQGHFoIpBeSVNJyFm2V"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=11cWL22oClUqwcg-cL9VZzv7QSVHrHiep"
+
+uflights:
+   full_name: "Κάρτες απεριόριστων πτήσεων"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1db45kL3ErBcabadab4Rlrxeu-Kw5qyvT"
+   testcases_url: "https://drive.google.com/open?id=1lxEOD-eMsNCPsMUt_bBeSM9V98rOr_Ip"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1hSHGcnKqovrlPYIZpfF9Eb_PMlX_9xeq"
+
+dnaseq:
+   full_name: "Ακολουθίες DNA"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   testcases_url: "https://drive.google.com/open?id=1Hg5XmSzUVveeIQT6LGynzItxxokoX7jF"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1sZKgmKndlPUyljfjCWWZNUnAdZbSo7DH"
+   
+villages:
+   full_name: "Οδικό δίκτυο"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1VDkcydvBZROG__1RGOtH-t733PmBt-lY"
+   
+maketime:
+   full_name: "Πάω διακοπές"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1VCAzJTX_Nd_dRvHKeSJbEY8utBqKKUJa"
