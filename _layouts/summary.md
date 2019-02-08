@@ -5,7 +5,7 @@ layout: post
 
 {% capture md %}
 
-## Α' Φάση γυμνασίου
+## Α' Φάση
 {% for problem_it in contest %}
   {% assign problem = problem_it[1] %} 
   {% if problem.stage == "a" %}
