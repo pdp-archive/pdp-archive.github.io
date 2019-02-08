@@ -11,7 +11,7 @@ title: Home
   <body>
     {% include header.html %}
     {% assign sortedCollections = site.collections %}
-    {% for collection in site.collections %} 
+    {% for collection in site.collections reversed %} 
 	  {% if collection.label != "posts" %}
 	    {% for post in site.[collection.label] %}
           {% if post.tags contains "summary" %}		
