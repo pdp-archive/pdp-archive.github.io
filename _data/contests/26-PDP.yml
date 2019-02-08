@@ -1,0 +1,47 @@
+domes:
+   full_name: "Δομές κοινωνικής αλληλεγγύης"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/open?id=13E-Jq6rF_dYnxq-lbWgWR9xUJ0W-AHEf"
+   testcases_url: "https://drive.google.com/open?id=1ar3Hoc4KDQVNA2dTlsvXiPJDMLvFWQ-L"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1AQc9DeBb9m56cJIslDYg36DjYxGXiKov"
+   
+ensemble:
+   full_name: "Ρυθμική γυμναστική"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=1h_qKFjBXObig1oAHxj0vqYN0uWCXE7Mg"
+   testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=18LH3S82s0OmqsCtVbqMutgIA98ykcDUX"
+
+solar:
+   full_name: "Ηλιακός άνεμος"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1lGL7lK2H8Z43LJQDsnOSFl5xxWHHhCH0"
+   testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=12rT6z-_dvre27hMvC7RKkxzwkjiWC_d5"
+
+sumpair:
+   full_name: "Άθροισμα ζευγών"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1PwIe-HXNrvGuWSD6bLrCofHjMq7xYuAN"
+   
+roadwork:
+   full_name: "Επισκευή δρόμου"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=179GPellf6s6ffiK6VzUeHtM7u7ZlEn4K"
+   
+numbase:
+   full_name: "Μετατροπή αριθμού"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
+   solution: true
+   codes_url: "https://drive.google.com/open?id=1I4J__GL6e-gJ5miQHd9LRyDIwzTv0ma8"
