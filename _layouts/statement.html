@@ -1,0 +1,37 @@
+<!doctype html>
+{% assign contest = site.data.contests[page.contest_url] %} 
+{% assign task = contest[page.codename] %}
+{% if task.stage == "c" %}
+  {% assign stage_name = "Γ' Φάση" %}
+{% elsif task.stage == "bgym" %}
+  {% assign stage_name = "B' Φάση" %}
+{% elsif task.stage == "blyk" %}
+  {% assign stage_name = "B' Φάση" %}
+{% elsif task.stage == "a" %}
+  {% assign stage_name = "Α' Φάση" %}
+{% endif %}
+{% assign title = page.contest | append: " " | append: stage_name | append: ": " | append: task.full_name | append: " (" | append: page.codename | append: ")" %}
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/css/main.css">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include scripts.html %}
+{% unless page.tags contains "summary" %}
+{% endunless %}
+  <div class="main-content">
+    <div style="text-align:right">
+      <div>
+        <a href="/"> Αρχική </a> > 
+        <a href="/{{ page.contest_url }}">{{ page.contest }} </a>
+      </div>
+    </div>
+    <div id="post"> 
+      <h1 class="title">{{ title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+  </body>
+</html>
