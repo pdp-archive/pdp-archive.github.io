@@ -2,6 +2,7 @@ sch:
    full_name: "Πανελλήνιο σχολικό δίκτυο"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1kkWc73NffywjBr8T3v9v06KgyUMtnrS1"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qmqCKtic2rs_BXkSD79XvDqon9QuzdzT"
    solution: true
    codes_url: "https://drive.google.com/open?id=1t1_ndmIVJTWIFE7vaL8j4AHiRTctBW8t"

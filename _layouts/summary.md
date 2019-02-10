@@ -10,7 +10,8 @@ layout: post
   {% assign problem = problem_it[1] %} 
   {% if problem.stage == "a" %}
 **{{ problem.full_name }} ({{ problem_it[0] }}):**
-[εκφώνηση]({{ problem.statement_pdf_url}}) \|
+{% if problem.statement_md == true %}[εκφώνηση](/{{ page.contest_url }}/a-{{problem_it[0]}}-statement) {% else %} εκφώνηση {% endif %}
+([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/a-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
 [κώδικες]({{ problem.codes_url }})
@@ -22,7 +23,8 @@ layout: post
   {% assign problem = problem_it[1] %} 
   {% if problem.stage == "bgym" %}
 **{{ problem.full_name }} ({{ problem_it[0] }}):**
-[εκφώνηση]({{ problem.statement_pdf_url}}) \|
+{% if problem.statement_md == true %}[εκφώνηση](/{{ page.contest_url }}/bgym-{{problem_it[0]}}-statement) {% else %} εκφώνηση {% endif %}
+([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/bgym-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
 [κώδικες]({{ problem.codes_url }})
@@ -34,7 +36,8 @@ layout: post
   {% assign problem = problem_it[1] %} 
   {% if problem.stage == "blyk" %}
 **{{ problem.full_name }} ({{ problem_it[0] }}):**
-[εκφώνηση]({{ problem.statement_pdf_url}}) \|
+{% if problem.statement_md == true %}[εκφώνηση](/{{ page.contest_url }}/blyk-{{problem_it[0]}}-statement) {% else %} εκφώνηση {% endif %}
+([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/blyk-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
 [κώδικες]({{ problem.codes_url }})
@@ -45,7 +48,8 @@ layout: post
   {% assign problem = problem_it[1] %} 
   {% if problem.stage == "c" %}
 **{{ problem.full_name }} ({{ problem_it[0] }}):**
-[εκφώνηση]({{ problem.statement_pdf_url}}) \|
+{% if problem.statement_md == true %}[εκφώνηση](/{{ page.contest_url }}/c-{{problem_it[0]}}-statement) {% else %} εκφώνηση {% endif %}
+([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/c-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
 [κώδικες]({{ problem.codes_url }})
