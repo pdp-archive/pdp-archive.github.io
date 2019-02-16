@@ -22,7 +22,7 @@
   1. Ακολουθήστε τα βήματα για την εγκατάσταση του Jekyll (και της Ruby) [εδώ](https://jekyllrb.com/docs/installation/#guides). Επιλέξτε το άρθρο ανάλογα με το λειτουργικό σύστημα που έχετε. 
   2. Κάντε clone αυτό το repository σας στον υπολογιστή σας. (Αν τώρα ξεκινάτε με το GitHub, δείτε [αυτό](https://guides.github.com/activities/hello-world/).) Το μόνο που χρειάζεται να μάθετε είναι τι σημαίνει clone, commit, pull και merge)
   3. Πηγαίνετε στο τοπικό directory που κάνατε clone το repository.
-  4. Τρέξτε την εντολή `jekyll` serve.
+  4. Τρέξτε την εντολή `jekyll serve`.
   5. Πηγαίνετε στην σελίδα `localhost:4000` στον browser σας για να δείτε το site.
   6. Κάθε αλλαγή που κάνετε θα ανανεώνεται το site.
   7. Για να το σταματήσετε πατήστε `Ctr+C` και μετά `Y`.  
@@ -40,7 +40,7 @@
      layout: summary
 	 ---
 	 ```
-  4. Ελέγξτε ότι στο `localhost:4000/XX-PDP` εμφανίζεται μία σελίδα χωρίς προβλήματα (μόνο με φάσεις). Μπορεί να πρέπει να σταματήσετε το jekyll serve και να το ξανατρέξετε.
+  4. Ελέγξτε ότι στο `localhost:4000/XX-PDP` εμφανίζεται μία σελίδα χωρίς προβλήματα (μόνο με τις φάσεις). Μπορεί να πρέπει να σταματήσετε το `jekyll serve` και να το ξανατρέξετε.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/8f8b7549a4baf4318085ea01e2abd2b9eeaadc4d).
 	 
@@ -58,14 +58,14 @@
         testcases_url: {Link στο zip με τα testcases.}
         solution: false
         codes_url: {Link στο φάκελο με όλους τους κώδικες για το πρόβλημα και για την λύση σας.}
-    ```
+     ```
   
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/efeb1d69a76e3fe17465c1f619ed2afec911fae7).
 
 ## Οδηγίες για την προσθήκη λύσης
 Ακολουθήστε τα εξής βήματα:
   
-  1. Βεβαιωθείτε ότι έχετε προσθέσει το πρόβλημα για το οποίο θα προσθέσετε λύση (δείτε [εδώ][#new-problem]).
+  1. Βεβαιωθείτε ότι έχετε προσθέσει το πρόβλημα για το οποίο θα προσθέσετε λύση (δείτε [εδώ](#new-problem)).
   2. Βρείτε την εισαγωγή για το πρόβλημα στο data/contests/ΧΧ-PDP.yml.
   3. Αλλάξτε τη μεταβλητή "solution: false" σε "solution: true".
   4. Στον φάκελο _XX-PDP δημιουργήστε το αρχείο {φάση}-{codename}-solution.md (πχ c-dnaseq-solution.md).
