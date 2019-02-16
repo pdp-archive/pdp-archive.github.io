@@ -5,3 +5,11 @@ seti:
    testcases_url: "https://drive.google.com/open?id=1mXvn8D8c1v7btzEb9M27GJ1iVspuf8Cl"
    solution: true
    codes_url: "https://drive.google.com/open?id=1n5O6xdwu61AIbVOqtLuBIAPc2Nm_kWUD"
+
+karla:
+   full_name: "Ανασύσταση της Βοιβηίδος λίμνης"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=1-AY-VBFsg_0z9EJlD13M5BHnw5EufP1z"
+   testcases_url: "https://drive.google.com/open?id=1PTgrmmlI5ZHZu14dwurmhy29NMLy9A4B"
+   solution: false
+   codes_url: "https://drive.google.com/open?id=1EBIaD7Hpyfnu4euk1OlMrjWcQnh11aR0"
