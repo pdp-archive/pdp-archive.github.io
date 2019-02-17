@@ -1,4 +1,21 @@
 source ./utils/test_functions.sh
+echo "TASK : karla"
+echo "   SOLUTION : karla_official_cpp"
+array=(`seq 1 12`)
+run_test 'testdata/25-PDP/karla/karla.in#' 'testdata/25-PDP/karla/karla.out#' 'karla.in' 'karla.out' './code/25-PDP/karla/karla_official.cpp' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : karla_official_c"
+array=(`seq 1 12`)
+run_test 'testdata/25-PDP/karla/karla.in#' 'testdata/25-PDP/karla/karla.out#' 'karla.in' 'karla.out' './code/25-PDP/karla/karla_official.c' 3 'gcc' "${array[@]}" 
+echo "   SOLUTION : karla_official_pas"
+echo "   SOLUTION : karla_efficient_iterative"
+array=(`seq 1 12`)
+run_test 'testdata/25-PDP/karla/karla.in#' 'testdata/25-PDP/karla/karla.out#' 'karla.in' 'karla.out' './code/25-PDP/karla/karla_efficient_iterative.cc' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : karla_efficient_recursive"
+array=(`seq 1 12`)
+run_test 'testdata/25-PDP/karla/karla.in#' 'testdata/25-PDP/karla/karla.out#' 'karla.in' 'karla.out' './code/25-PDP/karla/karla_efficient_recursive.cc' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : karla_efficient_short"
+array=(`seq 1 12`)
+run_test 'testdata/25-PDP/karla/karla.in#' 'testdata/25-PDP/karla/karla.out#' 'karla.in' 'karla.out' './code/25-PDP/karla/karla_efficient_short.cc' 3 'g++' "${array[@]}" 
 echo "TASK : seti"
 echo "   SOLUTION : seti_official_cpp"
 array=(`seq 1 10`)
