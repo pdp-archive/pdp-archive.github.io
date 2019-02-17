@@ -31,7 +31,7 @@ dnaseq:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Hg5XmSzUVveeIQT6LGynzItxxokoX7jF"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1sZKgmKndlPUyljfjCWWZNUnAdZbSo7DH"
+   codes_in_git: true
    
 villages:
    full_name: "Οδικό δίκτυο"
@@ -39,7 +39,7 @@ villages:
    statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
    testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1VDkcydvBZROG__1RGOtH-t733PmBt-lY"
+   codes_in_git: true
    
 maketime:
    full_name: "Πάω διακοπές"
@@ -47,4 +47,4 @@ maketime:
    statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
    testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1VCAzJTX_Nd_dRvHKeSJbEY8utBqKKUJa"
+   codes_in_git: true
