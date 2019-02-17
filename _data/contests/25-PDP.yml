@@ -29,4 +29,11 @@ sound:
    testcases_url: "https://drive.google.com/open?id=16xZeHiOhyBsQqmyIwclJoej0Zc496OIn"
    solution: true
    codes_in_git: true
-   
+
+telecom:
+   full_name: "Τηλεπικοινωνιακά κόστη"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1Fq4Z56HnSicnIo7R91Q6KQyGrkI8rzO-"
+   testcases_url: "https://drive.google.com/open?id=1raK5F7VIiZVsAEOInqW0haVqxHtXH23C"
+   solution: true
+   codes_in_git: true
