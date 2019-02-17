@@ -2,6 +2,7 @@
 layout: post
 ---
 {% assign contest = site.data.contests[page.contest_url] %}
+{% assign git_code_location = "https://github.com/pdp-archive/pdp-archive.github.io/tree/master/source_code/code/" | append: page.contest_url | append: "/" %}
 
 {% capture md %}
 
@@ -14,7 +15,7 @@ layout: post
 ([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/a-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
-[κώδικες]({{ problem.codes_url }})
+[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: problem_it[0] }} {% else %} {{ problem.codes_url }} {% endif %} )
 {% endif %}
 {% endfor %}
 
@@ -27,7 +28,7 @@ layout: post
 ([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/bgym-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
-[κώδικες]({{ problem.codes_url }})
+[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: problem_it[0] }} {% else %} {{ problem.codes_url }} {% endif %} )
 {% endif %}
 {% endfor %}
 
@@ -40,7 +41,7 @@ layout: post
 ([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/blyk-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
-[κώδικες]({{ problem.codes_url }})
+[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: problem_it[0] }} {% else %} {{ problem.codes_url }} {% endif %} )
 {% endif %}
 {% endfor %}
 ## Γ' Φάση
@@ -52,7 +53,7 @@ layout: post
 ([pdf]({{ problem.statement_pdf_url}})) \|
 [testcases]({{ problem.testcases_url }}) \|
 {% if problem.solution == true %}[λύση](/{{ page.contest_url }}/c-{{problem_it[0]}}-solution) \|{% else %} λύση \| {% endif %}
-[κώδικες]({{ problem.codes_url }})
+[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: problem_it[0] }} {% else %} {{ problem.codes_url }} {% endif %} )
 {% endif %}
 {% endfor %}
 
