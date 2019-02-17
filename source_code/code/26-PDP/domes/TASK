@@ -1,0 +1,49 @@
+TASK(
+   name = "domes",
+   test_count = 10,
+   files_dir = "testdata/26-PDP/domes/",
+   input_file = "domes.in",
+   output_file = "domes.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "domes_official_cpp",
+		 source = "domes_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Κετσετσίδης Ραφαήλ",
+		    school = "Ιδ. ΓΕΛ Εκπαιδευτηρίων Μαντουλίδη",
+		 ),
+      ),
+	  SOLUTION(
+         name = "domes_official_c",
+		 source = "domes_official.c",
+		 passes_all,
+		 lang = "c",
+		 author = PERSON(
+		    name = "Παπαδάκης Ιωάννης",
+		    school = "ΓΕΛ Αγίας Βαρβάρας Ηρακλείου",
+		 ),
+      ),
+	  SOLUTION(
+         name = "domes_official_pas",
+		 source = "domes_official.pas",
+		 passes_all,
+		 lang = "pas",
+		 author = PERSON(
+		    name = "Παναγιωτίδης Ιωάννης",
+		    school = "Πειραματικό Γ/σιο Αγίων Αναργύρων",
+		 ),
+      ),
+	  SOLUTION(
+         name = "domes_efficient",
+		 source = "domes_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
