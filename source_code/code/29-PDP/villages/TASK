@@ -1,0 +1,43 @@
+TASK(
+   name = "villages",
+   test_count = 52,
+   files_dir = "testdata/29-PDP/villages/",
+   input_file = "villages.in",
+   output_file = "villages.out",
+   time_limit = 2,
+   solutions = [
+      SOLUTION(
+         name = "villages_official_cpp",
+		 source = "villages_official.cpp",
+		 passes_all,
+		 lang = "c++",
+      ),
+	  SOLUTION(
+         name = "villages_efficient_recursive",
+		 source = "villages_efficient_recursive.cc",
+		 passes_all_except_for = [46, 49, 52],
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "villages_efficient_iterative",
+		 source = "villages_efficient_iterative.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "villages_slow",
+		 source = "villages_slow.cc",
+		 passes_up_to = 37,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
