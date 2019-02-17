@@ -165,4 +165,15 @@ run_test 'testdata/29-PDP/villages/villages.in#' 'testdata/29-PDP/villages/villa
 echo "   SOLUTION : villages_slow"
 array=(`seq 1 37`)
 run_test 'testdata/29-PDP/villages/villages.in#' 'testdata/29-PDP/villages/villages.out#' 'villages.in' 'villages.out' './code/29-PDP/villages/villages_slow.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : agora"
+echo "   SOLUTION : agora_brute_force"
+array=(`seq 1 10`)
+run_test 'testdata/30-PDP/agora/agora.in#' 'testdata/30-PDP/agora/agora.out#' 'agora.in' 'agora.out' './code/30-PDP/agora/agora_brute_force.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : agora_efficient"
+array=(`seq 1 20`)
+run_test 'testdata/30-PDP/agora/agora.in#' 'testdata/30-PDP/agora/agora.out#' 'agora.in' 'agora.out' './code/30-PDP/agora/agora_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : astrolavos"
+echo "   SOLUTION : astrolavos_efficient"
+array=(`seq 1 15`)
+run_test 'testdata/30-PDP/astrolavos/astrolavos.in#' 'testdata/30-PDP/astrolavos/astrolavos.out#' 'astrolavos.in' 'astrolavos.out' './code/30-PDP/astrolavos/astrolavos_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
 
