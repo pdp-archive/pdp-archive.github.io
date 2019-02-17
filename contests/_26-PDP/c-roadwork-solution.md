@@ -3,7 +3,7 @@ layout: solution
 codename: roadwork
 ---
 ## Λύση $$O(NL)$$
-Διατηρούμε έναν πίνακα $$Τ$$ από booleans με μήκος $$L$$, όπου $$T[i]$$ δείχνει αν η θέση $$i$$ είναι καλυπτόμενη από κάποιο διάστημα. Για να προσθέσουμε ένα διάστημα $$[S, T]$$ σημαδεύουμε όλα σημεία $$T[i] = 1$$ για $$i \in [S, T]$$. Για να βρούμε το μέγιστο κενό, διατρέχουμε τον πίνακα $$T$$ και αναζητούμε για την μέγιστη συνεχόμενη ακολουθία από $$0$$. Το μήκος της είναι το μέγιστο κενό. Προσθέτουμε ένα-ένα τα διαστήματα, και όταν το μέγιστο κενό γίνει μικρότερο από $$X$$, έχουμε βρει την απάντηση.
+Διατηρούμε έναν πίνακα $$Τ$$ από booleans με μήκος $$L$$, όπου $$T[i]$$ δείχνει αν το $$[i, i+1]$$ είναι καλυπτόμενo από κάποιο διάστημα. Για να προσθέσουμε ένα διάστημα $$[S, T]$$ σημαδεύουμε όλα σημεία $$T[i] = 1$$ για $$i \in [S, T)$$. Για να βρούμε το μέγιστο κενό, διατρέχουμε τον πίνακα $$T$$ και αναζητούμε για την μέγιστη συνεχόμενη ακολουθία από $$0$$. Το μήκος της είναι το μέγιστο κενό. Προσθέτουμε ένα-ένα τα διαστήματα, και όταν το μέγιστο κενό γίνει μικρότερο από $$X$$, έχουμε βρει την απάντηση.
 
 Κάθε βήμα του αλγορίθμου θέλει στην χειρότερη περίπτωση $$O(L)$$ χρόνο, άρα η τελική πολυπλοκότητα είναι $$O(NL)$$ και η μνήμη είναι $$O(L)$$.
 
@@ -17,22 +17,22 @@ const size_t MAXN = 1000000;
 bool is_covered[MAXL];
 
 long cover(long s, long t) {
-  for (long j = s; j <= t; ++j) {
-    is_covered[j] = true;
+  for (long j = s; j < t; ++j) {
+	is_covered[j] = true;
   }
 }
 
 long N, L, X;
 
 long findMaxGap() {
-  long prev_covered = -1;
+  long prev_one = -1;
   long max_gap = 0;
   for (long j = 0; j < L; ++j) {
-    if (is_covered[j]) prev_covered = j + 1;
-    else {
-      long gap = j - prev_covered;
-      max_gap = std::max(max_gap, gap);
-    }
+    if (is_covered[j]) prev_one = j;
+	else {
+	  long gap = j - prev_one;
+	  max_gap = std::max(max_gap, gap);
+	}
   }
   return max_gap;
 }
@@ -40,15 +40,19 @@ long findMaxGap() {
 int main() {
   FILE *fi = fopen("roadwork.in", "r");
   fscanf(fi, "%ld %ld %ld", &N, &L, &X);
-  long solution = -1; 
-  for (long j = 0; j < N; ++j) {
-    long s, t;
-    fscanf(fi, "%ld %ld", &s, &t);
-    cover(s, t);
-    if (findMaxGap() < X) {
-      solution = j + 1;
-      break;
-    }
+  long solution = -1;
+  if (findMaxGap() <= X) {
+    solution = 0;
+  } else {	
+	  for (long j = 0; j < N; ++j) {
+		long s, t;
+		fscanf(fi, "%ld %ld", &s, &t);
+		cover(s, t);
+		if (findMaxGap() <= X) {
+		  solution = j + 1;
+		  break;
+		}
+	  }
   }
   FILE *fo = fopen("roadwork.out", "w");
   fprintf(fo, "%ld\n", solution);
@@ -56,7 +60,6 @@ int main() {
   fclose(fo);
   return 0;
 }  
-  
 {% endhighlight %}
 
 ## Λύση σε $$O(N^2)$$
@@ -157,29 +160,28 @@ int main(){
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
+#define MAXN 1001000
 
 using namespace std;
-
-const size_t MAXN = 1000000;
 
 struct ent{
   long x; // Θέση.
   long t; // Τύπος (+1: αρχή, -1: τέλος).
-  long d; // Στιγμή που εισήχθη.
+  long d; // Στιγμή που εισήχθει.
   bool operator<(const ent &E) const{
-    if (x == E.x) return t > E.t; // Πρώτα τα τέλη.
-    return x < E.x;
+	if (x == E.x) return t > E.t; // Πρώτα τα τέλη.
+	return x < E.x;
   }
   ent(long x, long t, long d) : x(x), t(t), d(d) { }
   ent() { }
 } interv[2*MAXN];
 
 long L, N, X;
-long findMaxGap(long d){
+int findMaximumGap(int d){
   long prev = 1, gap = 0, open_intervals = 0, max_gap = 0;
-  for (long i = 0; i < 2 * N; i++){
-    // Ελέγχουμε ένα σημείο μόνο αν ανήκει στα πρώτα
-    // d διαστήματα.
+  for (int i = 0; i < 2 * N; i++){
+	// Ελέγχουμε ένα σημείο μόνο αν ανήκει στα πρώτα
+	// d διαστήματα.
     if (d >= interv[i].d){
       if (open_intervals == 0) {
         gap += interv[i].x - prev;
@@ -193,14 +195,14 @@ long findMaxGap(long d){
 }
 
 long binSearchAnswer() {
-  if (findMaxGap(N) > X) return -1;
+  if (findMaximumGap(N) > X) return -1;
   long st = 0, en = N; 
   while (st < en - 1){
     long mn = (st + en)/2;
-    if (findMaxGap(mn) <= X) en = mn;
+    if (findMaximumGap(mn) <= X) en = mn;
     else st = mn + 1;
   }
-  if (findMaxGap(st) <= X) return st;
+  if (findMaximumGap(st) <= X) return st;
   return en;
 }
 
@@ -208,7 +210,7 @@ int main(){
   FILE *fi = fopen("roadwork.in", "r");
   fscanf(fi, "%ld%ld%ld", &N, &L, &X);
   for (long i = 1; i <= N; i++){
-    long A, B;
+	long A, B;
     fscanf(fi, "%ld%ld", &A, &B);
     interv[2*i-2] = ent(A,  1, i);
     interv[2*i-1] = ent(B, -1, i);
