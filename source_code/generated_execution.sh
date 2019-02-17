@@ -29,4 +29,14 @@ run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' '
 echo "   SOLUTION : sch_set"
 array=(`seq 1 20`)
 run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' 'sch.out' './code/29-PDP/sch/sch_set.cc' 1 'g++' "${array[@]}" 
+echo "TASK : uflights"
+echo "   SOLUTION : uflights_official_cpp"
+array=(`seq 1 25`)
+run_test 'testdata/29-PDP/uflights/uflights.in#' 'testdata/29-PDP/uflights/uflights.out#' 'uflights.in' 'uflights.out' './code/29-PDP/uflights/uflights_official.cpp' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : uflights_kruskal"
+array=(`seq 1 25`)
+run_test 'testdata/29-PDP/uflights/uflights.in#' 'testdata/29-PDP/uflights/uflights.out#' 'uflights.in' 'uflights.out' './code/29-PDP/uflights/uflights_kruskal.cc' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : uflights_prim"
+array=(`seq 1 25`)
+run_test 'testdata/29-PDP/uflights/uflights.in#' 'testdata/29-PDP/uflights/uflights.out#' 'uflights.in' 'uflights.out' './code/29-PDP/uflights/uflights_prim.cc' 3 'g++' "${array[@]}" 
 
