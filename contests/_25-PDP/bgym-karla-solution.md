@@ -12,7 +12,7 @@ codename: karla
 
  * H μία είναι μία από τις τέσσερις γειτονικές της άλλης.
 
- * Αν υπάρχει μία ακολουθία από γειτονικές τιμές $$k_1, \ldots, k_n$$ ώστε $$Α \leftrightarrow k_1 \leftrightarrow k_n \leftrightarrow B$$.
+ * Αν υπάρχει μία ακολουθία από γειτονικές τιμές $$k_1, \ldots, k_n$$ ώστε $$Α \leftrightarrow k_1 \leftrightarrow \ldots \leftrightarrow k_n \leftrightarrow B$$.
 
  
 Αυτή η συνδεσιμότητα ορίζει έναν γράφο. Επομένως, πρέπει να μετρήσουμε τα συνεκτικά τμήματα του γράφου. 
