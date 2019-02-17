@@ -1,0 +1,46 @@
+TASK(
+   name = "roadwork",
+   test_count = 72,
+   files_dir = "testdata/26-PDP/roadwork/",
+   input_file = "roadwork.in",
+   output_file = "roadwork.out",
+   time_limit = 2,
+   solutions = [
+      SOLUTION(
+         name = "roadwork_official_cpp",
+		 source = "roadwork_official.cpp",
+		 passes_all_except_for = [3, 58, 59, 66],
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Χρήστος Πόριος",
+		 ),
+      ),
+	  SOLUTION(
+         name = "roadwork_slow",
+		 source = "roadwork_slow.cc",
+		 passes_up_to = 22,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "roadwork_semifast",
+		 source = "roadwork_semifast.cc",
+		 passes_up_to = 49,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "roadwork_efficient",
+		 source = "roadwork_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
