@@ -1,0 +1,58 @@
+TASK(
+   name = "scidinner",
+   test_count = 17,
+   files_dir = "testdata/25-PDP/scidinner/",
+   input_file = "scidinner.in",
+   output_file = "scidinner.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "scidinner_official_cpp",
+		 source = "scidinner_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Χαλδέζος Ιωάννης",
+		    school = "5ο Γυμνάσιο Μυτιλήνης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "scidinner_official_c",
+		 source = "scidinner_official.c",
+		 passes_all,
+		 lang = "c",
+		 author = PERSON(
+		    name = "Διαμαντίδης Δημήτριος",
+		    school = "Λύκειο Αμερικανικού Κολεγίου Ελλάδος",
+		 ),
+      ),
+	  SOLUTION(
+         name = "scidinner_official_pas",
+		 source = "scidinner_official.pas",
+		 passes_all,
+		 lang = "pas",
+		 author = PERSON(
+		    name = "Παπαμιχαήλ Λάμπης",
+		    school = "Ιδ. ΓΕΛ Εκπ/ρίων Δούκα",
+		 ),
+      ),
+	  SOLUTION(
+         name = "scidinner_complicated_iterative",
+		 source = "scidinner_complicated_iterative.cc",
+		 passes_up_to = 15,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "scidinner_complicated_recursive",
+		 source = "scidinner_complicated_recursive.cc",
+		 passes_all_except_for = [13, 15, 16],
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
