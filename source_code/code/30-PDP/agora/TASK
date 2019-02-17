@@ -1,0 +1,28 @@
+TASK(
+   name = "agora",
+   test_count = 20,
+   files_dir = "testdata/30-PDP/agora/",
+   input_file = "agora.in",
+   output_file = "agora.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+         name = "agora_brute_force",
+		 source = "agora_brute_force.cc",
+		 passes_up_to = 10,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "agora_efficient",
+		 source = "agora_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
