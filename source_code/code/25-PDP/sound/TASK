@@ -1,0 +1,47 @@
+TASK(
+   name = "sound",
+   test_count = 14,
+   files_dir = "testdata/25-PDP/sound/",
+   input_file = "sound.in",
+   output_file = "sound.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "sound_official_cpp",
+		 source = "sound_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Δημήτρης Λως",
+		    school = "Κολλέγιο Ψυχικού",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sound_efficient",
+		 source = "sound_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sound_brute_force",
+		 source = "sound_brute_force.cc",
+		 passes_only = [1, 2, 3, 4, 7],
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sound_semi_fast",
+		 source = "sound_semi_fast.cc",
+		 passes_up_to = 8,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
