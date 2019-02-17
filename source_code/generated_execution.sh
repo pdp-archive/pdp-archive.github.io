@@ -60,6 +60,9 @@ run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/trian
 echo "   SOLUTION : triangle_efficient"
 array=(`seq 1 16`)
 run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/triangle.out#' 'triangle.in' 'triangle.out' './code/25-PDP/triangle/triangle_efficient.cc' 1 'g++' "${array[@]}" 
+echo "   SOLUTION : triangle_mem_efficient"
+array=(`seq 1 16`)
+run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/triangle.out#' 'triangle.in' 'triangle.out' './code/25-PDP/triangle/triangle_mem_efficient.cc' 1 'g++' "${array[@]}" 
 echo "   SOLUTION : triangle_brute_force"
 array=(`seq 1 4`)
 run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/triangle.out#' 'triangle.in' 'triangle.out' './code/25-PDP/triangle/triangle_brute_force.cc' 1 'g++' "${array[@]}" 
