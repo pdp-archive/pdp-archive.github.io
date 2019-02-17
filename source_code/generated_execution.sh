@@ -80,6 +80,87 @@ run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/trian
 echo "   SOLUTION : triangle_brute_force"
 array=(`seq 1 4`)
 run_test 'testdata/25-PDP/triangle/triangle.in#' 'testdata/25-PDP/triangle/triangle.out#' 'triangle.in' 'triangle.out' './code/25-PDP/triangle/triangle_brute_force.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : domes"
+echo "   SOLUTION : domes_official_cpp"
+array=(`seq 1 10`)
+run_test 'testdata/26-PDP/domes/domes.in#' 'testdata/26-PDP/domes/domes.out#' 'domes.in' 'domes.out' './code/26-PDP/domes/domes_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : domes_official_c"
+array=(`seq 1 10`)
+run_test 'testdata/26-PDP/domes/domes.in#' 'testdata/26-PDP/domes/domes.out#' 'domes.in' 'domes.out' './code/26-PDP/domes/domes_official.c' 1 'gcc -std=c99 -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : domes_official_pas"
+echo "   SOLUTION : domes_efficient"
+array=(`seq 1 10`)
+run_test 'testdata/26-PDP/domes/domes.in#' 'testdata/26-PDP/domes/domes.out#' 'domes.in' 'domes.out' './code/26-PDP/domes/domes_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : ensemble"
+echo "   SOLUTION : ensemble_official_cpp"
+array=(`seq 1 12`)
+run_test 'testdata/26-PDP/ensemble/ensemble.in#' 'testdata/26-PDP/ensemble/ensemble.out#' 'ensemble.in' 'ensemble.out' './code/26-PDP/ensemble/ensemble_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : ensemble_official_c"
+array=(`seq 1 12`)
+run_test 'testdata/26-PDP/ensemble/ensemble.in#' 'testdata/26-PDP/ensemble/ensemble.out#' 'ensemble.in' 'ensemble.out' './code/26-PDP/ensemble/ensemble_official.c' 1 'gcc -std=c99 -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : ensemble_official_pas"
+echo "   SOLUTION : ensemble_efficient"
+array=(`seq 1 12`)
+run_test 'testdata/26-PDP/ensemble/ensemble.in#' 'testdata/26-PDP/ensemble/ensemble.out#' 'ensemble.in' 'ensemble.out' './code/26-PDP/ensemble/ensemble_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : ensemble_perfect_accuracy"
+array=(`seq 1 12`)
+run_test 'testdata/26-PDP/ensemble/ensemble.in#' 'testdata/26-PDP/ensemble/ensemble.out#' 'ensemble.in' 'ensemble.out' './code/26-PDP/ensemble/ensemble_perfect_accuracy.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : numbase"
+echo "   SOLUTION : numbase_official_cpp"
+array=(`seq 1 41`)
+run_test 'testdata/26-PDP/numbase/numbase.in#' 'testdata/26-PDP/numbase/numbase.out#' 'numbase.in' 'numbase.out' './code/26-PDP/numbase/numbase_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : numbase_brute_force"
+array=(`seq 1 13`)
+run_test 'testdata/26-PDP/numbase/numbase.in#' 'testdata/26-PDP/numbase/numbase.out#' 'numbase.in' 'numbase.out' './code/26-PDP/numbase/numbase_brute_force.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : numbase_correct"
+array=(`seq 1 31`)
+run_test 'testdata/26-PDP/numbase/numbase.in#' 'testdata/26-PDP/numbase/numbase.out#' 'numbase.in' 'numbase.out' './code/26-PDP/numbase/numbase_correct.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : numbase_50_first"
+array=(`seq 1 21`)
+run_test 'testdata/26-PDP/numbase/numbase.in#' 'testdata/26-PDP/numbase/numbase.out#' 'numbase.in' 'numbase.out' './code/26-PDP/numbase/numbase_50_first.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : numbase_50_second"
+array=(`seq 1 14`)
+run_test 'testdata/26-PDP/numbase/numbase.in#' 'testdata/26-PDP/numbase/numbase.out#' 'numbase.in' 'numbase.out' './code/26-PDP/numbase/numbase_50_second.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : roadwork"
+echo "   SOLUTION : roadwork_official_cpp"
+array=( 1 2 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 60 61 62 63 64 65 67 68 69 70 71 72)
+run_test 'testdata/26-PDP/roadwork/roadwork.in#' 'testdata/26-PDP/roadwork/roadwork.out#' 'roadwork.in' 'roadwork.out' './code/26-PDP/roadwork/roadwork_official.cpp' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : roadwork_slow"
+array=(`seq 1 22`)
+run_test 'testdata/26-PDP/roadwork/roadwork.in#' 'testdata/26-PDP/roadwork/roadwork.out#' 'roadwork.in' 'roadwork.out' './code/26-PDP/roadwork/roadwork_slow.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : roadwork_semifast"
+array=(`seq 1 49`)
+run_test 'testdata/26-PDP/roadwork/roadwork.in#' 'testdata/26-PDP/roadwork/roadwork.out#' 'roadwork.in' 'roadwork.out' './code/26-PDP/roadwork/roadwork_semifast.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : roadwork_efficient"
+array=(`seq 1 72`)
+run_test 'testdata/26-PDP/roadwork/roadwork.in#' 'testdata/26-PDP/roadwork/roadwork.out#' 'roadwork.in' 'roadwork.out' './code/26-PDP/roadwork/roadwork_efficient.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : solar"
+echo "   SOLUTION : solar_official_cpp"
+array=(`seq 1 28`)
+run_test 'testdata/26-PDP/solar/solar.in#' 'testdata/26-PDP/solar/solar.out#' 'solar.in' 'solar.out' './code/26-PDP/solar/solar_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : solar_official_c"
+array=(`seq 1 28`)
+run_test 'testdata/26-PDP/solar/solar.in#' 'testdata/26-PDP/solar/solar.out#' 'solar.in' 'solar.out' './code/26-PDP/solar/solar_official.c' 1 'gcc -std=c99 -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : solar_official_pas"
+echo "   SOLUTION : solar_efficient"
+array=(`seq 1 28`)
+run_test 'testdata/26-PDP/solar/solar.in#' 'testdata/26-PDP/solar/solar.out#' 'solar.in' 'solar.out' './code/26-PDP/solar/solar_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : solar_slow"
+array=( 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16)
+run_test 'testdata/26-PDP/solar/solar.in#' 'testdata/26-PDP/solar/solar.out#' 'solar.in' 'solar.out' './code/26-PDP/solar/solar_slow.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : sumpair"
+echo "   SOLUTION : sumpair_official_cpp"
+array=(`seq 1 11`)
+run_test 'testdata/26-PDP/sumpair/sumpair.in#' 'testdata/26-PDP/sumpair/sumpair.out#' 'sumpair.in' 'sumpair.out' './code/26-PDP/sumpair/sumpair_official.cpp' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : sumpair_brute_force"
+array=(`seq 1 5`)
+run_test 'testdata/26-PDP/sumpair/sumpair.in#' 'testdata/26-PDP/sumpair/sumpair.out#' 'sumpair.in' 'sumpair.out' './code/26-PDP/sumpair/sumpair_brute_force.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : sumpair_set"
+array=(`seq 1 7`)
+run_test 'testdata/26-PDP/sumpair/sumpair.in#' 'testdata/26-PDP/sumpair/sumpair.out#' 'sumpair.in' 'sumpair.out' './code/26-PDP/sumpair/sumpair_set.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : sumpair_linear_query"
+array=(`seq 1 11`)
+run_test 'testdata/26-PDP/sumpair/sumpair.in#' 'testdata/26-PDP/sumpair/sumpair.out#' 'sumpair.in' 'sumpair.out' './code/26-PDP/sumpair/sumpair_linear_query.cc' 2 'g++ -O2 -s -static -lm' "${array[@]}" 
 echo "TASK : colors"
 echo "   SOLUTION : colors_official"
 array=(`seq 1 31`)
