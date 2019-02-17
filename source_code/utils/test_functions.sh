@@ -11,12 +11,12 @@ function run_test() {
 	mkdir tmp/
 	cd tmp/
 	arr=("$@")
+	$7 ../$5 -o executable
 	for i in "${arr[@]:7}";
 	do
 	    norm1=${1/\#/$i}
 		norm2=${2/\#/$i}
 		cp ../${norm1} $3
-		$7 ../$5 -o executable
 		timeout $6 ./executable
 		if [ "$?" = 124 ]; then
 			echo Test $i: timeout
