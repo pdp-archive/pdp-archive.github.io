@@ -1,0 +1,19 @@
+TASK(
+   name = "astrolavos",
+   test_count = 15,
+   files_dir = "testdata/30-PDP/astrolavos/",
+   input_file = "astrolavos.in",
+   output_file = "astrolavos.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+         name = "astrolavos_efficient",
+		 source = "astrolavos_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
