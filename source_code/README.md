@@ -77,6 +77,7 @@
      )
 	 ```
    3. Βεβαιωθείτε ότι η λύση σας περνάει τα testcases που αναφέρατε, τρέχοντας `./tester.sh {codename}:{codename λύσης}`.
+   4. Στο _data/XX-PDP.yml στο πρόβλημα για το οποίο προσθέτετε κώδικες, αντικαταστήστε το `codes_url: ...` με `codes_in_git: true`.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/787cb9f874abab4b3ba9db1743d41cb5b5a93f53).
 
