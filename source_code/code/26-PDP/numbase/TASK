@@ -1,0 +1,55 @@
+TASK(
+   name = "numbase",
+   test_count = 41,
+   files_dir = "testdata/26-PDP/numbase/",
+   input_file = "numbase.in",
+   output_file = "numbase.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "numbase_official_cpp",
+		 source = "numbase_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Δημήτρης Λως",
+		 ),
+      ),
+	  SOLUTION(
+         name = "numbase_brute_force",
+		 source = "numbase_brute_force.cc",
+		 passes_up_to = 13,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "numbase_correct",
+		 source = "numbase_correct.cc",
+		 passes_up_to = 31,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "numbase_50_first",
+		 source = "numbase_50_first.cc",
+		 passes_up_to = 21,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "numbase_50_second",
+		 source = "numbase_50_second.cc",
+		 passes_up_to = 14,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
