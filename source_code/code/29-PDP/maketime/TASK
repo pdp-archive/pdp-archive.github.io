@@ -1,0 +1,61 @@
+TASK(
+   name = "maketime",
+   test_count = 23,
+   files_dir = "testdata/29-PDP/maketime/",
+   input_file = "maketime.in",
+   output_file = "maketime.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "maketime_official_cpp",
+		 source = "maketime_official.cpp",
+		 passes_all,
+		 lang = "c++",
+      ),
+	  SOLUTION(
+         name = "maketime_brute_force",
+		 source = "maketime_brute_force.cc",
+		 passes_up_to = 11,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "maketime_bsearch_answer",
+		 source = "maketime_bsearch_answer.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "maketime_prefix_sums",
+		 source = "maketime_prefix_sums.cc",
+		 passes_up_to = 15,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "maketime_sort",
+		 source = "maketime_sort.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "maketime_two_pointers",
+		 source = "maketime_two_pointers.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
