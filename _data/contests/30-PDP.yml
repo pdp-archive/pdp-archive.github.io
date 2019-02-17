@@ -4,7 +4,7 @@ astrolavos:
    statement_pdf_url: "https://drive.google.com/open?id=1nD7FMlIQcHeRtqjikbnt-sJIQhKPMe3g"
    testcases_url: "https://drive.google.com/open?id=1PWB5AaUts-avT7dbeVScHqpE4QHBAZux"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1_rPYIsfRcaAXTt7oD-rRtHvyuYf_kf8K"
+   codes_in_git: true
 
 agora:
    full_name: "Η αγορά"
@@ -12,4 +12,4 @@ agora:
    statement_pdf_url: "https://drive.google.com/open?id=1o4pphqEMXHFX4mQ9OpRI_T0gBw5CvKHW"
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1e9FoUvIIju2L0cZGPsqg3IUnTKedMFDj"
+   codes_in_git: true
