@@ -1,0 +1,38 @@
+TASK(
+   name = "triangle",
+   test_count = 16,
+   files_dir = "testdata/25-PDP/triangle/",
+   input_file = "triangle.in",
+   output_file = "triangle.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "triangle_official_cpp",
+		 source = "triangle_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Χρίστογλου Γεώργιος",
+		    school = "14ο ΓΕΛ Θεσσαλονίκης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "triangle_efficient",
+		 source = "triangle_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "triangle_brute_force",
+		 source = "triangle_brute_force.cc",
+		 passes_up_to = 4,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
