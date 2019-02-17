@@ -15,6 +15,12 @@ const bool kPrintTaskFile = false;
 const bool kPrintDebugStatements = false;
 const bool kDoNotPrintForPascal = true;
 
+std::map<std::string, std::string> compilation_commands({
+	{ "c++", "g++ -O2 -s -static -lm" },
+	{ "c", "gcc -std=c99 -O2 -s -static -lm" },
+	{ "pas", "gpc -O2 -s" }
+});
+
 struct TopLevel {
    /* Attribute name -> attribute type */
    const std::map<std::string, std::string> attributes;
@@ -202,12 +208,6 @@ std::map<std::string, std::function<AbstractTopLevel*(void)>> factories({
    { "TASK", []() { return new Task(); } },
    { "SOLUTION", []() { return new Solution(); } },
    { "PERSON", []() { return new Person(); } }
-});
-
-std::map<std::string, std::string> compilation_commands({
-	{ "c++", "g++" },
-	{ "c", "gcc" },
-	{ "pas", "gpc" }
 });
 
 struct FileReader {
