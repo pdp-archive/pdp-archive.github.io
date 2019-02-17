@@ -4,7 +4,7 @@ domes:
    statement_pdf_url: "https://drive.google.com/open?id=13E-Jq6rF_dYnxq-lbWgWR9xUJ0W-AHEf"
    testcases_url: "https://drive.google.com/open?id=1ar3Hoc4KDQVNA2dTlsvXiPJDMLvFWQ-L"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1AQc9DeBb9m56cJIslDYg36DjYxGXiKov"
+   codes_in_git: true
    
 ensemble:
    full_name: "Ρυθμική γυμναστική"
@@ -12,7 +12,7 @@ ensemble:
    statement_pdf_url: "https://drive.google.com/open?id=1h_qKFjBXObig1oAHxj0vqYN0uWCXE7Mg"
    testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
    solution: true
-   codes_url: "https://drive.google.com/open?id=18LH3S82s0OmqsCtVbqMutgIA98ykcDUX"
+   codes_in_git: true
 
 solar:
    full_name: "Ηλιακός άνεμος"
@@ -20,7 +20,7 @@ solar:
    statement_pdf_url: "https://drive.google.com/open?id=1lGL7lK2H8Z43LJQDsnOSFl5xxWHHhCH0"
    testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
    solution: true
-   codes_url: "https://drive.google.com/open?id=12rT6z-_dvre27hMvC7RKkxzwkjiWC_d5"
+   codes_in_git: true
 
 sumpair:
    full_name: "Άθροισμα ζευγών"
@@ -28,7 +28,7 @@ sumpair:
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
    testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1PwIe-HXNrvGuWSD6bLrCofHjMq7xYuAN"
+   codes_in_git: true
    
 roadwork:
    full_name: "Επισκευή δρόμου"
@@ -36,7 +36,7 @@ roadwork:
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
-   codes_url: "https://drive.google.com/open?id=179GPellf6s6ffiK6VzUeHtM7u7ZlEn4K"
+   codes_in_git: true
    
 numbase:
    full_name: "Μετατροπή αριθμού"
@@ -44,4 +44,4 @@ numbase:
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1I4J__GL6e-gJ5miQHd9LRyDIwzTv0ma8"
+   codes_in_git: true
