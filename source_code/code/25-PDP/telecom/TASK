@@ -1,0 +1,47 @@
+TASK(
+   name = "telecom",
+   test_count = 32,
+   files_dir = "testdata/25-PDP/telecom/",
+   input_file = "telecom.in",
+   output_file = "telecom.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "telecom_official_cpp",
+		 source = "telecom_official.cpp",
+		 passes_up_to = 31,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Παναγιώτης Κωστοπαναγιώτης",
+		    school = "2ο ΓΕΛ Πεύκης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "telecom_efficient",
+		 source = "telecom_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "telecom_n2",
+		 source = "telecom_n2.cc",
+		 passes_up_to = 21,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "telecom_n3",
+		 source = "telecom_n3.cc",
+		 passes_up_to = 13,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
