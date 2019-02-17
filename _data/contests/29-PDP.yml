@@ -5,7 +5,7 @@ sch:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qmqCKtic2rs_BXkSD79XvDqon9QuzdzT"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1t1_ndmIVJTWIFE7vaL8j4AHiRTctBW8t"
+   codes_in_git: true
    
 colors:
    full_name: "Πολύχρωμη κορδέλα"
@@ -13,7 +13,7 @@ colors:
    statement_pdf_url: "https://drive.google.com/open?id=1oXByaXubqmPMBjulEaT1oKNhDcRraSTh"
    testcases_url: "https://drive.google.com/open?id=1hrpoR0REwtgNJbQGHFoIpBeSVNJyFm2V"
    solution: true
-   codes_url: "https://drive.google.com/open?id=11cWL22oClUqwcg-cL9VZzv7QSVHrHiep"
+   codes_in_git: true
 
 uflights:
    full_name: "Κάρτες απεριόριστων πτήσεων"
@@ -22,7 +22,7 @@ uflights:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1lxEOD-eMsNCPsMUt_bBeSM9V98rOr_Ip"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1hSHGcnKqovrlPYIZpfF9Eb_PMlX_9xeq"
+   codes_in_git: true
 
 dnaseq:
    full_name: "Ακολουθίες DNA"
