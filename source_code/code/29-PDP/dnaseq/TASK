@@ -1,0 +1,43 @@
+TASK(
+   name = "dnaseq",
+   test_count = 41,
+   files_dir = "testdata/29-PDP/dnaseq/",
+   input_file = "dnaseq.in",
+   output_file = "dnaseq.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "dnaseq_official_cpp",
+		 source = "dnaseq_official.cpp",
+		 passes_all,
+		 lang = "c++",
+      ),
+	  SOLUTION(
+         name = "dnaseq_efficient",
+		 source = "dnaseq_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "dnaseq_brute_force",
+		 source = "dnaseq_brute_force.cc",
+		 passes_up_to = 20,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "dnaseq_rolling_hash",
+		 source = "dnaseq_rolling_hash.cc",
+		 passes_up_to = 25,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)

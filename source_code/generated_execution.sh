@@ -96,6 +96,19 @@ run_test 'testdata/29-PDP/colors/colors.in#' 'testdata/29-PDP/colors/colors.out#
 echo "   SOLUTION : colors_nlogn"
 array=(`seq 1 31`)
 run_test 'testdata/29-PDP/colors/colors.in#' 'testdata/29-PDP/colors/colors.out#' 'colors.in' 'colors.out' './code/29-PDP/colors/colors_nlogn.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : dnaseq"
+echo "   SOLUTION : dnaseq_official_cpp"
+array=(`seq 1 41`)
+run_test 'testdata/29-PDP/dnaseq/dnaseq.in#' 'testdata/29-PDP/dnaseq/dnaseq.out#' 'dnaseq.in' 'dnaseq.out' './code/29-PDP/dnaseq/dnaseq_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : dnaseq_efficient"
+array=(`seq 1 41`)
+run_test 'testdata/29-PDP/dnaseq/dnaseq.in#' 'testdata/29-PDP/dnaseq/dnaseq.out#' 'dnaseq.in' 'dnaseq.out' './code/29-PDP/dnaseq/dnaseq_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : dnaseq_brute_force"
+array=(`seq 1 20`)
+run_test 'testdata/29-PDP/dnaseq/dnaseq.in#' 'testdata/29-PDP/dnaseq/dnaseq.out#' 'dnaseq.in' 'dnaseq.out' './code/29-PDP/dnaseq/dnaseq_brute_force.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : dnaseq_rolling_hash"
+array=(`seq 1 25`)
+run_test 'testdata/29-PDP/dnaseq/dnaseq.in#' 'testdata/29-PDP/dnaseq/dnaseq.out#' 'dnaseq.in' 'dnaseq.out' './code/29-PDP/dnaseq/dnaseq_rolling_hash.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
 echo "TASK : sch"
 echo "   SOLUTION : sch_official_cpp"
 array=(`seq 1 20`)
