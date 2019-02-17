@@ -1,0 +1,58 @@
+TASK(
+   name = "solar",
+   test_count = 28,
+   files_dir = "testdata/26-PDP/solar/",
+   input_file = "solar.in",
+   output_file = "solar.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "solar_official_cpp",
+		 source = "solar_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Γιώργος Χρίστογλου",
+		    school = "14ο ΓΕΛ Θεσ/νίκης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "solar_official_c",
+		 source = "solar_official.c",
+		 passes_all,
+		 lang = "c",
+		 author = PERSON(
+		    name = "Δαυίδ Χρήστο Τζουλιάνα",
+		    school = "Εκπαιδευτήρια Δούκα",
+		 ),
+      ),
+	  SOLUTION(
+         name = "solar_official_pas",
+		 source = "solar_official.pas",
+		 passes_all,
+		 lang = "pas",
+		 author = PERSON(
+		    name = "Ελένη Αλευρά",
+		    school = "Κολλέγιο Ψυχικού",
+		 ),
+      ),
+	  SOLUTION(
+         name = "solar_efficient",
+		 source = "solar_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "solar_slow",
+		 source = "solar_slow.cc",
+		 passes_only = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16],
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
