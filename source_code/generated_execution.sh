@@ -15,4 +15,18 @@ run_test 'testdata/29-PDP/colors/colors.in#' 'testdata/29-PDP/colors/colors.out#
 echo "   SOLUTION : colors_nlogn"
 array=(`seq 1 31`)
 run_test 'testdata/29-PDP/colors/colors.in#' 'testdata/29-PDP/colors/colors.out#' 'colors.in' 'colors.out' './code/29-PDP/colors/colors_nlogn.cc' 1 'g++' "${array[@]}" 
+echo "TASK : sch"
+echo "   SOLUTION : sch_official_cpp"
+array=(`seq 1 20`)
+run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' 'sch.out' './code/29-PDP/sch/sch_official.cpp' 1 'g++' "${array[@]}" 
+echo "   SOLUTION : sch_official_c"
+array=(`seq 1 20`)
+run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' 'sch.out' './code/29-PDP/sch/sch_official.c' 1 'gcc' "${array[@]}" 
+echo "   SOLUTION : sch_official_pas"
+echo "   SOLUTION : sch_efficient"
+array=(`seq 1 20`)
+run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' 'sch.out' './code/29-PDP/sch/sch_efficient.cc' 1 'g++' "${array[@]}" 
+echo "   SOLUTION : sch_set"
+array=(`seq 1 20`)
+run_test 'testdata/29-PDP/sch/sch.in#' 'testdata/29-PDP/sch/sch.out#' 'sch.in' 'sch.out' './code/29-PDP/sch/sch_set.cc' 1 'g++' "${array[@]}" 
 

@@ -1,0 +1,58 @@
+TASK(
+   name = "sch",
+   test_count = 20,
+   files_dir = "testdata/29-PDP/sch/",
+   input_file = "sch.in",
+   output_file = "sch.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "sch_official_cpp",
+		 source = "sch_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Στυλιανός Μπουλιτσάκης",
+			school = "Κολλέγιο Ψυχικού",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sch_official_c",
+		 source = "sch_official.c",
+		 passes_all,
+		 lang = "c",
+		 author = PERSON(
+		    name = "Ηλιας Λαζαριαν",
+			school = "ΓΕΛ Αμπελακιων",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sch_official_pas",
+		 source = "sch_official.pas",
+		 passes_all,
+		 lang = "pas",
+		 author = PERSON(
+		    name = "Κίμωνας Αθανασίου",
+			school = "Γυμνάσιο Ευαγγελικής Σχολής Ν. Σμύρνης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sch_efficient",
+		 source = "sch_efficient.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+	  SOLUTION(
+         name = "sch_set",
+		 source = "sch_set.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)
