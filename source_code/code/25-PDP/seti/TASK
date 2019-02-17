@@ -1,0 +1,49 @@
+TASK(
+   name = "seti",
+   test_count = 10,
+   files_dir = "testdata/25-PDP/seti/",
+   input_file = "seti.in",
+   output_file = "seti.out",
+   time_limit = 3,
+   solutions = [
+      SOLUTION(
+         name = "seti_official_cpp",
+		 source = "seti_official.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "Κανέλλης Κωνσταντίνος",
+		    school = "2o ΓΕΛ Θεσσαλονίκης",
+		 ),
+      ),
+	  SOLUTION(
+         name = "seti_official_c",
+		 source = "seti_official.c",
+		 passes_all,
+		 lang = "c",
+		 author = PERSON(
+		    name = "Αγιάννης Κωνσταντίνος",
+		    school = "10ο Γυμνάσιο Λάρισας",
+		 ),
+      ),
+	  SOLUTION(
+         name = "seti_official_pas",
+		 source = "seti_official.pas",
+		 passes_all,
+		 lang = "pas",
+		 author = PERSON(
+		    name = "Αργυρόπουλος Διονύσιος",
+		    school = "1ο Γυμνάσιο Πύργου",
+		 ),
+      ),
+	  SOLUTION(
+         name = "seti_brute_force",
+		 source = "seti_brute_force.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "dim131",
+		 ),
+      ),
+   ]
+)

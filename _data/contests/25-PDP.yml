@@ -4,7 +4,7 @@ seti:
    statement_pdf_url: "https://drive.google.com/open?id=11YD58k2WmhOszXJ9E84xgy3iPJMair9p"
    testcases_url: "https://drive.google.com/open?id=1mXvn8D8c1v7btzEb9M27GJ1iVspuf8Cl"
    solution: true
-   codes_url: "https://drive.google.com/open?id=1n5O6xdwu61AIbVOqtLuBIAPc2Nm_kWUD"
+   codes_in_git: true
 
 karla:
    full_name: "Ανασύσταση της Βοιβηίδος λίμνης"

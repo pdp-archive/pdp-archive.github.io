@@ -1,4 +1,15 @@
 source ./utils/test_functions.sh
+echo "TASK : seti"
+echo "   SOLUTION : seti_official_cpp"
+array=(`seq 1 10`)
+run_test 'testdata/25-PDP/seti/seti.in#' 'testdata/25-PDP/seti/seti.out#' 'seti.in' 'seti.out' './code/25-PDP/seti/seti_official.cpp' 3 'g++' "${array[@]}" 
+echo "   SOLUTION : seti_official_c"
+array=(`seq 1 10`)
+run_test 'testdata/25-PDP/seti/seti.in#' 'testdata/25-PDP/seti/seti.out#' 'seti.in' 'seti.out' './code/25-PDP/seti/seti_official.c' 3 'gcc' "${array[@]}" 
+echo "   SOLUTION : seti_official_pas"
+echo "   SOLUTION : seti_brute_force"
+array=(`seq 1 10`)
+run_test 'testdata/25-PDP/seti/seti.in#' 'testdata/25-PDP/seti/seti.out#' 'seti.in' 'seti.out' './code/25-PDP/seti/seti_brute_force.cc' 3 'g++' "${array[@]}" 
 echo "TASK : colors"
 echo "   SOLUTION : colors_official"
 array=(`seq 1 31`)
