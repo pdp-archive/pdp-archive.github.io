@@ -257,4 +257,20 @@ echo "TASK : astrolavos"
 echo "   SOLUTION : astrolavos_efficient"
 array=(`seq 1 15`)
 run_test 'testdata/30-PDP/astrolavos/astrolavos.in#' 'testdata/30-PDP/astrolavos/astrolavos.out#' 'astrolavos.in' 'astrolavos.out' './code/30-PDP/astrolavos/astrolavos_efficient.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "TASK : kalanta"
+echo "   SOLUTION : kalanta_official"
+array=(`seq 1 19`)
+run_test 'testdata/30-PDP/kalanta/kalanta.in#' 'testdata/30-PDP/kalanta/kalanta.out#' 'kalanta.in' 'kalanta.out' './code/30-PDP/kalanta/kalanta_official.cpp' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : kalanta_n3"
+array=(`seq 1 8`)
+run_test 'testdata/30-PDP/kalanta/kalanta.in#' 'testdata/30-PDP/kalanta/kalanta.out#' 'kalanta.in' 'kalanta.out' './code/30-PDP/kalanta/kalanta_n3.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : kalanta_n2"
+array=(`seq 1 10`)
+run_test 'testdata/30-PDP/kalanta/kalanta.in#' 'testdata/30-PDP/kalanta/kalanta.out#' 'kalanta.in' 'kalanta.out' './code/30-PDP/kalanta/kalanta_n2.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : kalanta_bsearch_answer"
+array=(`seq 1 19`)
+run_test 'testdata/30-PDP/kalanta/kalanta.in#' 'testdata/30-PDP/kalanta/kalanta.out#' 'kalanta.in' 'kalanta.out' './code/30-PDP/kalanta/kalanta_bsearch_answer.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
+echo "   SOLUTION : kalanta_linear"
+array=(`seq 1 19`)
+run_test 'testdata/30-PDP/kalanta/kalanta.in#' 'testdata/30-PDP/kalanta/kalanta.out#' 'kalanta.in' 'kalanta.out' './code/30-PDP/kalanta/kalanta_linear.cc' 1 'g++ -O2 -s -static -lm' "${array[@]}" 
 
