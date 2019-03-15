@@ -2,6 +2,7 @@ hydrocarbons:
    full_name: "Υποθαλάσσιοι υδρογονάνθρακες"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1RXsDGgCCMtZfXWSuMcwWZvFNpxTzAmcS"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Ab51GxD28GvQ0srHv2ErA-pDJaL3ERLq"
    solution: true
    codes_in_git: true
