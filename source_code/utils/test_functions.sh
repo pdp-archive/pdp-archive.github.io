@@ -1,5 +1,5 @@
 function run_test() {
-    # arg 1 : testdata directory template input name
+  # arg 1 : testdata directory template input name
 	# arg 2 : template output name
 	# arg 3 : fixed input name
 	# arg 4 : fixed output name
@@ -11,7 +11,10 @@ function run_test() {
 	mkdir tmp/
 	cd tmp/
 	arr=("$@")
+	echo -e "\n\nCompiling\n\n"
 	$7 ../$5 -o executable
+	
+	echo -e "\n\nRunning the testcases"
 	for i in "${arr[@]:7}";
 	do
 	    norm1=${1/\#/$i}
@@ -21,13 +24,14 @@ function run_test() {
 		if [ "$?" = 124 ]; then
 			echo Test $i: timeout
 		else
-			result=$(diff --strip-trailing-cr ../$norm2 $4)
+			result=$(diff --strip-trailing-cr ../$norm2 $4 | head -c 200)
 			if [ "$result" != '' ]; then 
 				echo Test $i: wrong 
 				echo $result
 			fi;
 		fi;
 	done;
+	echo -e "\nDone\n\n"
 	cd ../
 	rm -r tmp/
 }

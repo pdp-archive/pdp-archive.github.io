@@ -1,0 +1,37 @@
+TASK(
+   name = "hydrocarbons",
+   test_count = 18,
+   files_dir = "testdata/31-PDP/hydrocarbons/",
+   input_file = "hydrocarbons.in",
+   output_file = "hydrocarbons.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+     name = "hydrocarbons_efficient_integers",
+		 source = "hydrocarbons_efficient_integers.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "kipoujr",
+		 ),
+    ),
+	  SOLUTION(
+     name = "hydrocarbons_efficient_doubles",
+		 source = "hydrocarbons_efficient_doubles.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "kipoujr",
+		 ),
+    ),
+	  SOLUTION(
+     name = "hydrocarbons_wrong",
+		 source = "hydrocarbons_wrong.cc",
+		 passes_up_to = 16,	
+		 lang = "c++",
+		 author = PERSON(
+		    name = "kipoujr",
+		 ),
+    ),			
+   ]
+)
