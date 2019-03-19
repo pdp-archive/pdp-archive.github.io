@@ -24,6 +24,9 @@ collections:
   27-PDP:
     output: true
     permalink: /:collection/:name
+  28-PDP:
+    output: true
+    permalink: /:collection/:name
   29-PDP:
     output: true
     permalink: /:collection/:name
@@ -55,6 +58,12 @@ defaults:
       contest_url: "27-PDP"
   - scope:
       path: ""
+      type: "28-PDP"
+    values:
+      contest: "28ος ΠΔΠ"
+      contest_url: "28-PDP"
+  - scope:
+      path: ""
       type: "29-PDP"
     values:
       contest: "29ος ΠΔΠ"
@@ -70,4 +79,4 @@ defaults:
       type: "31-PDP"
     values:
       contest: "31ος ΠΔΠ"
-      contest_url: "31-PDP"			
+      contest_url: "31-PDP"
