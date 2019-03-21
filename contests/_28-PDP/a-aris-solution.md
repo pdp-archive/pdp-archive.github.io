@@ -1,13 +1,7 @@
 ---
-title: "28ος ΠΔΠ - Α' φάση - Λύση"
-layout: post
-tags: [ΠΔΠ]
-category: 1
-comments: true
+layout: solution
+codename: aris
 ---
-
-* TOC
-{:toc}
 
 ## Επεξήγηση προβλήματος
 
@@ -25,7 +19,7 @@ comments: true
 
 Η υλοποίηση σε c++ είναι η ακόλουθη:
 
-```c++
+{% highlight c++ %}
 #include <cstdio>
 
 long N, M;
@@ -62,7 +56,7 @@ int main () {
     printf("%ld %ld %ld\n", progs, minCount, maxCount);
     return 0;
 }
-```
+{% endhighlight %}
 
 ## Λύση πολυπλοκότητας $$O(N + Μ)$$, χώρου $$Ο(Μ)$$
 
@@ -110,7 +104,7 @@ int main () {
 
 Σε κώδικα:
 
-```c++
+{% highlight c++ %}
 // ...
 long counts[1000001]; // Αρχικοποίηση του πίνακα counts με μηδενικά
 
@@ -141,5 +135,5 @@ int main () {
     
     // ...
 }
-```
+{% endhighlight %}
 
