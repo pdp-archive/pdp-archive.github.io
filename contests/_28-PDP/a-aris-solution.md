@@ -22,7 +22,7 @@ codename: aris
 {% highlight c++ %}
 #include <cstdio>
 
-const long size_t MAXN = 1000000;
+const size_t MAXN = 1000000;
 
 long N, M;
 long windows[MAXN + 1];
@@ -44,12 +44,14 @@ int main () {
             if (windows[i] == m) { count ++; } // Βρήκαμε άλλο ένα παράθυρο με το m
         }
         // Άμα το count δεν είναι 0, βρήκαμε κι άλλο πρόγραμμα που εκτελέστηκε
-        if (count > 0) progs ++;
-        // Αν το count είναι μεγαλύτερο από το ως τώρα μεγαλύτερο, ανανεώνουμε την
-        // τιμή του μεγαλύτερου
-        if (count > maxCount) { maxCount = count; }
-        // Αντίστοιχα ανανεώνουμε την τιμή του μικρότερου
-        if (count < minCount) { minCount = count; }
+        if (count > 0) {
+			progs ++;
+			// Αν το count είναι μεγαλύτερο από το ως τώρα μεγαλύτερο, ανανεώνουμε την
+			// τιμή του μεγαλύτερου
+			if (count > maxCount) { maxCount = count; }
+			// Αντίστοιχα ανανεώνουμε την τιμή του μικρότερου
+			if (count < minCount) { minCount = count; }
+		}
     }
     
     // Αφού ελέγξουμε για όλα τα πιθανά Μ, έχουμε τις 
@@ -107,22 +109,28 @@ int main () {
 Σε κώδικα:
 
 {% highlight c++ %}
-// ...
+#include <cstdio>
+
+const size_t MAXN = 1000000;
+
+long N, M;
 long counts[MAXN + 1]; // Αρχικοποίηση του πίνακα counts με μηδενικά
 
 int main () {
-    // ...
-    
+    // Διάβασμα του αρχείου εισόδου
+    freopen("aris.in", "r", stdin);
+    scanf("%ld %ld", &N, &M);
     for (long i = 0; i < N; ++i) {
         long m;
         scanf("%ld", &m);
         counts[m] ++; // Συναντήσαμε την τιμή m, άρα αυξάνουμε την θέση m του πίνακα
-    }
-    
+    }    
+
+    // Αρχικοποίηση των μεγεθών που ψάχνουμε
     long progs = 0;
     long minCount = N;
-    long maxCount = 0;
-    
+	long maxCount = 0;    
+
     for (long m = 1; m <= M; ++m) {
         if (counts[m] > 0) {
             // Μη μηδενική τιμή
@@ -135,7 +143,11 @@ int main () {
         }
     }
     
-    // ...
+    // Αφού ελέγξουμε για όλα τα πιθανά Μ, έχουμε τις 
+    // απαντήσεις οπότε τις εκτυπώνουμε
+    freopen("aris.out", "w", stdout);
+    printf("%ld %ld %ld\n", progs, minCount, maxCount);
+    return 0;
 }
 {% endhighlight %}
 

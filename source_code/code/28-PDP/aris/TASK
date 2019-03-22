@@ -7,8 +7,17 @@ TASK(
    time_limit = 1,
    solutions = [
 	  SOLUTION(
-         name = "aris",
-		 source = "aris.cpp",
+         name = "aris_brute_force_cpp",
+		 source = "aris_brute_force.cpp",
+		 passes_up_to = 10,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+	  SOLUTION(
+         name = "aris_efficient_cpp",
+		 source = "aris_efficient.cpp",
 		 passes_all,
 		 lang = "c++",
 		 author = PERSON(
