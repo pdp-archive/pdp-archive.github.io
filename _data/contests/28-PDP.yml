@@ -4,15 +4,17 @@ aris:
    statement_pdf_url: "https://drive.google.com/open?id=1ATnIEm9A-mSPwCmhOVvR4eImFpeb8E2a"
    testcases_url: "https://drive.google.com/open?id=19FuzABxGXc-jOR9jjsMVEF4RUl2ri87Z"
    solution: true
-   codes_in_git: false
+   codes_in_git: true
+   statement_md: true
    
 kite:
    full_name: "Ο χαρταετός"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1VGZKBrIfWskE8I4rLDwNzRidlnISzgh9"
    testcases_url: "https://drive.google.com/open?id=1WNmLqY9I8GpNxmvgt4vWi_N2OdrO1uy-"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
+   statement_md: true
 
 scrabble1d:
    full_name: "Μονοδιάστατο scrabble"
