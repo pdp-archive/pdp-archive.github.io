@@ -1,0 +1,19 @@
+TASK(
+   name = "aris",
+   test_count = 14,
+   files_dir = "testdata/28-PDP/aris/",
+   input_file = "aris.in",
+   output_file = "aris.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+         name = "aris",
+		 source = "aris.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+   ]
+)
