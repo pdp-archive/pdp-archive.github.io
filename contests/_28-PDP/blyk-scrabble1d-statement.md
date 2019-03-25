@@ -11,11 +11,11 @@ codename: scrabble1d
 
 Π.χ. έστω ότι ο πίνακας έχει $$N=10​$$ τετράγωνα, είναι αρχικά άδειος και οι πόντοι που αντιστοιχούν σε κάθε τετράγωνο είναι οι εξής:
 
-![Board empty](C:\Users\georg\Documents\kallinikos\pdp-archive.github.io\assets\28-pdp-blyk-scrabble1d-board-empty.svg){:width="100%"}
+![Board empty](/assets/28-pdp-blyk-scrabble1d-board-empty.svg){:width="100%"}
 
 Η Μαρία έχει σχηματίσει δύο λέξεις με μήκος $$Κ=3​$$ γράμματα: «ΝΑΙ» και «ΟΧΙ». Πρέπει τώρα να τις τοποθετήσει στον πίνακα έτσι ώστε να πάρει τους περισσότερους δυνατούς πόντους. Αυτό θα το πετύχει αν για παράδειγμα τις τοποθετήσει ως εξής:
 
-![Board filled](C:\Users\georg\Documents\kallinikos\pdp-archive.github.io\assets\28-pdp-blyk-scrabble1d-board-filled.svg)
+![Board filled](/assets/28-pdp-blyk-scrabble1d-board-filled.svg){:width="100%"}
 
 Με τον τρόπο αυτό παίρνει $$15+12+10=37$$ πόντους από την πρώτη λέξη και $$20+4+10=34$$ πόντους από τη δεύτερη, άρα συνολικά $$37+34=71$$ πόντους.
 

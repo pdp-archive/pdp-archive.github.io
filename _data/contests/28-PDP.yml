@@ -21,8 +21,9 @@ scrabble1d:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1whkNc9p50XX1axktXYJuFCrqHr3X0lul"
    testcases_url: "https://drive.google.com/open?id=1zanbHnUo4pHDmU8LI5vfKGv03cmSnuDi"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
+   statement_md: true
 
 skitrip:
    full_name: "Εκδρομή για σκι"
