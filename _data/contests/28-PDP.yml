@@ -32,6 +32,7 @@ skitrip:
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
    solution: false
    codes_in_git: false
+   statement_md: true
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
@@ -40,6 +41,7 @@ schoolnet:
    testcases_url: "https://drive.google.com/open?id=1fsgRYeasgBl4IX9wFm2d6Fg_pP45K1eM"
    solution: false
    codes_in_git: false
+   statement_md: true
    
 starwars:
    full_name: "Star Wars"
@@ -48,3 +50,4 @@ starwars:
    testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
    solution: false
    codes_in_git: false
+   statement_md: true
