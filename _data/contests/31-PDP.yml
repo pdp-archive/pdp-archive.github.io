@@ -17,7 +17,7 @@ mntsea:
    codes_in_git: true
 
 cntbal:
-   full_name: "Ισορροπημενες παρενθέσεις"
+   full_name: "Ισορροπημένες παρενθέσεις"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1iAsQXI6wnj8nnchjbWSlh7KgL8048J8g"
    statement_md: false
