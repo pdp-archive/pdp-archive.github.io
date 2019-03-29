@@ -1,0 +1,37 @@
+TASK(
+   name = "cntbal",
+   test_count = 38,
+   files_dir = "testdata/31-PDP/cntbal/",
+   input_file = "cntbal.in",
+   output_file = "cntbal.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+         name = "cntbal_N^3",
+		 source = "cntbal_N^3.cpp",
+		 passes_up_to = 15,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "giorgosgiapis",
+		 ),
+      ),
+	  SOLUTION(
+         name = "cntbal_N^2",
+		 source = "cntbal_N^2.cpp",
+		 passes_up_to = 24,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "giorgosgiapis",
+		 ),
+      ),
+	SOLUTION(
+         name = "cntbal_optimal",
+		 source = "cntbal_optimal.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "giorgosgiapis",
+		 ),
+      ),
+   ]
+)

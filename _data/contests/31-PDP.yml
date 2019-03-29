@@ -15,3 +15,12 @@ mntsea:
    testcases_url: "https://drive.google.com/open?id=1DvAxR7ScHMfZ75itoTvn0iOt8YHGUoAY"
    solution: true
    codes_in_git: true
+
+cntbal:
+   full_name: "Ισορροπημένες παρενθέσεις"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1iAsQXI6wnj8nnchjbWSlh7KgL8048J8g"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1XgH5ywmyR_mOkvpOnQafcp9iEyLU30AL"
+   solution: true
+   codes_in_git: true
