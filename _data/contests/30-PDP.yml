@@ -21,3 +21,19 @@ agora:
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
    codes_in_git: true
+
+rafting:
+   full_name: "Rafting"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   testcases_url: "https://drive.google.com/open?id=1BLW0WOOb3tFEH-3oqx4xKNs3nU0n-ltG"
+   solution: true
+   codes_in_git: true
+
+listgame:
+   full_name: "Παιχνίδι με λίστα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   testcases_url: "https://drive.google.com/open?id=1UQp6UAziM_W_5BU753Q5QOkuFmtQfj20"
+   solution: true
+   codes_in_git: true
