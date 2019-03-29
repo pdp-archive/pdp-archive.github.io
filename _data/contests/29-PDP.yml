@@ -45,6 +45,7 @@ maketime:
    full_name: "Πάω διακοπές"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
    solution: true
    codes_in_git: true
