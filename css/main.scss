@@ -15,4 +15,14 @@ body {
 .title {
   text-align: center;
 }
-  
+
+.table_with_borders {
+  border-collapse: collapse;
+  > table, td, th {
+    border: 1px solid black;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+  }
+}
