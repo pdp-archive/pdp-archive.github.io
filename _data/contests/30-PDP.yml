@@ -39,3 +39,12 @@ listgame:
    solution: true
    codes_in_git: true
    points: 35
+
+brickbreaker:
+   full_name: "Ο Χρήστος και τα τούβλα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   testcases_url: "https://drive.google.com/open?id=1yxIPqJA9O-blG2HWMIebg_jutNz5smmM"
+   solution: true
+   codes_in_git: true
+   points: 35
