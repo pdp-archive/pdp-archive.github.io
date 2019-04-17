@@ -1,0 +1,19 @@
+TASK(
+   name = "schoolnet",
+   test_count = 22,
+   files_dir = "testdata/28-PDP/schoolnet/",
+   input_file = "schoolnet.in",
+   output_file = "schoolnet.out",
+   time_limit = 2,
+   solutions = [
+	  SOLUTION(
+         name = "schoolnet",
+		 source = "schoolnet.cc",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "kipoujr",
+		 ),
+      ),
+   ]
+)

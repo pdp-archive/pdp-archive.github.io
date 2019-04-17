@@ -69,7 +69,7 @@ layout: default
 
 Προτιμότερο από το να δοθεί απλά link για τον κώδικα , είναι να ανεβάσουμε σε αυτό το repository τον κώδικα. Τότε η εντολή `codes_url` αντικαθίσταται από την `codes_in_git: true`
 
-Για να γίνει αυτό, πρέπει να ακολουθήσετε και τις οδηγίες του `source_code/README.md` ώστε να τεστάρετε ότι η λύση σας είναι σωστή.
+Για να γίνει αυτό, πρέπει να ακολουθήσετε και τις οδηγίες του [`source_code/README.md`](/source_code/README) ώστε να τεστάρετε ότι η λύση σας είναι σωστή.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/efeb1d69a76e3fe17465c1f619ed2afec911fae7).
 

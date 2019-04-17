@@ -33,15 +33,17 @@ skitrip:
    solution: false
    codes_in_git: false
    statement_md: true
+   points: 30
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
    testcases_url: "https://drive.google.com/open?id=1fsgRYeasgBl4IX9wFm2d6Fg_pP45K1eM"
-   solution: false
-   codes_in_git: false
    statement_md: true
+   solution: true
+   codes_in_git: true
+   points: 30
    
 starwars:
    full_name: "Star Wars"
@@ -51,3 +53,4 @@ starwars:
    solution: false
    codes_in_git: false
    statement_md: true
+   points: 40
