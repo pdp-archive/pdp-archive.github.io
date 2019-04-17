@@ -1,0 +1,46 @@
+TASK(
+   name = "kite",
+   test_count = 22,
+   files_dir = "testdata/28-PDP/kite/",
+   input_file = "kite.in",
+   output_file = "kite.out",
+   time_limit = 1,
+   solutions = [
+	  SOLUTION(
+         name = "kite_n3_cpp",
+		 source = "kite_n3.cpp",
+		 passes_up_to = 9,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+	  SOLUTION(
+         name = "kite_n2_cpp",
+		 source = "kite_n2.cpp",
+		 passes_up_to = 14,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+	  SOLUTION(
+         name = "kite_nlogn_cpp",
+		 source = "kite_nlogn.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+	  SOLUTION(
+         name = "kite_n_cpp",
+		 source = "kite_n.cpp",
+		 passes_all,
+		 lang = "c++",
+		 author = PERSON(
+		    name = "GeroVeni",
+		 )
+      ),
+   ]
+)
