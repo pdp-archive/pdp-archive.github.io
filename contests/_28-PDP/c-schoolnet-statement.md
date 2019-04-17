@@ -23,7 +23,7 @@ codename: schoolnet
 
 ## Παράδειγμα αρχείων εισόδου - εξόδου
 
-| schoolnet.in                         | schoolnet.out |
+| **schoolnet.in**                         | **schoolnet.out** |
 | ------------------------------------ | ------------- |
 | 6<br/>10 10 1 1 10 10<br/>1 2<br/>3 1<br/>1 4<br/>5 3<br/>4 6 |  12           |
 
