@@ -1,7 +1,15 @@
-﻿profit:
+profit:
    full_name: "ΜΕΓΙΣΤΟΠΟΙΗΣΗ ΚΕΡΔΟΥΣ"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1Wy-RxK4fSRdXiTYAk8rT7KlBqfqcTVof"
    testcases_url: "https://drive.google.com/open?id=1RktdInlCPvF50xmETmuDgP2Yrd36KyDj"
+   solution: true
+   codes_in_git: true
+
+snow_run:
+   full_name: "Χιονοδρομίες στα «Τρία - Πέντε Πηγάδια»"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/open?id=1kGscE_ABfHdYjssLh3ADTaOPzFewjrZv"
+   testcases_url: "https://drive.google.com/open?id=1uNWCNL4SvNQKEZgK85nO3zGeFwzl2KYZ"
    solution: true
    codes_in_git: true
