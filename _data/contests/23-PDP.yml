@@ -8,8 +8,16 @@ profit:
 
 snow_run:
    full_name: "Χιονοδρομίες στα «Τρία - Πέντε Πηγάδια»"
-   stage: "a"
+   stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1kGscE_ABfHdYjssLh3ADTaOPzFewjrZv"
    testcases_url: "https://drive.google.com/open?id=1uNWCNL4SvNQKEZgK85nO3zGeFwzl2KYZ"
+   solution: true
+   codes_in_git: true
+
+company:
+   full_name: "Εταιρική Ιεραρχία"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1dwzBZtDItkqHym26rfc5DHMuj4XDlKfk"
+   testcases_url: "https://drive.google.com/open?id=1dhDH5lz0UKGQPeOhq821-kMdYsF81TW4"
    solution: true
    codes_in_git: true
