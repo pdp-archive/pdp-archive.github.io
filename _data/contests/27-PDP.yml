@@ -1,7 +1,16 @@
-xxx:
+﻿xxx:
    full_name: "Το κυλικείο του σχολείου"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1DswZjrO57aTj5aMljhwE00UOLu1EErnE/view"
    testcases_url: "https://drive.google.com/file/d/1ZppyjUUfB5KffCdgXiNKccpw6qxVmhL1/view"
    solution: true
    codes_in_git: true
+
+twosqr:
+   full_name: "Άθροισμα τετραγώνων"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=19gnfL73IdMPWRmhVuouYljj701fyJ-jY"
+   testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
+   solution: true
+   codes_in_git: true
+

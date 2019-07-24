@@ -1,0 +1,37 @@
+TASK(
+   name = "twosqr",
+   test_count = 13,
+   files_dir = "testdata/27-PDP/twosqr/",
+   input_file = "twosqr.in",
+   output_file = "twosqr.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "twosqr_brute_force",
+         source = "twosqr_brute_force.cpp",
+         passes_up_to = 4,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "twosqr_binary_search",
+         source = "twosqr_binary_search.cpp",
+         passes_up_to = 12,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "twosqr_efficient",
+         source = "twosqr_efficient.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)
