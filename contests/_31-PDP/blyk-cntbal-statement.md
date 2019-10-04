@@ -30,12 +30,14 @@ codename: cntbal
 **1<sup>o</sup>**
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
-| 5 <br> ())() 		 | 2 			  |	())() <br> -- <br>&nbsp;&nbsp;&nbsp;&nbsp; --
+| 5 <br> ())() 		 | 2 			  |	())() <br>{::nomarkdown}<div style="line-height:0.4"> -- <br>&nbsp;&nbsp; -- </div>{:/}
+{: class="courier_table"}
 
 **2<sup>o</sup>**
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
-| 8 <br> (()(())) 	 | 5 			  |	(()(())) <br> &nbsp;-- <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- <br> &nbsp;&nbsp;&nbsp; ---- <br> &nbsp; ------ <br> --------
+| 8 <br> (()(())) 	 | 5 			  |	(()(())) <br>{::nomarkdown}<div style="line-height:0.4"> &nbsp;-- <br>&nbsp;&nbsp;&nbsp;&nbsp;-- <br>&nbsp;&nbsp;&nbsp;---- <br>&nbsp;------ <br> -------- </div>{:/}
+{: class="courier_table"}
 
 **3<sup>o</sup>**
 
@@ -45,7 +47,8 @@ codename: cntbal
 **4<sup>o</sup>**
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
-| 6 <br> ()()()	     | 6 			  |	()()() <br> -- <br> &nbsp;&nbsp;-- <br> &nbsp;&nbsp;&nbsp;&nbsp; -- <br> ---- <br> &nbsp;&nbsp; ---- <br> ------
+| 6 <br> ()()()	     | 6 			  |	()()() <br>{::nomarkdown}<div style="line-height:0.4"> -- <br>&nbsp;&nbsp;-- <br>&nbsp;&nbsp;&nbsp;&nbsp;-- <br>---- <br>&nbsp;&nbsp;---- <br>------ </div>{:/}
+{: class="courier_table"}
 
 ## Παρατηρήσεις:
 

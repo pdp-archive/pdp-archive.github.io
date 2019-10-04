@@ -16,3 +16,6 @@ body {
   text-align: center;
 }
   
+table.courier_table tr:nth-child(n+2) {
+  font-family: "Courier New"
+}
