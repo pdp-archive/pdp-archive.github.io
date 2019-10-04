@@ -31,13 +31,13 @@ codename: cntbal
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
 | 5 <br> ())() 		 | 2 			  |	())() <br>{::nomarkdown}<div style="line-height:0.4"> -- <br>&nbsp;&nbsp; -- </div>{:/}
-{: class="courier_table"}
+{: class="table_with_monospace_font"}
 
 **2<sup>o</sup>**
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
 | 8 <br> (()(())) 	 | 5 			  |	(()(())) <br>{::nomarkdown}<div style="line-height:0.4"> &nbsp;-- <br>&nbsp;&nbsp;&nbsp;&nbsp;-- <br>&nbsp;&nbsp;&nbsp;---- <br>&nbsp;------ <br> -------- </div>{:/}
-{: class="courier_table"}
+{: class="table_with_monospace_font"}
 
 **3<sup>o</sup>**
 
@@ -48,7 +48,7 @@ codename: cntbal
 
 | **mntsea.in**      | **mntsea.out** | Επεξήγηση:	
 | 6 <br> ()()()	     | 6 			  |	()()() <br>{::nomarkdown}<div style="line-height:0.4"> -- <br>&nbsp;&nbsp;-- <br>&nbsp;&nbsp;&nbsp;&nbsp;-- <br>---- <br>&nbsp;&nbsp;---- <br>------ </div>{:/}
-{: class="courier_table"}
+{: class="table_with_monospace_font"}
 
 ## Παρατηρήσεις:
 
