@@ -40,6 +40,10 @@
     </div>
     <div id="post"> 
       <h1 class="title">{{ title }}</h1>
+	  {% if task.stage == "c" %}
+	    {% assign points = " [" | append: task.points | append: " Μονάδες]" %}
+		<h4 style="text-align: right">{{points}}</h4>
+      {% endif %}
       {{ content }}
     </div>
   </div>

@@ -29,6 +29,7 @@ sumpair:
    testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
    solution: true
    codes_in_git: true
+   points: 30
    
 roadwork:
    full_name: "Επισκευή δρόμου"
@@ -37,6 +38,7 @@ roadwork:
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
    codes_in_git: true
+   points: 35
    
 numbase:
    full_name: "Μετατροπή αριθμού"
@@ -45,3 +47,4 @@ numbase:
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
    codes_in_git: true
+   points: 35

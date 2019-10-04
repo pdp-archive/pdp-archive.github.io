@@ -1,0 +1,58 @@
+TASK(
+   name = "xxx",
+   test_count = 12,
+   files_dir = "testdata/27-PDP/xxx/",
+   input_file = "xxx.in",
+   output_file = "xxx.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "xxx_official_cpp",
+         source = "xxx_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Τσαμης Εμμανουήλ",
+            school = "Ιδ. Γελ. Ελληνικό Κολλέγιο Θεσ/ικης",
+         ),
+      ),
+      SOLUTION(
+         name = "xxx_official_c",
+         source = "xxx_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Αλβέρτος-Αθανάσιος Ζαφετ",
+            school = "Κολλέγιο Ψυχικού",
+         ),
+      ),
+      SOLUTION(
+         name = "xxx_official_pas",
+         source = "xxx_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Παλαιολόγος Δίας",
+            school = " Δημ. Σχ. Μυτιλήνης",
+         ),
+      ),
+      SOLUTION(
+         name = "xxx_brute_force",
+         source = "xxx_brute_force.cc",
+         passes_up_to = 8,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "xxx_efficient",
+         source = "xxx_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)

@@ -3,24 +3,27 @@ aris:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1ATnIEm9A-mSPwCmhOVvR4eImFpeb8E2a"
    testcases_url: "https://drive.google.com/open?id=19FuzABxGXc-jOR9jjsMVEF4RUl2ri87Z"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
+   statement_md: true
    
 kite:
    full_name: "Ο χαρταετός"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1VGZKBrIfWskE8I4rLDwNzRidlnISzgh9"
    testcases_url: "https://drive.google.com/open?id=1WNmLqY9I8GpNxmvgt4vWi_N2OdrO1uy-"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
+   statement_md: true
 
 scrabble1d:
    full_name: "Μονοδιάστατο scrabble"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1whkNc9p50XX1axktXYJuFCrqHr3X0lul"
    testcases_url: "https://drive.google.com/open?id=1zanbHnUo4pHDmU8LI5vfKGv03cmSnuDi"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
+   statement_md: true
 
 skitrip:
    full_name: "Εκδρομή για σκι"
@@ -29,14 +32,18 @@ skitrip:
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
    solution: false
    codes_in_git: false
+   statement_md: true
+   points: 30
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
    testcases_url: "https://drive.google.com/open?id=1fsgRYeasgBl4IX9wFm2d6Fg_pP45K1eM"
+   statement_md: true
    solution: true
    codes_in_git: true
+   points: 30
    
 starwars:
    full_name: "Star Wars"
@@ -45,3 +52,5 @@ starwars:
    testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
    solution: false
    codes_in_git: false
+   statement_md: true
+   points: 40
