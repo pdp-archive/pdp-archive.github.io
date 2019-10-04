@@ -29,6 +29,7 @@ triangle:
    testcases_url: "https://drive.google.com/open?id=1ZUa8u4nOsINi0rwpHa48vVbtHoQBj8nT"
    solution: true
    codes_in_git: true
+   points: 30
 
 sound:
    full_name: "Ήχοι και σιωπές"
@@ -37,6 +38,7 @@ sound:
    testcases_url: "https://drive.google.com/open?id=16xZeHiOhyBsQqmyIwclJoej0Zc496OIn"
    solution: true
    codes_in_git: true
+   points: 30
 
 telecom:
    full_name: "Τηλεπικοινωνιακά κόστη"
@@ -45,3 +47,4 @@ telecom:
    testcases_url: "https://drive.google.com/open?id=1raK5F7VIiZVsAEOInqW0haVqxHtXH23C"
    solution: true
    codes_in_git: true
+   points: 40

@@ -29,19 +29,19 @@ codename: cntbal
 
 ```c++
 bool isBalanced(string str){
-	stack<char> st;
-	for(char ch : str){ //το ch διατρέχει τους χαρακτήρες του str απο αριστερά προς τα δεξιά
-		            //δουλεύει μόνο σε C++11 ή νεώτερη έκδοση
-		if(ch == '(') st.push('(');
-		else{
-			if(st.empty()){
-				return false;
-			} else{
-				st.pop();
-			}
-		}
-	}
-	return st.empty() //επιστρέφει true αν η στοίβα είναι άδεια
+   stack<char> st;
+   for(char ch : str){ //το ch διατρέχει τους χαρακτήρες του str απο αριστερά προς τα δεξιά
+                  //δουλεύει μόνο σε C++11 ή νεώτερη έκδοση
+      if(ch == '(') st.push('(');
+      else{
+         if(st.empty()){
+            return false;
+         } else{
+            st.pop();
+         }
+      }
+   }
+   return st.empty() //επιστρέφει true αν η στοίβα είναι άδεια
 }
 ```
 
@@ -58,7 +58,7 @@ bool isBalanced(string str){
 **Σημείωση:** Η C++ δεν επιτρέπει την αρίθμηση των συμβολοσειρών (strings) ξεκινώντας από το 1. Γι΄αυτό το λόγο θα χρησιμοποιούμε την παρακάτω συνάρτηση:
 ```c++
 char get(string &str, int ind){
-	return str[ind - 1];
+   return str[ind - 1];
 }
 ```
 την οποία θα καλούμε για να μας επιστρέφει τον χαρακτήρα στη θέση $$ind$$ της συμβολοσειράς $$str$$, ξεκινώντας την αρίθμιση απο το 1.
@@ -78,46 +78,46 @@ using namespace std;
 const long MAXN = 1000005;
 
 char get(string &str, int ind){
-	return str[ind - 1];
+   return str[ind - 1];
 }
 
 int main(){
-	ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
-	cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
+   ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
+   cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
 
-	#ifdef CONTEST
-	freopen("cntbal.in", "r", stdin);
-	freopen("cntbal.out", "w", stdout);
-	#endif
-	
+   #ifdef CONTEST
+   freopen("cntbal.in", "r", stdin);
+   freopen("cntbal.out", "w", stdout);
+   #endif
+   
 
-	long N; string s;
-	cin >> N >> s;
+   long N; string s;
+   cin >> N >> s;
 
-	long long ans = 0;
-	for(long i = 1; i <= N; i++){
-		for(long j = i + 1; j <= N; j++){
-			//Θα ελέγξουμε αν η s[i...j] είναι ισορροπημένη
-			stack<char> st;
-			bool isBalanced = true;
-			for(long k = i; k <= j; k++){
-				if(get(s, k) == '(') st.push('(');
-				else{
-					if(st.empty()){
-						isBalanced = false;
-						break;
-					} else{
-						st.pop();
-					}
-				}
-			}
-			if(isBalanced && st.empty()) ans++;
-		}
-	}
+   long long ans = 0;
+   for(long i = 1; i <= N; i++){
+      for(long j = i + 1; j <= N; j++){
+         //Θα ελέγξουμε αν η s[i...j] είναι ισορροπημένη
+         stack<char> st;
+         bool isBalanced = true;
+         for(long k = i; k <= j; k++){
+            if(get(s, k) == '(') st.push('(');
+            else{
+               if(st.empty()){
+                  isBalanced = false;
+                  break;
+               } else{
+                  st.pop();
+               }
+            }
+         }
+         if(isBalanced && st.empty()) ans++;
+      }
+   }
 
-	cout << ans << '\n';
+   cout << ans << '\n';
 
-	return 0;
+   return 0;
 }
 ```
 
@@ -134,46 +134,46 @@ using namespace std;
 const long MAXN = 1000005;
 
 char get(string &str, int ind){
-	return str[ind - 1];
+   return str[ind - 1];
 }
 
 int main(){
-	ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
-	cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
+   ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
+   cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
 
-	#ifdef CONTEST
-	freopen("cntbal.in", "r", stdin);
-	freopen("cntbal.out", "w", stdout);
-	#endif
-	
+   #ifdef CONTEST
+   freopen("cntbal.in", "r", stdin);
+   freopen("cntbal.out", "w", stdout);
+   #endif
+   
 
-	long N; string s;
-	cin >> N >> s;
+   long N; string s;
+   cin >> N >> s;
 
-	long long ans = 0;
-	for(long i = 1; i <= N; i++){
-		stack<char> st;
-		long long balanced_from_i = 0;
-		for(long j = i; j <= N; j++){
-			if(get(s, j) == '(') st.push('(');
-			else{
-				if(!st.empty()){
-					st.pop();
-					if(st.empty()) balanced_from_i++; //Η στοίβα άδειασε και άρα
-									//η s[i...j] είναι ισορροπημένη
-				} else{
-					break; //Παρένθεση κλείνει χωρίς να έχει ανοίξει
-						//άρα απο δώ και στο εξής δεν υπάρχουν ισορροπημένες 
-						//υποσυμβολοσειρές
-				}
-			}
-		}
-		ans += balanced_from_i;
-	}
+   long long ans = 0;
+   for(long i = 1; i <= N; i++){
+      stack<char> st;
+      long long balanced_from_i = 0;
+      for(long j = i; j <= N; j++){
+         if(get(s, j) == '(') st.push('(');
+         else{
+            if(!st.empty()){
+               st.pop();
+               if(st.empty()) balanced_from_i++; //Η στοίβα άδειασε και άρα
+                           //η s[i...j] είναι ισορροπημένη
+            } else{
+               break; //Παρένθεση κλείνει χωρίς να έχει ανοίξει
+                  //άρα απο δώ και στο εξής δεν υπάρχουν ισορροπημένες 
+                  //υποσυμβολοσειρές
+            }
+         }
+      }
+      ans += balanced_from_i;
+   }
 
-	cout << ans << '\n';
+   cout << ans << '\n';
 
-	return 0;
+   return 0;
 }
 ```
 
@@ -210,44 +210,44 @@ const long MAXN = 1000005;
 long long cnt[MAXN];
 
 char get(string &str, int ind){
-	return str[ind - 1];
+   return str[ind - 1];
 }
 
 int main(){
-	ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
-	cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
+   ios_base::sync_with_stdio(false); //Τα χρησιμοποιούμε πάντα οταν θέλουμε να 
+   cin.tie(NULL), cout.tie(NULL);    //χρησιμοποιήσουμε cin/cout
 
-	#ifdef CONTEST
-	freopen("cntbal.in", "r", stdin);
-	freopen("cntbal.out", "w", stdout);
-	#endif
-	
+   #ifdef CONTEST
+   freopen("cntbal.in", "r", stdin);
+   freopen("cntbal.out", "w", stdout);
+   #endif
+   
 
-	long N; string s;
-	cin >> N >> s;
-	
-	cnt[0] = 0; //Βοηθητική θέση σε περίπτωση που η s[1...i] είναι απλή
-		    //συμβολοσειρά. Τότε cnt[i] = 1 + cnt[0] = 1
-	stack<long> st;
+   long N; string s;
+   cin >> N >> s;
+   
+   cnt[0] = 0; //Βοηθητική θέση σε περίπτωση που η s[1...i] είναι απλή
+          //συμβολοσειρά. Τότε cnt[i] = 1 + cnt[0] = 1
+   stack<long> st;
 
-	for(long i = 1; i <= N; i++){
-		if(get(s, i) == '(') st.push(i);
-		else{
-			if(!st.empty()){
-				int j = st.top();
-				cnt[i] = 1 + cnt[j - 1]; //Η συμβολοσειρά s[j...i] είναι απλή
-				st.pop();
-			}
-		}
-	}
+   for(long i = 1; i <= N; i++){
+      if(get(s, i) == '(') st.push(i);
+      else{
+         if(!st.empty()){
+            int j = st.top();
+            cnt[i] = 1 + cnt[j - 1]; //Η συμβολοσειρά s[j...i] είναι απλή
+            st.pop();
+         }
+      }
+   }
 
-	long long ans = 0;
-	for(long i = 1; i <= N; i++){
-		ans += cnt[i]; 
-	}
-	cout << ans << '\n';
+   long long ans = 0;
+   for(long i = 1; i <= N; i++){
+      ans += cnt[i]; 
+   }
+   cout << ans << '\n';
 
-	return 0;
+   return 0;
 }
 ```
 

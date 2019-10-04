@@ -19,3 +19,14 @@ body {
 table.courier_table tr:nth-child(n+2) {
   font-family: "Courier New"
 }
+
+.table_with_borders {
+  border-collapse: collapse;
+  > table, td, th {
+    border: 1px solid black;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+  }
+}

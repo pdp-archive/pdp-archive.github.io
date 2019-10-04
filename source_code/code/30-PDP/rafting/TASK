@@ -1,0 +1,43 @@
+TASK(
+   name = "rafting",
+   test_count = 17,
+   files_dir = "testdata/30-PDP/rafting/",
+   input_file = "rafting.in",
+   output_file = "rafting.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "rafting_official",
+         source = "rafting_official.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "rafting_brute_force",
+         source = "rafting_brute_force.cc",
+         passes_up_to = 12,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "rafting_brute_force_list",
+         source = "rafting_brute_force_list.cc",
+         passes_up_to = 12,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "rafting_efficient_seg_tree",
+         source = "rafting_efficient_seg_tree.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+   ]
+)

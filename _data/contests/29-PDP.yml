@@ -32,6 +32,7 @@ dnaseq:
    testcases_url: "https://drive.google.com/open?id=1Hg5XmSzUVveeIQT6LGynzItxxokoX7jF"
    solution: true
    codes_in_git: true
+   points: 30
    
 villages:
    full_name: "Οδικό δίκτυο"
@@ -40,11 +41,14 @@ villages:
    testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
    solution: true
    codes_in_git: true
+   points: 35
    
 maketime:
    full_name: "Πάω διακοπές"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
    solution: true
    codes_in_git: true
+   points: 35
