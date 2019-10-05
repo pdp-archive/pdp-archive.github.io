@@ -20,7 +20,7 @@ cntbal:
    full_name: "Ισορροπημένες παρενθέσεις"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1iAsQXI6wnj8nnchjbWSlh7KgL8048J8g"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XgH5ywmyR_mOkvpOnQafcp9iEyLU30AL"
    solution: true
    codes_in_git: true
