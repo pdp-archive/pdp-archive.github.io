@@ -1,4 +1,4 @@
-title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφορικής
+﻿title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφορικής
 description: Site για τη συλλογή εκφωνήσεων, testcases, λύσεων και κωδίκων για τους Πανελλήνιους Διαγωνισμούς Πληροφορικής (ΠΔΠ). 
 timezone: Europe/Athens
 permalink: /:title
@@ -34,6 +34,9 @@ collections:
     output: true
     permalink: /:collection/:name
   31-PDP:
+    output: true
+    permalink: /:collection/:name
+  32-PDP:
     output: true
     permalink: /:collection/:name
     
@@ -80,3 +83,9 @@ defaults:
     values:
       contest: "31ος ΠΔΠ"
       contest_url: "31-PDP"
+  - scope:
+      path: ""
+      type: "32-PDP"
+    values:
+      contest: "32ος ΠΔΠ"
+      contest_url: "32-PDP"
