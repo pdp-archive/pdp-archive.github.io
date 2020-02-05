@@ -1,8 +1,8 @@
-﻿Unknown0:
-   full_name: ""
+﻿erasmus:
+   full_name: "Πρόγραμμα ανταλλαγής φοιτητών Erasmus+"
    stage: "a"
-   statement_pdf_url: ""
+   statement_pdf_url: "https://drive.google.com/open?id=14zFjSf17GaSy6RlDvOIW9qF-HFNaTlih"
    statement_md: true
    testcases_url: ""
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
