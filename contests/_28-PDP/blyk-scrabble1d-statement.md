@@ -40,9 +40,9 @@ codename: scrabble1d
 
 ## Όρια
 
-* $$3 \le N \le 2.000.000$$
+* $$3 \le N \le 2.000.000$$,
 
-* $$1 \le K \le N/2​$$
+* $$1 \le K \le N/2​$$,
 
 * $$1 \le P_i \le 1.000.000​$$, όπου $$1 \le i \le N​$$
 
