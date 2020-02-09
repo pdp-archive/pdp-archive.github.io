@@ -20,6 +20,19 @@ table.table_with_monospace_font tr:nth-child(n+2) {
   font-family: "Courier New"
 }
 
+/* Center home page footer and make font size smaller. */
+#footer {
+  padding-top: 60px;
+  font-size: 75%;
+  width: 550px;
+  margin: auto;
+}
+
+/* Remove new line from the contributors' displayer div. */
+#contributors_displayer {
+  display: inline;
+}
+
 .table_with_borders {
   border-collapse: collapse;
   > table, td, th {
