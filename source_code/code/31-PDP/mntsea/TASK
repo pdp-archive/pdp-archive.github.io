@@ -6,50 +6,50 @@ TASK(
    output_file = "mntsea.out",
    time_limit = 1,
    solutions = [
-	  SOLUTION(
-     name = "mntsea_n3",
-		 source = "mntsea_n3.cc",
-		 passes_up_to = 8,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
-	  SOLUTION(
-     name = "mntsea_n2",
-		 source = "mntsea_n2.cc",
-		 passes_up_to = 11,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
-	  SOLUTION(
-     name = "mntsea_n2_cumulative_sums",
-		 source = "mntsea_n2_cumulative_sums.cc",
-		 passes_up_to = 13,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
-	  SOLUTION(
-     name = "mntsea_nlogn",
-		 source = "mntsea_nlogn.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
-	  SOLUTION(
-     name = "mntsea_n",
-		 source = "mntsea_n.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
+      SOLUTION(
+         name = "mntsea_n3",
+         source = "mntsea_n3.cc",
+         passes_up_to = 8,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "mntsea_n2",
+         source = "mntsea_n2.cc",
+         passes_up_to = 11,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "mntsea_n2_cumulative_sums",
+         source = "mntsea_n2_cumulative_sums.cc",
+         passes_up_to = 13,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "mntsea_nlogn",
+         source = "mntsea_nlogn.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "mntsea_n",
+         source = "mntsea_n.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
    ]
 )

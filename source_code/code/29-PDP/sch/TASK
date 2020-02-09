@@ -8,51 +8,51 @@ TASK(
    solutions = [
       SOLUTION(
          name = "sch_official_cpp",
-		 source = "sch_official.cpp",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Στυλιανός Μπουλιτσάκης",
-			school = "Κολλέγιο Ψυχικού",
-		 ),
+         source = "sch_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+           name = "Στυλιανός Μπουλιτσάκης",
+           school = "Κολλέγιο Ψυχικού",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sch_official_c",
-		 source = "sch_official.c",
-		 passes_all,
-		 lang = "c",
-		 author = PERSON(
-		    name = "Ηλιας Λαζαριαν",
-			school = "ΓΕΛ Αμπελακιων",
-		 ),
+         source = "sch_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Ηλιας Λαζαριαν",
+            school = "ΓΕΛ Αμπελακιων",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sch_official_pas",
-		 source = "sch_official.pas",
-		 passes_all,
-		 lang = "pas",
-		 author = PERSON(
-		    name = "Κίμωνας Αθανασίου",
-			school = "Γυμνάσιο Ευαγγελικής Σχολής Ν. Σμύρνης",
-		 ),
+         source = "sch_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Κίμωνας Αθανασίου",
+            school = "Γυμνάσιο Ευαγγελικής Σχολής Ν. Σμύρνης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sch_efficient",
-		 source = "sch_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "sch_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sch_set",
-		 source = "sch_set.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "sch_set.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

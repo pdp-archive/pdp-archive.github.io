@@ -6,23 +6,23 @@ TASK(
    output_file = "erasmus.out",
    time_limit = 1,
    solutions = [
-	  SOLUTION(
-     name = "erasmus1",
-		 source = "erasmus1.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "nickie",
-		 ),
-    ),
-	  SOLUTION(
-     name = "hydrocarbons_wrong",
-		 source = "hydrocarbons_wrong.cc",
-		 passes_up_to = 16,	
-		 lang = "c++",
-		 author = PERSON(
-		    name = "madshockie",
-		 ),
-    ),			
+      SOLUTION(
+         name = "erasmus1",
+         source = "erasmus1.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "nickie",
+         ),
+      ),
+      SOLUTION(
+         name = "hydrocarbons_wrong",
+         source = "hydrocarbons_wrong.cc",
+         passes_up_to = 16,
+         lang = "c++",
+         author = PERSON(
+            name = "madshockie",
+         ),
+      ),
    ]
 )

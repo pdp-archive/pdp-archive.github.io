@@ -6,14 +6,14 @@ TASK(
    output_file = "mntsea.out",
    time_limit = 1,
    solutions = [
-	  SOLUTION(
-     name = "symstr",
-		 source = "symstr.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "kipoujr",
-		 ),
-    ),
+      SOLUTION(
+        name = "symstr",
+        source = "symstr.cc",
+        passes_all,
+        lang = "c++",
+        author = PERSON(
+           name = "kipoujr",
+        ),
+      ),
    ]
 )

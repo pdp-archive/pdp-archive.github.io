@@ -6,14 +6,14 @@ TASK(
    output_file = "astrolavos.out",
    time_limit = 1,
    solutions = [
-	  SOLUTION(
+      SOLUTION(
          name = "astrolavos_efficient",
-		 source = "astrolavos_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "astrolavos_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

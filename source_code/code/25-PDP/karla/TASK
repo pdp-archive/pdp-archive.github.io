@@ -8,60 +8,60 @@ TASK(
    solutions = [
       SOLUTION(
          name = "karla_official_cpp",
-		 source = "karla_official.cpp",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Χαλδέζος Ιωάννης",
-		    school = "5ο Γυμνάσιο Μυτιλήνης",
-		 ),
+         source = "karla_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Χαλδέζος Ιωάννης",
+            school = "5ο Γυμνάσιο Μυτιλήνης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "karla_official_c",
-		 source = "karla_official.c",
-		 passes_all,
-		 lang = "c",
-		 author = PERSON(
-		    name = "Σταματίου Γεώργιος",
-		    school = "Γυμνάσιο Αμερικανικού Κολεγίου Ελλάδος",
-		 ),
+         source = "karla_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Σταματίου Γεώργιος",
+            school = "Γυμνάσιο Αμερικανικού Κολεγίου Ελλάδος",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "karla_official_pas",
-		 source = "karla_official.pas",
-		 passes_all,
-		 lang = "pas",
-		 author = PERSON(
-		    name = "Κουσουρής Γεώργιος",
-		    school = "Κολλέγιο Ψυχικού",
-		 ),
+         source = "karla_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Κουσουρής Γεώργιος",
+            school = "Κολλέγιο Ψυχικού",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "karla_efficient_iterative",
-		 source = "karla_efficient_iterative.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "karla_efficient_iterative.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "karla_efficient_recursive",
-		 source = "karla_efficient_recursive.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "karla_efficient_recursive.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "karla_efficient_short",
-		 source = "karla_efficient_short.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "karla_efficient_short.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

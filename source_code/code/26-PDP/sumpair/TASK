@@ -8,39 +8,39 @@ TASK(
    solutions = [
       SOLUTION(
          name = "sumpair_official_cpp",
-		 source = "sumpair_official.cpp",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Αριστοφάνης Ροντογιάννης",
-		 ),
+         source = "sumpair_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Αριστοφάνης Ροντογιάννης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sumpair_brute_force",
-		 source = "sumpair_brute_force.cc",
-		 passes_up_to = 5,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "sumpair_brute_force.cc",
+         passes_up_to = 5,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sumpair_set",
-		 source = "sumpair_set.cc",
-		 passes_up_to = 7,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "sumpair_set.cc",
+         passes_up_to = 7,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "sumpair_linear_query",
-		 source = "sumpair_linear_query.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "sumpair_linear_query.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )
