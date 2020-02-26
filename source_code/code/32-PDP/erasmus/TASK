@@ -1,10 +1,10 @@
 TASK(
    name = "erasmus",
-   test_count = 0,
+   test_count = 13,
    files_dir = "testdata/32-PDP/erasmus/",
    input_file = "erasmus.in",
    output_file = "erasmus.out",
-   time_limit = 1,
+   time_limit = 2,
    solutions = [
       SOLUTION(
          name = "erasmus1",
@@ -12,16 +12,16 @@ TASK(
          passes_all,
          lang = "c++",
          author = PERSON(
-            name = "nickie",
+            name = "madshockie",
          ),
       ),
       SOLUTION(
-         name = "hydrocarbons_wrong",
-         source = "hydrocarbons_wrong.cc",
-         passes_up_to = 16,
+         name = "erasmus2",
+         source = "erasmus2.cc",
+         passes_all,
          lang = "c++",
          author = PERSON(
-            name = "madshockie",
+            name = "nickie",
          ),
       ),
    ]
