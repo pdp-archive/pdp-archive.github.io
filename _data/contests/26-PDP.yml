@@ -20,6 +20,7 @@ solar:
    full_name: "Ηλιακός άνεμος"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1lGL7lK2H8Z43LJQDsnOSFl5xxWHHhCH0"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
    solution: true
    codes_in_git: true
