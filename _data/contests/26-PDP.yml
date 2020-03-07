@@ -39,6 +39,7 @@ roadwork:
    full_name: "Επισκευή δρόμου"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
    codes_in_git: true
