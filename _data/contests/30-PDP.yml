@@ -19,6 +19,7 @@ agora:
    full_name: "Η αγορά"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1o4pphqEMXHFX4mQ9OpRI_T0gBw5CvKHW"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
    codes_in_git: true
