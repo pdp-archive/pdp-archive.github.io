@@ -28,6 +28,7 @@ rafting:
    full_name: "Rafting"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1BLW0WOOb3tFEH-3oqx4xKNs3nU0n-ltG"
    solution: true
    codes_in_git: true
