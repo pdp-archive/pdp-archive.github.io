@@ -11,6 +11,7 @@ ensemble:
    full_name: "Ρυθμική γυμναστική"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1h_qKFjBXObig1oAHxj0vqYN0uWCXE7Mg"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
    solution: true
    codes_in_git: true
