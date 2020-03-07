@@ -49,6 +49,7 @@ numbase:
    full_name: "Μετατροπή αριθμού"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
    codes_in_git: true
