@@ -3,7 +3,7 @@ description: Site για τη συλλογή εκφωνήσεων, testcases, λ
 timezone: Europe/Athens
 permalink: /:title
 highlighter: rouge
-gems:
+plugins:
   - jekyll-redirect-from
 
 markdown: kramdown
