@@ -49,7 +49,7 @@ shortpowtwo:
    full_name: "Ελάχιστη απόσταση"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: false
    codes_in_git: false
