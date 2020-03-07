@@ -10,6 +10,7 @@ kalanta:
    full_name: "Τα κάλαντα"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1GZsziHWTLIwZMG6qgl_IfWo6AvKmGeyw"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yZ2YiGSKRf9d598JY_khKd_xSfv1zrUF"
    solution: true
    codes_in_git: true
