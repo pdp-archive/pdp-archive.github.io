@@ -25,17 +25,23 @@ Nα αναπτύξετε ένα πρόγραμμα σε μια από τις γ�
 | :--- | :--- |
 | 4 4 <br> 1 4 2 <br> 1 2 0 <br> 2 3 0 <br> 3 4 0 <br> 1 4 | 3 |
 
+![Παράδειγμα 1ο](/assets/31-pdp-c-shortpowtwo-example-1.png){:width="200px"}
+
 **2<sup>o</sup>**
 
 | **shortpowtwo.in**      | **shortpowtwo.out** |
 | :--- | :--- |
 | 4 3 <br> 1 2 4 <br> 2 3 5 <br> 3 4 6 <br> 1 4 | 112 |
 
+![Παράδειγμα 2ο](/assets/31-pdp-c-shortpowtwo-example-2.png){:width="200px"}
+
 **3<sup>o</sup>**
 
 | **shortpowtwo.in**      | **shortpowtwo.out** |
 | :--- | :--- |
 | 4 2 <br> 1 2 0 <br> 3 4 1 <br> 1 4 | -1 |
+
+![Παράδειγμα 3ο](/assets/31-pdp-c-shortpowtwo-example-3.png){:width="200px"}
 
 **Προσοχή!** Φροντίστε να διαβάζετε την είσοδο και να εκτυπώνετε την έξοδο αποδοτικά, ειδικά αν προγραμματίζετε σε C++ ή Java.
 
