@@ -11,6 +11,7 @@ colors:
    full_name: "Πολύχρωμη κορδέλα"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1oXByaXubqmPMBjulEaT1oKNhDcRraSTh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1hrpoR0REwtgNJbQGHFoIpBeSVNJyFm2V"
    solution: true
    codes_in_git: true
