@@ -39,6 +39,7 @@ villages:
    full_name: "Οδικό δίκτυο"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1hR009Vj3Bds07D0g8_qMqrLF1eDIYgxX"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
    solution: true
    codes_in_git: true
