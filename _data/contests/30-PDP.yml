@@ -2,6 +2,7 @@ astrolavos:
    full_name: "Ο υπολογιστής των Αντικυθήρων"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1nD7FMlIQcHeRtqjikbnt-sJIQhKPMe3g"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PWB5AaUts-avT7dbeVScHqpE4QHBAZux"
    solution: true
    codes_in_git: true
