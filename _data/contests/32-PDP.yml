@@ -3,6 +3,6 @@ erasmus:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=14zFjSf17GaSy6RlDvOIW9qF-HFNaTlih"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/open?id=1tKFPtX4fsMhTwZMvM8zZ0Ij38a-LDw3u"
    solution: true
    codes_in_git: true
