@@ -2,6 +2,7 @@ seti:
    full_name: "Αναζητώντας εξωγήινη νοημοσύνη"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=11YD58k2WmhOszXJ9E84xgy3iPJMair9p"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1mXvn8D8c1v7btzEb9M27GJ1iVspuf8Cl"
    solution: true
    codes_in_git: true
