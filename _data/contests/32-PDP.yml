@@ -14,7 +14,7 @@ longsumk:
    statement_md: false
    testcases_url: ""
    solution: true
-   codes_in_git: false
+   codes_in_git: true
 
 shops:
    full_name: "Τα δύο καταστήματα"
@@ -23,4 +23,4 @@ shops:
    statement_md: false
    testcases_url: ""
    solution: true
-   codes_in_git: false
+   codes_in_git: true
