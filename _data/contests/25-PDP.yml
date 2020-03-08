@@ -2,6 +2,7 @@ seti:
    full_name: "Αναζητώντας εξωγήινη νοημοσύνη"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=11YD58k2WmhOszXJ9E84xgy3iPJMair9p"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1mXvn8D8c1v7btzEb9M27GJ1iVspuf8Cl"
    solution: true
    codes_in_git: true
@@ -10,6 +11,7 @@ karla:
    full_name: "Ανασύσταση της Βοιβηίδος λίμνης"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1-AY-VBFsg_0z9EJlD13M5BHnw5EufP1z"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PTgrmmlI5ZHZu14dwurmhy29NMLy9A4B"
    solution: true
    codes_in_git: true
@@ -18,6 +20,7 @@ scidinner:
    full_name: "Οι μυστικοί αριθμοί"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1baP0ZxZngMMVemF0nADt4WNaxlhE-CnF"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1pXHuJ7IpdHUIEVUuhUj0JTrqpcWySotd"
    solution: true
    codes_in_git: true
@@ -26,6 +29,7 @@ triangle:
    full_name: "Τρίγωνο"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1Fq4Z56HnSicnIo7R91Q6KQyGrkI8rzO-"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZUa8u4nOsINi0rwpHa48vVbtHoQBj8nT"
    solution: true
    codes_in_git: true
@@ -35,6 +39,7 @@ sound:
    full_name: "Ήχοι και σιωπές"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1Fq4Z56HnSicnIo7R91Q6KQyGrkI8rzO-"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=16xZeHiOhyBsQqmyIwclJoej0Zc496OIn"
    solution: true
    codes_in_git: true
@@ -44,6 +49,7 @@ telecom:
    full_name: "Τηλεπικοινωνιακά κόστη"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1Fq4Z56HnSicnIo7R91Q6KQyGrkI8rzO-"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1raK5F7VIiZVsAEOInqW0haVqxHtXH23C"
    solution: true
    codes_in_git: true

@@ -20,11 +20,15 @@ table.table_with_monospace_font tr:nth-child(n+2) {
   font-family: "Courier New"
 }
 
-/* Center home page footer and make font size smaller. */
-#footer {
+/* Space between competitions and contributors footer in home+summary pages. */
+#footer_space {
   padding-top: 60px;
+}
+
+/* Center contributors footer and make font size smaller. */
+#footer {
   font-size: 75%;
-  width: 550px;
+  width: 600px;
   margin: auto;
 }
 

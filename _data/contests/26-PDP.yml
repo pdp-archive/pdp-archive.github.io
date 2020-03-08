@@ -2,6 +2,7 @@ domes:
    full_name: "Δομές κοινωνικής αλληλεγγύης"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=13E-Jq6rF_dYnxq-lbWgWR9xUJ0W-AHEf"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XVjRhhf_EW2zRjPmbPpjzwCEy_zcY0NJ"
    solution: true
    codes_in_git: true
@@ -10,6 +11,7 @@ ensemble:
    full_name: "Ρυθμική γυμναστική"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1h_qKFjBXObig1oAHxj0vqYN0uWCXE7Mg"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
    solution: true
    codes_in_git: true
@@ -18,6 +20,7 @@ solar:
    full_name: "Ηλιακός άνεμος"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1lGL7lK2H8Z43LJQDsnOSFl5xxWHHhCH0"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
    solution: true
    codes_in_git: true
@@ -26,6 +29,7 @@ sumpair:
    full_name: "Άθροισμα ζευγών"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
    solution: true
    codes_in_git: true
@@ -35,6 +39,7 @@ roadwork:
    full_name: "Επισκευή δρόμου"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
    codes_in_git: true
@@ -44,6 +49,7 @@ numbase:
    full_name: "Μετατροπή αριθμού"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1f0ncfuZb-erUCXwPh_gfGafzfaRtXdFh"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
    codes_in_git: true
