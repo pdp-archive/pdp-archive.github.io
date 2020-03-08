@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/32-PDP/erasmus/",
    input_file = "erasmus.in",
    output_file = "erasmus.out",
-   time_limit = 2,
+   time_limit = 1,
    solutions = [
       SOLUTION(
          name = "erasmus1",

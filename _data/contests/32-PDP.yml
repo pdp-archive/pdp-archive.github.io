@@ -6,3 +6,21 @@ erasmus:
    testcases_url: "https://drive.google.com/open?id=1tKFPtX4fsMhTwZMvM8zZ0Ij38a-LDw3u"
    solution: true
    codes_in_git: true
+
+longsumk:
+   full_name: "Πάμε πάλι διακοπές"
+   stage: "bgym"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: ""
+   solution: true
+   codes_in_git: false
+
+shops:
+   full_name: "Τα δύο καταστήματα"
+   stage: "blyk"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: ""
+   solution: true
+   codes_in_git: false

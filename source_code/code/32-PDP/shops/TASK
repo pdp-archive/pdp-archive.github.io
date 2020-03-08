@@ -1,0 +1,37 @@
+TASK(
+   name = "shops",
+   test_count = 2,
+   files_dir = "testdata/32-PDP/shops/",
+   input_file = "shops.in",
+   output_file = "shops.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "shops_n2k",
+         source = "shops_n2k.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "shops_n2",
+         source = "shops_n2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "shops_n",
+         source = "shops_n.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+   ]
+)
