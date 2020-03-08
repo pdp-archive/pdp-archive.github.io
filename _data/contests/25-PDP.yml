@@ -27,6 +27,7 @@ triangle:
    full_name: "Τρίγωνο"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1Fq4Z56HnSicnIo7R91Q6KQyGrkI8rzO-"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZUa8u4nOsINi0rwpHa48vVbtHoQBj8nT"
    solution: true
    codes_in_git: true
