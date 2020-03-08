@@ -20,6 +20,7 @@ scidinner:
    full_name: "Οι μυστικοί αριθμοί"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1baP0ZxZngMMVemF0nADt4WNaxlhE-CnF"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1pXHuJ7IpdHUIEVUuhUj0JTrqpcWySotd"
    solution: true
    codes_in_git: true
