@@ -31,7 +31,7 @@ aces:
    full_name: "Παρέες αριθμών"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1OLUBeeXoOdiVo_3vVpJu5VSdoiQypuIY"
    solution: false
    codes_in_git: false
