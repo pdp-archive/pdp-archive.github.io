@@ -11,7 +11,7 @@ twosqr:
    full_name: "Άθροισμα τετραγώνων"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=19gnfL73IdMPWRmhVuouYljj701fyJ-jY"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
    solution: false
    codes_in_git: false
@@ -21,7 +21,7 @@ share:
    full_name: "Η μοιρασιά"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=15L1UcAiIplsaJAzncjmycZSgWzhBMBcf"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Fz07w2bENBnoO7o-i7u_mJak8JQSUtwa"
    solution: false
    codes_in_git: false
