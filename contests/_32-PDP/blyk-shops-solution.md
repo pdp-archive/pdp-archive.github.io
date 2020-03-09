@@ -19,11 +19,9 @@ $$2,~4,~15,~12,~10,~1,~1,~20,~4,~10$$
  2. Μία λίγο αργή βελτίωση της λύσης $$1$$, πολυπλοκότητας $$O(N^2)$$. Θα χρειαστούμε την τεχνική cumulative sums (δείτε το θέμα [Β Φάσης Γυμνασίου 31ου ΠΔΠ](/31-PDP/bgym-mntsea-solution)).
  3. Βέλτιστη λύση! Πολυπλοκότητας $$O(N)$$. Δε χρειάζεται κάποια επιπλέον γνώση πέρα από τα cumulative sums.
 
-## Μερικές παρατηρήσεις
+## Παρατήρηση
 
-*Παρατήρηση 1:* Αρχικά μπορούμε πολύ απλά να δούμε ότι αν ο πίνακας είναι μικρός (μικρότερος ή ίσος με 2K), τότε η απάντηση είναι απλώς το άθροισμα όλων των στοιχείων του.
-
-*Παρατήρηση 2:* Δεν υπάρχει κανένας λόγος τα διαστήματα να έχουν επικάλυψη. Εφόσον ξέρουμε ότι ο πίνακας είναι αρκετά μεγάλος (μεγαλύτερος από 2K λόγω της πρώτης παρατήρησης) τότε οποιαδήποτε λύση με επικάλυψη μπορεί να βελτιωθεί μετακινόντας είτε το αριστερότερο διάστημα προς τα αριστερά, είτε το δεξιότερο προς τα δεξιά. Έτσι προσθέτουμε πάντα περισσότερα στοιχεία, και εφόσον κανένας αριθμός δεν είναι αρνητικός, αυτό μας συμφέρει.
+Δεν υπάρχει κανένας λόγος τα διαστήματα να έχουν επικάλυψη. Εφόσον ξέρουμε ότι ο πίνακας είναι αρκετά μεγάλος (μεγαλύτερος από 2K κατά την εκφώνηση) τότε οποιαδήποτε λύση με επικάλυψη μπορεί να βελτιωθεί μετακινόντας είτε το αριστερότερο διάστημα προς τα αριστερά, είτε το δεξιότερο προς τα δεξιά. Έτσι προσθέτουμε πάντα περισσότερα στοιχεία, και εφόσον κανένας αριθμός δεν είναι αρνητικός, αυτό μας συμφέρει.
 
 ## Αργή λύση $$O(N^2K)$$
 
@@ -48,20 +46,17 @@ int main() {
   freopen("shops.in","r",stdin);
   freopen("shops.out","w",stdout);
   scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) scanf("%ld", &A[i]), s+=A[i];
-  if(N<=2*K) {
-    printf("%ld\n", s);
-    return(0);
-  }
-  
-  for(long i=2*K; i<=N; ++i)
-    for(long j=K; j<=i-K; ++j) {
+  for(long i=1; i<=N; ++i)
+    scanf("%ld", &A[i]);
+  for(long right2=2*K; right2<=N; ++right2)
+    for(long right1=K; right1<=right2-K; ++right1) {
       long sum = 0;
-      for(long k=1; k<=K; ++k) sum += A[i-k+1] + A[j-k+1];
+      for(long k=1; k<=K; ++k) sum += A[right2-k+1] + A[right1-k+1];
       ans = max (sum, ans);
     }
 
   printf("%ld\n", ans);
+  return 0;
 }
 ```
 ## Αργή λύση - $$O(N^2)$$
@@ -82,7 +77,7 @@ int main() {
 
 ```c++
 #include <bits/stdc++.h>
-#define MAXN 2000000
+const long MAXN = 2000000;
 using namespace std;
 
 long N, K, ans, A[MAXN+5], s[MAXN+5];
@@ -91,18 +86,17 @@ int main() {
   freopen("shops.in","r",stdin);
   freopen("shops.out","w",stdout);
   scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) scanf("%ld", &A[i]), s[i] = s[i-1] + A[i];
-  if(N<=2*K) {
-    printf("%ld\n", s[N]);
-    return(0);
+  for(long i=1; i<=N; ++i) {
+    scanf("%ld", &A[i]);
+    s[i] = s[i-1] + A[i];
   }
-  
-  for(long i=2*K; i<=N; ++i)
-    for(long j=K; j<=i-K; ++j) {
-      ans = max (s[i]-s[i-K]+s[j]-s[j-K], ans);
+  for(long right2=2*K; right2<=N; ++right2)
+    for(long right1=K; right1<=right2-K; ++right1) {
+      ans = max (s[right2]-s[right2-K]+s[right1]-s[right1-K], ans);
     }
 
   printf("%ld\n", ans);
+  return 0;
 }
 ```
 
@@ -141,14 +135,10 @@ int main() {
     s[i] = s[i-1] + A[i];
     if(i-K>=0) maxUpTo[i] = max(maxUpTo[i-1], s[i] - s[i-K]);
   }
-  if(N<=2*K) {
-    printf("%ld\n", s[N]);
-    return(0);
-  }
-  
-  for(long i=2*K; i<=N; ++i)
-    ans = max (s[i]-s[i-K]+maxUpTo[i-K], ans);
+  for(long right2=2*K; right2<=N; ++right2)
+    ans = max (s[right2]-s[right2-K]+maxUpTo[right2-K], ans);
 
   printf("%ld\n", ans);
+  return 0;
 }
 ```

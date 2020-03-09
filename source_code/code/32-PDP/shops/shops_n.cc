@@ -13,14 +13,10 @@ int main() {
     s[i] = s[i-1] + A[i];
     if(i-K>=0) maxUpTo[i] = max(maxUpTo[i-1], s[i] - s[i-K]);
   }
-  if(N<=2*K) {
-    printf("%ld\n", s[N]);
-    return(0);
-  }
-
-  for(long i=2*K; i<=N; ++i)
-    ans = max (s[i]-s[i-K]+maxUpTo[i-K], ans);
+  for(long right2=2*K; right2<=N; ++right2)
+    ans = max (s[right2]-s[right2-K]+maxUpTo[right2-K], ans);
 
   printf("%ld\n", ans);
+  return 0;
 }
 

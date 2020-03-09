@@ -11,7 +11,7 @@ longsumk:
    full_name: "Πάμε πάλι διακοπές"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=16URHUaFcZqpRQ54nyiyRBAA03SfQEXul"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: true
    codes_in_git: true
