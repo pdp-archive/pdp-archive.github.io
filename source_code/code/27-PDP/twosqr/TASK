@@ -7,9 +7,39 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
+         name = "twosqr_official_cpp",
+         source = "twosqr_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Γαζεπη Σηλια",
+            school = "Κολλέγιο Αθηνών",
+         ),
+      ),
+      SOLUTION(
+         name = "twosqr_official_c",
+         source = "twosqr_official.c",
+         passes_all_except_for = [5, 9, 11, 13],
+         lang = "c",
+         author = PERSON(
+            name = "Παναγιώτης Χατζημίχος",
+            school = "12ο Γυμνάσιο Λάρισας",
+         ),
+      ),
+      SOLUTION(
+         name = "twosqr_official_pas",
+         source = "twosqr_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Μπαλτατζίδης Γιώργος",
+            school = "5ο Γυμνάσιο Κατερίνης",
+         ),
+      ),
+      SOLUTION(
          name = "twosqr_brute_force",
          source = "twosqr_brute_force.cpp",
-         passes_up_to = 4,
+         passes_all_except_for = [5, 9, 11, 13],
          lang = "c++",
          author = PERSON(
             name = "georgevidalakis",
