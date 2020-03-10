@@ -30,7 +30,7 @@ skitrip:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
-   solution: false
+   solution: true
    codes_in_git: false
    statement_md: true
    points: 30
