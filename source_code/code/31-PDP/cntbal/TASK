@@ -24,7 +24,7 @@ TASK(
             name = "giorgosgiapis",
          ),
       ),
-    SOLUTION(
+      SOLUTION(
          name = "cntbal_optimal",
          source = "cntbal_optimal.cpp",
          passes_all,

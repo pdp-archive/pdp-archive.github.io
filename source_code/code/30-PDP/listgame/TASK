@@ -12,7 +12,7 @@ TASK(
          passes_all,
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "listgame_brute_force",
          source = "listgame_brute_force.cc",
          passes_up_to = 8,

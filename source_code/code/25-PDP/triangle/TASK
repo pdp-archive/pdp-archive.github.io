@@ -8,40 +8,40 @@ TASK(
    solutions = [
       SOLUTION(
          name = "triangle_official_cpp",
-		 source = "triangle_official.cpp",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Χρίστογλου Γεώργιος",
-		    school = "14ο ΓΕΛ Θεσσαλονίκης",
-		 ),
+         source = "triangle_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Χρίστογλου Γεώργιος",
+            school = "14ο ΓΕΛ Θεσσαλονίκης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "triangle_efficient",
-		 source = "triangle_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "triangle_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "triangle_mem_efficient",
-		 source = "triangle_mem_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "triangle_mem_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "triangle_brute_force",
-		 source = "triangle_brute_force.cc",
-		 passes_up_to = 4,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "triangle_brute_force.cc",
+         passes_up_to = 4,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

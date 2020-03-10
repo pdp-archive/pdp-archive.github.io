@@ -3,4 +3,5 @@ source_code/testdata/
 source_code/test_parser.out
 source_code/tmp/
 source_code/generated_execution.sh
+.jek*
 *~

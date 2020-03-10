@@ -8,51 +8,51 @@ TASK(
    solutions = [
       SOLUTION(
          name = "ensemble_official_cpp",
-		 source = "ensemble_official.cpp",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Δημήτριος Κομνηνός",
-		    school = "3ο Γ/σιο Μυτηλίνης",
-		 ),
+         source = "ensemble_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Δημήτριος Κομνηνός",
+            school = "3ο Γ/σιο Μυτηλίνης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "ensemble_official_c",
-		 source = "ensemble_official.c",
-		 passes_all,
-		 lang = "c",
-		 author = PERSON(
-		    name = "Απόστολος Τζίνας",
-		    school = "Πρότυπο Πειραματικό Σχολείο Α.Π.Θ.",
-		 ),
+         source = "ensemble_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Απόστολος Τζίνας",
+            school = "Πρότυπο Πειραματικό Σχολείο Α.Π.Θ.",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "ensemble_official_pas",
-		 source = "ensemble_official.pas",
-		 passes_all,
-		 lang = "pas",
-		 author = PERSON(
-		    name = "Ευάγγελος Βιδάλης",
-		    school = "Πρότυπο Πειραματικό Γυμνάσιο Αγίων Αναργύρων",
-		 ),
+         source = "ensemble_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Ευάγγελος Βιδάλης",
+            school = "Πρότυπο Πειραματικό Γυμνάσιο Αγίων Αναργύρων",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "ensemble_efficient",
-		 source = "ensemble_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "ensemble_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "ensemble_perfect_accuracy",
-		 source = "ensemble_perfect_accuracy.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "ensemble_perfect_accuracy.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

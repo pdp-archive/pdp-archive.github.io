@@ -1,0 +1,19 @@
+TASK(
+   name = "symstr",
+   test_count = 23,
+   files_dir = "testdata/31-PDP/symstr/",
+   input_file = "mntsea.in",
+   output_file = "mntsea.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+        name = "symstr",
+        source = "symstr.cc",
+        passes_all,
+        lang = "c++",
+        author = PERSON(
+           name = "kipoujr",
+        ),
+      ),
+   ]
+)

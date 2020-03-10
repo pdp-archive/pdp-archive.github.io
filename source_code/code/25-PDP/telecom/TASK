@@ -8,40 +8,40 @@ TASK(
    solutions = [
       SOLUTION(
          name = "telecom_official_cpp",
-		 source = "telecom_official.cpp",
-		 passes_up_to = 31,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "Παναγιώτης Κωστοπαναγιώτης",
-		    school = "2ο ΓΕΛ Πεύκης",
-		 ),
+         source = "telecom_official.cpp",
+         passes_up_to = 31,
+         lang = "c++",
+         author = PERSON(
+            name = "Παναγιώτης Κωστοπαναγιώτης",
+            school = "2ο ΓΕΛ Πεύκης",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "telecom_efficient",
-		 source = "telecom_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "telecom_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "telecom_n2",
-		 source = "telecom_n2.cc",
-		 passes_up_to = 21,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "telecom_n2.cc",
+         passes_up_to = 21,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "telecom_n3",
-		 source = "telecom_n3.cc",
-		 passes_up_to = 13,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "telecom_n3.cc",
+         passes_up_to = 13,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

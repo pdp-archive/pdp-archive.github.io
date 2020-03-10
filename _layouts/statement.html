@@ -15,6 +15,7 @@
   <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="/css/main.css">
+	{% include scripts.html %}
     <title>{{ title }}</title>
 	<style>
 	  table {
@@ -28,7 +29,6 @@
 	</style>
   </head>
   <body>
-    {% include scripts.html %}
 {% unless page.tags contains "summary" %}
 {% endunless %}
   <div class="main-content">
@@ -47,5 +47,6 @@
       {{ content }}
     </div>
   </div>
+  {% include contributors_footer.html %}
   </body>
 </html>

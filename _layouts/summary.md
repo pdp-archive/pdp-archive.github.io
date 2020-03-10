@@ -59,3 +59,6 @@ layout: post
 
 {% endcapture %}
 {{ md | markdownify }}
+
+<div id="footer_space"></div>
+{% include contributors_footer.html %}

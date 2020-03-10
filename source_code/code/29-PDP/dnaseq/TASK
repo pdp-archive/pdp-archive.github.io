@@ -8,36 +8,36 @@ TASK(
    solutions = [
       SOLUTION(
          name = "dnaseq_official_cpp",
-		 source = "dnaseq_official.cpp",
-		 passes_all,
-		 lang = "c++",
+         source = "dnaseq_official.cpp",
+         passes_all,
+         lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "dnaseq_efficient",
-		 source = "dnaseq_efficient.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "dnaseq_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "dnaseq_brute_force",
-		 source = "dnaseq_brute_force.cc",
-		 passes_up_to = 20,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "dnaseq_brute_force.cc",
+         passes_up_to = 20,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "dnaseq_rolling_hash",
-		 source = "dnaseq_rolling_hash.cc",
-		 passes_up_to = 25,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "dnaseq_rolling_hash.cc",
+         passes_up_to = 25,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

@@ -20,7 +20,37 @@ cntbal:
    full_name: "Ισορροπημένες παρενθέσεις"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1iAsQXI6wnj8nnchjbWSlh7KgL8048J8g"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XgH5ywmyR_mOkvpOnQafcp9iEyLU30AL"
    solution: true
    codes_in_git: true
+
+symstr:
+   full_name: "Συμμετρικές συμβολοσειρές"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
+   statement_md: true
+   testcases_url: "https://drive.google.com/open?id=14KX81jnNADaP6AXtdD9TpUmn4e2OdpSF"
+   solution: true
+   codes_in_git: true
+   points: 30
+
+lottery:
+   full_name: "Τι πληρώνει το λαχείο"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   points: 35
+
+shortpowtwo:
+   full_name: "Ελάχιστη απόσταση"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   points: 35

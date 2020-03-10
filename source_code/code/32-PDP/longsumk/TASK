@@ -1,0 +1,46 @@
+TASK(
+   name = "longsumk",
+   test_count = 2,
+   files_dir = "testdata/32-PDP/longsumk/",
+   input_file = "longsumk.in",
+   output_file = "longsumk.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "longsumk_n3",
+         source = "longsumk_n3.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "longsumk_n2",
+         source = "longsumk_n2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "longsumk_n",
+         source = "longsumk_n.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "longsumk_n_2pointers",
+         source = "longsumk_n_2pointers.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+   ]
+)

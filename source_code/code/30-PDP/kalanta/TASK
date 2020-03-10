@@ -8,45 +8,45 @@ TASK(
    solutions = [
       SOLUTION(
          name = "kalanta_official",
-		 source = "kalanta_official.cpp",
-		 passes_all,
-		 lang = "c++",
+         source = "kalanta_official.cpp",
+         passes_all,
+         lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "kalanta_n3",
-		 source = "kalanta_n3.cc",
-		 passes_up_to = 8,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "kalanta_n3.cc",
+         passes_up_to = 8,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "kalanta_n2",
-		 source = "kalanta_n2.cc",
-		 passes_up_to = 10,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "kalanta_n2.cc",
+         passes_up_to = 10,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "kalanta_bsearch_answer",
-		 source = "kalanta_bsearch_answer.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "kalanta_bsearch_answer.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "kalanta_linear",
-		 source = "kalanta_linear.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "kalanta_linear.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )

@@ -2,6 +2,7 @@ astrolavos:
    full_name: "Ο υπολογιστής των Αντικυθήρων"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1nD7FMlIQcHeRtqjikbnt-sJIQhKPMe3g"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PWB5AaUts-avT7dbeVScHqpE4QHBAZux"
    solution: true
    codes_in_git: true
@@ -10,6 +11,7 @@ kalanta:
    full_name: "Τα κάλαντα"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1GZsziHWTLIwZMG6qgl_IfWo6AvKmGeyw"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yZ2YiGSKRf9d598JY_khKd_xSfv1zrUF"
    solution: true
    codes_in_git: true
@@ -18,6 +20,7 @@ agora:
    full_name: "Η αγορά"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1o4pphqEMXHFX4mQ9OpRI_T0gBw5CvKHW"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
    codes_in_git: true
@@ -26,6 +29,7 @@ rafting:
    full_name: "Rafting"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1BLW0WOOb3tFEH-3oqx4xKNs3nU0n-ltG"
    solution: true
    codes_in_git: true
@@ -35,6 +39,7 @@ listgame:
    full_name: "Παιχνίδι με λίστα"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1UQp6UAziM_W_5BU753Q5QOkuFmtQfj20"
    solution: true
    codes_in_git: true
@@ -44,6 +49,7 @@ brickbreaker:
    full_name: "Ο Χρήστος και τα τούβλα"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1oCY9sG_ap2T8jEqnS-0gZgIOMvitM55v"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yxIPqJA9O-blG2HWMIebg_jutNz5smmM"
    solution: true
    codes_in_git: true

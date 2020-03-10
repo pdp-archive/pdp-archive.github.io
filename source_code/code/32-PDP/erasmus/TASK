@@ -1,0 +1,28 @@
+TASK(
+   name = "erasmus",
+   test_count = 13,
+   files_dir = "testdata/32-PDP/erasmus/",
+   input_file = "erasmus.in",
+   output_file = "erasmus.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "erasmus1",
+         source = "erasmus1.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "madshockie",
+         ),
+      ),
+      SOLUTION(
+         name = "erasmus2",
+         source = "erasmus2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "nickie",
+         ),
+      ),
+   ]
+)

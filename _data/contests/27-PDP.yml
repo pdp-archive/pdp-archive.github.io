@@ -2,6 +2,7 @@
    full_name: "Το κυλικείο του σχολείου"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1DswZjrO57aTj5aMljhwE00UOLu1EErnE/view"
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1ZppyjUUfB5KffCdgXiNKccpw6qxVmhL1/view"
    solution: true
    codes_in_git: true
@@ -10,7 +11,50 @@ twosqr:
    full_name: "Άθροισμα τετραγώνων"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=19gnfL73IdMPWRmhVuouYljj701fyJ-jY"
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
-   solution: true
+   solution: false
    codes_in_git: true
 
+share:
+   full_name: "Η μοιρασιά"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=15L1UcAiIplsaJAzncjmycZSgWzhBMBcf"
+   statement_md: true
+   testcases_url: "https://drive.google.com/open?id=1Fz07w2bENBnoO7o-i7u_mJak8JQSUtwa"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1dCCIFuqrsgaku0y_Uj3UW9zB6M6vud0Q"
+
+aces:
+   full_name: "Παρέες αριθμών"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
+   statement_md: true
+   testcases_url: "https://drive.google.com/open?id=1OLUBeeXoOdiVo_3vVpJu5VSdoiQypuIY"
+   solution: false
+   codes_in_git: false
+   points: 30
+   codes_url: "https://drive.google.com/open?id=1LAtAFXBt3VUMBE-gNRK3SvM9rz7nqrH-"
+
+efimerides:
+   full_name: "Εφημερίδες"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
+   statement_md: true
+   testcases_url: "https://drive.google.com/open?id=1pQzf--jvEWG5l2fF-aTCRnojCTi7G-7X"
+   solution: false
+   codes_in_git: false
+   points: 30
+   codes_url: "https://drive.google.com/open?id=1-1i-qFNaXJJS6M5bqkhSjSySg24D1ria"
+
+supermarket:
+   full_name: "Σουπερμάρκετ"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
+   statement_md: true
+   testcases_url: "https://drive.google.com/open?id=1hhClM4cfyT_cyBVvgr3iGoHPgXo84hoa"
+   solution: false
+   codes_in_git: false
+   points: 40
+   codes_url: "https://drive.google.com/open?id=17h09EQJRvAlpBsQlOVKOGbQuPlgbZdg2"

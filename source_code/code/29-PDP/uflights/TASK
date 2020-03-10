@@ -8,27 +8,27 @@ TASK(
    solutions = [
       SOLUTION(
          name = "uflights_official_cpp",
-		 source = "uflights_official.cpp",
-		 passes_all,
-		 lang = "c++",
+         source = "uflights_official.cpp",
+         passes_all,
+         lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "uflights_kruskal",
-		 source = "uflights_kruskal.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "uflights_kruskal.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "uflights_prim",
-		 source = "uflights_prim.cc",
-		 passes_all,
-		 lang = "c++",
-		 author = PERSON(
-		    name = "dim131",
-		 ),
+         source = "uflights_prim.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
       ),
    ]
 )
