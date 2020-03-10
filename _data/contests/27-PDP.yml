@@ -13,7 +13,7 @@ twosqr:
    statement_pdf_url: "https://drive.google.com/open?id=19gnfL73IdMPWRmhVuouYljj701fyJ-jY"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
-   solution: false
+   solution: true
    codes_in_git: true
 
 share:
