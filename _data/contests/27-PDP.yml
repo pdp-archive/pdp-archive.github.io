@@ -1,4 +1,4 @@
-xxx:
+﻿xxx:
    full_name: "Το κυλικείο του σχολείου"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1DswZjrO57aTj5aMljhwE00UOLu1EErnE/view"
@@ -14,8 +14,7 @@ twosqr:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
    solution: false
-   codes_in_git: false
-   codes_url: https://drive.google.com/open?id=19SsYnXIStQ3FuCgLnBwvaJiD1qN8Alpp
+   codes_in_git: true
 
 share:
    full_name: "Η μοιρασιά"
