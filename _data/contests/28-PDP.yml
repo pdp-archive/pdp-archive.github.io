@@ -29,18 +29,19 @@ skitrip:
    full_name: "Εκδρομή για σκι"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
+   statement_md: true   
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
    solution: true
-   codes_in_git: false
-   statement_md: true
+   solution_author: "Δημήτρης Λως"
+   codes_in_git: true
    points: 30
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
+   statement_md: true   
    testcases_url: "https://drive.google.com/open?id=1fsgRYeasgBl4IX9wFm2d6Fg_pP45K1eM"
-   statement_md: true
    solution: true
    codes_in_git: true
    points: 30
