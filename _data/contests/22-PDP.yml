@@ -3,7 +3,7 @@ hydrogen:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1kePNn2q8Ou7Y5RSDLS36NJ6aZMbNh5cx"
    statement_md: false
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/open?id=1StSUhcdHUKaKdqxYi3wwcCypEBFX1D3i"
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=1pvYYEb5mAyYMuWfJ06beOZGp_FlW5-Zn"
@@ -16,7 +16,7 @@ matrix:
    testcases_url: "https://drive.google.com/open?id=1KJaIgr7PK1LiiwHm_oLH_UTRamgm5ZrW"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1TQb5-H0LwlO8lUPb0Hs55lADxG_2rw87"
+   codes_url: "https://drive.google.com/open?id=1xcLdDDNhSdyxadevZCzXr-3nTIRdLbuM"
 
 fire:
    full_name: "Οι φωτιές στην Ελλάδα"
@@ -26,7 +26,7 @@ fire:
    testcases_url: "https://drive.google.com/open?id=1uuD4uS534StCDh-CXf0BRWtcQUTv8gGF"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=196YmkR_uLQ0LsjjsrCioh5QY8W7lTI-w"
+   codes_url: "https://drive.google.com/open?id=1IsKbqSMwbI_5V3aHMd8Z9Jg_WoKgGIQp"
 
 lines_man: 
    full_name: "Lines man"
@@ -44,7 +44,7 @@ servers:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: false
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/open?id=1nWslEKEhv3R_wlUaRDa-DzMBMN0FEaEO"
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=1L7bMpoQhgAmD84EtZufo61HSwVkJUGnd"
