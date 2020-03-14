@@ -1,0 +1,62 @@
+function:
+   full_name: "Υπολογιστικά νέφη"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/open?id=1I3x7_RNA-r8Mk4YZH7VKOoAhwTwXzdWh"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1ZpfW5pF_ISWAh_DdtZO4d124HyGd-y74"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
+
+operators:
+   full_name: "Τελεστικοί ενισχυτές"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=1NZRmqsNyrcwxV4JVDAdlPQo90WTPXY0t"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1QoxbBK2tCiN_FWN-AR60GxcK41ATwi83"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1dUfjJWNlPKE8MUiQnc82TYQAp6NhysWE"
+
+pulsars:
+   full_name: "Ραδιοαστέρες"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1qD0H5iLklpoam5BIMPt94RUciK6_nM0G"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1hwJ1rXa-Nv9P4e7CvKeoFVUeVok8MaWu/view?usp=sharing"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1uABGXHD3Bqg3zNL8rolkNnLkIE0eqr-g"
+
+loutraki: 
+   full_name: "Λουτράκι"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1zYZhAYENDWhJbami8vq33BPrk_GkwetE"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
+   points: 30
+
+minpali: 
+   full_name: "Παλίνδρομο"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1JCAj6hgRSBksM9otjcE8AqAAhTxs9GiQ"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
+   points: 30
+
+souvlaki: 
+   full_name: "Παλίνδρομο"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1BHzeGvw7K31cter5oiyBVYzlBBFP097y"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
+   points: 40
