@@ -1,0 +1,59 @@
+profit:
+   full_name: "Μεγιστοποίηση κέρδους"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/open?id=1Wy-RxK4fSRdXiTYAk8rT7KlBqfqcTVof"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1RktdInlCPvF50xmETmuDgP2Yrd36KyDj"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1s4W2WGhm8ecXFL39VeeyIcTRjQHvX1o4"
+
+snow_run:
+   full_name: "Χιονοδρομίες στα «Τρία-Πέντε Πηγάδια»"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/open?id=1kGscE_ABfHdYjssLh3ADTaOPzFewjrZv"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1uNWCNL4SvNQKEZgK85nO3zGeFwzl2KYZ"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=14fm1Wdjf21LJzbqg-LU-ZCm65WJD7vZ5"
+
+company:
+   full_name: "Εταιρική ιεραρχία"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/open?id=1dwzBZtDItkqHym26rfc5DHMuj4XDlKfk"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1dhDH5lz0UKGQPeOhq821-kMdYsF81TW4"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
+
+prevdiv: 
+   full_name: "Prevdiv"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=12aBIv3J-jCTSxxYccs_pkAa2ezrtoD56"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1Tk12x4KJYINX7YVt8Fr6JH2kHd-GNeb3"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1rZgXIPRnkQE5-ogzoU37kZju0nXH4McS"
+
+fishboats: 
+   full_name: "Fishboats"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=12aBIv3J-jCTSxxYccs_pkAa2ezrtoD56"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1Yycjw3uvtHKV6_7f26NcoaG2maABYMzA"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1yILDHKLQDb_WCVYh_N04jkWCPlBr_kD0"
+
+anneal: 
+   full_name: "Anneal"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/open?id=12aBIv3J-jCTSxxYccs_pkAa2ezrtoD56"
+   statement_md: false
+   testcases_url: "https://drive.google.com/open?id=1XMEzvYx5d-ppwDJW2OvAx93IktK5N4Cg"
+   solution: false
+   codes_in_git: false
+   codes_url: "https://drive.google.com/open?id=1yCiAshSqcEV3KOVPGxvksWxif7QPXESC"
