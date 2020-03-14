@@ -37,6 +37,7 @@ prevdiv:
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=1Zw07u0jmkf4SAKbwRMy96Y5Oqt3qBZyi"
+   points: 10
 
 fishboats: 
    full_name: "Fishboats"
@@ -47,6 +48,7 @@ fishboats:
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
+   points: 10
 
 anneal: 
    full_name: "Anneal"
@@ -57,3 +59,4 @@ anneal:
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
+   points: 10
