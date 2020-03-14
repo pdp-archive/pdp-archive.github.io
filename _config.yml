@@ -15,6 +15,9 @@ highlighter: rouge
 collections_dir: contests
 
 collections:
+  23-PDP:
+    output: true
+    permalink: /:collection/:name
   24-PDP:
     output: true
     permalink: /:collection/:name
@@ -44,6 +47,12 @@ collections:
     permalink: /:collection/:name
     
 defaults:
+  - scope:
+      path: ""
+      type: "23-PDP"
+    values:
+      contest: "23ος ΠΔΠ"
+      contest_url: "23-PDP"
   - scope:
       path: ""
       type: "24-PDP"
