@@ -23,7 +23,7 @@ pulsars:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1qD0H5iLklpoam5BIMPt94RUciK6_nM0G"
    statement_md: false
-   testcases_url: "https://drive.google.com/open?id=1uABGXHD3Bqg3zNL8rolkNnLkIE0eqr-g"
+   testcases_url: "https://drive.google.com/file/d/1hwJ1rXa-Nv9P4e7CvKeoFVUeVok8MaWu/view?usp=sharing"
    solution: false
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=1uABGXHD3Bqg3zNL8rolkNnLkIE0eqr-g"
