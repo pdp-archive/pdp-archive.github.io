@@ -1,0 +1,85 @@
+TASK(
+   name = "share",
+   test_count = 14,
+   files_dir = "testdata/27-PDP/share/",
+   input_file = "share.in",
+   output_file = "share.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "share_official_c",
+         source = "share_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Γκασδρογκας Γεωργιος",
+            school = "Ενιαίο Λύκειο Πλατύκαμπου",
+         ),
+      ),
+      SOLUTION(
+         name = "share_official_cpp",
+         source = "share_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Βολίκας Μάρκος",
+            school = "Π.Π. ΓΕ.Λ. Ιωνιδειου Σχολης Πειραια",
+         ),
+      ),
+      SOLUTION(
+         name = "share_official_pas",
+         source = "share_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Ορφανόπουλος Χρήστος",
+            school = "Π.Π. ΓΕΛ Ευαγ. Σχ. Ν. Σμύρνης",
+         ),
+      ),
+      SOLUTION(
+         name = "share_brute_force",
+         source = "share_brute_force.cpp",
+         passes_up_to = 6,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "share_brute_force_prefix_sums",
+         source = "share_brute_force_prefix_sums.cpp",
+         passes_up_to = 7,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "share_binary_search",
+         source = "share_binary_search.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "share_two_binary_searches",
+         source = "share_two_binary_searches.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "share_two_pointers",
+         source = "share_two_pointers.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)
