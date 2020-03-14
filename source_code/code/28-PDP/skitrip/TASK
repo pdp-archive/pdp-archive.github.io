@@ -1,0 +1,43 @@
+TASK(
+   name = "skitrip",
+   test_count = 42,
+   files_dir = "testdata/28-PDP/skitrip/",
+   input_file = "skitrip.in",
+   output_file = "skitrip.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "skitrip_official_cpp",
+         source = "skitrip_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "skitrip_brute_force_cpp",
+         source = "skitrip_brute_force.cpp",
+         passes_up_to = 17,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         )
+      ),
+      SOLUTION(
+         name = "skitrip_sorting_cpp",
+         source = "skitrip_sorting.cpp",
+         passes_up_to = 26,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         )
+      ),
+      SOLUTION(
+         name = "skitrip_efficient_cpp",
+         source = "skitrip_efficient.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         )
+      ),
+   ]
+)
