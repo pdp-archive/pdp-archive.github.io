@@ -15,10 +15,10 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
     {% for collection in site.collections reversed %} 
 	  {% if collection.label != "posts" %}
 	    {% for post in site.[collection.label] %}
-          {% if post.tags contains "summary" %}		
+          {% if post.layout == "summary" %}		
         <article>
           <h4 class="title">
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.contest_no }}ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)</a>
           </h4>
         </article>
 		  {% endif %}
