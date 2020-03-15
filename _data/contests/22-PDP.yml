@@ -4,8 +4,8 @@ hydrogen:
    statement_pdf_url: "https://drive.google.com/open?id=1kePNn2q8Ou7Y5RSDLS36NJ6aZMbNh5cx"
    statement_md: false
    testcases_url: "https://drive.google.com/open?id=1StSUhcdHUKaKdqxYi3wwcCypEBFX1D3i"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1pvYYEb5mAyYMuWfJ06beOZGp_FlW5-Zn"
 
 matrix:
