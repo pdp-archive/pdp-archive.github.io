@@ -1,5 +1,4 @@
 ---
-title: "23ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 23
 layout: summary
-tags: [summary]
 ---
