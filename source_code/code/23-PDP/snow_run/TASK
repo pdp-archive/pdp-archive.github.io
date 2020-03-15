@@ -19,7 +19,7 @@ TASK(
          name = "snow_run_official_c",
 		   source = "snow_run_official.c",
 		   passes_all,
-		   lang = "c++",
+		   lang = "c",
          author = PERSON(
 		      name = "Θεοδώρα Παναγέα",
 		   ),
@@ -28,7 +28,7 @@ TASK(
          name = "snow_run_official_pas",
 		   source = "snow_run_official.pas",
 		   passes_all,
-		   lang = "c++",
+		   lang = "pas",
          author = PERSON(
 		      name = "Αλέξανδρος Μπιμπίκος",
 		   ),
