@@ -13,7 +13,7 @@ int main(void) {
    FILE * out = fopen ("operators.out", "w");
    fscanf (in , "%ld", &n);
    //--------------------------------------
-   pinakas = (unsigned long int *) malloc(n * 4);
+   pinakas = (unsigned long int *) malloc(n * sizeof(unsigned long int));
    long int up_timh1,up_timh;
    n--;
    n1=0;
@@ -85,3 +85,6 @@ end:
      fclose(in); fclose(out);
    return 0;
 }
+
+// dim131: Η malloc καλούνταν με λάθος παραμέτρους και έτσι η λύση
+// δεν περνούσε τα μεγάλα testcases.

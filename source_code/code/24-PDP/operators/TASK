@@ -19,7 +19,7 @@ TASK(
       SOLUTION(
          name = "operators_official_c",
          source = "operators_official.c",
-         passes_all_except_for = [6, 8, 9, 10],
+         passes_all,
          lang = "c++",
          author = PERSON(
             name = "Αγιάννης Κωνσταντίνος",
