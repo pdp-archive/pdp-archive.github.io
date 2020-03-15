@@ -1,0 +1,55 @@
+TASK(
+   name = "hydrogen",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/hydrogen/",
+   input_file = "hydrogen.in",
+   output_file = "hydrogen.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "hydrogen_official_cpp",
+         source = "hydrogen_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hydrogen_official_c",
+         source = "hydrogen_official.c",
+         passes_all,
+         lang = "c",
+      ),
+      SOLUTION(
+         name = "hydrogen_official_pas",
+         source = "hydrogen_official.pas",
+         passes_all,
+         lang = "pas",
+      ),
+      SOLUTION(
+         name = "hydrogen_bubble_sort",
+         source = "hydrogen_bubble_sort.cpp",
+         passes_up_to = 1,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "hydrogen_quicksort",
+         source = "hydrogen_quicksort.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "hydrogen_counting_sort",
+         source = "hydrogen_counting_sort.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)
