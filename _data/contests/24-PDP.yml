@@ -34,13 +34,10 @@ loutraki:
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zYZhAYENDWhJbami8vq33BPrk_GkwetE"
-<<<<<<< HEAD
    solution: true
    codes_in_git: true
-=======
-   solution: false
-   codes_in_git: false
->>>>>>> ae782b55693f458263d8518f77004c16c4eccafa
+   solution: true
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    points: 30
 
