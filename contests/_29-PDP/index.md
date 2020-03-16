@@ -1,5 +1,4 @@
 ---
-title: "29ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 29
 layout: summary
-tags: [summary]
 ---

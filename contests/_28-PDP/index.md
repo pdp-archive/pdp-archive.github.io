@@ -1,5 +1,4 @@
 ---
-title: "28ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 28
 layout: summary
-tags: [summary]
 ---

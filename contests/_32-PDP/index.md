@@ -1,5 +1,4 @@
 ---
-title: "32ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 32
 layout: summary
-tags: [summary]
 ---

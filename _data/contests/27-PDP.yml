@@ -22,9 +22,8 @@ share:
    statement_pdf_url: "https://drive.google.com/open?id=15L1UcAiIplsaJAzncjmycZSgWzhBMBcf"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Fz07w2bENBnoO7o-i7u_mJak8JQSUtwa"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1dCCIFuqrsgaku0y_Uj3UW9zB6M6vud0Q"
+   solution: true
+   codes_in_git: true
 
 aces:
    full_name: "Παρέες αριθμών"

@@ -1,0 +1,55 @@
+TASK(
+   name = "company",
+   test_count = 10,
+   files_dir = "testdata/23-PDP/company/",
+   input_file = "company.in",
+   output_file = "company.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "company_official_cpp",
+		   source = "company_official.cpp",
+		   passes_all,
+		   lang = "c++",
+         author = PERSON(
+		      name = "Φοίβος Αντουλινάκης",
+		   ),
+      ),
+      SOLUTION(
+         name = "company_official_c",
+		   source = "company_official.c",
+		   passes_all,
+		   lang = "c",
+         author = PERSON(
+		      name = "Κυριάκος Αξιώτης",
+		   ),
+      ),
+      SOLUTION(
+         name = "company_official_pas",
+		   source = "company_official.pas",
+		   passes_all,
+		   lang = "pas",
+         author = PERSON(
+		      name = "Δημήτρης Μπεχράκης",
+		   ),
+      ),
+      SOLUTION(
+         name = "company_brute_force",
+		   source = "company_brute_force.cpp",
+		   passes_all,
+		   lang = "c++",
+         author = PERSON(
+		      name = "georgevidalakis",
+		   ),
+      ),
+      SOLUTION(
+         name = "company_efficient",
+		   source = "company_efficient.cpp",
+		   passes_all,
+		   lang = "c++",
+		   author = PERSON(
+		      name = "georgevidalakis",
+		   ),
+      ),
+   ]
+)
