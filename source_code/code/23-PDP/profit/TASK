@@ -1,0 +1,55 @@
+TASK(
+   name = "profit",
+   test_count = 12,
+   files_dir = "testdata/23-PDP/profit/",
+   input_file = "profit.in",
+   output_file = "profit.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "profit_official_cpp",
+         source = "profit_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Ευστάθιος Μποζίκας",
+         ),
+      ),
+      SOLUTION(
+         name = "profit_official_c",
+         source = "profit_official.c",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Νίκος Τζάμος",
+         ),
+      ),
+      SOLUTION(
+         name = "profit_official_pas",
+         source = "profit_official.pas",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Αλέξανδρος Μπιμπίκος",
+         ),
+      ),
+      SOLUTION(
+         name = "profit_brute_force",
+         source = "profit_brute_force.cpp",
+         passes_up_to = 9,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "profit_efficient",
+         source = "profit_efficient.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)
