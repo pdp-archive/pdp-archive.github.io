@@ -7,6 +7,12 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
+         name = "agora_official",
+         source = "agora_official.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
          name = "agora_brute_force",
          source = "agora_brute_force.cc",
          passes_up_to = 10,

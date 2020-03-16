@@ -1,5 +1,4 @@
 ---
-title: "31ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 31
 layout: summary
-tags: [summary]
 ---

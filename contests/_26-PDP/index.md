@@ -1,5 +1,4 @@
 ---
-title: "26ος Πανελλήνιος Διαγωνισμός Πληροφορικής (ΠΔΠ)"
+contest_no: 26
 layout: summary
-tags: [summary]
 ---

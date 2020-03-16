@@ -7,6 +7,12 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
+         name = "mntsea_official",
+         source = "mntsea_official.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
          name = "mntsea_n3",
          source = "mntsea_n3.cc",
          passes_up_to = 8,

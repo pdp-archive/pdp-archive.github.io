@@ -7,6 +7,12 @@ TASK(
    time_limit = 1,
    solutions = [
        SOLUTION(
+         name = "hydrocarbons_official",
+         source = "hydrocarbons_official.cc",
+         passes_all,
+         lang = "c++",
+       ),
+       SOLUTION(
          name = "hydrocarbons_efficient_integers",
          source = "hydrocarbons_efficient_integers.cc",
          passes_all,
@@ -25,7 +31,7 @@ TASK(
          ),
        ),
        SOLUTION(
-       name = "hydrocarbons_wrong",
+         name = "hydrocarbons_wrong",
          source = "hydrocarbons_wrong.cc",
          passes_up_to = 16,
          lang = "c++",

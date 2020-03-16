@@ -7,6 +7,12 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
+         name = "cntbal_official",
+         source = "cntbal_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
          name = "cntbal_N^3",
          source = "cntbal_N^3.cpp",
          passes_up_to = 15,
