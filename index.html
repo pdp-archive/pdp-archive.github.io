@@ -14,7 +14,7 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
     {% assign sortedCollections = site.collections %}
     {% for collection in site.collections reversed %} 
 	  {% if collection.label != "posts" %}
-	    {% for post in site.[collection.label] %}
+	    {% for post in site[collection.label] %}
           {% if post.layout == "summary" %}		
         <article>
           <h4 class="title">
@@ -25,6 +25,11 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
 	    {% endfor %}
       {% endif %}
     {% endfor %}
+    <article>
+       <h4 class="title">
+         <a href="/all">Όλοι οι διαγωνισμοί</a>
+       </h4>
+    </article>
 	<div id="footer_space"></div>
 	{% include contributors_footer.html %}
   </body>
