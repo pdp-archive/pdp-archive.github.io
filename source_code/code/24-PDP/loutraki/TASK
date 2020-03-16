@@ -42,5 +42,14 @@ TASK(
             name = "kbokis",
          ),
       ),
+      SOLUTION(
+         name = "loutraki1",
+         source = "loutraki1.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Παναγιώτου Σωτήριος 59ο ΓΕΛ Αθηνών",
+         ),
+      ),
    ]
 )

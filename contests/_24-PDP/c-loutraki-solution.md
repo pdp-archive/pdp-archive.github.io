@@ -11,14 +11,14 @@ codename: loutraki
 ![Παράδειγμα](/assets/24-pdp-c-loutraki-example2.png){:width="640px"}
 
 Στο παραπάνω παράδειγμα, μόνο τα πράσινα ξενοδοχεία θεωρούνται προνομιούχα. Πιο αναλυτικά:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 1 δεν κρύβεται από κανένα άλλο.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 2 κρύβεται από τα 3,6,8.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 3 κρύβεται από τα 1,6,8.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 4 κρύβεται από τα 3,1,7.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 5 δεν κρύβεται από κανένα άλλο.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 6 κρύβεται από τα 5 και 8.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 7 κρύβεται από τα 5 και 6.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Το ξενοδοχείο 8 δεν κρύβεται από κανένα άλλο.  
+&nbsp;&nbsp;Το ξενοδοχείο 1 δεν κρύβεται από κανένα άλλο.  
+&nbsp;&nbsp;Το ξενοδοχείο 2 κρύβεται από τα 3,6,8.  
+&nbsp;&nbsp;Το ξενοδοχείο 3 κρύβεται από τα 1,6,8.  
+&nbsp;&nbsp;Το ξενοδοχείο 4 κρύβεται από τα 3,1,7.  
+&nbsp;&nbsp;Το ξενοδοχείο 5 δεν κρύβεται από κανένα άλλο.  
+&nbsp;&nbsp;Το ξενοδοχείο 6 κρύβεται από τα 5 και 8.  
+&nbsp;&nbsp;Το ξενοδοχείο 7 κρύβεται από τα 5 και 6.  
+&nbsp;&nbsp;Το ξενοδοχείο 8 δεν κρύβεται από κανένα άλλο.  
   
   	
   	
@@ -68,56 +68,15 @@ int main() {
 ```
   
   
-## Μέτρια λύση - $$O(N \cdot log(N))$$
+## Καλή λύση - $$O(N \cdot log(N))$$
 
-Γνώσεις που θα χρειαστούμε: το __set__ από την stl της C++
+Γνώσεις που θα χρειαστούμε: std::vector, std::sort (C++ stl)
 
 Η λύση που θα δούμε εισάγει ιδέες που θα χρειαστούν για την βέλτιστη λύση.
 
 Αποθηκεύουμε για κάθε διακριτή συντεταγμένη όλες τις αντίστοιχες συντεταγμένες του άλλου άξονα. Θα ελέγξουμε το κάθε ένα από τα $$N$$ ξενοδοχεία, αν επικαλύπτεται από κάποιο άλλο σε πολυπλοκότητα $$O(logN)$$
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
-
-```c++
-#include <bits/stdc++.h>
-
-using namespace std;
-
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
-
-set<int> X[2*OFFSET+1],Y[2*OFFSET+1];
-
-int N, ans;
-pair<int,int> hotel[MAXN+1];
-#define	xx	first
-#define	yy	second
-
-int main() {
-#ifdef CONTEST
-	freopen("loutraki.in","r",stdin);
-	freopen("loutraki.out","w",stdout);
-#endif
-	scanf("%d", &N);
-	for(int i=1; i<=N; ++i){
-		scanf("%d%d",&hotel[i].xx,&hotel[i].yy);
-		hotel[i].xx+=OFFSET;
-		hotel[i].yy+=OFFSET;
-		X[hotel[i].xx].insert(hotel[i].yy);
-		Y[hotel[i].yy].insert(hotel[i].xx);
-	}
-	for(int i=1;i<=N;++i){
-		if(*(X[hotel[i].xx].begin()) == hotel[i].yy && *(Y[hotel[i].yy].begin()) == hotel[i].xx)
-			ans++;
-		//αν η μικρότερη τιμή είναι η δικιά μας και στις δύο συντεταγμένες, 
-		//τότε είμαστε προνομοιούχοι
-	}
-	printf("%d\n", ans);
-	return 0;
-}
-```
-## Σημείωση  
-Θα μπορούσαμε αντί για __set__ να χρησιμοποιήσουμε απλούς πίνακες και να τους ταξινομήσουμε μετά την ανάγνωση των στοιχείων όπως στο παρακάτω παράδειγμα  
 
 ```c++
 #include <bits/stdc++.h>
@@ -150,6 +109,8 @@ int main() {
 	
 	for(int x=0;x<2*OFFSET;x++)sort(X[x].begin(),X[x].end());
 	for(int y=0;y<2*OFFSET;y++)sort(Y[y].begin(),Y[y].end());
+	//μετά την ταξινόμιση το πρώτο στοιχείο κάθε vector έχει τον αριθμό 
+	//του ξενοδοχείου που κρύβει τα υπόλοιπα στην ευθεία
 	
 	for(int i=1;i<=N;++i){
 		if(X[hotel[i].xx][0] == hotel[i].yy && Y[hotel[i].yy][0] == hotel[i].xx)
@@ -163,7 +124,7 @@ int main() {
 ```
 
 ## Παρατήρηση  
-Σε κάθε διακριτή τιμή τετμημένης($$x$$) ή τεταγμένης($$y$$) μας ενδιαφέρει μόνο **το ξενοδοχείο με την μικρότερη τεταγμένη ή τετμημένη** αντίστοιχα γι' αυτό και στην προηγούμενη λύση χρησιμοποιούσαμε μόνο το πρώτο στοιχείο του __set__. Δηλαδή από όλα τα ξενοδοχεία με ίδιο $$x$$ μας ενδιαφέρει μόνο το ξενοδοχείο με το μικρότερο $$y$$.
+Σε κάθε διακριτή τιμή τετμημένης($$x$$) ή τεταγμένης($$y$$) μας ενδιαφέρει μόνο **το ξενοδοχείο με την μικρότερη τεταγμένη ή τετμημένη** αντίστοιχα γι' αυτό και στην προηγούμενη λύση χρησιμοποιούσαμε μόνο το πρώτο στοιχείο του __vector__. Δηλαδή από όλα τα ξενοδοχεία με ίδιο $$x$$ μας ενδιαφέρει μόνο το ξενοδοχείο με το μικρότερο $$y$$.
 Οπότε είμαστε έτοιμοι για την λύση με γραμμική πολυπλοκότητα που ακολουθεί.
 
 
@@ -275,6 +236,8 @@ int main() {
 Στον πίνακα $$\mathit{hotel[ ]}$$ χρησιμοποιούμε τα στοιχεία $$1$$ έως και $$N$$ άρα πρέπει να έχει μέγεθος $$10^6+1$$  
 Στους πίνακες $$X[ ]$$ και $$Y[ ]$$ θέλουμε να αποθηκεύουμε τιμές από $$-10^5$$ έως και $$+10^5$$ οι οποίες είναι $$10^5$$ από κάθε κατεύθυνση του άξονα συντεταγμένων και μια ακόμα τιμή που είναι το $$0$$ οπότε $$2\cdot 10^5 + 1$$ τιμές συνολικά.  
 Λόγω του ότι είναι εύκολο να γίνει λάθος που θα παράγει σφάλμα κατάτμησης (segmentation fault) είναι προτιμότερο στους διαγωνισμούς να δεσμεύονται μερικά στοιχεία περισσότερο στους πίνακες (π.χ. 5 στοιχεία παραπάνω από ότι υπολογίζουμε ότι χρειάζεται) και ας μην χρησιμοποιηθούν παρά να χαθούν test cases από τέτοιες λεπτομέρειες.   
+
+
 ```c++
 #define MAXN	int(1e6)
 #define OFFSET	int(1e5)
@@ -284,3 +247,79 @@ int X[2*OFFSET+5],Y[2*OFFSET+5];
 pair<int,int> hotel[MAXN+5];
 ```
 
+
+## Κώδικας διαγωνιζομένων   
+Ο παρακάτω κώδικας ανοίκει στον Παναγιώτου Σωτήριο του 59ο ΓΕΛ Αθηνών και πέρασε όλα τα test case  
+
+```c++
+/*
+USER:pdp24u226
+TASK:loutraki
+LANG:C++
+*/
+#include<bitset>
+#include<set>
+#include<map>
+#include<queue>
+#include<utility>
+#include<algorithm>
+#include<stack>
+using namespace std;
+#include"stdio.h"
+#include"string.h"
+#include"stdlib.h"
+#include"assert.h"
+FILE *fin,*fout;
+int minx[200001],miny[200001];
+int minx_bel[200001],miny_bel[200001];
+bool bouno[1000001],paralia[1000001];
+int N;
+int main(){
+	int i,j,k;
+	fin=fopen("loutraki.in","r");
+	assert(fin);
+	fscanf(fin,"%d",&N);
+	for(i=1;i<=N;i++){
+		fscanf(fin,"%d %d",&j,&k);
+		//printf("check (%d,%d)->(%d,	%d)\n",j,k,j+100000,k+100000);
+
+		j+=100000;
+		k+=100000;
+		//min x for row
+		if(minx_bel[k]==0||minx[k]>j){
+			minx_bel[k]=i;
+			minx[k]=j;
+		}
+		//min y for row
+		if(miny_bel[j]==0||miny[j]>k){
+			miny_bel[j]=i;
+			miny[j]=k;
+		}
+	}
+	fclose(fin);
+	for(i=0;i<=200000;i++){
+		if(minx_bel[i]!=0){
+			//printf("minx for row %d is %d, belongs to %d\n",i-100000,minx[i]-100000,minx_bel[i]);
+			bouno[minx_bel[i]]=true;
+		}
+	}
+	for(i=0;i<=200000;i++){
+		if(miny_bel[i]!=0){
+			//printf("miny for col %d is %d, belongs to %d\n",i-100000,miny[i]-100000,miny_bel[i]);
+			paralia[miny_bel[i]]=true;
+		}
+	}
+
+	j=0;
+	for(i=1;i<=N;i++){
+		if(bouno[i]&&paralia[i]){
+			//printf("%d wins\n",i);
+			j++;
+		}
+	}
+	fout=fopen("loutraki.out","w");
+	fprintf(fout,"%d\n",j);
+	fclose(fout);
+	return 0;
+}
+```
