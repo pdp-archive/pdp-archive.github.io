@@ -24,8 +24,8 @@ company:
    statement_pdf_url: "https://drive.google.com/open?id=1dwzBZtDItkqHym26rfc5DHMuj4XDlKfk"
    statement_md: false
    testcases_url: "https://drive.google.com/open?id=1dhDH5lz0UKGQPeOhq821-kMdYsF81TW4"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
 
 prevdiv: 
