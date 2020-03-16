@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/24-PDP/loutraki/",
    input_file = "loutraki.in",
    output_file = "loutraki.out",
-   time_limit = 1,
+   time_limit = 2,
    solutions = [
       SOLUTION(
          name = "loutraki_n2",
