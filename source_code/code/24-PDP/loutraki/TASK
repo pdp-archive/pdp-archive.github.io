@@ -1,0 +1,46 @@
+TASK(
+   name = "loutraki",
+   test_count = 15,
+   files_dir = "testdata/24-PDP/loutraki/",
+   input_file = "loutraki.in",
+   output_file = "loutraki.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "loutraki_n2",
+         source = "loutraki_n2.cc",
+         passes_up_to = 7,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "loutraki_nlogn",
+         source = "loutraki_nlogn.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "loutraki_nlogn_2",
+         source = "loutraki_nlogn_2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "loutraki_n",
+         source = "loutraki_n.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
