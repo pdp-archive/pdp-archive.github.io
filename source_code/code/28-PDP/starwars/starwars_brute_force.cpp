@@ -48,8 +48,8 @@ void update_z(int l, int r) {
    }
 }
 
-int sum(int x1, int y1, int z1, int x2, int y2, int z2) {
-   int sm = 0;
+long sum(int x1, int y1, int z1, int x2, int y2, int z2) {
+   long sm = 0;
    for (int i = x1; i <= x2; ++i) {
       for (int j = y1; j <= y2; ++j) {
          for (int k = z1; k <= z2; ++k) {
@@ -87,7 +87,7 @@ int main() {
          } else if (type == 3) {
             int x1, x2, y1, y2, z1, z2;
             scanf("%d %d %d %d %d %d", &x1, &y1, &z1, &x2, &y2, &z2);
-            printf("%d\n", sum(x1, y1, z1, x2, y2, z2));
+            printf("%ld\n", sum(x1, y1, z1, x2, y2, z2));
          }
       }
    }

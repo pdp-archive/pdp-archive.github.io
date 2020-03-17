@@ -53,5 +53,6 @@ starwars:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
    solution: true
+   solution_author: "Δημήτρης Λως"
    codes_in_git: true
    points: 40
