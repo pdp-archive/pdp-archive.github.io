@@ -43,15 +43,13 @@ int main() {
 	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.y==b.y)?(a.x<b.x):(a.y<b.y);});
 	for(int i=1;i<=N;){
 		int co = C[i].y;
-		hotel[C[i].hotel_id].visibility++;
+		//hotel[C[i].hotel_id].visibility++;
+		if(++hotel[C[i].hotel_id].visibility == 2) 
+			ans++;
 		while(C[i].y == co)
 			i++;
 	}
 
-	for(int i=1;i<=N;i++)
-		if(hotel[i].visibility==2)
-			ans++;
-		
 	printf("%d\n", ans);
 	return 0;
 }
