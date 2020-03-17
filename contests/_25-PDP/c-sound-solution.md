@@ -1,5 +1,6 @@
 ---
 layout: solution
+codename: sound
 ---
 
 ## Επεξήγηση εκφώνησης

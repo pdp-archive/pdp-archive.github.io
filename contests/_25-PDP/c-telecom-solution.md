@@ -1,5 +1,6 @@
 ---
 layout: solution
+codename: telecom
 ---
 
 *Η λύση απαιτεί γνώσεις για το ελάχιστο συνδετικό δένδρο. Η βέλτιση λύση απαιτεί γνώσεις disjoint set union*
