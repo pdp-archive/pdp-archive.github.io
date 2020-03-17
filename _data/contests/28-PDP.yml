@@ -50,8 +50,9 @@ starwars:
    full_name: "Star Wars"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1WrbftIXzJSMMh3OTZPOtAB4USTV95bkA"
-   testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
-   solution: false
-   codes_in_git: false
    statement_md: true
+   testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
+   solution: true
+   solution_author: "Δημήτρης Λως"
+   codes_in_git: true
    points: 40
