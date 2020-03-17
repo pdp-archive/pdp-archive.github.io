@@ -1,6 +1,6 @@
 #include <cstdio>
 using namespace std;
-#define MAXN 100005
+const long MAXN = 100005;
 long A[MAXN];
 bool B[MAXN];
 int main() {
