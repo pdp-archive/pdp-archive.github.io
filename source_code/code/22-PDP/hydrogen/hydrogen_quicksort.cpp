@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 using namespace std;
-#define MAXL 10005
+const long MAXL = 10005;
 struct car_part {
     long id, freq;
 };

@@ -11,23 +11,32 @@ TASK(
          source = "hydrogen_official.cpp",
          passes_all,
          lang = "c++",
+         author = PERSON(
+            name = "official",
+         ),
       ),
       SOLUTION(
          name = "hydrogen_official_c",
          source = "hydrogen_official.c",
          passes_all,
          lang = "c",
+         author = PERSON(
+            name = "official",
+         ),
       ),
       SOLUTION(
          name = "hydrogen_official_pas",
          source = "hydrogen_official.pas",
          passes_all,
          lang = "pas",
+         author = PERSON(
+            name = "official",
+         ),
       ),
       SOLUTION(
          name = "hydrogen_bubble_sort",
          source = "hydrogen_bubble_sort.cpp",
-         passes_up_to = 1,
+	 passes_all,
          lang = "c++",
          author = PERSON(
             name = "georgevidalakis",
@@ -36,15 +45,6 @@ TASK(
       SOLUTION(
          name = "hydrogen_quicksort",
          source = "hydrogen_quicksort.cpp",
-         passes_all,
-         lang = "c++",
-         author = PERSON(
-            name = "georgevidalakis",
-         ),
-      ),
-      SOLUTION(
-         name = "hydrogen_counting_sort",
-         source = "hydrogen_counting_sort.cpp",
          passes_all,
          lang = "c++",
          author = PERSON(

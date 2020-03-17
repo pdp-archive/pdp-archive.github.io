@@ -5,8 +5,8 @@ hydrogen:
    statement_md: false
    testcases_url: "https://drive.google.com/open?id=1StSUhcdHUKaKdqxYi3wwcCypEBFX1D3i"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1pvYYEb5mAyYMuWfJ06beOZGp_FlW5-Zn"
 
 matrix:
    full_name: "Πρόβλημα στον «Έξυπνο» Διαδραστικό Πίνακα"
