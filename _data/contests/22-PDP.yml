@@ -2,7 +2,7 @@ hydrogen:
    full_name: "Hydrogen"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1kePNn2q8Ou7Y5RSDLS36NJ6aZMbNh5cx"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1StSUhcdHUKaKdqxYi3wwcCypEBFX1D3i"
    solution: false
    codes_in_git: false
@@ -12,7 +12,7 @@ matrix:
    full_name: "Πρόβλημα στον «Έξυπνο» Διαδραστικό Πίνακα"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=1stq-V88tWJ3RnmPnLu0ylyC5UArdJHy7"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KJaIgr7PK1LiiwHm_oLH_UTRamgm5ZrW"
    solution: false
    codes_in_git: false
@@ -22,7 +22,7 @@ fire:
    full_name: "Οι φωτιές στην Ελλάδα"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=13bAGori8WsbKlQ7T-gMJn6OTVGqtnQQ-"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1uuD4uS534StCDh-CXf0BRWtcQUTv8gGF"
    solution: false
    codes_in_git: false
@@ -32,7 +32,7 @@ lines_man:
    full_name: "Lines man"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=14V4FkGjHkrYazKEe-Dme38LR9liO2vHs"
    solution: false
    codes_in_git: false
@@ -43,7 +43,7 @@ servers:
    full_name: "Servers"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1nWslEKEhv3R_wlUaRDa-DzMBMN0FEaEO"
    solution: false
    codes_in_git: false
@@ -54,7 +54,7 @@ getout:
    full_name: "Get out"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fROWztcvcX2EZ0sz4qvqAci4OB-vZcy3"
    solution: false
    codes_in_git: false
