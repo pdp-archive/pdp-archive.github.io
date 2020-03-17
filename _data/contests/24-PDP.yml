@@ -34,9 +34,9 @@ loutraki:
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zYZhAYENDWhJbami8vq33BPrk_GkwetE"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
    points: 30
 
 minpali: 
