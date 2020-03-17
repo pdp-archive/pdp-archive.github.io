@@ -44,11 +44,11 @@ layout: default
   3. Δημιουργήστε το `contests/_ΧΧ-PDP/index.md` με μόνο τα εξής:
   
      ```
-	 ---
-    contest_no: XX
-    layout: summary
-    ---
-	 ```
+	  ---
+     contest_no: XX
+     layout: summary
+     ---
+	  ```
   4. Ελέγξτε ότι στο `localhost:4000/XX-PDP` εμφανίζεται μία σελίδα χωρίς προβλήματα (μόνο με τις φάσεις). Μπορεί να πρέπει να σταματήσετε το `jekyll serve` και να το ξανατρέξετε.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/8f8b7549a4baf4318085ea01e2abd2b9eeaadc4d).
