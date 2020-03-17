@@ -2,17 +2,17 @@
 
 using namespace std;
 
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
+const long MAXN = long(1e6);
+const long OFFSET = long(1e5);
 
-int N, ans;
+long N, ans;
 bool hidden[MAXN+1];		//true if hotel i is blocked
-int X[2*OFFSET+2],Y[2*OFFSET+2];//what is the frontmost id of the hotel in this axis
-pair<int,int> hotel[MAXN+1];
+long X[2*OFFSET+2],Y[2*OFFSET+2];//what is the frontmost id of the hotel in this axis
+pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
-void hide_hotel(int i){//hide a previously processed hotel.
+void hide_hotel(long i){//hide a previously processed hotel.
 	if(!hidden[i]){
 		ans--;//i is no more part of answer
 		hidden[i] = true;
@@ -24,12 +24,12 @@ int main() {
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int x,y,i=1; i<=N; ++i){
-		scanf("%d%d",&x,&y);
+	scanf("%ld", &N);
+	for(long x,y,i=1; i<=N; ++i){
+		scanf("%ld%ld",&x,&y);
 		x+=OFFSET; y+=OFFSET; //make positive
 		hotel[i] = {x,y};
-		int visibility = 0;
+		long visibility = 0;
 		
 		//will we hide some other hotel from viewing xx' axis?
 		if(X[x]){//there is a hotel with same x
@@ -60,6 +60,6 @@ int main() {
 		else
 			ans++;
 	}
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }

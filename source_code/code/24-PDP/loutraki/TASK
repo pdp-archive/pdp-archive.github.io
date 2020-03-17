@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "loutraki_n2",
          source = "loutraki_n2.cc",
-         passes_up_to = 7,
+         passes_all_except_for = [8, 9, 10, 14, 15],
          lang = "c++",
          author = PERSON(
             name = "kbokis",
@@ -52,8 +52,8 @@ TASK(
          ),
       ),
       SOLUTION(
-         name = "loutraki1",
-         source = "loutraki1.cc",
+         name = "loutraki_official",
+         source = "loutraki_official.cc",
          passes_all,
          lang = "c++",
          author = PERSON(

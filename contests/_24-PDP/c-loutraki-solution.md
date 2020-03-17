@@ -22,11 +22,11 @@ codename: loutraki
   
   	
   	
-## Αργή λύση $$O(N^2)$$
+## Αργή λύση $$\mathcal{O}(N^2)$$
 
 Γνώσεις που θα χρειαστούμε: Καμμία.
 
-Δοκιμάζουμε για κάθε ένα από τα $$N$$ ξενοδοχεία όλους τους $$N-1$$ συνδυασμούς για να βρούμε αν κρύβεται από κάποιο άλλο. Συνολική πολυπλοκότητα $$O(N^2)$$ .
+Δοκιμάζουμε για κάθε ένα από τα $$N$$ ξενοδοχεία όλους τους $$N-1$$ συνδυασμούς για να βρούμε αν κρύβεται από κάποιο άλλο. Συνολική πολυπλοκότητα $$\mathcal{O}(N^2)$$ .
 
 Παρακάτω δίνεται μία ενδεικτική υλοποίηση αυτής της λύσης.
 
@@ -35,10 +35,10 @@ codename: loutraki
 
 using namespace std;
 
-#define MAXN	int(1e6)
+const long MAXN = long(1e6);
 
-int N, ans;
-pair<int,int> hotel[MAXN+1];
+long N, ans;
+pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
@@ -47,12 +47,12 @@ int main() {
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int i=1; i<=N; ++i)
-		scanf("%d%d",&hotel[i].xx,&hotel[i].yy);
-	for(int i=1;i<=N;++i){
+	scanf("%ld", &N);
+	for(long i=1; i<=N; ++i)
+		scanf("%ld%ld",&hotel[i].xx,&hotel[i].yy);
+	for(long i=1;i<=N;++i){
 		bool hidden = false;
-		for(int j=1;j<=N && !hidden;j++){
+		for(long j=1;j<=N && !hidden;j++){
 			if(i==j)continue;
 			if(hotel[j].xx == hotel[i].xx && hotel[j].yy < hotel[i].yy)
 				hidden = true;
@@ -62,30 +62,30 @@ int main() {
 		if(!hidden)
 			ans++;
 	}
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }
 ```
 
-## Mέτρια λύση - $$O(N \cdot log(N))$$ - line sweep
+## Mέτρια λύση - $$\mathcal{O}(N \cdot log(N))$$ - line sweep
 
 Γνώσεις που θα χρειαστούμε: lambda functions (c++11 και νεότερες)
 
 Ταξινομούμε τα ξενοδοχεία πρώτα ως προς $$x$$ και μετά ως προς $$y$$ στον πίνακα $$C[]$$.
 Σαρώνουμε από τις μικρότερες προς τις μεγαλύτερες ώστε να ενημερώσουμε τον πίνακα των ξενοδοχείων για το αν έχουν ορατότητα από αυτή την πλευρά.
-Αξοποιούμε το πρώτο στοιχείο που συναντούμε και πετάμε τα υπόλοιπα με την ίδια τιμή στη συντεταγμένη.
+Αξιοποιούμε το πρώτο στοιχείο που συναντούμε και πετάμε τα υπόλοιπα με την ίδια τιμή στη συντεταγμένη $$x$$.
 Το ίδιο θα κάνουμε και για το $$y$$.  
 
-Η ταξινόμιση γίνεται με χρήση δικών μας συναρτήσεων σύγκρισης. Προτιμήθηκε η λύση της lambda (inline σύντομες συναρτήσεις) για να δειχθεί αυτή η λειτουργία της c++
+Η ταξινόμιση γίνεται με χρήση δικών μας συναρτήσεων σύγκρισης. Προτιμήθηκε η λύση της lambda (inline σύντομες συναρτήσεις) για να δειχθεί αυτή η λειτουργία της c++.
 ```c++
-	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
+sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
 ```
 Στην παραπάνω εντολή ταξινομούμε τον πίνακα $$C[]$$ πρώτα με το $$x$$ και σε περίπτωση ισότητας με το $$y$$.
 Η συνάρτηση:
 ```c++
 [](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);}
 ```
-λέγεται lambda συνάρτηση και είναι η συνάρτηση σύγκρισης που θα χρησιμοποιήσει η sort. Μέσα στα άγγιστρα αυτό που κάνει είναι απλά να συγκρίνει τις συντεταγμένες δυο αντικειμένων του πίνακα, των $$a$$ και $$b$$. Μέσα στις $$[]$$ πρέπει να δηλώσουμε αν και πως η lambda μας θα έχει πρόσβαση σε άλλες μεταβλητές του προγράμματος εκτός από αυτές που παίρνει ως παραμέτρους. Η συγκεκριμένη lambda δεν χρειάζεται τίποτα άλλο από τα δυο στοιχεία του πίνακα οπότε παραμένει κενό το τμήμα αυτό.  
+λέγεται lambda συνάρτηση και είναι η συνάρτηση σύγκρισης που θα χρησιμοποιήσει η sort. Μέσα στα άγκιστρα αυτό που κάνει είναι απλά να συγκρίνει τις συντεταγμένες δυο αντικειμένων του πίνακα, των $$a$$ και $$b$$. Μέσα στις $$[]$$ πρέπει να δηλώσουμε αν και πως η lambda μας θα έχει πρόσβαση σε άλλες μεταβλητές του προγράμματος εκτός από αυτές που παίρνει ως παραμέτρους. Η συγκεκριμένη lambda δεν χρειάζεται τίποτα άλλο από τα δυο στοιχεία του πίνακα οπότε παραμένει κενό το τμήμα αυτό.  
 
 Η λύση αυτή περνά τα 12 από τα 15 test cases.
 
@@ -94,67 +94,67 @@ int main() {
 
 using namespace std;
 
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
+const long MAXN = long(1e6);
+const long OFFSET = long(1e5);
 
 struct hotel {
-	int x,y,visibility;
-	hotel(int x,int y): x(x), y(y) { visibility = 0; }
+	long x,y,visibility;
+	hotel(long x,long y): x(x), y(y) { visibility = 0; }
 	hotel(){ x = y = visibility = 0; }
 } hotel[MAXN+1];
 
 struct coord {
-	int x,y,hotel_id;
-	coord(int x,int y,int hotel_id):x(x),y(y),hotel_id(hotel_id){}
+	long x,y,hotel_id;
+	coord(long x,long y,long hotel_id):x(x),y(y),hotel_id(hotel_id){}
 	coord(){ x = y = hotel_id = 0; }
-} C[2*OFFSET+1];
+} C[MAXN+1];
 
-int N, ans;
+long N, ans;
 
 int main() {
 #ifdef CONTEST
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int i=1; i<=N; ++i){
-		scanf("%d%d",&hotel[i].x,&hotel[i].y);
+	scanf("%ld", &N);
+	for(long i=1; i<=N; ++i){
+		scanf("%ld%ld",&hotel[i].x,&hotel[i].y);
 		hotel[i].x += OFFSET;
 		hotel[i].y += OFFSET;
 		C[i] = coord( hotel[i].x, hotel[i].y, i );
 	}
 
 	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
-	for(int i=1;i<=N;){
-		int co = C[i].x;
+	for(long i=1;i<=N;){
+		long co = C[i].x;
 		hotel[C[i].hotel_id].visibility++;
-		while(C[i].x == co)
+		while(i<=N && C[i].x == co)
 			i++;
 	}
 
 	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.y==b.y)?(a.x<b.x):(a.y<b.y);});
-	for(int i=1;i<=N;){
-		int co = C[i].y;
+	for(long i=1;i<=N;){
+		long co = C[i].y;
 		//hotel[C[i].hotel_id].visibility++;
 		if(++hotel[C[i].hotel_id].visibility == 2) 
 			ans++;
-		while(C[i].y == co)
+		while(i<=N && C[i].y == co)
 			i++;
 	}
 
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }
 ```
   
   
-## Μέτρια λύση - $$O(N \cdot log(N))$$
+## Μέτρια λύση - $$\mathcal{O}(N \cdot log(N))$$
 
-Γνώσεις που θα χρειαστούμε: std::vector, std::sort (C++ stl)
+Γνώσεις που θα χρειαστούμε: std::vector, std::sort ([C++ stl](https://kallinikos.github.io/STL))
 
 Η λύση που θα δούμε εισάγει ιδέες που θα χρειαστούν για την βέλτιστη λύση.
 
-Αποθηκεύουμε για κάθε διακριτή συντεταγμένη όλες τις αντίστοιχες συντεταγμένες του άλλου άξονα. Θα ελέγξουμε το κάθε ένα από τα $$N$$ ξενοδοχεία, αν επικαλύπτεται από κάποιο άλλο σε πολυπλοκότητα $$O(logN)$$
+Αποθηκεύουμε για κάθε διακριτή συντεταγμένη όλες τις αντίστοιχες συντεταγμένες του άλλου άξονα. Θα ελέγξουμε το κάθε ένα από τα $$N$$ ξενοδοχεία, αν επικαλύπτεται από κάποιο άλλο σε πολυπλοκότητα $$\mathcal{O}(logN)$$.
 
 Η λύση αυτή περνά τα 12 από τα 15 test cases.
 
@@ -165,13 +165,13 @@ int main() {
 
 using namespace std;
 
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
+const long MAXN = long(1e6);
+const long OFFSET = long(1e5);
 
-vector<int> X[2*OFFSET+1],Y[2*OFFSET+1];
+vector<long> X[2*OFFSET+1],Y[2*OFFSET+1];
 
-int N, ans;
-pair<int,int> hotel[MAXN+1];
+long N, ans;
+pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
@@ -180,27 +180,25 @@ int main() {
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int i=1; i<=N; ++i){
-		scanf("%d%d",&hotel[i].xx,&hotel[i].yy);
+	scanf("%ld", &N);
+	for(long i=1; i<=N; ++i){
+		scanf("%ld%ld",&hotel[i].xx,&hotel[i].yy);
 		hotel[i].xx+=OFFSET;
 		hotel[i].yy+=OFFSET;
 		X[hotel[i].xx].push_back(hotel[i].yy);
 		Y[hotel[i].yy].push_back(hotel[i].xx);
 	}
 	
-	for(int x=0;x<2*OFFSET;x++)sort(X[x].begin(),X[x].end());
-	for(int y=0;y<2*OFFSET;y++)sort(Y[y].begin(),Y[y].end());
-	//μετά την ταξινόμιση το πρώτο στοιχείο κάθε vector έχει τον αριθμό 
-	//του ξενοδοχείου που κρύβει τα υπόλοιπα στην ευθεία
+	for(long x=0;x<2*OFFSET;x++)sort(X[x].begin(),X[x].end());
+	for(long y=0;y<2*OFFSET;y++)sort(Y[y].begin(),Y[y].end());
 	
-	for(int i=1;i<=N;++i){
+	for(long i=1;i<=N;++i){
 		if(X[hotel[i].xx][0] == hotel[i].yy && Y[hotel[i].yy][0] == hotel[i].xx)
 			ans++;
 		//αν η μικρότερη τιμή είναι η δικιά μας και στις δύο συντεταγμένες, 
 		//τότε είμαστε προνομοιούχοι
 	}
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }
 ```
@@ -211,7 +209,7 @@ int main() {
 
 
 
-## Βέλτιστη λύση - $$O(N)$$
+## Βέλτιστη λύση - $$\mathcal{O}(N)$$
 
 Γνώσεις που θα χρειαστούμε: καμμία. 
 
@@ -226,7 +224,7 @@ int main() {
 Στην περίπτωση που κρυφτεί το παλιό ξενοδοχείο πρέπει να δώσουμε προσοχή στο αν πρέπει να διορθώσουμε την μεταβλητή $$\mathit{ans}$$. Αν το παλιό ξενοδοχείο είχε επηρεάσει την μεταβλητή $$\mathit{ans}$$ τότε πρέπει να την μειώσουμε, πράγμα που κάνει το παρακάτω απόσπασμα κώδικα:  
 
 ```c++
-void hide_hotel(int i){//κρύψε το προηγούμενο ξενοδοχείο.
+void hide_hotel(long i){//κρύψε το προηγούμενο ξενοδοχείο.
 	if(!hidden[i]){	
 		//το προηγούμενο ξενοδοχείο ΔΕΝ ήταν κρυμένο μέχρι τώρα, 
 		//άρα είχε υπολογιστεί στη μεταβλητή ans
@@ -236,11 +234,11 @@ void hide_hotel(int i){//κρύψε το προηγούμενο ξενοδοχε
 }
 ```
 
-**Μια σημείωση**: θα μπορούσαμε να μην κάνουμε διορθώσεις στη μεταβλητή $$\mathit{ans}$$ καθώς επεξεργαζόμαστε τα ξενοδοχεία και απλά στο τέλος του προγράμματος να κάνουμε ένα βρόγχο επανάλληψης και να καταμετρήσουμε πόσα flags είναι σβηστά στον πίνακα $$\mathit{hidden[]}$$ και να τυπώσουμε αυτόν τον αριθμό.
+**Μια σημείωση**: θα μπορούσαμε να μην κάνουμε διορθώσεις στη μεταβλητή $$\mathit{ans}$$ καθώς επεξεργαζόμαστε τα ξενοδοχεία και απλά στο τέλος του προγράμματος να κάνουμε ένα βρόγχο επανάληψης και να καταμετρήσουμε πόσα flags είναι σβηστά στον πίνακα $$\mathit{hidden[]}$$ και να τυπώσουμε αυτόν τον αριθμό.
 
 Αφού κάνουμε τον ίδιο έλεγχο και για την τεταγμένη $$y$$ έχουμε μετρήσει από πόσες πλευρές έχει ορατότητα το ξενοδοχείο μας. Αν είναι $$visibility == 2$$ τότε το ξενοδοχείο μας είναι προνομιούχο τουλάχιστο μέχρι αυτή τη στιγμή.
 
-**Πολυπλοκότητα:**  Η εξέταση κάθε ξενοδοχείου γίνεται μόνο μια φορά και ο υπολογισμός αν κρύβεται ή κρύβει γίνεται σε $$O(1)$$ άρα η συνολική μας πολυπλοκότητα είναι $$O(N)$$.
+**Πολυπλοκότητα:**  Η εξέταση κάθε ξενοδοχείου γίνεται μόνο μια φορά και ο υπολογισμός αν κρύβεται ή κρύβει γίνεται σε $$\mathcal{O}(1)$$ άρα η συνολική μας πολυπλοκότητα είναι $$\mathcal{O}(N)$$.
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
@@ -250,19 +248,19 @@ void hide_hotel(int i){//κρύψε το προηγούμενο ξενοδοχε
 
 using namespace std;
 
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
+const long MAXN = long(1e6);
+const long OFFSET = long(1e5);
 
-int N, ans;
-bool hidden[MAXN+1];		//αληθές αν το ξενοδοχείο κρύβεται
-int X[2*OFFSET+1],Y[2*OFFSET+1];//αριθμός του πρώτου ξενοδοχείου στην x ή y συντεταγμένη
-pair<int,int> hotel[MAXN+1];
+long N, ans;
+bool hidden[MAXN+1];		//true if hotel i is blocked
+long X[2*OFFSET+2],Y[2*OFFSET+2];//what is the frontmost id of the hotel in this axis
+pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
-void hide_hotel(int i){//κρύψε ένα ξενοδοχείο που έχει υπολογιστεί παλιότερα.
+void hide_hotel(long i){//hide a previously processed hotel.
 	if(!hidden[i]){
-		ans--;//δεν είναι πιά μέρος της απάντησης εφόσον κρύφτηκε από άλλο
+		ans--;//i is no more part of answer
 		hidden[i] = true;
 	}
 }
@@ -272,42 +270,43 @@ int main() {
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int x,y,i=1; i<=N; ++i){
-		scanf("%d%d",&x,&y);
-		x+=OFFSET; y+=OFFSET; //μετέτρεψε σε θετικούς
+	scanf("%ld", &N);
+	for(long x,y,i=1; i<=N; ++i){
+		scanf("%ld%ld",&x,&y);
+		x+=OFFSET; y+=OFFSET; //make positive
 		hotel[i] = {x,y};
-		int visibility = 0;
+		long visibility = 0;
 		
-		//θα κρύψουμε κάποιο προηγούμενο ξενοδοχείο με το ίδιο x?
-		if(X[x]){//υπάρχει ξενοδοχείο με το ίδιο x
-			if(y < hotel[X[x]].yy){	//ναι, θα κρύψουμε το X[x]
+		//will we hide some other hotel from viewing xx' axis?
+		if(X[x]){//there is a hotel with same x
+			if(y < hotel[X[x]].yy){	//yes, replace old one X[x]
 				hide_hotel(X[x]);
 				X[x] = i;
 				visibility++;
 			}
-		} else {//είμαστε το πρώτο ξενοδοχείο με αυτό το x
+		} else {//first hotel in that x pos
 			X[x] = i;
 			visibility++;
 		}
 		
-		if(Y[y]){
-			if(x < hotel[Y[y]].xx){
+		//will we hide some other hotel from viewing yy' axis?
+		if(Y[y]){//there is a hotel with same y
+			if(x < hotel[Y[y]].xx){//yes, replace old one Y[y]
 				hide_hotel(Y[y]);
 				Y[y] = i;
 				visibility++;
 			}
-		} else {
+		} else {//first hotel in that y pos
 			Y[y] = i;
 			visibility++;
 		}
 		
-		if(visibility<2)//δεν έχουμε ορατότητα και από τις δύο πλευρές
+		if(visibility<2)
 			hidden[i] = true;
-		else		//ναι έχουμε ορατότητα. Αύξησε την απάντηση μας
+		else
 			ans++;
 	}
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }
 ```
@@ -315,23 +314,23 @@ int main() {
   
 ## Γενική Παρατήρηση στις διαστάσεις των πινάκων
 
-Στον πίνακα $$\mathit{hotel[ ]}$$ χρησιμοποιούμε τα στοιχεία $$1$$ έως και $$N$$ άρα πρέπει να έχει μέγεθος $$10^6+1$$  
+Στον πίνακα $$\mathit{hotel[ ]}$$ χρησιμοποιούμε τα στοιχεία $$1$$ έως και $$N$$ άρα πρέπει να έχει μέγεθος $$10^6+1$$.
 Στους πίνακες $$X[ ]$$ και $$Y[ ]$$ θέλουμε να αποθηκεύουμε τιμές από $$-10^5$$ έως και $$+10^5$$ οι οποίες είναι $$10^5$$ από κάθε κατεύθυνση του άξονα συντεταγμένων και μια ακόμα τιμή που είναι το $$0$$ οπότε $$2\cdot 10^5 + 1$$ τιμές συνολικά.  
-Λόγω του ότι είναι εύκολο να γίνει λάθος που θα παράγει σφάλμα κατάτμησης (segmentation fault) είναι προτιμότερο στους διαγωνισμούς να δεσμεύονται μερικά στοιχεία περισσότερο στους πίνακες (π.χ. 5 στοιχεία παραπάνω από ότι υπολογίζουμε ότι χρειάζεται) και ας μην χρησιμοποιηθούν παρά να χαθούν test cases από τέτοιες λεπτομέρειες.   
+Λόγω του ότι είναι εύκολο να γίνει λάθος που θα παράγει σφάλμα κατάτμησης (segmentation fault) είναι προτιμότερο στους διαγωνισμούς να δεσμεύονται μερικά στοιχεία περισσότερο στους πίνακες (π.χ. 5 στοιχεία παραπάνω από ότι υπολογίζουμε ότι χρειάζεται) και ας μην χρησιμοποιηθούν, παρά να χαθούν test cases από τέτοιες λεπτομέρειες.   
 
 
 ```c++
-#define MAXN	int(1e6)
-#define OFFSET	int(1e5)
+const long MAXN = long(1e6);
+const long OFFSET = long(1e5);
 
 bool hidden[MAXN+5];
-int X[2*OFFSET+5],Y[2*OFFSET+5];
-pair<int,int> hotel[MAXN+5];
+long X[2*OFFSET+5],Y[2*OFFSET+5];
+pair<long,long> hotel[MAXN+5];
 ```
 
 
 ## Κώδικας διαγωνιζομένων   
-Ο παρακάτω κώδικας ανοίκει στον Παναγιώτου Σωτήριο του 59ο ΓΕΛ Αθηνών και πέρασε όλα τα test case  
+Ο παρακάτω κώδικας ανοίκει στον Παναγιώτου Σωτήριο του 59ο ΓΕΛ Αθηνών και πέρασε όλα τα test case:
 
 ```c++
 /*

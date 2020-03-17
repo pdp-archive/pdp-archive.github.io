@@ -2,10 +2,10 @@
 
 using namespace std;
 
-#define MAXN	int(1e6)
+const long MAXN = long(1e6);
 
-int N, ans;
-pair<int,int> hotel[MAXN+1];
+long N, ans;
+pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
@@ -14,12 +14,12 @@ int main() {
 	freopen("loutraki.in","r",stdin);
 	freopen("loutraki.out","w",stdout);
 #endif
-	scanf("%d", &N);
-	for(int i=1; i<=N; ++i)
-		scanf("%d%d",&hotel[i].xx,&hotel[i].yy);
-	for(int i=1;i<=N;++i){
+	scanf("%ld", &N);
+	for(long i=1; i<=N; ++i)
+		scanf("%ld%ld",&hotel[i].xx,&hotel[i].yy);
+	for(long i=1;i<=N;++i){
 		bool hidden = false;
-		for(int j=1;j<=N && !hidden;j++){
+		for(long j=1;j<=N && !hidden;j++){
 			if(i==j)continue;
 			if(hotel[j].xx == hotel[i].xx && hotel[j].yy < hotel[i].yy)
 				hidden = true;
@@ -29,6 +29,6 @@ int main() {
 		if(!hidden)
 			ans++;
 	}
-	printf("%d\n", ans);
+	printf("%ld\n", ans);
 	return 0;
 }
