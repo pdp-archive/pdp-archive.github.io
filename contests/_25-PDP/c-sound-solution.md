@@ -1,8 +1,5 @@
 ---
-title: "26ος ΠΔΠ B' Φάση: Ήχοι και σιωπές (sound) - Λύση"
-layout: post
-tags: []
-comments: true
+layout: solution
 ---
 
 ## Επεξήγηση εκφώνησης
