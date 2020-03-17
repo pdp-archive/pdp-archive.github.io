@@ -4,6 +4,7 @@ aris:
    statement_pdf_url: "https://drive.google.com/open?id=1ATnIEm9A-mSPwCmhOVvR4eImFpeb8E2a"
    testcases_url: "https://drive.google.com/open?id=19FuzABxGXc-jOR9jjsMVEF4RUl2ri87Z"
    solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    statement_md: true
    
@@ -13,6 +14,7 @@ kite:
    statement_pdf_url: "https://drive.google.com/open?id=1VGZKBrIfWskE8I4rLDwNzRidlnISzgh9"
    testcases_url: "https://drive.google.com/open?id=1WNmLqY9I8GpNxmvgt4vWi_N2OdrO1uy-"
    solution: true
+   solution_author: "Γιώργος Βενιζέλος"   
    codes_in_git: true
    statement_md: true
 
@@ -22,6 +24,7 @@ scrabble1d:
    statement_pdf_url: "https://drive.google.com/open?id=1whkNc9p50XX1axktXYJuFCrqHr3X0lul"
    testcases_url: "https://drive.google.com/open?id=1zanbHnUo4pHDmU8LI5vfKGv03cmSnuDi"
    solution: true
+   solution_author: "Γιώργος Βενιζέλος"      
    codes_in_git: true
    statement_md: true
 
@@ -43,6 +46,7 @@ schoolnet:
    statement_md: true   
    testcases_url: "https://drive.google.com/open?id=1fsgRYeasgBl4IX9wFm2d6Fg_pP45K1eM"
    solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
    

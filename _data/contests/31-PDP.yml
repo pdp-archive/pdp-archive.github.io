@@ -5,6 +5,7 @@ hydrocarbons:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Ab51GxD28GvQ0srHv2ErA-pDJaL3ERLq"
    solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
 
 mntsea:
@@ -14,6 +15,7 @@ mntsea:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1DvAxR7ScHMfZ75itoTvn0iOt8YHGUoAY"
    solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
 
 cntbal:
@@ -23,6 +25,7 @@ cntbal:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XgH5ywmyR_mOkvpOnQafcp9iEyLU30AL"
    solution: true
+   solution_author: "Γιώργος Γιαπιτζάκης"   
    codes_in_git: true
 
 symstr:
@@ -32,6 +35,7 @@ symstr:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=14KX81jnNADaP6AXtdD9TpUmn4e2OdpSF"
    solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
 

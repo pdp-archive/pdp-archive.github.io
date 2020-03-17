@@ -5,6 +5,7 @@
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1ZppyjUUfB5KffCdgXiNKccpw6qxVmhL1/view"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
 
 twosqr:
@@ -14,6 +15,7 @@ twosqr:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"   
    codes_in_git: true
 
 share:
@@ -23,6 +25,7 @@ share:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Fz07w2bENBnoO7o-i7u_mJak8JQSUtwa"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"   
    codes_in_git: true
 
 aces:

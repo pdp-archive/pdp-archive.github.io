@@ -5,6 +5,7 @@ astrolavos:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PWB5AaUts-avT7dbeVScHqpE4QHBAZux"
    solution: true
+   solution_author: "Δημήτρης Λως"
    codes_in_git: true
 
 kalanta:
@@ -14,6 +15,7 @@ kalanta:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yZ2YiGSKRf9d598JY_khKd_xSfv1zrUF"
    solution: true
+   solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    
 agora:
@@ -23,6 +25,7 @@ agora:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
+   solution_author: "Δημήτρης Λως"   
    codes_in_git: true
 
 rafting:
@@ -32,6 +35,7 @@ rafting:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1BLW0WOOb3tFEH-3oqx4xKNs3nU0n-ltG"
    solution: true
+   solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 30
 
@@ -42,6 +46,7 @@ listgame:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1UQp6UAziM_W_5BU753Q5QOkuFmtQfj20"
    solution: true
+   solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
 
@@ -52,5 +57,6 @@ brickbreaker:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yxIPqJA9O-blG2HWMIebg_jutNz5smmM"
    solution: true
+   solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35

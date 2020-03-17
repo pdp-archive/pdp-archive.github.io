@@ -5,6 +5,7 @@ profit:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1RktdInlCPvF50xmETmuDgP2Yrd36KyDj"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1s4W2WGhm8ecXFL39VeeyIcTRjQHvX1o4"
 
@@ -25,6 +26,7 @@ company:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1dhDH5lz0UKGQPeOhq821-kMdYsF81TW4"
    solution: true
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
 

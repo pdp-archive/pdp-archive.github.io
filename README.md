@@ -67,6 +67,8 @@ layout: default
         statement_pdf_url: {Link στo pdf της επίσημης εκφώνησης.} 
         testcases_url: {Link στο zip με τα testcases.}
         solution: false
+	solution_author: "Νικόλαος Παπασπύρου"
+	codes_in_git: false
         codes_url: {Link στο φάκελο με όλους τους κώδικες για το πρόβλημα και για την λύση σας.}
         {optional} points: {Για πόσους πόντους μετρούσε αυτό το πρόβλημα στον διαγωνισμό (κυρίως για 3η φάση).}
      ```
