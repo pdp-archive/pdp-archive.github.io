@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
   
-table.table_with_monospace_font tr:nth-child(n+2) {
+.table_with_monospace_font td {
   font-family: "Courier New"
 }
 
