@@ -34,6 +34,15 @@ TASK(
          ),
       ),
       SOLUTION(
+         name = "loutraki_nlogn_sweep",
+         source = "loutraki_nlogn_sweep.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
          name = "loutraki_n",
          source = "loutraki_n.cc",
          passes_all,

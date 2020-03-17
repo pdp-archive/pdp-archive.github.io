@@ -66,15 +66,99 @@ int main() {
 	return 0;
 }
 ```
+
+## Mέτρια λύση - $$O(N \cdot log(N))$$ - line sweep
+
+Γνώσεις που θα χρειαστούμε: lambda functions (c++11 και νεότερες)
+
+Ταξινομούμε τα ξενοδοχεία πρώτα ως προς $$x$$ και μετά ως προς $$y$$ στον πίνακα $$C[]$$.
+Σαρώνουμε από τις μικρότερες προς τις μεγαλύτερες ώστε να ενημερώσουμε τον πίνακα των ξενοδοχείων για το αν έχουν ορατότητα από αυτή την πλευρά.
+Αξοποιούμε το πρώτο στοιχείο που συναντούμε και πετάμε τα υπόλοιπα με την ίδια τιμή στη συντεταγμένη.
+Το ίδιο θα κάνουμε και για το $$y$$.  
+
+Η ταξινόμιση γίνεται με χρήση δικών μας συναρτήσεων σύγκρισης. Προτιμήθηκε η λύση της lambda (inline σύντομες συναρτήσεις) για να δειχθεί αυτή η λειτουργία της c++
+```c++
+	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
+```
+Στην παραπάνω εντολή ταξινομούμε τον πίνακα $$C[]$$ πρώτα με το $$x$$ και σε περίπτωση ισότητας με το $$y$$.
+Η συνάρτηση:
+```c++
+[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);}
+```
+λέγεται lambda συνάρτηση και είναι η συνάρτηση σύγκρισης που θα χρησιμοποιήσει η sort. Μέσα στα άγγιστρα αυτό που κάνει είναι απλά να συγκρίνει τις συντεταγμένες δυο αντικειμένων του πίνακα, των $$a$$ και $$b$$. Μέσα στις $$[]$$ πρέπει να δηλώσουμε αν και πως η lambda μας θα έχει πρόσβαση σε άλλες μεταβλητές του προγράμματος εκτός από αυτές που παίρνει ως παραμέτρους. Η συγκεκριμένη lambda δεν χρειάζεται τίποτα άλλο από τα δυο στοιχεία του πίνακα οπότε παραμένει κενό το τμήμα αυτό.  
+
+Η λύση αυτή περνά τα 12 από τα 15 test cases.
+
+```c++
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define MAXN	int(1e6)
+#define OFFSET	int(1e5)
+
+struct hotel {
+	int x,y,visibility;
+	hotel(int x,int y): x(x), y(y) { visibility = 0; }
+	hotel(){ x = y = visibility = 0; }
+} hotel[MAXN+1];
+
+struct coord {
+	int x,y,hotel_id;
+	coord(int x,int y,int hotel_id):x(x),y(y),hotel_id(hotel_id){}
+	coord(){ x = y = hotel_id = 0; }
+} C[2*OFFSET+1];
+
+int N, ans;
+
+int main() {
+#ifdef CONTEST
+	freopen("loutraki.in","r",stdin);
+	freopen("loutraki.out","w",stdout);
+#endif
+	scanf("%d", &N);
+	for(int i=1; i<=N; ++i){
+		scanf("%d%d",&hotel[i].x,&hotel[i].y);
+		hotel[i].x += OFFSET;
+		hotel[i].y += OFFSET;
+		C[i] = coord( hotel[i].x, hotel[i].y, i );
+	}
+
+	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
+	for(int i=1;i<=N;){
+		int co = C[i].x;
+		hotel[C[i].hotel_id].visibility++;
+		while(C[i].x == co)
+			i++;
+	}
+
+	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.y==b.y)?(a.x<b.x):(a.y<b.y);});
+	for(int i=1;i<=N;){
+		int co = C[i].y;
+		hotel[C[i].hotel_id].visibility++;
+		while(C[i].y == co)
+			i++;
+	}
+
+	for(int i=1;i<=N;i++)
+		if(hotel[i].visibility==2)
+			ans++;
+		
+	printf("%d\n", ans);
+	return 0;
+}
+```
   
   
-## Καλή λύση - $$O(N \cdot log(N))$$
+## Μέτρια λύση - $$O(N \cdot log(N))$$
 
 Γνώσεις που θα χρειαστούμε: std::vector, std::sort (C++ stl)
 
 Η λύση που θα δούμε εισάγει ιδέες που θα χρειαστούν για την βέλτιστη λύση.
 
 Αποθηκεύουμε για κάθε διακριτή συντεταγμένη όλες τις αντίστοιχες συντεταγμένες του άλλου άξονα. Θα ελέγξουμε το κάθε ένα από τα $$N$$ ξενοδοχεία, αν επικαλύπτεται από κάποιο άλλο σε πολυπλοκότητα $$O(logN)$$
+
+Η λύση αυτή περνά τα 12 από τα 15 test cases.
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
