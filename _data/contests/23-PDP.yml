@@ -15,8 +15,9 @@ snow_run:
    statement_pdf_url: "https://drive.google.com/open?id=1kGscE_ABfHdYjssLh3ADTaOPzFewjrZv"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1uNWCNL4SvNQKEZgK85nO3zGeFwzl2KYZ"
-   solution: false
-   codes_in_git: false
+   solution: true
+   solution_author: "Γιώργος Βιδαλάκης"
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=14fm1Wdjf21LJzbqg-LU-ZCm65WJD7vZ5"
 
 company:

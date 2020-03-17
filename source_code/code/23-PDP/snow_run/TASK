@@ -1,0 +1,64 @@
+TASK(
+   name = "snow_run",
+   test_count = 12,
+   files_dir = "testdata/23-PDP/snow_run/",
+   input_file = "snow_run.in",
+   output_file = "snow_run.out",
+   time_limit = 5,
+   solutions = [
+      SOLUTION(
+         name = "snow_run_official_cpp",
+		   source = "snow_run_official.cpp",
+		   passes_all,
+		   lang = "c++",
+         author = PERSON(
+		      name = "Κωνσταντίνος Ξανθόπουλος",
+		   ),
+      ),
+      SOLUTION(
+         name = "snow_run_official_c",
+		   source = "snow_run_official.c",
+		   passes_all,
+		   lang = "c",
+         author = PERSON(
+		      name = "Θεοδώρα Παναγέα",
+		   ),
+      ),
+      SOLUTION(
+         name = "snow_run_official_pas",
+		   source = "snow_run_official.pas",
+		   passes_all,
+		   lang = "pas",
+         author = PERSON(
+		      name = "Αλέξανδρος Μπιμπίκος",
+		   ),
+      ),
+	   SOLUTION(
+         name = "snow_run_brute_force_1",
+		   source = "snow_run_brute_force_1.cpp",
+		   passes_all,
+		   lang = "c++",
+		   author = PERSON(
+		      name = "georgevidalakis",
+		   ),
+      ),
+      SOLUTION(
+         name = "snow_run_brute_force_2",
+		   source = "snow_run_brute_force_2.cpp",
+		   passes_all,
+		   lang = "c++",
+		   author = PERSON(
+		      name = "georgevidalakis",
+		   ),
+      ),
+      SOLUTION(
+         name = "snow_run_seg_tree",
+		   source = "snow_run_seg_tree.cpp",
+		   passes_all,
+		   lang = "c++",
+		   author = PERSON(
+		      name = "georgevidalakis",
+		   ),
+      ),
+   ]
+)
