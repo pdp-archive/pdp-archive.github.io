@@ -29,7 +29,7 @@ $$\mathrm{lcm}(a, b) = \frac{a \cdot b}{\mathrm{gcd}(a, b)}$$
 $$\mathrm{lcm}(a, b) = \frac{a}{\mathrm{gcd}(a, b)} \cdot b$$
 
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 typedef unsigned long long ull;
@@ -88,7 +88,7 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```
 
 ## Βέλτιστη λύση
 Αν επιλέξουμε να αφήσουμε έξω τον κάτοικο $$j$$ τότε το lcm είναι 
@@ -111,7 +111,7 @@ $$\mathrm{lcm\_suffix}[i] = \mathrm{lcm}(\mathrm{lcm\_suffix}[i+1], x_i)$$, με
 
 Αυτό μας επιτρέπει να βρούμε το lcm για όλους τους κατοίκους εκτός από έναν σε σταθερό χρόνο. Επομένως, ο αλγόριθμος χρειάζεται $$O(N)$$ χρόνο και $$O(N)$$ μνήμη. 
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 typedef unsigned long long ull;
@@ -172,5 +172,5 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```
 

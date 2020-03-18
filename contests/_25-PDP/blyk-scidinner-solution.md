@@ -69,7 +69,7 @@ $$\mathit{max\_path}[v] \geq \mathit{max\_path}[u] + m + 1 \implies \mathit{max\
 
 ### Αναδρομική υλοποίηση
 
-{% highlight c++ %}
+```c++
 
 #include <stdio.h>
 #include <vector>
@@ -126,11 +126,11 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```
 
 ### Γραμμική υλοποίηση
 
-{% highlight c++ %}
+```c++
 #include <stack>
 #include <stdio.h>
 #include <vector>
@@ -198,4 +198,4 @@ int main() {
    
    return 0;
 }
-{% endhighlight %}
+```

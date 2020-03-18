@@ -22,7 +22,7 @@ codename: domes
 
 Αφού διαβάσουμε όλο το αρχείο εισόδου, η απάντηση είναι στη μεταβλητή $$\mathit{answer}$$. 
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 const size_t MAXN = 100000;
@@ -49,7 +49,7 @@ int main() {
   fclose(fo);
   return 0;
 }
-{% endhighlight %}
+```
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$O(N+M)$$ και χρειάζεται $$O(N)$$ μνήμη.
 

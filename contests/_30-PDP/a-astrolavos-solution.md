@@ -14,7 +14,7 @@ $$\frac{M[0] \cdot N}{M[K[i]]}$$
 
 **Σημείωση:** Το γινόμενο $$M[0] \cdot N$$ μπορεί να μην χωράει σε μεταβλητή long, επομένως πρέπει να χρησιμοποιήσουμε είτε long long είτε doubles. 
 
-{% highlight c++ %}
+```c++
 #include <stdio.h>
 
 const size_t MAXL = 1000;
@@ -45,4 +45,4 @@ int main() {
    fclose(fo);
    return 0;
 }
-{% endhighlight %}
+```

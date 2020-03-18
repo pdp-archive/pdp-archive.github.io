@@ -28,7 +28,7 @@ codename: karla
 
 Υπάρχουν δύο κλασικοί τρόποι υλοποίησης της DFS: αναδρομικά ή γραμμικά. Ο γραμμικός τρόπος έχει το (μικρό) πλεονέκτημα ότι χρησιμοποιεί μικρότερη στοίβα κλήσεων. 
 
-{% highlight c++ %}
+```c++
 #include <stdio.h>
 
 const size_t MAXN = 100;
@@ -86,11 +86,9 @@ int main() {
    
    return 0;
 }
-   
+```
 
-{% endhighlight %}
-
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <stdio.h>
 #include <stack>
@@ -162,12 +160,11 @@ int main() {
    
    return 0;
 }
-{% endhighlight %}
-
+```
 
 Μπορούμε να απλοποίησουμε τον έλεγχο των γειτονικών με το ακόλουθο τρικ
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <stdio.h>
 #include <vector>
@@ -222,6 +219,5 @@ int main() {
    
    return 0;
 }
-
-{% endhighlight %}
+```
 

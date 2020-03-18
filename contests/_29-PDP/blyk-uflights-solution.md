@@ -15,7 +15,7 @@ codename: uflights
 
 Ο αλγόριθμος έχει πολυπλοκότητα $$O(M \log N)$$ και χρειάζεται μνήμη $$O(M)$$.
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdlib>
 #include <cstdio>
@@ -87,7 +87,7 @@ int main() {
   return 0;
 }
 
-{% endhighlight %}
+```
 
 ## Λύση με αλγόριθμο του Kruskal
 Ο αλγόριθμος Kruskal επεξεργάζεται τις ακμές με αυξανόμενο βάρος, βάζοντας στο συνδετικό δένδρο της ακμές που συνδέουν κόμβους σε διαφορετικές συνδετικές συνιστώσες. 
@@ -98,7 +98,7 @@ int main() {
 
 Ο αλγόριθμος έχει πολυπλοκότητα $$O(M\cdot \alpha(N) + K)$$ και χρειάζεται μνήμη $$O(M)$$.
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdlib>
 #include <cstdio>
@@ -176,4 +176,4 @@ int main() {
   return 0;
 }
 
-{% endhighlight %}
+```

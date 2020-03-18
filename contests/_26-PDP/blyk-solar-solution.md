@@ -15,7 +15,7 @@ codename: solar
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$O(N^2)$$ και χρειάζεται $$O(N)$$ μνήμη, που δεν είναι αρκετό για να περάσει όλα τα testcases.
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 const long MAXN = 1000000;
@@ -62,7 +62,7 @@ int main() {
   
   return 0;
 }
-{% endhighlight %}
+```
 
 
 ## Βέλτιση Λύση
@@ -75,7 +75,7 @@ int main() {
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$Ο(Ν)$$ και χρειάζεται $$Ο(Ν)$$ μνήμη.
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdio>
 
@@ -117,5 +117,4 @@ int main() {
   
   return 0;
 }
-{% endhighlight %}
-
+```
