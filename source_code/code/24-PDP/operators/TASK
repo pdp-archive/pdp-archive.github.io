@@ -1,0 +1,67 @@
+TASK(
+   name = "operators",
+   test_count = 10,
+   files_dir = "testdata/24-PDP/operators/",
+   input_file = "operators.in",
+   output_file = "operators.out",
+   time_limit = 3,
+   solutions = [
+      SOLUTION(
+         name = "operators_official_cpp",
+         source = "operators_official.cpp",
+	 passes_only = [1, 2, 3, 4, 8],
+         lang = "c++",
+         author = PERSON(
+            name = "Κωστοπαναγιώτης Παναγιώτης",
+            school = "1ο Γυμνάσιο Πεύκης",
+         ),
+      ),
+      SOLUTION(
+         name = "operators_official_c",
+         source = "operators_official.c",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Αγιάννης Κωνσταντίνος",
+            school = "10ο Γυμνάσιο Λάρισας",
+         ),
+      ),
+      SOLUTION(
+         name = "operators_official_pas",
+         source = "operators_official.pas",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Κουλας Ιασωνας",
+            school = "Κολέγιο Ψυχικού",
+         ),
+      ),
+      SOLUTION(
+         name = "operators_brute_force",
+         source = "operators_brute_force.cpp",
+         passes_up_to = 7,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "operators_binary_search",
+         source = "operators_binary_search.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+      SOLUTION(
+         name = "operators_two_pointers",
+         source = "operators_two_pointers.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "georgevidalakis",
+         ),
+      ),
+   ]
+)
