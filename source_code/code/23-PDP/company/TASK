@@ -36,7 +36,7 @@ TASK(
       SOLUTION(
          name = "company_brute_force",
 		   source = "company_brute_force.cpp",
-		   passes_all,
+		   passes_up_to = 6,
 		   lang = "c++",
          author = PERSON(
 		      name = "georgevidalakis",
