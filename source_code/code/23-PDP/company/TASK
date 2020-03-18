@@ -9,19 +9,19 @@ TASK(
       SOLUTION(
          name = "company_official_cpp",
 		   source = "company_official.cpp",
-		   passes_all,
+		   passes_all_except_for = [6,8,9,10],
 		   lang = "c++",
          author = PERSON(
-		      name = "Φοίβος Αντουλινάκης",
+		      name = "Κυριάκος Αξιώτης",
 		   ),
       ),
       SOLUTION(
          name = "company_official_c",
 		   source = "company_official.c",
-		   passes_all,
+		   passes_up_to = 9,		   
 		   lang = "c",
          author = PERSON(
-		      name = "Κυριάκος Αξιώτης",
+		      name = "Φοίβος Αντουλινάκης",
 		   ),
       ),
       SOLUTION(
@@ -36,7 +36,7 @@ TASK(
       SOLUTION(
          name = "company_brute_force",
 		   source = "company_brute_force.cpp",
-		   passes_up_to = 6,
+		   passes_up_to = 5,
 		   lang = "c++",
          author = PERSON(
 		      name = "georgevidalakis",

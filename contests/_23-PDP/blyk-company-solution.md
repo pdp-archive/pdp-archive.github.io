@@ -20,7 +20,7 @@ codename: company
 ```c++
 #include <cstdio>
 using namespace std;
-#define MAXN 400005
+const long MAXN = 400005;
 // Πίνακας με id προϊσταμένων
 long P[MAXN];
 // Πίνακας με φύλο εργαζομένων
@@ -76,7 +76,7 @@ int main() {
 ```c++
 #include <cstdio>
 using namespace std;
-#define MAXN 400005
+const long MAXN = 400005;
 // Πίνακας με id προϊσταμένων
 long P[MAXN];
 // Πίνακας με φύλο εργαζομένων

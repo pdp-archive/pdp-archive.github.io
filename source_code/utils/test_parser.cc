@@ -16,8 +16,8 @@ const bool kPrintDebugStatements = false;
 const bool kDoNotPrintForPascal = true;
 
 std::map<std::string, std::string> compilation_commands({
-	{ "c++", "g++ -O2 -DCONTEST -s -static -lm" },
-	{ "c", "gcc -std=c99 -O2 -DCONTEST -s -static -lm" },
+	{ "c++", "g++ -O2 -DCONTEST -s -static -lm -w" },
+	{ "c", "gcc -std=c99 -O2 -DCONTEST -s -static -lm -w" },
 	{ "pas", "gpc -O2 -DCONTEST -s" }
 });
 
