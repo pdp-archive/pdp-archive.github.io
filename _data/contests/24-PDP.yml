@@ -4,8 +4,9 @@ function:
    statement_pdf_url: "https://drive.google.com/open?id=1I3x7_RNA-r8Mk4YZH7VKOoAhwTwXzdWh"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZpfW5pF_ISWAh_DdtZO4d124HyGd-y74"
-   solution: false
-   codes_in_git: false
+   solution: true
+   solution_author: "Δημήτρης Λως"
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
 
 operators:
