@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define MAXN 1000005
+const long MAXN = 1000005;
 
 long A[MAXN];
 
@@ -20,7 +20,7 @@ int main() {
     long mn = 2 * 1000 * 1000 * 1000 + 1, mn_i, mn_j;
     // Αρχικοποίηση μεταβλητής-δείκτη
     long j = N - 1;
-    for (int i = 0; i < j; i++) {
+    for (long i = 0; i < j; i++) {
         // Υπολογισμός βέλτιστου j με i < j
         while (j > i + 1 && abs(A[i] + A[j - 1]) < abs(A[i] + A[j])) {
             j--;

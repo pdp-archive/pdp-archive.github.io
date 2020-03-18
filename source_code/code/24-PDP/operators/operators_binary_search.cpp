@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define MAXN 1000005
+const long MAXN = 1000005;
 
 long A[MAXN];
 
@@ -27,7 +27,7 @@ int main() {
     }
     // Δήλωση βοηθητικών μεταβλητών
     long mn = 2 * 1000 * 1000 * 1000 + 1, mn_1, mn_2;
-    for (int i = 0; i < N; i++) {
+    for (long i = 0; i < N; i++) {
         long K = A[i];
         long a, b;
         if (K) {

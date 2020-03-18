@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define MAXN 1000005
+const long MAXN = 1000005;
 
 long A[MAXN];
 
@@ -19,8 +19,8 @@ int main() {
     // Δήλωση βοηθητικών μεταβλητών
     long mn = 2 * 1000 * 1000 * 1000 + 1, mn_i, mn_j;
     // Έλεγχος όλων των ζευγών ακεραίων της ακολουθίας
-    for (int i = 0; i < N; i++) {
-        for (int j = i + 1; j < N; j++) {
+    for (long i = 0; i < N; i++) {
+        for (long j = i + 1; j < N; j++) {
             // Υπολογισμός μέτρου αθροίσματος τρέχοντος ζεύγους
             long cur_abs_sum = abs(A[i] + A[j]);
             // Έλεγχος για ελάχιστο
