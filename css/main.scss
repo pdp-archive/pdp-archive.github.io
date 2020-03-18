@@ -37,6 +37,16 @@ body {
   display: inline;
 }
 
+/* Μορφοποίηση για το "Συγγραφέας: ..." */
+.author_container {
+  text-align: right;
+}
+
+/* Μορφοποίηση για το "Συγγραφέας:" */
+.author {
+  font-weight: bold;
+}
+
 .table_with_borders {
   border-collapse: collapse;
   > table, td, th {

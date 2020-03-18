@@ -28,9 +28,11 @@
     </div>
     <div id="post"> 
       <h1 class="title">{{ title }}</h1>
+      <div class="author_container"> <span class="author">Συγγραφέας:</span> {{ task.solution_author }}</div>
       {{ content }}
     </div>
   </div>
+  <div id="footer_space"></div>
   {% include contributors_footer.html %}
   </body>
 </html>
