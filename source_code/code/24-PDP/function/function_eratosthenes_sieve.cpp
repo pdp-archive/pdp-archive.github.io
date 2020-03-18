@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <stdio.h>
 
-const size_t MAXM = 100000;
+const size_t MAXM = 10000;
 
 bool isNotPrime[MAXM];
 

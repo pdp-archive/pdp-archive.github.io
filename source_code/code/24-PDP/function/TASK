@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/24-PDP/function/",
    input_file = "function.in",
    output_file = "function.out",
-   time_limit = 1,
+   time_limit = 3,
    solutions = [
       SOLUTION(
          name = "function_official_cpp",
