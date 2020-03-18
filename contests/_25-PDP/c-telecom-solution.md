@@ -33,7 +33,7 @@ codename: telecom
 Για να βρούμε το μεγαλύτερο βάρος στο μονοπάτι μεταξύ $$i$$ και $$j$$ κάνουμε αναζήτηση κατά βάθος. Υπάρχουν $$N(N-1)/2 - (N-1) = O(N^2)$$ ακμές και κάθε DFS θέλει $$O(N)$$ χρόνο, άρα συνολικά ο αλγόριθμος θέλει $$O(N^3)$$ και $$O(N)$$ μνήμη. 
 
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdio>
 #include <vector>
@@ -89,7 +89,7 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```
 
 
 ## Επιταχυμένη αρχική λύση
@@ -99,7 +99,7 @@ int main() {
 Συνεπώς, μπορούμε να βρούμε το άθροισμα όλων των μέγιστων αποστάσεων σε χρόνο $$O(N^2)$$ (αφού για κάθε κορυφή χρειάζεται $$O(N)$$) και με $$O(N)$$ μνήμη.
 
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdio>
 #include <vector>
@@ -149,7 +149,7 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```
 
 
 ## Βέλτιστη λύση
@@ -181,7 +181,7 @@ int main() {
 
 Ο αλγόριθμος αυτός έχει πολυπλοκότητα $$O(N\alpha(N) + N\log{N})$$ ή $$O(N\alpha(N))$$ (αν η ταξινόμηση γίνει γραμμικά). 
 
-{% highlight c++ %}
+```c++
 #include <algorithm>
 #include <cstdio>
 #include <vector>
@@ -261,4 +261,4 @@ int main() {
    return 0;
 }
 
-{% endhighlight %}
+```

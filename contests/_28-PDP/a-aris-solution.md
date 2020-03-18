@@ -15,7 +15,7 @@ codename: aris
 
 Η υλοποίηση σε c++ είναι η ακόλουθη:
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 const size_t MAXN = 1000000;
@@ -56,7 +56,7 @@ int main () {
     printf("%ld %ld %ld\n", progs, minCount, maxCount);
     return 0;
 }
-{% endhighlight %}
+```
 
 ## Λύση πολυπλοκότητας $$O(N + Μ)$$, χώρου $$Ο(Μ)$$
 
@@ -104,7 +104,7 @@ int main () {
 
 Σε κώδικα:
 
-{% highlight c++ %}
+```c++
 #include <cstdio>
 
 const size_t MAXN = 1000000;
@@ -145,5 +145,5 @@ int main () {
     printf("%ld %ld %ld\n", progs, minCount, maxCount);
     return 0;
 }
-{% endhighlight %}
+```
 
