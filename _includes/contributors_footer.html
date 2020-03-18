@@ -1,9 +1,10 @@
 <div id="footer">
   Οι λύσεις σε αυτό το site είναι ανεπίσημες και μπορεί να περιέχουν λάθη. Προσπαθούμε να τις διατηρούμε σωστές, επομένως, αν εντοπίσετε οποιοδήποτε λάθος στον κώδικα ή στο κείμενο, ενημερώστε μας <a href="https://github.com/pdp-archive/pdp-archive.github.io/issues">εδώ</a>.
 
-  Λύσεις έχουν συνεισφέρει οι “έμπειροι” πρώην διαγωνιζόμενοι: <div id="contributors_displayer"></div>.
+  Λύσεις έχουν συνεισφέρει οι “έμπειροι” πρώην διαγωνιζόμενοι: <div id="contestant_contributors_displayer" class="contributors_displayer"></div>, και οι: <div id="other_contributors_displayer" class="contributors_displayer"></div>.
 
 </div>
 <script type="text/javascript">
-  populateShuffledNames("contributors_displayer");
+  populateShuffledContestantContributorNames("contestant_contributors_displayer");
+  populateShuffledOtherContributorNames("other_contributors_displayer");
 </script>
