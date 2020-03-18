@@ -1,0 +1,2 @@
+company_official.c fails on the last test, due to large numbers.
+company_official.cpp passes all tests in hellenico, but may fail locally if the stack-size is not big enough.
