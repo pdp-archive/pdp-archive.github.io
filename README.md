@@ -61,14 +61,14 @@ layout: default
   2. Δημιουργήστε μία καινούργια εισαγωγή με την εξής δομή: (Δείτε [αυτόν τον φάκελο](https://drive.google.com/open?id=1veWwRRCpvu6jrDo4bulsCcvEw5Csr_t1) για εκφωνήσεις, κώδικες και testcases)
   
      ```
-	 {codename - Το όνομα του αρχείου ειδόδου.}:
+     {codename - Το όνομα του αρχείου ειδόδου.}:
         full_name: {Γράψτε ολόκληρο τον τίτλο του προβλήματος. Κεφαλαία μόνο στην πρώτη λέξη και σε όσες χρειάζονται.}
         stage: {Οποιαδήποτε από "a", "bgym", "blyk", "c"}
         statement_pdf_url: {Link στo pdf της επίσημης εκφώνησης.} 
         testcases_url: {Link στο zip με τα testcases.}
         solution: false
-	solution_author: "Νικόλαος Παπασπύρου"
-	codes_in_git: false
+        solution_author: "Νικόλαος Παπασπύρου"
+        codes_in_git: false
         codes_url: {Link στο φάκελο με όλους τους κώδικες για το πρόβλημα και για την λύση σας.}
         {optional} points: {Για πόσους πόντους μετρούσε αυτό το πρόβλημα στον διαγωνισμό (κυρίως για 3η φάση).}
      ```
