@@ -9,16 +9,21 @@ function concatenateNames(arr) {
   return arr.slice(0, -1).join(', ') + ' και ' + arr.slice(-1);
 }
 
-function shuffleNames() {
-  // !!!If you are a contributor add your name to the array below
-  // respecting alphabetical order.
-  var shuffled_names = [
-    "Γ. Βενιζέλος", 
-	"Γ. Βιδαλάκης", 
-	"Γ. Γιαπιτζάκης", 
-	"Ε. Κηπουρίδης", 
-	"Δ. Λως",
-  ];
+// !!!If you are a contributor add your name to the arrays below
+// respecting alphabetical order.
+var contestant_contributor_names = [
+  "Γ. Βενιζέλος", 
+  "Γ. Βιδαλάκης", 
+  "Γ. Γιαπιτζάκης", 
+  "Ε. Κηπουρίδης", 
+  "Δ. Λως",
+];
+var other_contributor_names = [
+  "Κ. Μποκής", 
+  "Ν. Παπασπύρου",
+];
+
+function shuffleNames(shuffled_names) {
   
   // Generate a permutation uniformly at random.
   // Choose a random name from the remaining ones and 
@@ -33,9 +38,15 @@ function shuffleNames() {
   return shuffled_names;
 }
 
-/* Populates shuffled names in the given div. */
-function populateShuffledNames(element_id) {
-  var shuffled_names = shuffleNames()
+/* Populates shuffled contestant contributor names in the given div. */
+function populateShuffledContestantContributorNames(element_id) {
+  var shuffled_names = shuffleNames(contestant_contributor_names);
+  document.getElementById(element_id).innerHTML = concatenateNames(shuffled_names);
+}
+
+/* Populates shuffled other contributor names in the given div. */
+function populateShuffledOtherContributorNames(element_id) {
+  var shuffled_names = shuffleNames(other_contributor_names);
   document.getElementById(element_id).innerHTML = concatenateNames(shuffled_names);
 }
 
