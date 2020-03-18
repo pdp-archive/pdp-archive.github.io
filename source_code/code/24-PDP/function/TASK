@@ -1,0 +1,76 @@
+TASK(
+   name = "function",
+   test_count = 10,
+   files_dir = "testdata/24-PDP/function/",
+   input_file = "function.in",
+   output_file = "function.out",
+   time_limit = 3,
+   solutions = [
+      SOLUTION(
+         name = "function_official_cpp",
+         source = "function_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Κωνσταντίνος Ψαρομηλιγκος",
+            school = "ΓΕΛ Μήλου",
+         ),
+      ),
+      SOLUTION(
+         name = "function_official_c",
+         source = "function_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Χρηστος Μαρης",
+            school = "ΓΕΛ Ιτεας",
+         ),
+      ),
+      SOLUTION(
+         name = "function_official_pas",
+         source = "function_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Δημητριος Σαρρης",
+            school = "1ο ΓΕΛ Σταυρουπολης",
+         ),
+      ),
+      SOLUTION(
+         name = "function_eratosthenes_sieve",
+         source = "function_eratosthenes_sieve.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "function_l_root_l",
+         source = "function_l_root_l.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "function_l_2",
+         source = "function_l_2.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "function_precomputation",
+         source = "function_precomputation.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+   ]
+)
