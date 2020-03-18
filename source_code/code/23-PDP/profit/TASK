@@ -19,7 +19,7 @@ TASK(
          name = "profit_official_c",
          source = "profit_official.c",
          passes_all,
-         lang = "c++",
+         lang = "c",
          author = PERSON(
             name = "Νίκος Τζάμος",
          ),
@@ -28,7 +28,7 @@ TASK(
          name = "profit_official_pas",
          source = "profit_official.pas",
          passes_all,
-         lang = "c++",
+         lang = "pas",
          author = PERSON(
             name = "Αλέξανδρος Μπιμπίκος",
          ),
