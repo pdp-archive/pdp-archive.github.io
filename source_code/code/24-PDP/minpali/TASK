@@ -21,7 +21,7 @@ TASK(
          passes_all,
          lang = "c++",
          author = PERSON(
-            name = "kbokis",
+            name = "k.bokis, d.bokis",
          ),
       ),
       SOLUTION(

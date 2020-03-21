@@ -102,6 +102,8 @@ void readS(){//read and compress S[]
 Συνολική πολυπλοκότητα της λύσης: $$\mathcal{O}(N)$$ κάθε χαρακτήρας χρησιμοποιείται δύο φορές. Η λύση αυτή περνά όλα τα test cases.
 Μία ενδεικτική υλοποίηση με τη χρήση **Rabin-Karp Algorithm** παρουσιάζεται παρακάτω:
 ```c++
+
+//memory optimization: Δημήτρης Μποκής
 #include <cstdio>
 #include <algorithm>
 #include <cctype>
