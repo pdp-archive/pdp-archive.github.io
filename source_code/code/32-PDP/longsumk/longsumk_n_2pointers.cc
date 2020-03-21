@@ -12,7 +12,7 @@ int main() {
   for(long right=1; right<=N; ++right) {
     scanf("%ld", &A[right]);
     sum += A[right];
-    while (sum - A[left] >= K) {
+    while (sum > K) {
       sum -= A[left];
       ++left;
     }

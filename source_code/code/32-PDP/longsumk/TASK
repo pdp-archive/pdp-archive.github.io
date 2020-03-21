@@ -1,6 +1,6 @@
 TASK(
    name = "longsumk",
-   test_count = 2,
+   test_count = 19,
    files_dir = "testdata/32-PDP/longsumk/",
    input_file = "longsumk.in",
    output_file = "longsumk.out",
@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "longsumk_n3",
          source = "longsumk_n3.cc",
-         passes_all,
+         passes_up_to = 10,
          lang = "c++",
          author = PERSON(
             name = "kipoujr",
@@ -18,7 +18,7 @@ TASK(
       SOLUTION(
          name = "longsumk_n2",
          source = "longsumk_n2.cc",
-         passes_all,
+         passes_up_to = 12,
          lang = "c++",
          author = PERSON(
             name = "kipoujr",
