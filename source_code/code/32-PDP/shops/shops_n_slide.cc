@@ -27,7 +27,7 @@ int main() {
       if(i <= N-K){
           //το shopright έχει άθροισμα Κ+1 διαδοχικών θέσεων. 
           //Αφαίρερε την παλιότερη.
-          shopright -= A[i-K];
+          shopright -= A[i+K];
       }
       ans = max(ans, maxUpTo[i-1]+shopright);
   }
