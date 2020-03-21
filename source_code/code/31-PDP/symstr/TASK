@@ -2,8 +2,8 @@ TASK(
    name = "symstr",
    test_count = 23,
    files_dir = "testdata/31-PDP/symstr/",
-   input_file = "mntsea.in",
-   output_file = "mntsea.out",
+   input_file = "symstr.in",
+   output_file = "symstr.out",
    time_limit = 1,
    solutions = [
       SOLUTION(

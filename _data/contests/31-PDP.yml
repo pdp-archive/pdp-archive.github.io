@@ -33,7 +33,7 @@ symstr:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
    statement_md: true
-   testcases_url: "https://drive.google.com/open?id=14KX81jnNADaP6AXtdD9TpUmn4e2OdpSF"
+   testcases_url: "https://drive.google.com/open?id=1dtKEDnZEWy6cM5oMOuDa7jF4OECgMvl8"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
