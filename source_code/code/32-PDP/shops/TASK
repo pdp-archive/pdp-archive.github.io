@@ -33,5 +33,23 @@ TASK(
             name = "kipoujr",
          ),
       ),
+      SOLUTION(
+         name = "shops_n_lessmem",
+         source = "shops_n_lessmem.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "shops_n_slide",
+         source = "shops_n_slide.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
    ]
 )
