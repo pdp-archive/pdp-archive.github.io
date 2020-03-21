@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "operators_official_cpp",
          source = "operators_official.cpp",
-	 passes_only = [1, 2, 3, 4, 8],
+         passes_only = [1, 2, 3, 4, 8],
          lang = "c++",
          author = PERSON(
             name = "Κωστοπαναγιώτης Παναγιώτης",
@@ -20,7 +20,7 @@ TASK(
          name = "operators_official_c",
          source = "operators_official.c",
          passes_all,
-         lang = "c++",
+         lang = "c",
          author = PERSON(
             name = "Αγιάννης Κωνσταντίνος",
             school = "10ο Γυμνάσιο Λάρισας",
@@ -30,7 +30,7 @@ TASK(
          name = "operators_official_pas",
          source = "operators_official.pas",
          passes_all,
-         lang = "c++",
+         lang = "pas",
          author = PERSON(
             name = "Κουλας Ιασωνας",
             school = "Κολέγιο Ψυχικού",
