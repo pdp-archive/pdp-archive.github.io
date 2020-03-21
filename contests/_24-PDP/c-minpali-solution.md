@@ -102,7 +102,6 @@ void readS(){//read and compress S[]
 Συνολική πολυπλοκότητα της λύσης: $$\mathcal{O}(N)$$ κάθε χαρακτήρας χρησιμοποιείται δύο φορές. Η λύση αυτή περνά όλα τα test cases.
 Μία ενδεικτική υλοποίηση με τη χρήση **Rabin-Karp Algorithm** παρουσιάζεται παρακάτω:
 ```c++
-//https://pdp-archive.github.io/24-PDP/c-minpali-statement
 #include <cstdio>
 #include <algorithm>
 #include <cctype>
@@ -124,7 +123,7 @@ const hasht	MOD = hasht(1e9)+7;	//It is imperative that MOD*MOD fit hasht typede
 void readS(){//read and compress S[]
 	scanf("%ld %s",&N,S);
 	//compress input chars. Note: If all 256 chars were introduced, the S[i] values
-	//would overflow (because we start counting from 1 in stead of 0).
+	//would overflow (because we start counting from 1 instead of 0).
 	//However this is not the case as there are symbols and special chars
 	//line ESC,EOF,'\a','\n',\r' that cannot be part of the input string
 	C = 1;
@@ -171,7 +170,6 @@ int main(){
 Συνολική πολυπλοκότητα $$\mathcal{O}(N)$$. Η λύση αυτή περνά όλα τα test cases.
 
 ```c++
-//https://pdp-archive.github.io/24-PDP/c-minpali-statement
 #include <cstdio>
 #include <algorithm>
 #include <cctype>
@@ -190,10 +188,6 @@ const hasht	MOD = hasht(0xffffffff);
 
 void readS(){//read and compress S[]
 	scanf("%ld %s",&N,S);
-	//compress input chars. Note: If all 256 chars were introduced, the S[i] values
-	//would overflow (because we start counting from 1 in stead of 0).
-	//However this is not the case as there are symbols and special chars
-	//line ESC,EOF,'\a','\n',\r' that cannot be part of the input string
 	C = 1;
 	long V[256];
 	memset(V,0,sizeof(V));

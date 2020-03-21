@@ -20,7 +20,7 @@ const hasht	MOD = hasht(1e9)+7;	//It is imperative that MOD*MOD fit hasht typede
 void readS(){//read and compress S[]
 	scanf("%ld %s",&N,S);
 	//compress input chars. Note: If all 256 chars were introduced, the S[i] values
-	//would overflow (because we start counting from 1 in stead of 0).
+	//would overflow (because we start counting from 1 instead of 0).
 	//However this is not the case as there are symbols and special chars
 	//line ESC,EOF,'\a','\n',\r' that cannot be part of the input string
 	C = 1;
