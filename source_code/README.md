@@ -24,6 +24,10 @@ bash tester.sh
 
 Για να τρέξετε το tester.sh, πρέπει να έχετε έκδοση του `g++` που υποστηρίζει την `C++17` (και στα Windows χρειάζεστε το Cygwin). Αν δεν το έχετε μπορείτε να τρέξετε `bash generated_execution.sh`, που τρέχει την τελευταία έκδοση του `tester.sh`. 
 
+**Σημείωση 1:** [Εδώ](https://drive.google.com/open?id=1hpgtr1woRjVl0BObUCcioey3MnyQts5j) μπορείτε να βρείτε μαζεμένα τα testcases για όλα τα προβλήματα στο pdp-archive. Κατεβάστε τα και κάντε τα unzip το αρχείο στον φάκελο `source_code/`. Αυτό σας επιτρέπει να τρέξετε λύσεις για όλα αυτά τα προβλήματα.
+
+**Σημείωση 2:** [Εδώ](https://drive.google.com/drive/folders/1veWwRRCpvu6jrDo4bulsCcvEw5Csr_t1) μπορείτε να βρείτε τα testcases ανά χρονιά και ανά πρόβλημα.
+
 ## Γιατί χρειαζόμαστε αυτά τα εργαλεία
 
 Υπάρχουν οι ακόλουθοι λόγοι:
