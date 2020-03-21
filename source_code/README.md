@@ -40,8 +40,8 @@ bash tester.sh
   1. Δημιουργήστε τον φάκελο `source_code/code/XX-PDP/{codename}`.
   2. Στον φάκελο που μόλις δημιουργήσατε, δημιουργήστε ένα αρχείο `TASK` που θα έχει την εξής δομή:
      
-    ```
-    TASK(
+     ```
+     TASK(
         name = "{codename}",
         test_count = {Αριθμός των testcases},
         files_dir = "testdata/XX-PDP/{codename}/",
@@ -50,7 +50,7 @@ bash tester.sh
         time_limit = {Όριο χρόνου σε δευτερόλεπτα},
         solutions = [],
      )
-    ```
+     ```
   3. Προσθέστε στο `source_code/testdata/XX-PDP/{codename}` τα testcases. Πρέπει να έχουν τη μορφή `codename.in1`, `codename.out15`, κ.λπ.
   4. Προσθέστε τις λύσεις ακολουθώντας τις παρακάτω οδηγίες.  
 
