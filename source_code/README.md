@@ -60,22 +60,22 @@ bash tester.sh
   1. Βάλτε το αρχείο με την λύση στον φάκελο `source_code/code/XX-PDP/{codename}`
   2. Προσθέστε στο αρχείο TASK τις λεπτομέρειες της λύσης σας:
      ```
-   TASK(
-      ...
-      solutions = [
-         SOLUTION(
-            name = "{codename λύσης - πρέπει να είναι μοναδικό}",
-            source = "{όνομα αρχείου λύσης}",
-            {Ένα από τα εξής: passes_all, passes_only = [1, 2, 3], passes_all_except_for = [5, 10]}, 
-            lang = "{Μία από τις: c++, c, pas}",
-            author = PERSON(
-               name = "{Το όνομα ή ψευδόνυμό σας. Ή το όνομα του μαθητή υπέβαλε τη λύση}", 
-               school = "{To σχολείο του μαθητή αν ήταν ενδεικτική λύση}",
+     TASK(
+         ...
+         solutions = [
+            SOLUTION(
+               name = "{codename λύσης - πρέπει να είναι μοναδικό}",
+               source = "{όνομα αρχείου λύσης}",
+               {Ένα από τα εξής: passes_all, passes_only = [1, 2, 3], passes_all_except_for = [5, 10]}, 
+               lang = "{Μία από τις: c++, c, pas}",
+               author = PERSON(
+                  name = "{Το όνομα ή ψευδόνυμό σας. Ή το όνομα του μαθητή υπέβαλε τη λύση}", 
+                  school = "{To σχολείο του μαθητή αν ήταν ενδεικτική λύση}",
+               ),
             ),
-         ),
-      ],
-      ...
-   )
+         ],
+         ...
+     )
      ```
    3. Βεβαιωθείτε ότι η λύση σας περνάει τα testcases που αναφέρατε, τρέχοντας `bash tester.sh {codename}:{codename λύσης}`.
    4. Στο `_data/XX-PDP.yml` στο πρόβλημα για το οποίο προσθέτετε κώδικες, αντικαταστήστε το `codes_url: ...` με `codes_in_git: true`.
