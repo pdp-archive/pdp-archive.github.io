@@ -47,8 +47,9 @@ minpali:
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1JCAj6hgRSBksM9otjcE8AqAAhTxs9GiQ"
-   solution: false
-   codes_in_git: false
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    points: 30
 
