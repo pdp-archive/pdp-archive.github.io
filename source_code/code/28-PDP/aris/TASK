@@ -7,6 +7,36 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
+         name = "aris_official_cpp",
+         source = "aris_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Χάρης Θεμιστοκλής",
+            school = "Ιδ. ΓΕΛ Εκπαιδευτηρίων Μαντουλίδη",
+         )
+      ),
+      SOLUTION(
+         name = "aris_official_c",
+         source = "aris_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Γιαπιτζάκης Γιώργος",
+            school = "ΓΕΛ Προτύπου Βαρβακείου Σχολής",
+         )
+      ),
+      SOLUTION(
+         name = "aris_official_pas",
+         source = "aris_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Μπάκνης Χρήστος",
+            school = "4ο ΓΕΛ Ηρακλείου Αττικής",
+         )
+      ),
+      SOLUTION(
          name = "aris_brute_force_cpp",
          source = "aris_brute_force.cpp",
          passes_up_to = 10,
