@@ -207,7 +207,7 @@ $$\mathit{hash}$$ value που θέλουμε να βρούμε το υπόλο�
 ([camp ΠΔΠ 2017 KMP code](http://git.softlab.ntua.gr/pub/pdp-camp/blob/master/2017/kmp.cpp))  
 ([camp ΠΔΠ 2017 KMP explained](http://git.softlab.ntua.gr/pub/pdp-camp/blob/master/2016/String%20matching.pdf))  
 ([wikipedia KMP](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm))   
-([Z algorithm](/assets/documents/z_algorithm.pdf))   
+([Z algorithm](<link status pending>)   
 
 Ο αλγόριθμος $$\mathcal{Z}$$ έχοντας μια συμβολοσειρά σαν είσοδο, υπολογίζει έναν πίνακα ακεραίων $$Ζ$$ έτσι ώστε στη θέση
 $$Z_i$$ περιέχει το μήκος της συμβολοσειράς που ξεκινά από τη θέση $$i$$ και ταυτίζεται με τους $$Z_i$$ χαρακτήρες του προθέματος (συμβολοσειρά που ξεκινά στη θέση $$0$$). Δηλαδή $$S_{i+j} == S_j, \forall j \in [0,Z_i]$$  
