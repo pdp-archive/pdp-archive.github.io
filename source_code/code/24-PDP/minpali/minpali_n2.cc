@@ -8,7 +8,7 @@ const long MAXN = long(1e7);
 long N;
 char S[MAXN+1];
 
-bool accepted(long K){
+bool is_palindrome(long K){
 	//check if a string of size Κ with S as prefix can a palindrome
 	//[S[0],S[j/2-1]] should be equal to [S[j/2],S[S-1]]
 	//but remember that not all of those chars exists
@@ -36,7 +36,7 @@ int main(){
 	long 	bestcase  = N, 
 		worstcase = N * 2 - 1, 
 		ans;
-	for(ans=bestcase;ans<=worstcase && !accepted(ans);++ans)
+	for(ans=bestcase;ans<=worstcase && !is_palindrome(ans);++ans)
 		;
 	printf("%ld\n",ans);
 	return 0;
