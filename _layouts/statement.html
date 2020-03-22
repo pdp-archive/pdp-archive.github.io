@@ -4,19 +4,19 @@
 {% if task.stage == "c" %}
   {% assign stage_name = "Γ' Φάση" %}
 {% elsif task.stage == "bgym" %}
-  {% assign stage_name = "B' Φάση" %}
+  {% assign stage_name = "B' Φάση Γυμνασίου" %}
 {% elsif task.stage == "blyk" %}
-  {% assign stage_name = "B' Φάση" %}
+  {% assign stage_name = "B' Φάση Λυκείου" %}
 {% elsif task.stage == "a" %}
   {% assign stage_name = "Α' Φάση" %}
 {% endif %}
-{% assign title = page.contest | append: " " | append: stage_name | append: ": " | append: task.full_name | append: " (" | append: page.codename | append: ")" %}
+{% assign title = page.contest | append: " " | append: stage_name | append: "<br>" | append: task.full_name | append: " (" | append: page.codename | append: ")" %}
 <html>
   <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="/css/main.css">
 	{% include scripts.html %}
-    <title>{{ title }}</title>
+    <title>{{ title | replace: "<br>","-"  }}</title>
 	<style>
 	  table {
 	    width: 100%;
