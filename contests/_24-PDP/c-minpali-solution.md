@@ -196,7 +196,7 @@ int main(){
   
 ## Βέλτιστη λύση - $$\mathcal{O}(N)$$
 
-Γνώσεις που θα χρειαστούμε: **Knuth–Morris–Pratt algorithm** ή **$$\mathcal{Z}$$ algorithm**   
+Γνώσεις που θα χρειαστούμε: **$$\mathcal{Z}$$ algorithm**   
 ([Z algorithm](https://drive.google.com/open?id=1ev5dqBCS5KJU7-042QUEe_GVwtVNhuby)   
 
 Ο αλγόριθμος $$\mathcal{Z}$$ έχοντας μια συμβολοσειρά σαν είσοδο, υπολογίζει έναν πίνακα ακεραίων $$Ζ$$ έτσι ώστε στη θέση
@@ -278,7 +278,8 @@ int main(){
 }
 ```
 
-## Official λύση
+## Official λύση - $$\mathcal{O}(N)$$
+Γνώσεις που θα χρειαστούμε: **Knuth–Morris–Pratt algorithm**
 ([camp ΠΔΠ 2017 KMP explained](http://git.softlab.ntua.gr/pub/pdp-camp/blob/master/2016/String%20matching.pdf))  
 ([wikipedia KMP](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm))   
 ```c++
