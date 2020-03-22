@@ -441,7 +441,7 @@ void printListCount(const std::string& name, const std::vector<size_t>& list_cou
    printIndents(indent);
    std::cout << name << "= [";
    for (const size_t& val : list_count) {
-      printf("%d ", val);
+      printf("%lud ", val);
    }
    std::cout << "]\n";
 }
