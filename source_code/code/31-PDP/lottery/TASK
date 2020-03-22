@@ -1,0 +1,37 @@
+TASK(
+   name = "lottery",
+   test_count = 27,
+   files_dir = "testdata/31-PDP/lottery/",
+   input_file = "lottery.in",
+   output_file = "lottery.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+        name = "lottery_brute",
+        source = "lottery_brute.cc",
+        passes_up_to = 12,
+        lang = "c++",
+        author = PERSON(
+           name = "kipoujr",
+        ),
+      ),
+      SOLUTION(
+        name = "lottery_bsearch",
+        source = "lottery_bsearch.cc",
+        passes_all_except_for = [17, 19, 20, 22, 23, 24, 25, 26, 27],
+        lang = "c++",
+        author = PERSON(
+           name = "kipoujr",
+        ),
+      ),
+      SOLUTION(
+        name = "lottery_trie",
+        source = "lottery_trie.cc",
+        passes_all,
+        lang = "c++",
+        author = PERSON(
+           name = "kipoujr",
+        ),
+      ),
+   ]
+)

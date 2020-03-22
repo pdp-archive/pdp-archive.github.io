@@ -44,9 +44,10 @@ lottery:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
    statement_md: true
-   testcases_url: ""
-   solution: false
-   codes_in_git: false
+   testcases_url: "https://drive.google.com/open?id=12-lYa56O6i8H_yL_S7JnbaoekNEl0rsk"
+   solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
+   codes_in_git: true
    points: 35
 
 shortpowtwo:
@@ -56,5 +57,6 @@ shortpowtwo:
    statement_md: true
    testcases_url: ""
    solution: false
+   solution_author: ""
    codes_in_git: false
    points: 35
