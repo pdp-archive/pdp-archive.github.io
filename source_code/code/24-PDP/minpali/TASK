@@ -16,7 +16,7 @@ TASK(
          ),
       ),
       SOLUTION(
-         name = "minpali_nlogn_rabin_karp",
+         name = "minpali_n_rabin_karp",
          source = "minpali_n_rabin_karp.cc",
          passes_all,
          lang = "c++",
@@ -25,7 +25,7 @@ TASK(
          ),
       ),
       SOLUTION(
-         name = "minpali_nlogn_bin_rabin_karp",
+         name = "minpali_n_bin_rabin_karp",
          source = "minpali_n_bin_rabin_karp.cc",
          passes_all,
          lang = "c++",
