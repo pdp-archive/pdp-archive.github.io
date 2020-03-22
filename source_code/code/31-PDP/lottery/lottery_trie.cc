@@ -22,6 +22,8 @@ int main()
     curr = 0;
     cin >> tmp;
     reverse(tmp.begin(), tmp.end());
+
+    //Inserting tmp into the trie
     for(long k=0; k<K; ++k) {
       if ( !neib[curr][ tmp[k]-'0' ] )
 	neib[curr][ tmp[k]-'0' ] = ++newValue;
@@ -37,11 +39,12 @@ int main()
     long long s = 0;
     long nwin = 0;
     curr = 0;
+
+    //Traversing the trie, trying to match tmp
     for(long k=0; k<K; ++k) {
       if ( !neib[curr][ tmp[k]-'0' ] )
 	break;
       curr = neib[curr][ tmp[k]-'0' ];
-      //printf("aaa i=%d, k=%d, cnt=%d\n", i, k, cnt[curr]);
       if (k==0) nwin = cnt[curr];
       s = (s + cnt[curr]*(pow2(k+1)-pow2(k))) % MOD;
       if (s<0) s+= MOD;
