@@ -22,7 +22,7 @@ shops:
    full_name: "Τα δύο καταστήματα"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1Nj3wLTKCI_yQTK9stoXmyAA6WRbfFNNI"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
