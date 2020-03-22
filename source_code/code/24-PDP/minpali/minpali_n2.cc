@@ -9,9 +9,9 @@ long N;
 char S[MAXN+1];
 
 bool is_palindrome(long K){
-	//check if a string of size Κ with S as prefix can a palindrome
+	//check if a string of size Κ with S as prefix is a palindrome
 	//[S[0],S[j/2-1]] should be equal to [S[j/2],S[S-1]]
-	//but remember that not all of those chars exists
+	//but remember that not all of those chars exist
 	//note:	if the ans is odd, then we have a central pivot char
 	//	if the ans is even, we have two exact halfs without a pivot.
 	long left = K/2, right = K/2;

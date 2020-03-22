@@ -21,7 +21,7 @@ TASK(
          passes_all,
          lang = "c++",
          author = PERSON(
-            name = "k.bokis, d.bokis",
+            name = "kbokis",
          ),
       ),
       SOLUTION(
@@ -47,10 +47,10 @@ TASK(
          source = "minpali_official.cc",
          passes_all,
          lang = "c++",
+	 school = "11ο ΓΕΛ Θεσσαλονίκης",
          author = PERSON(
             name = "Κηπουρίδης Ευάγγελος",
          ),
-	 school = "11ο ΓΕΛ Θεσσαλονίκης",
       ),
    ]
 )
