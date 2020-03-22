@@ -3,7 +3,7 @@ function fetch_testdata() {
 
    # Arg 1 : PDP contest (e.g. 22)
    # Arg 2 : codename (e.g. 'fire')
-   # sed -i 's/\r//' test.sh
+   # sed -i 's/\r//' fetch_testdata.sh
    if [ ! -d testdata/$1-PDP/$2 ]; then
       echo 'Fetching testdata for : ' $2
       mkdir tmp
