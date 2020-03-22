@@ -4,7 +4,7 @@ layout: default
 
 # Κώδικες για τα προβλήματα ΠΔΠ
 
-Οι παρακάτω οδηγίες περιγράφουν πώς μπορείτε να προσθέσετε λύσεις ώστε να ελέγχετε εύκολα αν περνάνε τα testcases. Για παράδειγμα, αν κατεβάσετε τα testcases του [αρχείου](https://drive.google.com/drive/folders/1AeuB3AUFewMZdQ7pASYRgA2ewT1LJJOQ) και τα βάλετε στον φάκελο source_code/testdata/31-PDP/hydrocarbons/, τότε μπορείτε να τρέξετε όλες τις υπάρχουσες λύσεις με την εντολή
+Οι παρακάτω οδηγίες περιγράφουν πώς μπορείτε να προσθέσετε λύσεις ώστε να ελέγχετε εύκολα αν περνάνε τα testcases. Παρότι τα testcases κατεβαίνουν αυτόματα αν έχετε internet, μπορείτε για offline χρήση να τα κατεβάζετε από το [drive](https://drive.google.com/drive/folders/1AeuB3AUFewMZdQ7pASYRgA2ewT1LJJOQ) και να τα βάλετε στον αντίστοιχο φάκελο (εν προκειμένω source_code/testdata/31-PDP/hydrocarbons/). Είτε το κάνετε χειροκίνητα, είτε αφήσετε μόνο του το σύστημα να τα κατεβάσει από το internet, τρέχετε όλες τις υπάρχουσες λύσεις με την εντολή
 
 ```
 bash tester.sh hydrocarbons
