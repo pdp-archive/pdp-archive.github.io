@@ -7,10 +7,10 @@ const size_t MAXN = 1000;
 int T[MAXN][MAXN];
 int N;
 
-int findMaxPath(int i, int j) {
+long findMaxPath(int i, int j) {
    if (i == N) return 0; 
-   if (j == N - 1) return T[i][j] + findMaxPath(i + 1, j);
-   return T[i][j] + std::max(findMaxPath(i + 1, j), findMaxPath(i + 1, j + 1));
+   if (j == N - 1) return (long)T[i][j] + findMaxPath(i + 1, j);
+   return (long)T[i][j] + std::max(findMaxPath(i + 1, j), findMaxPath(i + 1, j + 1));
 }
 
 int main() { 
@@ -24,7 +24,7 @@ int main() {
    fclose(fi);
    
    FILE *fo = fopen("triangle.out", "w");
-   fprintf(fo, "%d\n", findMaxPath(0, 0));
+   fprintf(fo, "%ld\n", findMaxPath(0, 0));
    fclose(fo);
    return 0;
 }

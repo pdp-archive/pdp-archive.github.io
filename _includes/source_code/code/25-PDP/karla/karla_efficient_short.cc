@@ -13,7 +13,7 @@ bool isWithinBounds(int i, int j) {
    return i >= 0 && j >= 0 && i < N && j < N;
 }
 
-std::vector<std::pair<int, int>> deltas({{1, 0}, {-1, 0}, {0, 1}, {0, -1}});
+std::vector<std::pair<int, int>> deltas({ {1, 0}, {-1, 0}, {0, 1}, {0, -1} });
 
 void visitAndMark(int i, int j) {
    visited[i][j] = true;
@@ -52,4 +52,3 @@ int main() {
    
    return 0;
 }
-   
