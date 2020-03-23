@@ -30,42 +30,7 @@ codename: loutraki
 
 Παρακάτω δίνεται μία ενδεικτική υλοποίηση αυτής της λύσης.
 
-```c++
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const long MAXN = long(1e6);
-
-long N, ans;
-pair<long,long> hotel[MAXN+1];
-#define	xx	first
-#define	yy	second
-
-int main() {
-#ifdef CONTEST
-	freopen("loutraki.in","r",stdin);
-	freopen("loutraki.out","w",stdout);
-#endif
-	scanf("%ld", &N);
-	for(long i=1; i<=N; ++i)
-		scanf("%ld%ld",&hotel[i].xx,&hotel[i].yy);
-	for(long i=1;i<=N;++i){
-		bool hidden = false;
-		for(long j=1;j<=N && !hidden;j++){
-			if(i==j)continue;
-			if(hotel[j].xx == hotel[i].xx && hotel[j].yy < hotel[i].yy)
-				hidden = true;
-			if(hotel[j].yy == hotel[i].yy && hotel[j].xx < hotel[i].xx)
-				hidden = true;
-		}
-		if(!hidden)
-			ans++;
-	}
-	printf("%ld\n", ans);
-	return 0;
-}
-```
+{% include code.md solution_name='loutraki_n2.cc' %}
 
 ## Mέτρια λύση - $$\mathcal{O}(N \cdot log(N))$$ - line sweep
 
@@ -76,10 +41,10 @@ int main() {
 Αξιοποιούμε το πρώτο στοιχείο που συναντούμε και πετάμε τα υπόλοιπα με την ίδια τιμή στη συντεταγμένη $$x$$.
 Το ίδιο θα κάνουμε και για το $$y$$.  
 
-Η ταξινόμιση γίνεται με χρήση δικών μας συναρτήσεων σύγκρισης. Προτιμήθηκε η λύση της lambda (inline σύντομες συναρτήσεις) για να δειχθεί αυτή η λειτουργία της c++.
-```c++
-sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
-```
+Η ταξινόμηση γίνεται με χρήση δικών μας συναρτήσεων σύγκρισης. Προτιμήθηκε η λύση της lambda (inline σύντομες συναρτήσεις) για να δειχθεί αυτή η λειτουργία της c++.
+
+{% include code.md solution_name='loutraki_nlogn_sweep.cc' start=35 end=35 %}
+
 Στην παραπάνω εντολή ταξινομούμε τον πίνακα $$C[]$$ πρώτα με το $$x$$ και σε περίπτωση ισότητας με το $$y$$.
 Η συνάρτηση:
 ```c++
@@ -89,64 +54,7 @@ sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<
 
 Η λύση αυτή περνά τα 12 από τα 15 test cases.
 
-```c++
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const long MAXN = long(1e6);
-const long OFFSET = long(1e5);
-
-struct hotel {
-	long x,y,visibility;
-	hotel(long x,long y): x(x), y(y) { visibility = 0; }
-	hotel(){ x = y = visibility = 0; }
-} hotel[MAXN+1];
-
-struct coord {
-	long x,y,hotel_id;
-	coord(long x,long y,long hotel_id):x(x),y(y),hotel_id(hotel_id){}
-	coord(){ x = y = hotel_id = 0; }
-} C[MAXN+1];
-
-long N, ans;
-
-int main() {
-#ifdef CONTEST
-	freopen("loutraki.in","r",stdin);
-	freopen("loutraki.out","w",stdout);
-#endif
-	scanf("%ld", &N);
-	for(long i=1; i<=N; ++i){
-		scanf("%ld%ld",&hotel[i].x,&hotel[i].y);
-		hotel[i].x += OFFSET;
-		hotel[i].y += OFFSET;
-		C[i] = coord( hotel[i].x, hotel[i].y, i );
-	}
-
-	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.x==b.x)?(a.y<b.y):(a.x<b.x);});
-	for(long i=1;i<=N;){
-		long co = C[i].x;
-		hotel[C[i].hotel_id].visibility++;
-		while(i<=N && C[i].x == co)
-			i++;
-	}
-
-	sort(C+1,C+N+1,[](const auto& a,const auto& b){return (a.y==b.y)?(a.x<b.x):(a.y<b.y);});
-	for(long i=1;i<=N;){
-		long co = C[i].y;
-		//hotel[C[i].hotel_id].visibility++;
-		if(++hotel[C[i].hotel_id].visibility == 2) 
-			ans++;
-		while(i<=N && C[i].y == co)
-			i++;
-	}
-
-	printf("%ld\n", ans);
-	return 0;
-}
-```
-  
+{% include code.md solution_name='loutraki_nlogn_sweep.cc' %}  
   
 ## Μέτρια λύση - $$\mathcal{O}(N \cdot log(N))$$
 
@@ -160,48 +68,7 @@ int main() {
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
-```c++
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const long MAXN = long(1e6);
-const long OFFSET = long(1e5);
-
-vector<long> X[2*OFFSET+1],Y[2*OFFSET+1];
-
-long N, ans;
-pair<long,long> hotel[MAXN+1];
-#define	xx	first
-#define	yy	second
-
-int main() {
-#ifdef CONTEST
-	freopen("loutraki.in","r",stdin);
-	freopen("loutraki.out","w",stdout);
-#endif
-	scanf("%ld", &N);
-	for(long i=1; i<=N; ++i){
-		scanf("%ld%ld",&hotel[i].xx,&hotel[i].yy);
-		hotel[i].xx+=OFFSET;
-		hotel[i].yy+=OFFSET;
-		X[hotel[i].xx].push_back(hotel[i].yy);
-		Y[hotel[i].yy].push_back(hotel[i].xx);
-	}
-	
-	for(long x=0;x<2*OFFSET;x++)sort(X[x].begin(),X[x].end());
-	for(long y=0;y<2*OFFSET;y++)sort(Y[y].begin(),Y[y].end());
-	
-	for(long i=1;i<=N;++i){
-		if(X[hotel[i].xx][0] == hotel[i].yy && Y[hotel[i].yy][0] == hotel[i].xx)
-			ans++;
-		//αν η μικρότερη τιμή είναι η δικιά μας και στις δύο συντεταγμένες, 
-		//τότε είμαστε προνομοιούχοι
-	}
-	printf("%ld\n", ans);
-	return 0;
-}
-```
+{% include code.md solution_name='loutraki_nlogn_2.cc' %}
 
 ## Παρατήρηση  
 Σε κάθε διακριτή τιμή τετμημένης($$x$$) ή τεταγμένης($$y$$) μας ενδιαφέρει μόνο **το ξενοδοχείο με την μικρότερη τεταγμένη ή τετμημένη** αντίστοιχα γι' αυτό και στην προηγούμενη λύση χρησιμοποιούσαμε μόνο το πρώτο στοιχείο του __vector__. Δηλαδή από όλα τα ξενοδοχεία με ίδιο $$x$$ μας ενδιαφέρει μόνο το ξενοδοχείο με το μικρότερο $$y$$.
@@ -223,16 +90,7 @@ int main() {
 
 Στην περίπτωση που κρυφτεί το παλιό ξενοδοχείο πρέπει να δώσουμε προσοχή στο αν πρέπει να διορθώσουμε την μεταβλητή $$\mathit{ans}$$. Αν το παλιό ξενοδοχείο είχε επηρεάσει την μεταβλητή $$\mathit{ans}$$ τότε πρέπει να την μειώσουμε, πράγμα που κάνει το παρακάτω απόσπασμα κώδικα:  
 
-```c++
-void hide_hotel(long i){//κρύψε το προηγούμενο ξενοδοχείο.
-	if(!hidden[i]){	
-		//το προηγούμενο ξενοδοχείο ΔΕΝ ήταν κρυμένο μέχρι τώρα, 
-		//άρα είχε υπολογιστεί στη μεταβλητή ans
-		ans--;//διόρθωσε την ans
-		hidden[i] = true;
-	}
-}
-```
+{% include code.md solution_name='loutraki_n.cc' start=15 end=20 %}
 
 **Μια σημείωση**: θα μπορούσαμε να μην κάνουμε διορθώσεις στη μεταβλητή $$\mathit{ans}$$ καθώς επεξεργαζόμαστε τα ξενοδοχεία και απλά στο τέλος του προγράμματος να κάνουμε ένα βρόγχο επανάληψης και να καταμετρήσουμε πόσα flags είναι σβηστά στον πίνακα $$\mathit{hidden[]}$$ και να τυπώσουμε αυτόν τον αριθμό.
 
@@ -242,75 +100,7 @@ void hide_hotel(long i){//κρύψε το προηγούμενο ξενοδοχ�
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
-
-```c++
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const long MAXN = long(1e6);
-const long OFFSET = long(1e5);
-
-long N, ans;
-bool hidden[MAXN+1];		//true if hotel i is blocked
-long X[2*OFFSET+2],Y[2*OFFSET+2];//what is the frontmost id of the hotel in this axis
-pair<long,long> hotel[MAXN+1];
-#define	xx	first
-#define	yy	second
-
-void hide_hotel(long i){//hide a previously processed hotel.
-	if(!hidden[i]){
-		ans--;//i is no more part of answer
-		hidden[i] = true;
-	}
-}
-
-int main() {
-#ifdef CONTEST
-	freopen("loutraki.in","r",stdin);
-	freopen("loutraki.out","w",stdout);
-#endif
-	scanf("%ld", &N);
-	for(long x,y,i=1; i<=N; ++i){
-		scanf("%ld%ld",&x,&y);
-		x+=OFFSET; y+=OFFSET; //make positive
-		hotel[i] = {x,y};
-		long visibility = 0;
-		
-		//will we hide some other hotel from viewing xx' axis?
-		if(X[x]){//there is a hotel with same x
-			if(y < hotel[X[x]].yy){	//yes, replace old one X[x]
-				hide_hotel(X[x]);
-				X[x] = i;
-				visibility++;
-			}
-		} else {//first hotel in that x pos
-			X[x] = i;
-			visibility++;
-		}
-		
-		//will we hide some other hotel from viewing yy' axis?
-		if(Y[y]){//there is a hotel with same y
-			if(x < hotel[Y[y]].xx){//yes, replace old one Y[y]
-				hide_hotel(Y[y]);
-				Y[y] = i;
-				visibility++;
-			}
-		} else {//first hotel in that y pos
-			Y[y] = i;
-			visibility++;
-		}
-		
-		if(visibility<2)
-			hidden[i] = true;
-		else
-			ans++;
-	}
-	printf("%ld\n", ans);
-	return 0;
-}
-```
-  
+{% include code.md solution_name='loutraki_n.cc' %}  
   
 ## Γενική Παρατήρηση στις διαστάσεις των πινάκων
 
@@ -318,89 +108,4 @@ int main() {
 Στους πίνακες $$X[ ]$$ και $$Y[ ]$$ θέλουμε να αποθηκεύουμε τιμές από $$-10^5$$ έως και $$+10^5$$ οι οποίες είναι $$10^5$$ από κάθε κατεύθυνση του άξονα συντεταγμένων και μια ακόμα τιμή που είναι το $$0$$ οπότε $$2\cdot 10^5 + 1$$ τιμές συνολικά.  
 Λόγω του ότι είναι εύκολο να γίνει λάθος που θα παράγει σφάλμα κατάτμησης (segmentation fault) είναι προτιμότερο στους διαγωνισμούς να δεσμεύονται μερικά στοιχεία περισσότερο στους πίνακες (π.χ. 5 στοιχεία παραπάνω από ότι υπολογίζουμε ότι χρειάζεται) και ας μην χρησιμοποιηθούν, παρά να χαθούν test cases από τέτοιες λεπτομέρειες.   
 
-
-```c++
-const long MAXN = long(1e6);
-const long OFFSET = long(1e5);
-
-bool hidden[MAXN+5];
-long X[2*OFFSET+5],Y[2*OFFSET+5];
-pair<long,long> hotel[MAXN+5];
-```
-
-
-## Κώδικας διαγωνιζομένων   
-Ο παρακάτω κώδικας ανοίκει στον Παναγιώτου Σωτήριο του 59ο ΓΕΛ Αθηνών και πέρασε όλα τα test case:
-
-```c++
-/*
-USER:pdp24u226
-TASK:loutraki
-LANG:C++
-*/
-#include<bitset>
-#include<set>
-#include<map>
-#include<queue>
-#include<utility>
-#include<algorithm>
-#include<stack>
-using namespace std;
-#include"stdio.h"
-#include"string.h"
-#include"stdlib.h"
-#include"assert.h"
-FILE *fin,*fout;
-int minx[200001],miny[200001];
-int minx_bel[200001],miny_bel[200001];
-bool bouno[1000001],paralia[1000001];
-int N;
-int main(){
-	int i,j,k;
-	fin=fopen("loutraki.in","r");
-	assert(fin);
-	fscanf(fin,"%d",&N);
-	for(i=1;i<=N;i++){
-		fscanf(fin,"%d %d",&j,&k);
-		//printf("check (%d,%d)->(%d,	%d)\n",j,k,j+100000,k+100000);
-
-		j+=100000;
-		k+=100000;
-		//min x for row
-		if(minx_bel[k]==0||minx[k]>j){
-			minx_bel[k]=i;
-			minx[k]=j;
-		}
-		//min y for row
-		if(miny_bel[j]==0||miny[j]>k){
-			miny_bel[j]=i;
-			miny[j]=k;
-		}
-	}
-	fclose(fin);
-	for(i=0;i<=200000;i++){
-		if(minx_bel[i]!=0){
-			//printf("minx for row %d is %d, belongs to %d\n",i-100000,minx[i]-100000,minx_bel[i]);
-			bouno[minx_bel[i]]=true;
-		}
-	}
-	for(i=0;i<=200000;i++){
-		if(miny_bel[i]!=0){
-			//printf("miny for col %d is %d, belongs to %d\n",i-100000,miny[i]-100000,miny_bel[i]);
-			paralia[miny_bel[i]]=true;
-		}
-	}
-
-	j=0;
-	for(i=1;i<=N;i++){
-		if(bouno[i]&&paralia[i]){
-			//printf("%d wins\n",i);
-			j++;
-		}
-	}
-	fout=fopen("loutraki.out","w");
-	fprintf(fout,"%d\n",j);
-	fclose(fout);
-	return 0;
-}
-```
+{% include code.md solution_name='loutraki_n.cc' start=5 end=10 %}

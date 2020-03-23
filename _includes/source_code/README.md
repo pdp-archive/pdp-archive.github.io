@@ -4,7 +4,7 @@ layout: default
 
 # Κώδικες για τα προβλήματα ΠΔΠ
 
-Οι παρακάτω οδηγίες περιγράφουν πώς μπορείτε να προσθέσετε λύσεις ώστε να ελέγχετε εύκολα αν περνάνε τα testcases. Παρότι τα testcases κατεβαίνουν αυτόματα αν έχετε internet, μπορείτε για offline χρήση να τα κατεβάζετε από το [drive](https://drive.google.com/drive/folders/1AeuB3AUFewMZdQ7pASYRgA2ewT1LJJOQ) και να τα βάλετε στον αντίστοιχο φάκελο (εν προκειμένω source_code/testdata/31-PDP/hydrocarbons/). Είτε το κάνετε χειροκίνητα, είτε αφήσετε μόνο του το σύστημα να τα κατεβάσει από το internet, τρέχετε όλες τις υπάρχουσες λύσεις με την εντολή
+Οι παρακάτω οδηγίες περιγράφουν πώς μπορείτε να προσθέσετε λύσεις ώστε να ελέγχετε εύκολα αν περνάνε τα testcases. Παρότι τα testcases κατεβαίνουν αυτόματα αν έχετε internet, μπορείτε για offline χρήση να τα κατεβάζετε από το [drive](https://drive.google.com/drive/folders/1AeuB3AUFewMZdQ7pASYRgA2ewT1LJJOQ) και να τα βάλετε στον αντίστοιχο φάκελο (εν προκειμένω _includes/source_code/testdata/31-PDP/hydrocarbons/). Είτε το κάνετε χειροκίνητα, είτε αφήσετε μόνο του το σύστημα να τα κατεβάσει από το internet, τρέχετε όλες τις υπάρχουσες λύσεις με την εντολή
 
 ```
 bash tester.sh hydrocarbons
@@ -24,7 +24,7 @@ bash tester.sh
 
 Για να τρέξετε το tester.sh, πρέπει να έχετε έκδοση του `g++` που υποστηρίζει την `C++17` (και στα Windows χρειάζεστε το Cygwin). Αν δεν το έχετε μπορείτε να τρέξετε `bash generated_execution.sh`, που τρέχει την τελευταία έκδοση του `tester.sh`. 
 
-**Σημείωση 1:** [Εδώ](https://drive.google.com/open?id=1hpgtr1woRjVl0BObUCcioey3MnyQts5j) μπορείτε να βρείτε μαζεμένα τα testcases για όλα τα προβλήματα στο pdp-archive. Κατεβάστε τα και κάντε τα unzip το αρχείο στον φάκελο `source_code/`. Αυτό σας επιτρέπει να τρέξετε λύσεις για όλα αυτά τα προβλήματα.
+**Σημείωση 1:** [Εδώ](https://drive.google.com/open?id=1hpgtr1woRjVl0BObUCcioey3MnyQts5j) μπορείτε να βρείτε μαζεμένα τα testcases για όλα τα προβλήματα στο pdp-archive. Κατεβάστε τα και κάντε τα unzip το αρχείο στον φάκελο `_includes/source_code/`. Αυτό σας επιτρέπει να τρέξετε λύσεις για όλα αυτά τα προβλήματα.
 
 **Σημείωση 2:** [Εδώ](https://drive.google.com/drive/folders/1veWwRRCpvu6jrDo4bulsCcvEw5Csr_t1) μπορείτε να βρείτε τα testcases ανά χρονιά και ανά πρόβλημα.
 
@@ -41,7 +41,7 @@ bash tester.sh
 ### Προσθέστε TASK
 
 Ακολουθήστε τα εξής βήματα:
-  1. Δημιουργήστε τον φάκελο `source_code/code/XX-PDP/{codename}`.
+  1. Δημιουργήστε τον φάκελο `_includes/source_code/code/XX-PDP/{codename}`.
   2. Στον φάκελο που μόλις δημιουργήσατε, δημιουργήστε ένα αρχείο `TASK` που θα έχει την εξής δομή:
      
      ```
@@ -55,13 +55,13 @@ bash tester.sh
         solutions = [],
      )
      ```
-  3. Προσθέστε στο `source_code/testdata/XX-PDP/{codename}` τα testcases. Πρέπει να έχουν τη μορφή `codename.in1`, `codename.out15`, κ.λπ.
+  3. Προσθέστε στο `_includes/source_code/testdata/XX-PDP/{codename}` τα testcases. Πρέπει να έχουν τη μορφή `codename.in1`, `codename.out15`, κ.λπ.
   4. Προσθέστε τις λύσεις ακολουθώντας τις παρακάτω οδηγίες.  
 
 ### Προσθέστε SOLUTION
 
 Ακολυθήστε τα εξής βήματα:
-  1. Βάλτε το αρχείο με την λύση στον φάκελο `source_code/code/XX-PDP/{codename}`
+  1. Βάλτε το αρχείο με την λύση στον φάκελο `_includes/source_code/code/XX-PDP/{codename}`
   2. Προσθέστε στο αρχείο TASK τις λεπτομέρειες της λύσης σας:
      ```
      TASK(

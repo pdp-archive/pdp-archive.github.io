@@ -11,45 +11,7 @@ codename: operators
 
 Επειδή εξετάζουμε $$\mathcal{O}(N^2)$$ ζεύγη ακεραίων η χρονική πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(N^2)$$. Η πολυπλοκότητα αυτή δε μας επιτρέπει να περάσουμε όλα τα testcases, ωστόσο θα περάσει τουλάχιστον τα μισά σύμφωνα με τη σημείωση της εκφώνησης. Λόγω της αποθήκευσης της ακολουθίας ακεραίων στον πίνακα $$A$$ η χωρική πολυπλοκότητα είναι $$\mathcal{O}(N)$$.
 
-```c++
-#include <cstdio>
-#include <algorithm>
-
-using namespace std;
-
-const long MAXN = 1000005;
-
-long A[MAXN];
-
-int main() {
-    freopen("operators.in", "r", stdin);
-    freopen("operators.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    // Διάβασμα ακολουθίας ακεραίων
-    for (long i = 0; i < N; i++) {
-        scanf("%ld", &A[i]);
-    }
-    // Δήλωση βοηθητικών μεταβλητών
-    long mn = 2 * 1000 * 1000 * 1000 + 1, mn_i, mn_j;
-    // Έλεγχος όλων των ζευγών ακεραίων της ακολουθίας
-    for (long i = 0; i < N; i++) {
-        for (long j = i + 1; j < N; j++) {
-            // Υπολογισμός μέτρου αθροίσματος τρέχοντος ζεύγους
-            long cur_abs_sum = abs(A[i] + A[j]);
-            // Έλεγχος για ελάχιστο
-            if (cur_abs_sum < mn) {
-                // Ενημέρωση αποτελεσμάτων σε περίπτωση ελαχίστου
-                mn = cur_abs_sum;
-                mn_i = i;
-                mn_j = j;
-            }
-        }
-    }
-    printf("%ld %ld\n", A[mn_i], A[mn_j]);
-    return(0);
-}
-```
+{% include code.md solution_name='operators_brute_force.cpp' %}
 
 ## Καλύτερη λύση με δυαδική αναζήτηση
 
@@ -61,75 +23,7 @@ int main() {
 
 Ο αλγόριθμος αυτός πραγματοποιεί $$\mathcal{O}(N)$$ δυαδικές αναζητήσεις κάθε μία από τις οποίες απαιτεί χρόνο $$\mathcal{O}(\log{N})$$, επομένως η πολυπλοκότητα του αλγρίθμου είναι $$\mathcal{O}(N\log{N})$$. Η λύση αυτή είναι αρκετά γρήγορη για να περάσει όλα τα testcases. Η χωρική πολυπλοκότητα είναι $$\mathcal{O}(N)$$.
 
-```c++
-#include <cstdio>
-#include <algorithm>
-
-using namespace std;
-
-const long MAXN = 1000005;
-
-long A[MAXN];
-
-int main() {
-    freopen("operators.in", "r", stdin);
-    freopen("operators.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    // Διάβασμα ακολουθίας ακεραίων
-    for (long i = 0; i < N; i++) {
-        scanf("%ld", &A[i]);
-    }
-    // Έλεγχος για το αν έχουμε μόνο θετικούς ή μόνο αρνητικούς ακεραίους
-    if (A[0] > 0) {
-        printf("%ld %ld\n", A[0], A[1]);
-        return(0);
-    }
-    else if (A[N - 1] < 0) {
-        printf("%ld %ld\n", A[N - 2], A[N - 1]);
-        return(0);
-    }
-    // Δήλωση βοηθητικών μεταβλητών
-    long mn = 2 * 1000 * 1000 * 1000 + 1, mn_1, mn_2;
-    for (long i = 0; i < N; i++) {
-        long K = A[i];
-        long a, b;
-        if (K) {
-            // Εντοπισμός γειτόνων αντιθέτου με δυαδική αναζήτηση
-            long pos = lower_bound(A, A + N - 1, -K) - A;
-            if (pos < N && A[pos] == -K) {
-                printf("%ld %ld\n", min(K, -K), max(K, -K));
-                return(0);
-            }
-            a = pos - 1;
-            b = pos;
-        }
-        else {
-            // ’μεσος προσδιορισμός γειτόνων
-            a = i - 1;
-            b = i + 1;
-        }
-        // Προσαρμογή γειτόνων
-        if (a == i || a == -1)
-            a++;
-        if (b == i || b == N)
-            b--;
-        // Ενημέρωση αποτελεσμάτων σε περίπτωση ελαχίστου
-        if (abs(K + A[a]) < mn) {
-            mn = abs(K + A[a]);
-            mn_1 = i;
-            mn_2 = a;
-        }
-        if (abs(K + A[b]) < mn) {
-            mn = abs(K + A[b]);
-            mn_1 = i;
-            mn_2 = b;
-        }
-    }
-    printf("%ld %ld\n", min(A[mn_1], A[mn_2]), max(A[mn_1], A[mn_2]));
-    return(0);
-}
-```
+{% include code.md solution_name='operators_binary_search.cpp' %}
 
 ## Βέλτιστη λύση με two pointers
 
@@ -154,42 +48,4 @@ $$= A_{i'} + A_{j'} \le \lvert A_{i'} + A_{j'} \rvert$$ $$\ $$
 
 Επειδή η τιμή του $$i$$ μπορεί να αυξηθεί $$\mathcal{O}(N)$$ φορές και του $$j$$ να μειωθεί $$\mathcal{O}(N)$$ φορές, η χρονική πολυπλοκότητα του αλγορίθμου two pointers είναι $$\mathcal{O}(N)$$. Η πολυπλοκότητα αυτή είναι η βέλτιστη δυνατή και η λύση μας περνάει όλα τα testcases. Η χωρική πολυπλοκότητα είναι $$\mathcal{O}(N)$$.
 
-```c++
-#include <cstdio>
-#include <algorithm>
-
-using namespace std;
-
-const long MAXN = 1000005;
-
-long A[MAXN];
-
-int main() {
-    freopen("operators.in", "r", stdin);
-    freopen("operators.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    // Διάβασμα ακολουθίας ακεραίων
-    for (long i = 0; i < N; i++) {
-        scanf("%ld", &A[i]);
-    }
-    // Δήλωση βοηθητικών μεταβλητών
-    long mn = 2 * 1000 * 1000 * 1000 + 1, mn_i, mn_j;
-    // Αρχικοποίηση μεταβλητής-δείκτη
-    long j = N - 1;
-    for (long i = 0; i < j; i++) {
-        // Υπολογισμός βέλτιστου j με i < j
-        while (j > i + 1 && abs(A[i] + A[j - 1]) < abs(A[i] + A[j])) {
-            j--;
-        }
-        // Έλεγχος για ελάχιστο
-        if (abs(A[i] + A[j]) < mn) {
-            mn = abs(A[i] + A[j]);
-            mn_i = i;
-            mn_j = j;
-        }
-    }
-    printf("%ld %ld\n", A[mn_i], A[mn_j]);
-    return(0);
-}
-```
+{% include code.md solution_name='operators_two_pointers.cpp' %}

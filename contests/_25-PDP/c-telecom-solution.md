@@ -3,7 +3,7 @@ layout: solution
 codename: telecom
 ---
 
-*Η λύση απαιτεί γνώσεις για το ελάχιστο συνδετικό δένδρο. Η βέλτιση λύση απαιτεί γνώσεις disjoint set union*
+*Η λύση απαιτεί γνώσεις για το ελάχιστο συνδετικό δένδρο. Η βέλτιση λύση απαιτεί γνώσεις disjoint set union.*
 
 
 ## Επεξήγηση εκφώνησης
@@ -33,64 +33,7 @@ codename: telecom
 Για να βρούμε το μεγαλύτερο βάρος στο μονοπάτι μεταξύ $$i$$ και $$j$$ κάνουμε αναζήτηση κατά βάθος. Υπάρχουν $$N(N-1)/2 - (N-1) = O(N^2)$$ ακμές και κάθε DFS θέλει $$O(N)$$ χρόνο, άρα συνολικά ο αλγόριθμος θέλει $$O(N^3)$$ και $$O(N)$$ μνήμη. 
 
 
-```c++
-#include <algorithm>
-#include <cstdio>
-#include <vector>
-
-typedef long long ll;
-
-const size_t MAXN = 500000;
-
-std::vector<std::pair<long, long>> v[MAXN + 1];
-
-void findMax(long current, long target, long par, long cur_max, long& ans) {
-   if (current == target) {
-      ans = cur_max;
-      return;
-   }
-   for (const auto& edge : v[current]) {
-      if (edge.first == par) continue;
-      findMax(edge.first, target, current, std::max(cur_max, edge.second), ans);
-   }
-}
-      
-
-long findMaxEdgeInPath(long u, long v) {
-   long ans = -1;
-   findMax(u, v, -1, -1, ans);
-   return ans;
-}
-
-int main() {
-   long N;
-   FILE *fi = fopen("telecom.in", "r");
-   fscanf(fi, "%ld", &N);
-   
-   for (long i = 1; i < N; ++i) {
-      long a, b, weight;
-      fscanf(fi, "%ld%ld%ld", &a, &b, &weight);
-      v[a].push_back(std::make_pair(b, weight));
-      v[b].push_back(std::make_pair(a, weight));
-   }
-   fclose(fi);
-   
-   ll total = 0;
-   for (long u = 1; u <= N; ++u) {
-      for (long v = u + 1; v <= N; ++v) {
-         total += findMaxEdgeInPath(u, v) + 1;
-      }
-   }
-   total -= N - 1;
-   
-   FILE *fo = fopen("telecom.out", "w");
-   fprintf(fo, "%lld\n", total);
-   fclose(fo);
-   return 0;
-}
-
-```
-
+{% include code.md solution_name='telecom_n3.cc' %}
 
 ## Επιταχυμένη αρχική λύση
 
@@ -99,57 +42,7 @@ int main() {
 Συνεπώς, μπορούμε να βρούμε το άθροισμα όλων των μέγιστων αποστάσεων σε χρόνο $$O(N^2)$$ (αφού για κάθε κορυφή χρειάζεται $$O(N)$$) και με $$O(N)$$ μνήμη.
 
 
-```c++
-#include <algorithm>
-#include <cstdio>
-#include <vector>
-
-typedef long long ll;
-
-const size_t MAXN = 500000;
-
-std::vector<std::pair<long /* κορυφή */, long /* βάρος */>> v[MAXN + 1];
-
-void findSumMax(long current, long par, long cur_max, ll& ans) {
-   ans += cur_max + 1;
-   for (const auto& edge : v[current]) {
-      if (edge.first == par) continue;
-      findSumMax(edge.first, current, std::max(cur_max, edge.second), ans);
-   }
-}
-
-ll findSumMax(long u) {
-   ll ans = 0;
-   findSumMax(u, -1, -1, ans);
-   return ans;
-}
-
-int main() {
-   long N;
-   FILE *fi = fopen("telecom.in", "r");
-   fscanf(fi, "%ld", &N);
-   
-   for (long i = 1; i < N; ++i) {
-      long a, b, weight;
-      fscanf(fi, "%ld%ld%ld", &a, &b, &weight);
-      v[a].push_back(std::make_pair(b, weight));
-      v[b].push_back(std::make_pair(a, weight));
-   }
-   fclose(fi);
-   
-   ll total = 0;
-   for (long u = 1; u <= N; ++u) {
-      total += findSumMax(u);
-   }
-   total = (total)/2 - (N - 1);
-   
-   FILE *fo = fopen("telecom.out", "w");
-   fprintf(fo, "%lld\n", total);
-   fclose(fo);
-   return 0;
-}
-
-```
+{% include code.md solution_name='telecom_n2.cc' %}
 
 
 ## Βέλτιστη λύση
@@ -181,84 +74,4 @@ int main() {
 
 Ο αλγόριθμος αυτός έχει πολυπλοκότητα $$O(N\alpha(N) + N\log{N})$$ ή $$O(N\alpha(N))$$ (αν η ταξινόμηση γίνει γραμμικά). 
 
-```c++
-#include <algorithm>
-#include <cstdio>
-#include <vector>
-
-typedef long long ll;
-
-const size_t MAXN = 500000;
-
-struct Edge {
-   long u;
-   long v;
-   long weight;
-   
-   Edge(long u, long v, long weight) : u(u), v(v), weight(weight) {}
-   
-   // Ταξινομούμε βάζοντας πρώτα τις ακμές με μικρότερα βάρη. 
-   bool operator<(const Edge& e) const {
-      if (weight != e.weight) return weight < e.weight;
-      if (u != e.u) return u < e.u;
-      return v < e.v;
-   }
-};
-
-long N;
-
-long parent[MAXN + 1];
-long rank[MAXN + 1];
-ll count[MAXN + 1];
-
-void init() {
-   for (long i = 1; i <= N; ++i) {
-      parent[i] = i;
-      rank[i] = 1;
-      count[i] = 1;
-   }
-}
-
-long findParent(long n) {
-   if (n == parent[n]) return n;
-   return parent[n] = findParent(parent[n]);
-}
-
-void unite(long u, long v) {
-   if (rank[u] < rank[v]) std::swap(u, v);
-   parent[v] = u;
-   count[u] += count[v];
-   if (rank[u] == rank[v]) ++rank[u];
-}
-
-int main() {
-   FILE *fi = fopen("telecom.in", "r");
-   fscanf(fi, "%ld", &N);
-   std::vector<Edge> edges;
-   
-   for (long i = 1; i < N; ++i) {
-      long u, v, weight;
-      fscanf(fi, "%ld%ld%ld", &u, &v, &weight);
-      edges.push_back(Edge(u, v, weight));
-   }
-   fclose(fi);
-   std::sort(edges.begin(), edges.end());
-   init();
-   ll total = 0;
-   for (const Edge& e : edges) {
-      long parent_u = findParent(e.u);
-      long parent_v = findParent(e.v);
-      total += e.weight;
-      if (parent_u != parent_v) {
-         total += (count[parent_u] * count[parent_v] - 1) * (e.weight + 1);
-         unite(parent_u, parent_v);
-      }
-   }
-   
-   FILE *fo = fopen("telecom.out", "w");
-   fprintf(fo, "%lld\n", total);
-   fclose(fo);
-   return 0;
-}
-
-```
+{% include code.md solution_name='telecom_efficient.cc' %}

@@ -15,35 +15,7 @@ codename: snow_run
 
 Λόγω των δύο εμφωλευμένων for loops που διατρέχουν τον πίνακα $$A$$, η χρονική πολυπλοκότητα αυτού του αλγορίθμου είναι $$\mathcal{O}(N^2)$$. Η πολυπλοκότητα αυτή είναι επαρκής για τα testcases ($$N \leq 40.000$$), αλλά θα προτείνουμε και καλύτερες λύσεις. Η χωρική πολυπλοκότητα είναι $$\mathcal{O}(N)$$ καθώς πρέπει να αποθηκεύσουμε τις εκτιμώμενες τελικές κατατάξεις (πίνακας $$A$$).
 
-```c++
-#include <cstdio>
-
-using namespace std;
-
-const long MAXN = 100005;
-
-long A[MAXN];
-
-int main() {
-    freopen("snow_run.in", "r", stdin);
-    freopen("snow_run.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    for (long i = 0; i < N; i++) {
-        scanf("%ld", &A[i]);
-        // Αύξηση τελικής κατάταξης προηγούμενων δρομέων που τερμάτισαν αργότερα
-        for (long j = 0; j < i; j++) {
-            if (A[j] >= A[i])
-                A[j]++;
-        }
-    }
-    // Εκτύπωση τελικών κατατάξεων
-    for (long i = 0; i < N; i++) {
-        printf("%ld\n", A[i]);
-    }
-    return(0);
-}
-```
+{% include code.md solution_name='snow_run_brute_force_1.cpp' %}
 
 ## 2<sup>η</sup> λύση με Brute force
 
@@ -59,41 +31,7 @@ int main() {
 
 Επειδή για κάθε παίκτη κάνουμε γραμμική διάσχιση του πίνακα $$B$$, η χρονική πολυπλοκότητα θα είναι $$\mathcal{O}(N^2)$$. Η χωρική πολυπλοκότητα είναι και πάλι $$\mathcal{O}(N)$$. Αν και αυτός ο αλγόριθμος έχει την ίδια χρονική πολυπλοκότητα με τον προηγούμενο, πρακτικά συχνά θα πετυχαίνει μικρότερους χρόνους καθώς για πολλούς παίκτες δε θα χρειάζεται να διασχίζουμε όλον τον πίνακα $$B$$. Βέβαια και πάλι για απαιτητικά testcases αυτή η λύση υπερβαίνει τα χρονικά όρια.
 
-```c++
-#include <cstdio>
-using namespace std;
-const long MAXN = 100005;
-long A[MAXN];
-bool B[MAXN];
-int main() {
-    freopen("snow_run.in", "r", stdin);
-    freopen("snow_run.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    // Διάβασμα κατατάξεων τη στιγμή τερματισμού κάθε δρομέα
-    for (long i = 0; i < N; i++) {
-        scanf("%ld", &A[i]);
-    }
-    for (long i = N - 1; i >= 0; i--) {
-        long a = A[i];
-        long b = 0;
-        // Εύρεση a-οστού κενού στη θέση b
-        while (a) {
-            if (!B[++b])
-                a--;
-        }
-        // Το b είναι η τελική κατάταξη του τρέχοντος παίκτη
-        B[b] = true;
-        A[i] = b;
-    }
-    // Εκτύπωση τελικών κατατάξεων
-    for (long i = 0; i < N; i++) {
-        printf("%ld\n", A[i]);
-    }
-    return(0);
-}
-```
-
+{% include code.md solution_name='snow_run_brute_force_2.cpp' %}
 
 ## Βέλτιστη λύση με Segment tree
 
@@ -105,64 +43,4 @@ int main() {
 
 Αφού κάθε φορά η αναζήτησή μας περιορίζεται στο μισό, χρειαζόμαστε χρόνο $$\mathcal{O}(\log{N})$$, όπως σε μία δυαδική αναζήτηση (πιο αναλυτικά στο άρθρο του Καλλίνικου). Άρα η συνολική χρονική πολυπλοκότητα αυτού του αλγορίθμου είναι $$\mathcal{O}(N\log{N})$$. Η χωρική πολυπλοκότητα είναι $$\mathcal{O}(N)$$. Πλέον ο αλγόριθμος περνάει όλα τα testcases.
 
-```c++
-#include <cstdio>
-
-using namespace std;
-
-const long MAXN = 100005;
-long A[MAXN];
-
-// Δηλώσεις για segment tree
-long C[MAXN], tree[4 * MAXN];
-
-void build(long node, long start, long end) {
-    if(start == end)
-        tree[node] = C[start];
-    else {
-        long mid = (start + end) / 2;
-        build(2 * node, start, mid);
-        build(2 * node + 1, mid + 1, end);
-        tree[node] = tree[2 * node] + tree[2 * node + 1];
-    }
-}
-
-// Εντοποπισμός επιθυμητού 1 και ενημέρωση segment tree
-long query(long node, long start, long end, long k) {
-    tree[node]--;
-    if(start == end) {
-        C[start] = 0;
-        return(start);
-    }
-    long mid = (start + end) / 2;
-    long c = tree[2 * node];
-    // Επιλογή κατάλληλου υποδέντρου
-    if (c >= k)
-        return(query(2 * node, start, mid, k));
-    return(query(2 * node + 1, mid + 1, end, k - c));
-}
-
-int main() {
-    freopen("snow_run.in", "r", stdin);
-    freopen("snow_run.out", "w", stdout);
-    long N;
-    scanf("%ld", &N);
-    // Διάβασμα κατατάξεων τη στιγμή τερματισμού κάθε δρομέα
-    // και αρχικοποίηση πίνακα C
-    for (long i = 1; i <= N; i++) {
-        scanf("%ld", &A[i]);
-        C[i] = 1;
-    }
-    // Κατασκευή segment tree
-    build(1, 1, N);
-    // Υπολογισμός τελικών κατατάξεων με εντοπισμό 1
-    for (long i = N; i; i--) {
-        A[i] = query(1, 1, N, A[i]);
-    }
-    // Εκτύπωση τελικών κατατάξεων
-    for (long i = 1; i <= N; i++) {
-        printf("%ld\n", A[i]);
-    }
-    return(0);
-}
-```
+{% include code.md solution_name='snow_run_seg_tree.cpp' %}

@@ -15,42 +15,7 @@ codename: function
 
 **Σημείωση:** Στις περισσότερες γλώσσες προγραμματισμού ελέγχουμε αν το $$i$$ διαιρεί το $$k$$, με `k % i == 0` (δηλαδή, ελέγχουμε αν το υπόλοιπο της διαίρεσης του $$k$$ με το $$i$$ είναι $$0$$).
 
-```c++
-#include <algorithm>
-#include <stdio.h>
-
-bool isPrime(long k) {
-   if (k == 1 || k == 2) return false;
-   for (long i = 2; i < k; ++i) {
-      if (k % i == 0) return false;
-   }
-   return true;
-}
-
-int main() {
-   long N, M;
-   FILE *fi = fopen("function.in", "r");
-   fscanf(fi, "%ld%ld\n", &N, &M);
-   fclose(fi);
-   
-   if (N > M) std::swap(N, M);
-   
-   FILE *fo = fopen("function.out", "w");
-   bool is_first = true;
-   for (long k = N + 1; k < M; ++k) {
-      if (isPrime(k)) {
-         if (!is_first) fprintf(fo, " ");
-         fprintf(fo, "%ld", k);
-         is_first = false;
-      }
-   }
-   if (!is_first) {
-      fprintf(fo, "\n");
-   }
-   fclose(fo);
-   return 0;
-}
-```
+{% include code.md solution_name='function_l_2.cpp' %}
 
 Για κάθε αριθμό στο $$(N, M)$$, υπάρχουν $$k=\mathcal{O}(L)$$ αριθμοί να ελέγξουμε. Άρα, ο αλγόριθμος χρειάζεται $$\mathcal{O}(L^2)$$ χρόνο και $$\mathcal{O}(1)$$ μνήμη.
 
@@ -66,19 +31,7 @@ Mπορούμε να επιταχύνουμε τον παραπάνω αλγόρ
 
 Σημειώνουμε ότι αντί να ελέγχουμε ότι $$i \le \sqrt{k}$$, υψώνουμε και τα δύο μέλη στο τετράγωνο, οπότε κάνουμε τον πιο εύκολο έλεγχο $$i*i \le k$$.
 
-```c++
-// ...
-
-bool isPrime(long k) {
-   if (k == 1 || k == 2) return false;
-   for (long i = 2; i * i <= k; ++i) {
-      if (k % i == 0) return false;
-   }
-   return true;
-}
-
-// ...
-```
+{% include code.md solution_name='function_l_root_l.cpp' start=4 end=10 %}
 
 ##  Λύση με κόσκινο του Ερατοσθένη
 
@@ -88,47 +41,7 @@ bool isPrime(long k) {
 
 Mπορούμε να υλοποίησουμε το κόσκινο, κρατώντας έναν πίνακα από boolean μεγέθους $$M$$, όπου το $$k$$-οστό στοιχείο δείχνει αν ο αριθμός $$k$$ έχει διαγραφεί ή όχι. Όταν τελειώσει η διαδικασία, γνωρίζουμε για κάθε αριθμό αν είναι πρώτος ή όχι. 
 
-```c++
-#include <algorithm>
-#include <stdio.h>
-
-const size_t MAXM = 10000;
-
-bool isNotPrime[MAXM];
-
-int main() {
-   long N, M;
-   FILE *fi = fopen("function.in", "r");
-   fscanf(fi, "%ld%ld\n", &N, &M);
-   fclose(fi);
-   
-   if (N > M) std::swap(N, M);
-
-   isNotPrime[0] = isNotPrime[1] = true;
-   for (long k = 2; k < M; ++k) {
-      if (isNotPrime[k]) continue; 
-      for (long i = 2; i * k <= M; ++i) {
-         isNotPrime[i * k] = true;
-      }
-   }
-   isNotPrime[2] = true;
-   
-   FILE *fo = fopen("function.out", "w");
-   bool is_first = true;
-   for (long k = N + 1; k < M; ++k) {
-      if (!isNotPrime[k]) {
-         if (!is_first) fprintf(fo, " ");
-         fprintf(fo, "%ld", k);
-         is_first = false;
-      }
-   }
-   if (!is_first) {
-      fprintf(fo, "\n");
-   }
-   fclose(fo);
-   return 0;
-}
-```
+{% include code.md solution_name='function_eratosthenes_sieve.cpp' %}
 
 Η μνήμη που χρησιμοποιεί ο αλγόριθμος είναι ένας πίνακας μεγέθους $$\mathcal{O}(M)$$. Αν και δεν είναι υποχρεωτικό για το διαγωνισμό, το παρακάτω επιχείρημα δείχνει ότι ο χρόνος του αλγορίθμου είναι λιγότερος από $$\mathcal{O}(M\log{M})$$.
 
@@ -146,4 +59,4 @@ $$\leq M \cdot ((1/2 + 1/2) +  (1/4 + 1/4 + 1/4 + 1/4) + \ldots ) = M \cdot (1 +
 
 ## Λύση με προϋπολογισμό
 
-Αφού το $$M = 10.000$$ είναι σχετικά μικρό, μπορούμε να προϋπολογίσουμε όλους τους πρώτους αριθμούς μικρότερους από $$M$$ (χρησιμοποιώντας οποιανδήποτε από τις παραπάνω μεθόδους) και ανάλογα με την είσοδο να τυπώνουμε αυτούς που πρέπει σε $$\mathcal{O}(M)$$ χρόνο και μνήμη (δείτε τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/source_code/code/24-PDP/function/function_precomputation.cpp)).
+Αφού το $$M = 10.000$$ είναι σχετικά μικρό, μπορούμε να προϋπολογίσουμε όλους τους πρώτους αριθμούς μικρότερους από $$M$$ (χρησιμοποιώντας οποιανδήποτε από τις παραπάνω μεθόδους) και ανάλογα με την είσοδο να τυπώνουμε αυτούς που πρέπει σε $$\mathcal{O}(M)$$ χρόνο και μνήμη (δείτε τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/24-PDP/function/function_precomputation.cpp)).
