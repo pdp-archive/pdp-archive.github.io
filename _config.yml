@@ -116,3 +116,12 @@ defaults:
     values:
       contest: "32ος ΠΔΠ"
       contest_url: "32-PDP"
+
+exclude: [
+  source_code/utils,
+  source_code/testdata,
+  source_code/generated_execution.sh,
+  source_code/README.md,
+  source_code/test_parser.out,
+  source_code/tester.sh
+]
