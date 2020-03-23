@@ -143,25 +143,4 @@ int main() {
 ### Iterative λύση
 Παρόλο που ο αλγόριθμος είναι θεωρητικά βέλτιστος, η αναδρομική κλίση της συνάρτησης ``visit`` μπορεί να δημιουργήσει μεγάλη στοίβα κλίσεων και να οδηγήσει σε stack overflow. Για να το αποφύγουμε αυτό μπορούμε να χρησιμοποιήσουμε μία κανονική στοίβα στη ``C++``, όπου προσθέτουμε τους κόμβους για να επισκεφθούμε.
 
-```c++
-// ...
-
-void visit(long n) {
-  std::vector<long> st;
-  st.push_back(n);
-  
-  while (!st.empty()) {
-    long n = st.back();
-    st.pop_back();
-    if (visited[n]) continue;
-    visited[n] = true;
-    for (const auto& neighbour : adj_list[n]) {
-      if (!visited[neighbour]) {
-        st.push_back(neighbour);
-      }
-    }
-  }
-}
-
-// ...
-```
+{% include code.md solution_name='villages_efficient_iterative.cc' start=12 end=26 %}

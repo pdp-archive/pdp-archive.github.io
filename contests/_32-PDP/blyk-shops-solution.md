@@ -35,30 +35,8 @@ $$2,~4,~15,~12,~10,~1,~1,~20,~4,~10$$
 
 Παρακάτω δίνεται μία ενδεικτική υλοποίηση αυτής της λύσης.
 
-```c++
-#include <bits/stdc++.h>
-const long MAXN = 2000000;
-using namespace std;
+{% include code.md solution_name='shops_n2k.cc' %}
 
-long N, K, ans, s, sum, A[MAXN+5];
-
-int main() {
-  freopen("shops.in","r",stdin);
-  freopen("shops.out","w",stdout);
-  scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i)
-    scanf("%ld", &A[i]);
-  for(long right2=2*K; right2<=N; ++right2)
-    for(long right1=K; right1<=right2-K; ++right1) {
-      long sum = 0;
-      for(long k=1; k<=K; ++k) sum += A[right2-k+1] + A[right1-k+1];
-      ans = max (sum, ans);
-    }
-
-  printf("%ld\n", ans);
-  return 0;
-}
-```
 ## Αργή λύση - $$\mathcal{O}(N^2)$$
 
 Γνώσεις που θα χρειαστούμε: cumulative sums.
@@ -75,30 +53,7 @@ int main() {
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
-```c++
-#include <bits/stdc++.h>
-const long MAXN = 2000000;
-using namespace std;
-
-long N, K, ans, A[MAXN+5], s[MAXN+5];
-
-int main() {
-  freopen("shops.in","r",stdin);
-  freopen("shops.out","w",stdout);
-  scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) {
-    scanf("%ld", &A[i]);
-    s[i] = s[i-1] + A[i];
-  }
-  for(long right2=2*K; right2<=N; ++right2)
-    for(long right1=K; right1<=right2-K; ++right1) {
-      ans = max (s[right2]-s[right2-K]+s[right1]-s[right1-K], ans);
-    }
-
-  printf("%ld\n", ans);
-  return 0;
-}
-```
+{% include code.md solution_name='shops_n2.cc' %}
 
 ## Βέλτιστη λύση - $$\mathcal{O}(N)$$
 
@@ -119,29 +74,7 @@ for(long i=K+1; i<=N; ++i)
 
 Μία ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
-```c++
-#include <bits/stdc++.h>
-const long MAXN = 2000000;
-using namespace std;
-
-long N, K, ans, A[MAXN+5], s[MAXN+5], maxUpTo[MAXN+5];
-
-int main() {
-  freopen("shops.in","r",stdin);
-  freopen("shops.out","w",stdout);
-  scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) {
-    scanf("%ld", &A[i]);
-    s[i] = s[i-1] + A[i];
-    if(i-K>=0) maxUpTo[i] = max(maxUpTo[i-1], s[i] - s[i-K]);
-  }
-  for(long right2=2*K; right2<=N; ++right2)
-    ans = max (s[right2]-s[right2-K]+maxUpTo[right2-K], ans);
-
-  printf("%ld\n", ans);
-  return 0;
-}
-```
+{% include code.md solution_name='shops_n.cc' %}
 
 Όπως εύκολα παρατηρούμε δεν χρειαζόμαστε τον πίνακα $$A[]$$ μετά την δημιουργία των cumulative sums. Ακόμα όμως και αν θέλαμε κάποιο στοιχείο του τότε:
 ```c++
@@ -153,81 +86,8 @@ long getA(long i){
 Επίσης δεν χρειαζόμαστε ούτε τον πίνακα $$\mathit{maxUpTo}$$ καθώς μας ενδιαφέρει μόνο το τελευταίο στοιχείο του.  
 Μία ακόμα ενδεικτική υλοποίηση παρουσιάζεται παρακάτω:
 
-```c++
-#include <cstdio>
-#include <algorithm>
-
-const long MAXN = 2000000;
-using namespace std;
-
-long N, K, ans, Ai, s[MAXN+5], maxUpTo;
-
-int main() {
-  freopen("shops.in","r",stdin);
-  freopen("shops.out","w",stdout);
-  scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) {
-    scanf("%ld", &Ai);
-    s[i] = s[i-1] + Ai;
-  }
-  for(long i=K;i<=N-K;++i){
-      //Δοκιμάζουμε κάθε πιθανή θέση που θα ξεκινά το δεύτερο (δεξιότερο)
-      //κατάστημα. Προφανώς δεν έχει νόημα να ξεκινά πρίν τη θέση Κ διότι
-      //θα επικάλυπτε το πρώτο (αριστερό) κατάστημα. Καταλαμβάνει τις 
-      //θέσεις i+1,i+2,...,i+K άρα μπορεί να ξεκινά το πολύ στη θέση N-K
-      //ώστε να τελειώνει στη θέση Ν
-      
-      maxUpTo = max(maxUpTo, s[i] - s[i-K]);
-      //το maxUpTo διατηρεί το καλύτερο κέρδος για το πρώτο κατάστημα
-      //όπου και αν αυτό έχει μπεί, αρκεί να τελειώνει το πολύ στη θέση i
-      
-      ans = max(ans, maxUpTo + s[i+K] - s[i]);
-      //το s[i+K]-s[i] είναι το κέρδος του δεύτερου καταστήματος αν αυτό
-      //ξεκινά στη θέση i+1 και τελειώνει στην i+K
-  }
-
-  printf("%ld\n", ans);
-  return 0;
-}
-```
+{% include code.md solution_name='shops_n_lessmem.cc' %}
 
 Μια ακόμα διαφορετική προσέγγιση χωρίς χρήση cumulative sums αλλά με χρήση sliding window όπου το αριστερό κατάστημα ολισθαίνει κατά μία θέση κάθε φορά προς τα δεξιά και αποθηκεύουμε το μεγαλύτερο κέρδος του στην κάθε θέση $$i$$. Το δεξιό κατάστημα ξεκινά από το τέρμα δεξιό σημείο και ολισθαίνει κατά μια θέση κάθε φορά προς τα αριστερά. Το μεγαλύτερο άθροισμα των κερδών των δυο καταστημάτων είναι η απάντηση μας.
 
-```c++
-#include <cstdio>
-#include <algorithm>
-
-const long MAXN = 2000000;
-using namespace std;
-
-long N, K, ans, A[MAXN+5], maxUpTo[MAXN+5];
-
-int main() {
-  freopen("shops.in","r",stdin);
-  freopen("shops.out","w",stdout);
-  scanf("%ld %ld", &N, &K);
-  for(long i=1; i<=N; ++i) 
-    scanf("%ld", &A[i]);
-
-  for(long shopleft=0, i=1; i<=N-K; ++i){
-      shopleft += A[i];
-      if(shopleft > K){
-          //το shopleft έχει άθροισμα Κ+1 διαδοχικών θέσεων. 
-          //Αφαίρερε την παλιότερη.
-          shopleft -= A[i-K];
-      }
-      maxUpTo[i] = max(shopleft,maxUpTo[i-1]);
-  }
-  for(long shopright=0, i=N; i>K; --i){
-      shopright += A[i];
-      if(i <= N-K){
-          //το shopright έχει άθροισμα Κ+1 διαδοχικών θέσεων. 
-          //Αφαίρερε την παλιότερη.
-          shopright -= A[i+K];
-      }
-      ans = max(ans, maxUpTo[i-1]+shopright);
-  }
-  printf("%ld\n", ans);
-  return 0;
-}
-```
+{% include code.md solution_name='shops_n_slide.cc' %}
