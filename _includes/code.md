@@ -2,7 +2,7 @@
 Add lines of solution code.
 
 Usage:
-  {% include code solution_name='my_solution.cc' (start=INT end=INT) %}
+  {% include code.md solution_name='my_solution.cc' (start=INT end=INT) %}
 
   solution_name: name of the file containing the code for this solution. This file should be in '_includes/source_code/XX-PDP/CODENAME/my_solution.cc'
   start: number of first line to include (starts at 1)
@@ -12,11 +12,11 @@ Example:
 
 To include the entire solution 'my_solution.cc', write
 
-  {% include code solution_name='my_solution.cc' %}
+  {% include code.md solution_name='my_solution.cc' %}
 
 To include lines 5-7 of 'my_solution.cc', write
 
-  {% include code solution_name='my_solution.cc' start=5 end=7 %}
+  {% include code.md solution_name='my_solution.cc' start=5 end=7 %}
 
 Implementation inspired from https://hblok.net/blog/posts/2016/10/23/jekyll-include-partial-snippets-of-code/
 
