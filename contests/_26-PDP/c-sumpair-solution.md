@@ -8,42 +8,7 @@ codename: sumpair
 
 Κάθε ερώτημα παίρνει $$\mathcal{O}(N^2)$$, άρα η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(Ν^2Q)$$ και η μνήμη είναι $$\mathcal{O}(N)$$.
 
-```c++
-#include <cstdio>
-
-const size_t MAXN = 1000000;
-
-long A[MAXN];
-long N, Q;
-
-bool doesPairExist(long target) {
-  for (long i = 0; i < N; ++i) {
-    for (long j = i + 1; j < N; ++j) {
-      if (A[i] + A[j] == target) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-int main() {
-  FILE *fi = fopen("sumpair.in", "r");
-  fscanf(fi, "%ld %ld", &N, &Q);
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%ld", &A[i]);
-  }
-  FILE *fo = fopen("sumpair.out", "w");
-  for (long j = 0; j < Q; ++j) {
-    long target;
-    fscanf(fi, "%ld", &target);
-    fprintf(fo, "%s\n", doesPairExist(target) ? "true" : "false");
-  }
-  fclose(fi);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='sumpair_brute_force.cc' %}
 
 ## Λύση με set $$\mathcal{O}(Q N \log N)$$
 Στην παραπάνω λύση ψάχνουμε για κάθε $$A[i]$$, αν υπάρχει $$A[j]$$ ώστε $$A[i] + A[j] = \mathit{target}$$. Άρα ψάχνουμε για κάθε $$A[i]$$, αν υπάρχει στοιχείο $$A[j] = \mathit{target} - A[i]$$. 
@@ -54,52 +19,7 @@ int main() {
 
 **Σημείωση:** Αν χρησιμοποιήσουμε unordered_set τότε η μέση πολυπλοκότητα γίνεται $$\mathcal{O}(NQ)$$.
 
-```c++
-#include <cstdio>
-#include <set>
-
-const size_t MAXN = 1000000;
-
-std::set<long> s, has_duplicate;
-
-long A[MAXN];
-long N, Q;
-
-bool doesPairExist(long target) {
-  for (long i = 0; i < N; ++i) {
-    if (2 * A[i] == target) {
-      if (has_duplicate.find(A[i]) != has_duplicate.end())
-        return true;
-    } else {
-      if (s.find(target - A[i]) != s.end()) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-int main() {
-  FILE *fi = fopen("sumpair.in", "r");
-  fscanf(fi, "%ld %ld", &N, &Q);
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%ld", &A[i]);
-    if (s.find(A[i]) != s.end()) {
-      has_duplicate.insert(A[i]);
-    }
-    s.insert(A[i]);
-  }
-  FILE *fo = fopen("sumpair.out", "w");
-  for (long j = 0; j < Q; ++j) {
-    long target;
-    fscanf(fi, "%ld", &target);
-    fprintf(fo, "%s\n", doesPairExist(target) ? "true" : "false");
-  }
-  fclose(fi);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='sumpair_set.cc' %}
 
 ## Λύση με δύο δείκτες $$\mathcal{O}(N \log N + Q N)$$
 Η βέλτιστη λύση είναι να ταξινομήσουμε τον πίνακα και να διατηρούμε δύο δείκτες $$lo$$ και $$hi$$, ώστε $$[lo, hi]$$ να έχει όλα τα δυνατά ζεύγη που έχουν άθροισμα target.
@@ -112,43 +32,4 @@ int main() {
 
 Αυτές οι παρατηρήσεις μας οδηγούν στον αλγόριθμο όπου αφαιρούμε είτε την αρχή είτε το τέλος από το διάστημα $$[\mathit{lo}, \mathit{hi}]$$ βάσει του $$Α[\mathit{lo}] + Α[\mathit{hi}]$$, μέχρι να βρούμε ένα καλό ζεύγος ή να είναι άδειο το διάστημα. Αφού σε κάθε επανάληψη το μήκος του διαστήματος μικραίνει κατά $$1$$, κάθε ερώτημα θέλει $$\mathcal{O}(N)$$ χρόνο. Άρα ο αλγόριθμος έχει πολυπλοκότητα $$\mathcal{O}(N \log N + Q N)$$ και μνήμη $$\mathcal{O}(N)$$.
 
-```c++
-#include <algorithm>
-#include <cstdio>
-
-const size_t MAXN = 1000000;
-
-long A[MAXN];
-long N, Q;
-
-bool doesPairExist(long target) {
-  long lo = 0, hi = N - 1;
-  while (lo < hi) {
-    long sum = A[lo] + A[hi];
-    if (sum == target) return true;
-    else if (sum > target) --hi;
-    else ++lo;
-  }
-  return false;
-}
-
-int main() {
-  FILE *fi = fopen("sumpair.in", "r");
-  fscanf(fi, "%ld %ld", &N, &Q);
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%ld", &A[i]);
-  }
-  fclose(fi);
-  
-  std::sort(A, A+N);
-  
-  FILE *fo = fopen("sumpair.out", "w");
-  for (long j = 0; j < Q; ++j) {
-    long target;
-    fscanf(fi, "%ld", &target);
-    fprintf(fo, "%s\n", doesPairExist(target) ? "true" : "false");
-  }
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='sumpair_linear_query.cc' %}

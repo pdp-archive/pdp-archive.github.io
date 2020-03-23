@@ -22,34 +22,7 @@ codename: domes
 
 Αφού διαβάσουμε όλο το αρχείο εισόδου, η απάντηση είναι στη μεταβλητή $$\mathit{answer}$$. 
 
-```c++
-#include <cstdio>
-
-const size_t MAXN = 100000;
-
-long count[MAXN];
-
-int main() {
-  FILE *fi = fopen("domes.in", "r");
-  long N, M;
-  fscanf(fi, "%ld %ld", &N, &M);
-  long answer = N;
-  for (long i = 0; i < M; ++i) {
-    long A, B;
-    fscanf(fi, "%ld %ld", &A, &B);
-    ++count[A];
-    ++count[B];
-    if (count[A] == 2) --answer;
-    if (count[B] == 2) --answer;
-  }
-  fclose(fi);
-  
-  FILE *fo = fopen("domes.out", "w");
-  fprintf(fo, "%ld\n", answer);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='domes_efficient.cc' %}
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(N+M)$$ και χρειάζεται $$\mathcal{O}(N)$$ μνήμη.
 

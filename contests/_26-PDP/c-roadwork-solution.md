@@ -7,60 +7,7 @@ codename: roadwork
 
 Κάθε βήμα του αλγορίθμου θέλει στην χειρότερη περίπτωση $$\mathcal{O}(L)$$ χρόνο, άρα η τελική πολυπλοκότητα είναι $$\mathcal{O}(NL)$$ και η μνήμη είναι $$\mathcal{O}(L)$$.
 
-```c++
-#include <algorithm>
-#include <cstdio>
-
-const size_t MAXL = 1000000;
-const size_t MAXN = 1000000;
-
-bool is_covered[MAXL];
-
-long cover(long s, long t) {
-  for (long j = s; j < t; ++j) {
-	is_covered[j] = true;
-  }
-}
-
-long N, L, X;
-
-long findMaxGap() {
-  long prev_one = -1;
-  long max_gap = 0;
-  for (long j = 0; j < L; ++j) {
-    if (is_covered[j]) prev_one = j;
-	else {
-	  long gap = j - prev_one;
-	  max_gap = std::max(max_gap, gap);
-	}
-  }
-  return max_gap;
-}
-
-int main() {
-  FILE *fi = fopen("roadwork.in", "r");
-  fscanf(fi, "%ld %ld %ld", &N, &L, &X);
-  long solution = -1;
-  if (findMaxGap() <= X) {
-    solution = 0;
-  } else {	
-	  for (long j = 0; j < N; ++j) {
-		long s, t;
-		fscanf(fi, "%ld %ld", &s, &t);
-		cover(s, t);
-		if (findMaxGap() <= X) {
-		  solution = j + 1;
-		  break;
-		}
-	  }
-  }
-  FILE *fo = fopen("roadwork.out", "w");
-  fprintf(fo, "%ld\n", solution);
-  fclose(fi);
-  fclose(fo);
-  return 0;
-}  
-```
+{% include code.md solution_name='roadwork_slow.cc' %}
 
 ## Λύση σε $$\mathcal{O}(N^2)$$
 Το $$L$$ μπορεί να είναι πολύ μεγάλο, άρα η προηγούμενη λύση είναι αργή. Θα επιταχύνουμε την εύρεση του μεγίστου κενού για τα $$D$$ πρώτα διαστήματα.
@@ -84,70 +31,7 @@ int main() {
 
 Αυτό μας δίνει τον αλγόριθμο με πολυπλοκότητα $$\mathcal{O}(N^2)$$ και μνήμη $$\mathcal{O}(N)$$.
 
-```c++
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#define MAXN 1001000
-
-using namespace std;
-
-struct ent{
-  long x; // Θέση.
-  long t; // Τύπος (+1: αρχή, -1: τέλος).
-  long d; // Στιγμή που εισήχθη.
-  bool operator<(const ent &E) const{
-    if (x == E.x) return t > E.t; // Πρώτα τα τέλη.
-    return x < E.x;
-  }
-  ent(long x, long t, long d) : x(x), t(t), d(d) { }
-  ent() { }
-} interv[2*MAXN];
-
-long L, N, X;
-long findMaxGap(long d){
-  long prev = 1, gap = 0, open_intervals = 0, max_gap = 0;
-  for (long i = 0; i < 2 * N; i++){
-    // Ελέγχουμε ένα σημείο μόνο αν ανήκει στα πρώτα
-    // d διαστήματα.
-    if (d >= interv[i].d){
-      if (open_intervals == 0) {
-        gap += interv[i].x - prev;
-        max_gap = max(max_gap, gap);
-      } else gap = 0;
-      open_intervals += interv[i].t;
-      prev = interv[i].x;
-    }
-  }
-  return max(max_gap, L-prev);
-}
-
-int main(){
-  FILE *fi = fopen("roadwork.in", "r");
-  fscanf(fi, "%ld%ld%ld", &N, &L, &X);
-  for (long i = 1; i <= N; i++){
-    long A, B;
-    fscanf(fi, "%ld%ld", &A, &B);
-    interv[2*i-2] = ent(A,  1, i);
-    interv[2*i-1] = ent(B, -1, i);
-  }
-  sort(interv, interv+2*N);
-
-  long answer = -1;
-  for (long d = 1; d <= N; ++d) {
-    if (findMaxGap(d) <= X) {
-      answer = d;
-      break;
-    }
-  }
-  
-  FILE *fo = fopen("roadwork.out", "w");
-  fprintf(fo, "%ld\n", answer);
-  fclose(fi);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='roadwork_semifast.cc' %}
 
 ## Λύση σε $$\mathcal{O}(N \log N)$$
 **Παρατήρηση:** Έστω $$x_1$$ και $$x_2$$ το μέγιστο κενό για τα $$k_1$$ και $$k_2$$ πρώτα διαστήματα. Αν $$k_1 < k_2$$, τότε  $$x_1 > x_2$$, καθώς τα κενά μπορούν μόνο να μικρύνουν όταν προσθέτουμε διαστήματα.
@@ -156,73 +40,6 @@ int main(){
 
 Ο αλγόριθμος αυτός έχει πολυπλοκότητα $$\mathcal{O}(N \log N)$$ για την ταξινόμηση και $$\mathcal{O}(N)$$ για την εύρεση του κάθε μέγιστου κενού. Χρειάζεται $$\mathcal{O}(N)$$ μνήμη.
 
-```c++
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#define MAXN 1001000
-
-using namespace std;
-
-struct ent{
-  long x; // Θέση.
-  long t; // Τύπος (+1: αρχή, -1: τέλος).
-  long d; // Στιγμή που εισήχθει.
-  bool operator<(const ent &E) const{
-	if (x == E.x) return t > E.t; // Πρώτα τα τέλη.
-	return x < E.x;
-  }
-  ent(long x, long t, long d) : x(x), t(t), d(d) { }
-  ent() { }
-} interv[2*MAXN];
-
-long L, N, X;
-int findMaximumGap(int d){
-  long prev = 1, gap = 0, open_intervals = 0, max_gap = 0;
-  for (int i = 0; i < 2 * N; i++){
-	// Ελέγχουμε ένα σημείο μόνο αν ανήκει στα πρώτα
-	// d διαστήματα.
-    if (d >= interv[i].d){
-      if (open_intervals == 0) {
-        gap += interv[i].x - prev;
-        max_gap = max(max_gap, gap);
-      } else gap = 0;
-      open_intervals += interv[i].t;
-      prev = interv[i].x;
-    }
-  }
-  return max(max_gap, L-prev);
-}
-
-long binSearchAnswer() {
-  if (findMaximumGap(N) > X) return -1;
-  long st = 0, en = N; 
-  while (st < en - 1){
-    long mn = (st + en)/2;
-    if (findMaximumGap(mn) <= X) en = mn;
-    else st = mn + 1;
-  }
-  if (findMaximumGap(st) <= X) return st;
-  return en;
-}
-
-int main(){
-  FILE *fi = fopen("roadwork.in", "r");
-  fscanf(fi, "%ld%ld%ld", &N, &L, &X);
-  for (long i = 1; i <= N; i++){
-	long A, B;
-    fscanf(fi, "%ld%ld", &A, &B);
-    interv[2*i-2] = ent(A,  1, i);
-    interv[2*i-1] = ent(B, -1, i);
-  }
-  sort(interv, interv+2*N);
-   
-  FILE *fo = fopen("roadwork.out", "w");
-  fprintf(fo, "%ld\n", binSearchAnswer());
-  fclose(fi);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='roadwork_efficient.cc' %}
 
 **Σημείωση:** Το πρόβλημα μπορεί να λυθεί και με την χρήση δομών δεδομένων όπως τα sets και τα segment trees, χωρίς την χρήση δυαδικής αναζήτησης στην απάντηση.

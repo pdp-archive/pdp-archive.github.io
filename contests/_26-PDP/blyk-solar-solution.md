@@ -15,54 +15,7 @@ codename: solar
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(N^2)$$ και χρειάζεται $$\mathcal{O}(N)$$ μνήμη, που δεν είναι αρκετό για να περάσει όλα τα testcases.
 
-```c++
-#include <cstdio>
-
-const long MAXN = 1000000;
-
-long A[MAXN];
-long N;
-
-/* Ελέγξτε αν τα στοιχεία στο [0, i) είναι μικρότερα από το A[i]. */
-bool arePreviousSmallerThan(long i) {
-  for (long k = 0; k < i; ++k) {
-    if (A[i] <= A[k]) return false;
-  }
-  return true;
-}
-
-/* Ελέγξτε αν τα στοιχεία στο (i, N) είναι μεγαλύτερα από το A[i]. */
-bool areSubsequentLargerThan(long i) {
-  for (long k = i + 1; k < N; ++k) {
-    if (A[i] >= A[k]) return false;
-  }
-  return true;
-}
-
-int main() {
-  FILE *fi = fopen("solar.in", "r");
-  fscanf(fi, "%ld", &N);
-  
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%ld\r\n", &A[i]);
-  }
-  
-  long answer = -1;
-  for (long i = 0; i < N; ++i) {
-    if (answer < A[i] && arePreviousSmallerThan(i) && areSubsequentLargerThan(i)) {
-	  answer = A[i];
-	}
-  }
-  fclose(fi);
-  
-  FILE *fo = fopen("solar.out", "w");
-  if (answer == -1) fprintf(fo, "NOT FOUND\n");
-  else fprintf(fo, "%ld\n", answer);
-  fclose(fo);
-  
-  return 0;
-}
-```
+{% include code.md solution_name='solar_slow.cc' %}
 
 
 ## Βέλτιση Λύση
@@ -75,46 +28,4 @@ int main() {
 
 Η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(Ν)$$ και χρειάζεται $$\mathcal{O}(Ν)$$ μνήμη.
 
-```c++
-#include <algorithm>
-#include <cstdio>
-
-const long MAXN = 1000000;
-const long MAXK = 1000000;
-long A[MAXN], mx[MAXN], mn[MAXN];
-long N;
-
-int main() {
-  FILE *fi = fopen("solar.in", "r");
-  fscanf(fi, "%ld", &N);
-  
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%ld\r\n", &A[i]);
-  }
-  
-  mx[0] = -1;
-  for (long i = 1; i < N; ++i) {
-    mx[i] = std::max(mx[i-1], A[i - 1]);
-  }
-  
-  mn[N-1] = MAXK;
-  for (long i = N - 2; i >= 0; --i) {
-    mn[i] = std::min(mn[i+1], A[i + 1]);
-  }
-  
-  long answer = -1;
-  for (long i = 0; i < N; ++i) {
-    if (answer < A[i] && mx[i] < A[i] && mn[i] > A[i]) {
-      answer = A[i];
-    }
-  }
-  fclose(fi);
-  
-  FILE *fo = fopen("solar.out", "w");
-  if (answer == -1) fprintf(fo, "NOT FOUND\n");
-  else fprintf(fo, "%ld\n", answer);
-  fclose(fo);
-  
-  return 0;
-}
-```
+{% include code.md solution_name='solar_efficient.cc' %}

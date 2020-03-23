@@ -22,48 +22,7 @@ $$5.6, 6.2, \mathbf{6.4, 7.8, 8.2, 8.4, 8.5, 9.1}, 9.2, 9.3$$
 
 **Σημείωση:** Η συνθήκη $$k \leq \frac{N-1}{2}$$ εγγυάται ότι αφού αφαιρέσουμε $$2K$$ στοιχεία, ο πίνακας δεν θα είναι άδειος.
 
-```c++
-#include <algorithm>
-#include <cstdio>
-
-const long MAXN = 100000;
-
-double A[MAXN];
-
-int main() {
-  FILE *fi = fopen("ensemble.in", "r");
-  long N, K;
-  fscanf(fi, "%ld %ld", &N, &K);
-  
-  for (long i = 0; i < N; ++i) {
-    fscanf(fi, "%lf", &A[i]);
-  }
-  
-  std::sort(A, A+N);
-  
-  double sumA = 0.0;
-  double sumB = 0.0;
-  
-  for (long i = 0; i < N; ++i) {
-    if (i < K) {
-      sumB += A[K];
-    } else if (i > N - K -1) {
-      sumB += A[N-K-1];
-    } else {
-      sumA += A[i];
-      sumB += A[i];
-    }
-  }
-  fclose(fi);
-  
-  FILE *fo = fopen("ensemble.out", "w");
-  double averageA = sumA / double(N - 2 * K);
-  double averageB = sumB / double(N);
-  fprintf(fo, "%.2lf %.2lf\n", averageA, averageB);
-  fclose(fo);
-  return 0;
-}
-```
+{% include code.md solution_name='ensemble_efficient.cc' %}
 
 ## Τέλεια ακρίβεια (προαιρετικό)
 Αν χρησιμοποιήσουμε floats αντί για doubles, τότε λόγω περιορισμένης ακρίβειας θα χάσουμε ένα testcase. Αν και στο συγκεκριμένο πρόβλημα είναι αρκετό να χρησιμοποιήσουμε doubles, μπορούμε να αποφύγουμε τελείως την ανακριβή αναπαράσταση. 
@@ -72,63 +31,4 @@ int main() {
 
 Το τρικ είναι να πολλαπλασιάσουμε επί $$1000$$, ώστε τα στοιχεία να είναι ακέραιοι με την ελάχιστη ακρίβεια που χρειαζόμαστε. Αθροίζουμε κανονικά και έπειτα διαιρούμε με το πλήθος των στοιχείων. Στο παράδειγμα θα πάρουμε άθροισμα $$48400$$ και μέσο όρο $$8066$$. Αποκωδικοποιώντας την απάντηση, παίρνουμε $$8.066$$. Βλέπουμε ότι το τελευταίο ψηφίο είναι μεγαλύτερο ή ίσο από $$5$$ και προσθέτουμε $$0.01$$ στο υπόλοιπο, λαμβάνοντας $$8.07$$. Δείτε τον παρακάτω κώδικα για λεπτομέρειες.
 
-```c++
-#include <algorithm>
-#include <cstdio>
-
-const long MAXN = 100000;
-
-long A[MAXN];
-
-void printValue(FILE *fo, long val);
-
-int main() {
-  FILE *fi = fopen("ensemble.in", "r");
-  long N, K;
-  fscanf(fi, "%ld %ld", &N, &K);
-  
-  for (long i = 0; i < N; ++i) {
-    double temp;
-    fscanf(fi, "%lf", &temp);
-    A[i] = temp * 1000;
-  }
-  
-  std::sort(A, A+N);
-  
-  long sumA = 0;
-  long sumB = 0;
-  
-  for (long i = 0; i < N; ++i) {
-    if (i < K) {
-      sumB += A[K];
-    } else if (i > N - K -1) {
-      sumB += A[N-K-1];
-    } else {
-      sumA += A[i];
-      sumB += A[i];
-    }
-  }
-  fclose(fi);
-  
-  FILE *fo = fopen("ensemble.out", "w");
-  long averageA = sumA / (N - 2 * K);
-  long averageB = sumB / N;
-  printValue(fo, averageA);
-  fprintf(fo, " ");
-  printValue(fo, averageB);
-  fprintf(fo, "\n");
-  fclose(fo);
-  return 0;
-}
-
-void printValue(FILE *fo, long val) {
-  long decimal = val / 10;
-  // Προσθέτουμε 0.01
-  if (val % 10 >= 5) {
-    decimal++;
-  }
-  long first_two = decimal / 100;
-  long last_two = decimal % 100;
-  fprintf(fo, "%ld.%02ld", first_two, last_two);
-}
-```
+{% include code.md solution_name='ensemble_perfect_accuracy.cc' %}

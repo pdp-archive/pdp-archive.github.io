@@ -18,9 +18,9 @@ struct ent{
 } interv[2*MAXN];
 
 long L, N, X;
-int findMaxGap(int d){
+long findMaxGap(long d){
   long prev = 1, gap = 0, open_intervals = 0, max_gap = 0;
-  for (int i = 0; i < 2 * N; i++){
+  for (long i = 0; i < 2 * N; i++){
 	// Ελέγχουμε ένα σημείο μόνο αν ανήκει στα πρώτα
 	// d διαστήματα.
     if (d >= interv[i].d){
