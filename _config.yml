@@ -118,6 +118,8 @@ defaults:
       contest_url: "32-PDP"
 
 exclude: [
+  contributing.md,
+  README.md,
   source_code/utils,
   source_code/testdata,
   source_code/generated_execution.sh,
