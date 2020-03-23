@@ -5,10 +5,10 @@ using namespace std;
 const long MAXN = long(1e6);
 const long OFFSET = long(1e5);
 
+bool hidden[MAXN+5];		//true if hotel i is blocked
+long X[2*OFFSET+2],Y[2*OFFSET+5];//what is the frontmost id of the hotel in this axis
+pair<long,long> hotel[MAXN+5];
 long N, ans;
-bool hidden[MAXN+1];		//true if hotel i is blocked
-long X[2*OFFSET+2],Y[2*OFFSET+2];//what is the frontmost id of the hotel in this axis
-pair<long,long> hotel[MAXN+1];
 #define	xx	first
 #define	yy	second
 
