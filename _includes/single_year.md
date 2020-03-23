@@ -1,6 +1,6 @@
 {% assign contest_url = include.contest_url | replace: "/", "" | replace: "index", "" %}
 {% assign contest = site.data.contests[contest_url] %}
-{% assign git_code_location = "https://github.com/pdp-archive/pdp-archive.github.io/tree/master/source_code/code/" | append: contest_url | append: "/" %}
+{% assign git_code_location = "https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/" | append: contest_url | append: "/" %}
 
 {% capture md %}
 
