@@ -1,5 +1,5 @@
 {% comment %}{% raw %}<!--
-Add lines of code corresponding to a solution.
+Add lines of solution code.
 
 Usage:
   {% include code solution_name='my_solution.cc' (start=INT end=INT) %}
@@ -35,11 +35,13 @@ Implementation inspired from https://hblok.net/blog/posts/2016/10/23/jekyll-incl
 
 {% comment %}Πρέπει να ξανα-αφαιρέσουμε τις νέες γραμμμές γιατί η newline_to_br, δεν αφαιρεί τις \\r\\n{% endcomment %}
 {% assign lines = filecontent | newline_to_br | split: '<br />' %}
-{% assign lim = include.end |minus: include.start %}
+{% assign lim = include.end | minus: include.start %}
+{% assign start = include.start | minus: 1 %}
+{% assign end = include.end | minus: 1 %}
 {% comment %}Η τελευταία γραμμή πρέπει να είναι εκτός for για να αποφύγουμε την έξτρα γραμμή στο τέλος.{% endcomment %}
 ```c++
-{% for line in lines limit:{{lim}} offset:{{include.start}} %}{{ line | strip_newlines }}
-{% endfor %}{{ lines[include.end] | strip_newlines }}
+{% for line in lines limit:{{lim}} offset:{{start}} %}{{ line | strip_newlines }}
+{% endfor %}{{ lines[end] | strip_newlines }}
 ```
 
 {% else %}
