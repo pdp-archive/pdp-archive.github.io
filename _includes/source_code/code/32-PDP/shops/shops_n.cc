@@ -19,4 +19,3 @@ int main() {
   printf("%ld\n", ans);
   return 0;
 }
-
