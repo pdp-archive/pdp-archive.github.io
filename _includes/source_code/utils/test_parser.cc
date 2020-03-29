@@ -669,6 +669,7 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
          if (solution->name == solution_name) {
             found_solution = true;
             builder.addPrintStatement("SOLUTION: " + solution_name);
+            builder.addCommandToFetchTestdataIfNotThere(task->contest, task_name);
             builder.addSolution(task, solution);
          }
        }
