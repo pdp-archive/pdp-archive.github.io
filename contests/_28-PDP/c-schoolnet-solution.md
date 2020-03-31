@@ -34,7 +34,7 @@ codename: schoolnet
 <img src="/assets/28-pdp-c-schoolnet-rooted-tree-3.svg" width="100" height="400">
 </center>
 
-## Αναδρομή!!!
+## Λύση με αναδρομή - $$\mathcal{O}(N)$$
 Τι το καλό έχουν τα δέντρα (δηλαδή η έλλειψη κύκλων); Ότι κάνουν την αναδρομή πολύ εύκολη.
 
 Ας πούμε λοιπόν ότι $$VC_{with}(v)$$ είναι μία συνάρτηση που μας δίνει το ζητούμενο vertex cover, για το υπόδεντρο που ξεκινάει από τον κόμβο $$v$$ και εκτείνεται προς τα κάτω. Επιβάλλουμε επιπλέον την έξτρα προϋπόθεση ότι οπωσδήποτε θα διαλέξουμε τον κόμβο $$v$$ στο vertex cover. Aντίστοιχα, ορίζουμε το $$VC_{without}(v)$$ όπου οπωσδήποτε *δε* θα διαλέξουμε τον κόμβο $$v$$ στο vertex cover. Προφανώς το ζητούμενο δίνεται από το
@@ -59,59 +59,10 @@ VC_with(v):
   for (x in children(v))
     ans += min(VC_with(x),VC_without(x));
   return ans;
-}
 ```
+
+Τι πολυπλοκότητα έχει αυτός ο αλγόριθμος; Στην ουσία θα τρέξει και τις δύο συναρτήσεις, από μία φορά για κάθε κόμβο. Η κάθε συνάρτηση παίρνει χρόνο όσο το πλήθος των παιδιών κάθε κόμβου, δηλαδή περίπου όσο οι ακμές κάθε κόμβου. Καταλήγουμε ότι ο συνολικός χρόνος είναι όσο το πλήθος των ακμών όλου του δέντρου. Θυμόμαστε ότι ένα δέντρο έχει $$N-1$$ ακμές, και συνεπώς ο συνολικός χρόνος είναι $$\mathcal{O}(N)$$.
 
 Aναλυτικά, ο κώδικας για το πρόβλημα δίνεται παρακάτω:
-```c++
-#include <bits/stdc++.h>
-using namespace std;
-#define MAXN 1000001
 
-long weight[MAXN], vc_with[MAXN], vc_without[MAXN];
-vector<vector<long> > con(MAXN);
-
-long VC_with(long i, long par);
-
-long VC_without(long i, long par) {
-  if (vc_without[i] == -1 ) {
-    vc_without[i]=0;
-    for (long j=0;j<con[i].size();++j) {
-      long x = con[i][j];
-      if (x == par) continue;
-      vc_without[i] += VC_with(x,i);
-    }
-  }
-  return vc_without[i];
-}
-
-long VC_with (long i, long par) {
-  if (vc_with[i] == -1) {
-    vc_with[i] = weight[i];
-    for (long j=0;j<con[i].size();++j) {
-      long x = con[i][j];
-      if (x == par) continue;
-      vc_with[i] += min(VC_with(x,i),VC_without(x,i));
-    }
-  }
-  return vc_with[i];
-}
-
-int main () {
-  freopen("schoolnet.in","r",stdin);
-  freopen("schoolnet.out","w",stdout);
-  long N;
-  scanf("%ld",&N);
-  for (long i=1;i<=N;++i) scanf("%ld",&weight[i]);
-  for (long i=1;i<N;++i) {
-    long x,y;
-    scanf("%ld %ld",&x,&y);
-    con[x].push_back(y);
-    con[y].push_back(x);
-  }
-  memset(vc_with,-1,sizeof(vc_with));
-  memset(vc_without,-1,sizeof(vc_without));  
-  printf("%ld\n",min(VC_with(1,-1), VC_without(1,-1)));
-  return 0;
-}
-```
+{% include code.md solution_name='schoolnet.cc' %}

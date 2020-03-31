@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define MAXN 1000001
+const long MAXN = 1000000;
 
-long weight[MAXN], vc_with[MAXN], vc_without[MAXN];
+long weight[MAXN+5], vc_with[MAXN+5], vc_without[MAXN+5];
 vector<vector<long> > con(MAXN);
 
 long VC_with(long i, long par);
