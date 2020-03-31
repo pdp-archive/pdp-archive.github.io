@@ -55,8 +55,8 @@ shortpowtwo:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1ksHypJ_H2n3MVfl5uf5zNKFxBI2T025r"
    statement_md: true
-   testcases_url: ""
-   solution: false
-   solution_author: ""
-   codes_in_git: false
+   testcases_url: "https://drive.google.com/open?id=10ZjEQ_Q3trx5na2aSlPKDeSXx_mtNa1s"
+   solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
+   codes_in_git: true
    points: 35
