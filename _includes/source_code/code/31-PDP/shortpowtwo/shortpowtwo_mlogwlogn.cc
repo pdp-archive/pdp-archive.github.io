@@ -9,7 +9,7 @@ const long MOD = 1e9+7;
 
 typedef long long ll;
 
-long N, M, pow2[MAXW+30], parent[MAXN+5], nextFreePosition;
+long N, M, pow2[MAXW+20], parent[MAXN+5], nextFreePosition;
 vector<long> e[MAXN+5], w[MAXN+5];
 
 struct SegTreeNode {
@@ -39,7 +39,7 @@ void LazyPropagate(long v, long x, long y) {
     nodes[l] = nodes[ nodes[v].left ];
     nodes[l].lazy ^= 1;
     nodes[l].hash = (pow2[ mid-x+1 ] - 1 - nodes[l].hash) % MOD;
-    if (nodes[l].hash < 0) nodes[l].hash += MOD;
+    if (nodes[l].hash < 0) nodes[l].hash += MOD; //That's how to do (a-b)%MOD
     nodes[v].left = l;
     
     r = ++nextFreePosition;
@@ -71,22 +71,21 @@ struct BigNum {
   bool operator < (const BigNum &A) const {
     if (isInf) return false;
     if (A.isInf) return true;
-    return Smaller(root, A.root, 0, MAXW+30-1);
+    return Smaller(root, A.root, 0, MAXW+20-1);
   }
 } dist[MAXN+5];
 
 long Flip(long v, long x, long y, long qx, long qy) {
   LazyPropagate(v,x,y);
   long ret = ++nextFreePosition;
+  long mid=(x+y)/2;  
   nodes[ret] = nodes[v];
   if (x==qx && y==qy) {
     nodes[ret].lazy = 1;
     nodes[ret].hash = (pow2[y-x+1] - 1 - nodes[ret].hash) % MOD;
     if (nodes[ret].hash < 0) nodes[ret].hash += MOD;
     return ret;
-  }
-  long mid=(x+y)/2;
-  if(qy<=mid) {
+  } else if(qy<=mid) {
     nodes[ret].left = Flip(nodes[v].Left(), x, mid, qx, qy);
   } else if (qx>mid) {
     nodes[ret].right = Flip(nodes[v].Right(), mid+1, y, qx, qy);
@@ -94,7 +93,8 @@ long Flip(long v, long x, long y, long qx, long qy) {
     nodes[ret].left = Flip(nodes[v].Left(), x, mid, qx, mid);
     nodes[ret].right = Flip(nodes[v].Right(), mid+1, y, mid+1, qy);
   }
-  nodes[ret].hash = ((ll)nodes[ nodes[ret].Left() ].hash + (ll)pow2[mid-x+1] * nodes[ nodes[ret].Right() ].hash) % MOD;
+  ll convertSecondHash = ((ll)pow2[mid-x+1] * nodes[ nodes[ret].Right() ].hash) % MOD;
+  nodes[ret].hash = (ll)nodes[ nodes[ret].Left() ].hash + convertSecondHash;
   return ret;
 }
 
@@ -102,23 +102,23 @@ long Next0(long v, long x, long y, long qx, long qy) {
   LazyPropagate(v,x,y);
   long mid = (x+y)/2;
   if (x==qx && y==qy) {
-    if (nodes[v].hash == (pow2[y-x+1]-1)) return MAXW+30-1;
+    if (nodes[v].hash == (pow2[y-x+1]-1)) return MAXW+20-1; //If there are only 1s, return INF
     if (x==y) return x;
-    if (nodes[ nodes[v].Left() ].hash == (pow2[mid-x+1]-1)) return Next0(nodes[v].Right(),mid+1,y,mid+1,qy);
+    if (nodes[ nodes[v].Left() ].hash == (pow2[mid-x+1]-1)) //If left has only 1s, go right
+      return Next0(nodes[v].Right(),mid+1,y,mid+1,qy);
     return Next0(nodes[v].Left(),x,mid,x,mid);
-  }
-
-  if (qy <= mid ) return Next0( nodes[v].Left(), x, mid, qx, qy);
+  } else if (qy <= mid ) return Next0( nodes[v].Left(), x, mid, qx, qy);
   else if (qx > mid) return Next0( nodes[v].Right(), mid+1, y, qx, qy);
+
   long left = Next0(nodes[v].Left(), x, mid, qx, mid);
-  if (left < MAXW+30-1) return left;
+  if (left < MAXW+20-1) return left; //Return it if we found a zero in the left child
   return Next0(nodes[v].Right(), mid+1, y, mid+1, qy);
 }
 
 BigNum Add(BigNum x, long exp) {
-  long next0 = Next0(x.root, 0, MAXW+30-1, exp, MAXW+30-1);
+  long next0 = Next0(x.root, 0, MAXW+20-1, exp, MAXW+20-1);
   BigNum y;
-  y.root = Flip(x.root, 0, MAXW+30-1, exp, next0);
+  y.root = Flip(x.root, 0, MAXW+20-1, exp, next0);
   return y;
 }
 
@@ -176,7 +176,7 @@ int main() {
   scanf("%ld %ld", &S, &T);
 
   pow2[0] = 1;
-  for(long i=1; i<MAXW+30; ++i)
+  for(long i=1; i<MAXW+20; ++i)
     pow2[i] = (2*pow2[i-1]) % MOD;
 
   Dijkstra(S,T);

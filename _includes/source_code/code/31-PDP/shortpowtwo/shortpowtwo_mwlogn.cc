@@ -8,11 +8,11 @@ const long MOD = 1e9+7;
 
 struct BigNum {
   bool isInf;
-  bool digit[MAXW+30];
+  bool digit[MAXW+20];
   bool operator < (const BigNum &A) const { //compares current struct with A
     if (isInf) return false; //if the current number is Infinite, then it is not smaller
     if (A.isInf) return true;
-    for(long i=MAXW+30-1; i>=0; --i) {
+    for(long i=MAXW+20-1; i>=0; --i) {
       if (digit[i] < A.digit[i]) return true;
       else if (digit[i] > A.digit[i]) return false;
     }
@@ -24,7 +24,7 @@ struct BigNum {
 //Notice that since 2^exp is a power of 2, it is zero everywhere, except for the exp-th digit
 //This makes the addition extremely simple
 BigNum Add(BigNum x, long exp) {
-  for(long i=exp; i<MAXW+30; ++i) {
+  for(long i=exp; i<MAXW+20; ++i) {
     x.digit[i] ^= 1; //flip this digit
     if (x.digit[i] == 1) break;
   }
