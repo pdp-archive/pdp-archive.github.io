@@ -3,10 +3,10 @@ layout: solution
 codename: sumpair
 ---
 
-## Brute force λύση $$\mathcal{O}(Ν^2Q)$$
+## Brute force λύση $$\mathcal{O}(N^2Q)$$
 Η πιο απλή λύση είναι για κάθε ερώτημα, να διατρέξουμε όλα τα δυνατά ζεύγη στοιχείων του πίνακα και να δούμε αν έχουν το ζητούμενο άθροισμα.
 
-Κάθε ερώτημα παίρνει $$\mathcal{O}(N^2)$$, άρα η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(Ν^2Q)$$ και η μνήμη είναι $$\mathcal{O}(N)$$.
+Κάθε ερώτημα παίρνει $$\mathcal{O}(N^2)$$, άρα η πολυπλοκότητα του αλγορίθμου είναι $$\mathcal{O}(N^2Q)$$ και η μνήμη είναι $$\mathcal{O}(N)$$.
 
 {% include code.md solution_name='sumpair_brute_force.cc' %}
 
