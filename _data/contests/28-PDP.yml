@@ -7,6 +7,7 @@ aris:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    statement_md: true
+   solution_tags: ["line sweep", "counting sort"]
    
 kite:
    full_name: "Ο χαρταετός"
@@ -17,6 +18,7 @@ kite:
    solution_author: "Γιώργος Βενιζέλος"   
    codes_in_git: true
    statement_md: true
+   solution_tags: ["cumulative sums", "binary search", "two pointers"]
 
 scrabble1d:
    full_name: "Μονοδιάστατο scrabble"
@@ -27,6 +29,7 @@ scrabble1d:
    solution_author: "Γιώργος Βενιζέλος"      
    codes_in_git: true
    statement_md: true
+   solution_tags: ["ad hoc", "cumulative sums", "greedy"]
 
 skitrip:
    full_name: "Εκδρομή για σκι"
@@ -38,6 +41,7 @@ skitrip:
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
    points: 30
+   solution_tags: ["sorting", "greedy", "monotonous queue", "line sweep"]
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
@@ -49,6 +53,7 @@ schoolnet:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
+   solution_tags: ["vertex cover", "trees", "DFS", "dp"]
    
 starwars:
    full_name: "Star Wars"
@@ -60,3 +65,4 @@ starwars:
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
    points: 40
+   solution_tags: ["cumulative sums", "inclusion-exclusion", "range sum queries", "segment trees", "sqrt decomposition", "lazy propagation"]
