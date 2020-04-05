@@ -8,6 +8,7 @@ profit:
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1s4W2WGhm8ecXFL39VeeyIcTRjQHvX1o4"
+   solution_tags: ["greedy", "line sweep"]
 
 snow_run:
    full_name: "Χιονοδρομίες στα «Τρία-Πέντε Πηγάδια»"
@@ -19,6 +20,7 @@ snow_run:
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=14fm1Wdjf21LJzbqg-LU-ZCm65WJD7vZ5"
+   solution_tags: ["segment tree", "brute force"]
 
 company:
    full_name: "Εταιρική ιεραρχία"
@@ -30,6 +32,7 @@ company:
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
+   solution_tags: ["trees", "dp", "bfs", "dfs"]
 
 prevdiv: 
    full_name: "Prevdiv"

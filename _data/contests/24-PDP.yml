@@ -8,6 +8,7 @@ function:
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
+   solution_tags: ["primes", "prime factorisation", "sieve of Eratosthenes", "divisibility"]
 
 operators:
    full_name: "Τελεστικοί ενισχυτές"
@@ -19,6 +20,7 @@ operators:
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1dUfjJWNlPKE8MUiQnc82TYQAp6NhysWE"
+   solution_tags: ["binary search", "two pointers"]
 
 pulsars:
    full_name: "Ραδιοαστέρες"
@@ -40,6 +42,7 @@ loutraki:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    points: 30
+   solution_tags: ["line sweep", "sorting", "counting sort"]
 
 minpali: 
    full_name: "Παλίνδρομο"
@@ -51,6 +54,7 @@ minpali:
    codes_in_git: false
    codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    points: 30
+   solution_tags: ["z-algorithm", "kmp", "manacher", "rolling hash", "strings"]
 
 souvlakia: 
    full_name: "Σουβλάκια"

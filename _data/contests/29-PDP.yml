@@ -7,6 +7,7 @@ sch:
    solution: true
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
+   solution_tags: ["sorting", "counting sort", "map", "set"]   
    
 colors:
    full_name: "Πολύχρωμη κορδέλα"
@@ -17,6 +18,7 @@ colors:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["set", "counting sort", "binary search", "sliding window", "two pointers"]      
 
 uflights:
    full_name: "Κάρτες απεριόριστων πτήσεων"
@@ -27,6 +29,7 @@ uflights:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["graphs", "minimum spanning tree", "kruskal", "prim", "counting sort"]
 
 dnaseq:
    full_name: "Ακολουθίες DNA"
@@ -38,6 +41,7 @@ dnaseq:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 30
+   solution_tags: ["rolling hash", "strings"]   
    
 villages:
    full_name: "Οδικό δίκτυο"
@@ -49,6 +53,7 @@ villages:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
+   solution_tags: ["graphs", "dfs"]
    
 maketime:
    full_name: "Πάω διακοπές"
@@ -60,3 +65,4 @@ maketime:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
+   solution_tags: ["cumulative sums", "binary search", "sorting", "two pointers"]
