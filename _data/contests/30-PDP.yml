@@ -7,6 +7,7 @@ astrolavos:
    solution: true
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
+   solution_tags: ["ad hoc"]      
 
 kalanta:
    full_name: "Τα κάλαντα"
@@ -17,6 +18,7 @@ kalanta:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["cumulative sums", "binary search", "two pointers"]         
    
 agora:
    full_name: "Η αγορά"
@@ -27,6 +29,7 @@ agora:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["greatest common divisor", "least common multiple", "cumulative sums"]         
 
 rafting:
    full_name: "Rafting"
@@ -38,6 +41,7 @@ rafting:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 30
+   solution_tags: ["segment tree", "binary indexed tree"]         
 
 listgame:
    full_name: "Παιχνίδι με λίστα"
@@ -49,6 +53,7 @@ listgame:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
+   solution_tags: ["dp"]
 
 brickbreaker:
    full_name: "Ο Χρήστος και τα τούβλα"
@@ -60,3 +65,4 @@ brickbreaker:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
+   solution_tags: ["graphs", "lattices", "union-find"]         

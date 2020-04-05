@@ -7,6 +7,7 @@ hydrocarbons:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
+   solution_tags: ["precision", "sorting"]            
 
 mntsea:
    full_name: "Βουνό ή θάλασσα"
@@ -17,6 +18,7 @@ mntsea:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
+   solution_tags: ["strings", "cumulative sums", "map"]               
 
 cntbal:
    full_name: "Ισορροπημένες παρενθέσεις"
@@ -27,6 +29,7 @@ cntbal:
    solution: true
    solution_author: "Γιώργος Γιαπιτζάκης"   
    codes_in_git: true
+   solution_tags: ["strings", "stack"]   
 
 symstr:
    full_name: "Συμμετρικές συμβολοσειρές"
@@ -38,6 +41,7 @@ symstr:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
+   solution_tags: ["strings"]
 
 lottery:
    full_name: "Τι πληρώνει το λαχείο"
@@ -49,6 +53,7 @@ lottery:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 35
+   solution_tags: ["strings", "bitwise operations", "binary search", "trie"]
 
 shortpowtwo:
    full_name: "Ελάχιστη απόσταση"

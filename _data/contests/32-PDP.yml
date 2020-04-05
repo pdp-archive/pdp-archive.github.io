@@ -7,6 +7,7 @@ erasmus:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
+   solution_tags: ["sorting"]   
 
 longsumk:
    full_name: "Πάμε πάλι διακοπές"
@@ -17,6 +18,7 @@ longsumk:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
+   solution_tags: ["cumulative sums", "map", "hash table", "two pointers"]
 
 shops:
    full_name: "Τα δύο καταστήματα"
@@ -27,3 +29,4 @@ shops:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
+   solution_tags: ["cumulative sums"]

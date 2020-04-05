@@ -42,7 +42,7 @@ loutraki:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    points: 30
-   solution_tags: ["line sweep", "sort", "counting sort"]
+   solution_tags: ["line sweep", "sorting", "counting sort"]
 
 minpali: 
    full_name: "Παλίνδρομο"
