@@ -7,6 +7,7 @@ domes:
    solution: true
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
+   solution_tags: ["graphs", "counting sort"]
    
 ensemble:
    full_name: "Ρυθμική γυμναστική"
@@ -17,6 +18,7 @@ ensemble:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["precision", "sorting"]
 
 solar:
    full_name: "Ηλιακός άνεμος"
@@ -27,6 +29,7 @@ solar:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["line sweep"]
 
 sumpair:
    full_name: "Άθροισμα ζευγών"
@@ -38,6 +41,7 @@ sumpair:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 30
+   solution_tags: ["set", "hash table", "two pointers", "sorting"]
    
 roadwork:
    full_name: "Επισκευή δρόμου"
@@ -49,7 +53,8 @@ roadwork:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
-   
+   solution_tags: ["intervals", "sorting", "counting sort", "binary search"]
+
 numbase:
    full_name: "Μετατροπή αριθμού"
    stage: "c"
@@ -60,3 +65,4 @@ numbase:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 35
+   solution_tags: ["number theory", "modulo", "binary search", "number bases", "divisibility", "factorisation"]

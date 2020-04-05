@@ -7,6 +7,7 @@ seti:
    solution: true
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
+   solution_tags: ["brute force"]
 
 karla:
    full_name: "Ανασύσταση της Βοιβηίδος λίμνης"
@@ -17,6 +18,7 @@ karla:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["bfs", "dfs", "flood fill"]
 
 scidinner:
    full_name: "Οι μυστικοί αριθμοί"
@@ -27,6 +29,7 @@ scidinner:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
+   solution_tags: ["trees", "divisibility", "bfs"]
    
 triangle: 
    full_name: "Τρίγωνο"
@@ -38,6 +41,7 @@ triangle:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 30
+   solution_tags: ["dp", "memoisation"]
 
 sound:
    full_name: "Ήχοι και σιωπές"
@@ -49,6 +53,7 @@ sound:
    solution_author: "Δημήτρης Λως"
    codes_in_git: true
    points: 30
+   solution_tags: ["line sweep", "monotonous queue"]
 
 telecom:
    full_name: "Τηλεπικοινωνιακά κόστη"
@@ -60,3 +65,4 @@ telecom:
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
    points: 40
+   solution_tags: ["minimum spanning tree", "union-find", "trees"]

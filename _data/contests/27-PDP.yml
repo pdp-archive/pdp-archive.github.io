@@ -7,6 +7,7 @@
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
+   solution_tags: ["greedy", "cumulative sums"]
 
 twosqr:
    full_name: "Άθροισμα τετραγώνων"
@@ -17,6 +18,7 @@ twosqr:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"   
    codes_in_git: true
+   solution_tags: ["binary search", "greedy"]
 
 share:
    full_name: "Η μοιρασιά"
@@ -27,6 +29,7 @@ share:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"   
    codes_in_git: true
+   solution_tags: ["greedy", "cumulative sums", "binary search", "two pointers"]
 
 aces:
    full_name: "Παρέες αριθμών"
