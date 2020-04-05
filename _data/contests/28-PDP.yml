@@ -53,7 +53,7 @@ schoolnet:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
-   solution_tags: ["vertex cover", "trees", "DFS", "dp"]
+   solution_tags: ["vertex cover", "trees", "dfs", "dp"]
    
 starwars:
    full_name: "Star Wars"
