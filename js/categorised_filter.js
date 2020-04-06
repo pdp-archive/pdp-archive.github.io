@@ -12,7 +12,7 @@ function filterCategorisedEntries() {
       txt = td.textContent || td.innerText;
       normalisedTxt = txt.toLowerCase();
       tagsLocation = normalisedTxt.indexOf("tags:");
-      if (normalisedTxt.indexOf(filter) > tagsLocation || filter == "") {
+      if (normalisedTxt.lastIndexOf(filter) > tagsLocation || filter == "") {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
