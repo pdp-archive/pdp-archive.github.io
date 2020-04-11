@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <algorithm>
 #include <climits>
+#include <cstdint>
 #include <cassert>
 #include <vector>
 #include <list>
@@ -14,18 +15,19 @@
 
 using namespace std;
 
-const long 
-	MAXN = long(1e5),//max shops
-	MAXQ = long(5e4),//max queries
-	INF  = LONG_MAX; //INF for dijkstra
-long	N,M,Q,C[3];
+const int32_t 
+	MAXN = int32_t(1e5), //max shops
+	MAXQ = int32_t(5e4), //max queries
+	INF  = INT32_MAX; //INF for dijkstra
+
+int32_t	N,M,Q,C[3];
 
 struct shop {
 #define	X	d[0]
 #define Y 	d[1]
 #define Z	d[2]
-	long d[3];//The 3 distances (X,Y,Z) from {A,B,C}
-	list<long> queryid;//query ids that has to answer shop[i]
+	int32_t d[3];//The 3 distances (X,Y,Z) from {A,B,C}
+	list<int32_t> queryid;//query ids that has to answer shop[i]
 			//use list in case there are more than one queries per shop
 	shop(){ X=Y=Z=INF; }//help dijsktra initial values
 	bool operator <(const shop& b) const { 
@@ -33,10 +35,10 @@ struct shop {
 	}
 } S[MAXN+1];
 
-void dijsktra(long src,long dupd,vector<vector<pair<long,long>>>& edge){
+void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
 	//src is one of {A,B,C}
 	//dupd in [0,3). Update Shop[*].d[dupd] distance from src
-	set<pair<long,long>> DS;//<distance,shopid>
+	set<pair<int32_t,int32_t>> DS;//<distance,shopid>
 	
 	DS.insert({0,src});
 	S[src].d[dupd] = 0;
@@ -44,9 +46,9 @@ void dijsktra(long src,long dupd,vector<vector<pair<long,long>>>& edge){
 	while(!DS.empty()){//explore
 		auto x = *(DS.begin());
 		DS.erase(DS.begin());
-		long daddy = x.second;
+		int32_t daddy = x.second;
 		for(auto y : edge[daddy]){//expand
-			long child = y.first, dist = y.second;
+			int32_t child = y.first, dist = y.second;
 			if(S[daddy].d[dupd]!=INF && S[child].d[dupd] > S[daddy].d[dupd] + dist){
 				if(S[child].d[dupd]!=INF)
 					DS.erase(DS.find({S[child].d[dupd],child}));
@@ -57,8 +59,8 @@ void dijsktra(long src,long dupd,vector<vector<pair<long,long>>>& edge){
 	}
 }
 
-inline int read_fast(){//fast IO is required for this problem due to huge io
-	int x = 0;
+inline int32_t read_fast(){//fast IO is required for this problem due to huge io
+	int32_t x = 0;
 	char c;
 	while((c=getchar_unlocked())<'0');//skip blanks, CR, LF
 	do
@@ -74,32 +76,32 @@ inline void write_fast(bool f){
 }
 
 //RMQ with segment tree code starts here
-long YMAX = 1;	//max value of Y
-long *Zrmq;//segment tree (RangeMinQuery)for Z
+int32_t YMAX = 1;	//max value of Y
+int32_t *Zrmq;//segment tree (RangeMinQuery)for Z
 void sinit(){//allocate mem for segment tree and initialize it to (almost) infinity
-	for(long i=1;i<=N;++i)
+	for(int32_t i=1;i<=N;++i)
 		YMAX = max(YMAX, S[i].Y);
 	size_t Zrmqsize = 1 << size_t(ceil(log2(YMAX+1))+1);
-	Zrmq = new long[Zrmqsize];
+	Zrmq = new int32_t[Zrmqsize];
 	memset(Zrmq,0x7f,sizeof(*Zrmq) * Zrmqsize);
 }
 
-long squery(long yright,long si=0,long ss=0,long se=-1){
+int32_t squery(int32_t yright,int32_t si=0,int32_t ss=0,int32_t se=-1){
 	//query z min value for y in [0,yright]
 	if(se==-1) 
 		se = YMAX;
 	if(yright<ss || yright<0)
 		return INF;//not involved
-	if(se<=d1right) 
-		return Yrmq[si];//completely included
-	long mid = (ss+se)/2;
+	if(se<=yright) 
+		return Zrmq[si];//completely included
+	int32_t mid = (ss+se)/2;
 	return min(
 		squery(yright, si*2+1,ss,mid),
 		squery(yright, si*2+2,mid+1,se)
 	);
 }
 
-void supdate(long x,long y,long si=0,long ss=0,long se=-1){
+void supdate(int32_t y,int32_t z,int32_t si=0,int32_t ss=0,int32_t se=-1){
 	if(se==-1) 
 		se = YMAX;
 	if(y<ss || se<y)
@@ -107,7 +109,7 @@ void supdate(long x,long y,long si=0,long ss=0,long se=-1){
 	if(ss==se){
 		Zrmq[si] = min(Zrmq[si],z);
 	}else {
-		long mid = (ss+se)/2;
+		int32_t mid = (ss+se)/2;
 		if(y<=mid) 
 			supdate(y,z,si*2+1,ss,mid);
 		else
@@ -125,8 +127,8 @@ int main(){
 	N = read_fast(), M = read_fast();
 	
 	{//hint: edge vector below is temporary
-		vector<vector<pair<long,long>>> edge(N+1);//<edge_to, distance>
-		for(long a,b,d,i=0;i<M;++i){
+		vector<vector<pair<int32_t,int32_t>>> edge(N+1);//<edge_to, distance>
+		for(int32_t a,b,d,i=0;i<M;++i){
 			a = read_fast(), b = read_fast(), d = read_fast();
 			edge[a].push_back({b,d});
 			edge[b].push_back({a,d});
@@ -135,12 +137,12 @@ int main(){
 			C[i] = read_fast();
 		Q = read_fast();
 
-		for(long i=0;i<3;++i)
+		for(int i=0;i<3;++i)
 			dijsktra(C[i],i,edge);
 	}//memory of edge vector is released
 
 	//read queries and store reference so we can answer offline
-	for(long i=0;i<Q;++i)
+	for(int32_t i=0;i<Q;++i)
 		S[read_fast()].queryid.push_back(i);//shop[q] has to answer i-th query
 
 	sort(S+1,S+N+1);
@@ -148,7 +150,7 @@ int main(){
 	vector<bool> ans(MAXQ+1,false);		//offline answers
 
 	sinit();//construct segment tree
-	for(long right = 1, left = 1; left <=N;){
+	for(int32_t right = 1, left = 1; left <=N;){
 		while(right<=N && S[right].X == S[left].X){
 			//for all shops with equal X postpone segment tree updates
 			const shop& s = S[right];
@@ -164,7 +166,7 @@ int main(){
 		}
 	}
 	
-	for(long i=0;i<Q;++i)
+	for(int32_t i=0;i<Q;++i)
 		write_fast(ans[i]);
 	
 	return 0;

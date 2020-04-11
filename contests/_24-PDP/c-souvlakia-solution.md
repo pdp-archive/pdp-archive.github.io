@@ -26,12 +26,14 @@ $$(X_i,Y_i,Z_i)$$ ως τις αποστάσεις των διαδρομών α�
   	
 ## Αργή λύση $$\mathcal{O}(N^2)$$
 
-Δοκιμάζουμε για κάθε κατάστημα $$i$$ από τα $$N$$ καταστήματα αν υπάρχει κάποιο άλλο $$j$$ που να έχει $$x_j\lt x_i$$ και $$y_j\lt y_i$$ και $$z_j\lt z_i$$.
-Συνολική πολυπλοκότητα $$\mathcal{O}(N^2)$$. Η λύση αυτή περνά τα 5 από τα 11 test cases.
+Δοκιμάζουμε για κάθε κατάστημα $$i$$ από τα $$N$$ αν υπάρχει κάποιο άλλο $$j$$ που να έχει $$x_j\lt x_i$$ και $$y_j\lt y_i$$ και $$z_j\lt z_i$$.
+Συνολική πολυπλοκότητα $$\mathcal{O}(N^2)$$. Η λύση αυτή περνά τα 5 από τα 11 test cases. Πολυπλοκότητα Dijkstra $$\mathcal{O}((N+M)\cdot log(N))$$ 
+και απαντήσεων ερωτημάτων $$\mathcal{O}(N^2)$$. 
+Η πολυπλοκότητα πολυπλοκότητα ορίζεται από τον χειρότερο όρο άρα είναι της τάξης $$\mathcal{O}(N^2)$$.
 <details>
   <summary>Ακόμα πιο αργή λύση</summary>
 Προσέξτε ότι δεν είναι η $$\mathcal{O}(N^2)$$ η χειρότερη λύση, διότι αν δεν είχαμε επιλέξει μια λογαριθμική λύση για το Dijkstra αλλά την τυπική $$\mathcal{O}((N+M)\cdot N)$$ όπου το μέγιστο 
-$$M$$ είναι πολλαπλάσιο του $$N$$ η λύση μας θα ήταν χειρότερη.
+$$M$$ είναι πολλαπλάσιο του $$N$$ η λύση μας θα ήταν ακόμα χειρότερη.
 </details> 
 Παρακάτω δίνεται μία ενδεικτική υλοποίηση αυτής της λύσης.
 
@@ -71,11 +73,11 @@ $$i$$ δεν είναι επιλέξιμο. Η δομή αυτή που ζητά
 
 Μία ενδεικτική λύση με Segment Tree:
 
-{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=1 end=74 %}
+{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=1 end=76 %}
   
-{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=76 end=118 %}
+{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=78 end=119 %}
   
-{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=120 end=171 %}
+{% include code.md solution_name='souvlakia_nlogn_segtree.cc' start=122 end=173 %}
 
 Ο παραπάνω πλήρης κώδικας χωρίστηκε σε τρία τμήματα, το πρώτο περιέχει σταθερές, το τμήμα του Dijkstra και μερικές βοηθητικές i/o συναρτήσεις,
  το τρίτο είναι η main με την κύρια λειτουργία του προγράμματος (i/o, sort, solve, answer) και το μεσαίο τμήμα περιέχει 
@@ -87,7 +89,7 @@ $$i$$ δεν είναι επιλέξιμο. Η δομή αυτή που ζητά
 Παρατηρήστε ότι ενώ το Binary Index Tree χρησιμοποιείται γενικά για Range Sum Queries 
 με μια μικρή τροποποίηση δίνει το RMQ.
 
-{% include code.md solution_name='souvlakia_nlogn_BIT.cc' start=79 end=101 %}
+{% include code.md solution_name='souvlakia_nlogn_BIT.cc' start=80 end=102 %}
 
 ## Βέλτιστη λύση - $$\mathcal{O}(N \cdot log(D\cdot N))$$
 
@@ -114,12 +116,12 @@ $$i$$ δεν είναι επιλέξιμο. Η δομή αυτή που ζητά
 (το implicit segment tree δεσμεύεται όλο μαζί σαν πίνακας εξ αρχής) με μία απαισιόδοξη προσέγγιση στον αριθμό κόμβων που θα 
 χρειαστούμε ώστε να χωρά την χειρότερη δυνατή περίπτωση. 
 
-{% include code.md solution_name='souvlakia_nlogn_implicit_st.cc' start=81 end=134 %}
+{% include code.md solution_name='souvlakia_nlogn_implicit_st.cc' start=82 end=135 %}
 
 και μια ενδεικτική τροποποίηση της παραπάνω λύσης με dynamic memory allocation (οι κόμβοι γίνονται allocate δυναμικά όταν και 
 αν χρειαστούν και χρησιμοποιούνται pointers για τη διαχείριση του tree):
 
-{% include code.md solution_name='souvlakia_nlogn_implicit_st_cptr.cc' start=77 end=123 %}
+{% include code.md solution_name='souvlakia_nlogn_implicit_st_cptr.cc' start=78 end=124 %}
   
  
 ## Βέλτιστη λύση - $$\mathcal{O}(N \cdot log(N))$$
@@ -150,7 +152,7 @@ $$\forall Y_i,Y_j$$ με $$Y_i \lt Y_j \Leftrightarrow \mathit{RMQ}[0..Y_i] \gt 
 Η λύση αυτή είναι optimal και περνά όλα τα test cases.
 Για μια ενδεικτική υλοποίηση αντικαταστήστε το segment tree στον παραπάνω κώδικα με το παρακάτω:
 
-{% include code.md solution_name='souvlakia_nlogn_map.cc' start=79 end=121 %}
+{% include code.md solution_name='souvlakia_nlogn_map.cc' start=80 end=122 %}
 
 ## Γενικές Παρατηρήσεις στον κώδικα των λύσεων
 
@@ -164,6 +166,6 @@ __vector__ τοπικά μέσα σε compound statement ώστε όταν τε�
 Ο Dijkstra μπορεί να υπερχειλίσει κάποιους τύπους ακεραίων όταν πάει να προσθέσει δυο $$\mathit{INF}$$ μεταξύ τους οπότε 
 μια καλή λύση είναι να μην κάνουμε την πρόσθεση αν ξέρουμε ήδη ότι ο ένας ακέραιος έχει τιμή $$\mathit{INF}$$.
 
-{% include code.md solution_name='souvlakia_nlogn_map.cc' start=52 end=52 %}
+{% include code.md solution_name='souvlakia_nlogn_map.cc' start=53 end=53 %}
 
 
