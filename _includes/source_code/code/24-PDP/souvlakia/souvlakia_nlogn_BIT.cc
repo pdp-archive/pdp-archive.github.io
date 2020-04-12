@@ -77,7 +77,7 @@ inline void write_fast(bool f){
 		putchar_unlocked(*s++);
 }
 
-//RMQ using Binary Index Tree
+//RMQ using Binary Indexed Tree
 int32_t *BIT;
 void sinit(){
 	YMAX += 3;//because BIT starts counting from 1 but we want -1 and 0 also
