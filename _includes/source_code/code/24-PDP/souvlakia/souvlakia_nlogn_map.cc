@@ -103,7 +103,7 @@ void supdate(int32_t y,int32_t z){
 		curr->second = z;
 	} else 
 		return;//no modification done
-	//optimize. keep d2 sequence stricly descending while d1 ascends
+	//optimize. keep z sequence stricly descending while y ascends
 	//optimize backward
 	while(1){
 		iter prev = curr; prev--;
