@@ -126,7 +126,7 @@ int main(){
 #endif
 	N = read_fast(), M = read_fast();
 	
-	{//hint: edge vector below is temporary
+	{//hint: edge vector below is temporary 
 		vector<vector<pair<int32_t,int32_t>>> edge(N+1);//<edge_to, distance>
 		for(int32_t a,b,d,i=0;i<M;++i){
 			a = read_fast(), b = read_fast(), d = read_fast();
