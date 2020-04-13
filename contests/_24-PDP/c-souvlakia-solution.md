@@ -186,7 +186,7 @@ $$\forall y_i,y_j$$ με $$y_i \lt y_j \Leftrightarrow \mathit{RMQ}[0..y_i] \gt 
 Η λύση αυτή είναι optimal και περνά όλα τα test cases.
 Για μια ενδεικτική υλοποίηση αντικαταστήστε το segment tree στον παραπάνω κώδικα με το παρακάτω:
 
-{% include code.md solution_name='souvlakia_nlogn_map.cc' start=80 end=114 %}
+{% include code.md solution_name='souvlakia_nlogn_map.cc' start=80 end=113 %}
 
 
 [^1]: Η $$\mathcal{O}(N^2)$$ δεν είναι η χειρότερη λύση, διότι αν δεν είχαμε επιλέξει μια λογαριθμική λύση με τη χρήση του std::set για το Dijkstra αλλά μια λύση με loop $$\mathcal{O}((N+M)\cdot N)$$ όπου στο συγκεκριμένο πρόβλημα το μέγιστο $$M$$ είναι πολλαπλάσιο του $$N$$ η λύση μας θα ήταν ακόμα χειρότερη.
