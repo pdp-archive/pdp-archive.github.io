@@ -21,16 +21,21 @@ function run_test() {
       norm1=${1/\#/$i}
       norm2=${2/\#/$i}
       cp ../${norm1} $3
-      timeout $6 ./executable
-      if [ "$?" = 124 ]; then
-         echo -e "         [\e[93mtimeout\e[0m] Test $i"
+      if [[ ! -x ./executable ]]; then
+         #executable does not exist
          found_wrong_or_timeout="true"
       else
-         result=$(diff --strip-trailing-cr ../$norm2 $4 | head -c 200)
-         if [ "$result" != '' ]; then 
-            echo -e "         [\e[31mwrong\e[0m] Test $i:"
-            echo "           " $result
+	 timeout $6 ./executable
+	 if [ "$?" = 124 ]; then
+            echo -e "         [\e[93mtimeout\e[0m] Test $i"
             found_wrong_or_timeout="true"
+         else
+            result=$(diff --strip-trailing-cr ../$norm2 $4 | head -c 200)
+	    if [ "$result" != '' ]; then 
+	       echo -e "         [\e[31mwrong\e[0m] Test $i:"
+	       echo "           " $result
+	       found_wrong_or_timeout="true"
+	    fi;
          fi;
       fi;
    done;
