@@ -21,7 +21,7 @@ const int32_t
 	MAXQ = int32_t(5e4),	//max queries
 	INF  = INT32_MAX;	//INF for dijkstra
 	
-long	N,M,Q,C[3];
+int32_t	N,M,Q,C[3];
 
 struct shop {
 #define	X	d[0]
@@ -90,35 +90,27 @@ void sinit(){
 	Zmin.insert({-2,INF});//lower limit for optimization and queries
 	Zmin.insert({INF,-1});//upper limit for optimizations
 }
-long squery(int32_t y){
+int32_t squery(int32_t y){
 	iter it = Zmin.lower_bound(y-1);
 	while(it->first >= y)it--;
 	return it->second;
 }
 void supdate(int32_t y,int32_t z){
+	int32_t curr_z = squery(y);
+	if(curr_z <= z)
+		return;//ignore it. Doesn't improve subsequence
+
 	iter curr = Zmin.find(y);
-	if(curr == Zmin.end()){
+	if(curr == Zmin.end())
 		curr = (Zmin.insert({y,z})).first;
-	} else if(curr->second > z){
+	else
 		curr->second = z;
-	} else 
-		return;//no modification done
-	//optimize. keep z sequence stricly descending while y ascends
-	//optimize backward
-	while(1){
-		iter prev = curr; prev--;
-		if(prev->second > curr->second)
-			break;
-		Zmin.erase(curr);
-		curr = prev;
-	}
+	
 	//optimize forward
-	while(1){
-		iter next = curr; next++;
-		if(next->second < curr->second)
-			break;
-		Zmin.erase(next);
-	}
+	iter next = ++curr;
+	while(next->second >= z)
+		next++;
+	Zmin.erase(curr,next);//std::map range erase
 }
 
 int main(){
@@ -129,7 +121,7 @@ int main(){
 	N = read_fast(), M = read_fast();
 	
 	{//hint: edge vector below is temporary 
-		//max mem usage: 400.000 * 2 * 3 * sizeof(long) = 2.400.000 * sizeof(long) = 19.2Mb
+		//max mem usage: 400.000 * 2 * 3 * sizeof(int32_t) = 2.400.000 * sizeof(int32_t) = 9.6Mb
 		//and we definitely benefit our program by releasing this mem when no more required
 		//if we use a dynamic allocated scheme for implicit segment tree or use map template
 		vector<vector<pair<int32_t,int32_t>>> edge(N+1);//<edge_to, distance>
