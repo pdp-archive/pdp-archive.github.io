@@ -15,31 +15,31 @@ function run_test() {
    $7 ../$5 -o executable
    
    echo -e "      Running the testcases.."
-   found_wrong_or_timeout="false"
+   did_fail="false"
    for i in "${arr[@]:7}";
    do
       norm1=${1/\#/$i}
       norm2=${2/\#/$i}
       cp ../${norm1} $3
       if [[ ! -x ./executable ]]; then
-         #executable does not exist
-         found_wrong_or_timeout="true"
+         # executable does not exist
+         did_fail="true"
       else
-	 timeout $6 ./executable
-	 if [ "$?" = 124 ]; then
+         timeout $6 ./executable
+         if [ "$?" = 124 ]; then
             echo -e "         [\e[93mtimeout\e[0m] Test $i"
-            found_wrong_or_timeout="true"
+            did_fail="true"
          else
             result=$(diff --strip-trailing-cr ../$norm2 $4 | head -c 200)
-	    if [ "$result" != '' ]; then 
-	       echo -e "         [\e[31mwrong\e[0m] Test $i:"
-	       echo "           " $result
-	       found_wrong_or_timeout="true"
-	    fi;
+            if [ "$result" != '' ]; then 
+               echo -e "         [\e[31mwrong\e[0m] Test $i:"
+               echo "           " $result
+               did_fail="true"
+            fi;
          fi;
       fi;
    done;
-   if [ "$found_wrong_or_timeout" = "false" ] ; then
+   if [ "$did_fail" = "false" ] ; then
       echo -e "      Done [\e[92mPASS\e[0m]\n"
    else
       echo -e "      Done [\e[31mFAIL\e[0m]\n"
