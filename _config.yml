@@ -3,8 +3,6 @@ description: Site για τη συλλογή εκφωνήσεων, testcases, λ
 timezone: Europe/Athens
 permalink: /:title
 highlighter: rouge
-plugins:
-  - jekyll-redirect-from
 
 markdown: kramdown
 kramdown:
@@ -120,10 +118,10 @@ defaults:
 exclude: [
   contributing.md,
   README.md,
-  source_code/utils,
-  source_code/testdata,
-  source_code/generated_execution.sh,
-  source_code/README.md,
-  source_code/test_parser.out,
-  source_code/tester.sh
+  _includes/source_code/generated_execution.sh,
+  _includes/source_code/README.md,
+  _includes/source_code/tmp,
+  _includes/source_code/test_parser.out,
+  _includes/source_code/tester.sh,
+  _includes/source_code/utils,
 ]
