@@ -76,7 +76,7 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ using Binary Indexed Tree
+//RMQ using Binary Indexed Tree with compressed Y values
 int32_t *BIT;
 int32_t YMAX = 1; //max value of Shops Y
 void compress_Yvalues(){

@@ -20,9 +20,7 @@ const int32_t
     MAXN = int32_t(1e5),//max shops
     MAXQ = int32_t(5e4),//max queries
     INF  = INT32_MAX;  //INF for dijkstra
-int32_t
-    N,M,Q,C[3],
-    YMAX; //max value of Shops Y
+int32_t N,M,Q,C[3];
 
 struct shop {
 #define X  d[0]
@@ -79,6 +77,7 @@ inline void write_fast(bool f){
 
 //RMQ using Binary Indexed Tree
 int32_t *BIT;
+int32_t YMAX = 1; //max value of Shops Y
 void sinit(){
     for(int i=1;i<=N;i++)
         if(YMAX<S[i].Y)
