@@ -80,19 +80,18 @@ inline void write_fast(bool f){
 int32_t *BIT;
 int32_t YMAX = 1; //max value of Shops Y
 void compress_Yvalues(){
-    map<int32_t,int32_t> compressY;//map uncompressed Y values to compressed ones
+    map<int32_t,vector<int32_t>> compressY;//map uncompressed Y values to compressed ones
     
     //find distinctive values of Y
     for(int i=1;i<=N;i++)//O(NlogN) insert at most N items
-        compressY[S[i].Y];
+        compressY[S[i].Y].push_back(i);
     
-    //compress all Y values supplied but keep their order
-    for(auto it=compressY.begin();it!=compressY.end();it++)//O(N)
-        it->second = YMAX++;
-    
-    //update shops with the compressed values
-    for(int32_t i=1;i<=N;i++)//O(NlogN)
-        S[i].Y = compressY[S[i].Y];
+    //compress all Y values supplied but keep their order and update shops
+    for(auto it=compressY.begin();it!=compressY.end();it++){//O(N)
+        for(auto i: it->second)
+		S[i].Y = YMAX;
+	YMAX++;
+    }
 }
 
 void sinit(){
