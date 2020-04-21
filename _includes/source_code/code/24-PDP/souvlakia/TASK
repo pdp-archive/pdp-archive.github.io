@@ -35,6 +35,15 @@ TASK(
          ),
       ),
       SOLUTION(
+         name = "souvlakia_nlogn_yzip_BIT",
+         source = "souvlakia_nlogn_yzip_BIT.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),      
+      SOLUTION(
          name = "souvlakia_nlogn_implicit_st_cptr",
          source = "souvlakia_nlogn_implicit_st_cptr.cc",
          passes_all,

@@ -21,8 +21,7 @@ const int32_t
     MAXQ = int32_t(5e4),//max queries
     INF  = INT32_MAX;  //INF for dijkstra
 int32_t
-    N,M,Q,C[3],
-    YMAX; //max value of Shops Y
+    N,M,Q,C[3];
 
 struct shop {
 #define X  d[0]
@@ -79,10 +78,25 @@ inline void write_fast(bool f){
 
 //RMQ using Binary Indexed Tree
 int32_t *BIT;
+int32_t YMAX = 1; //max value of Shops Y
+void compress_Yvalues(){
+    map<int32_t,int32_t> compressY;//map uncompressed Y values to compressed ones
+    
+    //find distinctive values of Y
+    for(int i=1;i<=N;i++)//O(NlogN) insert at most N items once
+        compressY[S[i].Y];
+    
+    //compress all Y values supplied but keep their order
+    for(auto it=compressY.begin();it!=compressY.end();it++)//O(N)
+        it->second = YMAX++;
+    
+    //update shops with the compressed values
+    for(int32_t i=1;i<=N;i++)//O(NlogN)
+        S[i].Y = compressY[S[i].Y];
+}
+
 void sinit(){
-    for(int i=1;i<=N;i++)
-        if(YMAX<S[i].Y)
-	    YMAX = S[i].Y;
+    compress_Yvalues();    
     YMAX += 3;//because BIT starts counting from 1 but we want -1 and 0 also
     BIT = new int32_t[YMAX+1];
     memset(BIT,0x7f,sizeof(*BIT)*(YMAX+1));
@@ -124,9 +138,6 @@ int main(){
 
         for(int i=0;i<3;++i)
             dijsktra(C[i],i,edge);
-        for(int i=1;i<=N;i++)
-            if(YMAX<S[i].Y)
-                YMAX = S[i].Y;
     }//memory of edge vector is released
 
     //read queries and store reference so we can answer offline

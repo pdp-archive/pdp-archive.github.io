@@ -104,9 +104,9 @@ $$i$$ δεν είναι επιλέξιμο γιατί τουλάχιστο έν�
 Παρατηρήστε ότι ενώ το Binary Indexed Tree χρησιμοποιείται γενικά για Range Sum Queries 
 με μια μικρή τροποποίηση δίνει το RMQ.
 Το module του Binary Indexed Tree που αντικαθιστα το module του segment tree στον παραπάνω κώδικα ακολουθεί:
-{% include code.md solution_name='souvlakia_nlogn_BIT.cc' start=80 end=102 %}
+{% include code.md solution_name='souvlakia_nlogn_BIT.cc' start=80 end=105 %}
 
-## Βέλτιστη λύση - $$\mathcal{O}(N \cdot log(D\cdot N))$$
+## Ικανοποιητική λύση No 1 - $$\mathcal{O}(N \cdot log(D\cdot N))$$
 
 Γνώσεις που θα χρειαστούμε: Implicit Segment Tree
 
@@ -144,6 +144,24 @@ $$log_2(D\cdot N)$$ όπως και του απλού segment tree εφόσον 
 {% include code.md solution_name='souvlakia_nlogn_implicit_st_cptr.cc' start=78 end=124 %}
   
  
+## Ικανοποιητική λύση No 2 - $$\mathcal{O}(N \cdot log{N})$$
+
+Γνωρίζοντας ότι όλες οι $$y_i$$ τιμές είναι το πολύ $$N$$, μπορούμε να τις "συμπιέσουμε", δηλαδή να τις αντικαταστήσουμε με **διαδοχικούς** αριθμούς τέτοιους ώστε να ισχύουν οι παρακάτω συνθήκες  
+
+$$\forall {i,j} \in [1,N], y_i =  y_j \Leftrightarrow \mathit{compressed}(y_i) = \mathit{compressed}(y_j)$$  
+
+$$\forall {i,j} \in [1,N], y_i \lt y_j \Leftrightarrow \mathit{compressed}(y_i) \lt \mathit{compressed}(y_j)$$  
+
+$$\forall{k} \in [0,\mathit{YMAX}), \exists i \in [1,N], \mathit{compressed}(y_i) = k$$  
+
+
+Δηλαδή αν υπάρχουν $$\mathit{YMAX}$$ διαφορετικές τιμές από όλα τα $$y$$ των καταστημάτων, αντικατέστησε το κάθε $$y_i$$ κάθε καταστήματος $$i$$ με τον μικρότερο μη αρνητικό ακέραιο (συμπιεσμένη τιμή) έτσι ώστε να μην χαλάσει η σειρά (order) μεταξύ των καταστημάτων. Με τον τρόπο αυτό περιορίζουμε το πεδίο τιμών που πρέπει να καλύπτει το Binary Index Tree ή το Segment Tree από $$D\cdot N$$ σε $$N$$ το πολύ οπότε δεν ξεπερνάμε τα όρια μνήμης του προβλήματος. Ενδεικτική λύση ακολουθεί
+
+{% include code.md solution_name='souvlakia_nlogn_yzip_BIT.cc' start=79 end=119 %}
+  
+
+
+
 ## Βέλτιστη λύση - $$\mathcal{O}(N \cdot log{N})$$
 
 Στην παραπάνω λύση δείξαμε ότι θέλουμε να βρίσκουμε την μικρότερη τιμή $$z_{min}$$ από το $$0$$ έως κάθε δυνατή θέση $$y_i$$ καταστήματος. 
