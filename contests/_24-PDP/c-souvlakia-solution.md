@@ -30,7 +30,7 @@ $$y_j\lt y_i$$ και $$z_j\lt z_i$$.
 
 {% include code.md solution_name='souvlakia_n2.cc' %}
 
-## Λύση με Segment Tree - $$\mathcal{O}(N \cdot \log {(D \cdot N)})$$
+## Λύση με Segment Tree και RMQ - $$\mathcal{O}(N \cdot \log {(D \cdot N)})$$
 
 Γνώσεις που θα χρειαστούμε: [Segment Tree](https://kallinikos.github.io/Segment-Trees), RMQ
 
@@ -79,7 +79,7 @@ $$y_j\lt y_i$$ και $$z_j\lt z_i$$.
 Η επιλογή να κοπεί το πρόγραμμα σε τρία τμήματα έγινε γιατί στη συνέχεια θα δούμε τις εναλλακτικές μορφές της δομής μας αλλάζοντας μόνο το δεύτερο τμήμα και κρατώντας το πρώτο και τρίτο ως έχουν.
 
 
-## Λύση με Binary Indexed Tree - $$\mathcal{O}(N \cdot \log {(D \cdot N)})$$
+## Λύση με Binary Indexed Tree και prefix minimum - $$\mathcal{O}(N \cdot \log {(D \cdot N)})$$
 
 Γνώσεις που θα χρειαστούμε: [Binary Indexed Tree](https://kallinikos.github.io/Binary-Indexed-Tree)
 
@@ -89,7 +89,7 @@ To binary indexed tree είναι λίγο οικονομικότερο σε μ�
 Μια ενδεικτική λύση έχουμε αντικαθιστώντας το τμήμα 2 του παραπάνω κώδικα με το παρακάτω απόσπασμα:
 {% include code.md solution_name='souvlakia_nlogn_BIT.cc' start=78 end=104 %}
 
-## Αποδεκτή Λύση με Implicit Segment Tree - $$\mathcal{O}(N \cdot \log(D\cdot N))$$
+## Αποδεκτή Λύση με Implicit Segment Tree και RMQ - $$\mathcal{O}(N \cdot \log(D\cdot N))$$
 
 Γνώσεις που θα χρειαστούμε: Implicit Segment Tree
 
@@ -121,7 +121,7 @@ To binary indexed tree είναι λίγο οικονομικότερο σε μ�
 
 Γνώσεις που θα χρειαστούμε: σύμπτυξη ή συμπίεση συντεταγμένων (coordinate compression)
 
-Έχουμε το πολύ $$N$$ τιμές. Έστω ότι έχουμε ακριβώς $$\mathit{YMAX}$$ διαφορετικές τιμές $$y$$ ($$\mathit{YMAX} \le N$$). Mπορούμε να "συμπιέσουμε" τις τιμές $$y$$, δηλαδή να τις αντικαταστήσουμε με **διαδοχικούς** αριθμούς ανάμεσα στο $$0$$ και στο $$\mathit{YMAX}$$ αφαιρώντας τα "κενά" ανάμεσα τους. Αντικαθιστούμε το $$y_i$$ κάθε καταστήματος $$i$$ με έναν αριθμό από το $$1$$ έως το $$\mathit{YMAX}$$  (συμπιεσμένη τιμή) έτσι ώστε να μην χαλάσει η διάταξη (order) μεταξύ των καταστημάτων, δηλαδή για όλους τους συνδυασμούς καταστημάτων $$i,j$$ θα ισχύουν οι συνθήκες:  
+Έχουμε το πολύ $$N$$ τιμές σε κάθε άξονα. Έστω ότι έχουμε ακριβώς $$\mathit{YMAX}$$ διαφορετικές τιμές $$y$$ ($$\mathit{YMAX} \le N$$). Mπορούμε να "συμπιέσουμε" τις τιμές $$y$$, δηλαδή να τις αντικαταστήσουμε με **διαδοχικούς** αριθμούς ανάμεσα στο $$0$$ και στο $$\mathit{YMAX}$$ αφαιρώντας τα "κενά" ανάμεσα τους. Αντικαθιστούμε το $$y_i$$ κάθε καταστήματος $$s_i$$ με έναν αριθμό από το $$1$$ έως το $$\mathit{YMAX}$$  (συμπιεσμένη τιμή) έτσι ώστε να μην χαλάσει η διάταξη (order) μεταξύ των καταστημάτων, δηλαδή για όλους τους συνδυασμούς καταστημάτων $$s_i,s_j$$ θα ισχύουν οι συνθήκες:  
 
 $$y_i =  y_j \Leftrightarrow \mathit{compressed}(y_i) = \mathit{compressed}(y_j)$$  
 
