@@ -76,28 +76,28 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ using Binary Indexed Tree with compressed Y values
+//RMQ με χρήση Binary Indexed Tree και compressed Y τιμές
 int32_t *BIT;
-int32_t YMAX = 1; //max value of Shops Y
+int32_t YMAX = 1; //μέγιστος αριθμός από διαφορετικές τιμές y
 void compress_Yvalues(){
-    map<int32_t,int32_t> compressY;//map uncompressed Y values to compressed ones
+    map<int32_t,int32_t> compressY;//map ασυμπίεστες Y σε συμπιεσμένες τιμές
     
-    //find distinctive values of Y
-    for(int i=1;i<=N;i++)//O(NlogN) insert at most N items
+    //βρες τις διαφορετικές τιμές y
+    for(int i=1;i<=N;i++)//O(NlogN) εισαγωγή το πολύ N τιμων
         compressY[S[i].Y];
     
-    //compress all Y values supplied but keep their order
+    //συμπίεσε τα y αλλά κράτησε τη διάταξη τους
     for(auto it=compressY.begin();it!=compressY.end();it++)//O(N)
         it->second = YMAX++;
     
-    //update shops with the compressed values
+    //αντικατέστησε στα καταστήματα τα y
     for(int32_t i=1;i<=N;i++)//O(NlogN)
         S[i].Y = compressY[S[i].Y];
 }
 
 void sinit(){
     compress_Yvalues();    
-    YMAX += 3;//because BIT starts counting from 1 but we want -1 and 0 also
+    YMAX += 3;//το BIT έχει πεδίο ορισμού από το 1. Κάνουμε ολίσθηση ώστε να μετρά από το -1
     BIT = new int32_t[YMAX+1];
     memset(BIT,0x7f,sizeof(*BIT)*(YMAX+1));
 }

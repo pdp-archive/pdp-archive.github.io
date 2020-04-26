@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "souvlakia_n2",
          source = "souvlakia_n2.cc",
-         passes_up_to = 5,
+         passes_up_to = 8,
          lang = "c++",
          author = PERSON(
             name = "kbokis",

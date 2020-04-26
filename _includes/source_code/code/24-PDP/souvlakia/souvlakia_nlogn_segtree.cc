@@ -26,28 +26,28 @@ struct shop {
 #define X  d[0]
 #define Y  d[1]
 #define Z  d[2]
-    int32_t d[3];//The 3 distances (X,Y,Z) from {A,B,C}
-    list<int32_t> queryid;//query ids that has to answer shop[i]
-            //use list in case there are more than one queries per shop
-    shop(){ X=Y=Z=INF; }//help dijsktra initial values
+    int32_t d[3];//Οι 3 αποστάσεις (X,Y,Z)
+    list<int32_t> queryid;//ερωτήματα που αφορούν το κατάστημα
+            //χρήση λίστας διότι μπορεί να υπάρχουν περισσότερα ερωτήματα για το κατάστημα
+    shop(){ X=Y=Z=INF; }//αρχικές τιμές για dijsktra
     bool operator <(const shop& b) const { 
         return X < b.X;
     }
 } S[MAXN+1];
 
 void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
-    //src is one of {A,B,C}
-    //dupd in [0,3). Update Shop[*].d[dupd] distance from src
+    //src είναι ένα από τα 3 καταστήματα
+    //dupd είναι η θέση στον πίνακα Shop[*].d[dupd] που ενημερώνουμε
     set<pair<int32_t,int32_t>> DS;//<distance,shopid>
     
     DS.insert({0,src});
     S[src].d[dupd] = 0;
     
-    while(!DS.empty()){//explore
+    while(!DS.empty()){//εξερεύνησε
         auto x = *(DS.begin());
         DS.erase(DS.begin());
         int32_t daddy = x.second;
-        for(auto y : edge[daddy]){//expand
+        for(auto y : edge[daddy]){//επέκτεινε
             int32_t child = y.first, dist = y.second;
             if(S[daddy].d[dupd]!=INF && S[child].d[dupd] > S[daddy].d[dupd] + dist){
                 if(S[child].d[dupd]!=INF)
@@ -59,10 +59,10 @@ void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
     }
 }
 
-inline int32_t read_fast(){//fast IO is required for this problem due to huge io
+inline int32_t read_fast(){//fast IO λόγω των πολλών δεδομένων εισόδου
     int32_t x = 0;
     char c;
-    while((c=getchar_unlocked())<'0');//skip blanks, CR, LF
+    while((c=getchar_unlocked())<'0');//αγνόησε κενά, CR, LF
     do
         x = x*10 + (c-'0');
     while((c=getchar_unlocked())>='0');
@@ -75,10 +75,10 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ with segment tree code starts here
-int32_t YMAX = 1;    //max value of Y
-int32_t *Zrmq;//segment tree (RangeMinQuery)for Z
-void sinit(){//allocate mem for segment tree and initialize it to (almost) infinity
+//RMQ με χρήση segment tree
+int32_t YMAX = 1;   //μέγιστη τιμή y
+int32_t *Zrmq;      //segment tree (RangeMinQuery)for Z
+void sinit(){       //δέσμευσε μνήμη και αρχικοποίησε σε (σχεδόν) άπειρο
     for(int32_t i=1;i<=N;++i)
         YMAX = max(YMAX, S[i].Y);
     size_t Zrmqsize = 1 << size_t(ceil(log2(YMAX+1))+1);
@@ -87,13 +87,13 @@ void sinit(){//allocate mem for segment tree and initialize it to (almost) infin
 }
 
 int32_t squery(int32_t yright,int32_t si=0,int32_t ss=0,int32_t se=-1){
-    //query z min value for y in [0,yright]
+    //βρές το z min για τα y στο [0,yright]
     if(se==-1) 
         se = YMAX;
     if(yright<ss || yright<0)
-        return INF;//not involved
+        return INF;//δεν συμμετέχει
     if(se<=yright) 
-        return Zrmq[si];//completely included
+        return Zrmq[si];//συμμετέχει πλήρως
     int32_t mid = (ss+se)/2;
     return min(
         squery(yright, si*2+1,ss,mid),
@@ -105,7 +105,7 @@ void supdate(int32_t y,int32_t z,int32_t si=0,int32_t ss=0,int32_t se=-1){
     if(se==-1) 
         se = YMAX;
     if(y<ss || se<y)
-        return;//not involved
+        return;//δεν συμμετέχει
     if(ss==se){
         Zrmq[si] = min(Zrmq[si],z);
     }else {
@@ -117,7 +117,7 @@ void supdate(int32_t y,int32_t z,int32_t si=0,int32_t ss=0,int32_t se=-1){
         Zrmq[si] = min(Zrmq[si*2+1],Zrmq[si*2+2]);
     }
 }
-//RMQ with segment tree code ends here
+//RMQ
 
 int main(){
 #ifdef CONTEST

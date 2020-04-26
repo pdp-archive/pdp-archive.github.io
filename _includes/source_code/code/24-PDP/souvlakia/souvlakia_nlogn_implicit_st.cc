@@ -23,7 +23,7 @@ const int32_t
     MAXN = int32_t(1e5),    //max shops
     MAXQ = int32_t(5e4),    //max queries
     INF  = INT32_MAX;    //INF for dijkstra
-int32_t    N,M,Q,C[3];
+int32_t N,M,Q,C[3];
 
 struct shop {
 #define X  d[0]
@@ -79,17 +79,16 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ with implicit segment tree node and functions
-//segment tree nodes are created upon request (by expand function)
-//segment tree usage is RangeMinimumQuery for Y in [0,20000*MAXN] range
-int32_t stn;//keep track of ST[] pool usage
+//RMQ με implicit segment tree 
+//οι κομβοι δημιουργούνται όταν απαιτηθεί από την expand()
+int32_t stn;//τελευταία χρησιμοποιημένη θέση στον πίνακα κόμβων ST[]
 const int32_t SMAX = MAXN * 30;//log2(MAXN * D) == 30
-const int32_t YMAX = int32_t(2e4)*MAXN;    //max value of Y
+const int32_t YMAX = int32_t(2e4)*MAXN;    //μέγιστη τιμή του y
 
-struct node {//implicit segment tree (lazy build)
-    int32_t left,right;//Y limits that this node handles
-    int32_t minZ;//min Shop.Z value of segment tree
-    int32_t leftptr,rightptr;//"pointers" to the children 
+struct node {
+    int32_t left,right;//όρια y που καλύπτει ο κόμβος
+    int32_t minZ;//min Shop.Z τιμή για y στο [left,right]
+    int32_t leftptr,rightptr;//"pointers" στους απογόνους
         
     node(int32_t le,int32_t ri,int32_t z){
         left = le, right = ri, minZ = z;
@@ -99,7 +98,7 @@ struct node {//implicit segment tree (lazy build)
 } st[SMAX];
 
 void sinit(){
-    st[0] = node(0,YMAX,INF);//root node
+    st[0] = node(0,YMAX,INF);//κόμβος κορυφή
 }
 void expand(int32_t root){
     node& s = st[root];
@@ -112,9 +111,9 @@ void expand(int32_t root){
 }
 int32_t squery(int32_t y,int32_t root = 0){
     node& s = st[root];
-    if(s.right <= y)//completely involved
+    if(s.right <= y)//ο κόμβος συμπεριλαμβάνεται πλήρως
         return s.minZ;
-    if(y < s.left)//not involved
+    if(y < s.left)//ο κόμβος δε συμμετέχει
         return INF;
     expand(root);
     assert(s.leftptr);assert(s.rightptr);
@@ -124,7 +123,7 @@ void supdate(int32_t y,int32_t z,int32_t root = 0){
     node& s = st[root];    
     s.minZ = min(s.minZ,z);
     if(s.right == y)
-        return;//no need to build below
+        return;//δεν χρειάζεται επέκταση πιο κάτω
     expand(root);
     if(s.leftptr){
         if(y <= st[s.leftptr].right)

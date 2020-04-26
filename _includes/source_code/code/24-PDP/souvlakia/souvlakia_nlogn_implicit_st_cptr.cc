@@ -75,34 +75,34 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ with dynamic memory allocation for implicit segment tree
-int32_t YMAX = int32_t(2e4)*MAXN;    //max value of Y
+//RMQ με δυναμική εκχώρηση μνήμης και implicit segment tree
+int32_t YMAX = int32_t(2e4)*MAXN;    //μέγιστη τιμή του y
 
-struct node {//implicit segment tree (lazy build)
-    int32_t left,right; //Y value limits that this node handles
-    int32_t minZ; //min Z value of this node (and beyond)
-    node *leftptr, *rightptr; //pointers to the children 
+struct node {
+    int32_t left,right; //y όρια κόμβου
+    int32_t minZ; //min Z τιμή κόμβου
+    node *leftptr, *rightptr; //pointers στους απογόνους
         
     node(int32_t le,int32_t ri, int32_t z){
         left = le, right = ri, minZ = z;
         leftptr = rightptr = 0;
     }
     int32_t query(int32_t y){
-        if(y < left)//not involved
+        if(y < left)//δε συμμετέχει
             return INF;
-        if(right <= y)//completely involved
+        if(right <= y)//συμμετέχει πλήρως
             return minZ;
-        if(!leftptr)//partially involved with not expanded node
-            return minZ;//no reason to go downwards
+        if(!leftptr)//συμμετέχει μερικώς χωρίς επέκταση αριστερά
+            return minZ;//καλύπτεται από τον τρέχον κόμβο
         expand();
         return min(leftptr->query(y),rightptr->query(y));
         
     }
     void update(int32_t y,int32_t z){
-        expand();//preserve prev value for children (like lazy push ST)
+        expand();//σπρώξε την τρέχουσα τιμή στους απογόνους (σαν το lazy propagate)
         minZ = min(minZ,z);
         if(right == y)
-            return;//no need to build below
+            return;//μην επεκταθείς πιο κάτω
         if(leftptr){
             if(y <= leftptr->right)
                 leftptr->update(y,z);
