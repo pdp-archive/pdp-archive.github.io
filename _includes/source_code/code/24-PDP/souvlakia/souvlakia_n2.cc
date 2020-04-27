@@ -12,9 +12,9 @@
 using namespace std;
 
 const long 
-    MAXN = long(1e5),    //max shops
-    MAXQ = long(5e4),    //max queries
-    INF  = LONG_MAX;    //INF for dijkstra
+    MAXN = int32_t(1e5),//μέγιστος αριθμός shops
+    MAXQ = int32_t(5e4),//μέγιστος αριθμός queries
+    INF  = INT32_MAX;  //INF for dijkstra
     
 long N,M,Q,C[3];
 
@@ -72,7 +72,6 @@ int main(){
             dijsktra(C[i],i,edge);
     }//η μνήμη του vector απελευθερώθηκε (destructor called)
 
-    //αποθήκευσε ερωτήματα για να απαντήσουμε offline
     for(long q,i=0;i<Q;++i){
         scanf("%ld",&q);
         bool capable = true;

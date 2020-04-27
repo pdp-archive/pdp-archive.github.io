@@ -16,9 +16,9 @@
 using namespace std;
 
 const int32_t 
-    MAXN = int32_t(1e5), //max shops
-    MAXQ = int32_t(5e4), //max queries
-    INF  = INT32_MAX; //INF for dijkstra
+    MAXN = int32_t(1e5),//μέγιστος αριθμός shops
+    MAXQ = int32_t(5e4),//μέγιστος αριθμός queries
+    INF  = INT32_MAX;  //INF for dijkstra
 
 int32_t    N,M,Q,C[3];
 
@@ -126,7 +126,7 @@ int main(){
 #endif
     N = read_fast(), M = read_fast();
     
-    {//hint: edge vector below is temporary 
+    {//χρησιμοποίησε ένα προσωρινό vector για τα edges 
         vector<vector<pair<int32_t,int32_t>>> edge(N+1);//<edge_to, distance>
         for(int32_t a,b,d,i=0;i<M;++i){
             a = read_fast(), b = read_fast(), d = read_fast();
@@ -139,20 +139,20 @@ int main(){
 
         for(int i=0;i<3;++i)
             dijsktra(C[i],i,edge);
-    }//memory of edge vector is released
+    }//η μνήμη του vector ελευθερώθηκε 
 
-    //read queries and store reference so we can answer offline
+    //αποθήκευσε τα queries για offline απαντήσεις
     for(int32_t i=0;i<Q;++i)
-        S[read_fast()].queryid.push_back(i);//shop[q] has to answer i-th query
+        S[read_fast()].queryid.push_back(i);//shop[q] πρέπει να απαντήσει το i-th query
 
     sort(S+1,S+N+1);
 
     vector<bool> ans(MAXQ+1,false);        //offline answers
 
-    sinit();//construct segment tree
+    sinit();//δημιούργησε το RMQ
     for(int32_t right = 1, left = 1; left <=N;){
         while(right<=N && S[right].X == S[left].X){
-            //for all shops with equal X postpone segment tree updates
+            //έλεγξε την ομάδα καταστημάτων με ίδιο x
             const shop& s = S[right];
             bool capable = (squery(s.Y-1) >= s.Z);
             
@@ -160,7 +160,7 @@ int main(){
                 ans[e] = capable;
             right++;
         }
-        while(left<right){//update segment tree with our Z value in segment [0,Y]
+        while(left<right){//ενημέρωσε το RMQ
             supdate(S[left].Y, S[left].Z);
             left++;
         }

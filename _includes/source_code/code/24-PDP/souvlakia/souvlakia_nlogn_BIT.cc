@@ -17,8 +17,8 @@
 using namespace std;
 
 const int32_t 
-    MAXN = int32_t(1e5),//max shops
-    MAXQ = int32_t(5e4),//max queries
+    MAXN = int32_t(1e5),//μέγιστος αριθμός shops
+    MAXQ = int32_t(5e4),//μέγιστος αριθμός queries
     INF  = INT32_MAX;  //INF for dijkstra
 int32_t N,M,Q,C[3];
 
@@ -26,28 +26,28 @@ struct shop {
 #define X  d[0]
 #define Y  d[1]
 #define Z  d[2]
-    int32_t d[3];//The 3 distances (X,Y,Z) from {A,B,C}
-    list<int32_t> queryid;//query ids that has to answer shop[i]
-            //use list in case there are more than one queries per shop
-    shop(){ X=Y=Z=INF; }//help dijsktra initial values
+    int32_t d[3];//Οι αποστάσεις (X,Y,Z) απο τα 3 καταστηματα
+    list<int32_t> queryid;//ερωτηματα που εχουμε να απαντησουμε
+            //χρηση list για περιπτωση πολλαπλων ερωτηματων ανα καταστημα
+    shop(){ X=Y=Z=INF; }//αρχικη τιμη για dijsktra
     bool operator <(const shop& b) const { 
         return X < b.X;
     }
 } S[MAXN+1];
 
 void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
-    //src is one of {A,B,C}
-    //dupd in [0,3). Update Shop[*].d[dupd] distance from src
+    //src είναι ενα απο τα προεπιλεγμενα καταστηματα
+    //dupd in [0,3). Ενημερωσε τις αποστασεις Shop[*].d[dupd] απο το src
     set<pair<int32_t,int32_t>> DS;//<distance,shopid>
     
     DS.insert({0,src});
     S[src].d[dupd] = 0;
     
-    while(!DS.empty()){//explore
+    while(!DS.empty()){//εξερευνησε
         auto x = *(DS.begin());
         DS.erase(DS.begin());
         int32_t daddy = x.second;
-        for(auto y : edge[daddy]){//expand
+        for(auto y : edge[daddy]){//επέκτεινε
             int32_t child = y.first, dist = y.second;
             if(S[daddy].d[dupd]!=INF && S[child].d[dupd] > S[daddy].d[dupd] + dist){
                 if(S[child].d[dupd]!=INF)
@@ -62,7 +62,7 @@ void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
 inline int32_t read_fast(){//fast IO is required for this problem due to huge io
     int32_t x = 0;
     char c;
-    while((c=getchar_unlocked())<'0');//skip blanks
+    while((c=getchar_unlocked())<'0');//αγνόησε κενα,CR,LF
     do
         x = x*10 + (c-'0');
     while((c=getchar_unlocked())>='0');
@@ -75,14 +75,14 @@ inline void write_fast(bool f){
         putchar_unlocked(*s++);
 }
 
-//RMQ using Binary Indexed Tree
+//RMQ με χρήση Binary Indexed Tree
 int32_t *BIT;
-int32_t YMAX = 1; //max value of Shops Y
+int32_t YMAX = 1; //αριθμός διαφορετικών τιμων Y καταστηματων
 void sinit(){
     for(int i=1;i<=N;i++)
         if(YMAX<S[i].Y)
 	    YMAX = S[i].Y;
-    YMAX += 3;//because BIT starts counting from 1 but we want -1 and 0 also
+    YMAX += 3;//offset για να ξεκινα το αριστερο όριο του ΒΙΤ απο -1
     BIT = new int32_t[YMAX+1];
     memset(BIT,0x7f,sizeof(*BIT)*(YMAX+1));
 }
@@ -110,7 +110,7 @@ int main(){
 #endif
     N = read_fast(), M = read_fast();
     
-    {//hint: edge vector below is temporary
+    {
         vector<vector<pair<int32_t,int32_t>>> edge(N+1);//<edge_to, distance>
         for(int32_t a,b,d,i=0;i<M;++i){
             a = read_fast(), b = read_fast(), d = read_fast();
@@ -128,7 +128,7 @@ int main(){
                 YMAX = S[i].Y;
     }//memory of edge vector is released
 
-    //read queries and store reference so we can answer offline
+    //αποθηκευση queries για offline απαντησεις
     for(int32_t i=0;i<Q;++i)
         S[read_fast()].queryid.push_back(i);//shop[q] has to answer i-th query
 
@@ -139,7 +139,7 @@ int main(){
     sinit();
     for(int32_t right = 1, left = 1; left <=N;){
         while(right<=N && S[right].X == S[left].X){
-            //for all shops with equal X postpone updates updates
+            //ελεγχος των καταστηματων ομαδας ιδιου x
             const shop& s = S[right];
             bool capable = (squery(s.Y-1) >= s.Z);
             
@@ -147,7 +147,7 @@ int main(){
                 ans[e] = capable;
             right++;
         }
-        while(left<right){//do the postponed updates
+        while(left<right){//ενημέρωσε το BIT
             supdate(S[left].Y, S[left].Z);
             left++;
         }
