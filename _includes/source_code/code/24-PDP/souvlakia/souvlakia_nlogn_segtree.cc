@@ -59,7 +59,7 @@ void dijsktra(int32_t src,int dupd,vector<vector<pair<int32_t,int32_t>>>& edge){
     }
 }
 
-inline int32_t read_fast(){//fast IO λόγω των πολλών δεδομένων εισόδου
+inline int32_t read_fast(){//γρήγορη είσοδος/έξοδος από τα αρχεία in/out
     int32_t x = 0;
     char c;
     while((c=getchar_unlocked())<'0');//αγνόησε κενά, CR, LF
@@ -174,7 +174,7 @@ int main(){
 
 /*
     complexity
-        N=vertices, M=edges, D=valus (width of segment tree)
+        N=vertices, M=edges, D=values (width of segment tree)
         dijsktra:         O((N+M) * logN)
         sort shops:         O(NlogN)
         answer 1 query:        O(log(20000*N))

@@ -26,7 +26,7 @@ struct shop {
     shop(){ X=Y=Z=INF; }//αρχική τιμή για dijsktra
 } S[MAXN+1];
 
-void dijsktra(long src,long dupd,vector<vector<pair<long,long>>>& edge){
+void dijsktra(long src,int dupd,vector<vector<pair<long,long>>>& edge){
     //src είναι το τρέχον προεπιλεγμένο κατάστημα
     //dupd είναι η θέση στον πίνακα Shop[*].d[dupd] που θα ενημερωθεί
     set<pair<long,long>> DS;//<distance,shopid> χρήση σαν priority queue
@@ -68,7 +68,7 @@ int main(){
         }
         scanf("%ld%ld%ld%ld",&C[0],&C[1],&C[2],&Q);
 
-        for(long i=0;i<3;++i)
+        for(int i=0;i<3;++i)
             dijsktra(C[i],i,edge);
     }//η μνήμη του vector απελευθερώθηκε (destructor called)
 
