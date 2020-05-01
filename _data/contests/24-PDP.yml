@@ -66,5 +66,5 @@ souvlakia:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
-   solution_tags: ["dijkstra", "segment tree", "binary index tree", "implicit segment tree","coordinate compression","RMQ","prefix header","map","set","sorting"]
+   solution_tags: ["dijkstra", "segment tree", "binary index tree", "implicit segment tree","coordinate compression","RMQ","prefix minimum","map","set","sorting"]
    points: 40
