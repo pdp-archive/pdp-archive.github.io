@@ -1,0 +1,92 @@
+TASK(
+   name = "souvlakia",
+   test_count = 11,
+   files_dir = "testdata/24-PDP/souvlakia/",
+   input_file = "souvlakia.in",
+   output_file = "souvlakia.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "souvlakia_n2",
+         source = "souvlakia_n2.cc",
+         passes_up_to = 8,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_nlogn_segtree",
+         source = "souvlakia_nlogn_segtree.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_nlogn_BIT",
+         source = "souvlakia_nlogn_BIT.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_nlogn_implicit_st",
+         source = "souvlakia_nlogn_implicit_st.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_nlogn_implicit_st_cptr",
+         source = "souvlakia_nlogn_implicit_st_cptr.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_nlogn_yzip_BIT",
+         source = "souvlakia_nlogn_yzip_BIT.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),      
+      SOLUTION(
+         name = "souvlakia_nlogn_yzip2_BIT",
+         source = "souvlakia_nlogn_yzip2_BIT.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),      
+      SOLUTION(
+         name = "souvlakia_nlogn_map",
+         source = "souvlakia_nlogn_map.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "souvlakia_official",
+         source = "souvlakia_official.cc",
+         passes_all_except_for = [8],
+         lang = "c++",
+         author = PERSON(
+            name = "Κηπουρίδης Ευάγγελος",
+            school = "11o ΓΕΛ Θεσσαλονίκης",
+         ),
+      )
+   ]
+)
