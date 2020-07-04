@@ -30,3 +30,39 @@ shops:
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
    solution_tags: ["cumulative sums"]
+
+sumoffew:
+   full_name: "Άθροισμα λίγων"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: ""
+   solution: true
+   solution_author: "Μάκης Αρσένης"
+   codes_in_git: false
+   points: 30
+   solution_tags: []
+
+supgame:
+   full_name: "Η τελευταία πίστα"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: ""
+   solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
+   codes_in_git: false
+   points: 30
+   solution_tags: ["graphs", "dijkstra"]
+
+pcr:
+   full_name: "Push-Complement-Reverse"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: ""
+   solution: true
+   solution_author: "Δημήτρης Λως"
+   codes_in_git: false
+   points: 30
+   solution_tags: []
