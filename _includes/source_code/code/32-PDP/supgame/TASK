@@ -1,5 +1,5 @@
 TASK(
-   name = "shops",
+   name = "supgame",
    test_count = 19,
    files_dir = "testdata/32-PDP/supgame/",
    input_file = "supgame.in",
