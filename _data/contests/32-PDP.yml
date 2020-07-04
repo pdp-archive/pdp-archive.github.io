@@ -14,7 +14,7 @@ longsumk:
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=16URHUaFcZqpRQ54nyiyRBAA03SfQEXul"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1MTrGvfpsbK5FDsFccIE9uVzv7ZXL5nWL/view?usp=sharing"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
@@ -25,7 +25,7 @@ shops:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1Nj3wLTKCI_yQTK9stoXmyAA6WRbfFNNI"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/13lonfoXrBW6HYkG784SmcNBSQDUGCGjX/view?usp=sharing"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
@@ -34,8 +34,8 @@ shops:
 sumoffew:
    full_name: "Άθροισμα λίγων"
    stage: "c"
-   statement_pdf_url: ""
-   statement_md: false
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Μάκης Αρσένης"
@@ -46,23 +46,23 @@ sumoffew:
 supgame:
    full_name: "Η τελευταία πίστα"
    stage: "c"
-   statement_pdf_url: ""
-   statement_md: false
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
-   codes_in_git: false
+   codes_in_git: true
    points: 30
    solution_tags: ["graphs", "dijkstra"]
 
 pcr:
    full_name: "Push-Complement-Reverse"
    stage: "c"
-   statement_pdf_url: ""
-   statement_md: false
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Δημήτρης Λως"
    codes_in_git: false
-   points: 30
+   points: 40
    solution_tags: []
