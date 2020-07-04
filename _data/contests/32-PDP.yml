@@ -41,7 +41,7 @@ sumoffew:
    solution_author: "Μάκης Αρσένης"
    codes_in_git: false
    points: 30
-   solution_tags: []
+   solution_tags: ["two pointers", "sliding window"]
 
 supgame:
    full_name: "Η τελευταία πίστα"
