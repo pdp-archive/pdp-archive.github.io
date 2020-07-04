@@ -35,7 +35,7 @@ sumoffew:
    full_name: "Άθροισμα λίγων"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Μάκης Αρσένης"
@@ -47,7 +47,7 @@ supgame:
    full_name: "Η τελευταία πίστα"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
@@ -59,7 +59,7 @@ pcr:
    full_name: "Push-Complement-Reverse"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: true
    solution_author: "Δημήτρης Λως"
