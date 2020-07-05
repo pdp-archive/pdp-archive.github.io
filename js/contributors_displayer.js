@@ -12,6 +12,7 @@ function concatenateNames(arr) {
 // !!!If you are a contributor add your name to the arrays below
 // respecting alphabetical order.
 var contestant_contributor_names = [
+  "Μ. Αρσένης",
   "Γ. Βενιζέλος", 
   "Γ. Βιδαλάκης", 
   "Γ. Γιαπιτζάκης", 
