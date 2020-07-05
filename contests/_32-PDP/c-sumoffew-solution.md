@@ -99,7 +99,7 @@ $$\mathcal{O}(N)$$.
 Παρακάτω δίνεται μια ενδεικτική υλοποίηση η οποία περνάει το $$100\%$$ των test
 cases:
 
-{% include code.md solution_name='sumoffew-opt.cpp' %}
+{% include code.md solution_name='sumoffew-n.cpp' %}
 
 *Σημείωση*: Αν στην παραπάνω λύση χρησιμοποιούσαμε `array` αντί για
 `map`/`unordered_map` τότε, σύμφωνα με την εκφώνηση, θα βαθμολογούμασταν με
