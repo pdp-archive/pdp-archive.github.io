@@ -20,20 +20,22 @@ struct State {
    
    /* Επιστρέφει τα τρία bits στην θέση offset. */
    int get_three_bits(int offset) const {
-      // 1. Δημιουργούμε ένα ακέραιο με μόνο τρία bits στην θέση offset.
-      // 2. Κάνοντας & μένουν μόνο οι θέσεις [offset, offset + 3).
-      // 3. Μετακινώντας αριστερά κατά offset, μας μένει ο αριθμός στα τρία
-      //    αυτά bits.
+      // 1. Δημιουργούμε ένα ακέραιο _111με μόνο τρία bits.
+      // 2. Μετακινούμε αυτά τα bits κατά offset θέσεις.
+      // 3. Κάνοντας state & (_111 << offset) μένουν μόνο οι θέσεις 
+      //    [offset, offset + 3) του state.
+      // 3. Μετακινώντας αριστερά (state & (_111 << offset)) κατά offset
+      //    μας μένει ο αριθμός στα τρία αυτά bits.
       return (state & (_111 << offset)) >> offset;
    }
    
    /* Θέτει τα τρία bits στην θέση offset. */
    void set_three_bits(int offset, int val) {
-      // 1. Δημιουργούμε έναν ακέραιο με bit 1 παντού εκτός από τις θέσεις
-      //    [offset, offset + 3).
-      // 2. Κάνοντας & μένουν όλες οι άλλες θέσεις.
+      // 1. Δημιουργούμε έναν ακέραιο ~(_111 << offset) με bit 1 παντού 
+      //    εκτός από τις θέσεις [offset, offset + 3).
+      // 2. Κάνοντας state & ~(_111 << offset) μένουν όλες οι άλλες θέσεις του state.
       // 3. Μετακινώντας δεξιά την τιμή val, πηγαίνει στην θέση offset.
-      // 4. Κάνοντας | μεταφέρουμε αυτή την τιμή στο state. 
+      // 4. Κάνοντας |= (val << offset) μεταφέρουμε αυτή την τιμή στο state. 
       state &= ~(_111 << offset);
       state |= (val << offset);
    }
@@ -114,27 +116,27 @@ void compare_and_add(map<State, tuple<int, long, long> >& next, vector<pair<int,
 
 const int CP = 0, P = 1, RP = 2, CRP = 3;
 
-string solve(vector<long>& v) {
+string solve(vector<int>& x) {
   map<State, tuple<int /* order ID */, long /* state ID */, long /* length */> > next;
   vector<pair<int /* operation ID */, long /* ordered ID */> > par;
   set<tuple<int /* order ID */, long /* state ID */, long /* length */, State> > ordered_current;
   // Κατάσταση cp (πρώτη λεξικογραφικά).
-  State cp_state; cp_state.append_right(3 - v[0]); cp_state.toggle_complement();
+  State cp_state; cp_state.append_right(3 -x[0]); cp_state.toggle_complement();
   ordered_current.insert(make_tuple(0, 0, 2, cp_state));
   par.push_back({par.size(), -1});
   // Κατάσταση p.
-  State p_state; p_state.append_right(v[0]);
+  State p_state; p_state.append_right(x[0]);
   ordered_current.insert(make_tuple(1, 1, 1, p_state));
   par.push_back({par.size(), -1});
   // Δεν έχει νόημα να κάνουμε rp στην αρχή.
   
-  for (size_t i = 1; i < v.size(); ++i) {
+  for (size_t i = 1; i < x.size(); ++i) {
      long order_id = 0;
     for (const auto cur : ordered_current) {
       const State state = std::get<3>(cur);
       int cur_id = std::get<1>(cur);
       int length = std::get<2>(cur);
-      int current_val = state.complement() ? (3 - v[i]) : v[i];
+      int current_val = state.complement() ? (3 - x[i]) : x[i];
       
       // Complement και push.
       if (state.can_append(3-current_val)) {
@@ -171,14 +173,16 @@ string solve(vector<long>& v) {
     // Λεξικογραφική ταξινόμηση.
     ordered_current.clear();
     for (const auto& val : next) {
-       ordered_current.insert(make_tuple(std::get<0>(val.second), std::get<1>(val.second), std::get<2>(val.second), val.first));
+       ordered_current.insert(
+           make_tuple(std::get<0>(val.second), std::get<1>(val.second), std::get<2>(val.second), val.first));
     }
     next.clear();
   }
   
   string str;
   // Εύρεση κατάστασης με την βέλτιστη ακολουθία.
-  long smallest_val = std::get<2>(*ordered_current.begin()), smallest_id = std::get<1>(*ordered_current.begin());
+  long smallest_val = std::get<2>(*ordered_current.begin()),
+       smallest_id = std::get<1>(*ordered_current.begin());
   for (const auto val : ordered_current) {
      if (smallest_val > std::get<2>(val)) {
         smallest_val = std::get<2>(val);
@@ -206,10 +210,10 @@ int main() {
 
    FILE *fo = fopen("pcr.out", "w");
    for (long i = 0; i < T; ++i) {
-      vector<long> v;
+      vector<int> v;
       for (long j = 0; j < N; ++j) {
-         long tmp;
-         fscanf(fi, "%ld", &tmp);
+         int tmp;
+         fscanf(fi, "%d", &tmp);
          v.push_back(tmp);
       }
       fputs(solve(v).c_str(), fo);

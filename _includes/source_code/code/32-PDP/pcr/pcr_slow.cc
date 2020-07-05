@@ -71,7 +71,7 @@ void compare_and_add(map<State, string>& mp, State& state, string& val) {
 }
 
 
-string solve(vector<long>& x) {
+string solve(vector<int>& x) {
   map<State, string> current, next;
   State p_state; p_state.appendRight(x[0]);
   current[p_state] = "p";
@@ -138,10 +138,10 @@ int main() {
   
   FILE *fo = fopen("pcr.out", "w");
   for (long i = 0; i < T; ++i) {
-    vector<long> x;
+    vector<int> x;
     for (long j = 0; j < N; ++j) {
-      long tmp;
-      fscanf(fi, "%ld", &tmp);
+      int tmp;
+      fscanf(fi, "%d", &tmp);
       x.push_back(tmp);
     }
     fputs(solve(x).c_str(), fo);
