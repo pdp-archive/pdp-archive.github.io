@@ -1,0 +1,37 @@
+TASK(
+   name = "sumoffew",
+   test_count = 19,
+   files_dir = "testdata/32-PDP/sumoffew/",
+   input_file = "sumoffew.in",
+   output_file ="sumoffew.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "sumoffew-n3",
+         source = "sumoffew-n3.cpp",
+         passes_only = [],
+         lang = "c++",
+         author = PERSON(
+            name = "marsenis",
+         ),
+      ),
+      SOLUTION(
+         name = "sumoffew-n2",
+         source = "sumoffew-n2.cpp",
+         passes_only = [],
+         lang = "c++",
+         author = PERSON(
+            name = "marsenis",
+         ),
+      ),
+      SOLUTION(
+         name = "sumoffew-n",
+         source = "sumoffew-n.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "marsenis",
+         ),
+      ),
+   ]
+)
