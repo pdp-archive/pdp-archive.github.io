@@ -39,9 +39,9 @@ sumoffew:
    testcases_url: ""
    solution: true
    solution_author: "Μάκης Αρσένης"
-   codes_in_git: false
+   codes_in_git: true
    points: 30
-   solution_tags: ["two pointers", "sliding window"]
+   solution_tags: ["two pointers", "sliding window", "map", "hash table"]
 
 supgame:
    full_name: "Η τελευταία πίστα"
