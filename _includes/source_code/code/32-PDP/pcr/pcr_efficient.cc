@@ -52,11 +52,11 @@ struct State {
    
    int rightmost() const { return get_three_bits(1); }
    int leftmost() const { return get_three_bits(1 + 3); }
-   bool complement() const { return state & 1; }
+   bool is_complemented() const { return state & 1; }
    
    void set_rightmost(int val) { set_three_bits(1, val); }
    void set_leftmost(int val) { set_three_bits(1 + 3, val); }
-   void toggle_complement() { state ^= 1; }
+   void flip_complemented() { state ^= 1; }
    
    int count() const {
       int offset = 1 + 3 + 3 + 12;
@@ -121,7 +121,7 @@ string solve(vector<int>& x) {
   vector<pair<int /* operation ID */, long /* ordered ID */> > par;
   set<tuple<int /* order ID */, long /* state ID */, long /* length */, State> > ordered_current;
   // Κατάσταση cp (πρώτη λεξικογραφικά).
-  State cp_state; cp_state.append_right(3 -x[0]); cp_state.toggle_complement();
+  State cp_state; cp_state.append_right(3 -x[0]); cp_state.flip_complemented();
   ordered_current.insert(make_tuple(0, 0, 2, cp_state));
   par.push_back({par.size(), -1});
   // Κατάσταση p.
@@ -136,19 +136,19 @@ string solve(vector<int>& x) {
       const State state = std::get<3>(cur);
       int cur_id = std::get<1>(cur);
       int length = std::get<2>(cur);
-      int current_val = state.complement() ? (3 - x[i]) : x[i];
+      int current_val = state.is_complemented() ? (3 - x[i]) : x[i];
       
       // Complement και push.
       if (state.can_append(3-current_val)) {
          State new_state = state;
          new_state.append_right(3-current_val);
-         new_state.toggle_complement();
+         new_state.flip_complemented();
          compare_and_add(next, par, new_state, order_id, length + 2, cur_id, CP);
       }
       
       // Complement, reverse και push.
       State complement_reverse_state = state.reverse();
-      complement_reverse_state.toggle_complement();
+      complement_reverse_state.flip_complemented();
       if (complement_reverse_state.can_append(3 - current_val)) {
          complement_reverse_state.append_right(3 - current_val);
          compare_and_add(next, par, complement_reverse_state, order_id, length + 3, cur_id, CRP);

@@ -13,7 +13,7 @@ struct State {
    int rightmost;
    int leftmost;
    int count;
-   bool complement;
+   bool is_complemented;
    
    State reverse() const {
       State other = *this;
@@ -44,7 +44,7 @@ struct State {
       if (rightmost != other.rightmost) return rightmost < other.rightmost;
       if (leftmost != other.leftmost) return leftmost < other.leftmost;
       if (count != other.count) return count < other.count;
-      if (complement != other.complement) return complement < other.complement;
+      if (is_complemented != other.is_complemented) return is_complemented < other.is_complemented;
       return positions < other.positions;
    }
    
@@ -52,7 +52,7 @@ struct State {
       positions.push_back(0); positions.push_back(0); positions.push_back(0); positions.push_back(0);
       leftmost = rightmost = -1;
       count = 0;
-      complement = false;
+      is_complemented = false;
    }
 };
 
@@ -70,7 +70,7 @@ string solve(vector<int>& x) {
   vector<pair<int /* operation ID */, long /* ordered ID */> > par;
   set<tuple<int /* order ID */, long /* state ID */, long /* length */, State> > ordered_current;
   // Κατάσταση cp (πρώτη λεξικογραφικά).
-  State cp_state; cp_state.append_right(3 - x[0]); cp_state.complement = true;
+  State cp_state; cp_state.append_right(3 - x[0]); cp_state.is_complemented = true;
   ordered_current.insert(make_tuple(0, 0, 2, cp_state));
   par.push_back({par.size(), -1});
   // Κατάσταση p.
@@ -85,19 +85,19 @@ string solve(vector<int>& x) {
       const State state = std::get<3>(cur);
       int cur_id = std::get<1>(cur);
       int length = std::get<2>(cur);
-      int current_val = state.complement ? (3 - x[i]) : x[i];
+      int current_val = state.is_complemented ? (3 - x[i]) : x[i];
       
       // Complement και push.
       if (state.can_append(3-current_val)) {
          State new_state = state;
          new_state.append_right(3-current_val);
-         new_state.complement = !new_state.complement;
+         new_state.is_complemented = !new_state.is_complemented;
          compare_and_add(next, par, new_state, order_id, length + 2, cur_id, CP);
       }
       
       // Complement, reverse και push.
       State complement_reverse_state = state.reverse();
-      complement_reverse_state.complement = !complement_reverse_state.complement;
+      complement_reverse_state.is_complemented = !complement_reverse_state.is_complemented;
       if (complement_reverse_state.can_append(3 - current_val)) {
          complement_reverse_state.append_right(3 - current_val);
          compare_and_add(next, par, complement_reverse_state, order_id, length + 3, cur_id, CRP);

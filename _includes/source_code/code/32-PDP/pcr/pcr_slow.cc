@@ -12,7 +12,7 @@ struct State {
    int rightmost;
    int leftmost;
    int count;
-   bool complement;
+   bool is_complemented;
    
    State reverse() const {
       State other = *this;
@@ -44,7 +44,7 @@ struct State {
       if (rightmost != other.rightmost) return rightmost < other.rightmost;
       if (leftmost != other.leftmost) return leftmost < other.leftmost;
       if (count != other.count) return count < other.count;
-      if (complement != other.complement) return complement < other.complement;
+      if (is_complemented != other.is_complemented) return is_complemented < other.is_complemented;
       return positions < other.positions;
    }
    
@@ -52,7 +52,7 @@ struct State {
       positions.push_back(0); positions.push_back(0); positions.push_back(0); positions.push_back(0);
       leftmost = rightmost = -1;
       count = 0;
-      complement = false;
+      is_complemented = false;
    }
 };
    
@@ -75,7 +75,7 @@ string solve(vector<int>& x) {
   map<State, string> current, next;
   State p_state; p_state.appendRight(x[0]);
   current[p_state] = "p";
-  State cp_state; cp_state.appendRight(3 - x[0]); cp_state.complement = true;
+  State cp_state; cp_state.appendRight(3 - x[0]); cp_state.is_complemented = true;
   current[cp_state] = "cp";
   // Δεν έχει νόημα να κάνουμε rp στην αρχή.
   
@@ -83,7 +83,7 @@ string solve(vector<int>& x) {
     for (auto& state_and_sequence : current) {
       const auto& state = state_and_sequence.first;
       const auto& sequence = state_and_sequence.second;
-      int current_val = state.complement ? (3 - x[i]) : x[i];
+      int current_val = state.is_complemented ? (3 - x[i]) : x[i];
       
       // Push.
       if (state.canAppend(current_val)) {
@@ -105,7 +105,7 @@ string solve(vector<int>& x) {
          string new_sequence = sequence + "cp";
          State new_state = state;
          new_state.appendRight(3-current_val);
-         new_state.complement = !new_state.complement;
+         new_state.is_complemented = !new_state.is_complemented;
          compare_and_add(next, new_state, new_sequence);
       }
       
@@ -114,7 +114,7 @@ string solve(vector<int>& x) {
       if (complement_and_reverse_state.canAppend(3-current_val)) {
          string new_sequence = sequence + "crp";
          complement_and_reverse_state.appendRight(3-current_val);
-         complement_and_reverse_state.complement = !complement_and_reverse_state.complement;
+         complement_and_reverse_state.is_complemented = !complement_and_reverse_state.is_complemented;
          compare_and_add(next, complement_and_reverse_state, new_sequence);
       }
     }
