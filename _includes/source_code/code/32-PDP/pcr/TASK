@@ -1,15 +1,15 @@
 TASK(
    name = "pcr",
-   test_count = 2,
+   test_count = 20,
    files_dir = "testdata/32-PDP/pcr/",
    input_file = "pcr.in",
    output_file = "pcr.out",
-   time_limit = 10,
+   time_limit = 2,
    solutions = [
       SOLUTION(
         name = "pcr_slow",
         source = "pcr_slow.cc",
-        passes_all,
+        passes_up_to = 14,
         lang = "c++",
         author = PERSON(
            name = "dim131",
@@ -18,7 +18,7 @@ TASK(
       SOLUTION(
         name = "pcr_semi_efficient",
         source = "pcr_semi_efficient.cc",
-        passes_all,
+        passes_up_to = 15,
         lang = "c++",
         author = PERSON(
            name = "dim131",

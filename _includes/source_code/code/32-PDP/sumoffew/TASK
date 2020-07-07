@@ -1,6 +1,6 @@
 TASK(
    name = "sumoffew",
-   test_count = 19,
+   test_count = 25,
    files_dir = "testdata/32-PDP/sumoffew/",
    input_file = "sumoffew.in",
    output_file ="sumoffew.out",
@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "sumoffew-n3",
          source = "sumoffew-n3.cpp",
-         passes_only = [],
+         passes_up_to = 13,
          lang = "c++",
          author = PERSON(
             name = "marsenis",
@@ -18,7 +18,7 @@ TASK(
       SOLUTION(
          name = "sumoffew-n2",
          source = "sumoffew-n2.cpp",
-         passes_only = [],
+         passes_all_except_for = [15,16,17,18,19,21,22,23,24,25],
          lang = "c++",
          author = PERSON(
             name = "marsenis",
