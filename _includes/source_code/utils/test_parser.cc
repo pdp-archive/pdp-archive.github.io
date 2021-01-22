@@ -13,12 +13,12 @@
 
 const bool kPrintTaskFile = false;
 const bool kPrintDebugStatements = false;
-const bool kDoNotPrintForPascal = true;
+const bool kDoNotPrintForPascal = false;
 
 std::map<std::string, std::string> compilation_commands({
    { "c++", "g++ -O2 -DCONTEST -s -static -lm -w" },
    { "c", "gcc -std=c99 -O2 -DCONTEST -s -static -lm -w" },
-   { "pas", "gpc -O2 -DCONTEST -s" }
+   { "pas", "fpc -O2 -dCONTEST -XS" }
 });
 
 struct TopLevel {
@@ -602,7 +602,6 @@ struct ScriptBuilder {
       
       std::string raw_output = task->output_file;
       std::string template_output_file = task->files_dir + raw_output + '#';
-      std::string source = task->source_directory + "/" + solution->source;
       
       
       if (compilation_commands.find(solution->lang) == compilation_commands.end()) {
@@ -627,7 +626,16 @@ struct ScriptBuilder {
          }
          code += ")\n";
       }
-      code += "run_test '" + template_input_file + "' '" + template_output_file + "' '" + raw_input + "' '" + raw_output + "' '" + source + "' " + std::to_string(task->time_limit) + " '" + compilation_commands[solution->lang] + "' \"${array[@]}\" \n";
+      code += "run_test '" + 
+         template_input_file + "' '" + 
+         template_output_file + "' '" + 
+         raw_input + "' '" + 
+         raw_output + "' '" + 
+         task->source_directory + "/' '" + 
+         solution->source + "' " + 
+         std::to_string(task->time_limit) + " '" + 
+         compilation_commands[solution->lang] + 
+         "' \"${array[@]}\" \n";
    }
    
    std::string getCode() {
