@@ -37,6 +37,24 @@ TASK(
          ),
       ),
       SOLUTION(
+         name = "scidinner_efficient_iterative",
+         source = "scidinner_efficient_iterative.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "scidinner_efficient_recursive",
+         source = "scidinner_efficient_recursive.cc",
+         passes_all_except_for = [13, 14, 15, 16],
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
          name = "scidinner_complicated_iterative",
          source = "scidinner_complicated_iterative.cc",
          passes_up_to = 15,
