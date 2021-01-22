@@ -62,7 +62,7 @@ function run_test() {
          echo -e "         [\e[93mtimeout\e[0m] Test $i"
          did_fail="true"
       else
-         result=$(diff --strip-trailing-cr ../$norm2 $fixed_out_name | head -c 200)
+         result=$(diff --strip-trailing-cr --ignore-trailing-space ../$norm2 $fixed_out_name | head -c 200)
          # Check that output file was produced and was correct.
          if [[ "$result" != '' || ! -f $fixed_out_name ]]; then 
             echo -e "         [\e[31mwrong\e[0m] Test $i:"
