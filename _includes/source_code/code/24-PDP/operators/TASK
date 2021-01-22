@@ -29,7 +29,7 @@ TASK(
       SOLUTION(
          name = "operators_official_pas",
          source = "operators_official.pas",
-         passes_all,
+         passes_up_to = 7,
          lang = "pas",
          author = PERSON(
             name = "Κουλας Ιασωνας",

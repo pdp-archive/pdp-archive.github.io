@@ -27,7 +27,7 @@ TASK(
       SOLUTION(
          name = "profit_official_pas",
          source = "profit_official.pas",
-         passes_all,
+         passes_all_except_for = [10, 11],
          lang = "pas",
          author = PERSON(
             name = "Αλέξανδρος Μπιμπίκος",
