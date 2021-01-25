@@ -1,3 +1,4 @@
+{% capture cap_content %}
 {% for problem_it in contest %}
   {% assign problem = problem_it[1] %}
   {% assign codename = problem_it[0] %}
@@ -12,3 +13,9 @@
 {% if problem.codes_in_git == true and problem.codes_url <> '' %}[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: codename }} {% else %} {{ problem.codes_url }} {% endif %} ) {% else %} κώδικες {% endif %}
   {% endif %}
 {% endfor %}
+{% endcapture %}
+{% assign cap_content_no_new_lines = cap_content | strip_newlines | remove: " " %}
+{% if cap_content_no_new_lines != "" %}
+## {{include.stage_title}}
+{{cap_content}}
+{% endif %}
