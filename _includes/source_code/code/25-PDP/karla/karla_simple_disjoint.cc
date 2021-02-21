@@ -1,12 +1,12 @@
 #include <cstdio>
 #include <cassert>
-#include <set>
 
 using namespace std;
 const int MAXN = 101;
 int N,M;
 bool Z[MAXN][MAXN];//κελιά (true αν μη πλημμυρισμένο)
 int dj[MAXN*MAXN];//disjoint set.
+bool leader[MAXN*MAXN];//για την καταμέτηση των ομάδων
 
 inline int xy(int x,int y){//μετέτρεψε τις δυο διαστάσεις σε μία
     return y*N + x;
@@ -24,6 +24,20 @@ void dj_union(int a,int b){//ένωσε τις δυο ομάδες
     assert(a>=0 && b>=0);//πρέπει να έχουν εκπρόσωπο
     if(a!=b)//δεν έχουν τον ίδιο εκπρόσωπο
         dj[b] = a;//κάνε τον a, εκπρόσωπο του b
+}
+
+int dj_count(){
+    int ans = 0;
+    for(int i=0,k=N*N;i<k;i++){
+        if(dj[i]>=0){
+            int leader1 = dj_find(i);
+            if(!leader[leader1]){
+                leader[leader1]=true;
+                ans++;
+            }
+        }
+    }
+    return ans;
 }
 
 int main(){
@@ -53,11 +67,6 @@ int main(){
         }
     }
 
-    set<int> S;
-    for(int i=0;i<N*N;i++)
-        if(dj[i]>=0)
-            S.insert(dj_find(i));
-
-    printf("%d\n",S.size());
+    printf("%d\n",dj_count());
     return 0;
 }
