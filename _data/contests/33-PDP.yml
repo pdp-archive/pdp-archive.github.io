@@ -7,3 +7,13 @@ bankacc:
    solution: false
    codes_in_git: false
    solution_tags: []
+
+fairmaze:
+   full_name: "Ο Δίκαιος Λαβύρινθος"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1Yr3UE44lWdpAXG6MDC8CVElsk-bux_wt/view?usp=sharing"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   solution_tags: []
