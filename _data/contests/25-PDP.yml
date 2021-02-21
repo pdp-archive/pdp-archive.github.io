@@ -18,7 +18,7 @@ karla:
    solution: true
    solution_author: "Δημήτρης Λως"   
    codes_in_git: true
-   solution_tags: ["bfs", "dfs", "flood fill"]
+   solution_tags: ["bfs", "dfs", "flood fill", "disjoint set"]
 
 scidinner:
    full_name: "Οι μυστικοί αριθμοί"
