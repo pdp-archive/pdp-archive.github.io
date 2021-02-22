@@ -24,13 +24,9 @@ codename: karla
 
 Στη συνέχεια θα δούμε δύο λύσεις που εντοπίζουν συνεκτικά τμήματα στο γράφο μας, η μία πρώτη λύση βασίζεται στην αναζήτηση κατά βάθος και η επόμενη στη δομή δεδομένων union-find. Και οι δύο περνάνε όλα τα testcases.
 
-<<<<<<< HEAD
-
-=======
 <center>
 <img alt="Γράφος παραδείγματος" src="/assets/25-pdp-b-karla-graph-example.svg" width="400px">
 </center>
->>>>>>> 0aa62ed5ad98c120906b86725d39ae2831324823
 
 ## Αναζήτηση κατά βάθος
 
@@ -46,11 +42,7 @@ codename: karla
 
 Η γραμμική υλοποίηση χρησιμοποιεί μία στοίβα:
 
-<<<<<<< HEAD
 {% include code.md solution_name='karla_efficient_iterative.cc' %}
-=======
-{% include code.md solution_name='karla_efficient_iterative.cc' start=16 end=42 %}
->>>>>>> 0aa62ed5ad98c120906b86725d39ae2831324823
 
 Μπορούμε να απλοποίησουμε τον έλεγχο των γειτονικών κελιών κρατώντας τις τέσσερις πιθανές διευθύνσεις σε έναν πίνακα:
 
