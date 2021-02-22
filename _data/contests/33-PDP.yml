@@ -8,6 +8,16 @@ bankacc:
    codes_in_git: false
    solution_tags: []
 
+twingift:
+   full_name: "Τα δώρα των διδύμων"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1OBZDu3sGeu0hOgGokHjdgwtJLKvsPzmd/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   solution_tags: []
+
 fairmaze:
    full_name: "Ο Δίκαιος Λαβύρινθος"
    stage: "blyk"
