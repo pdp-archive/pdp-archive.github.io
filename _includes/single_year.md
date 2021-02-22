@@ -4,21 +4,13 @@
 
 {% capture md %}
 
-## Α' Φάση
+{% include single_stage.md stage="a" stage_title="Α' Φάση" %}
 
-{% include single_stage.md stage="a" %}
+{% include single_stage.md stage="bgym" stage_title="Β' Φάση γυμνασίου" %}
 
-## Β' Φάση γυμνασίου
+{% include single_stage.md stage="blyk" stage_title="Β' Φάση λυκείου" %}
 
-{% include single_stage.md stage="bgym" %}
-
-## Β' Φάση λυκείου
-
-{% include single_stage.md stage="blyk" %}
-
-## Γ' Φάση
-
-{% include single_stage.md stage="c" %}
+{% include single_stage.md stage="c" stage_title="Γ' Φάση" %}
 
 {% endcapture %}
 {{ md | markdownify }}
