@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <cassert>
 //using namespace std;
 
 const int MAXN = 101;
@@ -21,7 +20,6 @@ int dj_find(int xy){//βρες τον εκπρόσωπο του x,y
 
 void dj_union(int a,int b){//ένωσε τις δυο ομάδες
     a = dj_find(a), b = dj_find(b);
-    assert(a>=0 && b>=0);//πρέπει να έχουν εκπρόσωπο
     if(a!=b)//δεν έχουν τον ίδιο εκπρόσωπο
         dj[b] = a;//κάνε τον a, εκπρόσωπο του b
 }
