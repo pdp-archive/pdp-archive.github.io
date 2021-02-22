@@ -1,9 +1,8 @@
 #include <cstdio>
-#include <cassert>
+//using namespace std;
 
-using namespace std;
 const int MAXN = 101;
-int N, M, ans, sector_id;
+int N, M, ans;
 bool Z[MAXN][MAXN];//κελιά (true αν μη πλημμυρισμένο)
 int dj[MAXN*MAXN];//disjoint set.
 
@@ -17,17 +16,17 @@ int dj_find(int xy){//βρες τον εκπρόσωπο του xy
     return dj[xy] = dj_find(dj[xy]);
 }
 
-void dj_union(int a,int b){//ένωσε τις δυο ομάδες
+bool dj_union(int a,int b){//ένωσε τα δυο set
     a = dj_find(a), b = dj_find(b);
     if(a!=b){//δεν έχουν τον ίδιο εκπρόσωπο
         dj[b] = a;//κάνε τον a, εκπρόσωπο του b
-        ans--;//έγινε ένωση. Μειώθηκε ο αριθμός των ομάδων
+        return true;//έγινε συνέωση
     }
+    return false;//ανήκουν στο ίδιο set
 }
 
-void dj_create(int xy){//δημιουργήθηκε μια νεα ομάδα με το κελί αυτό
+inline void dj_create(int xy){//δημιουργήθηκε ένα νέο set με το κελί αυτό
     dj[xy] = xy;
-    ans++;
 }
 
 int main(){
@@ -48,11 +47,13 @@ int main(){
                 continue;
             
             dj_create(xy(x,y));
+            ans++;
             
-            if(x>0 && Z[x-1][y])
-                dj_union(xy(x,y),xy(x-1,y));
-            if(y>0 && Z[x][y-1])
-                dj_union(xy(x,y),xy(x,y-1));
+            if(x>0 && Z[x-1][y] && dj_union(xy(x,y),xy(x-1,y)))
+                ans--;
+            
+            if(y>0 && Z[x][y-1] && dj_union(xy(x,y),xy(x,y-1)))
+                ans--;
         }
     }
     printf("%d\n",ans);

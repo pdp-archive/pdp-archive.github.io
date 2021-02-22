@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cassert>
+//using namespace std;
 
-using namespace std;
 const int MAXN = 101;
 int N,M;
 bool Z[MAXN][MAXN];//κελιά (true αν μη πλημμυρισμένο)
@@ -54,8 +54,8 @@ int main(){
 
     for(int y=0;y<N;y++){
         for(int x=0;x<N;x++){
-            if(!Z[x][y]){ //πλημμυρισμένο κελί, αγνόησε το
-                dj[xy(x,y)] = -1;
+            if(!Z[x][y]){ //πλημμυρισμένο κελί,
+                dj[xy(x,y)] = -1;//να μην έχει εκπρόσωπο
                 continue;
             }
             dj[xy(x,y)] = xy(x,y);//κάνε το εκπρόσωπο του εαυτού του
