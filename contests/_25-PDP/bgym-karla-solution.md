@@ -76,4 +76,4 @@ codename: karla
 {% include code.md solution_name='karla_efficient_disjoint.cc' %}
 
 
-[^1]: Οι λειτουργίες union και find της union-find, χρειάζονται χρόνο $$\mathcal{O}(\alpha(N^2))$$ ανα κλήση σε ένα δάσος $$\mathit{N^2}$$ κόμβων σαν αυτό της άσκησης. Με $$\alpha(n))$$ συμβολίζουμε μια εξαιρετικά μικρής αύξησης ως προς το $$\mathit{n}$$, [αντίστροφη συνάρτηση Ackermann](https://en.wikipedia.org/wiki/Ackermann_function#Inverse).
+[^1]: Οι λειτουργίες union και find της union-find που χρησιμοποιούν συμπύκνωση μονοπατιών, χρειάζονται χρόνο $$\mathcal{O}(\alpha(N^2))$$ ανα κλήση σε ένα δάσος $$N^2$$ κόμβων σαν αυτό της άσκησης. Με $$\alpha(n)$$ συμβολίζουμε την εξαιρετικά μικρής αύξησης ως προς το $$n$$, [αντίστροφη συνάρτηση Ackermann](https://en.wikipedia.org/wiki/Ackermann_function#Inverse). Ενδεικτικά του ρυθμού αύξησης, το $$\alpha(9876 !)=5$$. Στην πράξη, ο χρόνος στις συναρτήσεις union και find είναι σχεδόν γραμμικός λόγω του ότι το $$\alpha(n)\le 3$$ για οποιοδήποτε $$n$$ μπορεί να προκύψει στην πράξη [ανφ.R.Tarjan](http://encyclopediaofmath.org/index.php?title=Ackermann_function&oldid=49989).
