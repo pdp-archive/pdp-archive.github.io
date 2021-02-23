@@ -12,8 +12,8 @@ int main() {
    long total = 0;
    for (long i = 1; i <= N; ++i) {
       fscanf(fi, "%ld", &A[i]);
-	  A[i+N] = A[i];
-	  total += A[i];
+      A[i+N] = A[i];
+      total += A[i];
    }
    fclose(fi);
    
@@ -25,13 +25,13 @@ int main() {
    // για κάθε δυνατή αρχή i.
    for (long i = 1; i <= N; ++i) {
        sum -= A[i - 1];
-	   // Το j μπορεί να αυξηθεί το πολύ 2N φορές.
-	   while (j < i + N && sum + A[j] <= target) {
-           sum += A[j];
-		   ++j;
-	   }		   
-	   long other_sum = total - sum;
-	   min_diff = std::min(min_diff, std::abs(sum - other_sum));
+      // Το j μπορεί να αυξηθεί το πολύ 2N φορές.
+      while (j < i + N && sum + A[j] <= target) {
+         sum += A[j];
+         ++j;
+      }         
+      long other_sum = total - sum;
+      min_diff = std::min(min_diff, std::abs(sum - other_sum));
    }
    
    FILE *fo = fopen("kalanta.out", "w");
