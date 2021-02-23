@@ -62,7 +62,7 @@ pcr:
    statement_md: true
    testcases_url: ""
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 40
    solution_tags: ["dp", "bitwise operations", "set", "map"]

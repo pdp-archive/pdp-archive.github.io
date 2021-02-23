@@ -5,7 +5,7 @@ domes:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XVjRhhf_EW2zRjPmbPpjzwCEy_zcY0NJ"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    solution_tags: ["graphs", "counting sort"]
    
@@ -16,7 +16,7 @@ ensemble:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["precision", "sorting"]
 
@@ -27,7 +27,7 @@ solar:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["line sweep"]
 
@@ -38,7 +38,7 @@ sumpair:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
    solution_tags: ["set", "hash table", "two pointers", "sorting"]
@@ -50,7 +50,7 @@ roadwork:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
    solution_tags: ["intervals", "sorting", "counting sort", "binary search"]
@@ -62,7 +62,7 @@ numbase:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
    solution_tags: ["number theory", "modulo", "binary search", "number bases", "divisibility", "factorisation"]
