@@ -5,7 +5,7 @@ function:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZpfW5pF_ISWAh_DdtZO4d124HyGd-y74"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
    solution_tags: ["primes", "prime factorisation", "sieve of Eratosthenes", "divisibility"]
