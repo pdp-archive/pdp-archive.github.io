@@ -37,7 +37,7 @@ codename: aces
 
 Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_bin_representation_slow.cc).
 
-**Μέθοδος 2η:** Μπορούμε να αντικαταστήσουμε τα `/ 2` και το `%2` με τα bitwise operations `& 1` και `<< 1`, ώστε ο κώδικας να γίνει λίγο πιο αποδοτικός (καμία φορά ο compiler κάνει αυτή την αντικατάσταση).
+**Μέθοδος 2η:** Μπορούμε να αντικαταστήσουμε τα `/ 2` και το `%2` με τα bitwise operations `& 1` και `<< 1`, ώστε ο κώδικας να γίνει λίγο πιο αποδοτικός (συνήθως ο compiler κάνει αυτή την αντικατάσταση).
 
 {% include code.md solution_name='aces_bin_representation_fast.cc' start=3 end=10 %}
 
@@ -55,6 +55,6 @@ codename: aces
 
 Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_precompute.cc).
 
-**Σημείωση:** Θα μπορούσαμε να είχαμε προϋπολογίσει έως το $$2^{16} - 1$$, με τον precompute χρόνο και τη μνήμη να είναι μεγαλύτερος, αλλά για  `count_bits` ο χρόνος να είναι μικρότερος.
+**Σημείωση:** Θα μπορούσαμε να είχαμε προϋπολογίσει έως το $$2^{16} - 1$$, με τον precompute χρόνο και τη μνήμη να είναι μεγαλύτερος, αλλά για την `count_bits` ο χρόνος να είναι μικρότερος.
 
 Μερικές ακόμα μεθόδους μπορείτε να βρείτε [εδώ](https://en.wikipedia.org/wiki/Hamming_weight#Efficient_implementation).
