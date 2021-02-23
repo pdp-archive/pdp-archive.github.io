@@ -1,19 +1,23 @@
 #include <algorithm>
 #include <stdio.h>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
-long A[MAXN * 2 + 2];
+long a[MAXN + 1];
+long N;
+
+long A(long i) {
+   if (i <= N) return a[i];
+   return a[i - N];
+}   
 
 int main() {
-   long N;
    FILE *fi = fopen("kalanta.in", "r");
    fscanf(fi, "%ld", &N);
    long total = 0;
    for (long i = 1; i <= N; ++i) {
-      fscanf(fi, "%ld", &A[i]);
-      A[i+N] = A[i];
-      total += A[i];
+      fscanf(fi, "%ld", &a[i]);
+      total += a[i];
    }
    fclose(fi);
    
@@ -24,10 +28,10 @@ int main() {
    // Βρίσκουμε το μεγαλύτερο άθροισμα (μικρότερο ή ίσο από total/2)
    // για κάθε δυνατή αρχή i.
    for (long i = 1; i <= N; ++i) {
-       sum -= A[i - 1];
+      sum -= A(i - 1);
       // Το j μπορεί να αυξηθεί το πολύ 2N φορές.
-      while (j < i + N && sum + A[j] <= target) {
-         sum += A[j];
+      while (j < i + N && sum + A(j) <= target) {
+         sum += A(j);
          ++j;
       }         
       long other_sum = total - sum;
