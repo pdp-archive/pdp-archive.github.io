@@ -1,41 +1,73 @@
+export CYGWIN="winsymlinks:native"
+
 function run_test() {
-   # arg 1 : testdata directory template input name
-   # arg 2 : template output name
-   # arg 3 : fixed input name
-   # arg 4 : fixed output name
-   # arg 5 : code location
-   # arg 6 : time limit
-   # arg 7 : compilation command
-   # arg 8 : array of tests to execute
+   testcase_inp_template_name=$1
+   testcase_out_template_name=$2
+   fixed_inp_name=$3
+   fixed_out_name=$4
+   code_dir=$5
+   code_filename=$6
+   time_limit=$7
+   compilation_command=$8
    #  sed -i 's/\r//' test_functions.sh
+   # Step 1: Clear the tmp/ directory.
+   if [[ -x tmp/ ]]; then
+      rm -r tmp/
+   fi;
    mkdir tmp/
    cd tmp/
-   arr=("$@")
-   echo -e "      Compiling.."
-   $7 ../$5 -o executable
+   # Check if the compiler exists otherwise skip the test.
+   compiler="${compilation_command%% *}"
+   if [[! command -v "$compiler" &> /dev/null]];
+   then
+       echo -e "      Done [\e[33mSKIP\e[0m - compiler "$compiler" not found]\n"
+       return 0
+   fi;
    
+   # Step 2: Compile the executable.
+   echo -e "      Compiling.."
+   comp_result=$($8 ../$5$6 -oexecutable)
+   
+   if [[ ! -x ./executable ]]; then
+      # Check if executable is present in source dir (pascal)
+      if [[ ! -x ../$code_dir/executable ]]; then
+         echo -e "      \e[31mExecutable not produced\e[0m"
+         echo -e "      Compiler exited with:"
+         echo "${comp_result}"
+         cd ../
+         rm -r tmp/
+         return 0
+      else
+         # Object files need to be moved for Pascal.
+         mv ../$code_dir/executable .
+         mv ../$code_dir/${code_filename%.*}.o .
+      fi;
+   fi
+   
+   # Step 3: Run the test cases.
    echo -e "      Running the testcases.."
    did_fail="false"
-   for i in "${arr[@]:7}";
+   all_arguments_arr=("$@")
+   for i in "${all_arguments_arr[@]:8}";
    do
-      norm1=${1/\#/$i}
-      norm2=${2/\#/$i}
-      cp ../${norm1} $3
-      if [[ ! -x ./executable ]]; then
-         # executable does not exist
+      # Decode the input/output filenames.
+      norm1=${testcase_inp_template_name/\#/$i}
+      norm2=${testcase_out_template_name/\#/$i}
+      # Link the input with the canonical name.
+      ln -sf ../${norm1} $fixed_inp_name
+      # Run the code.
+      timeout $time_limit ./executable
+      # Check that no timeout occurred.
+      if [ "$?" = 124 ]; then
+         echo -e "         [\e[93mtimeout\e[0m] Test $i"
          did_fail="true"
       else
-         timeout $6 ./executable
-         if [ "$?" = 124 ]; then
-            echo -e "         [\e[93mtimeout\e[0m] Test $i"
+         result=$(diff --strip-trailing-cr --ignore-trailing-space ../$norm2 $fixed_out_name | head -c 200)
+         # Check that output file was produced and was correct.
+         if [[ "$result" != '' || ! -f $fixed_out_name ]]; then 
+            echo -e "         [\e[31mwrong\e[0m] Test $i:"
+            echo "           " $result
             did_fail="true"
-         else
-            result=$(diff --strip-trailing-cr ../$norm2 $4 | head -c 200)
-            if [ "$result" != '' ]; then 
-               echo -e "         [\e[31mwrong\e[0m] Test $i:"
-               echo "           " $result
-               did_fail="true"
-            fi;
          fi;
       fi;
    done;
