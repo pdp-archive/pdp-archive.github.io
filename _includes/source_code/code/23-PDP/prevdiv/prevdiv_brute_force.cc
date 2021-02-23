@@ -19,6 +19,7 @@ int main() {
          for (long j = 0; j <= i - 1; ++j){
             if (A[i] % A[j] != 0) {
                found_counterexample = true;
+               break;
             }
          }
          if (!found_counterexample) {
