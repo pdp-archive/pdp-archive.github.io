@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/25-PDP/scidinner/",
    input_file = "scidinner.in",
    output_file = "scidinner.out",
-   time_limit = 1,
+   time_limit = 1.9,
    solutions = [
       SOLUTION(
          name = "scidinner_official_cpp",
