@@ -71,9 +71,9 @@ codename: karla
 <img alt="Γράφος παραδείγματος" src="/assets/25-pdp-b-karla-graph-disjoint1.svg" width="180px">
 </center>
 
-Η συνένωση των ομάδων γίνεται σε σταθερό χρόνο[^1] και δεν αλλάζει την ασυμπτωτική πολυπλοκότητα της λύσης.
+Η αναζήτηση εκπροσώπου και η συνένωση ομάδων, γίνεται amortized σχεδόν σε σταθερό χρόνο[^1] και δεν αλλάζει την ασυμπτωτική πολυπλοκότητα της λύσης.
 
 {% include code.md solution_name='karla_efficient_disjoint.cc' %}
 
 
-[^1]: Οι λειτουργίες union και find της union-find, χρειάζονται χρόνο $$\mathcal{O}(m\dot \alpha(n))$$ για $$\mathit{m}$$ λειτουργίες union/find σε ένα δάσος $$\mathit{n}$$ κόμβων. Με $$\alpha(n))$$ συμβολίζουμε μια εξαιρετικά μικρής αύξησης ως προς το $$\mathit{n}$$, [αντίστροφη συνάρτηση Ackermann](https://en.wikipedia.org/wiki/Ackermann_function#Inverse)
+[^1]: Οι λειτουργίες union και find της union-find, χρειάζονται χρόνο $$\mathcal{O}(\alpha(N^2))$$ ανα κλήση σε ένα δάσος $$\mathit{N^2}$$ κόμβων σαν αυτό της άσκησης. Με $$\alpha(n))$$ συμβολίζουμε μια εξαιρετικά μικρής αύξησης ως προς το $$\mathit{n}$$, [αντίστροφη συνάρτηση Ackermann](https://en.wikipedia.org/wiki/Ackermann_function#Inverse).
