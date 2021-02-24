@@ -11,6 +11,15 @@
   {% assign stage_name = "Α' Φάση" %}
 {% endif %}
 {% assign title = page.contest | append: " " | append: stage_name | append: ": " | append: task.full_name | append: " (" | append: page.codename | append: ") - Λύση" %}
+{% comment %} προσφώνηση Συγγραφέα (στον ενικό, πληθυντικό ή καθόλου) {% endcomment %}
+{% assign contr_tmp = task.solution_author|strip %}
+{% if task.solution_author contains "," %}
+  {% assign contrib_pronounciation = "Συγγραφείς:" %}
+{% elsif contr_tmp == "" %}
+  {% assign contrib_pronounciation = "" %}
+{% else %}
+  {% assign contrib_pronounciation = "Συγγραφέας:" %}
+{% endif %}
 <html>
   <head>
     <meta charset="utf-8">
@@ -28,7 +37,7 @@
     </div>
     <div id="post"> 
       <h1 class="title">{{ title }}</h1>
-      <div class="author_container"> <span class="author">Συγγραφέας:</span> {{ task.solution_author }}</div>
+      <div class="author_container"> <span class="author">{{ contrib_pronounciation }}</span> {{ task.solution_author }}</div>
       {{ content }}
     </div>
   </div>
