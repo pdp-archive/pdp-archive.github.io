@@ -25,7 +25,7 @@
   2. Θα χρειαστείτε και εγκατάσταση του gem jekyll-redirect-from. Πx σε ubuntu αρκεί η εντολή ```gem install jekyll-redirect-from```
   3. Κάντε clone αυτό το repository σας στον υπολογιστή σας. (Αν τώρα ξεκινάτε με το GitHub, δείτε [αυτό](https://guides.github.com/activities/hello-world/).) Το μόνο που χρειάζεται να μάθετε είναι τι σημαίνει clone, commit, pull και merge)
   4. Πηγαίνετε στο τοπικό directory που κάνατε clone το repository.
-  5. Τρέξτε την εντολή `jekyll serve`.
+  5. Τρέξτε την εντολή `jekyll serve` για να προβάλετε το site από τον υπολογιστή σας ή `jekyll serve --host=0.0.0.0` για να το προβάλετε στους υπολογιστές του LAN σας.
   6. Πηγαίνετε στην σελίδα `localhost:4000` στον browser σας για να δείτε το site.
   7. Κάθε αλλαγή που κάνετε θα ανανεώνεται το site.
   8. Για να το σταματήσετε πατήστε `Ctr+C` και μετά `Y`.  
@@ -75,6 +75,8 @@
 Για να γίνει αυτό, πρέπει να ακολουθήσετε και τις οδηγίες του [`_includes/source_code/README.md`](/_includes/source_code/README.md) ώστε να τεστάρετε ότι η λύση σας είναι σωστή.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/efeb1d69a76e3fe17465c1f619ed2afec911fae7).
+
+Το tag `solution_author: ` επιτρέπει κανέναν (κενό αλφαριθμητικό) ή έναν ή περισσότερους συγγραφείς (ονόματα χωρισμένα με κόμμα στο αλφαριθμητικό).
 
 ### Οδηγίες για την προσθήκη λύσης
 
