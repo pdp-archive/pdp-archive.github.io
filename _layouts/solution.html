@@ -14,11 +14,11 @@
 {% comment %} προσφώνηση Συγγραφέα (στον ενικό, πληθυντικό ή καθόλου) {% endcomment %}
 {% assign contr_tmp = task.solution_author|strip %}
 {% if task.solution_author contains "," %}
-  {% assign contrib_pronounciation = "Συγγραφείς:" %}
+  {% assign contrib_salutation = "Συγγραφείς:" %}
 {% elsif contr_tmp == "" %}
-  {% assign contrib_pronounciation = "" %}
+  {% assign contrib_salutation = "" %}
 {% else %}
-  {% assign contrib_pronounciation = "Συγγραφέας:" %}
+  {% assign contrib_salutation = "Συγγραφέας:" %}
 {% endif %}
 <html>
   <head>
@@ -37,7 +37,7 @@
     </div>
     <div id="post"> 
       <h1 class="title">{{ title }}</h1>
-      <div class="author_container"> <span class="author">{{ contrib_pronounciation }}</span> {{ task.solution_author }}</div>
+      <div class="author_container"> <span class="author">{{ contrib_salutation }}</span> {{ task.solution_author }}</div>
       {{ content }}
     </div>
   </div>
