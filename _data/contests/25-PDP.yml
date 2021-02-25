@@ -16,7 +16,7 @@ karla:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PTgrmmlI5ZHZu14dwurmhy29NMLy9A4B"
    solution: true
-   solution_author: "Κωνσταντίνος Μποκής"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["bfs", "dfs", "flood fill", "union-find"]
 
