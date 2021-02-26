@@ -11,7 +11,7 @@
   {% assign stage_name = "Α' Φάση" %}
 {% endif %}
 {% assign title = page.contest | append: " " | append: stage_name | append: ": " | append: task.full_name | append: " (" | append: page.codename | append: ") - Λύση" %}
-{% comment %} προσφώνηση Συγγραφέα (στον ενικό, πληθυντικό ή καθόλου) {% endcomment %}
+{% comment %} προσφώνηση συγγραφέα (στον ενικό, πληθυντικό ή καθόλου) {% endcomment %}
 {% assign contr_tmp = task.solution_author|strip %}
 {% if task.solution_author contains "," %}
   {% assign contrib_salutation = "Συγγραφείς:" %}
