@@ -78,6 +78,7 @@ public:
    std::string source;
    std::string lang;
 	std::string comment;
+   double special_time_limit = 0.0;
    
    size_t passes_up_to; // TODO: maybe set to default value.
    bool passes_all = false;
@@ -100,6 +101,10 @@ public:
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
       if (attr_name == "passes_up_to") passes_up_to = value;
+   }
+   
+   void setDoubleAttribute(const std::string& attr_name, double value) override {
+      if (attr_name == "special_time_limit") special_time_limit = value;
    }
    
    void setFlagAttribute(const std::string& attr_name) override {
@@ -202,6 +207,7 @@ TopLevel solution_top_level({
    { "lang", STRING_TYPE },
    { "author", PERSON_TYPE },
    { "comment", STRING_TYPE },
+   { "special_time_limit", DOUBLE_TYPE },
 });
 
 TopLevel person_top_level({
@@ -660,6 +666,7 @@ struct ScriptBuilder {
          }
          code += ")\n";
       }
+      double time_limit = solution->special_time_limit == 0.0 ? task->time_limit : solution->special_time_limit;
       code += "run_test '" + 
          template_input_file + "' '" + 
          template_output_file + "' '" + 
@@ -667,7 +674,7 @@ struct ScriptBuilder {
          raw_output + "' '" + 
          task->source_directory + "/' '" + 
          solution->source + "' " + 
-         std::to_string(task->time_limit) + " " + 
+         std::to_string(time_limit) + " " + 
          std::to_string(task->mem_limit) + " '" + 
          compilation_commands[solution->lang] + 
          "' \"${array[@]}\" \n";
