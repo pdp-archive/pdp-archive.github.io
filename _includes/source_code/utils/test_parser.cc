@@ -52,6 +52,7 @@ public:
    // TODO: maybe check that each field is only set once.
    virtual void setStringAttribute(const std::string& attr_name, const std::string& value) { };
    virtual void setCountAttribute(const std::string& attr_name, size_t value) { };
+	virtual void setDoubleAttribute(const std::string& attr_name, double value) { };
    virtual void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) { };
    virtual void setTopLevelAttribute(const std::string& attr_name, AbstractTopLevel * topLevel) { };
    virtual void setListTopLevelAttribute(const std::string& attr_name, std::vector<AbstractTopLevel*> topLevel) { };
@@ -122,7 +123,7 @@ public:
    std::vector<Solution*> solutions;
    std::string input_file;
    std::string output_file;
-   size_t time_limit;
+   double time_limit;
    
    // Automatically populated by the tool.
    std::string source_directory;
@@ -137,7 +138,10 @@ public:
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
       if (attr_name == "test_count") test_count = value;
-      else if (attr_name == "time_limit") time_limit = value;
+   }
+	
+	void setDoubleAttribute(const std::string& attr_name, double value) override {
+      if (attr_name == "time_limit") time_limit = value;
    }
    
    void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) override {
@@ -164,6 +168,7 @@ std::string STRING_TYPE = "string";
 std::string PATH_TYPE = "path";
 std::string COUNT_TYPE = "count";
 std::string FLAG_TYPE = "flag";
+std::string DOUBLE_TYPE = "double";
 
 // Derived types.
 std::string LIST_COUNT = LIST_TYPE + COUNT_TYPE;
@@ -179,7 +184,7 @@ TopLevel task_top_level({
    { "solutions", SOLUTIONS_TYPE },
    { "input_file", STRING_TYPE },
    { "output_file", STRING_TYPE },
-   { "time_limit", COUNT_TYPE },
+   { "time_limit", DOUBLE_TYPE },
 });
 
 TopLevel solution_top_level({
@@ -287,6 +292,17 @@ struct FileReader {
       }
       return count;
    }
+	
+	double readDouble() {
+		try{
+			size_t old_location = location;
+			double value = std::stod(&text[location], &location);
+			location += old_location;
+			return value;
+		} catch (...) {
+		   throw ParsingException(filename + ": Could not parse double.");
+		}
+   }
    
    bool isListType(const std::string& type) {
       return type.substr(0, LIST_TYPE.length()) == LIST_TYPE;
@@ -355,6 +371,9 @@ struct FileReader {
       } else if (type == COUNT_TYPE) {
          size_t value = readCount();
          topLevel->setCountAttribute(name, value);
+      } else if (type == DOUBLE_TYPE) {
+         double value = readDouble();
+         topLevel->setDoubleAttribute(name, value);
       } else if (isListType(type)) {
          processListAttribute(name, type, topLevel);
       } else if (isTopLevelType(type)) {
