@@ -77,6 +77,7 @@ public:
    std::string name;
    std::string source;
    std::string lang;
+	std::string comment;
    
    size_t passes_up_to; // TODO: maybe set to default value.
    bool passes_all = false;
@@ -92,8 +93,9 @@ public:
    
    void setStringAttribute(const std::string& attr_name, const std::string& value) override {
       if (attr_name == "name") name = value;
-     else if (attr_name == "source") source = value;
-     else if (attr_name == "lang") lang = value;
+      else if (attr_name == "source") source = value;
+      else if (attr_name == "lang") lang = value;
+		else if (attr_name == "comment") comment = value;
    }
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
@@ -196,6 +198,7 @@ TopLevel solution_top_level({
    { "passes_only", LIST_COUNT },
    { "lang", STRING_TYPE },
    { "author", PERSON_TYPE },
+   { "comment", STRING_TYPE },
 });
 
 TopLevel person_top_level({
