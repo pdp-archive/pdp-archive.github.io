@@ -8,7 +8,8 @@ function run_test() {
    code_dir=$5
    code_filename=$6
    time_limit=$7
-   compilation_command=$8
+   mem_limit=$8
+   compilation_command=$9
    #  sed -i 's/\r//' test_functions.sh
    # Step 1: Clear the tmp/ directory.
    if [[ -x tmp/ ]]; then
@@ -26,7 +27,7 @@ function run_test() {
    
    # Step 2: Compile the executable.
    echo -e "      Compiling.."
-   comp_result=$($8 ../$5$6 -oexecutable)
+   comp_result=$($compilation_command ../$5$6 -oexecutable)
    
    if [[ ! -x ./executable ]]; then
       # Check if executable is present in source dir (pascal)
@@ -48,7 +49,7 @@ function run_test() {
    echo -e "      Running the testcases.."
    did_fail="false"
    all_arguments_arr=("$@")
-   for i in "${all_arguments_arr[@]:8}";
+   for i in "${all_arguments_arr[@]:9}";
    do
       # Decode the input/output filenames.
       norm1=${testcase_inp_template_name/\#/$i}

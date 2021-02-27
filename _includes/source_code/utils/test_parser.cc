@@ -126,6 +126,7 @@ public:
    std::string input_file;
    std::string output_file;
    double time_limit;
+   size_t mem_limit = 0;
    
    // Automatically populated by the tool.
    std::string source_directory;
@@ -140,6 +141,7 @@ public:
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
       if (attr_name == "test_count") test_count = value;
+      else if (attr_name == "mem_limit") mem_limit = value;
    }
 	
 	void setDoubleAttribute(const std::string& attr_name, double value) override {
@@ -187,6 +189,7 @@ TopLevel task_top_level({
    { "input_file", STRING_TYPE },
    { "output_file", STRING_TYPE },
    { "time_limit", DOUBLE_TYPE },
+   { "mem_limit", COUNT_TYPE },
 });
 
 TopLevel solution_top_level({
@@ -512,6 +515,7 @@ void print(const Task* const task, size_t indent = 0) {
    printStringAttribute("input_file", task->input_file, indent + 1);
    printStringAttribute("output_file", task->output_file, indent + 1);
    printCountAttribute("time_limit", task->time_limit, indent + 1);
+   printCountAttribute("mem_limit", task->mem_limit, indent + 1);
    printListCount("weights", task->weights, indent + 1);
    printIndents(indent + 1);
    std::cout << "solutions= [" << std::endl;
@@ -663,7 +667,8 @@ struct ScriptBuilder {
          raw_output + "' '" + 
          task->source_directory + "/' '" + 
          solution->source + "' " + 
-         std::to_string(task->time_limit) + " '" + 
+         std::to_string(task->time_limit) + " " + 
+         std::to_string(task->mem_limit) + " '" + 
          compilation_commands[solution->lang] + 
          "' \"${array[@]}\" \n";
    }
