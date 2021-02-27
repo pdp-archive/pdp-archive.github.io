@@ -213,9 +213,10 @@ std::map<std::string, std::function<AbstractTopLevel*(void)>> factories({
 struct FileReader {
    
    std::string text;
+   const std::string filename;
    size_t location = 0;
    
-   FileReader(const std::string& filename) {
+   FileReader(const std::string& filename) : filename(filename) {
       std::ifstream t(filename);
       std::string str((std::istreambuf_iterator<char>(t)),
                  std::istreambuf_iterator<char>());
@@ -242,7 +243,7 @@ struct FileReader {
    
    void readExactChar(char c) {
       if (current() != c) {
-         throw ParsingException("Found " + std::to_string(current()) + " instead of " + std::to_string(c) + ".");
+         throw ParsingException(filename + ": Found " + std::string(1, current()) + " instead of " + std::string(1, c) + ".");
       }
       advance();
    }
@@ -544,7 +545,7 @@ void writeToFile(const std::string& str, const std::string& filename) {
 
 // Maybe create a script for calling g++ this && ./a.out && ./test_script.sh
 
-std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths) {
+std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths, bool create_cache) {
    std::vector<Task*> tasks;
    for (const auto& str : paths) {
       FileReader file(str);
@@ -556,6 +557,13 @@ std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths) {
          std::cout << "SOURCE : " << task->source_directory << std::endl;
          print(task);
       }
+   }
+   if (create_cache) {
+      std::ofstream cache_out("cache.csv");
+      for (Task* task : tasks) {
+         cache_out << task->name << "," << task->source_directory << std::endl;
+      }
+      cache_out.close();
    }
    return tasks;
 }
@@ -667,6 +675,10 @@ void generateFileForTasksFilterByTaskName(std::vector<Task*>& tasks, const std::
 }
 
 void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, const std::string& task_name, const std::string& solution_name) {
+   if (solution_name.empty()) {
+      generateFileForTasksFilterByTaskName(tasks, task_name);
+      return;
+   }
    bool found_solution = false;
    bool found_task = false;
    ScriptBuilder builder;
@@ -691,28 +703,53 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
    writeToFile(builder.getCode(), "generated_execution.sh");
 }
 
+/* Attempts to retrieve the entry task_name from the cache. Otherwise, reads all TASK files
+   and creates cache. */
+std::vector<Task*> getTasksFor(std::string& task_name) {
+   // Read the cache to check if it is present.
+   if (std::experimental::filesystem::exists("cache.csv")) {
+      std::ifstream cache_in("cache.csv");
+      std::string s;
+      std::string path;
+      while (std::getline(cache_in, s)) {
+         auto pos = s.find(',');
+         std::string task = s.substr(0, pos);
+         if (task == task_name) {
+            path = s.substr(pos + 1);
+            break;
+         }
+      }
+      cache_in.close();
+      if (!path.empty()) {
+         return getAllTaskNodes({ path + "/TASK" }, false);
+      }
+   }
+   
+   // Otherwise, return all tasks in directory (and generate cache).
+   std::vector<std::string> paths_to_tasks = findAllPathsInDir();
+   return getAllTaskNodes(paths_to_tasks, /* create_cache= */ true);
+}
+
 void deleteTasks(const std::vector<Task*>& tasks) {
    for (Task * task : tasks) {
       delete task;
    }
 }
 
-int main(int argc, char *argv[]) {
-   std::vector<std::string> paths_to_tasks = findAllPathsInDir();
-   std::vector<Task*> tasks = getAllTaskNodes(paths_to_tasks);
+int main(int argc, char *argv[]) {   
+   std::vector<Task*> tasks;
    try {
       if (argc > 1) {
-        std::string arg(argv[1]);
-        std::size_t found = arg.find(':');
-        if (found == std::string::npos) {
-          generateFileForTasksFilterByTaskName(tasks, arg);
-        } else {
-          std::string task_name = arg.substr(0, found);
-          std::string solution_name = arg.substr(found + 1);
-          generateFileForTasksFilterByTaskAndSolution(tasks, task_name, solution_name);
-        }
+         std::string arg(argv[1]);
+         std::size_t found = arg.find(':');
+         std::string task_name = found == std::string::npos ? arg : arg.substr(0, found);
+         std::string solution_name = found == std::string::npos ? "" : arg.substr(found + 1);
+         tasks = getTasksFor(task_name);
+         generateFileForTasksFilterByTaskAndSolution(tasks, task_name, solution_name);
       } else {
-        generateFileForTasks(tasks);
+         std::vector<std::string> paths_to_tasks = findAllPathsInDir();
+         tasks = getAllTaskNodes(paths_to_tasks, /* create_cache= */ true);
+         generateFileForTasks(tasks);
       }
    } catch (std::exception& ex) {
       std::cout << ex.what() << std::endl;
