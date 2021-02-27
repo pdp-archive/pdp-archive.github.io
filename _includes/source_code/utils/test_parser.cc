@@ -721,7 +721,11 @@ std::vector<Task*> getTasksFor(std::string& task_name) {
       }
       cache_in.close();
       if (!path.empty()) {
-         return getAllTaskNodes({ path + "/TASK" }, false);
+         std::vector<Task*> ans = getAllTaskNodes({ path + "/TASK" }, false);
+			// Verify that the task name has not changed.
+			if (ans[0]->name == task_name) {
+				return ans;
+			}
       }
    }
    
