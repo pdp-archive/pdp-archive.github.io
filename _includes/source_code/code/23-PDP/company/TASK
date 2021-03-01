@@ -14,6 +14,7 @@ TASK(
          author = PERSON(
             name = "Κυριάκος Αξιώτης",
          ),
+         comment = "Περνάει όλα τα tests στο Hellenico, αλλά τοπικά μπορεί να έχει προβλήματα αν η stack δεν είναι αρκετά μεγάλη.",
       ),
       SOLUTION(
          name = "company_official_c",
@@ -23,6 +24,7 @@ TASK(
          author = PERSON(
             name = "Φοίβος Αντουλινάκης",
          ),
+         comment = "Fails on the last test, due to large numbers.",
       ),
       SOLUTION(
          name = "company_official_pas",
