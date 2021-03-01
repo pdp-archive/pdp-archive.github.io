@@ -47,12 +47,12 @@ bash tester.sh
      ```
      TASK(
         name = "{codename}",
-        test_count = {Αριθμός των testcases},
+        test_count = {Αριθμός των testcases [int+]},
         files_dir = "testdata/XX-PDP/{codename}/",
         input_file = "{codename}.in",
         output_file = "{codename}.out",
-        time_limit = {Όριο χρόνου σε δευτερόλεπτα},
-        mem_limit = {Όριο μνήμης σε MB},
+        time_limit = {Όριο χρόνου σε δευτερόλεπτα [double+]},
+        mem_limit = {Όριο μνήμης σε MB [int+]},
         solutions = [],
      )
      ```
@@ -77,7 +77,7 @@ bash tester.sh
                   name = "{Το όνομα ή ψευδόνυμό σας. Ή το όνομα του μαθητή υπέβαλε τη λύση}", 
                   school = "{To σχολείο του μαθητή αν ήταν ενδεικτική λύση}",
                ),
-               special_time_limit = {Όριο χρόνου σε δευτερόλεπτα, αν διαφέρει από αυτό του TASK.},
+               special_time_limit = {Όριο χρόνου σε δευτερόλεπτα, αν διαφέρει από αυτό του TASK. [double+]},
                comment = "{Σχόλιο αν τα αποτελέσματα είναι διαφορετικά από το Hellenico (και γιατί)}",
             ),
          ],
