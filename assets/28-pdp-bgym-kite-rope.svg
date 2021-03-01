@@ -11,8 +11,8 @@
    height="15"
    version="1.1"
    id="svg26"
-   sodipodi:docname="kaloumpa.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   sodipodi:docname="28-pdp-bgym-kite-rope.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata32">
     <rdf:RDF>
@@ -21,6 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -35,15 +36,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
      id="namedview28"
      showgrid="false"
      inkscape:zoom="1.9090024"
-     inkscape:cx="207.64721"
+     inkscape:cx="237.403"
      inkscape:cy="-30.820506"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg26" />
   <!-- Pieces -->
@@ -74,21 +75,24 @@
      height="2.5"
      width="30"
      fill="#d62728"
-     id="rect8" />
+     id="rect8"
+     style="fill:#9467bd;fill-opacity:1" />
   <rect
      y="1.25"
      x="280"
      height="2.5"
      width="100"
      fill="#9467bd"
-     id="rect10" />
+     id="rect10"
+     style="fill:#00afff;fill-opacity:1" />
   <rect
      y="1.25"
      x="380"
      height="2.5"
      width="50"
      fill="#8c564b"
-     id="rect12" />
+     id="rect12"
+     style="fill:#ff0000" />
   <!-- Splitter Lines -->
   <g
      stroke="black"
@@ -129,13 +133,13 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:8.48504066px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79547256"
-     x="1.0597597"
+     x="1.0597599"
      y="10.422852"
      id="text36"
      transform="scale(0.98817198,1.0119696)"><tspan
        sodipodi:role="line"
        id="tspan34"
-       x="1.0597597"
+       x="1.0597599"
        y="10.422852"
        style="font-size:5.33333349px;stroke-width:0.79547256">1μ</tspan></text>
   <text

@@ -307,9 +307,9 @@ struct FileReader {
 	
 	double readDouble() {
 		try{
-			size_t old_location = location;
-			double value = std::stod(&text[location], &location);
-			location += old_location;
+			size_t double_char_length = 0;
+			double value = std::stod(&text[location], &double_char_length);
+			location += double_char_length;
 			return value;
 		} catch (...) {
 		   throw ParsingException(filename + ": Could not parse double.");
