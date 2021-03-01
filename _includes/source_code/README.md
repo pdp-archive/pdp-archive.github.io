@@ -52,6 +52,7 @@ bash tester.sh
         input_file = "{codename}.in",
         output_file = "{codename}.out",
         time_limit = {Όριο χρόνου σε δευτερόλεπτα},
+        mem_limit = {Όριο μνήμης σε MB},
         solutions = [],
      )
      ```
