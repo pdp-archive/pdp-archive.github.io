@@ -14,6 +14,7 @@
 const bool kPrintTaskFile = false;
 const bool kPrintDebugStatements = false;
 const bool kDoNotPrintForPascal = false;
+const std::string kCacheFilename = "cache.csv";
 
 std::map<std::string, std::string> compilation_commands({
    { "c++", "g++ -O2 -DCONTEST -s -static -lm -w" },
@@ -52,7 +53,7 @@ public:
    // TODO: maybe check that each field is only set once.
    virtual void setStringAttribute(const std::string& attr_name, const std::string& value) { };
    virtual void setCountAttribute(const std::string& attr_name, size_t value) { };
-	virtual void setDoubleAttribute(const std::string& attr_name, double value) { };
+   virtual void setDoubleAttribute(const std::string& attr_name, double value) { };
    virtual void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) { };
    virtual void setTopLevelAttribute(const std::string& attr_name, AbstractTopLevel * topLevel) { };
    virtual void setListTopLevelAttribute(const std::string& attr_name, std::vector<AbstractTopLevel*> topLevel) { };
@@ -77,7 +78,7 @@ public:
    std::string name;
    std::string source;
    std::string lang;
-	std::string comment;
+   std::string comment;
    double special_time_limit = 0.0;
    
    size_t passes_up_to; // TODO: maybe set to default value.
@@ -96,7 +97,7 @@ public:
       if (attr_name == "name") name = value;
       else if (attr_name == "source") source = value;
       else if (attr_name == "lang") lang = value;
-		else if (attr_name == "comment") comment = value;
+      else if (attr_name == "comment") comment = value;
    }
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
@@ -148,8 +149,8 @@ public:
       if (attr_name == "test_count") test_count = value;
       else if (attr_name == "mem_limit") mem_limit = value;
    }
-	
-	void setDoubleAttribute(const std::string& attr_name, double value) override {
+   
+   void setDoubleAttribute(const std::string& attr_name, double value) override {
       if (attr_name == "time_limit") time_limit = value;
    }
    
@@ -304,16 +305,16 @@ struct FileReader {
       }
       return count;
    }
-	
-	double readDouble() {
-		try{
-			size_t double_char_length = 0;
-			double value = std::stod(&text[location], &double_char_length);
-			location += double_char_length;
-			return value;
-		} catch (...) {
-		   throw ParsingException(filename + ": Could not parse double.");
-		}
+   
+   double readDouble() {
+      try{
+         size_t double_char_length = 0;
+         double value = std::stod(&text[location], &double_char_length);
+         location += double_char_length;
+         return value;
+      } catch (...) {
+         throw ParsingException(filename + ": Could not parse double.");
+      }
    }
    
    bool isListType(const std::string& type) {
@@ -501,10 +502,10 @@ void print(const Solution * const solution, size_t indent) {
    printListCount("passes_all_except_for", solution->passes_all_except_for, indent + 1);
    printListCount("passes_only", solution->passes_only, indent + 1);
    if (solution->author != NULL) {
-     printIndents(indent + 1);
-     std::cout << "author=";
+      printIndents(indent + 1);
+      std::cout << "author=";
       print(solution->author, indent + 1);
-     std::cout << "\n";
+      std::cout << "\n";
    }
    
    printIndents(indent);
@@ -527,7 +528,7 @@ void print(const Task* const task, size_t indent = 0) {
    std::cout << "solutions= [" << std::endl;
    for (const Solution* const sol : task->solutions) {
       print(sol, indent + 2);
-     std::cout << ",\n";
+      std::cout << ",\n";
    }
    printIndents(indent + 1);
    std::cout << "]" << std::endl;
@@ -535,9 +536,9 @@ void print(const Task* const task, size_t indent = 0) {
 }
 
 std::string replaceString(std::string & str, const std::string & from, const std::string & to) {
-  while(str.find(from) != std::string::npos)
-    str.replace(str.find(from), from.length(), to);
-  return str;
+   while(str.find(from) != std::string::npos)
+      str.replace(str.find(from), from.length(), to);
+   return str;
 }
 
 std::string getFile(const std::string& filename, int i) {
@@ -555,7 +556,7 @@ std::string getStandardFile(const std::string& filename) {
 std::vector<std::string> findAllPathsInDir() {
    std::vector<std::string> ans;
    for (const auto & entry : std::experimental::filesystem::recursive_directory_iterator(".")) {
-        if (entry.path().filename() == "TASK") {
+      if (entry.path().filename() == "TASK") {
          ans.push_back(entry.path().relative_path());
       }
    }
@@ -591,7 +592,7 @@ std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths, bool c
       }
    }
    if (create_cache) {
-      std::ofstream cache_out("cache.csv");
+      std::ofstream cache_out(kCacheFilename);
       for (Task* task : tasks) {
          cache_out << task->name << "," << task->source_directory << std::endl;
       }
@@ -700,7 +701,7 @@ void generateFileForTasksFilterByTaskName(std::vector<Task*>& tasks, const std::
       if (task->name == task_name) {
          found = true;
          builder.addSolutions(task);
-     }
+      }
    }
    if (found == false) {
       std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
@@ -718,16 +719,16 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
    ScriptBuilder builder;
    for (Task * task : tasks) {
       if (task->name == task_name) {
-       found_task = true;
-       for (Solution * solution : task->solutions) {
-         if (solution->name == solution_name) {
-            found_solution = true;
-            builder.addPrintStatement("SOLUTION: " + solution_name);
-            builder.addCommandToFetchTestdataIfNotThere(task->contest, task_name);
-            builder.addSolution(task, solution);
+         found_task = true;
+         for (Solution * solution : task->solutions) {
+            if (solution->name == solution_name) {
+               found_solution = true;
+               builder.addPrintStatement("SOLUTION: " + solution_name);
+               builder.addCommandToFetchTestdataIfNotThere(task->contest, task_name);
+               builder.addSolution(task, solution);
+            }
          }
-       }
-     }
+      }
    }
    if (found_task == false) {
       std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
@@ -741,8 +742,8 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
    and creates cache. */
 std::vector<Task*> getTasksFor(std::string& task_name) {
    // Read the cache to check if it is present.
-   if (std::experimental::filesystem::exists("cache.csv")) {
-      std::ifstream cache_in("cache.csv");
+   if (std::experimental::filesystem::exists(kCacheFilename)) {
+      std::ifstream cache_in(kCacheFilename);
       std::string s;
       std::string path;
       while (std::getline(cache_in, s)) {
@@ -756,10 +757,10 @@ std::vector<Task*> getTasksFor(std::string& task_name) {
       cache_in.close();
       if (!path.empty()) {
          std::vector<Task*> ans = getAllTaskNodes({ path + "/TASK" }, false);
-			// Verify that the task name has not changed.
-			if (ans[0]->name == task_name) {
-				return ans;
-			}
+         // Verify that the task name has not changed.
+         if (ans[0]->name == task_name) {
+            return ans;
+         }
       }
    }
    
@@ -795,5 +796,3 @@ int main(int argc, char *argv[]) {
    deleteTasks(tasks);
    return 0;
 }
-
-
