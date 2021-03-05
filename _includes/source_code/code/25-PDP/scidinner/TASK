@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/25-PDP/scidinner/",
    input_file = "scidinner.in",
    output_file = "scidinner.out",
-   time_limit = 1,
+   time_limit = 2,
    solutions = [
       SOLUTION(
          name = "scidinner_official_cpp",
@@ -29,7 +29,7 @@ TASK(
       SOLUTION(
          name = "scidinner_official_pas",
          source = "scidinner_official.pas",
-         passes_all,
+         passes_all_except_for = [8, 10, 11, 12, 13, 14, 15, 16, 17],
          lang = "pas",
          author = PERSON(
             name = "Παπαμιχαήλ Λάμπης",

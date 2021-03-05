@@ -19,59 +19,13 @@ codename: kalanta
 
 Υπάρχουν $$N$$ δυνατές αρχές, $$\mathcal{O}(N)$$ δυνατά τέλη και χρειάζεται $$\mathcal{O}(N)$$ χρόνος να βρούμε το άθροισμα των στοιχείων. Άρα ο αλγόριθμος θέλει $$\mathcal{O}(N^3)$$ χρόνο και $$\mathcal{O}(N)$$ μνήμη. 
 
-```c++
-#include <algorithm>
-#include <stdio.h>
-
-const size_t MAXN = 1000000;
-
-long A[MAXN * 2];
-
-int main() {
-   long N;
-   FILE *fi = fopen("kalanta.in", "r");
-   fscanf(fi, "%ld", &N);
-   long total = 0;
-   for (long i = 0; i < N; ++i) {
-      fscanf(fi, "%ld", &A[i]);
-	  A[i+N] = A[i];
-	  total += A[i];
-   }
-   fclose(fi);
-   long min_diff = total;
-   for (long i = 0; i < N; ++i) {
-	   for (long j = i; j < N; ++j) {
-		  long sum = 0;
-	      for (long k = i; k <= j; ++k) {
-			  sum += A[k];
-		  }
-		  long other_sum = total - sum;
-		  min_diff = std::min(min_diff, std::abs(sum - other_sum));
-	   }
-   }
-   FILE *fo = fopen("kalanta.out", "w");
-   fprintf(fo, "%ld\n", min_diff);
-   fclose(fo);
-   return 0;
-}
-```
+{% include code.md solution_name='kalanta_n3.cc' %}
 
 ## Brute force με γρήγορο υπολογισμό αθροισμάτων
 Μπορούμε να επιταχύνουμε τον παραπάνω αλγόριθμο με τον ακόλουθο τρόπο. Αν ξέρουμε το άθροισμα $$\mathit{sum}(i, j)$$ από $$A[i]$$ έως $$A[j]$$, τότε το $$\mathit{sum}(i, j + 1) = \mathit{sum}(i, j) + A[j+1]$$. Άρα μπορούμε να υπολογίσουμε όλα τα αθροίσματα για τα τμήματα που ξεκινάνε στο $$i$$ σε χρόνο $$\mathcal{O}(N)$$. Συνεπώς, ο αλγόριθμος χρειάζεται συνολικό χρόνο $$\mathcal{O}(N^2)$$.
 
-```c++
-// ...
-   long min_diff = total;
-   for (long i = 0; i < N; ++i) {
-       long sum = 0;
-	   for (long j = i; j < N; ++j) {
-	      sum += A[j];
-		  long other_sum = total - sum;
-		  min_diff = std::min(min_diff, std::abs(sum - other_sum));
-	   }
-   }
-// ...
-```
+{% include code.md solution_name='kalanta_n2.cc' start=19 end=27 %}
+
 
 ## Δυαδική αναζήτηση με prefix sums
 **Παρατήρηση 3:** Ένας από τους δύο (ας υποθέσουμε η Πράσινη), θα έχει άθροισμα μικρότερο ή ίσο με τα μισό συνολικό άθροισμα. 
@@ -86,57 +40,8 @@ int main() {
 
 Ο αλγόριθμος χρειάζεται μία δυαδική αναζήτηση για κάθε δυνατή αρχή, άρα χρειάζεται συνολικά $$\mathcal{O}(N\log{N})$$ χρόνο και $$\mathcal{O}(N)$$ μνήμη.
 
-```c++
-#include <algorithm>
-#include <stdio.h>
+{% include code.md solution_name='kalanta_bsearch_answer.cc' %}
 
-const size_t MAXN = 1000000;
-
-long A[MAXN * 2 + 2];
-long prefix_sum[MAXN * 2 + 2];
-
-int main() {
-   long N;
-   FILE *fi = fopen("kalanta.in", "r");
-   fscanf(fi, "%ld", &N);
-   for (long i = 1; i <= N; ++i) {
-      fscanf(fi, "%ld", &A[i]);
-	  A[i+N] = A[i];
-   }
-   fclose(fi);
-   
-   // Υπολογισμός των prefix sums.
-   for (long i = 1; i <= 2 * N; ++i) {
-      prefix_sum[i] = A[i] + prefix_sum[i - 1];
-   }
-   
-   long total = prefix_sum[N];
-   long min_diff = total;
-   long target = total / 2;
-   // Βρίσκουμε το μεγαλύτερο άθροισμα (μικρότερο ή ίσο από total/2)
-   // για κάθε δυνατή αρχή i.
-   for (long i = 1; i <= N; ++i) {
-	   // Δυαδική αναζήτηση στην απάντηση.
-       long st = i, en = i + N -1;
-	   while (st < en) {
-	      long md = (st + en + 1) / 2;
-		  long sum = prefix_sum[md] - prefix_sum[i - 1];
-		  if (sum > target) en = md - 1;
-		  else st = md;
-	   }
-	   // Υπολογίζουμε τη διαφορά.
-	   long sum = prefix_sum[st] - prefix_sum[i - 1];
-	   long other_sum = total - sum;
-	   min_diff = std::min(min_diff, std::abs(sum - other_sum));
-   }
-   
-   FILE *fo = fopen("kalanta.out", "w");
-   fprintf(fo, "%ld\n", min_diff);
-   fclose(fo);
-   return 0;
-}
-
-```
 
 ## Βέλτιστη λύση
 
@@ -146,48 +51,14 @@ int main() {
 
 Για κάθε $$i$$ κρατάμε την μεγαλύτερη θέση $$j$$ και στη μεταβλητή $$\mathit{sum} = \mathit{sum}(i, j)$$. Έπειτα αυξάνουμε την θέση $$j$$ ώσπου να βρούμε την μεγαλύτερη θέση $$j'$$ για το $$i+1$$. Μπορούμε να βρούμε το άθροισμα $$\mathit{sum}(i + 1, j')$$, αφαιρώντας το στοιχείο $$A[i]$$ και προσθέτοντας τα στοιχεία $$A[j+1], \ldots , A[j']$$.
 
-Αφού το $$j$$ μπορεί να αυξηθεί το πολύ $$2Ν$$ φορές ο αλγόριθμος χρειάζεται $$\mathcal{O}(N)$$ χρόνο και $$\mathcal{O}(N)$$ μνήμη.
+Αφού το $$j$$ μπορεί να αυξηθεί το πολύ $$2N$$ φορές ο αλγόριθμος χρειάζεται $$\mathcal{O}(N)$$ χρόνο και $$\mathcal{O}(N)$$ μνήμη.
 
-```c++
-#include <algorithm>
-#include <stdio.h>
+{% include code.md solution_name='kalanta_linear.cc' %}
 
-const size_t MAXN = 1000000;
+**Σημείωση 1:** Δεν χρειάζεται να έχουμε το κάθε στοιχείο δύο φορές στη μνήμη. Μπορούμε να ορίσουμε την παρακάτω συνάρτηση,
 
-long A[MAXN * 2 + 2];
+{% include code.md solution_name='kalanta_linear_n_space.cc' start=6 end=12 %}
 
-int main() {
-   long N;
-   FILE *fi = fopen("kalanta.in", "r");
-   fscanf(fi, "%ld", &N);
-   long total = 0;
-   for (long i = 1; i <= N; ++i) {
-      fscanf(fi, "%ld", &A[i]);
-	  A[i+N] = A[i];
-	  total += A[i];
-   }
-   fclose(fi);
-   
-   long min_diff = total;
-   long target = total / 2;
-   long j = 1;
-   long sum = 0;
-   // Βρίσκουμε το μεγαλύτερο άθροισμα (μικρότερο ή ίσο από total/2)
-   // για κάθε δυνατή αρχή i.
-   for (long i = 1; i <= N; ++i) {
-       sum -= A[i - 1];
-	   // Το j μπορεί να αυξηθεί το πολύ 2N φορές.
-	   while (j < i + N && sum + A[j] <= target) {
-           sum += A[j];
-		   ++j;
-	   }		   
-	   long other_sum = total - sum;
-	   min_diff = std::min(min_diff, std::abs(sum - other_sum));
-   }
-   
-   FILE *fo = fopen("kalanta.out", "w");
-   fprintf(fo, "%ld\n", min_diff);
-   fclose(fo);
-   return 0;
-}
-```
+και να αντικαταστήσουμε όλες τις χρήσεις `A[xx]` με `A(xx)`. Θα βρείτε ολόκληρο τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/30-PDP/kalanta/kalanta_linear_n_space.cc).
+
+**Σημείωση 2:** Αν θέλουμε να διαβάσουμε το αρχείο εισόδου παραπάνω από μία φορές (που στην πράξη δεν είναι πολύ αποδοτικό), τότε μπορούμε να λύσουμε το πρόβλημα σε $$\mathcal{O}(N)$$ χρόνο και $$\mathcal{O}(1)$$ μνήμη (δείτε [εδώ](/23-PDP/c-prevdiv-solution#βέλτιστη-λύση-με-mathcalo1-μνήμη) για παράδειγμα).

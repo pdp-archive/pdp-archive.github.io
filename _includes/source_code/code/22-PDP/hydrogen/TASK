@@ -27,7 +27,7 @@ TASK(
       SOLUTION(
          name = "hydrogen_official_pas",
          source = "hydrogen_official.pas",
-         passes_all,
+         passes_all_except_for = [10],
          lang = "pas",
          author = PERSON(
             name = "official",

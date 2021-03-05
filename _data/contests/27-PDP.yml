@@ -37,10 +37,12 @@ aces:
    statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1OLUBeeXoOdiVo_3vVpJu5VSdoiQypuIY"
-   solution: false
-   codes_in_git: false
+   solution: true
+   solution_author: ""
+   codes_in_git: true
    points: 30
    codes_url: "https://drive.google.com/open?id=1LAtAFXBt3VUMBE-gNRK3SvM9rz7nqrH-"
+   solution_tags: ["number systems", "binary numbers", "bitwise", "counting sort"]
 
 efimerides:
    full_name: "Εφημερίδες"

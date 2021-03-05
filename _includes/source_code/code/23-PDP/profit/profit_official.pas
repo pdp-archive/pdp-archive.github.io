@@ -28,7 +28,7 @@ begin
     end;
   assign(output_file,'profit.out');
   rewrite(output_file);
-  writeln (output_file,profit:8:3);
+  writeln (output_file,profit:0:3);
   close(input_file);
   close(output_file);
 end.

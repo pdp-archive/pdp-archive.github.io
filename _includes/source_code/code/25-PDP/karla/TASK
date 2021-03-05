@@ -63,5 +63,23 @@ TASK(
             name = "dim131",
          ),
       ),
+      SOLUTION(
+         name = "karla_simple_disjoint",
+         source = "karla_simple_disjoint.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "karla_efficient_disjoint",
+         source = "karla_efficient_disjoint.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
    ]
 )

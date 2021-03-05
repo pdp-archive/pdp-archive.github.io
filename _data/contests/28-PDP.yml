@@ -38,7 +38,7 @@ skitrip:
    statement_md: true   
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 30
    solution_tags: ["sorting", "greedy", "monotonous queue", "line sweep"]
@@ -62,7 +62,7 @@ starwars:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 40
    solution_tags: ["cumulative sums", "inclusion-exclusion", "range sum queries", "segment trees", "sqrt decomposition", "lazy propagation"]

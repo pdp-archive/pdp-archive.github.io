@@ -5,7 +5,7 @@ sch:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qmqCKtic2rs_BXkSD79XvDqon9QuzdzT"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    solution_tags: ["sorting", "counting sort", "map", "set"]   
    
@@ -16,7 +16,7 @@ colors:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1hrpoR0REwtgNJbQGHFoIpBeSVNJyFm2V"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["set", "counting sort", "binary search", "sliding window", "two pointers"]      
 
@@ -27,7 +27,7 @@ uflights:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1lxEOD-eMsNCPsMUt_bBeSM9V98rOr_Ip"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["graphs", "minimum spanning tree", "kruskal", "prim", "counting sort"]
 
@@ -38,7 +38,7 @@ dnaseq:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Hg5XmSzUVveeIQT6LGynzItxxokoX7jF"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
    solution_tags: ["rolling hash", "strings"]   
@@ -50,7 +50,7 @@ villages:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
    solution_tags: ["graphs", "dfs"]
@@ -62,7 +62,7 @@ maketime:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
    solution_tags: ["cumulative sums", "binary search", "sorting", "two pointers"]

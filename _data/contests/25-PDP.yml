@@ -5,7 +5,7 @@ seti:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1mXvn8D8c1v7btzEb9M27GJ1iVspuf8Cl"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    solution_tags: ["brute force"]
 
@@ -16,9 +16,9 @@ karla:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PTgrmmlI5ZHZu14dwurmhy29NMLy9A4B"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
-   solution_tags: ["bfs", "dfs", "flood fill"]
+   solution_tags: ["bfs", "dfs", "flood fill", "union-find"]
 
 scidinner:
    full_name: "Οι μυστικοί αριθμοί"
@@ -27,7 +27,7 @@ scidinner:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1pXHuJ7IpdHUIEVUuhUj0JTrqpcWySotd"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    solution_tags: ["trees", "divisibility", "bfs"]
    
@@ -38,7 +38,7 @@ triangle:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZUa8u4nOsINi0rwpHa48vVbtHoQBj8nT"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
    solution_tags: ["dp", "memoisation"]
@@ -50,7 +50,7 @@ sound:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=16xZeHiOhyBsQqmyIwclJoej0Zc496OIn"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 30
    solution_tags: ["line sweep", "monotonous queue"]
@@ -62,7 +62,7 @@ telecom:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1raK5F7VIiZVsAEOInqW0haVqxHtXH23C"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 40
    solution_tags: ["minimum spanning tree", "union-find", "trees"]
