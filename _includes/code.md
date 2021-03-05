@@ -31,13 +31,21 @@ Implementation inspired from https://hblok.net/blog/posts/2016/10/23/jekyll-incl
     | append: include.solution_name %}
 {% capture filecontent %}{% include {{filename}} %}{% endcapture %}
 
-{% if include.start and include.end %}
+{% if include.start %}
 
 {% comment %}Πρέπει να ξανα-αφαιρέσουμε τις νέες γραμμμές γιατί η newline_to_br, δεν αφαιρεί τις \\r\\n{% endcomment %}
 {% assign lines = filecontent | newline_to_br | split: '<br />' %}
-{% assign lim = include.end | minus: include.start %}
+{% if include.end %}
+    {% assign end = include.end %}
+{% else %}
+    {% comment %} αν υπάρχει include.start χωρίς να υπάρχει include.end, κάνε include έως EOF {% endcomment %}
+    {% comment %}αφαίρεση τελευταίας κενής γραμμής (newline) {% endcomment %}
+    {% assign end = lines.size | minus: 1 %}
+{% endif %}
+{% assign lim = end | minus: include.start %}
 {% assign start = include.start | minus: 1 %}
-{% assign end = include.end | minus: 1 %}
+{% assign end = end | minus: 1 %}
+
 {% comment %}Η τελευταία γραμμή πρέπει να είναι εκτός for για να αποφύγουμε την έξτρα γραμμή στο τέλος.{% endcomment %}
 ```c++
 {% for line in lines limit:{{lim}} offset:{{start}} %}{{ line | strip_newlines }}
