@@ -1,5 +1,5 @@
+#include <cstdio>
 #include <stack>
-#include <stdio.h>
 #include <vector>
 
 const size_t MAXN = 1'000'000;
@@ -10,15 +10,14 @@ long max_path_len;
 
 void dfsIterative(long begin) {
    std::stack<std::pair<long /* node */, long /* path length */>> s;
-   s.push(std::make_pair(begin, 1));
+   s.push({ begin, 1 });
    while(!s.empty()) {
-      long node = s.top().first;
-      long path_len = s.top().second;
+      auto [node, path_len] = s.top();
       s.pop();
-      if (path_len > max_path_len) max_path_len = path_len;
-      for (const auto& neigh : v[node]) {
-         s.push(std::make_pair(neigh, path_len + 1));
-      }
+      if (path_len > max_path_len)
+         max_path_len = path_len;
+      for (const auto neigh : v[node])
+         s.push({ neigh, path_len + 1 });
    }
 }
 
@@ -34,11 +33,9 @@ int main() {
    }
    fclose(fi);
    
-   for (long i = 1; i <= N; ++i) {
-      if (!has_parent[i]) {
+   for (long i = 1; i <= N; ++i)
+      if (!has_parent[i])
          dfsIterative(i);
-      }
-   }
    
    FILE *fo = fopen("scidinner.out", "w");
    fprintf(fo, "%ld\n", max_path_len);

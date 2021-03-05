@@ -1,20 +1,17 @@
-#include <stdio.h>
+#include <cstdio>
 #include <vector>
 
 const size_t MAXN = 1'000'000;
 
 std::vector<long> v[MAXN+1];
-
 bool has_parent[MAXN + 1];
 long max_path_len;
 
 void dfs(long u, long path_len) {
    if (path_len > max_path_len) 
        max_path_len = path_len;
-   for (const auto& neigh : v[u]) {
+   for (const auto neigh : v[u])
       dfs(neigh, path_len + 1);
-   }
-   
 }
 
 int main() {
@@ -29,11 +26,9 @@ int main() {
    }
    fclose(fi);
    
-   for (long i = 1; i <= N; ++i) {
-      if (!has_parent[i]) {
+   for (long i = 1; i <= N; ++i)
+      if (!has_parent[i])
          dfs(i, 1);
-      }
-   }
    
    FILE *fo = fopen("scidinner.out", "w");
    fprintf(fo, "%ld\n", max_path_len);
