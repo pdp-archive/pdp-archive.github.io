@@ -23,9 +23,9 @@ void dfsIterative(long begin) {
       if (!triggered[u]) {
          triggered[u] = true;
          s.push({ u, true });
-         for (const auto& neigh : v[u])
+         for (const auto neigh : v[u])
             if (!triggered[neigh])
-               s.push(std::make_pair(neigh, false));
+               s.push({ neigh, false });
       }
    }
 }
@@ -48,7 +48,7 @@ int main() {
    long max_max_path = 0;
    for (long i = 0; i < topo_sort.size(); ++i) {
       long u = topo_sort[i];
-      for (const auto& neigh : v[u])
+      for (const auto neigh : v[u])
          max_path[u] = std::max(max_path[u], max_path[neigh] + 1);
       max_max_path = std::max(max_max_path, max_path[u]);
    }
