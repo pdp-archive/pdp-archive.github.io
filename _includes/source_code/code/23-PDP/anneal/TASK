@@ -1,0 +1,20 @@
+TASK(
+   name = "anneal",
+   test_count = 18,
+   files_dir = "testdata/23-PDP/anneal/",
+   input_file = "anneal.in",
+   output_file = "anneal.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "anneal_official_cpp",
+         source = "anneal_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Νίκος Τζάμος",
+            school = "4ο ΓΕΛ Χαλανδρίου",
+         ),
+      ),
+   ]
+)
