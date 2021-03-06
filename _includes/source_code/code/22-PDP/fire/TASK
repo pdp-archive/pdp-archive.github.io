@@ -1,0 +1,37 @@
+TASK(
+   name = "fire",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/fire/",
+   input_file = "fire.in",
+   output_file = "fire.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "fire_official_pas",
+         source = "fire_official.pas",
+         passes_all,
+         lang = "pas",
+         author = PERSON(
+            name = "Γιάννης Τρουμπής",
+         ),
+      ),
+      SOLUTION(
+         name = "fire_official_cpp",
+         source = "fire_official.cpp",
+         passes_all_except_for = [3],
+         lang = "c++",
+         author = PERSON(
+            name = "Σωτήριος Νικολουτσόπουλος",
+         ),
+      ),
+      SOLUTION(
+         name = "fire_official_c",
+         source = "fire_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "Νικόλαος Τζάμος",
+         ),
+      ),
+   ]
+)

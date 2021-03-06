@@ -51,7 +51,7 @@ efimerides:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1pQzf--jvEWG5l2fF-aTCRnojCTi7G-7X"
    solution: false
-   codes_in_git: false
+   codes_in_git: true
    points: 30
    codes_url: "https://drive.google.com/open?id=1-1i-qFNaXJJS6M5bqkhSjSySg24D1ria"
 
@@ -62,6 +62,6 @@ supermarket:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1hhClM4cfyT_cyBVvgr3iGoHPgXo84hoa"
    solution: false
-   codes_in_git: false
+   codes_in_git: true
    points: 40
    codes_url: "https://drive.google.com/open?id=17h09EQJRvAlpBsQlOVKOGbQuPlgbZdg2"

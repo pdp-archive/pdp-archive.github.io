@@ -1,0 +1,22 @@
+TASK(
+   name = "servers",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/servers/",
+   input_file = "servers.in",
+   output_file = "servers.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "servers_official_cpp",
+         source = "servers_official.cpp",
+         passes_all,
+         comment = "Το σκορ στις ενδεικτικές λύσεις δεν είναι 100%. Να ελέγξουμε με το Hellenico.",
+         lang = "c++",
+         author = PERSON(
+            name = "Πόριος Χρήστος",
+            school = "3ο Γ/σιο Αλεξανδρούπολης",
+         ),
+      ),
+   ]
+)
