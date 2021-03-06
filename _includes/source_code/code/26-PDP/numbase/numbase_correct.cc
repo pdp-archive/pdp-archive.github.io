@@ -42,12 +42,12 @@ ll smallestPowerOfTwoGreaterThan(ll M) {
 ll solve(ll M) {
    ll best_k = M + 1;
    ll max_n = smallestPowerOfTwoGreaterThan(M);
-   for (ll n = 1; n <= max_n; ++n) {
-      for (ll x = 1; x * x <= M; ++x) {
-         if (M % x == 0) {
-            ll other_factor = M / x;
-            best_k = std::min(findOptimal(x, n, M), best_k);
-            best_k = std::min(findOptimal(other_factor, n, M), best_k);
+   for (ll x = 1; x * x <= M; ++x) {
+      if (M % x == 0) { // Ελέγχουμε μόνο για τους διαιρέτες του Μ.
+         ll other_factor = M / x;
+         for (ll n = 1; n <= max_n; ++n) {
+            best_k = std::min(best_k, findOptimal(x, n, M));
+            best_k = std::min(best_k, findOptimal(other_factor, n, M));
          }
       } 
    }
