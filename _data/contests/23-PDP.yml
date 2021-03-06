@@ -54,7 +54,7 @@ fishboats:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Yycjw3uvtHKV6_7f26NcoaG2maABYMzA"
    solution: false
-   codes_in_git: false
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
 
@@ -65,6 +65,6 @@ anneal:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fSzwMRtRerRyrFa_V3ACtR47SZT0dQCc"
    solution: false
-   codes_in_git: false
+   codes_in_git: true
    codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
