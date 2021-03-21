@@ -1,0 +1,64 @@
+TASK(
+   name = "bankacc",
+   test_count = 19,
+   files_dir = "testdata/33-PDP/bankacc/",
+   input_file = "bankacc.in",
+   output_file = "bankacc.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "bankacc_array",
+         source = "bankacc_array.cc",
+         passes_up_to = 13,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "bankacc_umap",
+         source = "bankacc_umap.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "bankacc_map",
+         source = "bankacc_map.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "bankacc_offline",
+         source = "bankacc_offline.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "bankacc_trie",
+         source = "bankacc_trie.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "bankacc_trie_ptr",
+         source = "bankacc_trie_ptr.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
