@@ -1,0 +1,37 @@
+TASK(
+   name = "twingift",
+   test_count = 0,
+   files_dir = "testdata/33-PDP/twingift/",
+   input_file = "twingift.in",
+   output_file = "twingift.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "twingift_simple",
+         source = "twingift_simple.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "twingift_logarithmic",
+         source = "twingift_logarithmic",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "twingift_logarithmic_ptr",
+         source = "twingift_logarithmic_ptr",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
