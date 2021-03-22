@@ -17,7 +17,7 @@ TASK(
       ),
       SOLUTION(
          name = "twingift_logarithmic",
-         source = "twingift_logarithmic",
+         source = "twingift_logarithmic.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
@@ -26,7 +26,7 @@ TASK(
       ),
       SOLUTION(
          name = "twingift_logarithmic_ptr",
-         source = "twingift_logarithmic_ptr",
+         source = "twingift_logarithmic_ptr.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
