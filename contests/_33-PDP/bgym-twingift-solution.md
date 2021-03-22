@@ -11,8 +11,8 @@ codename: twingift
 
 | **twingift.in**      |
 | :---  | :--- |
-|  9 13 28 30 <br> 22  1  2  4  7  4 13 17  9 <br>  4 12  7 14  8 15 28 30 17 15 17 29 30 |
-{:.table_with_borders}
+|   9 13 28 30 <br> 22  1  2  4  7  4 13 17  9 <br>  4 12  7 14  8 15 28 30 17 15 17 29 30 |
+{:.table_with_borders.table_with_monospace_font}
 
 
 ## Εξαντλητική εξέταση (Brute force)
