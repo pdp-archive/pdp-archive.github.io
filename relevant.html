@@ -1,0 +1,40 @@
+---
+title: "Σχετικά προβλήματα"
+layout: default
+---
+<link rel="stylesheet" href="/css/categorised.css">
+<script src="/js/relevant_filter.js"></script>
+
+<div style="margin-top: 40px; margin-bottom: 40px; text-align: center;">
+Codename προβλήματος: <input type="text" list="codenames" id="relevant_filter_text" onkeyup="filterRelevantEntries()" placeholder="Αναζήτηση με βάση codename προβλήματος (e.g. bankacc) .." title="Problem codename" size="55">
+  <datalist id="codenames">
+{% assign sortedCollections = site.collections %}
+ {% for collection in site.collections reversed %} 
+  {% if collection.label != "posts" %}
+    {% for post in site[collection.label] %}
+       {% if post.layout == "summary" %}
+
+{% assign contest_url = post.url | replace: "/", "" | replace: "index", "" %}
+{% assign contest = site.data.contests[contest_url] %}
+
+{% for problem_it in contest %}
+  {% assign problem = problem_it[1] %}
+  {% assign codename = problem_it[0] %}
+
+<option value="{{codename}}">
+{% endfor %}
+
+     {% endif %}
+    {% endfor %}
+   {% endif %}
+ {% endfor %}
+</div>
+
+{% include tagged_problems.html %}
+
+<script type="text/javascript">
+loadCodenameFromUrl();
+</script>
+
+<div id="footer_space"></div>
+{% include contributors_footer.html %}
