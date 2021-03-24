@@ -17,7 +17,7 @@ codename: bankacc
 
 ## Χρήση έτοιμων containers της *stl*
 
-Γνώσεις που θα χρειαστούμε: [map](https://kallinikos.github.io/STL), [unordred_map](https://kallinikos.github.io/STL), [hash value](https://el.wikipedia.org/wiki/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%BA%CE%B1%CF%84%CE%B1%CF%84%CE%B5%CE%BC%CE%B1%CF%87%CE%B9%CF%83%CE%BC%CE%BF%CF%8D)
+Γνώσεις που θα χρειαστούμε: [map](https://kallinikos.github.io/STL), [unordered_map](https://kallinikos.github.io/STL), [hash value](https://el.wikipedia.org/wiki/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%BA%CE%B1%CF%84%CE%B1%CF%84%CE%B5%CE%BC%CE%B1%CF%87%CE%B9%CF%83%CE%BC%CE%BF%CF%8D)
 
 Η C++ στη βιβλιοθήκη *stl* μας δίνει έτοιμες δομές αντιστοίχισης κλειδιών αναζήτησης σε συσχετιζόμενες τιμές. Στις δομές αντιστοίχισης, τα κλειδιά αναζήτησης δεν είναι απαραίτητο να είναι συνεχόμενα αρα είναι κατάλληλες για αποθήκευση αραιών πινάκων. Δύο τέτοιες δομές της *stl*, είναι η *map* και η *unordered_map*.
 
@@ -49,5 +49,5 @@ codename: bankacc
 {% include code.md solution_name='bankacc_offline.cc' %}
 
 
-[^1]: Υπάρχουν και άλλες λύσεις για αντιστοίχιση που είναι γενικά πιό πολύπλοκες από τις παραπάνω. Ενδεικτικά να αναφερθεί μια ακόμα λύση με [trie](https://en.wikipedia.org/wiki/Trie) (δέντρο προθεμάτων), όπου συνολικά έχουμε γραμμική πολυπλοκότητα. Παρέχονται δύο κώδικες: ένας με [στατική δέσμευση μνήμης](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/bankacc/bankacc_trie.cc) (έχουν δεσμευτεί πολλοί κόμβοι για το δέντρο και αποδίδονται στη δομή trie όταν χρειαστούν και ένας με [δυναμική εκχώρηση μνήμης](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/bankacc/bankacc_trie_ptr.cc), όπου όταν χρειαστεί νέος κόμβος αυτός δημιουργείται δυναμικά με κλήση στη *new*.  
+[^1]: Υπάρχουν και άλλες λύσεις για αντιστοίχιση που είναι γενικά πιό πολύπλοκες από τις παραπάνω. Ενδεικτικά να αναφερθεί μια ακόμα λύση με [trie](https://en.wikipedia.org/wiki/Trie) (δέντρο προθεμάτων), όπου συνολικά έχουμε γραμμική πολυπλοκότητα. Παρέχονται δύο κώδικες: ένας με [στατική δέσμευση μνήμης](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/bankacc/bankacc_trie.cc) (έχουν δεσμευτεί πολλοί κόμβοι για το δέντρο και αποδίδονται στη δομή trie όταν χρειαστούν και ένας με [δυναμική εκχώρηση μνήμης](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/bankacc/bankacc_trie_ptr.cc), όπου όταν χρειαστεί νέος κόμβος αυτός δημιουργείται δυναμικά με κλήση στην *new*.  
 

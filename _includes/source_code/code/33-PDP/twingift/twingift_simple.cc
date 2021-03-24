@@ -1,4 +1,3 @@
-//O(N*M)
 #include <cstdio>
 
 const long MAXN = 1'000'000L;

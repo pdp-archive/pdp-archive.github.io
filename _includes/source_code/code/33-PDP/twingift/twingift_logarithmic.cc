@@ -1,4 +1,3 @@
-//O(min(NlogN+MlogN, MlogM+NlogM))
 #include <cstdio>
 #include <algorithm>
 
