@@ -18,7 +18,7 @@ TASK(
       SOLUTION(
         name = "pcr_semi_efficient",
         source = "pcr_semi_efficient.cc",
-        passes_up_to = 15,
+        passes_up_to = 14,
         lang = "c++",
         author = PERSON(
            name = "dim131",

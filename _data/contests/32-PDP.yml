@@ -36,7 +36,7 @@ sumoffew:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1NPObWz05m7lz9ELkzp2MRh5u9G3kT8wj/view"
    solution: true
    solution_author: "Μάκης Αρσένης"
    codes_in_git: true
@@ -48,7 +48,7 @@ supgame:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1wNmblswx5aVxzQfWTEVZxxn8VOWAERHX/view"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
@@ -60,7 +60,7 @@ pcr:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1NYBb22pooNjxvi3Cx0K8-nXKqD-VIEhv/view"
    solution: true
    solution_author: ""
    codes_in_git: true
