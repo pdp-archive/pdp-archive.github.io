@@ -1,6 +1,6 @@
 TASK(
    name = "fairmaze",
-   test_count = 0,
+   test_count = 20,
    files_dir = "testdata/33-PDP/fairmaze/",
    input_file = "fairmaze.in",
    output_file = "fairmaze.out",

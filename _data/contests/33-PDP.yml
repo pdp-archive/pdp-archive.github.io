@@ -14,7 +14,7 @@ twingift:
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/file/d/1OBZDu3sGeu0hOgGokHjdgwtJLKvsPzmd/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/120sLkrJt8j6Kyh0wXfssu-iCCRNJN7A9/view"
    solution: true
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"
@@ -25,7 +25,7 @@ fairmaze:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/file/d/1Yr3UE44lWdpAXG6MDC8CVElsk-bux_wt/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/10VJNgQQTYBajB5UigdkOeewrPgiaiO5X/view"
    solution: true
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"

@@ -1,6 +1,6 @@
 TASK(
    name = "twingift",
-   test_count = 0,
+   test_count = 19,
    files_dir = "testdata/33-PDP/twingift/",
    input_file = "twingift.in",
    output_file = "twingift.out",
@@ -9,7 +9,7 @@ TASK(
       SOLUTION(
          name = "twingift_simple",
          source = "twingift_simple.cc",
-         passes_all,
+         passes_up_to = 9,
          lang = "c++",
          author = PERSON(
             name = "kbokis",
