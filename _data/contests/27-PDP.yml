@@ -41,7 +41,6 @@ aces:
    solution_author: ""
    codes_in_git: true
    points: 30
-   codes_url: "https://drive.google.com/open?id=1LAtAFXBt3VUMBE-gNRK3SvM9rz7nqrH-"
    solution_tags: ["number systems", "binary numbers", "bitwise", "counting sort"]
 
 efimerides:
@@ -53,7 +52,6 @@ efimerides:
    solution: false
    codes_in_git: true
    points: 30
-   codes_url: "https://drive.google.com/open?id=1-1i-qFNaXJJS6M5bqkhSjSySg24D1ria"
 
 supermarket:
    full_name: "Σουπερμάρκετ"
@@ -64,4 +62,3 @@ supermarket:
    solution: false
    codes_in_git: true
    points: 40
-   codes_url: "https://drive.google.com/open?id=17h09EQJRvAlpBsQlOVKOGbQuPlgbZdg2"

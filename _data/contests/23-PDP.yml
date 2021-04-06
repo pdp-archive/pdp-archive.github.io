@@ -7,7 +7,6 @@ profit:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1s4W2WGhm8ecXFL39VeeyIcTRjQHvX1o4"
    solution_tags: ["greedy", "line sweep"]
 
 snow_run:
@@ -19,7 +18,6 @@ snow_run:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=14fm1Wdjf21LJzbqg-LU-ZCm65WJD7vZ5"
    solution_tags: ["segment tree", "brute force"]
 
 company:
@@ -31,7 +29,6 @@ company:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
    solution_tags: ["trees", "dp", "bfs", "dfs"]
 
 prevdiv: 
@@ -43,7 +40,6 @@ prevdiv:
    solution: true
    solution_author: ""
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1Zw07u0jmkf4SAKbwRMy96Y5Oqt3qBZyi"
    points: 10
    solution_tags: ["two pointers", "divisibility", "gcd", "lcm", "number theory"]
 
@@ -55,7 +51,6 @@ fishboats:
    testcases_url: "https://drive.google.com/open?id=1Yycjw3uvtHKV6_7f26NcoaG2maABYMzA"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
 
 anneal: 
@@ -66,5 +61,4 @@ anneal:
    testcases_url: "https://drive.google.com/open?id=1fSzwMRtRerRyrFa_V3ACtR47SZT0dQCc"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
