@@ -51,6 +51,10 @@ body {
   font-weight: bold;
 }
 
+.center_table {
+  margin: auto;
+}
+
 .table_with_borders {
   border-collapse: collapse;
   > table, td, th {
