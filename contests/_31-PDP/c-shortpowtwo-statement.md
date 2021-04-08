@@ -24,7 +24,7 @@ Nα αναπτύξετε ένα πρόγραμμα σε μια από τις γ�
 | **shortpowtwo.in**      | **shortpowtwo.out** |
 | :--- | :--- |
 | 4 4 <br> 1 4 2 <br> 1 2 0 <br> 2 3 0 <br> 3 4 0 <br> 1 4 | 3 |
-z
+
 ![Παράδειγμα 1ο](/assets/31-pdp-c-shortpowtwo-example-1.png){:width="200px"}
 
 **2<sup>o</sup>**
