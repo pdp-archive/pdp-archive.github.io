@@ -82,12 +82,12 @@
   4. Στον φάκελο `contests/_XX-PDP` δημιουργήστε το αρχείο `{φάση}-{codename}-solution.md` (πχ `c-dnaseq-solution.md`).
   5. Ξεκινήστε το αρχείο με 
      
-    ```
-    ---
-    layout: solution
-    codename: {codename προβλήματος}
-    ---
-    ```
+     ```
+     ---
+     layout: solution
+     codename: {codename προβλήματος}
+     ---
+     ```
   6. Γράψτε την λύση.
 
   
@@ -105,12 +105,12 @@
   4. Στον φάκελο `contests/_XX-PDP` δημιουργήστε το αρχείο `{φάση}-{codename}-statement.md` (πχ `c-dnaseq-statement.md`).
   5. Ξεκινήστε το αρχείο με 
      
-    ```
-    ---
-    layout: statement
-    codename: {codename προβλήματος}
-    ---
-    ```
+     ```
+     ---
+     layout: statement
+     codename: {codename προβλήματος}
+     ---
+     ```
   6. Γράψτε την εκφώνηση.
   
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/03b28759d7f8afbee67f964f257e79c0c1375750).
