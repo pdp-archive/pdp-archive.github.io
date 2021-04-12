@@ -17,7 +17,6 @@ matrix:
    testcases_url: "https://drive.google.com/open?id=1KJaIgr7PK1LiiwHm_oLH_UTRamgm5ZrW"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1xcLdDDNhSdyxadevZCzXr-3nTIRdLbuM"
 
 fire:
    full_name: "Οι φωτιές στην Ελλάδα"
@@ -27,7 +26,6 @@ fire:
    testcases_url: "https://drive.google.com/open?id=1uuD4uS534StCDh-CXf0BRWtcQUTv8gGF"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1IsKbqSMwbI_5V3aHMd8Z9Jg_WoKgGIQp"
 
 lines_man: 
    full_name: "Lines man"
@@ -37,7 +35,6 @@ lines_man:
    testcases_url: "https://drive.google.com/open?id=14V4FkGjHkrYazKEe-Dme38LR9liO2vHs"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1JNaqY7ygVenoJGQuarQXV3lfd9VuuaLj"
    points: 25
 
 servers: 
@@ -48,7 +45,6 @@ servers:
    testcases_url: "https://drive.google.com/open?id=1nWslEKEhv3R_wlUaRDa-DzMBMN0FEaEO"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1L7bMpoQhgAmD84EtZufo61HSwVkJUGnd"
    points: 35
 
 getout: 
@@ -59,5 +55,4 @@ getout:
    testcases_url: "https://drive.google.com/open?id=1fROWztcvcX2EZ0sz4qvqAci4OB-vZcy3"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1FJO1ox_DgBkrqV4Y8gD7qSwHUb_U5ppY"
    points: 40

@@ -10,7 +10,7 @@
 ([pdf]({{ problem.statement_pdf_url}})) \|
 {% if problem.testcases_url == '' %} testcases {% else %}[testcases]({{ problem.testcases_url }}) {% endif %} \|
 {% if problem.solution == true %}[λύση](/{{ contest_url }}/{{ include.stage }}-{{ url_codename }}-solution) \|{% else %} λύση \| {% endif %}
-{% if problem.codes_in_git == true and problem.codes_url <> '' %}[κώδικες]({% if problem.codes_in_git == true %} {{ git_code_location | append: codename }} {% else %} {{ problem.codes_url }} {% endif %} ) {% else %} κώδικες {% endif %}
+{% if problem.codes_in_git == true %}[κώδικες]({{ git_code_location | append: codename }}) {% else %} κώδικες {% endif %}
   {% endif %}
 {% endfor %}
 {% endcapture %}

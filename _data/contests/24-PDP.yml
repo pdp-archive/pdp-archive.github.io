@@ -7,7 +7,6 @@ function:
    solution: true
    solution_author: ""
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
    solution_tags: ["primes", "prime factorisation", "sieve of Eratosthenes", "divisibility"]
 
 operators:
@@ -19,7 +18,6 @@ operators:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1dUfjJWNlPKE8MUiQnc82TYQAp6NhysWE"
    solution_tags: ["binary search", "two pointers"]
 
 pulsars:
@@ -30,7 +28,6 @@ pulsars:
    testcases_url: "https://drive.google.com/open?id=1hwJ1rXa-Nv9P4e7CvKeoFVUeVok8MaWu"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1uABGXHD3Bqg3zNL8rolkNnLkIE0eqr-g"
 
 loutraki: 
    full_name: "Λουτράκι"
@@ -52,7 +49,6 @@ minpali:
    testcases_url: "https://drive.google.com/open?id=1JCAj6hgRSBksM9otjcE8AqAAhTxs9GiQ"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    points: 30
    solution_tags: ["z-algorithm", "kmp", "manacher", "rolling hash", "strings"]
 
@@ -65,6 +61,5 @@ souvlakia:
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    solution_tags: ["dijkstra", "segment tree", "binary index tree", "implicit segment tree","coordinate compression","RMQ","prefix minimum","map","set","sorting"]
    points: 40
