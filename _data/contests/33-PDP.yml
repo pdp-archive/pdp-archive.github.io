@@ -30,3 +30,14 @@ fairmaze:
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"
    solution_tags: ["dfs", "union-find"]
+
+landfight:
+   full_name: "Ο πόλεμος των τσιφλικάδων"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["binary search", "map", "hash table", "stack", "prefix sum", "cumulative sum", "two pointers"]

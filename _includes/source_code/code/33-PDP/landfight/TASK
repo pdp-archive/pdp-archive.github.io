@@ -1,0 +1,64 @@
+TASK(
+   name = "landfight",
+   test_count = 0,
+   files_dir = "testdata/33-PDP/landfight/",
+   input_file = "landfight.in",
+   output_file = "landfight.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "landfight_simple",
+         source = "twingift_simple.cc",
+         passes_up_to = 9,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_2pointers",
+         source = "landfight_2pointers.cc",
+         passes_up_to = 9,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_bsearch",
+         source = "twingift_bsearch.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_list",
+         source = "twingift_list.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_vector",
+         source = "twingift_vector.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_stack",
+         source = "twingift_stack.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
