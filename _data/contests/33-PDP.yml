@@ -34,6 +34,7 @@ fairmaze:
 landfight:
    full_name: "Ο πόλεμος των τσιφλικάδων"
    stage: "c"
+   points: 30
    statement_pdf_url: ""
    statement_md: true
    testcases_url: ""

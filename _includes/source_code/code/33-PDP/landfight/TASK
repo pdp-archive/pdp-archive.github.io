@@ -7,8 +7,17 @@ TASK(
    time_limit = 1,
    solutions = [
       SOLUTION(
-         name = "landfight_simple",
-         source = "twingift_simple.cc",
+         name = "landfight_brute",
+         source = "landfight_brute.cc",
+         passes_up_to = 9,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_brute_ps",
+         source = "landfight_brute_ps.cc",
          passes_up_to = 9,
          lang = "c++",
          author = PERSON(
@@ -26,7 +35,7 @@ TASK(
       ),
       SOLUTION(
          name = "landfight_bsearch",
-         source = "twingift_bsearch.cc",
+         source = "landfight_bsearch.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
@@ -35,7 +44,16 @@ TASK(
       ),
       SOLUTION(
          name = "landfight_list",
-         source = "twingift_list.cc",
+         source = "landfight_list.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "landfight_vector_head",
+         source = "landfight_vector_head.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
@@ -44,7 +62,7 @@ TASK(
       ),
       SOLUTION(
          name = "landfight_vector",
-         source = "twingift_vector.cc",
+         source = "landfight_vector.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
@@ -53,7 +71,7 @@ TASK(
       ),
       SOLUTION(
          name = "landfight_stack",
-         source = "twingift_stack.cc",
+         source = "landfight_stack.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
