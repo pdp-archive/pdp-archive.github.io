@@ -52,22 +52,22 @@ int main(){
       fscanf(fi, "%lld", &M);
       //printf("%lld\n", M);
       if (M==1) {fprintf(fo, "2\n"); continue; }
-         // For one
-         long long z, mn, k = 1;
-         // Find divisors
-         int count = 0;
-         while (k*k <= M) {
-            if (M%k==0) {
-               divi[count++] = k;
-               divi[count++] = (long long) M / (long long) k;
-            }
-            k++;
+      // For one
+      long long z, mn, k = 1;
+      // Find divisors
+      int count = 0;
+      while (k*k <= M) {
+         if (M%k==0) {
+            divi[count++] = k;
+            divi[count++] = (long long) M / (long long) k;
          }
-         minim = M+1;
-         for (int i = 0; i<count; i++){
-            //printf("hi %lld %lld\n", divi[i], M/divi[i]);
-            check(divi[i], (long long)M/(long long)divi[i]);
-         }
+         k++;
+      }
+      minim = M+1;
+      for (int i = 0; i<count; i++){
+         //printf("hi %lld %lld\n", divi[i], M/divi[i]);
+         check(divi[i], (long long)M/(long long)divi[i]);
+      }
       fprintf(fo, "%lld\n", minim);
    }
    return 0;

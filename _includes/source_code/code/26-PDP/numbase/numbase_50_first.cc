@@ -2,6 +2,7 @@
 
 typedef long long ll;
 
+/* Ελέγχουμε αν η αναπαράσταση του M στη βάση K έχει μόνο ένα ψηφίο. */
 bool checkRepresentationHasSingleDigit(ll M, ll k) {
    ll prev_digit = -1;
    while (M > 0) {
