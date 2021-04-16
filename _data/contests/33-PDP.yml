@@ -35,9 +35,9 @@ landfight:
    full_name: "Ο πόλεμος των τσιφλικάδων"
    stage: "c"
    points: 30
-   _tatement_pdf_url: 
+   statement_pdf_url: 
    statement_md: true
-   _estcases_url: 
+   testcases_url: 
    solution: true
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"
@@ -47,9 +47,9 @@ wayhome:
    full_name: "Γυρίζοντας στο σπίτι"
    stage: "c"
    points: 30
-   _tatement_pdf_url:
+   statement_pdf_url:
    statement_md: true
-   _estcases_url:
+   testcases_url:
    solution: false
    codes_in_git: false
    solution_author:
@@ -59,9 +59,9 @@ nytrip:
    full_name: "Ταξίδι στη Νέα Υόρκη"
    stage: "c"
    points: 40
-   _tatement_pdf_url:
+   statement_pdf_url:
    statement_md: true
-   _estcases_url:
+   testcases_url:
    solution: false
    codes_in_git: false
    solution_author: 

@@ -20,10 +20,9 @@ int main(){
             ans = std::min(ans,rptr-lptr-1);
             prefix += A[++lptr];
             suffix += A[--rptr];
-        }
-        while(prefix < suffix && lptr<rptr)
+        } else if(prefix < suffix)
             prefix += A[++lptr];
-        while(suffix < prefix && lptr<rptr)
+        else //suffix < prefix
             suffix += A[--rptr];
     }
 
