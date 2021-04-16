@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-const long MAXN = 1'000'000L;
+const long MAXN = 1'000'001L;
 
 long A[MAXN], PS[MAXN];
 pair<long,long> SS[MAXN];
@@ -15,7 +15,7 @@ int main(){
     scanf("%ld",&N);
     for(long i=1;i<=N;i++){
         scanf("%ld",A+i);
-        PS[i] = PS[i-1] + A[i];//prefix sum
+        PS[i] = PS[i-1] + A[i];
     }
     for(long sum=0L, i=N;i>0;i--){
         sum +=A[i];

@@ -5,6 +5,7 @@ TASK(
    input_file = "landfight.in",
    output_file = "landfight.out",
    time_limit = 1,
+   mem_limit = 64,
    solutions = [
       SOLUTION(
          name = "landfight_brute",

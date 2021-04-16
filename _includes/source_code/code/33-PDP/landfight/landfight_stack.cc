@@ -4,7 +4,7 @@
 #include <stack>
 using namespace std;
 
-const long MAXN = 1'000'000L;
+const long MAXN = 1'000'001L;
 
 long A[MAXN];
 unordered_map<long, stack<long> > M;
