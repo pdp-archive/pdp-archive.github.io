@@ -25,7 +25,7 @@ int main(){
     scanf("%ld",&N);
     for(long i=1;i<=N;i++){
         scanf("%ld",A+i);
-        PS[i] = PS[i-1] + A[i];//prefix sum
+        PS[i] = PS[i-1] + A[i];
     }
     for(long i=N;i>0;i--)
         SS[i] = SS[i+1] + A[i];
