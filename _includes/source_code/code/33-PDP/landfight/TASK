@@ -10,7 +10,7 @@ TASK(
       SOLUTION(
          name = "landfight_brute",
          source = "landfight_brute.cc",
-         passes_up_to = 9,
+         passes_up_to = 4,
          lang = "c++",
          author = PERSON(
             name = "kbokis",
@@ -19,7 +19,7 @@ TASK(
       SOLUTION(
          name = "landfight_brute_ps",
          source = "landfight_brute_ps.cc",
-         passes_up_to = 9,
+         passes_up_to = 6,
          lang = "c++",
          author = PERSON(
             name = "kbokis",
@@ -28,7 +28,7 @@ TASK(
       SOLUTION(
          name = "landfight_2pointers",
          source = "landfight_2pointers.cc",
-         passes_up_to = 9,
+         passes_all,
          lang = "c++",
          author = PERSON(
             name = "kbokis",
