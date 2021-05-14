@@ -30,3 +30,40 @@ fairmaze:
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"
    solution_tags: ["dfs", "union-find"]
+
+landfight:
+   full_name: "Ο πόλεμος των τσιφλικάδων"
+   stage: "c"
+   points: 30
+   statement_pdf_url: 
+   statement_md: true
+   testcases_url: 
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["binary search", "map", "hash table", "stack", "prefix sum", "cumulative sum", "two pointers"]
+
+wayhome:
+   full_name: "Γυρίζοντας στο σπίτι"
+   stage: "c"
+   points: 30
+   statement_pdf_url:
+   statement_md: true
+   testcases_url:
+   solution: false
+   codes_in_git: false
+   solution_author:
+   solution_tags:
+
+nytrip:
+   full_name: "Ταξίδι στη Νέα Υόρκη"
+   stage: "c"
+   points: 40
+   statement_pdf_url:
+   statement_md: true
+   testcases_url:
+   solution: false
+   codes_in_git: false
+   solution_author: 
+   solution_tags:
+
