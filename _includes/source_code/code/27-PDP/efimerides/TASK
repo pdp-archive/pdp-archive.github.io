@@ -16,5 +16,23 @@ TASK(
             name = "Παναγιώτης Κωστοπαναγιώτης",
          ),
       ),
+      SOLUTION(
+         name = "efimerides_fast",
+         source = "efimerides_fast.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "efimerides_slow",
+         source = "efimerides_slow.cc",
+         passes_up_to = 16,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "efimerides_slow_table",
+         source = "efimerides_slow_table.cc",
+         passes_up_to = 18,
+         lang = "c++",
+      ),
    ]
 )
