@@ -35,25 +35,25 @@ codename: aces
 
 Αφού κάθε φορά διαιρούμε δια δύο, κάθε υπολογισμός θέλει χρόνο $$\mathcal{O}(\log_2(x))$$, επομένως ο αλγόριθμος θέλει $$\mathcal{O}(n \log(\mathrm{MAX}))$$ χρόνο και $$\mathcal{O}(1)$$ μνήμη.
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_bin_representation_slow.cc).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% link_to_source='aces_bin_representation_slow.cc' %}).
 
 **Μέθοδος 2η:** Μπορούμε να αντικαταστήσουμε τα `/ 2` και το `%2` με τα bitwise operations `& 1` και `<< 1`, ώστε ο κώδικας να γίνει λίγο πιο αποδοτικός (συνήθως ο compiler κάνει αυτή την αντικατάσταση).
 
 {% include code.md solution_name='aces_bin_representation_fast.cc' start=3 end=10 %}
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_bin_representation_fast.cc).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% link_to_source='aces_bin_representation_fast.cc' %}).
 
 **Μέθοδος 3η:** Η C++ έχει κάποιες συναρτήσεις που χρησιμοποιούν low-level εντολές για την μέτρηση των ψηφίων. Για ακεραίους $$32$$ και $$64$$-bit στους περισσότερους υπολογιστές αυτές αντιστοιχούν σε μία εντολή assembly (μπορείτε να διαβάσετε [εδώ](https://en.wikipedia.org/wiki/SSE4#POPCNT_and_LZCNT) για την εντολή `POPCNT` σε επεξεργαστές Intel). Η συνάρτηση `bitset::count()` καλεί αυτές τις εντολές αν υπάρχουν στο σύστημα.
 
 {% include code.md solution_name='aces_builtin_count.cc' start=4 end=6 %}
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_builtin_count.cc).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% link_to_source='aces_builtin_count.cc' %}).
 
 **Μέθοδος 4η:** Μπορούμε να προϋπολογίσουμε τα counts για μικρούς αριθμούς πχ για όλα τα bytes (ακέραιοι $$0$$ έως $$2^8 - 1$$) στον πίνακα `byte_count`. Μετά για κάθε $$32$$-bit ακέραιο τον σπάμε σε $$4$$ bytes βρίσκουμε το πλήθος σε κάθε ένα από αυτά με τον πίνακα `byte_count` και τα αθροίζουμε:
 
 {% include code.md solution_name='aces_precompute.cc' start=4 end=27 %}
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/27-PDP/aces/aces_precompute.cc).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% link_to_source='aces_precompute.cc' %}).
 
 **Σημείωση:** Θα μπορούσαμε να είχαμε προϋπολογίσει έως το $$2^{16} - 1$$, με τον precompute χρόνο και τη μνήμη να είναι μεγαλύτερος, αλλά για την `count_bits` ο χρόνος να είναι μικρότερος.
 

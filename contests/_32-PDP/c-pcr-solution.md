@@ -102,7 +102,7 @@ int current_val = state.is_complemented ? (3 - x[i]) : x[i];
 
 {% include code.md solution_name='pcr_slow.cc' start=113 end=119 %}
 
-Επειδή υπάρχουν μόνο $$4$$ στοιχεία, το πλήθος των δυνατών ``positions`` είναι σταθερός αριθμός (για την ακρίβεια[^PositionCount] $$65$$), αρά υπάρχουν το πολύ οι διπλάσιες καταστάσεις (για complemented και όχι complemented). Οι δυνατές μεταβάσεις είναι $$4$$, και η σύγκριση μεταξύ ακολουθιών θέλει $$\mathcal{O}(N)$$ χρόνο, άρα ο αλγόριθμος θέλει συνολικά $$\mathcal{O}(N^2)$$ χρόνο, που είναι αρκετό για να περάσει περίπου το 50% των testcases. Θα βρείτε ολόκληρο τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/32-PDP/pcr/pcr_slow.cc).
+Επειδή υπάρχουν μόνο $$4$$ στοιχεία, το πλήθος των δυνατών ``positions`` είναι σταθερός αριθμός (για την ακρίβεια[^PositionCount] $$65$$), αρά υπάρχουν το πολύ οι διπλάσιες καταστάσεις (για complemented και όχι complemented). Οι δυνατές μεταβάσεις είναι $$4$$, και η σύγκριση μεταξύ ακολουθιών θέλει $$\mathcal{O}(N)$$ χρόνο, άρα ο αλγόριθμος θέλει συνολικά $$\mathcal{O}(N^2)$$ χρόνο, που είναι αρκετό για να περάσει περίπου το 50% των testcases. Θα βρείτε ολόκληρο τον κώδικα [εδώ]({% link_to_source='pcr_slow.cc' %}).
 
 [^PositionCount]: Το πλήθος όλων των διατεταγμένων υποσυνόλων ενός συνόλου μεγέθους $$n$$ δίνεται από τον τύπο: 
    
@@ -139,7 +139,7 @@ void compare_and_add(
 
 {% include code.md solution_name='pcr_semi_efficient.cc' start=131 end=151 %}
 
-Η χρονική πολυπλοκότητα αυτού του αλγορίθμου είναι $$\mathcal{O}(N)$$, αλλά επειδή η σταθερά του $$N$$ είναι μεγάλη, η λύση παίρνει περίπου 70%. Θα βρείτε ολόκληρο τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/32-PDP/pcr/pcr_semi_efficient.cc).
+Η χρονική πολυπλοκότητα αυτού του αλγορίθμου είναι $$\mathcal{O}(N)$$, αλλά επειδή η σταθερά του $$N$$ είναι μεγάλη, η λύση παίρνει περίπου 70%. Θα βρείτε ολόκληρο τον κώδικα [εδώ]({% link_to_source='pcr_semi_efficient.cc' %}).
 
 ## Βέλτιστη λύση -- $$\mathcal{O}(N)$$
 
@@ -178,4 +178,4 @@ $$\underbrace{2\; 2 \; 2 \; 2}_{1} \; \; \; \underbrace{3\; 3 \; 3}_{2} \; \; \;
 
 {% include code.md solution_name='pcr_efficient.cc' start=17 end=108 %}
 
-Υπάρχουν και άλλες βελτιστοποιήσεις που θα μπορούσαν να γίνουν, αλλά αυτή είναι αρκετή ώστε ο κώδικας περάσει όλα τα testcases. Θα βρείτε ολόκληρο τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/32-PDP/pcr/pcr_efficient.cc).
+Υπάρχουν και άλλες βελτιστοποιήσεις που θα μπορούσαν να γίνουν, αλλά αυτή είναι αρκετή ώστε ο κώδικας περάσει όλα τα testcases. Θα βρείτε ολόκληρο τον κώδικα [εδώ]({% link_to_source='pcr_efficient.cc' %}).
