@@ -1,0 +1,45 @@
+TASK(
+   name = "getout",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/getout/",
+   input_file = "getout.in",
+   output_file = "getout.out",
+   time_limit = 1,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "getout_official_cpp",
+         source = "getout_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Αρσένης Γεράσιμος",
+            school = "2ο ΓΕΛ Μοσχάτου",
+         ),
+      ),
+      SOLUTION(
+         name = "getout_bfs",
+         source = "bfs_initial.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "getout_bfs_shorter",
+         source = "bfs_shorter.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "getout_bfs_even_shorter",
+         source = "bfs_even_shorter.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "getout_efficient_representation",
+         source = "bfs_efficient_representation.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
