@@ -49,9 +49,10 @@ efimerides:
    statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1pQzf--jvEWG5l2fF-aTCRnojCTi7G-7X"
-   solution: false
+   solution: true
    codes_in_git: true
    points: 30
+   solution_tags: ["ad hoc", "hash set", "counting sort"]
 
 supermarket:
    full_name: "Σουπερμάρκετ"
