@@ -129,9 +129,9 @@ $$\mathit{SS}_i=\mathit{SS}_{i+1}+x_i > \mathit{SS}_{i+1}$$
 
 [^3]: Ο απλοποιημένος αυτός κώδικας δεν είναι αποδοτικός και έχει πολυπλοκότητα $$\mathcal{O}(N^2)$$ καθώς μπορεί για παράδειγμα ένα test case να έχει όλα τα $$x_i=0$$ οπότε το *vector* στη θέση $$M_0$$ θα έχει $$N$$ στοιχεία. Ένα ακόμα πρόβλημα του παραπάνω κώδικα είναι ότι δεν ελέγχει αν υπάρχει το στοιχείο $$M_{\mathit{prefix}}$$ πριν το χρησιμοποιήσει, με αποτέλεσμα τη δημιουργία κενών στοιχείων στο *unordered_map*. 
 
-[^4]: [Ενδεικτική λύση με vector χωρίς διαγραφή στοιχείων](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/landfight/landfight_vector_head.cc) 
+[^4]: [Ενδεικτική λύση με vector χωρίς διαγραφή στοιχείων]({% link_to_source='landfight_vector_head.cc' %}) 
 
-[^5]: [Ενδεικτική λύση με διπλά συνδεδεμένη λίστα](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/landfight/landfight_list.cc)
+[^5]: [Ενδεικτική λύση με διπλά συνδεδεμένη λίστα]({% link_to_source='landfight_list.cc' %})
 
-[^6]:[Ενδεικτική λύση με stack](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/33-PDP/landfight/landfight_stack.cc)
+[^6]:[Ενδεικτική λύση με stack]({% link_to_source='landfight_stack.cc' %})
 
