@@ -59,6 +59,7 @@ anneal:
    statement_pdf_url: "https://drive.google.com/open?id=12aBIv3J-jCTSxxYccs_pkAa2ezrtoD56"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fSzwMRtRerRyrFa_V3ACtR47SZT0dQCc"
-   solution: false
+   solution: true
    codes_in_git: true
    points: 10
+   solution_tags: ["dp", "memoisation"]
