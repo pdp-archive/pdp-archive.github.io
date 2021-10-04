@@ -34,5 +34,29 @@ TASK(
             name = "Χρήστος Πόριος",
          ),
       ),
+      SOLUTION(
+         name = "matrix_brute_force",
+         source = "matrix_brute_force.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_hash",
+         source = "matrix_hash.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_z_algo",
+         source = "matrix_z_algo.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_kmp",
+         source = "matrix_kmp.cc",
+         lang = "c++",
+         passes_all,
+      ),
    ]
 )
