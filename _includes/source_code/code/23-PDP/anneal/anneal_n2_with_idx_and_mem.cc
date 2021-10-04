@@ -4,22 +4,22 @@
 
 typedef long long ll;
 
-const int MAXN = 50'000;
-const ll MAXV = 10'000'000LL * (MAXN + 1);
-int a[MAXN];
+const long MAXN = 50'000;
+const ll MAXV = 10'000'000LL * 2 * (MAXN + 1);
+long a[MAXN];
 ll dp[MAXN];
 
 int main() {
-   int N;
+   long N;
    FILE *fi = fopen("anneal.in", "r");
-   fscanf(fi, "%d", &N);
-   for (int i = 0; i < N; ++i) {
-      fscanf(fi, "%d", &a[i]);
+   fscanf(fi, "%ld", &N);
+   for (long i = 0; i < N; ++i) {
+      fscanf(fi, "%ld", &a[i]);
    }
    fclose(fi);
-   for (int i = 0; i < N; ++i) {
+   for (long i = 0; i < N; ++i) {
       ll mn = MAXV;
-      for (int j = 0; j < N; ++j) {
+      for (long j = 0; j < N; ++j) {
          if (a[i] > a[j]) dp[j] += a[i] - a[j];
          else {
             mn = std::min(mn, dp[j]);
@@ -29,7 +29,7 @@ int main() {
       dp[i] = mn;
    }
    ll mn = dp[0];
-   for (int i = 0; i < N; ++i) {
+   for (long i = 0; i < N; ++i) {
       mn = std::min(mn, dp[i]);
    }
    FILE *fo = fopen("anneal.out", "w");

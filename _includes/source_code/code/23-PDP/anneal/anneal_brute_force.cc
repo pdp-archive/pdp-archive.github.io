@@ -4,13 +4,13 @@
 
 typedef long long ll;
 
-const int MAXN = 50'000;
-const ll MAXV = 10'000'000LL * (MAXN + 1);
+const long MAXN = 50'000;
+const ll MAXV = 10'000'000LL * 2 * (MAXN + 1);
 long a[MAXN];
 
-int N;
+long N;
 
-ll solve(int pos, ll temp) {
+ll solve(long pos, ll temp) {
    if (pos == N) return 0;
    if (a[pos] >= temp) return solve(pos+1, temp) + (a[pos] - temp);
    ll one = solve(pos + 1, temp) + 2 * a[pos];
@@ -20,10 +20,10 @@ ll solve(int pos, ll temp) {
 
 int main() {
    FILE *fi = fopen("anneal.in", "r");
-   fscanf(fi, "%d", &N);
+   fscanf(fi, "%ld", &N);
    long max_a = 0;
-   for (int i = 0; i < N; ++i) {
-      fscanf(fi, "%d", &a[i]);
+   for (long i = 0; i < N; ++i) {
+      fscanf(fi, "%ld", &a[i]);
       max_a = std::max(max_a, a[i]);
    }
    fclose(fi);
