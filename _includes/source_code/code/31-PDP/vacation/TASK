@@ -1,0 +1,16 @@
+TASK(
+   name = "vacation",
+   test_count = 25,
+   files_dir = "testdata/31-PDP/vacation/",
+   input_file = "vacation.in",
+   output_file = "vacation.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "vacation_official",
+         source = "vacation_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
