@@ -1,0 +1,17 @@
+TASK(
+   name = "books",
+   test_count = 10,
+   files_dir = "testdata/23-PDP/books/",
+   input_file = "books.in",
+   output_file = "books.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "books_official",
+         source = "books_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

@@ -1,0 +1,17 @@
+TASK(
+   name = "intvsum",
+   test_count = 25,
+   files_dir = "testdata/23-PDP/intvsum/",
+   input_file = "intvsum.in",
+   output_file = "intvsum.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "intvsum_official",
+         source = "intvsum_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
