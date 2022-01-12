@@ -1,0 +1,23 @@
+TASK(
+   name = "fib6",
+   test_count = 18,
+   files_dir = "testdata/24-PDP/fib6/",
+   input_file = "fib6.in",
+   output_file = "fib6.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "fib6_official",
+         source = "fib6_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fib6_official_brute_force",
+         source = "fib6_official_brute_force.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

@@ -1,0 +1,18 @@
+TASK(
+   name = "cutpoly",
+   test_count = 15,
+   files_dir = "testdata/24-PDP/cutpoly/",
+   input_file = "cutpoly.in",
+   output_file = "cutpoly.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "cutpoly_official",
+         source = "cutpoly_official.cpp",
+         passes_all_except_for = [14, 15],
+         lang = "c++",
+         comment = "Το hellenico μπορεί να επιτρέπει μικρά σχετικά λαθη και να περνάνε τα δύο testcases.",
+      ),
+   ]
+)
