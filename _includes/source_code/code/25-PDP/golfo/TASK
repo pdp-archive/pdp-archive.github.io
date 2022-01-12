@@ -1,0 +1,17 @@
+TASK(
+   name = "golfo",
+   test_count = 14,
+   files_dir = "testdata/25-PDP/golfo/",
+   input_file = "golfo.in",
+   output_file = "golfo.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "golfo_official",
+         source = "golfo_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

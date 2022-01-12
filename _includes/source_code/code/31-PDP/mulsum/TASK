@@ -1,0 +1,16 @@
+TASK(
+   name = "mulsum",
+   test_count = 20,
+   files_dir = "testdata/31-PDP/mulsum/",
+   input_file = "mulsum.in",
+   output_file = "mulsum.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "mulsum_official",
+         source = "mulsum_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

@@ -1,0 +1,17 @@
+TASK(
+   name = "maxksum",
+   test_count = 23,
+   files_dir = "testdata/24-PDP/maxksum/",
+   input_file = "maxksum.in",
+   output_file = "maxksum.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "maxksum_official",
+         source = "maxksum_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
