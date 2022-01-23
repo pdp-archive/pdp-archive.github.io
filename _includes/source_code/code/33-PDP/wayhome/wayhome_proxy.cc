@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <queue>
 #include <climits>
+
 using namespace std;
 
 const int MAXNM = 700;
@@ -11,7 +12,7 @@ struct pt {
 } ho,po,yo;//ho(me),po(liceman),yo(u)
 int T,XM,YN;//XM=στήλες, YN=γραμμές
 
-long proxy[(MAXNM+2)*(MAXNM+2)];
+long proxy[MAXNM*MAXNM+1];
 
 struct cell {
     bool pol_visit; //επίσκεψη αστυνομικού
@@ -50,6 +51,11 @@ void pol_bfs(){//bfs αστυνόμου
     queue<pt> Q;
     Q.push(po);
     long tim = 0;//time stamp
+    //ο αστυνομικός μπορεί να εποπτεύσει τη θέση που ξεκινά τη χρονική στιγμή 1
+    //(η απαγόρευση ξεκινά ένα λεπτό μετά τις 9:00μμ σύμφωνα με εκφώνηση)
+    //άρα δεν πρέπει να γίνει το G[po.x][po.y].pol_visit αληθές στην
+    //τρέχουσα χρονική στιγμή 0.
+    
     while(!Q.empty()){
         for(size_t sz = Q.size(),i=0;i<sz;i++){
             int x = Q.front().x, y = Q.front().y; Q.pop();
@@ -81,16 +87,18 @@ void assign_proxy(){//απόδοση εκπροσώπων
     size_t count = 0;
     for(int y=1;y<=YN;y++){
         for(int x=1;x<=XM;x++){
+            if(!G[x][y].is_road())
+                continue;
             if(G[x][y].hpr == -1L){
                 proxy[count] = LONG_MAX;
                 fill_horz(x,y,1,count);
-                fill_horz(x-1,y,-1,count);
+                fill_horz(x,y,-1,count);
                 count++;
             }
             if(G[x][y].vpr == -1L){
                 proxy[count] = LONG_MAX;
                 fill_vert(x,y,1,count);
-                fill_vert(x,y-1,-1,count);
+                fill_vert(x,y,-1,count);
                 count++;
             }
         }
@@ -106,6 +114,7 @@ void you_go(queue<pt>& Q,int x,int y,int tim){//επόμενο βήμα δικό
 bool you_bfs(){
     queue<pt> Q;
     Q.push(yo);
+    G[yo.x][yo.y].you_visit = true;
     long tim = 0;
     while(!Q.empty()){
         tim++;//σε αυτό το χρόνο θα γίνουν οι επομενες κινησεις

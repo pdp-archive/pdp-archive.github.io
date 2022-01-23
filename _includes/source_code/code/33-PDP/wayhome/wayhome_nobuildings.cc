@@ -28,7 +28,7 @@ int main(){
             char s[MAXNM+1];
             scanf(" %s",s);
             for(int x=1;x<=XM;x++){
-                switch(G[x][y].c = s[x-1]){
+                switch(s[x-1]){
                     case 'Y': yo = pt(x,y); break;
                     case 'P': po = pt(x,y); break;
                     case 'H': ho = pt(x,y); break;
@@ -39,4 +39,3 @@ int main(){
     }
     return 0;
 }
-

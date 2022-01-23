@@ -1,6 +1,6 @@
 TASK(
    name = "wayhome",
-   test_count = 0,
+   test_count = 12,
    files_dir = "testdata/33-PDP/wayhome/",
    input_file = "wayhome.in",
    output_file = "wayhome.out",
@@ -10,7 +10,7 @@ TASK(
       SOLUTION(
          name = "wayhome_42",
          source = "wayhome_42.cc",
-         passes_up_to = 9,
+         passes_only = [1,4,5,6,7],
          lang = "c++",
          author = PERSON(
             name = "kbokis",
@@ -19,7 +19,7 @@ TASK(
       SOLUTION(
          name = "wayhome_nobuildings",
          source = "wayhome_nobuildings.cc",
-         passes_up_to = 2,
+         passes_only = [2,3,12],
          lang = "c++",
          author = PERSON(
             name = "kbokis",
@@ -35,8 +35,8 @@ TASK(
          ),
       ),
       SOLUTION(
-         name = "wayhome_complete",
-         source = "wayhome_complete.cc",
+         name = "wayhome_proxy_fast",
+         source = "wayhome_proxy_fast.cc",
          passes_all,
          lang = "c++",
          author = PERSON(
