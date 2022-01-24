@@ -1,0 +1,17 @@
+TASK(
+   name = "critical",
+   test_count = 20,
+   files_dir = "testdata/28-PDP/critical/",
+   input_file = "critical.in",
+   output_file = "critical.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "critical_official",
+         source = "critical_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

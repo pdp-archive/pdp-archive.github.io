@@ -1,0 +1,17 @@
+TASK(
+   name = "bicycle",
+   test_count = 19,
+   files_dir = "testdata/28-PDP/bicycle/",
+   input_file = "bicycle.in",
+   output_file = "bicycle.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "bicycle_official",
+         source = "bicycle_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
