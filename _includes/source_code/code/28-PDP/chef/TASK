@@ -1,0 +1,17 @@
+TASK(
+   name = "chef",
+   test_count = 14,
+   files_dir = "testdata/28-PDP/chef/",
+   input_file = "chef.in",
+   output_file = "chef.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "chef_official",
+         source = "chef_official.c",
+         passes_all,
+         lang = "c",
+      ),
+   ]
+)
