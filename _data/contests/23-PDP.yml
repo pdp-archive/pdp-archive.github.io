@@ -64,7 +64,7 @@ anneal:
    points: 10
 
 oddeven:
-   full_name: "ODDEVEN"
+   full_name: "Περιττοί και άρτιοι"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1T0_Vc0RLSkA5ZxT-24BUtRWAtAx0oLzs"
    statement_md: false
@@ -73,7 +73,7 @@ oddeven:
    solution_tags: ["prefix sum", "hash tables", "counting sort", "two pointers", "map", "sorting"]
 
 intvsum:
-   full_name: "INTVSUM"
+   full_name: "Άθροισμα παρεμβαλλομένων"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1KJ7P5229B8X1kO5tg0xDxLhRfaT4U2Qh"
    statement_md: false
@@ -82,7 +82,7 @@ intvsum:
    solution_tags: ["prefix sum", "hash tables", "counting sort", "map"]
 
 toponyms:
-   full_name: "TOPONYMS"
+   full_name: "Τοπωνύμια"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/10VV3QioiRlc0e2NdPSBj32zUocJkOXoZ"
    statement_md: false
@@ -91,7 +91,7 @@ toponyms:
    solution_tags: ["trie", "strings"]
 
 newroad:
-   full_name: "NEWROAD"
+   full_name: "Βελτίωση οδικού δικτύου"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1rO3d7G3xcd5wnbLDUz6HnaEUaOypZ4rg"
    statement_md: false
@@ -100,7 +100,7 @@ newroad:
    solution_tags: ["shortest paths", "dijkstra", "graphs"]
 
 books:
-   full_name: "BOOKS"
+   full_name: "Αντιγραφή βιβλίων"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/18H28A65mNN6vzjvX23ItKdRnKjAs0bII"
    statement_md: false
@@ -109,7 +109,7 @@ books:
    solution_tags: ["binary search", "greedy"]
 
 restaurants:
-   full_name: "RESTAURANTS"
+   full_name: "Εστιατόρια"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/16U1OBBsHS1yMVrJzNqSx9SBpEGzfe1-_"
    statement_md: false
