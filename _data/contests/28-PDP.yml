@@ -68,7 +68,7 @@ starwars:
    solution_tags: ["cumulative sums", "inclusion-exclusion", "range sum queries", "segment trees", "sqrt decomposition", "lazy propagation"]
 
 metoxes2:
-   full_name: "METOXES2"
+   full_name: "Μετοχές"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/19v5rtd8GUlzptoev2AshHiwAqbFxK4ND"
    statement_md: false
@@ -77,7 +77,7 @@ metoxes2:
    solution_tags: []
 
 sumofcubes:
-   full_name: "SUMOFCUBES"
+   full_name: "Άθροισμα Κύβων"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1X30mTMEmJRnGW4lXrPJoIPmle7oN6McO"
    statement_md: false
@@ -86,7 +86,7 @@ sumofcubes:
    solution_tags: []
 
 critical:
-   full_name: "CRITICAL"
+   full_name: "Σημαντικοί Δρόμοι"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1zZCQU4lOHMlrdxm9OSErTrTpFXToIFEE"
    statement_md: false
@@ -95,7 +95,7 @@ critical:
    solution_tags: []
    
 chef:
-   full_name: "CHEF"
+   full_name: "Επιλογή chef"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1-BImEaaC3I_ue0IPddojmV_0tBfzsKF6"
    statement_md: false
@@ -104,7 +104,7 @@ chef:
    solution_tags: []
 
 bicycle:
-   full_name: "BICYCLE"
+   full_name: "Ποδηλάτες"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1cLW5bqEdLQp0NryfDlavZrwprdaZirWR"
    statement_md: false
@@ -113,7 +113,7 @@ bicycle:
    solution_tags: []
 
 bookeaters:
-   full_name: "BOOKEATERS"
+   full_name: "Βιβλιοφάγοι"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1HRmitImvcIOEFPu-nLdjYn6dWXPX70gx"
    statement_md: false

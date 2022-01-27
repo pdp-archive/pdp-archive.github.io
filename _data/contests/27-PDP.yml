@@ -64,7 +64,7 @@ supermarket:
    points: 40
 
 sumx:
-   full_name: "SUMX"
+   full_name: "Άθροισμα ζευγών"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1M7qaeoGkCFJAHU_VU9vga9_bFn8OsoOj"
    statement_md: false
@@ -73,7 +73,7 @@ sumx:
    solution_tags: []
 
 elev2:
-   full_name: "ELEV2"
+   full_name: "Ασανσέρ"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1mEHsMjuAh1dKTNEbRaGF2L4yGqr3a7ip"
    statement_md: false
@@ -82,7 +82,7 @@ elev2:
    solution_tags: []
 
 happy:
-   full_name: "HAPPY"
+   full_name: "Χαρούμενοι αριθμοί"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1HgtgB956Ph57bQzLOtlFh5it09D5kp92"
    statement_md: false
@@ -91,7 +91,7 @@ happy:
    solution_tags: []
 
 maxzero:
-   full_name: "MAXZERO"
+   full_name: "Μηδενικό άθροισμα"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1qDXmuhc_LuNJ9i8cE7eV8Jk2tAE5oQeA"
    statement_md: false
@@ -100,7 +100,7 @@ maxzero:
    solution_tags: []
 
 airports:
-   full_name: "AIRPORTS"
+   full_name: "Αεροδρόμια και τρένα"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1x_irfkuIx6dOHcbfi5yqi1Yi8YnRVXpZ"
    statement_md: false
@@ -109,7 +109,7 @@ airports:
    solution_tags: []
 
 metoxes:
-   full_name: "METOXES"
+   full_name: "Μετοχές και K χτυπήματα"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1vcIocDOXJUG_UI5GQUEXT6wT3vDaU5Vp"
    statement_md: false

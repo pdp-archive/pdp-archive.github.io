@@ -66,3 +66,39 @@ pcr:
    codes_in_git: true
    points: 40
    solution_tags: ["dp", "bitwise operations", "set", "map"]
+
+countways:
+   full_name: "Με πόσους τρόπους;"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/17ao8Z2YeQ_khPoy-rnkNIOGR3Ct63kPz"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1reGYb9r5DCoelpzmVZHzXZpQAkUV4NzP"
+   codes_in_git: false
+   solution_tags: []
+
+treescore:
+   full_name: "Αξιολόγηση προσόντων"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1YfxMI3HQFogB9iEo62rlXild_STOWU5N"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1b3gwqSu9jknvq1VaRgcTJmp4jPwqq0KK"
+   codes_in_git: false
+   solution_tags: []
+   
+goodlong:
+   full_name: "Τα παιδιά του παγωτατζή"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/151WZLo7ggMOvW0-2Dp4R-QGpF1lqNQE7"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1ThplouMFLo80Evu2Xvs_cbP9aPy7rFri"
+   codes_in_git: false
+   solution_tags: []
+
+shortcuts:
+   full_name: "Να προλάβουμε το πάρτυ!"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/18Jrsv4GsG_J9V9zpwxGJ-8nFw0ctudTB"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/15PZbbaKg6WnK4sNzqo1_dHU0zccgbsnR"
+   codes_in_git: false
+   solution_tags: []

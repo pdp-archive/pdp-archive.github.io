@@ -68,7 +68,7 @@ telecom:
    solution_tags: ["minimum spanning tree", "union-find", "trees"]
 
 fishtank:
-   full_name: "FISHTANK"
+   full_name: "Ενυδρείο"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/10WAzqKke0STVvP_7myxMZ8QLh5EexqV3"
    statement_md: false
@@ -77,7 +77,7 @@ fishtank:
    solution_tags: ["greedy", "two pointers", "sorting"]
 
 golfo:
-   full_name: "GOLFO"
+   full_name: "Ο Τάσος και η Γκόλφω"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1EWMBBP61hPTidBeb7eyFLKdcQhLM9afh"
    statement_md: false
@@ -86,7 +86,7 @@ golfo:
    solution_tags: ["shortest path", "bfs", "dijkstra", "graphs"]
 
 kdiff:
-   full_name: "KDIFF"
+   full_name: "Βρες τη διαφορά"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1hnRyOfzkBb0_wT_vMa0dkrx8ZclrVLqA"
    statement_md: false
@@ -95,7 +95,7 @@ kdiff:
    solution_tags: ["binary search", "set", "sorting", "two pointers"]
 
 gymnast:
-   full_name: "GYMNAST"
+   full_name: "Γυμναστής"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1INvB4B3e6eZ_3wPgl0hsfz4-NMltthdy"
    statement_md: false
@@ -104,7 +104,7 @@ gymnast:
    solution_tags: ["dp", "sorting"]
 
 network:
-   full_name: "NETWORK"
+   full_name: "Τηλεφωνικό δίκτυο"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1YY8Orw5ENvbsyaHB3NcmlNGGFIwQFcz4"
    statement_md: false
@@ -113,7 +113,7 @@ network:
    solution_tags: ["articulation points", "dfs", "graphs"]
 
 carmeet:
-   full_name: "CARMEET"
+   full_name: "Συνάντηση αυτοκινήτων"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1fr9xWoQE6Lpv6FTQhQ0Bm8qR576anu_U"
    statement_md: false

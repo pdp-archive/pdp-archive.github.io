@@ -65,7 +65,7 @@ souvlakia:
    points: 40
 
 fib6:
-   full_name: "FIB6"
+   full_name: "Άθροισμα 6 Fibonacci"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1S9pxcEz-D0xcTrGiHZ4iiYE30YMClpss"
    statement_md: false
@@ -74,7 +74,7 @@ fib6:
    solution_tags: ["greedy", "brute force", "math"]
 
 knight:
-   full_name: "KNIGHT"
+   full_name: "Βιαστικός ίππος"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1OWpD582R7jYVB5GdTEE6Zg0zrZe06Yzp"
    statement_md: false
@@ -83,7 +83,7 @@ knight:
    solution_tags: ["shortest paths", "dijkstra", "bfs", "graphs", "math"]
 
 cutpoly:
-   full_name: "CUTPOLY"
+   full_name: "Αύξουσα πολυγωνική γραμμή"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1mWwyRCXxHswEo7TIkaMaOlKwWNlcJGqP"
    statement_md: false
@@ -92,7 +92,7 @@ cutpoly:
    solution_tags: ["geometry", "math", "greedy", "ternary search"]
 
 shades:
-   full_name: "SHADES"
+   full_name: "Μεταφορά τροφίμων"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1Cyqz-5EUV9LULZGQJaZyAicLTZfeC6Tm"
    statement_md: false
@@ -101,7 +101,7 @@ shades:
    solution_tags: ["graphs", "dfs", "bfs"]
 
 maxksum:
-   full_name: "MAXKSUM"
+   full_name: "Άθροισμα υπακολουθίας"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1RaitrZFmFKVUgoXMMY9fUcPFdZ-jtq0d"
    statement_md: false
@@ -110,7 +110,7 @@ maxksum:
    solution_tags: ["two pointers", "prefix sum", "segment tree", "priority queue"]
 
 concat:
-   full_name: "CONCAT"
+   full_name: "Παράθεση συμβολοσειρών"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1O69pLOWnBpMuinYY8P6oXEnShgCDsBmA"
    statement_md: false

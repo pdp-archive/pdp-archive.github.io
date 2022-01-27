@@ -68,7 +68,7 @@ numbase:
    solution_tags: ["number theory", "modulo", "binary search", "number bases", "divisibility", "factorisation"]
 
 amazmosq:
-   full_name: "AMAZMOSQ"
+   full_name: "Τα κουνούπια του Αμαζονίου"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1xtfr6wGznCaNe9-HkrQBiOlWIe3kk2__"
    statement_md: false
@@ -77,7 +77,7 @@ amazmosq:
    solution_tags: ["math"]
 
 stairstep:
-   full_name: "STAIRSTEP"
+   full_name: "Ανέβα τη σκάλα"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/196B1RcWpAMidqJ26WTe4NITvBs9RAF9k"
    statement_md: false
@@ -86,7 +86,7 @@ stairstep:
    solution_tags: ["dp"]
 
 nonneg:
-   full_name: "NONNEG"
+   full_name: "Παιχνίδι μη αρνητικών"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1MZU-A90MqnScwcHJfZBZ-6zHWIHo5wez"
    statement_md: false
@@ -95,7 +95,7 @@ nonneg:
    solution_tags: ["bellman-ford", "negative cycle", "graphs"]
 
 driveme:
-   full_name: "DRIVEME"
+   full_name: "Σύστημα πλοήγησης"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1wSckzlD7OgB5XERPZLDdkutNbofqdfmC"
    statement_md: false
@@ -104,7 +104,7 @@ driveme:
    solution_tags: ["shortest paths", "dynamic programming", "dijkstra", "graphs"]
 
 tvmatch:
-   full_name: "TVMATCH"
+   full_name: "Τηλεοπτική μετάδοση αγώνων"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/18WsVyg-_lc7-k47Fheg9d5tWBTH8P0ls"
    statement_md: false
@@ -113,7 +113,7 @@ tvmatch:
    solution_tags: ["math"]
 
 numpath:
-   full_name: "NUMPATH"
+   full_name: "Διαδρομές αριθμών"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1ifkQMuVus_N_7zgBhaPHETyCo4noJNvb"
    statement_md: false
