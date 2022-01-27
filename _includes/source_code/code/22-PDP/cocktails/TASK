@@ -1,0 +1,17 @@
+TASK(
+   name = "cocktails",
+   test_count = 11,
+   files_dir = "testdata/22-PDP/cocktails/",
+   input_file = "cocktails.in",
+   output_file = "cocktails.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "cocktails_official",
+         source = "cocktails_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

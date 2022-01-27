@@ -56,3 +56,66 @@ getout:
    solution: false
    codes_in_git: true
    points: 40
+
+citycirc:
+   full_name: "Κύκλος πόλης"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/19xyMMRNDE2voZc_28cqBqQVKCAmcWTz9"
+   codes_in_git: false
+   solution_tags: []
+
+sumofpow:
+   full_name: "Άθροισμα δυνάμεων"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1rlCSMJDlWpQU9N6dWr2mnvpbzLvbFQ2g"
+   codes_in_git: false
+   solution_tags: []
+
+flowers:
+   full_name: "Κατεστραμμένα λουλούδια"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1MKLIyr1-YwlF4nB9GHzePekhsXboqq9R"
+   codes_in_git: false
+   solution_tags: []
+
+escape:
+   full_name: "Μέγιστος διαφυγών φωτισμός"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1a9nxVnLVdiIklgMmNvpPkDvUQ60mw7YH"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+cocktails:
+   full_name: "Αφού σε χαλάει..."
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1P34yweXHodupj_YabgTSTMLdoMEpOj6g"
+   codes_in_git: true
+   solution_tags: []
+
+amplifiers:
+   full_name: "Ενισχυτές"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1EC7Mg2fqrWzRSEI1XHlUylw3-cN_G3cW"
+   codes_in_git: false
+   solution_tags: []
+
+rdigits:
+   full_name: "Διαγραφή ψηφίων"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1Bp-6ax91sJrqdNuIZkT8XZRg1XC_7ZrD"
+   codes_in_git: true
+   solution_tags: []
