@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 
 const long MAXM = 1000;
 

@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 #include <unordered_map>
 
 const long MAXM = 1000;
