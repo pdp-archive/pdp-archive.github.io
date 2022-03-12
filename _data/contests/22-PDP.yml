@@ -15,8 +15,9 @@ matrix:
    statement_pdf_url: "https://drive.google.com/open?id=1stq-V88tWJ3RnmPnLu0ylyC5UArdJHy7"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KJaIgr7PK1LiiwHm_oLH_UTRamgm5ZrW"
-   solution: false
+   solution: true
    codes_in_git: true
+   solution_tags: ["string matching", "kmp", "z-algorithm", "rolling hash", "strings"]
 
 fire:
    full_name: "Οι φωτιές στην Ελλάδα"
