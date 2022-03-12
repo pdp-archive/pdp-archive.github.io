@@ -41,6 +41,12 @@ TASK(
          passes_all,
       ),
       SOLUTION(
+         name = "matrix_strstr",
+         source = "matrix_strstr.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
          name = "matrix_hash",
          source = "matrix_hash.cc",
          lang = "c++",
