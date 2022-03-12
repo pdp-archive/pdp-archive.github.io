@@ -16,12 +16,12 @@ int main() {
    FILE *fi = fopen("matrix.in", "r");
    fscanf(fi, "%ld\n", &N);
    for (long i = 1; i <= N; ++i) {
-      fscanf(fi, "%c", &A[i]);
+      A[i] = fgetc(fi);
    }
-   fscanf(fi, "\n");
+   
    fscanf(fi, "%ld\n", &M);
    for (long i = 1; i <= M; ++i) {
-      fscanf(fi, "%c", &B[i]);
+      B[i] = fgetc(fi);
    }
    
    // Υπολογισμός της failure function.

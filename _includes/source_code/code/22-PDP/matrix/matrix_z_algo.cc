@@ -14,12 +14,12 @@ int main() {
    FILE *fi = fopen("matrix.in", "r");
    fscanf(fi, "%ld\n", &N);
    for (long i = 0; i < N; ++i) {
-      fscanf(fi, "%c", &S[i]);
+      S[i] = fgetc(fi);
    }
-   fscanf(fi, "\n");
+   
    fscanf(fi, "%ld\n", &M);
    for (long i = 0; i < M; ++i) {
-      fscanf(fi, "%c", &S[N + i]);
+      S[N + i] = fgetc(fi);
    }
    long found_pos = -1;
    // Υπολογισμος του πίνακα Z για την S = Α + Β.

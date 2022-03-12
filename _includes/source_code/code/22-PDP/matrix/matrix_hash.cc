@@ -29,13 +29,13 @@ int main() {
    fscanf(fi, "%ld\n", &N);
    long long hash_A = 0;
    for (long i = 0; i < N; ++i) {
-      fscanf(fi, "%c", &A[i]);
+      A[i] = fgetc(fi);
       hash_A = add_hash(A[i], hash_A); 
    }
-   fscanf(fi, "\n");
+   
    fscanf(fi, "%ld\n", &M);
    for (long i = 0; i < M; ++i) {
-      fscanf(fi, "%c", &B[i]);
+      B[i] = fgetc(fi);
    }
    long found_pos = -1;
    // Υπολογίζουμε το rolling hash των πρώτων N στοιχείων
