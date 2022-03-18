@@ -1,0 +1,64 @@
+TASK(
+   name = "crazyhotel",
+   test_count = 22,
+   files_dir = "testdata/34-PDP/crazyhotel/",
+   input_file = "crazyhotel.in",
+   output_file = "crazyhotel.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "crazyhotel_brute",
+         source = "crazyhotel_brute.cpp",
+         passes_up_to = 11,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "crazyhotel_nlogn",
+         source = "crazyhotel_nlogn.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "crazyhotel_nlogn_v2",
+         source = "crazyhotel_nlogn_v2.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "crazyhotel_sliding_ps",
+         source = "crazyhotel_sliding_ps.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "crazyhotel_sliding_v2",
+         source = "crazyhotel_sliding_v2.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "crazyhotel_sliding_segsum",
+         source = "crazyhotel_sliding_segsum.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
