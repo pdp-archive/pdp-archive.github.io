@@ -1,9 +1,6 @@
 #include <cstdio>
-#include <algorithm>
 
-using namespace std;
-
-const long MAXN = int(1e6);
+const long MAXN = 1'000'000L;
 long N,S,T, ans, A[MAXN+1];
 
 int main(){
@@ -13,11 +10,13 @@ int main(){
     for(int i=1;i<=N;i++)
         fscanf(in,"%ld",&A[i]);
     for(long left=1;left<=N;left++){	
-        //βρες το right ως την τελευταία μέρα που μπορούμε να μείνουμε
-        //με S χρήματα αν ξεκινήσουμε διαμονή από την ημέρα left
+        //βρες την τελευταία μέρα right που μπορούμε να μείνουμε, 
+        //ξεκινώντας από την ημέρα left και ξοδεύοντας το πολύ S χρήματα 
         long right = left-1, intsum = 0;
-        while(right+1<=N && A[right+1]<=T && intsum+A[right+1]<=S)
-            intsum += A[++right];
+        while(right+1<=N && A[right+1]<=T && intsum+A[right+1]<=S){
+            right++;
+            intsum += A[right];
+        }
         ans += right - left + 1;
     }
     fprintf(out,"%ld\n",ans);

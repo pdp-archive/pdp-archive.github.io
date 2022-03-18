@@ -1,10 +1,7 @@
 #include <cstdio>
-#include <algorithm>
 
-using namespace std;
-
-const long MAXN = int(1e6);
-long N,S,T, ans, A[MAXN+1], intsum;//interval sum = άθροισμα του segment [left,right]
+const long MAXN = 1'000'000L;
+long N,S,T,A[MAXN+1],ans;
 
 int main(){
     FILE *in = fopen("crazyhotel.in","r");
@@ -13,9 +10,11 @@ int main(){
     for(long i=1;i<=N;i++)
         fscanf(in,"%ld",&A[i]);
 
-    for(long right=0,left=1;left<=N;left++){	
-        //βρες το right ως την τελευταία μέρα που μπορύμε να μείνουμε
-        //με S χρήματα αν ξεκινήσουμε διαμονή από την ημέρα left
+    long left, right=0;
+    long intsum = 0;//Το άθροισμα του segment [left,right];
+    for(left=1;left<=N;left++){	
+        //βρες την τελευταία μέρα right που μπορούμε να μείνουμε, 
+        //ξεκινώντας από την ημέρα left και ξοδεύοντας το πολύ S χρήματα 
         if(right<left-1){//πρέπει Ν>=right+1>=L
             intsum = 0;
             right=left-1;

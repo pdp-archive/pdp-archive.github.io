@@ -52,13 +52,10 @@ TASK(
          ),
       ),
       SOLUTION(
-         name = "crazyhotel_sliding_segsum",
-         source = "crazyhotel_sliding_segsum.cpp",
+         name = "crazyhotel_sliding_constmem",
+         source = "crazyhotel_sliding_constmem.cpp",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "kbokis",
-         ),
       ),
    ]
 )

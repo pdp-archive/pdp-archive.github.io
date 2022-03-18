@@ -1,10 +1,6 @@
 #include <cstdio>
-#include <algorithm>
-#include <vector>
 
-using namespace std;
-
-const long MAXN = long(10e6);
+const long MAXN = 1'000'000L;
 long N,S,T,A[MAXN+1],ans;
 
 //θα αντικατασταθούν οι τιμές που ξεπερνούν το T με (S+1) οπότε
@@ -21,8 +17,7 @@ int main(){
 
     for(long i=1;i<=N;i++){
         fscanf(in,"%ld",&A[i]);
-        if(A[i]>T)
-            A[i] = S+1;
+        if(A[i]>T) A[i] = S+1;
         PS[i] = PS[i-1] + A[i];
     }
     for(int i=1;i<=N;i++){

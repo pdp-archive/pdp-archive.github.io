@@ -1,10 +1,6 @@
 #include <cstdio>
-#include <algorithm>
-#include <vector>
 
-using namespace std;
-
-const long MAXN = long(10e6);
+const long MAXN = 1'000'000L;
 long N,S,T,ans;
 
 long A[MAXN+1],PS[MAXN+1];//prefix sum του πίνακα A
@@ -24,6 +20,8 @@ void solve(long L,long R){
                 right = mid-1;
             }
         }
+        //το pos είναι η δεξιότερη άκρη του διαστήματος στο 
+        //οποίο ξεκινώντας απο ημέρα L, ξοδεύουμε μέχρι S
         if(pos>=0)
             ans += (pos - L + 1);
         L++;
@@ -36,11 +34,10 @@ int main(){
     fscanf(in,"%ld%ld%ld",&N,&S,&T);
 
     long L = 1;
-    for(long x,i=1;i<=N;i++){
-        fscanf(in,"%ld",&x);
-        A[i] = x;
-        PS[i] = PS[i-1] + x;
-        if(x>T){
+    for(long i=1;i<=N;i++){
+        fscanf(in,"%ld",&A[i]);
+        PS[i] = PS[i-1] + A[i];
+        if(A[i]>T){
             solve(L,i-1);
             L = i + 1;
         }
