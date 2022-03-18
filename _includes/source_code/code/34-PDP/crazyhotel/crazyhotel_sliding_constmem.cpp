@@ -1,10 +1,7 @@
 #include <cstdio>
-#include <algorithm>
-
-using namespace std;
 
 const long MAXN = 1'000'000L;
-long N,S,T, ans, intsum;//interval sum = άθροισμα του segment [left,right]
+long N,S,T, ans;
 
 int main(){
     FILE *fleft = fopen("crazyhotel.in","r");
@@ -13,6 +10,7 @@ int main(){
     fscanf(fleft,"%ld%ld%ld",&N,&S,&T);
     fscanf(fright,"%ld%ld%ld",&N,&S,&T);
     
+    long intsum = 0;//interval sum = άθροισμα του segment [left,right]
     long a_left, a_right;
     fscanf(fright, "%ld", &a_right);
     for(long right=0,left=1;left<=N;left++){	
