@@ -76,7 +76,7 @@ $$A_\mathit{left}$$ που έφυγε από το επιλεγμένο διάσ�
 Προσοχή χρειάζεται στην υλοποίηση αυτή, διότι ενδέχεται να έχουμε έως $$N=1.000.000$$ απαγορευτικές τιμές 
 και με μέγιστο $$S=1.000.000.000$$, οπότε το prefix sum θα πρέπει να χωρά τον αριθμό $$10^6*(10^9+1)$$ άρα θα χρειαστούμε ακεραίους 64bit.
 
-{% include code.md solution_name='crazyhotel_nlogn_v2.cpp' start=18 end=36 %}
+{% include code.md solution_name='crazyhotel_nlogn_v2.cpp' start=18 end=37 %}
 (δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_nlogn_v2.cpp' %}))
 
 

@@ -21,7 +21,8 @@ int main(){
         PS[i] = PS[i-1] + A[i];
     }
     for(int i=1;i<=N;i++){
-        long left = i, right = N, pos = -1, target = S + PS[i-1];
+        long left = i, right = N, pos = -1;
+        long long target = PS[i-1] + S;
         while(left<=right){
             int mid = (left+right)/2;
             if(PS[mid]<=target){
