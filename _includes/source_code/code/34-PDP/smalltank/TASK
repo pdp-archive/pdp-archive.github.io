@@ -1,0 +1,34 @@
+TASK(
+   name = "smalltank",
+   test_count = 21,
+   files_dir = "testdata/34-PDP/smalltank/",
+   input_file = "smalltank.in",
+   output_file = "smalltank.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "smalltank_disjoint_sets",
+         source = "smalltank_disjoint_sets.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "smalltank_brute_force",
+         source = "smalltank_brute_force.cc",
+         passes_up_to = 14,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "smalltank_binary_search",
+         source = "smalltank_binary_search.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "smalltank_linear",
+         source = "smalltank_linear.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

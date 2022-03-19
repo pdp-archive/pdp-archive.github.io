@@ -23,7 +23,6 @@ smalltank:
    statement_pdf_url: "https://drive.google.com/file/d/1pl7g_bKlEp2IZSlQCtr_pg8g3oKX40EX/view"
    statement_md: true
    testcases_url: ""
-   solution: false
+   solution: true
    codes_in_git: false
-   solution_tags: ["binary search", "dfs", "union-find", "minimum spanning tree", "kruskal"]
-
+   solution_tags: ["binary search", "dfs", "union-find", "minimum spanning tree", "kruskal", "minimum bottleneck spanning tree"]
