@@ -1,0 +1,17 @@
+TASK(
+   name = "carmeet",
+   test_count = 11,
+   files_dir = "testdata/25-PDP/carmeet/",
+   input_file = "carmeet.in",
+   output_file = "carmeet.out",
+   time_limit = 2,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "carmeet_official",
+         source = "carmeet_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

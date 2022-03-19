@@ -66,3 +66,57 @@ brickbreaker:
    codes_in_git: true
    points: 35
    solution_tags: ["graphs", "lattices", "union-find"]         
+
+modulo:
+   full_name: "Μέγιστα υπόλοιπα"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1L1la1U9cVlb5WInea_AYSGwEA8KipRrL"
+   codes_in_git: false
+   solution_tags: []
+
+coinstack:
+   full_name: "Στοίβα νομισμάτων"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
+   codes_in_git: false
+   solution_tags: []
+
+pistes:
+   full_name: "Πίστες, κλειδιά κι αστέρια"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1TrTklcMVudClln7gO0R0lB2YRk8evk6c"
+   codes_in_git: false
+   solution_tags: []
+
+metro:
+   full_name: "Το μετρό της Θεσσαλονίκης"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1vSxFzJYpsI_XdNVQCDZDGzc7eNCIrp1r"
+   codes_in_git: false
+   solution_tags: []
+
+kazarma:
+   full_name: "Η γέφυρα της Καζάρμας"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1zbpBQxDMEmr2b-5oVuFewZLMGc2AIsHC"
+   codes_in_git: false
+   solution_tags: []
+
+icpc:
+   full_name: "Προγραμματιστικός διαγωνισμός ICPC"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1_A9kQRdi_8QcO8kF46-TpwVTdGMajqzu"
+   codes_in_git: false
+   solution_tags: []

@@ -234,7 +234,7 @@ int main(){
       if(get(s, i) == '(') st.push(i);
       else{
          if(!st.empty()){
-            int j = st.top();
+            long j = st.top();
             cnt[i] = 1 + cnt[j - 1]; //Η συμβολοσειρά s[j...i] είναι απλή
             st.pop();
          }

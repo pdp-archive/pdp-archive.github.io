@@ -63,3 +63,57 @@ souvlakia:
    codes_in_git: true
    solution_tags: ["dijkstra", "segment tree", "binary index tree", "implicit segment tree","coordinate compression","RMQ","prefix minimum","map","set","sorting"]
    points: 40
+
+fib6:
+   full_name: "Άθροισμα 6 Fibonacci"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1S9pxcEz-D0xcTrGiHZ4iiYE30YMClpss"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1ji7-HL595nt7HvpvkhqYPSUV5kJrJQWl"
+   codes_in_git: true
+   solution_tags: ["greedy", "brute force", "math"]
+
+knight:
+   full_name: "Βιαστικός ίππος"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1OWpD582R7jYVB5GdTEE6Zg0zrZe06Yzp"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1oYaor-vTtJV0ri_RWTryS5rgmcubbFbf"
+   codes_in_git: true
+   solution_tags: ["shortest paths", "dijkstra", "bfs", "graphs", "math"]
+
+cutpoly:
+   full_name: "Αύξουσα πολυγωνική γραμμή"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1mWwyRCXxHswEo7TIkaMaOlKwWNlcJGqP"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1JM5Y_Rz4Me4k5Us0kWJsbsstfYAUo34A"
+   codes_in_git: true
+   solution_tags: ["geometry", "math", "greedy", "ternary search"]
+
+shades:
+   full_name: "Μεταφορά τροφίμων"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1Cyqz-5EUV9LULZGQJaZyAicLTZfeC6Tm"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1W3d11Q7lhzdNsTNNgeR0FJ7Eopfh-VYz"
+   codes_in_git: true
+   solution_tags: ["graphs", "dfs", "bfs"]
+
+maxksum:
+   full_name: "Άθροισμα υπακολουθίας"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1RaitrZFmFKVUgoXMMY9fUcPFdZ-jtq0d"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1SQmLR_inaiB4XDT5GNGz8O_5SrRbBR48"
+   codes_in_git: true
+   solution_tags: ["two pointers", "prefix sum", "segment tree", "priority queue"]
+
+concat:
+   full_name: "Παράθεση συμβολοσειρών"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1O69pLOWnBpMuinYY8P6oXEnShgCDsBmA"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/195tFyrrywq4zGAa06ctGyUSOrEmJtMCV"
+   codes_in_git: true
+   solution_tags: ["trie", "dynamic programming", "counting"]

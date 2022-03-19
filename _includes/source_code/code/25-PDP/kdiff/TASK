@@ -1,0 +1,17 @@
+TASK(
+   name = "kdiff",
+   test_count = 13,
+   files_dir = "testdata/25-PDP/kdiff/",
+   input_file = "kdiff.in",
+   output_file = "kdiff.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "kdiff_official",
+         source = "kdiff_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

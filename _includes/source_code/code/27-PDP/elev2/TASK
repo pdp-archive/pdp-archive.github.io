@@ -1,0 +1,17 @@
+TASK(
+   name = "elev2",
+   test_count = 29,
+   files_dir = "testdata/27-PDP/elev2/",
+   input_file = "elev2.in",
+   output_file = "elev2.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "elev2_official",
+         source = "elev2_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

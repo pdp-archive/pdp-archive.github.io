@@ -17,5 +17,17 @@ TASK(
             school = "12ο ΓΕΛ Πειραιώς",
          ),
       ),
+      SOLUTION(
+         name = "lines_man_cpp",
+         source = "lines_man.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "lines_man_diff_cpp",
+         source = "lines_man_diff.cc",
+         passes_all,
+         lang = "c++",
+      ),
    ]
 )
