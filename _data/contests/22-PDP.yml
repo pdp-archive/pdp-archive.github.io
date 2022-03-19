@@ -25,8 +25,9 @@ fire:
    statement_pdf_url: "https://drive.google.com/open?id=13bAGori8WsbKlQ7T-gMJn6OTVGqtnQQ-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1uuD4uS534StCDh-CXf0BRWtcQUTv8gGF"
-   solution: false
+   solution: true
    codes_in_git: true
+   solution_tags: ["flood-fill", "bfs", "dfs"]
 
 lines_man: 
    full_name: "Lines man"
