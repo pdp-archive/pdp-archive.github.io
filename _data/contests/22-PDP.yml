@@ -34,9 +34,10 @@ lines_man:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=14V4FkGjHkrYazKEe-Dme38LR9liO2vHs"
-   solution: false
+   solution: true
    codes_in_git: true
    points: 25
+   solution_tags: ["ad hoc"]
 
 servers: 
    full_name: "Servers"
