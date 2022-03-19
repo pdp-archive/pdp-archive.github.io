@@ -57,7 +57,7 @@ getout:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fROWztcvcX2EZ0sz4qvqAci4OB-vZcy3"
-   solution: false
+   solution: true
    codes_in_git: true
    points: 40
 
