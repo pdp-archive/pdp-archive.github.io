@@ -44,8 +44,9 @@ servers:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1nWslEKEhv3R_wlUaRDa-DzMBMN0FEaEO"
-   solution: false
+   solution: true
    codes_in_git: true
+   solution_tags: ["hash table", "map", "sorting"]
    points: 35
 
 getout: 
