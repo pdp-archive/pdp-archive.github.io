@@ -1,0 +1,64 @@
+TASK(
+   name = "minpali",
+   test_count = 14,
+   files_dir = "testdata/24-PDP/minpali/",
+   input_file = "minpali.in",
+   output_file = "minpali.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "minpali_n2",
+         source = "minpali_n2.cc",
+         passes_all_except_for = [11, 13, 14],
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "minpali_n_rabin_karp",
+         source = "minpali_n_rabin_karp.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "minpali_n_bin_rabin_karp",
+         source = "minpali_n_bin_rabin_karp.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "minpali_n_z",
+         source = "minpali_n_z.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "minpali_n_kmp",
+         source = "minpali_n_kmp.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "minpali_n_manacher",
+         source = "minpali_n_manacher.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+   ]
+)

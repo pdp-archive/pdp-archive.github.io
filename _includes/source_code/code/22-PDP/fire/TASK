@@ -33,5 +33,17 @@ TASK(
             name = "Νικόλαος Τζάμος",
          ),
       ),
+      SOLUTION(
+         name = "fire_rec_dfs",
+         source = "fire_rec_dfs.cc",
+         passes_all_except_for = [3],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fire_iter_dfs",
+         source = "fire_iter_dfs.cc",
+         passes_all,
+         lang = "c++",
+      ),
    ]
 )

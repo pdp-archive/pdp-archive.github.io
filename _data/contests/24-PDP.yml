@@ -46,9 +46,10 @@ minpali:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
-   testcases_url: "https://drive.google.com/file/d/1J3E6ysWzSQmrFrJJ_oahCAxln08bvzS9"
-   solution: false
-   codes_in_git: false
+   testcases_url: "https://drive.google.com/open?id=1J3E6ysWzSQmrFrJJ_oahCAxln08bvzS9"
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής & Βαγγέλης Κηπουρίδης"
+   codes_in_git: true
    points: 30
    solution_tags: ["z-algorithm", "kmp", "manacher", "rolling hash", "strings"]
 
