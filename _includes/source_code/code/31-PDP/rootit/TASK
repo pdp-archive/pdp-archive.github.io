@@ -1,0 +1,16 @@
+TASK(
+   name = "rootit",
+   test_count = 25,
+   files_dir = "testdata/31-PDP/rootit/",
+   input_file = "rootit.in",
+   output_file = "rootit.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "rootit_official",
+         source = "rootit_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

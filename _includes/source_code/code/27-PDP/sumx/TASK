@@ -1,0 +1,17 @@
+TASK(
+   name = "sumx",
+   test_count = 16,
+   files_dir = "testdata/27-PDP/sumx/",
+   input_file = "sumx.in",
+   output_file = "sumx.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "sumx_official",
+         source = "sumx_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

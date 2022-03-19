@@ -1,0 +1,17 @@
+TASK(
+   name = "oddeven",
+   test_count = 20,
+   files_dir = "testdata/23-PDP/oddeven/",
+   input_file = "oddeven.in",
+   output_file = "oddeven.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "oddeven_official",
+         source = "oddeven_official.c",
+         passes_all,
+         lang = "c",
+      ),
+   ]
+)

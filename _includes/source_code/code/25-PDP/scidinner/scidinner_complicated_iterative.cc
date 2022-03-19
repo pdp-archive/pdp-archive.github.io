@@ -1,8 +1,8 @@
+#include <cstdio>
 #include <stack>
-#include <stdio.h>
 #include <vector>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
 std::vector<long> v[MAXN+1];
 
@@ -12,10 +12,9 @@ long max_path[MAXN + 1];
 
 void dfsIterative(long begin) {
    std::stack<std::pair<long, bool>> s;
-   s.push(std::make_pair(begin, false));
+   s.push({ begin, false });
    while(!s.empty()) {
-      long u = s.top().first;
-      bool was_trigger_point = s.top().second;
+      auto [u, was_trigger_point] = s.top();
       s.pop();
       if (was_trigger_point) {
          topo_sort.push_back(u);
@@ -23,12 +22,10 @@ void dfsIterative(long begin) {
       }
       if (!triggered[u]) {
          triggered[u] = true;
-         s.push(std::make_pair(u, true));
-         for (const auto& neigh : v[u]) {
-            if (!triggered[neigh]) {
-               s.push(std::make_pair(neigh, false));
-            }
-         }
+         s.push({ u, true });
+         for (const auto neigh : v[u])
+            if (!triggered[neigh])
+               s.push({ neigh, false });
       }
    }
 }
@@ -44,18 +41,15 @@ int main() {
    }
    fclose(fi);
    
-   for (long i = 1; i <= N; ++i) {
-      if (!triggered[i]) {
+   for (long i = 1; i <= N; ++i)
+      if (!triggered[i])
          dfsIterative(i);
-      }
-   }
    
    long max_max_path = 0;
    for (long i = 0; i < topo_sort.size(); ++i) {
       long u = topo_sort[i];
-      for (const auto& neigh : v[u]) {
+      for (const auto neigh : v[u])
          max_path[u] = std::max(max_path[u], max_path[neigh] + 1);
-      }
       max_max_path = std::max(max_max_path, max_path[u]);
    }
    
@@ -65,5 +59,3 @@ int main() {
    
    return 0;
 }
-
-   

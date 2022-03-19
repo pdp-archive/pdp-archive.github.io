@@ -5,6 +5,7 @@ TASK(
    input_file = "lottery.in",
    output_file = "lottery.out",
    time_limit = 1,
+   mem_limit = 64,
    solutions = [
       SOLUTION(
         name = "lottery_brute",

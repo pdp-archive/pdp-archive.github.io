@@ -1,0 +1,17 @@
+TASK(
+   name = "fishtank",
+   test_count = 23,
+   files_dir = "testdata/25-PDP/fishtank/",
+   input_file = "fishtank.in",
+   output_file = "fishtank.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "fishtank_official",
+         source = "fishtank_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

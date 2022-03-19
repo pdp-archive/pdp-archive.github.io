@@ -13,12 +13,13 @@
 
 const bool kPrintTaskFile = false;
 const bool kPrintDebugStatements = false;
-const bool kDoNotPrintForPascal = true;
+const bool kDoNotPrintForPascal = false;
+const std::string kCacheFilename = "cache.csv";
 
 std::map<std::string, std::string> compilation_commands({
    { "c++", "g++ -O2 -DCONTEST -s -static -lm -w" },
    { "c", "gcc -std=c99 -O2 -DCONTEST -s -static -lm -w" },
-   { "pas", "gpc -O2 -DCONTEST -s" }
+   { "pas", "fpc -O2 -dCONTEST -XS" }
 });
 
 struct TopLevel {
@@ -52,6 +53,7 @@ public:
    // TODO: maybe check that each field is only set once.
    virtual void setStringAttribute(const std::string& attr_name, const std::string& value) { };
    virtual void setCountAttribute(const std::string& attr_name, size_t value) { };
+   virtual void setDoubleAttribute(const std::string& attr_name, double value) { };
    virtual void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) { };
    virtual void setTopLevelAttribute(const std::string& attr_name, AbstractTopLevel * topLevel) { };
    virtual void setListTopLevelAttribute(const std::string& attr_name, std::vector<AbstractTopLevel*> topLevel) { };
@@ -76,6 +78,8 @@ public:
    std::string name;
    std::string source;
    std::string lang;
+   std::string comment;
+   double special_time_limit = 0.0;
    
    size_t passes_up_to; // TODO: maybe set to default value.
    bool passes_all = false;
@@ -91,12 +95,17 @@ public:
    
    void setStringAttribute(const std::string& attr_name, const std::string& value) override {
       if (attr_name == "name") name = value;
-     else if (attr_name == "source") source = value;
-     else if (attr_name == "lang") lang = value;
+      else if (attr_name == "source") source = value;
+      else if (attr_name == "lang") lang = value;
+      else if (attr_name == "comment") comment = value;
    }
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
       if (attr_name == "passes_up_to") passes_up_to = value;
+   }
+   
+   void setDoubleAttribute(const std::string& attr_name, double value) override {
+      if (attr_name == "special_time_limit") special_time_limit = value;
    }
    
    void setFlagAttribute(const std::string& attr_name) override {
@@ -122,7 +131,8 @@ public:
    std::vector<Solution*> solutions;
    std::string input_file;
    std::string output_file;
-   size_t time_limit;
+   double time_limit;
+   size_t mem_limit = 0;
    
    // Automatically populated by the tool.
    std::string source_directory;
@@ -137,7 +147,11 @@ public:
    
    void setCountAttribute(const std::string& attr_name, size_t value) override {
       if (attr_name == "test_count") test_count = value;
-      else if (attr_name == "time_limit") time_limit = value;
+      else if (attr_name == "mem_limit") mem_limit = value;
+   }
+   
+   void setDoubleAttribute(const std::string& attr_name, double value) override {
+      if (attr_name == "time_limit") time_limit = value;
    }
    
    void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) override {
@@ -164,6 +178,7 @@ std::string STRING_TYPE = "string";
 std::string PATH_TYPE = "path";
 std::string COUNT_TYPE = "count";
 std::string FLAG_TYPE = "flag";
+std::string DOUBLE_TYPE = "double";
 
 // Derived types.
 std::string LIST_COUNT = LIST_TYPE + COUNT_TYPE;
@@ -179,7 +194,8 @@ TopLevel task_top_level({
    { "solutions", SOLUTIONS_TYPE },
    { "input_file", STRING_TYPE },
    { "output_file", STRING_TYPE },
-   { "time_limit", COUNT_TYPE },
+   { "time_limit", DOUBLE_TYPE },
+   { "mem_limit", COUNT_TYPE },
 });
 
 TopLevel solution_top_level({
@@ -191,6 +207,8 @@ TopLevel solution_top_level({
    { "passes_only", LIST_COUNT },
    { "lang", STRING_TYPE },
    { "author", PERSON_TYPE },
+   { "comment", STRING_TYPE },
+   { "special_time_limit", DOUBLE_TYPE },
 });
 
 TopLevel person_top_level({
@@ -213,9 +231,10 @@ std::map<std::string, std::function<AbstractTopLevel*(void)>> factories({
 struct FileReader {
    
    std::string text;
+   const std::string filename;
    size_t location = 0;
    
-   FileReader(const std::string& filename) {
+   FileReader(const std::string& filename) : filename(filename) {
       std::ifstream t(filename);
       std::string str((std::istreambuf_iterator<char>(t)),
                  std::istreambuf_iterator<char>());
@@ -242,7 +261,7 @@ struct FileReader {
    
    void readExactChar(char c) {
       if (current() != c) {
-         throw ParsingException("Found " + std::to_string(current()) + " instead of " + std::to_string(c) + ".");
+         throw ParsingException(filename + ": Found " + std::string(1, current()) + " instead of " + std::string(1, c) + ".");
       }
       advance();
    }
@@ -285,6 +304,17 @@ struct FileReader {
          advance();
       }
       return count;
+   }
+   
+   double readDouble() {
+      try{
+         size_t double_char_length = 0;
+         double value = std::stod(&text[location], &double_char_length);
+         location += double_char_length;
+         return value;
+      } catch (...) {
+         throw ParsingException(filename + ": Could not parse double.");
+      }
    }
    
    bool isListType(const std::string& type) {
@@ -354,6 +384,9 @@ struct FileReader {
       } else if (type == COUNT_TYPE) {
          size_t value = readCount();
          topLevel->setCountAttribute(name, value);
+      } else if (type == DOUBLE_TYPE) {
+         double value = readDouble();
+         topLevel->setDoubleAttribute(name, value);
       } else if (isListType(type)) {
          processListAttribute(name, type, topLevel);
       } else if (isTopLevelType(type)) {
@@ -469,10 +502,10 @@ void print(const Solution * const solution, size_t indent) {
    printListCount("passes_all_except_for", solution->passes_all_except_for, indent + 1);
    printListCount("passes_only", solution->passes_only, indent + 1);
    if (solution->author != NULL) {
-     printIndents(indent + 1);
-     std::cout << "author=";
+      printIndents(indent + 1);
+      std::cout << "author=";
       print(solution->author, indent + 1);
-     std::cout << "\n";
+      std::cout << "\n";
    }
    
    printIndents(indent);
@@ -489,12 +522,13 @@ void print(const Task* const task, size_t indent = 0) {
    printStringAttribute("input_file", task->input_file, indent + 1);
    printStringAttribute("output_file", task->output_file, indent + 1);
    printCountAttribute("time_limit", task->time_limit, indent + 1);
+   printCountAttribute("mem_limit", task->mem_limit, indent + 1);
    printListCount("weights", task->weights, indent + 1);
    printIndents(indent + 1);
    std::cout << "solutions= [" << std::endl;
    for (const Solution* const sol : task->solutions) {
       print(sol, indent + 2);
-     std::cout << ",\n";
+      std::cout << ",\n";
    }
    printIndents(indent + 1);
    std::cout << "]" << std::endl;
@@ -502,9 +536,9 @@ void print(const Task* const task, size_t indent = 0) {
 }
 
 std::string replaceString(std::string & str, const std::string & from, const std::string & to) {
-  while(str.find(from) != std::string::npos)
-    str.replace(str.find(from), from.length(), to);
-  return str;
+   while(str.find(from) != std::string::npos)
+      str.replace(str.find(from), from.length(), to);
+   return str;
 }
 
 std::string getFile(const std::string& filename, int i) {
@@ -522,7 +556,7 @@ std::string getStandardFile(const std::string& filename) {
 std::vector<std::string> findAllPathsInDir() {
    std::vector<std::string> ans;
    for (const auto & entry : std::experimental::filesystem::recursive_directory_iterator(".")) {
-        if (entry.path().filename() == "TASK") {
+      if (entry.path().filename() == "TASK") {
          ans.push_back(entry.path().relative_path());
       }
    }
@@ -544,7 +578,7 @@ void writeToFile(const std::string& str, const std::string& filename) {
 
 // Maybe create a script for calling g++ this && ./a.out && ./test_script.sh
 
-std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths) {
+std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths, bool create_cache) {
    std::vector<Task*> tasks;
    for (const auto& str : paths) {
       FileReader file(str);
@@ -556,6 +590,13 @@ std::vector<Task*> getAllTaskNodes(const std::vector<std::string>& paths) {
          std::cout << "SOURCE : " << task->source_directory << std::endl;
          print(task);
       }
+   }
+   if (create_cache) {
+      std::ofstream cache_out(kCacheFilename);
+      for (Task* task : tasks) {
+         cache_out << task->name << "," << task->source_directory << std::endl;
+      }
+      cache_out.close();
    }
    return tasks;
 }
@@ -602,7 +643,6 @@ struct ScriptBuilder {
       
       std::string raw_output = task->output_file;
       std::string template_output_file = task->files_dir + raw_output + '#';
-      std::string source = task->source_directory + "/" + solution->source;
       
       
       if (compilation_commands.find(solution->lang) == compilation_commands.end()) {
@@ -627,7 +667,18 @@ struct ScriptBuilder {
          }
          code += ")\n";
       }
-      code += "run_test '" + template_input_file + "' '" + template_output_file + "' '" + raw_input + "' '" + raw_output + "' '" + source + "' " + std::to_string(task->time_limit) + " '" + compilation_commands[solution->lang] + "' \"${array[@]}\" \n";
+      double time_limit = solution->special_time_limit == 0.0 ? task->time_limit : solution->special_time_limit;
+      code += "run_test '" + 
+         template_input_file + "' '" + 
+         template_output_file + "' '" + 
+         raw_input + "' '" + 
+         raw_output + "' '" + 
+         task->source_directory + "/' '" + 
+         solution->source + "' " + 
+         std::to_string(time_limit) + " " + 
+         std::to_string(task->mem_limit) + " '" + 
+         compilation_commands[solution->lang] + 
+         "' \"${array[@]}\" \n";
    }
    
    std::string getCode() {
@@ -650,7 +701,7 @@ void generateFileForTasksFilterByTaskName(std::vector<Task*>& tasks, const std::
       if (task->name == task_name) {
          found = true;
          builder.addSolutions(task);
-     }
+      }
    }
    if (found == false) {
       std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
@@ -659,21 +710,25 @@ void generateFileForTasksFilterByTaskName(std::vector<Task*>& tasks, const std::
 }
 
 void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, const std::string& task_name, const std::string& solution_name) {
+   if (solution_name.empty()) {
+      generateFileForTasksFilterByTaskName(tasks, task_name);
+      return;
+   }
    bool found_solution = false;
    bool found_task = false;
    ScriptBuilder builder;
    for (Task * task : tasks) {
       if (task->name == task_name) {
-       found_task = true;
-       for (Solution * solution : task->solutions) {
-         if (solution->name == solution_name) {
-            found_solution = true;
-            builder.addPrintStatement("SOLUTION: " + solution_name);
-            builder.addCommandToFetchTestdataIfNotThere(task->contest, task_name);
-            builder.addSolution(task, solution);
+         found_task = true;
+         for (Solution * solution : task->solutions) {
+            if (solution->name == solution_name) {
+               found_solution = true;
+               builder.addPrintStatement("SOLUTION: " + solution_name);
+               builder.addCommandToFetchTestdataIfNotThere(task->contest, task_name);
+               builder.addSolution(task, solution);
+            }
          }
-       }
-     }
+      }
    }
    if (found_task == false) {
       std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
@@ -683,28 +738,57 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
    writeToFile(builder.getCode(), "generated_execution.sh");
 }
 
+/* Attempts to retrieve the entry task_name from the cache. Otherwise, reads all TASK files
+   and creates cache. */
+std::vector<Task*> getTasksFor(std::string& task_name) {
+   // Read the cache to check if it is present.
+   if (std::experimental::filesystem::exists(kCacheFilename)) {
+      std::ifstream cache_in(kCacheFilename);
+      std::string s;
+      std::string path;
+      while (std::getline(cache_in, s)) {
+         auto pos = s.find(',');
+         std::string task = s.substr(0, pos);
+         if (task == task_name) {
+            path = s.substr(pos + 1);
+            break;
+         }
+      }
+      cache_in.close();
+      if (!path.empty()) {
+         std::vector<Task*> ans = getAllTaskNodes({ path + "/TASK" }, false);
+         // Verify that the task name has not changed.
+         if (ans[0]->name == task_name) {
+            return ans;
+         }
+      }
+   }
+   
+   // Otherwise, return all tasks in directory (and generate cache).
+   std::vector<std::string> paths_to_tasks = findAllPathsInDir();
+   return getAllTaskNodes(paths_to_tasks, /* create_cache= */ true);
+}
+
 void deleteTasks(const std::vector<Task*>& tasks) {
    for (Task * task : tasks) {
       delete task;
    }
 }
 
-int main(int argc, char *argv[]) {
-   std::vector<std::string> paths_to_tasks = findAllPathsInDir();
-   std::vector<Task*> tasks = getAllTaskNodes(paths_to_tasks);
+int main(int argc, char *argv[]) {   
+   std::vector<Task*> tasks;
    try {
       if (argc > 1) {
-        std::string arg(argv[1]);
-        std::size_t found = arg.find(':');
-        if (found == std::string::npos) {
-          generateFileForTasksFilterByTaskName(tasks, arg);
-        } else {
-          std::string task_name = arg.substr(0, found);
-          std::string solution_name = arg.substr(found + 1);
-          generateFileForTasksFilterByTaskAndSolution(tasks, task_name, solution_name);
-        }
+         std::string arg(argv[1]);
+         std::size_t found = arg.find(':');
+         std::string task_name = found == std::string::npos ? arg : arg.substr(0, found);
+         std::string solution_name = found == std::string::npos ? "" : arg.substr(found + 1);
+         tasks = getTasksFor(task_name);
+         generateFileForTasksFilterByTaskAndSolution(tasks, task_name, solution_name);
       } else {
-        generateFileForTasks(tasks);
+         std::vector<std::string> paths_to_tasks = findAllPathsInDir();
+         tasks = getAllTaskNodes(paths_to_tasks, /* create_cache= */ true);
+         generateFileForTasks(tasks);
       }
    } catch (std::exception& ex) {
       std::cout << ex.what() << std::endl;
@@ -712,5 +796,3 @@ int main(int argc, char *argv[]) {
    deleteTasks(tasks);
    return 0;
 }
-
-

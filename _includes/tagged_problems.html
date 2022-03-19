@@ -1,0 +1,39 @@
+<table id="categorised_table">
+<tbody>
+{% assign sortedCollections = site.collections %}
+ {% for collection in site.collections reversed %} 
+  {% if collection.label != "posts" %}
+    {% for post in site[collection.label] %}
+       {% if post.layout == "summary" %}
+
+{% assign contest_url = post.url | replace: "/", "" | replace: "index", "" %}
+{% assign contest = site.data.contests[contest_url] %}
+{% assign git_code_location = "https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/" | append: contest_url | append: "/" %}
+
+{% for problem_it in contest %}
+<tr><td>
+  {% assign problem = problem_it[1] %}
+  {% assign codename = problem_it[0] %}
+  {% assign stage = problem.stage %}
+  {% assign url_codename = problem_it[0] | replace: "_", "-" %}
+
+{% capture md %}
+**{{ problem.full_name }} (<span>{{ codename }}</span>):**
+{% if problem.statement_md == true %}[εκφώνηση](/{{ contest_url }}/{{ stage }}-{{ url_codename }}-statement) {% else %} εκφώνηση {% endif %}
+([pdf]({{ problem.statement_pdf_url}})) \|
+{% if problem.testcases_url == '' %} testcases {% else %}[testcases]({{ problem.testcases_url }}) {% endif %} \|
+{% if problem.solution == true %}[λύση](/{{ contest_url }}/{{ stage }}-{{ url_codename }}-solution) \|{% else %} λύση \| {% endif %}
+{% if problem.codes_in_git == true %}[κώδικες]({{ git_code_location | append: codename }}) {% else %} κώδικες {% endif %}
+
+<i>Tags: {{ problem.solution_tags | join: ", " }}</i>
+{% endcapture %}
+{{ md | markdownify }}
+</td></tr>
+{% endfor %}
+
+     {% endif %}
+    {% endfor %}
+   {% endif %}
+ {% endfor %}
+ </tbody>
+</table>

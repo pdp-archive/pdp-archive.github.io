@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <vector>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
 std::vector<long> v[MAXN+1];
 
@@ -52,5 +52,3 @@ int main() {
    
    return 0;
 }
-
-   

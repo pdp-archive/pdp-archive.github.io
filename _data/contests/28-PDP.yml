@@ -7,6 +7,7 @@ aris:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    statement_md: true
+   solution_tags: ["line sweep", "counting sort"]
    
 kite:
    full_name: "Ο χαρταετός"
@@ -17,6 +18,7 @@ kite:
    solution_author: "Γιώργος Βενιζέλος"   
    codes_in_git: true
    statement_md: true
+   solution_tags: ["cumulative sums", "binary search", "two pointers"]
 
 scrabble1d:
    full_name: "Μονοδιάστατο scrabble"
@@ -27,6 +29,7 @@ scrabble1d:
    solution_author: "Γιώργος Βενιζέλος"      
    codes_in_git: true
    statement_md: true
+   solution_tags: ["ad hoc", "cumulative sums", "greedy"]
 
 skitrip:
    full_name: "Εκδρομή για σκι"
@@ -35,9 +38,10 @@ skitrip:
    statement_md: true   
    testcases_url: "https://drive.google.com/open?id=1dOpsCmGxVRYP_-KeNsRrxBJo_LETWWpZ"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 30
+   solution_tags: ["sorting", "greedy", "monotonous queue", "line sweep"]
    
 schoolnet:
    full_name: "Δίκτυο σχολείων"
@@ -49,6 +53,7 @@ schoolnet:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 30
+   solution_tags: ["vertex cover", "trees", "dfs", "dp"]
    
 starwars:
    full_name: "Star Wars"
@@ -57,6 +62,61 @@ starwars:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1G1bCmF1UfKeTiz2BXP-VECyc5NTkDD8a"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
    points: 40
+   solution_tags: ["cumulative sums", "inclusion-exclusion", "range sum queries", "segment trees", "sqrt decomposition", "lazy propagation"]
+
+metoxes2:
+   full_name: "Μετοχές"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/19v5rtd8GUlzptoev2AshHiwAqbFxK4ND"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1qwFvn8664hJ30y2eFR9JmXKOE4-k_oD_"
+   codes_in_git: true
+   solution_tags: []
+
+sumofcubes:
+   full_name: "Άθροισμα Κύβων"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1X30mTMEmJRnGW4lXrPJoIPmle7oN6McO"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1OQQSsnJQyTMcG-Toc-upGGJqWQr4fcLV"
+   codes_in_git: true
+   solution_tags: []
+
+critical:
+   full_name: "Σημαντικοί Δρόμοι"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1zZCQU4lOHMlrdxm9OSErTrTpFXToIFEE"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1V1FJOFen1kLbwEgNYRi2g7eb1SxI_FzY"
+   codes_in_git: true
+   solution_tags: []
+   
+chef:
+   full_name: "Επιλογή chef"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1-BImEaaC3I_ue0IPddojmV_0tBfzsKF6"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1tNdlluz3cJq5rf-WwUcHPeykJwiEiGzp"
+   codes_in_git: true
+   solution_tags: []
+
+bicycle:
+   full_name: "Ποδηλάτες"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1cLW5bqEdLQp0NryfDlavZrwprdaZirWR"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1FTgE01C55Y55eEx6tDgs2dobEJXRM2R9"
+   codes_in_git: true
+   solution_tags: []
+
+bookeaters:
+   full_name: "Βιβλιοφάγοι"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1HRmitImvcIOEFPu-nLdjYn6dWXPX70gx"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1bfkUVMdpuPxUe-Kjw7_B-NjnIstvfh8z"
+   codes_in_git: true
+   solution_tags: []

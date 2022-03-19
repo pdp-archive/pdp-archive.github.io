@@ -1,0 +1,15 @@
+---
+title: "Κατηγοριοποιημένες λύσεις"
+layout: default
+---
+<link rel="stylesheet" href="/css/categorised.css">
+<script src="/js/categorised_filter.js"></script>
+
+<div style="margin-top: 40px; margin-bottom: 40px; text-align: center;">
+Tag λύσης: <input type="text" id="categorised_filter_text" onkeyup="filterCategorisedEntries()" placeholder="Αναζήτηση με βάση tag λύσης (π.χ. binary search, map, kmp) .." title="Solution tag" size="50">
+</div>
+
+{% include tagged_problems.html %}
+
+<div id="footer_space"></div>
+{% include contributors_footer.html %}

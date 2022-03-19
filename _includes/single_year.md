@@ -4,21 +4,19 @@
 
 {% capture md %}
 
-## Α' Φάση
+{% include single_stage.md stage="a" stage_title="Α' Φάση" %}
 
-{% include single_stage.md stage="a" %}
+{% include single_stage.md stage="bgym" stage_title="Β' Φάση γυμνασίου" %}
 
-## Β' Φάση γυμνασίου
+{% include single_stage.md stage="blyk" stage_title="Β' Φάση λυκείου" %}
 
-{% include single_stage.md stage="bgym" %}
+{% include single_stage.md stage="c" stage_title="Γ' Φάση" %}
 
-## Β' Φάση λυκείου
+{% include single_stage.md stage="camp_j" stage_title="Καμπ (juniors)" %}
 
-{% include single_stage.md stage="blyk" %}
+{% include single_stage.md stage="camp_s" stage_title="Καμπ (seniors)" %}
 
-## Γ' Φάση
-
-{% include single_stage.md stage="c" %}
+{% include single_stage.md stage="camp_c" stage_title="Καμπ (κοινά)" %}
 
 {% endcapture %}
 {{ md | markdownify }}

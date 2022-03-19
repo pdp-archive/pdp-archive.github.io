@@ -3,7 +3,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
 long a[MAXN];
 long N, M, C;
@@ -40,7 +40,7 @@ int main() {
    }
    fclose(fi);
    
-   // Initialise the deques for the first m-1 elements.
+   // Αρχικοποιούμε τα sets για τα πρώτα M-1 στοιχεία.
    for (long i = 0; i < M - 1; ++i) {
       min_set.insert(Item(i, a[i]));
       max_set.insert(Item(i, a[i]));

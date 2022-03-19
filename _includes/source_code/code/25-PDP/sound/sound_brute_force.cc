@@ -2,7 +2,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
 long a[MAXN];
 long N, M, C;

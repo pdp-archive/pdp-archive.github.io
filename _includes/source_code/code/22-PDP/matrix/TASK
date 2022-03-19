@@ -1,0 +1,68 @@
+TASK(
+   name = "matrix",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/matrix/",
+   input_file = "matrix.in",
+   output_file = "matrix.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "matrix_official_pas",
+         source = "matrix_official.pas",
+         passes_all_except_for = [5],
+         lang = "pas",
+         author = PERSON(
+            name = "Βασίλειος Μόρμορης",
+         ),
+      ),
+      SOLUTION(
+         name = "matrix_official_cpp",
+         source = "matrix_official.cpp",
+         comment = "TODO: Ελέγχουμε ότι περνάει τα ίδια testcases με αυτά στο Hellenico",
+         passes_only = [2, 6],
+         lang = "c++",
+         author = PERSON(
+            name = "Χαράλαμπος Καταγής",
+         ),
+      ),
+      SOLUTION(
+         name = "matrix_official_c",
+         source = "matrix_official.c",
+         passes_all_except_for = [8],
+         lang = "c",
+         author = PERSON(
+            name = "Χρήστος Πόριος",
+         ),
+      ),
+      SOLUTION(
+         name = "matrix_brute_force",
+         source = "matrix_brute_force.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_strstr",
+         source = "matrix_strstr.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_hash",
+         source = "matrix_hash.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_z_algo",
+         source = "matrix_z_algo.cc",
+         lang = "c++",
+         passes_all,
+      ),
+      SOLUTION(
+         name = "matrix_kmp",
+         source = "matrix_kmp.cc",
+         lang = "c++",
+         passes_all,
+      ),
+   ]
+)

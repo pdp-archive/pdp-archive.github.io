@@ -1,0 +1,20 @@
+TASK(
+   name = "efimerides",
+   test_count = 35,
+   files_dir = "testdata/27-PDP/efimerides/",
+   input_file = "efimerides.in",
+   output_file = "efimerides.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "efimerides_official_cpp",
+         source = "efimerides_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Παναγιώτης Κωστοπαναγιώτης",
+         ),
+      ),
+   ]
+)

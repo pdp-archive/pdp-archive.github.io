@@ -1,0 +1,17 @@
+TASK(
+   name = "restaurants",
+   test_count = 10,
+   files_dir = "testdata/23-PDP/restaurants/",
+   input_file = "restaurants.in",
+   output_file = "restaurants.out",
+   time_limit = 2,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "restaurants_official",
+         source = "restaurants_official.c",
+         passes_all,
+         lang = "c",
+      ),
+   ]
+)

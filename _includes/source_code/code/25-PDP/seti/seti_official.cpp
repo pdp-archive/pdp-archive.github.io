@@ -21,7 +21,7 @@ int main() {
          if(A[i-j] == A[i+j] && A[i-j]*2 < A[i]){
             R[cnt++] = i;
             break;
-		 }
+         }
       }
    }
    
