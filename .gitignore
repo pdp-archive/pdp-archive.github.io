@@ -1,8 +1,5 @@
 _site/
-source_code/testdata/
-source_code/test_parser.out
-source_code/tmp/
-source_code/generated_execution.sh
+_includes/source_code/cache.csv
 _includes/source_code/testdata/
 _includes/source_code/test_parser.out
 _includes/source_code/tmp/

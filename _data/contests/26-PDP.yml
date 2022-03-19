@@ -5,8 +5,9 @@ domes:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1XVjRhhf_EW2zRjPmbPpjzwCEy_zcY0NJ"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
+   solution_tags: ["graphs", "counting sort"]
    
 ensemble:
    full_name: "Ρυθμική γυμναστική"
@@ -15,8 +16,9 @@ ensemble:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yjG7gqle4E6fxvOc40THNpKLV4sBZ0vH"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["precision", "sorting"]
 
 solar:
    full_name: "Ηλιακός άνεμος"
@@ -25,8 +27,9 @@ solar:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qW3Q9KFsjgP4LGZ_524Zxiecxqsl-P45"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["line sweep"]
 
 sumpair:
    full_name: "Άθροισμα ζευγών"
@@ -35,9 +38,10 @@ sumpair:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=119aJifaZbaNLe6XgYOv4KPb4fa874HD4"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
+   solution_tags: ["set", "hash table", "two pointers", "sorting"]
    
 roadwork:
    full_name: "Επισκευή δρόμου"
@@ -46,10 +50,11 @@ roadwork:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1tWVDKFuv2ZzmYlboFVu4qAIKmI0_OBgW"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
-   
+   solution_tags: ["intervals", "sorting", "counting sort", "binary search"]
+
 numbase:
    full_name: "Μετατροπή αριθμού"
    stage: "c"
@@ -57,6 +62,61 @@ numbase:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1En2bL1UfGatg1GPGo8SySLHNaq3dccZ-"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
+   solution_tags: ["number theory", "modulo", "binary search", "number bases", "divisibility", "factorisation"]
+
+amazmosq:
+   full_name: "Τα κουνούπια του Αμαζονίου"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1xtfr6wGznCaNe9-HkrQBiOlWIe3kk2__"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1wWNptSsIJHfJRn96FS4nWBF-EA8_mYLK"
+   codes_in_git: false
+   solution_tags: ["math"]
+
+stairstep:
+   full_name: "Ανέβα τη σκάλα"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/196B1RcWpAMidqJ26WTe4NITvBs9RAF9k"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/19CjwgFBo-oMeXjcp3aTzSKv8BWLMwasv"
+   codes_in_git: false
+   solution_tags: ["dp"]
+
+nonneg:
+   full_name: "Παιχνίδι μη αρνητικών"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1MZU-A90MqnScwcHJfZBZ-6zHWIHo5wez"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1QSDbyQDWzrJiOfTS864OH3tzOxFKy0M5"
+   codes_in_git: false
+   solution_tags: ["bellman-ford", "negative cycle", "graphs"]
+
+driveme:
+   full_name: "Σύστημα πλοήγησης"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1wSckzlD7OgB5XERPZLDdkutNbofqdfmC"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1dKc9yQYPF2SwbBUVZkbmMZwCs0i5uheI"
+   codes_in_git: false
+   solution_tags: ["shortest paths", "dynamic programming", "dijkstra", "graphs"]
+
+tvmatch:
+   full_name: "Τηλεοπτική μετάδοση αγώνων"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/18WsVyg-_lc7-k47Fheg9d5tWBTH8P0ls"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1KqAEoWtsxLsHfNLFayUmlvlCa8YLoaF_"
+   codes_in_git: false
+   solution_tags: ["math"]
+
+numpath:
+   full_name: "Διαδρομές αριθμών"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1ifkQMuVus_N_7zgBhaPHETyCo4noJNvb"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1ZAzUMDtsgwz8MTf9ty_FxSRmJjC_EdoG"
+   codes_in_git: false
+   solution_tags: ["longest path", "dag", "graphs"]

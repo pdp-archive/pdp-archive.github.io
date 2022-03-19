@@ -15,9 +15,9 @@ int main() {
 
   for(long shopleft=0, i=1; i<=N-K; ++i){
       shopleft += A[i];
-      if(shopleft > K){
+      if(i > K){
           //το shopleft έχει άθροισμα Κ+1 διαδοχικών θέσεων. 
-          //Αφαίρερε την παλιότερη.
+          //Αφαίρεσε την παλιότερη.
           shopleft -= A[i-K];
       }
       maxUpTo[i] = max(shopleft,maxUpTo[i-1]);
@@ -26,7 +26,7 @@ int main() {
       shopright += A[i];
       if(i <= N-K){
           //το shopright έχει άθροισμα Κ+1 διαδοχικών θέσεων. 
-          //Αφαίρερε την παλιότερη.
+          //Αφαίρεσε την παλιότερη.
           shopright -= A[i+K];
       }
       ans = max(ans, maxUpTo[i-1]+shopright);

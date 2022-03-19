@@ -1,0 +1,17 @@
+TASK(
+   name = "happy",
+   test_count = 32,
+   files_dir = "testdata/27-PDP/happy/",
+   input_file = "happy.in",
+   output_file = "happy.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "happy_official",
+         source = "happy_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

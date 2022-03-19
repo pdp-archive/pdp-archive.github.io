@@ -11,6 +11,15 @@
   {% assign stage_name = "Α' Φάση" %}
 {% endif %}
 {% assign title = page.contest | append: " " | append: stage_name | append: ": " | append: task.full_name | append: " (" | append: page.codename | append: ") - Λύση" %}
+{% comment %} προσφώνηση συγγραφέα (στον ενικό, πληθυντικό ή καθόλου) {% endcomment %}
+{% assign contr_tmp = task.solution_author|strip %}
+{% if task.solution_author contains "," %}
+  {% assign contrib_salutation = "Συγγραφείς:" %}
+{% elsif contr_tmp == "" %}
+  {% assign contrib_salutation = "" %}
+{% else %}
+  {% assign contrib_salutation = "Συγγραφέας:" %}
+{% endif %}
 <html>
   <head>
     <meta charset="utf-8">
@@ -22,13 +31,14 @@
   <div class="main-content">
     <div style="text-align:right">
       <div>
-        <a href="/"> Αρχική </a> > 
-        <a href="/{{ page.contest_url }}">{{ page.contest }} </a>
+        <a href="/">Αρχική</a> > 
+        <a href="/{{ page.contest_url }}">{{ page.contest }}</a> > {{ page.codename }}
+        (<a href="/{{ page.contest_url }}/{{ task.stage }}-{{ page.codename }}-statement">εκφώνηση</a>)
       </div>
     </div>
     <div id="post"> 
       <h1 class="title">{{ title }}</h1>
-      <div class="author_container"> <span class="author">Συγγραφέας:</span> {{ task.solution_author }}</div>
+      <div class="author_container"> <span class="author">{{ contrib_salutation }}</span> {{ task.solution_author }}</div>
       {{ content }}
     </div>
   </div>

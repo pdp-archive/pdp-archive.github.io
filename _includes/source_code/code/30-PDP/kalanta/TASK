@@ -48,5 +48,14 @@ TASK(
             name = "dim131",
          ),
       ),
+      SOLUTION(
+         name = "kalanta_linear_n_space",
+         source = "kalanta_linear_n_space.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
    ]
 )

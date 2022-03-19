@@ -5,8 +5,9 @@ sch:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1qmqCKtic2rs_BXkSD79XvDqon9QuzdzT"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
+   solution_tags: ["sorting", "counting sort", "map", "set"]   
    
 colors:
    full_name: "Πολύχρωμη κορδέλα"
@@ -15,8 +16,9 @@ colors:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1hrpoR0REwtgNJbQGHFoIpBeSVNJyFm2V"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["set", "counting sort", "binary search", "sliding window", "two pointers"]      
 
 uflights:
    full_name: "Κάρτες απεριόριστων πτήσεων"
@@ -25,8 +27,9 @@ uflights:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1lxEOD-eMsNCPsMUt_bBeSM9V98rOr_Ip"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["graphs", "minimum spanning tree", "kruskal", "prim", "counting sort"]
 
 dnaseq:
    full_name: "Ακολουθίες DNA"
@@ -35,9 +38,10 @@ dnaseq:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Hg5XmSzUVveeIQT6LGynzItxxokoX7jF"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
+   solution_tags: ["rolling hash", "strings"]   
    
 villages:
    full_name: "Οδικό δίκτυο"
@@ -46,9 +50,10 @@ villages:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1B43Dq3fpNC5KEvwQ5vMWQD30zAcxCo0B"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
+   solution_tags: ["graphs", "dfs"]
    
 maketime:
    full_name: "Πάω διακοπές"
@@ -57,6 +62,43 @@ maketime:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1SGhDbAaR8GywWVuwm3MWbiePj7g3XsiM"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
+   solution_tags: ["cumulative sums", "binary search", "sorting", "two pointers"]
+
+twoends:
+   full_name: "Άθροισμα δύο άκρων"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1BjGpuqf5AfjNNcLXAscMdUnC5RKGWaiM"
+   codes_in_git: false
+   solution_tags: []
+
+aliens:
+   full_name: "Εξωγήινες συχνότητες"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1-BQyequn18Z-896I-kn-7VrT2RM2oe0V"
+   codes_in_git: false
+   solution_tags: []
+
+robots:
+   full_name: "Η ληστεία των ρομπότ"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1bhfEx4e93hP2UAzi68V4zmWiFO2VxS1S"
+   codes_in_git: false
+   solution_tags: []
+
+gcdseq:
+   full_name: "Μέγιστος κοινός διαιρέτης"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1SK8Hh7ZL_1ash45CDztVOPIixJzKEP5E"
+   codes_in_git: false
+   solution_tags: []

@@ -7,23 +7,98 @@ erasmus:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
+   solution_tags: ["sorting"]   
 
 longsumk:
    full_name: "Πάμε πάλι διακοπές"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/open?id=16URHUaFcZqpRQ54nyiyRBAA03SfQEXul"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1MTrGvfpsbK5FDsFccIE9uVzv7ZXL5nWL/view?usp=sharing"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
+   solution_tags: ["cumulative sums", "map", "hash table", "two pointers"]
 
 shops:
    full_name: "Τα δύο καταστήματα"
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/open?id=1Nj3wLTKCI_yQTK9stoXmyAA6WRbfFNNI"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/13lonfoXrBW6HYkG784SmcNBSQDUGCGjX/view?usp=sharing"
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
+   solution_tags: ["cumulative sums"]
+
+sumoffew:
+   full_name: "Άθροισμα λίγων"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1NPObWz05m7lz9ELkzp2MRh5u9G3kT8wj/view"
+   solution: true
+   solution_author: "Μάκης Αρσένης"
+   codes_in_git: true
+   points: 30
+   solution_tags: ["two pointers", "sliding window", "map", "hash table"]
+
+supgame:
+   full_name: "Η τελευταία πίστα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1wNmblswx5aVxzQfWTEVZxxn8VOWAERHX/view"
+   solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
+   codes_in_git: true
+   points: 30
+   solution_tags: ["graphs", "dijkstra"]
+
+pcr:
+   full_name: "Push-Complement-Reverse"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1Ezdu9y5xwNHWzp6m8F4KQGtPFXNYVouM/view?usp=sharing"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1NYBb22pooNjxvi3Cx0K8-nXKqD-VIEhv/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   points: 40
+   solution_tags: ["dp", "bitwise operations", "set", "map"]
+
+countways:
+   full_name: "Με πόσους τρόπους;"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/17ao8Z2YeQ_khPoy-rnkNIOGR3Ct63kPz"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1reGYb9r5DCoelpzmVZHzXZpQAkUV4NzP"
+   codes_in_git: false
+   solution_tags: []
+
+treescore:
+   full_name: "Αξιολόγηση προσόντων"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1YfxMI3HQFogB9iEo62rlXild_STOWU5N"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1b3gwqSu9jknvq1VaRgcTJmp4jPwqq0KK"
+   codes_in_git: false
+   solution_tags: []
+   
+goodlong:
+   full_name: "Τα παιδιά του παγωτατζή"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/151WZLo7ggMOvW0-2Dp4R-QGpF1lqNQE7"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1ThplouMFLo80Evu2Xvs_cbP9aPy7rFri"
+   codes_in_git: false
+   solution_tags: []
+
+shortcuts:
+   full_name: "Να προλάβουμε το πάρτυ!"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/18Jrsv4GsG_J9V9zpwxGJ-8nFw0ctudTB"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/15PZbbaKg6WnK4sNzqo1_dHU0zccgbsnR"
+   codes_in_git: false
+   solution_tags: []

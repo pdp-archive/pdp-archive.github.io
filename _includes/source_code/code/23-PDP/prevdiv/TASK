@@ -1,0 +1,56 @@
+TASK(
+   name = "prevdiv",
+   test_count = 21,
+   files_dir = "testdata/23-PDP/prevdiv/",
+   input_file = "prevdiv.in",
+   output_file = "prevdiv.out",
+   time_limit = 2,
+   solutions = [
+      SOLUTION(
+         name = "prevdiv_official",
+         source = "prevdiv_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Ευάγγελος Κηπουρίδης",
+            school = "11ο ΓΕΛ Θεσσαλονίκης",
+         ),
+      ),
+      SOLUTION(
+         name = "prevdiv_brute_force",
+         source = "prevdiv_brute_force.cc",
+         passes_all_except_for = [16, 18, 20, 21],
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "prevdiv_efficient",
+         source = "prevdiv_efficient.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "prevdiv_efficient_const_memory",
+         source = "prevdiv_efficient_const_memory.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "prevdiv_lcm",
+         source = "prevdiv_lcm.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+   ]
+)

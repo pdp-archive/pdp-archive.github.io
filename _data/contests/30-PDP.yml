@@ -5,8 +5,9 @@ astrolavos:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1PWB5AaUts-avT7dbeVScHqpE4QHBAZux"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
+   solution_tags: ["ad hoc"]      
 
 kalanta:
    full_name: "Τα κάλαντα"
@@ -15,8 +16,9 @@ kalanta:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yZ2YiGSKRf9d598JY_khKd_xSfv1zrUF"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["cumulative sums", "binary search", "two pointers"]         
    
 agora:
    full_name: "Η αγορά"
@@ -25,8 +27,9 @@ agora:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1zJJ5pHiHMZDrbXDkPV8pBuhj_7eM-7eI"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
+   solution_tags: ["greatest common divisor", "least common multiple", "cumulative sums"]         
 
 rafting:
    full_name: "Rafting"
@@ -35,9 +38,10 @@ rafting:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1BLW0WOOb3tFEH-3oqx4xKNs3nU0n-ltG"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 30
+   solution_tags: ["segment tree", "binary indexed tree"]         
 
 listgame:
    full_name: "Παιχνίδι με λίστα"
@@ -46,9 +50,10 @@ listgame:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1UQp6UAziM_W_5BU753Q5QOkuFmtQfj20"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
+   solution_tags: ["dp"]
 
 brickbreaker:
    full_name: "Ο Χρήστος και τα τούβλα"
@@ -57,6 +62,61 @@ brickbreaker:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1yxIPqJA9O-blG2HWMIebg_jutNz5smmM"
    solution: true
-   solution_author: "Δημήτρης Λως"   
+   solution_author: ""   
    codes_in_git: true
    points: 35
+   solution_tags: ["graphs", "lattices", "union-find"]         
+
+modulo:
+   full_name: "Μέγιστα υπόλοιπα"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1L1la1U9cVlb5WInea_AYSGwEA8KipRrL"
+   codes_in_git: false
+   solution_tags: []
+
+coinstack:
+   full_name: "Στοίβα νομισμάτων"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
+   codes_in_git: false
+   solution_tags: []
+
+pistes:
+   full_name: "Πίστες, κλειδιά κι αστέρια"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1TrTklcMVudClln7gO0R0lB2YRk8evk6c"
+   codes_in_git: false
+   solution_tags: []
+
+metro:
+   full_name: "Το μετρό της Θεσσαλονίκης"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1vSxFzJYpsI_XdNVQCDZDGzc7eNCIrp1r"
+   codes_in_git: false
+   solution_tags: []
+
+kazarma:
+   full_name: "Η γέφυρα της Καζάρμας"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1zbpBQxDMEmr2b-5oVuFewZLMGc2AIsHC"
+   codes_in_git: false
+   solution_tags: []
+
+icpc:
+   full_name: "Προγραμματιστικός διαγωνισμός ICPC"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1_A9kQRdi_8QcO8kF46-TpwVTdGMajqzu"
+   codes_in_git: false
+   solution_tags: []

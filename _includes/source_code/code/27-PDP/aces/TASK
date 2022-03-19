@@ -1,0 +1,55 @@
+TASK(
+   name = "aces",
+   test_count = 25,
+   files_dir = "testdata/27-PDP/aces/",
+   input_file = "aces.in",
+   output_file = "aces.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "aces_official_cpp",
+         source = "aces_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Δημήτριος Μπράλιος",
+         ),
+      ),
+      SOLUTION(
+         name = "aces_bin_representation_slow",
+         source = "aces_bin_representation_slow.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "aces_bin_representation_fast",
+         source = "aces_bin_representation_fast.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "aces_builtin_count",
+         source = "aces_builtin_count.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+      SOLUTION(
+         name = "aces_precompute",
+         source = "aces_precompute.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "dim131",
+         ),
+      ),
+   ]
+)

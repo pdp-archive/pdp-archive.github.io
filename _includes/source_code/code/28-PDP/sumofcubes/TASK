@@ -1,0 +1,17 @@
+TASK(
+   name = "sumofcubes",
+   test_count = 5,
+   files_dir = "testdata/28-PDP/sumofcubes/",
+   input_file = "sumofcubes.in",
+   output_file = "sumofcubes.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "sumofcubes_official",
+         source = "sumofcubes_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

@@ -1,0 +1,16 @@
+TASK(
+   name = "parallel",
+   test_count = 20,
+   files_dir = "testdata/31-PDP/parallel/",
+   input_file = "parallel.in",
+   output_file = "parallel.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "parallel_official",
+         source = "parallel_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

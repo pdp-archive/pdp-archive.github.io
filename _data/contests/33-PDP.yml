@@ -1,0 +1,104 @@
+bankacc:
+   full_name: "Τραπεζικές συναλλαγές"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1a5Jfm9hhm9khChmsJQsqtXfIldjt07qv/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/17hv4lJM0U-TOtXr2e53fwnNjXIXAyFMe/view"
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["sorting", "map", "hash table", "offline processing"]
+
+twingift:
+   full_name: "Τα δώρα των διδύμων"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1OBZDu3sGeu0hOgGokHjdgwtJLKvsPzmd/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/120sLkrJt8j6Kyh0wXfssu-iCCRNJN7A9/view"
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["binary search", "two pointers"]
+
+fairmaze:
+   full_name: "Ο Δίκαιος Λαβύρινθος"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1Yr3UE44lWdpAXG6MDC8CVElsk-bux_wt/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/10VJNgQQTYBajB5UigdkOeewrPgiaiO5X/view"
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["dfs", "union-find"]
+
+landfight:
+   full_name: "Ο πόλεμος των τσιφλικάδων"
+   stage: "c"
+   points: 30
+   statement_pdf_url: 
+   statement_md: true
+   testcases_url: 
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["binary search", "map", "hash table", "stack", "prefix sum", "cumulative sum", "two pointers"]
+
+wayhome:
+   full_name: "Γυρίζοντας στο σπίτι"
+   stage: "c"
+   points: 30
+   statement_pdf_url:
+   statement_md: true
+   testcases_url:
+   solution: false
+   codes_in_git: false
+   solution_author:
+   solution_tags:
+
+nytrip:
+   full_name: "Ταξίδι στη Νέα Υόρκη"
+   stage: "c"
+   points: 40
+   statement_pdf_url:
+   statement_md: true
+   testcases_url:
+   solution: false
+   codes_in_git: false
+   solution_author: 
+   solution_tags:
+
+candystripe:
+   full_name: "CANDYSTRIPE"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/12I8fSybzmVgmxDNJOF-o2SzO_-uVz7Kl"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+roomalloc:
+   full_name: "ROOMALLOC"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1sz17f9tD9bmvbxvMwQvv4k1aVy6NTRjs"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+   
+candystripe2:
+   full_name: "CANDYSTRIPE2"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1wkCM8Ipt0vgHXA3S618i-ZfOdcsmQqi0"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+twingift2:
+   full_name: "TWINGIFT2"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1kvsOUn9CI782404HVLnejbGerKnu0ok6"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []

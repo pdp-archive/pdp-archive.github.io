@@ -3,10 +3,11 @@ hydrogen:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/open?id=1kePNn2q8Ou7Y5RSDLS36NJ6aZMbNh5cx"
    statement_md: true
-   testcases_url: "https://drive.google.com/open?id=1StSUhcdHUKaKdqxYi3wwcCypEBFX1D3i"
+   testcases_url: "https://drive.google.com/file/d/1Fe-uDoSfhFGi-uv6kJtztvmvSk74iAEl"
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
+   solution_tags: ["sorting"]
 
 matrix:
    full_name: "Πρόβλημα στον «Έξυπνο» Διαδραστικό Πίνακα"
@@ -14,9 +15,9 @@ matrix:
    statement_pdf_url: "https://drive.google.com/open?id=1stq-V88tWJ3RnmPnLu0ylyC5UArdJHy7"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KJaIgr7PK1LiiwHm_oLH_UTRamgm5ZrW"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1xcLdDDNhSdyxadevZCzXr-3nTIRdLbuM"
+   solution: true
+   codes_in_git: true
+   solution_tags: ["string matching", "kmp", "z-algorithm", "rolling hash", "strings"]
 
 fire:
    full_name: "Οι φωτιές στην Ελλάδα"
@@ -24,9 +25,9 @@ fire:
    statement_pdf_url: "https://drive.google.com/open?id=13bAGori8WsbKlQ7T-gMJn6OTVGqtnQQ-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1uuD4uS534StCDh-CXf0BRWtcQUTv8gGF"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1IsKbqSMwbI_5V3aHMd8Z9Jg_WoKgGIQp"
+   solution: true
+   codes_in_git: true
+   solution_tags: ["flood-fill", "bfs", "dfs"]
 
 lines_man: 
    full_name: "Lines man"
@@ -34,10 +35,10 @@ lines_man:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=14V4FkGjHkrYazKEe-Dme38LR9liO2vHs"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1JNaqY7ygVenoJGQuarQXV3lfd9VuuaLj"
+   solution: true
+   codes_in_git: true
    points: 25
+   solution_tags: ["ad hoc"]
 
 servers: 
    full_name: "Servers"
@@ -45,9 +46,9 @@ servers:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1nWslEKEhv3R_wlUaRDa-DzMBMN0FEaEO"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1L7bMpoQhgAmD84EtZufo61HSwVkJUGnd"
+   solution: true
+   codes_in_git: true
+   solution_tags: ["hash table", "map", "sorting"]
    points: 35
 
 getout: 
@@ -56,7 +57,69 @@ getout:
    statement_pdf_url: "https://drive.google.com/open?id=1GWh5nF7YE238EYuMBymuzTBP1XCW2-2J"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fROWztcvcX2EZ0sz4qvqAci4OB-vZcy3"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1FJO1ox_DgBkrqV4Y8gD7qSwHUb_U5ppY"
+   solution: true
+   codes_in_git: true
    points: 40
+
+citycirc:
+   full_name: "Κύκλος πόλης"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/19xyMMRNDE2voZc_28cqBqQVKCAmcWTz9"
+   codes_in_git: false
+   solution_tags: []
+
+sumofpow:
+   full_name: "Άθροισμα δυνάμεων"
+   stage: "camp_j"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1rlCSMJDlWpQU9N6dWr2mnvpbzLvbFQ2g"
+   codes_in_git: false
+   solution_tags: []
+
+flowers:
+   full_name: "Κατεστραμμένα λουλούδια"
+   stage: "camp_s"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1MKLIyr1-YwlF4nB9GHzePekhsXboqq9R"
+   codes_in_git: false
+   solution_tags: []
+
+escape:
+   full_name: "Μέγιστος διαφυγών φωτισμός"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1a9nxVnLVdiIklgMmNvpPkDvUQ60mw7YH"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+cocktails:
+   full_name: "Αφού σε χαλάει..."
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1P34yweXHodupj_YabgTSTMLdoMEpOj6g"
+   codes_in_git: true
+   solution_tags: []
+
+amplifiers:
+   full_name: "Ενισχυτές"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1EC7Mg2fqrWzRSEI1XHlUylw3-cN_G3cW"
+   codes_in_git: false
+   solution_tags: []
+
+rdigits:
+   full_name: "Διαγραφή ψηφίων"
+   stage: "camp_c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1Bp-6ax91sJrqdNuIZkT8XZRg1XC_7ZrD"
+   codes_in_git: true
+   solution_tags: []

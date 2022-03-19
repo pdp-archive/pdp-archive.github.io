@@ -29,7 +29,7 @@ TASK(
       SOLUTION(
          name = "share_official_pas",
          source = "share_official.pas",
-         passes_all,
+         passes_all_except_for = [10, 12, 13, 14],
          lang = "pas",
          author = PERSON(
             name = "Ορφανόπουλος Χρήστος",

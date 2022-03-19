@@ -3,7 +3,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-const size_t MAXN = 1000000;
+const size_t MAXN = 1'000'000;
 
 long a[MAXN];
 long N, M, C;
@@ -33,7 +33,7 @@ int main() {
    }
    fclose(fi);
    
-   // Initialise the deques for the first m-1 elements.
+   // Αρχικοποιούμε τις deques για τα πρώτα M-1 στοιχεία.
    for (long i = 0; i < M - 1; ++i) {
       insertToDeques(i, a[i]);
    }
@@ -41,7 +41,7 @@ int main() {
    FILE *fo = fopen("sound.out", "w");
    bool found = false;
    for (long i = M - 1; i < N; ++i) {
-      // Remove old items.
+      // Αφαιρούμε όλα τα παλιά στοιχεία.
       if (min_deque.back().idx < i - M + 1) min_deque.pop_back();
       if (max_deque.back().idx < i - M + 1) max_deque.pop_back();
       

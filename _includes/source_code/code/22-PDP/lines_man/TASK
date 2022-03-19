@@ -1,0 +1,33 @@
+TASK(
+   name = "lines_man",
+   test_count = 10,
+   files_dir = "testdata/22-PDP/lines_man/",
+   input_file = "lines_man.in",
+   output_file = "lines_man.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "lines_man_official_cpp",
+         source = "lines_man_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Κωστάλα Ερριέτα",
+            school = "12ο ΓΕΛ Πειραιώς",
+         ),
+      ),
+      SOLUTION(
+         name = "lines_man_cpp",
+         source = "lines_man.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "lines_man_diff_cpp",
+         source = "lines_man_diff.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

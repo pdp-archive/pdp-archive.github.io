@@ -1,0 +1,51 @@
+TASK(
+   name = "anneal",
+   test_count = 18,
+   files_dir = "testdata/23-PDP/anneal/",
+   input_file = "anneal.in",
+   output_file = "anneal.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "anneal_official_cpp",
+         source = "anneal_official.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "Νίκος Τζάμος",
+            school = "4ο ΓΕΛ Χαλανδρίου",
+         ),
+      ),
+      SOLUTION(
+         name = "anneal_n2_with_unique",
+         source = "anneal_n2_with_unique.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "anneal_dp_with_values",
+         source = "anneal_dp_with_values.cc",
+         passes_up_to = 10,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "anneal_n2_with_idx",
+         source = "anneal_n2_with_idx.cc",
+         passes_up_to = 14,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "anneal_n2_with_idx_and_mem",
+         source = "anneal_n2_with_idx_and_mem.cc",
+         passes_all,
+         special_time_limit = 2,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "anneal_brute_force",
+         source = "anneal_brute_force.cc",
+         passes_up_to = 6,
+         lang = "c++",
+      ),
+   ]
+)

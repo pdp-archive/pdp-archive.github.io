@@ -1,0 +1,17 @@
+TASK(
+   name = "airports",
+   test_count = 31,
+   files_dir = "testdata/27-PDP/airports/",
+   input_file = "airports.in",
+   output_file = "airports.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "airports_official",
+         source = "airports_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

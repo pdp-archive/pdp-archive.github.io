@@ -1,0 +1,8 @@
+voting:
+   full_name: "Οι εκλογές"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1nnqr306oPFjue7XV30-Zw0Mcs4x1DhXq/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1HON_M2NIxtiPaordNAyPdZeIvf_L3ywb/view"
+   solution: true
+   codes_in_git: true

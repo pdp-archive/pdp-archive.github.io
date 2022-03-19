@@ -1,0 +1,74 @@
+TASK(
+   name = "fairmaze",
+   test_count = 20,
+   files_dir = "testdata/33-PDP/fairmaze/",
+   input_file = "fairmaze.in",
+   output_file = "fairmaze.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "fairmaze_dfs",
+         source = "fairmaze_dfs.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_reverse_dfs",
+         source = "fairmaze_reverse_dfs.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_efficient_reverse_iter_dfs",
+         source = "fairmaze_efficient_reverse_iter_dfs.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_efficient_loop",
+         source = "fairmaze_efficient_loop.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_efficient_dj",
+         source = "fairmaze_efficient_dj.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_efficient_dj2",
+         source = "fairmaze_efficient_dj2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "fairmaze_efficient_dj2_short",
+         source = "fairmaze_efficient_dj2_short.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+
+   ]
+)

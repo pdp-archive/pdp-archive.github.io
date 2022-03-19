@@ -1,0 +1,17 @@
+TASK(
+   name = "knight",
+   test_count = 22,
+   files_dir = "testdata/24-PDP/knight/",
+   input_file = "knight.in",
+   output_file = "knight.out",
+   time_limit = 1,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "knight_official",
+         source = "knight_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

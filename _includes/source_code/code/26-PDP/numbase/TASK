@@ -27,7 +27,7 @@ TASK(
       SOLUTION(
          name = "numbase_correct",
          source = "numbase_correct.cc",
-         passes_up_to = 31,
+         passes_all,
          lang = "c++",
          author = PERSON(
             name = "dim131",

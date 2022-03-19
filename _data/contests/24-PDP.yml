@@ -5,9 +5,9 @@ function:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1ZpfW5pF_ISWAh_DdtZO4d124HyGd-y74"
    solution: true
-   solution_author: "Δημήτρης Λως"
+   solution_author: ""
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1pnz-JlBXs8miVHI9Nz-AaaUVbKFlSfjd"
+   solution_tags: ["primes", "prime factorisation", "sieve of Eratosthenes", "divisibility"]
 
 operators:
    full_name: "Τελεστικοί ενισχυτές"
@@ -18,7 +18,7 @@ operators:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1dUfjJWNlPKE8MUiQnc82TYQAp6NhysWE"
+   solution_tags: ["binary search", "two pointers"]
 
 pulsars:
    full_name: "Ραδιοαστέρες"
@@ -28,7 +28,6 @@ pulsars:
    testcases_url: "https://drive.google.com/open?id=1hwJ1rXa-Nv9P4e7CvKeoFVUeVok8MaWu"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1uABGXHD3Bqg3zNL8rolkNnLkIE0eqr-g"
 
 loutraki: 
    full_name: "Λουτράκι"
@@ -40,17 +39,18 @@ loutraki:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    points: 30
+   solution_tags: ["line sweep", "sorting", "counting sort"]
 
 minpali: 
    full_name: "Παλίνδρομο"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
-   testcases_url: "https://drive.google.com/open?id=1JCAj6hgRSBksM9otjcE8AqAAhTxs9GiQ"
+   testcases_url: "https://drive.google.com/file/d/1J3E6ysWzSQmrFrJJ_oahCAxln08bvzS9"
    solution: false
    codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
    points: 30
+   solution_tags: ["z-algorithm", "kmp", "manacher", "rolling hash", "strings"]
 
 souvlakia: 
    full_name: "Σουβλάκια"
@@ -58,7 +58,62 @@ souvlakia:
    statement_pdf_url: "https://drive.google.com/open?id=1_7Kh1_4VfkyaiAPpQBaAVY8yVLgM0z_-"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1BHzeGvw7K31cter5oiyBVYzlBBFP097y"
-   solution: false
-   codes_in_git: false
-   codes_url: "https://drive.google.com/open?id=1nOQifEj7wU1iK86e9leW0Akmj-Ygtrjw"
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: ["dijkstra", "segment tree", "binary index tree", "implicit segment tree","coordinate compression","RMQ","prefix minimum","map","set","sorting"]
    points: 40
+
+fib6:
+   full_name: "Άθροισμα 6 Fibonacci"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1S9pxcEz-D0xcTrGiHZ4iiYE30YMClpss"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1ji7-HL595nt7HvpvkhqYPSUV5kJrJQWl"
+   codes_in_git: true
+   solution_tags: ["greedy", "brute force", "math"]
+
+knight:
+   full_name: "Βιαστικός ίππος"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1OWpD582R7jYVB5GdTEE6Zg0zrZe06Yzp"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1oYaor-vTtJV0ri_RWTryS5rgmcubbFbf"
+   codes_in_git: true
+   solution_tags: ["shortest paths", "dijkstra", "bfs", "graphs", "math"]
+
+cutpoly:
+   full_name: "Αύξουσα πολυγωνική γραμμή"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1mWwyRCXxHswEo7TIkaMaOlKwWNlcJGqP"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1JM5Y_Rz4Me4k5Us0kWJsbsstfYAUo34A"
+   codes_in_git: true
+   solution_tags: ["geometry", "math", "greedy", "ternary search"]
+
+shades:
+   full_name: "Μεταφορά τροφίμων"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1Cyqz-5EUV9LULZGQJaZyAicLTZfeC6Tm"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1W3d11Q7lhzdNsTNNgeR0FJ7Eopfh-VYz"
+   codes_in_git: true
+   solution_tags: ["graphs", "dfs", "bfs"]
+
+maxksum:
+   full_name: "Άθροισμα υπακολουθίας"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1RaitrZFmFKVUgoXMMY9fUcPFdZ-jtq0d"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1SQmLR_inaiB4XDT5GNGz8O_5SrRbBR48"
+   codes_in_git: true
+   solution_tags: ["two pointers", "prefix sum", "segment tree", "priority queue"]
+
+concat:
+   full_name: "Παράθεση συμβολοσειρών"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1O69pLOWnBpMuinYY8P6oXEnShgCDsBmA"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/195tFyrrywq4zGAa06ctGyUSOrEmJtMCV"
+   codes_in_git: true
+   solution_tags: ["trie", "dynamic programming", "counting"]
