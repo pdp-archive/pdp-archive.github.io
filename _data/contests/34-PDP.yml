@@ -6,3 +6,24 @@ voting:
    testcases_url: "https://drive.google.com/file/d/1HON_M2NIxtiPaordNAyPdZeIvf_L3ywb/view"
    solution: true
    codes_in_git: true
+
+crazyhotel:
+   full_name: "Ο ξενοδόχος τρελλάθηκε"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1sdBxZoY75B1_TYFZrF9sdZWoYFwxPtZ7/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   codes_in_git: true
+   solution_tags: ["binary search", "two pointers", "cumulative sums", "sliding window"]
+
+smalltank:
+   full_name: "Ακριβό μου ντεπόζιτο"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1pl7g_bKlEp2IZSlQCtr_pg8g3oKX40EX/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   solution_tags: ["binary search", "dfs", "union-find", "minimum spanning tree", "kruskal"]
+
