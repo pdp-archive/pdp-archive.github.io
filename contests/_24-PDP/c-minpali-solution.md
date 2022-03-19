@@ -104,7 +104,7 @@ $$S[i\ldots N] == \overleftarrow{S}[i \ldots N]$$
 ([Διαφάνειες από camp ΠΔΠ 2017 Rabin-Karp (προς το τέλος του pdf)](http://git.softlab.ntua.gr/pub/pdp-camp/blob/master/2017/String%20Algorithms.pdf))  
 ([Καλλίνικος Hash-Table](https://kallinikos.github.io/Hash-Table))  
 ([wikipedia Rabin-Karp](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm))  
-([wikipedia Rolling hash](https://en.wikipedia.org/wiki/Rolling_hash))  
+([wikipedia Rolling hash](https://en.wikipedia.org/wiki/Rolling_hash))
 
 Υπενθυμίζουμε ότι πρέπει να κάνουμε γρήγορα τους ελέγχους $$S[i\ldots N] == \overleftarrow{S}[i \ldots N]$$, για κάθε $$i$$. Στη λύση που ακολουθεί θα χρησιμοποιήσουμε τον αλγόριθμο Rabin-Karp. Η ιδέα είναι ότι ο αλγόριθμος 'μεταμορφώνει' την κάθε συμβολοσειρά σε έναν ακέραιο αριθμό (hash), ώστε αντί να ξοδεύουμε πολύ χρόνο για τον έλεγχο ισότητας δύο συμβολοσειρών, να ξοδεύουμε $$\mathcal{O}(1)$$ χρόνο για τον έλεγχο των αντίστοιχων μεταμορφωμένων hash.
 

@@ -56,4 +56,5 @@ int main() {
     }
   }
   printf("%ld\n", 2*N-maxPalindromicSuffix);
+  return 0;
 }

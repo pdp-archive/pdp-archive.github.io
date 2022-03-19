@@ -1,4 +1,3 @@
-//https://pdp-archive.github.io/24-PDP/c-minpali-statement
 #include <bits/stdc++.h>
 
 using namespace std;
