@@ -53,7 +53,7 @@ codename: smalltank
 
 Εμείς θέλουμε να βρούμε το πρώτο σημείο που η συνάρτηση επιστρέφει `true`. Επομένως μπορούμε να χρησιμοποιήσουμε δυαδική αναζήτηση:
 
-{% include code.md solution_name='smalltank_binary_search.cc' start=50 end=67 %}
+{% include code.md solution_name='smalltank_binary_search.cc' start=50 end=66 %}
 
 Η δυαδική αναζήτηση θέλει $$\mathcal{O}(\log E) = \mathcal{O}(\log V)$$ βήματα και κάθε ένα από αυτά τα βήματα θέλει $$\mathcal{O}(E + V)$$ χρόνο. Επομένως, συνολικά θέλει $$\mathcal{O}((V+E) \cdot \log V)$$ χρόνο, που είναι αρκετό για να περάσει όλα τα testcases. Μπορείτε να βρείτε [εδώ]({% include link_to_source.md solution_name='smalltank_binary_search.cc' %}) ολόκληρο τον κώδικα.
 
@@ -65,11 +65,11 @@ codename: smalltank
 
 [^Ackermann]: Ο χρόνος είναι ακόμα καλύτερος, είναι $$\mathcal{O}(\alpha(V, E))$$, όπου $$\alpha$$ είναι η αντίστροφη συνάρτηση Ackermann, που παίρνει πολύ μικρές τιμές (δείτε πχ [εδώ](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#Time_complexity)). Σε αυτή την περίπτωση, λόγω της ταξινόμησης δεν χρειάζόμαστε κάτι καλύτερο από $$\mathcal{O}(\log V)$$.
 
-{% include code.md solution_name='smalltank_disjoint_sets.cc' start=8 end=40 %}
+{% include code.md solution_name='smalltank_disjoint_sets.cc' start=8 end=41 %}
 
 Ο κυρίως κώδικας παραμένει παρόμοιος:
 
-{% include code.md solution_name='smalltank_disjoint_sets.cc' start=56 end=66 %}
+{% include code.md solution_name='smalltank_disjoint_sets.cc' start=56 end=67 %}
 
 Ο αλγόριθμος χρειάζεται $$\mathcal{O}(E \cdot \log V)$$ χρόνο για την ταξινόμηση και $$\mathcal{O}(E \cdot \log V)$$ συνολικά για τις ενώσεις. Η λύση αυτή περνάει όλα τα testcases. Μπορείτε να βρείτε [εδώ]({% include link_to_source.md solution_name='smalltank_disjoint_sets.cc' %}) ολόκληρο τον κώδικα.
 

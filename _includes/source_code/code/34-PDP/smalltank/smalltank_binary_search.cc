@@ -62,7 +62,7 @@ int main() {
          st = mn + 1; // Απορρίπτουμε μικρότερα ή ίσα βάρη.
       }
       // Αδειάζουμε τον γράφο.
-      for (long i = 1; i <= N; ++i) adj[i].clear();
+      adj = std::vector<std::vector<long>>(N + 1);
    }
    long mx = std::get<0>(edges[st]);
    
