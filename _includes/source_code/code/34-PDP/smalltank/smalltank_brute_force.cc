@@ -12,7 +12,7 @@ std::vector<std::vector<long>> adj; // Λίστα γειτνίασης.
 // Ελέγχουμε αν ο γράφος είναι συνδεδεμένος με 
 // μη-αναδρομική DFS.
 bool is_connected(long N) {
-   for (int i = 1; i <= N; ++i) visited[i] = false;
+   std::fill(visited+1, visited+N+1, false);
    
    std::stack<long> st;
    long visited_count = 0;

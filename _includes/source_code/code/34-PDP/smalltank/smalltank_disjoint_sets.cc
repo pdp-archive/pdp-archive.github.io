@@ -31,8 +31,9 @@ bool merge(long u, long v) {
    
    if (p_u == p_v) return false;
    
-   if (sz[p_u] < sz[p_v]) par[p_u] = p_v;
-   else {
+   if (sz[p_u] < sz[p_v]) {
+      par[p_u] = p_v;
+   } else {
       par[p_v] = p_u;
       if (sz[p_u] == sz[p_v]) ++sz[p_u];
    }
