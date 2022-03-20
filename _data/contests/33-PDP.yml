@@ -50,10 +50,10 @@ wayhome:
    statement_pdf_url: "https://drive.google.com/file/d/1fAeHJ3iPfNucq4p7DiMjKrGwjIqaOCwP/view"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1-iEYuxdGzYCIryvX8aREJF7jfW1eVXjE/view"
-   solution: false
-   codes_in_git: false
-   solution_author:
-   solution_tags:
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["bfs","union-find","flood-fill"]
 
 nytrip:
    full_name: "Ταξίδι στη Νέα Υόρκη"

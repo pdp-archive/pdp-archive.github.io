@@ -1,0 +1,47 @@
+TASK(
+   name = "wayhome",
+   test_count = 12,
+   files_dir = "testdata/33-PDP/wayhome/",
+   input_file = "wayhome.in",
+   output_file = "wayhome.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "wayhome_42",
+         source = "wayhome_42.cc",
+         passes_only = [1,4,5,6,7],
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "wayhome_nobuildings",
+         source = "wayhome_nobuildings.cc",
+         passes_only = [2,3,12],
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "wayhome_proxy",
+         source = "wayhome_proxy.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+      SOLUTION(
+         name = "wayhome_proxy_fast",
+         source = "wayhome_proxy_fast.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kbokis",
+         ),
+      ),
+   ]
+)
