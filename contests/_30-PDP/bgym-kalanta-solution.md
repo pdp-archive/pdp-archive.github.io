@@ -59,6 +59,6 @@ codename: kalanta
 
 {% include code.md solution_name='kalanta_linear_n_space.cc' start=6 end=12 %}
 
-και να αντικαταστήσουμε όλες τις χρήσεις `A[xx]` με `A(xx)`. Θα βρείτε ολόκληρο τον κώδικα [εδώ](https://github.com/pdp-archive/pdp-archive.github.io/blob/master/_includes/source_code/code/30-PDP/kalanta/kalanta_linear_n_space.cc).
+και να αντικαταστήσουμε όλες τις χρήσεις `A[xx]` με `A(xx)`. Θα βρείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='kalanta_linear_n_space.cc' %}).
 
 **Σημείωση 2:** Αν θέλουμε να διαβάσουμε το αρχείο εισόδου παραπάνω από μία φορές (που στην πράξη δεν είναι πολύ αποδοτικό), τότε μπορούμε να λύσουμε το πρόβλημα σε $$\mathcal{O}(N)$$ χρόνο και $$\mathcal{O}(1)$$ μνήμη (δείτε [εδώ](/23-PDP/c-prevdiv-solution#βέλτιστη-λύση-με-mathcalo1-μνήμη) για παράδειγμα).

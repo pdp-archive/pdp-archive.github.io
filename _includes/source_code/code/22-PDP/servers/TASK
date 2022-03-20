@@ -18,5 +18,23 @@ TASK(
             school = "3ο Γ/σιο Αλεξανδρούπολης",
          ),
       ),
+      SOLUTION(
+         name = "servers_double_sort",
+         source = "servers_double_sort.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "servers_sort",
+         source = "servers_sort.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "servers_partial_sort",
+         source = "servers_partial_sort.cc",
+         passes_all,
+         lang = "c++",
+      ),
    ]
 )

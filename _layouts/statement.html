@@ -9,6 +9,12 @@
   {% assign stage_name = "B' Φάση Λυκείου" %}
 {% elsif task.stage == "a" %}
   {% assign stage_name = "Α' Φάση" %}
+{% elsif task.stage == "camp_c" %}
+  {% assign stage_name = "Καμπ (κοινά)" %}
+{% elsif task.stage == "camp_j" %}
+  {% assign stage_name = "Καμπ (juniors)" %}
+{% elsif task.stage == "camp_s" %}
+  {% assign stage_name = "Καμπ (seniors)" %}
 {% endif %}
 {% assign title = page.contest | append: " " | append: stage_name | append: "<br>" | append: task.full_name | append: " (" | append: page.codename | append: ")" %}
 <html>
@@ -34,7 +40,7 @@
   <div class="main-content">
     <div style="text-align:right">
       <div>
-        <a href="/"> Αρχική </a> > 
+        <a href="/">Αρχική</a> > 
         <a href="/{{ page.contest_url }}">{{ page.contest }} </a>
       </div>
     </div>

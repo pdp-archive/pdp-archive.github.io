@@ -1,0 +1,17 @@
+TASK(
+   name = "toponyms",
+   test_count = 11,
+   files_dir = "testdata/23-PDP/toponyms/",
+   input_file = "toponyms.in",
+   output_file = "toponyms.out",
+   time_limit = 2,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "toponyms_official",
+         source = "toponyms_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

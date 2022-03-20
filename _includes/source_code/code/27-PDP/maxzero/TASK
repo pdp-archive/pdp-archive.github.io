@@ -1,0 +1,17 @@
+TASK(
+   name = "maxzero",
+   test_count = 29,
+   files_dir = "testdata/27-PDP/maxzero/",
+   input_file = "maxzero.in",
+   output_file = "maxzero.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "maxzero_official",
+         source = "maxzero_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

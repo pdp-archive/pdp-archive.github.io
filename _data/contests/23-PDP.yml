@@ -7,7 +7,6 @@ profit:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1s4W2WGhm8ecXFL39VeeyIcTRjQHvX1o4"
    solution_tags: ["greedy", "line sweep"]
 
 snow_run:
@@ -19,7 +18,6 @@ snow_run:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=14fm1Wdjf21LJzbqg-LU-ZCm65WJD7vZ5"
    solution_tags: ["segment tree", "brute force"]
 
 company:
@@ -31,7 +29,6 @@ company:
    solution: true
    solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1X1VoeaADAGD03Hx_SdddEOoU5alpwqFs"
    solution_tags: ["trees", "dp", "bfs", "dfs"]
 
 prevdiv: 
@@ -43,7 +40,6 @@ prevdiv:
    solution: true
    solution_author: ""
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=1Zw07u0jmkf4SAKbwRMy96Y5Oqt3qBZyi"
    points: 10
    solution_tags: ["two pointers", "divisibility", "gcd", "lcm", "number theory"]
 
@@ -55,7 +51,6 @@ fishboats:
    testcases_url: "https://drive.google.com/open?id=1Yycjw3uvtHKV6_7f26NcoaG2maABYMzA"
    solution: false
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
 
 anneal: 
@@ -64,7 +59,61 @@ anneal:
    statement_pdf_url: "https://drive.google.com/open?id=12aBIv3J-jCTSxxYccs_pkAa2ezrtoD56"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1fSzwMRtRerRyrFa_V3ACtR47SZT0dQCc"
-   solution: false
+   solution: true
    codes_in_git: true
-   codes_url: "https://drive.google.com/open?id=15nsoWorjig385K9PdmZvWltcFF1qqizf"
    points: 10
+   solution_tags: ["dp", "memoisation"]
+
+oddeven:
+   full_name: "Περιττοί και άρτιοι"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1T0_Vc0RLSkA5ZxT-24BUtRWAtAx0oLzs"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1fqJMvWAVB5FDyUvKyMpfA0xftTMQB4ZO"
+   codes_in_git: true
+   solution_tags: ["prefix sum", "hash tables", "counting sort", "two pointers", "map", "sorting"]
+
+intvsum:
+   full_name: "Άθροισμα παρεμβαλλομένων"
+   stage: "camp_j"
+   statement_pdf_url: "https://drive.google.com/file/d/1KJ7P5229B8X1kO5tg0xDxLhRfaT4U2Qh"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1noSkVWV_uf0ajSng1-wDHtUO0PUSUmmO"
+   codes_in_git: true
+   solution_tags: ["prefix sum", "hash tables", "counting sort", "map"]
+
+toponyms:
+   full_name: "Τοπωνύμια"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/10VV3QioiRlc0e2NdPSBj32zUocJkOXoZ"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1XsbXE-6-JirM0-Oat4PfS20i2ph2AyzY"
+   codes_in_git: true
+   solution_tags: ["trie", "strings"]
+
+newroad:
+   full_name: "Βελτίωση οδικού δικτύου"
+   stage: "camp_s"
+   statement_pdf_url: "https://drive.google.com/file/d/1rO3d7G3xcd5wnbLDUz6HnaEUaOypZ4rg"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1Io8qepxP6Kt1vX7NshD6WRkmSCiFcK3g"
+   codes_in_git: true
+   solution_tags: ["shortest paths", "dijkstra", "graphs"]
+
+books:
+   full_name: "Αντιγραφή βιβλίων"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/18H28A65mNN6vzjvX23ItKdRnKjAs0bII"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1wdDyG_xkEWnGvTnqg3-PgJI-BFoND5UW"
+   codes_in_git: true
+   solution_tags: ["binary search", "greedy"]
+
+restaurants:
+   full_name: "Εστιατόρια"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/16U1OBBsHS1yMVrJzNqSx9SBpEGzfe1-_"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1Yk0e0xdv_bezecyTQXPvMWHDrVONtMrL"
+   codes_in_git: true
+   solution_tags: ["dp"]

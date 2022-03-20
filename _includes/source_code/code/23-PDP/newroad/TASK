@@ -1,0 +1,17 @@
+TASK(
+   name = "newroad",
+   test_count = 18,
+   files_dir = "testdata/23-PDP/newroad/",
+   input_file = "newroad.in",
+   output_file = "newroad.out",
+   time_limit = 1,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "newroad_official",
+         source = "newroad_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

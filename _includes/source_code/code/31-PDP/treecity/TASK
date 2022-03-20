@@ -1,0 +1,16 @@
+TASK(
+   name = "treecity",
+   test_count = 40,
+   files_dir = "testdata/31-PDP/treecity/",
+   input_file = "treecity.in",
+   output_file = "treecity.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "treecity_official",
+         source = "treecity_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

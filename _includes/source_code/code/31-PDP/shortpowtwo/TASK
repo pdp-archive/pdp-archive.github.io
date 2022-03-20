@@ -1,0 +1,46 @@
+TASK(
+   name = "shortpowtwo",
+   test_count = 47,
+   files_dir = "testdata/31-PDP/shortpowtwo/",
+   input_file = "shortpowtwo.in",
+   output_file = "shortpowtwo.out",
+   time_limit = 2,
+   solutions = [
+      SOLUTION(
+         name = "shortpowtwo_n2_small_w",
+         source = "shortpowtwo_n2_small_w.cc",
+         passes_up_to = 12,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "shortpowtwo_mlogn_small_w",
+         source = "shortpowtwo_mlogn_small_w.cc",
+         passes_up_to = 21,   
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "shortpowtwo_mwlogn",
+         source = "shortpowtwo_mwlogn.cc",
+         passes_up_to = 34,   
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "shortpowtwo_mlogwlogn",
+         source = "shortpowtwo_mlogwlogn.cc",
+         passes_all,   
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),      
+   ]
+)

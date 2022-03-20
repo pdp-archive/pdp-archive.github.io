@@ -1,0 +1,17 @@
+TASK(
+   name = "network",
+   test_count = 22,
+   files_dir = "testdata/25-PDP/network/",
+   input_file = "network.in",
+   output_file = "network.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "network_official",
+         source = "network_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

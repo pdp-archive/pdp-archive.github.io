@@ -4,7 +4,7 @@ TASK(
    files_dir = "testdata/26-PDP/numbase/",
    input_file = "numbase.in",
    output_file = "numbase.out",
-   time_limit = 2,
+   time_limit = 1,
    solutions = [
       SOLUTION(
          name = "numbase_official_cpp",
@@ -28,8 +28,6 @@ TASK(
          name = "numbase_correct",
          source = "numbase_correct.cc",
          passes_all,
-         special_time_limit = 4,
-         comment = "Τα testcases 33, 35, 37, 39 και 41 δεν περνάνε με το κανονικό όριο. Να ελέγξουμε γιατί.",
          lang = "c++",
          author = PERSON(
             name = "dim131",

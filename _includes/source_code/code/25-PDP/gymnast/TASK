@@ -1,0 +1,17 @@
+TASK(
+   name = "gymnast",
+   test_count = 11,
+   files_dir = "testdata/25-PDP/gymnast/",
+   input_file = "gymnast.in",
+   output_file = "gymnast.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "gymnast_official",
+         source = "gymnast_official.c",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

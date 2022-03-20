@@ -1,0 +1,34 @@
+TASK(
+   name = "voting",
+   test_count = 25,
+   files_dir = "testdata/34-PDP/voting/",
+   input_file = "voting.in",
+   output_file = "voting.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "voting_efficient",
+         source = "voting_efficient.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "voting_shorter",
+         source = "voting_shorter.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "voting_map",
+         source = "voting_map.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "voting_unordered_map",
+         source = "voting_unordered_map.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
