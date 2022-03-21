@@ -3,7 +3,7 @@
 {% assign url_codename = codename | replace: "_", "-" %}
 {% assign url_stage = problem.stage | replace: "_", "-" %}
 
-**{{ problem.full_name }} ({{ codename }}):**
+**{{ problem.full_name }} (<span>{{ codename }}</span>):**
 {% if problem.statement_md == true %}[εκφώνηση](/{{ contest_url }}/{{ url_stage }}-{{ url_codename }}-statement) {% else %} εκφώνηση {% endif %}
 {% if problem.statement_pdf_url == "" %}(pdf){% else %}([pdf]({{ problem.statement_pdf_url}})) {% endif %} \|
 {% if problem.testcases_url == '' %} testcases {% else %}[testcases]({{ problem.testcases_url }}) {% endif %}
