@@ -2,7 +2,7 @@
 {% for problem_it in contest %}
 
 {% if problem_it[1].stage == include.stage %}
-{% include single_problem.md problem_it=problem_it include_tags=true %}
+{% include single_problem.md problem_it=problem_it include_tags=false %}
 {% endif %}
 
 {% endfor %}
