@@ -35,7 +35,7 @@ codename: smalltank
 
 Έπειτα στο κυρίως τμήμα προσθέτουμε μία μία τις ακμές σε αύξουσα σειρά στον γράφο και ελέγχουμε αν ο γράφος είναι συνδεδεμένος:
 
-{% include code.md solution_name='smalltank_brute_force.cc' start=12 end=34 %}
+{% include code.md solution_name='smalltank_brute_force.cc' start=50 end=62 %}
 
 Ο έλεγχος για το αν ο γράφος είναι συνδεδεμένος θέλει $$\mathcal{O}(E + V)$$ χρόνο και χρειάζεται να τον κάνουμε το πολύ μία φορά για κάθε ακμή. Άρα συνολικά ο αλγόριθμος χρειάζεται $$\mathcal{O}(E \cdot (V + E))$$ χρόνο. Αυτό είναι αρκετό για να περάσει περίπου 14-16 από τα 21 testcases. 
 
