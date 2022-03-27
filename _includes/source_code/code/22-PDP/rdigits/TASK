@@ -1,0 +1,17 @@
+TASK(
+   name = "rdigits",
+   test_count = 11,
+   files_dir = "testdata/22-PDP/rdigits/",
+   input_file = "rdigits.in",
+   output_file = "rdigits.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "rdigits_official",
+         source = "rdigits_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

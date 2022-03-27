@@ -1,0 +1,17 @@
+TASK(
+   name = "metoxes",
+   test_count = 26,
+   files_dir = "testdata/27-PDP/metoxes/",
+   input_file = "metoxes.in",
+   output_file = "metoxes.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "metoxes_official",
+         source = "metoxes_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

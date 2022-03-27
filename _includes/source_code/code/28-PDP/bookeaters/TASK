@@ -1,0 +1,17 @@
+TASK(
+   name = "bookeaters",
+   test_count = 19,
+   files_dir = "testdata/28-PDP/bookeaters/",
+   input_file = "bookeaters.in",
+   output_file = "bookeaters.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "bookeaters_official",
+         source = "bookeaters_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

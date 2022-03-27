@@ -1,0 +1,17 @@
+TASK(
+   name = "shades",
+   test_count = 22,
+   files_dir = "testdata/24-PDP/shades/",
+   input_file = "shades.in",
+   output_file = "shades.out",
+   time_limit = 2,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "shades_official",
+         source = "shades_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

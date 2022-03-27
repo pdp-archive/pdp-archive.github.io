@@ -12,5 +12,11 @@
 
 {% include single_stage.md stage="c" stage_title="Γ' Φάση" %}
 
+{% include single_stage.md stage="camp_j" stage_title="Καμπ (juniors)" %}
+
+{% include single_stage.md stage="camp_s" stage_title="Καμπ (seniors)" %}
+
+{% include single_stage.md stage="camp_c" stage_title="Καμπ (κοινά)" %}
+
 {% endcapture %}
 {{ md | markdownify }}

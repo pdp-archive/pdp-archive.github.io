@@ -106,7 +106,7 @@ To binary indexed tree είναι λίγο οικονομικότερο σε μ�
 
 {% include code.md solution_name='souvlakia_nlogn_implicit_st.cc' start=82 end=134 %}
 
-Μια ενδεικτική παραλλαγή με χρήση dynamic memory allocation μπορείτε να βρείτε [εδώ]({% include link_to_source.md source_name='souvlakia_nlogn_implicit_st_cptr.cc' %}) (οι κόμβοι δημιουργούνται δυναμικά όταν και 
+Μια ενδεικτική παραλλαγή με χρήση dynamic memory allocation μπορείτε να βρείτε [εδώ]({% include link_to_source.md solution_name='souvlakia_nlogn_implicit_st_cptr.cc' %}) (οι κόμβοι δημιουργούνται δυναμικά όταν και 
 αν χρειαστούν και χρησιμοποιούνται pointers για τη διαχείριση του segment tree). Η χρήση dynamic memory allocation θα 
 καταλάβει μόνο όση μνήμη χρειάζεται αλλά η χρήση pointers απαιτεί μεγαλύτερη ευχέρεια στο χειρισμό της γλώσσας 
 προγραμματισμού.

@@ -1,0 +1,16 @@
+TASK(
+   name = "max3sum",
+   test_count = 22,
+   files_dir = "testdata/31-PDP/max3sum/",
+   input_file = "max3sum.in",
+   output_file = "max3sum.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "max3sum_official",
+         source = "max3sum_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)

@@ -35,9 +35,9 @@ landfight:
    full_name: "Ο πόλεμος των τσιφλικάδων"
    stage: "c"
    points: 30
-   statement_pdf_url: 
+   statement_pdf_url: "https://drive.google.com/file/d/1fAeHJ3iPfNucq4p7DiMjKrGwjIqaOCwP/view"
    statement_md: true
-   testcases_url: 
+   testcases_url: "https://drive.google.com/file/d/1sy9YRxLMGGPzaxJfya1C2EBw-scOPwA3/view"
    solution: true
    codes_in_git: true
    solution_author: "Κωνσταντίνος Μποκής"
@@ -47,23 +47,58 @@ wayhome:
    full_name: "Γυρίζοντας στο σπίτι"
    stage: "c"
    points: 30
-   statement_pdf_url:
+   statement_pdf_url: "https://drive.google.com/file/d/1fAeHJ3iPfNucq4p7DiMjKrGwjIqaOCwP/view"
    statement_md: true
-   testcases_url:
-   solution: false
-   codes_in_git: false
-   solution_author:
-   solution_tags:
+   testcases_url: "https://drive.google.com/file/d/1-iEYuxdGzYCIryvX8aREJF7jfW1eVXjE/view"
+   solution: true
+   codes_in_git: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   solution_tags: ["bfs","union-find","flood-fill"]
 
 nytrip:
    full_name: "Ταξίδι στη Νέα Υόρκη"
    stage: "c"
    points: 40
-   statement_pdf_url:
+   statement_pdf_url: "https://drive.google.com/file/d/1fAeHJ3iPfNucq4p7DiMjKrGwjIqaOCwP/view"
    statement_md: true
-   testcases_url:
+   testcases_url: "https://drive.google.com/file/d/1_-3RMgJk5LgftMOEpRLsCsxXWfn9790M/view"
    solution: false
    codes_in_git: false
    solution_author: 
    solution_tags:
 
+candystripe:
+   full_name: "CANDYSTRIPE"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/12I8fSybzmVgmxDNJOF-o2SzO_-uVz7Kl"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+roomalloc:
+   full_name: "ROOMALLOC"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1sz17f9tD9bmvbxvMwQvv4k1aVy6NTRjs"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+   
+candystripe2:
+   full_name: "CANDYSTRIPE2"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1wkCM8Ipt0vgHXA3S618i-ZfOdcsmQqi0"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []
+
+twingift2:
+   full_name: "TWINGIFT2"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1kvsOUn9CI782404HVLnejbGerKnu0ok6"
+   statement_md: false
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: []

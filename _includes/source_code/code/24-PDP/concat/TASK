@@ -1,0 +1,17 @@
+TASK(
+   name = "concat",
+   test_count = 13,
+   files_dir = "testdata/24-PDP/concat/",
+   input_file = "concat.in",
+   output_file = "concat.out",
+   time_limit = 1,
+   mem_limit = 16,
+   solutions = [
+      SOLUTION(
+         name = "concat_official",
+         source = "concat_official.cpp",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
