@@ -25,6 +25,12 @@ codename: efimerides
 
 Ο αλγόριθμος ακόμα χρειάζεται $$\mathcal{O}(N^2)$$ χρόνο, αλλά περνάει δύο παραπάνω testcases από την λύση με το hash set. Μπορείτε να βρείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='efimerides_slow_table.cc' %}).
 
+**Σημείωση:** Αν θέλουμε να αποφύγουμε το καθάρισμα του πίνακα $$\textit{seen}$$, μπορούμε να κρατάμε έναν ακέραιο $$\textit{last_visited_with}[i]$$, τη θέση από την οποία είδαμε τελευταία φορά τον $$i$$. Οι αλλαγές είναι οι εξής:
+
+{% include code.md solution_name='efimerides_slow_table_alt.cc' start=19 end=29 %}
+
+Η λύση αυτή μπορεί να πιάσει ένα/δύο παραπάνω testcases. Ολόκληρος ο κώδικας υπάρχει [εδώ]({% include link_to_source.md solution_name='efimerides_slow_table_alt.cc' %}). 
+
 ## Γρήγορη λύση
 
 Για την γρήγορη λύση, κάνουμε την εξής παρατήρηση.

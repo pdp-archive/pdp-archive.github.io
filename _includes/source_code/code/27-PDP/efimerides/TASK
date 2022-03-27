@@ -29,6 +29,12 @@ TASK(
          lang = "c++",
       ),
       SOLUTION(
+         name = "efimerides_slow_table_alt",
+         source = "efimerides_slow_table_alt.cc",
+         passes_up_to = 18,
+         lang = "c++",
+      ),
+      SOLUTION(
          name = "efimerides_slow_table",
          source = "efimerides_slow_table.cc",
          passes_up_to = 18,
