@@ -49,17 +49,17 @@ $$A_\mathit{left}$$ που έφυγε από το επιλεγμένο διάσ�
 Για τον υπολογισμό του αθροίσματος κάθε διαστήματος $$[\mathit{left},\mathit{right}]$$ μπορούν να χρησιμοποιηθούν τα prefix sums (ή cumulative sums) όπως στον παρακάτω κώδικα:
 
 {% include code.md solution_name='crazyhotel_sliding_ps.cpp' start=10 end=23 %}
-(δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_ps.cpp' %}))
+Μπορείτε να βρείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_ps.cpp' %})
 
 ή το άθροισμα να υπολογίζεται δυναμικά (on the fly):
 
 {% include code.md solution_name='crazyhotel_sliding_v2.cpp' start=13 end=26 %}
-(δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_v2.cpp' %}))
+Μπορείτε να βρείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_v2.cpp' %})
 
 Υπάρχει μια λύση ακόμα, όπου οι δύο δείκτες δεν αναφέρονται σε πίνακα στη μνήμη, αλλά στον αποθηκευμένο στο αρχείο πίνακα. Η λύση αυτή αν και λιγότερο αποδοτική, χρειάζεται μνήμη $$\mathcal{O}(1)$$ καθώς δεν δεσμεύει μνήμη για τον πίνακα $$A$$. Θα χρειαστεί να δημιουργήσουμε ένα αντίγραφο του χειριστή αρχείου για να χρησιμοποιεί ο δεύτερος δείκτης (π.χ. με τη συνάρτηση dup) ή να ανοίξουμε το αρχείο δύο φορές.
 
 {% include code.md solution_name='crazyhotel_sliding_constmem.cpp' start=15 end=32 %}
-(δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_constmem.cpp' %}))
+Μπορείτε να βρείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_sliding_constmem.cpp' %})
 
 ## Λύση με δυαδική αναζήτηση. Πολυπλοκότητα $$\mathcal{O}(N\dot \log {N} )$$.
 
@@ -68,7 +68,7 @@ $$A_\mathit{left}$$ που έφυγε από το επιλεγμένο διάσ�
 Μια λύση είναι να διαβάζονται οι τιμές $$A_i$$ από το αρχείο εισόδου μέχρι να φτάσουμε σε απαγορευτική τιμή ή στο τέλος του πίνακα. Κάνουμε τους υπολογισμούς στο διάστημα που προηγήθηκε και κατόπιν επαναλαμβάνουμε μέχρι να εξαντληθούν οι $$N$$ τιμές. Ο κώδικας ακολουθεί:
 
 {% include code.md solution_name='crazyhotel_nlogn.cpp' start=8 end=29 %}
-(δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_nlogn.cpp' %}))
+Μπορείτε να βρείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_nlogn.cpp' %})
 
 Μια άλλη λύση για το binary search που να ξεπερνά το εμπόδιο των απαγορευτικών τιμών, είναι να αυξηθεί η τιμή των ημερών αυτών σε $$S+1$$. 
 Με τον τρόπο αυτό, η prefix sum που ψάχνει τη μεγαλύτερη αύξηση από τη θέση $$\mathit{left}$$ που όμως να μην ξεπερνά το $$S$$, δεν θα συμπεριλάβει ποτέ τέτοιο σημείο. 
@@ -76,6 +76,6 @@ $$A_\mathit{left}$$ που έφυγε από το επιλεγμένο διάσ�
 και με μέγιστο $$S=1.000.000.000$$, το prefix sum θα πρέπει να χωρά τον αριθμό $$10^6\cdot (10^9+1)$$, άρα θα χρειαστούμε ακεραίους 64bit.
 
 {% include code.md solution_name='crazyhotel_nlogn_v2.cpp' start=18 end=37 %}
-(δείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_nlogn_v2.cpp' %}))
+Μπορείτε να βρείτε τον πλήρη κώδικα [εδώ]({% include link_to_source.md solution_name='crazyhotel_nlogn_v2.cpp' %})
 
 
