@@ -1,6 +1,8 @@
 #include <algorithm>
 #include <cstdio>
 #include <stack>
+#include <vector>
+#include <tuple>
 
 typedef std::tuple<long /* βάρος */, long /* 1η κορυφή */, long /* 2η κορυφή */> Edge;
 
