@@ -12,7 +12,7 @@ crazyhotel:
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/file/d/1sdBxZoY75B1_TYFZrF9sdZWoYFwxPtZ7/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1JFdsxTiq0aZcbnhok_9bl8-h-fQc07Nl/view"
    solution: true
    codes_in_git: true
    solution_tags: ["binary search", "two pointers", "cumulative sums", "sliding window"]
@@ -22,7 +22,7 @@ smalltank:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/file/d/1pl7g_bKlEp2IZSlQCtr_pg8g3oKX40EX/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1qDCSPg_8BgzT4R1brB7HHWQEJZffLb8i/view"
    solution: true
    codes_in_git: true
    solution_tags: ["binary search", "dfs", "union-find", "minimum spanning tree", "kruskal", "minimum bottleneck spanning tree"]
