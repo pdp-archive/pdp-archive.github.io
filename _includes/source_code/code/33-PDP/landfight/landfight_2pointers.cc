@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 
-const long MAXN = 1'000'001L;
+const long MAXN = 1'000'002L;
 
 long A[MAXN];
 

@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-const long MAXN = 1'000'001L;
+const long MAXN = 1'000'002L;
 
 long A[MAXN], PS[MAXN];
 pair<long,long> SS[MAXN];
@@ -21,11 +21,11 @@ int main(){
         sum +=A[i];
         SS[i] = {sum,i};
     }
-    SS[0] = {0,N+1};//περίπτωση R=0,L=N 
+    SS[0] = {0,N+1};
     sort(SS,SS+N+1);
     
     long ans = N;
-    for(long i=1;i<=N;i++){
+    for(long i=0;i<=N;i++){
         pair<long,long> test = {PS[i],i+1};
         size_t pos = lower_bound(SS,SS+N+1,test) - SS;
         if(pos != N+1 && SS[pos].first==PS[i])

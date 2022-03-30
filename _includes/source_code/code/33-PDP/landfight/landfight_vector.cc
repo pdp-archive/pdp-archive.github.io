@@ -18,14 +18,14 @@ int main(){
     for(long i=1;i<=N;i++)
         scanf("%ld",A+i);
     
-    M[0].push_back(N+1);//περίπτωση L=N,R=0
+    M[0].push_back(N+1);
     for(long suffix=0L,i=N;i>0;i--){
         suffix +=A[i];
         M[suffix].push_back(i);
     }
     
     long ans = N;
-    for(long prefix=0L,i=1;i<=N;i++){
+    for(long prefix=0L,i=0;i<=N;i++){
         prefix += A[i];
         if(M.find(prefix) == M.end())
             continue;
