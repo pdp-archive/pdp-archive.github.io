@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 
-const long MAXN = 1'000'001L;
+const long MAXN = 1'000'002L;
 
 long A[MAXN];
 
@@ -15,7 +15,7 @@ long PS[MAXN];
 //στοιχείο για να υπολογίσουμε το τρέχον. Στον πίνακα A
 //χρησιμοποιούνται τα στοιχεία 1 έως και N άρα στον SS
 //χρησιμοποιούνται τα στοιχεία από τη θέση 1 έως και την N+1
-long SS[MAXN+1];
+long SS[MAXN];
 
 int main(){
     freopen("landfight.in","r",stdin);
@@ -31,10 +31,10 @@ int main(){
         SS[i] = SS[i+1] + A[i];
     
     long ans = N;
-    for(long i=1;i<=N;i++){
+    for(long i=0;i<=N;i++){
         for(long j=i+1;j<=N+1;j++){
-            //Το j==N+1 αντιστοιχεί στην περίπτωση L=N και R=0, 
-            //δηλαδή κανένα χωράφι στον δεξιό τσιφλικά)
+            //Το j==N+1 αντιστοιχεί στην περίπτωση που δεν πάρει χωράφια ο δεξιός
+            //Το i==0 για την περίπτωση που ο αριστερός δεν πάρει χωράφια
             if(PS[i] == SS[j]){
                 ans = std::min(ans, j-i-1);
                 break;
