@@ -20,36 +20,24 @@ TASK(
          source = "numbase_brute_force.cc",
          passes_up_to = 13,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "numbase_correct",
          source = "numbase_correct.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "numbase_50_first",
          source = "numbase_50_first.cc",
          passes_up_to = 21,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "numbase_50_second",
          source = "numbase_50_second.cc",
          passes_up_to = 14,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

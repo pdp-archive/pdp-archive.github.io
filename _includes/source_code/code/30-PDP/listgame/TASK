@@ -17,36 +17,24 @@ TASK(
          source = "listgame_brute_force.cc",
          passes_up_to = 8,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "listgame_dp_recursive",
          source = "listgame_dp_recursive.cc",
          passes_up_to = 13,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "listgame_dp",
          source = "listgame_dp.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "listgame_dp_memoisation",
          source = "listgame_dp_memoisation.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

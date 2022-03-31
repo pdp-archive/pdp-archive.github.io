@@ -17,27 +17,18 @@ TASK(
          source = "rafting_brute_force.cc",
          passes_up_to = 12,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "rafting_brute_force_list",
          source = "rafting_brute_force_list.cc",
          passes_up_to = 12,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "rafting_efficient_seg_tree",
          source = "rafting_efficient_seg_tree.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

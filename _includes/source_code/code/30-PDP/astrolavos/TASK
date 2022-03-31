@@ -11,9 +11,6 @@ TASK(
          source = "astrolavos_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

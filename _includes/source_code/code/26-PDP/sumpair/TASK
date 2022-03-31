@@ -20,27 +20,18 @@ TASK(
          source = "sumpair_brute_force.cc",
          passes_up_to = 5,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "sumpair_set",
          source = "sumpair_set.cc",
          passes_up_to = 7,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "sumpair_linear_query",
          source = "sumpair_linear_query.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

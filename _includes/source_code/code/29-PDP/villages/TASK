@@ -17,27 +17,18 @@ TASK(
          source = "villages_efficient_recursive.cc",
          passes_all_except_for = [46, 49, 52],
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "villages_efficient_iterative",
          source = "villages_efficient_iterative.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "villages_slow",
          source = "villages_slow.cc",
          passes_up_to = 37,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

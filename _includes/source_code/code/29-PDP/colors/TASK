@@ -17,36 +17,24 @@ TASK(
          source = "colors_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-           name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "colors_brute_force",
          source = "colors_brute_force.cc",
          passes_up_to = 11,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "colors_n2",
          source = "colors_n2.cc",
          passes_up_to = 14,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "colors_nlogn",
          source = "colors_nlogn.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

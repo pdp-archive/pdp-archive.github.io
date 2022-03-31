@@ -17,18 +17,12 @@ TASK(
          source = "brickbreaker_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "brickbreaker_slow",
          source = "brickbreaker_slow.cc",
          passes_up_to = 23,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

@@ -17,27 +17,18 @@ TASK(
          source = "dnaseq_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "dnaseq_brute_force",
          source = "dnaseq_brute_force.cc",
          passes_up_to = 20,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "dnaseq_rolling_hash",
          source = "dnaseq_rolling_hash.cc",
          passes_up_to = 25,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

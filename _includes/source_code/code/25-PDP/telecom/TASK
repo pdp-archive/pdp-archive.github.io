@@ -21,27 +21,18 @@ TASK(
          source = "telecom_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "telecom_n2",
          source = "telecom_n2.cc",
          passes_up_to = 21,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "telecom_n3",
          source = "telecom_n3.cc",
          passes_up_to = 13,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

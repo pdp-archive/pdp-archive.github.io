@@ -41,9 +41,6 @@ TASK(
          source = "seti_brute_force.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

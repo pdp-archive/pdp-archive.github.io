@@ -41,36 +41,24 @@ TASK(
          source = "function_eratosthenes_sieve.cpp",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "function_l_root_l",
          source = "function_l_root_l.cpp",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "function_l_2",
          source = "function_l_2.cpp",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "function_precomputation",
          source = "function_precomputation.cpp",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

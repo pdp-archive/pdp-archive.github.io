@@ -17,18 +17,12 @@ TASK(
          source = "agora_brute_force.cc",
          passes_up_to = 10,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "agora_efficient",
          source = "agora_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

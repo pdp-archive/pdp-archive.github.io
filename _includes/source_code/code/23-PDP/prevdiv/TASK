@@ -21,36 +21,24 @@ TASK(
          source = "prevdiv_brute_force.cc",
          passes_all_except_for = [16, 18, 20, 21],
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "prevdiv_efficient",
          source = "prevdiv_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "prevdiv_efficient_const_memory",
          source = "prevdiv_efficient_const_memory.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "prevdiv_lcm",
          source = "prevdiv_lcm.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

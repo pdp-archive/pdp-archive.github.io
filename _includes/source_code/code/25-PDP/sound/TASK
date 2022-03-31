@@ -21,27 +21,18 @@ TASK(
          source = "sound_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "sound_brute_force",
          source = "sound_brute_force.cc",
          passes_only = [1, 2, 3, 4, 7],
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "sound_semi_fast",
          source = "sound_semi_fast.cc",
          passes_up_to = 8,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

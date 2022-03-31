@@ -20,27 +20,18 @@ TASK(
          source = "roadwork_slow.cc",
          passes_up_to = 22,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "roadwork_semifast",
          source = "roadwork_semifast.cc",
          passes_up_to = 49,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "roadwork_efficient",
          source = "roadwork_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

@@ -11,27 +11,18 @@ TASK(
         source = "pcr_slow.cc",
         passes_up_to = 14,
         lang = "c++",
-        author = PERSON(
-           name = "dim131",
-        ),
       ),
       SOLUTION(
         name = "pcr_semi_efficient",
         source = "pcr_semi_efficient.cc",
         passes_up_to = 14,
         lang = "c++",
-        author = PERSON(
-           name = "dim131",
-        ),
       ),
       SOLUTION(
         name = "pcr_efficient",
         source = "pcr_efficient.cc",
         passes_all,
         lang = "c++",
-        author = PERSON(
-           name = "dim131",
-        ),
       ),
    ]
 )

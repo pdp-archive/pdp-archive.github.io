@@ -41,27 +41,18 @@ TASK(
          source = "karla_efficient_iterative.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "karla_efficient_recursive",
          source = "karla_efficient_recursive.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "karla_efficient_short",
          source = "karla_efficient_short.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "karla_simple_disjoint",

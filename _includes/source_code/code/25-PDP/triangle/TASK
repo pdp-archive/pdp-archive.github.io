@@ -21,27 +21,18 @@ TASK(
          source = "triangle_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "triangle_mem_efficient",
          source = "triangle_mem_efficient.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "triangle_brute_force",
          source = "triangle_brute_force.cc",
          passes_up_to = 4,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )

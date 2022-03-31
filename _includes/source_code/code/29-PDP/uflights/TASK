@@ -17,18 +17,12 @@ TASK(
          source = "uflights_kruskal.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
       SOLUTION(
          name = "uflights_prim",
          source = "uflights_prim.cc",
          passes_all,
          lang = "c++",
-         author = PERSON(
-            name = "dim131",
-         ),
       ),
    ]
 )
