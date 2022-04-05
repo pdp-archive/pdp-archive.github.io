@@ -35,7 +35,7 @@ codename: dnaseq
 
 | **dnaseq.in**      | **dnaseq.out** |
 | :--- | :--- |
-| 5 <br> ABACΑ <br> ABACA | 0 |
+| 5 <br> ABACA <br> ABACA | 0 |
 
 *Εξήγηση:* Οι τιμές $$L=1$$ και $$M=1$$ (και εν γένει κάθε $$L=M$$) επαληθεύουν τα παραπάνω.
 
