@@ -36,7 +36,7 @@ orchestras:
    solution: false
    codes_in_git: false
    points: 30
-   solution_tags: ["sort"]
+   solution_tags: ["sort", "greedy", "counting sort"]
    on_judge: false
 
 marbles:
@@ -60,5 +60,5 @@ filiki:
    solution: false
    codes_in_git: false
    points: 35
-   solution_tags: ["binary search", "dfs"]
+   solution_tags: ["binary search", "dfs", "trees", "dp on trees"]
    on_judge: false
