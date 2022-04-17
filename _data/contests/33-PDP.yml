@@ -75,6 +75,7 @@ candystripe:
    testcases_url: ""
    codes_in_git: false
    solution_tags: []
+   on_judge: false
 
 roomalloc:
    full_name: "ROOMALLOC"
@@ -84,6 +85,7 @@ roomalloc:
    testcases_url: ""
    codes_in_git: false
    solution_tags: []
+   on_judge: false
    
 candystripe2:
    full_name: "CANDYSTRIPE2"
@@ -93,6 +95,7 @@ candystripe2:
    testcases_url: ""
    codes_in_git: false
    solution_tags: []
+   on_judge: false
 
 twingift2:
    full_name: "TWINGIFT2"
@@ -102,3 +105,4 @@ twingift2:
    testcases_url: ""
    codes_in_git: false
    solution_tags: []
+   on_judge: false

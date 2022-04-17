@@ -9,6 +9,7 @@
 {% if problem.testcases_url == '' %} testcases {% else %}[testcases]({{ problem.testcases_url }}) {% endif %}
 {% if problem.solution == true %}\| [λύση](/{{ contest_url }}/{{ problem.stage }}-{{ url_codename }}-solution){% else %}{% unless problem.stage contains "camp_" %}\| λύση{% endunless %}{% endif %} \|
 {% if problem.codes_in_git == true %}[κώδικες]({{ git_code_location | append: codename }}) {% else %} κώδικες {% endif %}
+{% if problem.on_judge != false %}\| [<img height='12.5px' src='/assets/imgs/baseline_gavel_black_36dp.png' alt='Υποβολή λύσης'/>]({{ judge_location | append: "&codename=" | append: codename }}){% endif %}
 {% if include.include_tags == true %}
   <i>Tags: {{ problem.solution_tags | join: ", " }}</i>
 {% endif %}
