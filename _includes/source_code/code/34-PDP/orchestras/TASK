@@ -1,0 +1,34 @@
+TASK(
+   name = "orchestras",
+   test_count = 13,
+   files_dir = "testdata/34-PDP/orchestras/",
+   input_file = "orchestras.in",
+   output_file = "orchestras.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "orchestras_sort",
+         source = "orchestras_sort.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "orchestras_k2",
+         source = "orchestras_k2.cc",
+         passes_all_except_for = [3, 5, 7, 8, 12, 13],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "orchestras_count_sort",
+         source = "orchestras_count_sort.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "orchestras_brute_force",
+         source = "orchestras_brute_force.cc",
+         passes_up_to = 6,
+         lang = "c++",
+      ),
+   ]
+)
