@@ -2,8 +2,7 @@
 
 using namespace std;
 
-const size_t MAXN = 2000000;
-const size_t MAXK = 1000000;
+const size_t MAXN = 2000001;
 
 long N, K;
 long sums[MAXN];
@@ -22,14 +21,14 @@ int main () {
 
 	long maxSum = 0;
 	long maxSum2 = 0;
-	// Ελέγχουμε για κάθε υποψήφια θέση της αρχής της πρώτης λέξης
+	// Ελέγχουμε για κάθε υποψήφια θέση της αρχής της πρώτης λέξης.
 	for (int s1 = N - 2 * K + 1; s1 >= 1; s1--) {
-		// Υπολογίζουμε των Κ-αθροισμάτων που ξεκινάνε από το s1 και το s1+K αντίστοιχα
+		// Υπολογίζουμε των Κ-αθροισμάτων που ξεκινάνε από το s1 και το s1+K αντίστοιχα.
 		long sum1 = sums[s1 + K - 1] - sums[s1 - 1];
 		long sum2 = sums[s1 + 2 * K - 1] - sums[s1 + K - 1];
-		// Ανανεώνουμε το καλύτερο άθροισμα maxSum2
+		// Ανανεώνουμε το καλύτερο άθροισμα maxSum2.
 		if (sum2 > maxSum2) { maxSum2 = sum2; }
-		// Ανανεώνουμε το καλύτερο συνολικό άθροισμα
+		// Ανανεώνουμε το καλύτερο συνολικό άθροισμα.
 		if (sum1 + maxSum2 > maxSum) { maxSum = sum1 + maxSum2; }
 	}
 	printf("%ld\n", maxSum);
