@@ -1,10 +1,10 @@
 TASK(
    name = "scrabble1d",
-   test_count = 14,
+   test_count = 31,
    files_dir = "testdata/28-PDP/scrabble1d/",
    input_file = "scrabble1d.in",
    output_file = "scrabble1d.out",
-   time_limit = 1,
+   time_limit = 2,
    solutions = [
 	  SOLUTION(
          name = "scrabble1d_n2k_cpp",
@@ -18,7 +18,7 @@ TASK(
 	  SOLUTION(
          name = "scrabble1d_n2_cpp",
 		 source = "scrabble1d_n2.cpp",
-		 passes_up_to = 22,
+		 passes_up_to = 21,
 		 lang = "c++",
 		 author = PERSON(
 		    name = "GeroVeni",
