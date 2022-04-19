@@ -9,6 +9,8 @@
 {% assign contest_url = post.url | replace: "/", "" | replace: "index", "" %}
 {% assign contest = site.data.contests[contest_url] %}
 {% assign git_code_location = "https://github.com/pdp-archive/pdp-archive.github.io/tree/master/_includes/source_code/code/" | append: contest_url | append: "/" %}
+{% assign contest_year = contest_url | slice: 0,2 %}
+{% assign judge_location = "https://pdp-archive.com/pdp-judge/submit.php?year=" | append: contest_year %}
 
 {% for problem_it in contest %}
 <tr><td>
