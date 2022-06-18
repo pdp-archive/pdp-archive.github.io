@@ -32,33 +32,30 @@ orchestras:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1XbUR8Wpl1PK25IaJ1F2UofKWaqbO6p8E/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1ywbTPMMxVb8zQx85whRv39cPqYmGoivf/view"
    solution: true
    codes_in_git: true
    points: 30
    solution_tags: ["sort", "greedy", "counting sort"]
-   on_judge: false
 
 marbles:
    full_name: "Βώλοι στη σειρά"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1XbUR8Wpl1PK25IaJ1F2UofKWaqbO6p8E/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1dr4FWFUjSoKJPp4KbnsnnsFuH6e6PG85/view"
    solution: false
    codes_in_git: false
    points: 35
    solution_tags: ["bfs", "bit operations"]
-   on_judge: false
 
 filiki:
    full_name: "Φιλική Εταιρεία"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1XbUR8Wpl1PK25IaJ1F2UofKWaqbO6p8E/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1Hm5AyCuYec8cfOnsPpclDM2DheF9_GkB/view"
    solution: false
    codes_in_git: false
    points: 35
    solution_tags: ["binary search", "dfs", "trees", "dp on trees"]
-   on_judge: false
