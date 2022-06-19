@@ -71,7 +71,7 @@ max3sum:
    full_name: "Μέγιστο άθροισμα τριών"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1NMre4brFFvNnTix64Af2QeGe3WuCYp37"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1nxUYqVW0CEmopkm8sGtZLY5s0O3IvECT/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["prefix max", "greedy", "set"]
@@ -80,7 +80,7 @@ parallel:
    full_name: "Παραλληλόγραμμα"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1K-Kql2QEvBpYT9_giQkfmbhq35I11tGx"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1hIEJYxT7uNKXg1yce28zF2wNctk5kJoM/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["dp"]
@@ -89,7 +89,7 @@ vacation:
    full_name: "Διακοπές στη γραφούπολη"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1riH3oy996AatIjlnU-5SE176ZGuNm5A5"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1IL4xQlhDoio4_D1oaUOI8QLV4dm3BAFr/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["dp", "dijkstra", "shortest path"]
@@ -98,7 +98,7 @@ rootit:
    full_name: "Αλλαγές ρίζας"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1fVtpgoacyfrmuKGhv1EElUM22Wt5zYpl"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1FZGlAMRerXGNotVBIf0wfscfkipyKEHv/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["lca", "level ancestor", "path sum queries on tree", "dfs", "trees"]
@@ -107,7 +107,7 @@ treecity:
    full_name: "Συνάντηση στην δενδρούπολη"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1CWWFrS_gjdDy9LBN4IUTTQXPLYZM2He8"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1SUYVJ_3c10enO0GenSIy1Yd5mh-V-BsC/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["dfs", "trees"]
@@ -116,7 +116,7 @@ mulsum:
    full_name: "Μέγιστο πολλαπλάσιο"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1ZPoSZVv6coGheKW3u4392nM5jY-OmHfj"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1022VU1guY9Ex7VgQuhfDwZhClB8qBHEz/view?usp=sharing"
    codes_in_git: true
    solution_tags: ["prefix sum", "greedy", "counting sort", "hash table", "map"]
