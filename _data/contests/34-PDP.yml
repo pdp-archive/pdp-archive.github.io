@@ -6,6 +6,7 @@ voting:
    testcases_url: "https://drive.google.com/file/d/1HON_M2NIxtiPaordNAyPdZeIvf_L3ywb/view"
    solution: true
    codes_in_git: true
+   solution_tags: ["ad hoc", "greedy", "hash table", "map"]
 
 crazyhotel:
    full_name: "Ο ξενοδόχος τρελλάθηκε"

@@ -65,6 +65,7 @@ shortpowtwo:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    points: 35
+   solution_tags: ["shortest paths", "dijkstra", "bitwise", "set", "priority queue", "big numbers", "segment tree", "lazy propagation", "binary numbers", "flip", "smaller", "hash"]
 
 max3sum:
    full_name: "Μέγιστο άθροισμα τριών"
