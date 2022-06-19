@@ -93,7 +93,7 @@ escape:
    full_name: "Μέγιστος διαφυγών φωτισμός"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1a9nxVnLVdiIklgMmNvpPkDvUQ60mw7YH"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1BGhRNS5uj7LxIqXkgu1HyZEMgkCZMTVH"
    codes_in_git: false
    solution_tags: ["max flow"]
