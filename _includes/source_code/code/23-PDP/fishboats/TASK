@@ -16,5 +16,35 @@ TASK(
             school = "4ο ΓΕΛ Χαλανδρίου",
          ),
       ),
+      SOLUTION(
+         name = "fishboats_brute_force",
+         source = "fishboats_brute_force.cc",
+         passes_up_to = 20,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fishboats_dp",
+         source = "fishboats_dp.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fishboats_dp_mem",
+         source = "fishboats_dp_mem.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fishboats_greedy_1",
+         source = "fishboats_greedy_1.cc",
+         passes_all_except_for = [2, 6, 7, 19, 22, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fishboats_greedy_2",
+         source = "fishboats_greedy_2.cc",
+         passes_all_except_for = [19, 22, 26, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+         lang = "c++",
+      ),
    ]
 )
