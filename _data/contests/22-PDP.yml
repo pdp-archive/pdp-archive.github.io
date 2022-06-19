@@ -60,6 +60,7 @@ getout:
    solution: true
    codes_in_git: true
    points: 40
+   solution_tags: ["bfs", "shortest path", "complete search"]
 
 citycirc:
    full_name: "Κύκλος πόλης"
@@ -68,7 +69,7 @@ citycirc:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/19xyMMRNDE2voZc_28cqBqQVKCAmcWTz9"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["greedy", "two pointers", "prefix sums", "cycle"]
 
 sumofpow:
    full_name: "Άθροισμα δυνάμεων"
@@ -77,7 +78,7 @@ sumofpow:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1rlCSMJDlWpQU9N6dWr2mnvpbzLvbFQ2g"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["math", "precompute", "ad hoc"]
 
 flowers:
    full_name: "Κατεστραμμένα λουλούδια"
@@ -86,7 +87,7 @@ flowers:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1MKLIyr1-YwlF4nB9GHzePekhsXboqq9R"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["greedy", "sorting"]
 
 escape:
    full_name: "Μέγιστος διαφυγών φωτισμός"
@@ -95,7 +96,7 @@ escape:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1BGhRNS5uj7LxIqXkgu1HyZEMgkCZMTVH"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["max flow"]
 
 cocktails:
    full_name: "Αφού σε χαλάει..."
@@ -104,7 +105,7 @@ cocktails:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1P34yweXHodupj_YabgTSTMLdoMEpOj6g"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["greedy", "math", "graphs"]
 
 amplifiers:
    full_name: "Ενισχυτές"
@@ -113,7 +114,7 @@ amplifiers:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1EC7Mg2fqrWzRSEI1XHlUylw3-cN_G3cW"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["greedy", "set", "priority queue"]
 
 rdigits:
    full_name: "Διαγραφή ψηφίων"
@@ -122,4 +123,4 @@ rdigits:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1Bp-6ax91sJrqdNuIZkT8XZRg1XC_7ZrD"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["greedy", "ad hoc", "set", "hash table"]

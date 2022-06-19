@@ -74,7 +74,7 @@ metoxes2:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1qwFvn8664hJ30y2eFR9JmXKOE4-k_oD_"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["greedy"]
 
 sumofcubes:
    full_name: "Άθροισμα Κύβων"
@@ -83,7 +83,7 @@ sumofcubes:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1OQQSsnJQyTMcG-Toc-upGGJqWQr4fcLV"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["math", "precompute", "number theory", "hash table", "set", "map"]
 
 critical:
    full_name: "Σημαντικοί Δρόμοι"
@@ -92,7 +92,7 @@ critical:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1V1FJOFen1kLbwEgNYRi2g7eb1SxI_FzY"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["shortest paths", "dijkstra", "critical edges"]
    
 chef:
    full_name: "Επιλογή chef"
@@ -101,7 +101,7 @@ chef:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1tNdlluz3cJq5rf-WwUcHPeykJwiEiGzp"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["sorting", "binary search", "greedy", "simulation", "intervals", "set", "priority queue"]
 
 bicycle:
    full_name: "Ποδηλάτες"
@@ -110,7 +110,7 @@ bicycle:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1FTgE01C55Y55eEx6tDgs2dobEJXRM2R9"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["bst", "queries", "kth", "sum queries"]
 
 bookeaters:
    full_name: "Βιβλιοφάγοι"
@@ -119,4 +119,4 @@ bookeaters:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1bfkUVMdpuPxUe-Kjw7_B-NjnIstvfh8z"
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["dp"]

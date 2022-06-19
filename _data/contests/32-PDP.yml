@@ -74,7 +74,7 @@ countways:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1reGYb9r5DCoelpzmVZHzXZpQAkUV4NzP"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dp", "counting", "mod"]
 
 treescore:
    full_name: "Αξιολόγηση προσόντων"
@@ -83,7 +83,7 @@ treescore:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1b3gwqSu9jknvq1VaRgcTJmp4jPwqq0KK"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["tree", "subtree queries", "euler tour decomposition", "sqrt decomposition", "Mo's algorithm"]
    
 goodlong:
    full_name: "Τα παιδιά του παγωτατζή"
@@ -92,7 +92,7 @@ goodlong:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1ThplouMFLo80Evu2Xvs_cbP9aPy7rFri"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["two pointers", "binary search", "greedy", "set"]
 
 shortcuts:
    full_name: "Να προλάβουμε το πάρτυ!"
@@ -101,4 +101,4 @@ shortcuts:
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/15PZbbaKg6WnK4sNzqo1_dHU0zccgbsnR"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["shortest paths", "dp", "dijkstra", "binary search"]
