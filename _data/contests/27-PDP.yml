@@ -68,7 +68,7 @@ sumx:
    full_name: "Άθροισμα ζευγών"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1M7qaeoGkCFJAHU_VU9vga9_bFn8OsoOj"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/14HvFdxpXg0bIb7bcKrwCZroyh8fTNJuR"
    codes_in_git: true
    solution_tags: ["hash table", "set", "two pointers", "sorting"]
@@ -77,7 +77,7 @@ elev2:
    full_name: "Ασανσέρ"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1mEHsMjuAh1dKTNEbRaGF2L4yGqr3a7ip"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1if7Ns14T7TBgDDpo-lTDkkNsmwiAwNxG"
    codes_in_git: true
    solution_tags: ["greedy", "sorting", "set", "two pointers"]
@@ -86,7 +86,7 @@ happy:
    full_name: "Χαρούμενοι αριθμοί"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1HgtgB956Ph57bQzLOtlFh5it09D5kp92"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1Ws9E98OMccsQ_ck5nw36ABA8rs715pRp"
    codes_in_git: true
    solution_tags: ["number theory", "precompute", "number systems", "decimal numbers", "precompute", "buckets", "hash table", "set"]
@@ -95,7 +95,7 @@ maxzero:
    full_name: "Μηδενικό άθροισμα"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1qDXmuhc_LuNJ9i8cE7eV8Jk2tAE5oQeA"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/13Yd3X2IzfBkkPmyH_9fJpaQG1YArWO6-"
    codes_in_git: true
    solution_tags: ["hash table", "map", "sorting", "prefix sums"]
@@ -104,7 +104,7 @@ airports:
    full_name: "Αεροδρόμια και τρένα"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1x_irfkuIx6dOHcbfi5yqi1Yi8YnRVXpZ"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1bs7dq2NfkO0CX4w4J0dam_EqVetHNYt-"
    codes_in_git: true
    solution_tags: ["graphs", "minimum spanning tree", "kruskal", "prim", "union-find"]
@@ -113,7 +113,7 @@ metoxes:
    full_name: "Μετοχές και K χτυπήματα"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1vcIocDOXJUG_UI5GQUEXT6wT3vDaU5Vp"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1x6n1TYqjJli8MpCHV-UuS8GJ6OXXBEy8"
    codes_in_git: true
    solution_tags: ["dp", "memoisation"]
