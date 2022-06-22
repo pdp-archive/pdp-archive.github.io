@@ -71,7 +71,7 @@ fishtank:
    full_name: "Ενυδρείο"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/10WAzqKke0STVvP_7myxMZ8QLh5EexqV3"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/15_Sd2SgXHNVEvG77yFPBIL55p_s59acH"
    codes_in_git: true
    solution_tags: ["greedy", "two pointers", "sorting"]
@@ -80,7 +80,7 @@ golfo:
    full_name: "Ο Τάσος και η Γκόλφω"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1EWMBBP61hPTidBeb7eyFLKdcQhLM9afh"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1a5Q1wqTpytxtVKEzUzFXOyV4Crzp55Xz"
    codes_in_git: true
    solution_tags: ["shortest path", "bfs", "dijkstra", "graphs"]
@@ -89,7 +89,7 @@ kdiff:
    full_name: "Βρες τη διαφορά"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1hnRyOfzkBb0_wT_vMa0dkrx8ZclrVLqA"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1gMZllNK0lAKz48LU5kMTij58dOMmOGjb"
    codes_in_git: true
    solution_tags: ["binary search", "set", "sorting", "two pointers"]
@@ -98,7 +98,7 @@ gymnast:
    full_name: "Γυμναστής"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1INvB4B3e6eZ_3wPgl0hsfz4-NMltthdy"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1fTFXcA0IZS4GfHnY-LjXAl8As9II9WjB"
    codes_in_git: true
    solution_tags: ["dp", "sorting"]
@@ -107,7 +107,7 @@ network:
    full_name: "Τηλεφωνικό δίκτυο"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1YY8Orw5ENvbsyaHB3NcmlNGGFIwQFcz4"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1nHc77-aXF4u4D9kDb-0k9rPKJsX4xfUz"
    codes_in_git: true
    solution_tags: ["articulation points", "dfs", "graphs"]
@@ -116,7 +116,7 @@ carmeet:
    full_name: "Συνάντηση αυτοκινήτων"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1fr9xWoQE6Lpv6FTQhQ0Bm8qR576anu_U"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1ceq0mOP-wrA-Vo3cn3EzGe0zTJSwjN0Z"
    codes_in_git: true
    solution_tags: ["greedy", "sliding window", "cyclic array"]
