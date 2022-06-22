@@ -1,0 +1,67 @@
+TASK(
+   name = "pulsars",
+   test_count = 10,
+   files_dir = "testdata/24-PDP/pulsars/",
+   input_file = "pulsars.in",
+   output_file = "pulsars.out",
+   time_limit = 5,
+   solutions = [
+      SOLUTION(
+         name = "pulsars_official",
+         source = "pulsars_official.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "ΚΑΝΕΛΗΣ ΚΩΝΣΤΑΝΤΙΝΟΣ",
+            school = "2ο ΓΕΛ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+         ),
+      ),
+      SOLUTION(
+         name = "pulsars_official_c",
+         source = "pulsars_official.c",
+         passes_all,
+         lang = "c",
+         author = PERSON(
+            name = "ΣΑΚΚΑΣ ΓΕΩΡΓΙΟΣ",
+            school = "4ο ΓΕΛ Καλαμάτας",
+         ),
+      ),
+      SOLUTION(
+         name = "pulsars_official_pas",
+         source = "pulsars_official.pas",
+         passes_only = [1, 2, 3],
+         lang = "pas",
+         author = PERSON(
+            name = "ΜΑΡΑΓΚΟΥ ΣΟΦΙΑ",
+            school = "ΓΕΛ ΣΥΡΟΥ",
+         ),
+      ),
+      SOLUTION(
+         name = "pulsars_graham_scan",
+         source = "pulsars_graham_scan.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
+      SOLUTION(
+         name = "pulsars_monotone_chain",
+         source = "pulsars_monotone_chain.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
+      SOLUTION(
+         name = "pulsars_gift_wrapping",
+         source = "pulsars_gift_wrapping.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
+   ]
+)

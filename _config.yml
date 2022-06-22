@@ -8,8 +8,6 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-highlighter: rouge
-
 collections_dir: contests
 
 collections:
