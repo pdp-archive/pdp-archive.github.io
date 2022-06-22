@@ -71,7 +71,7 @@ candystripe:
    full_name: "CANDYSTRIPE"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/12I8fSybzmVgmxDNJOF-o2SzO_-uVz7Kl"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    codes_in_git: false
    solution_tags: ["prefix sums", "greedy", "two pointers", "balanced parentheses", "strings"]
@@ -81,7 +81,7 @@ roomalloc:
    full_name: "ROOMALLOC"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1sz17f9tD9bmvbxvMwQvv4k1aVy6NTRjs"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    codes_in_git: false
    solution_tags: ["counting", "combinatorics", "dp"]
@@ -91,7 +91,7 @@ candystripe2:
    full_name: "CANDYSTRIPE2"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1wkCM8Ipt0vgHXA3S618i-ZfOdcsmQqi0"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    codes_in_git: false
    solution_tags: ["greedy", "intervals", "sorting", "line sweep"]
@@ -101,7 +101,7 @@ twingift2:
    full_name: "TWINGIFT2"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1kvsOUn9CI782404HVLnejbGerKnu0ok6"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    codes_in_git: false
    solution_tags: ["number systems", "ternary numbers", "number theory", "greedy"]
