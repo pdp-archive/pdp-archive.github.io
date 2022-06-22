@@ -29,7 +29,7 @@ TASK(
       SOLUTION(
          name = "pulsars_official_pas",
          source = "pulsars_official.pas",
-         passes_all,
+         passes_only = [1, 2, 3],
          lang = "pas",
          author = PERSON(
             name = "ΜΑΡΑΓΚΟΥ ΣΟΦΙΑ",

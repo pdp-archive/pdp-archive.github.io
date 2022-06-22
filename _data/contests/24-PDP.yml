@@ -28,7 +28,7 @@ pulsars:
    testcases_url: "https://drive.google.com/open?id=1hwJ1rXa-Nv9P4e7CvKeoFVUeVok8MaWu"
    solution: true
    codes_in_git: true
-   solution_tags: ["convex hull"]
+   solution_tags: ["convex hull", "geometry", "math"]
 
 loutraki:
    full_name: "Λουτράκι"

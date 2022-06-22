@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <cstdio>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -8,22 +8,24 @@ typedef long long ll;
 
 const int MAXN = 1e6 + 5;
 
-struct Point;
-
-int N;
-vector<Point> points(MAXN);
-vector<Point> hull;
-
 struct Point
 {
   ll x, y;
   int index;
 
+  // Ορίζουμε τον τελεστή < ώστε να μπορούμε να το χρησιμοποιήσουμε με τo struct
+  // π.χ. pointA < pointB. Πρώτα συγκρίνουμε τις τετμημένες (x) και μετά τις
+  // τεταγμένες (y). Επίσης, ο τελεστής αυτό με τη συνάρτηση sort, αν δεν
+  // παρέχουμε custom συνάρτηση ταξινόμησης.
   bool operator<(const Point &other)
   {
     return x < other.x || (!(other.x < x) && y < other.y);
   }
 };
+
+int N;
+vector<Point> points(MAXN);
+vector<Point> hull;
 
 // Υπολογίζει την συντεταγμένη z του εξωτερικού γινομένου (b-a) x (c-a).
 // Θετικό σημαίνει ότι το c είναι αριστερά του διανύσματος ab.
@@ -31,18 +33,6 @@ ll ccw(Point a, Point b, Point c)
 {
   return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
-
-// Κλάση για το σορτάρισμα των σημείων ώς προς το αρχικό σημείο startPoint.
-struct AngleSorter
-{
-  Point startPoint;
-  AngleSorter(Point startPoint) : startPoint(startPoint) {}
-
-  bool operator()(Point a, Point b)
-  {
-    return ccw(startPoint, a, b) > 0;
-  }
-};
 
 int main()
 {
@@ -73,7 +63,8 @@ int main()
   points[startPoint] = tmp;
 
   // Σορτάρουμε ως προς τη γωνία με το αρχικό σημείο.
-  sort(points.begin() + 1, points.end(), AngleSorter(points[0]));
+  sort(points.begin() + 1, points.end(), [](const Point &a, const Point &b)
+       { return ccw(points[0], a, b) > 0; });
 
   // Αφαιρούμε σημεία από τη στοίβα hull έως ότου το καινούργιο σημείο να
   // δημιουργεί αριστερή στροφή.

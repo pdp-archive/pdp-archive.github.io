@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <cstdio>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -8,21 +8,23 @@ typedef long long ll;
 
 const int MAXN = 1e6 + 5;
 
-struct Point;
-
-int N;
-vector<Point> points(MAXN);
-vector<bool> inHull(MAXN);
-
 struct Point
 {
   ll x, y;
 
+  // Ορίζουμε τον τελεστή < ώστε να μπορούμε να το χρησιμοποιήσουμε με τo struct
+  // π.χ. pointA < pointB. Πρώτα συγκρίνουμε τις τετμημένες (x) και μετά τις
+  // τεταγμένες (y). Επίσης, ο τελεστής αυτό με τη συνάρτηση sort, αν δεν
+  // παρέχουμε custom συνάρτηση ταξινόμησης.
   bool operator<(const Point &other)
   {
     return x < other.x || (!(other.x < x) && y < other.y);
   }
 };
+
+int N;
+vector<Point> points(MAXN);
+vector<bool> inHull(MAXN);
 
 // Υπολογίζει την συντεταγμένη z του εξωτερικού γινομένου (b-a) x (c-a).
 // Θετικό σημαίνει ότι το c είναι αριστερά του διανύσματος ab.
@@ -45,9 +47,7 @@ int main()
     inHull[i] = false;
     fscanf(fin, "%lld %lld", &points[i].x, &points[i].y);
     if (points[i] < points[startPoint])
-    {
       startPoint = i;
-    }
   }
   fclose(fin);
   points.resize(N);
