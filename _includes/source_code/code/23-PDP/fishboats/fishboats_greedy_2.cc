@@ -28,15 +28,17 @@ void find_best() {
          new_prev = left[j];
          new_cur_fish += (M - new_cur_dist);
          cur_best = std::max(cur_best, new_cur_fish);
-      }
-      
-      // Δοκιμάζουμε να πάμε ξανά προς τα δεξιά.
-      new_prev = -left.back();
-      for (int j = i+1; j < right.size(); ++j) {
-         new_cur_dist += right[j] - new_prev;
-         new_prev = right[j];
-         new_cur_fish += (M - new_cur_dist);
-         cur_best = std::max(cur_best, new_cur_fish);
+         
+         // Δοκιμάζουμε να πάμε ξανά προς τα δεξιά.
+         ll new2_cur_dist = new_cur_dist,
+            new2_cur_fish = new_cur_fish,
+            new2_prev = -left[j];
+         for (int k = i+1; k < right.size(); ++k) {
+            new2_cur_dist += right[k] - new2_prev;
+            new2_prev = right[k];
+            new2_cur_fish += (M - new2_cur_dist);
+            cur_best = std::max(cur_best, new2_cur_fish);
+         }
       }
    }
 }
