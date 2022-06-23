@@ -47,22 +47,22 @@ codename: fishboats
 Επειδή δεν γνωρίζουμε εξ'αρχής πόσες ψαρόβαρκες περιλαμβάνονται στην βέλτιστη λύση, θα δοκιμάσουμε όλα τα δυνατά πλήθη $$\mathit{len}$$, δηλαδή $$\mathit{len} = 0, 1, 2, \ldots, n$$. Γνωρίζοντας αυτή την πληροφορία, μπορούμε να υπολογίσουμε τον μέγιστο αριθμό ψαριών $$dp[len][i][k][is\_right]$$ για να πάρουμε τις $$i$$ αριστερές ψαρόβαρκες και τις $$j$$ δεξιές ψαρόβαρκες, όταν είμαστε στην $$i$$ ($$is\_right = 0$$), ως εξής:
 
 $$
-dp[len][i][j][0] = M + \max \begin{cases}
-dp[len][i-1][j][0] - (len + 1 - i - j) \cdot (\mathit{left}[i] - \mathit{left}[i-1]) \\
-dp[len][i-1][j][1] - (len + 1 - i - j) \cdot (\mathit{left}[i] + \mathit{right}[j]))
+dp[\mathit{len}][i][j][0] = M + \max \begin{cases}
+dp[\mathit{len}][i-1][j][0] - (\mathit{len} + 1 - i - j) \cdot (\mathit{left}[i] - \mathit{left}[i-1]) \\
+dp[\mathit{len}][i-1][j][1] - (\mathit{len} + 1 - i - j) \cdot (\mathit{left}[i] + \mathit{right}[j]))
 \end{cases}
 $$
 
 και όταν είμαστε στην $$j$$, ως εξής:
 
 $$
-dp[len][i][j][1] = M + \max \begin{cases}
-dp[len][i][j-1][1] - (len + 1 - i - j) \cdot (right[j] - right[j-1]) \\
-dp[len][i][j-1][0] - (len + 1 - i - j) \cdot (left[i] + right[j]))
+dp[\mathit{len}][i][j][1] = M + \max \begin{cases}
+dp[\mathit{len}][i][j-1][1] - (\mathit{len} + 1 - i - j) \cdot (\mathit{right}[j] - \mathit{right}[j-1]) \\
+dp[\mathit{len}][i][j-1][0] - (\mathit{len} + 1 - i - j) \cdot (\mathit{left}[i] + \mathit{right}[j]))
 \end{cases}
 $$
 
-Και η απάντηση είναι η μέγιστη τιμή από τα $$\max( dp[len][i][j][0], dp[len][i][j][1])$$ με $$i$$ και $$j$$ να ικανοποιούν $$i + j = len$$. 
+Και η απάντηση είναι η μέγιστη τιμή από τα $$\max( dp[\mathit{len}][i][j][0], dp[\mathit{len}][i][j][1])$$ με $$i$$ και $$j$$ να ικανοποιούν $$i + j = len$$. 
 
 Επειδή οι λύσεις για το $$len$$ είναι ανεξάρτητες, μπορούμε να χρησιμοποιήσουμε $$N$$ φορές τον ίδιο πίνακα $$dp$$. Ο κυρίως κώδικας δίνεται παρακάτω (και ολόκληρος [εδώ]({% include link_to_source.md solution_name='fishboats_dp.cc' %})):
 
