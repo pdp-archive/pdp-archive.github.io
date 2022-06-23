@@ -16,7 +16,7 @@ twosqr:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1KmtP6bDv8QcMebHR56pSgpbjMjEG06-j"
    solution: true
-   solution_author: "Γιώργος Βιδαλάκης"   
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    solution_tags: ["binary search", "greedy"]
 
@@ -27,7 +27,7 @@ share:
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1Fz07w2bENBnoO7o-i7u_mJak8JQSUtwa"
    solution: true
-   solution_author: "Γιώργος Βιδαλάκης"   
+   solution_author: "Γιώργος Βιδαλάκης"
    codes_in_git: true
    solution_tags: ["greedy", "cumulative sums", "binary search", "two pointers"]
 
@@ -60,9 +60,10 @@ supermarket:
    statement_pdf_url: "https://drive.google.com/open?id=1dEo06eguPY1_I5k3fcoe28Yst7U7qXMw"
    statement_md: true
    testcases_url: "https://drive.google.com/open?id=1hhClM4cfyT_cyBVvgr3iGoHPgXo84hoa"
-   solution: false
+   solution: true
    codes_in_git: true
    points: 40
+   solution_tags: ["dp"]
 
 sumx:
    full_name: "Άθροισμα ζευγών"
