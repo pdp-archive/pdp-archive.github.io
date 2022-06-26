@@ -19,7 +19,7 @@ codename: matrix
 
 {% include code.md solution_name='matrix_brute_force.cc' %}
 
-**Σημείωση:** Την ίδια πολυπλοκότητα έχει και ο αλγόριθμος `strstr` της C (ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md source_name='matrix_strstr.cc' %})) και το `std::string::find` της C++. 
+**Σημείωση:** Την ίδια πολυπλοκότητα έχει και ο αλγόριθμος `strstr` της C (ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='matrix_strstr.cc' %})) και το `std::string::find` της C++. 
 
 ## Λύση με Αλγόριθμο Z
 
@@ -34,7 +34,7 @@ codename: matrix
 
 {% include code.md solution_name='matrix_z_algo.cc' start=25 end=43 %}
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% include link_to_source.md source_name='matrix_z_algo.cc' %}).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% include link_to_source.md solution_name='matrix_z_algo.cc' %}).
 
 ## Λύση με KMP
 
@@ -56,7 +56,7 @@ codename: matrix
 
 {% include code.md solution_name='matrix_kmp.cc' start=35 end=45 %}
 
-Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% include link_to_source.md source_name='matrix_kmp.cc' %}).
+Ολόκληρος ο κώδικας βρίσκεται [εδώ]({% include link_to_source.md solution_name='matrix_kmp.cc' %}).
 
 ## Λύση με Rolling Hash
 
