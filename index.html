@@ -11,6 +11,8 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
   </head>
   <body class="main-content">
     {% include header.html %}
+    {% include announce_everywhere.html %}
+    {% include announce_main.html %}
     {% assign sortedCollections = site.collections %}
     {% for collection in site.collections reversed %} 
 	  {% if collection.label != "posts" %}
