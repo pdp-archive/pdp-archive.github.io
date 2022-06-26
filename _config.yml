@@ -140,4 +140,5 @@ exclude: [
   _includes/source_code/test_parser.out,
   _includes/source_code/tester.sh,
   _includes/source_code/utils,
+  ui_tests/
 ]
