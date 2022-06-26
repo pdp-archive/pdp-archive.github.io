@@ -149,11 +149,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="817.68935"
-     inkscape:cy="236.8497"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="698.35461"
+     inkscape:cy="242.80173"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7643"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
@@ -463,7 +463,7 @@
          y="57.567627"
          style="font-size:10.5833px;baseline-shift:baseline;stroke-width:0.264583"
          id="tspan12176"
-         rotate="0 0 0 0 0 0">X - m<tspan
+         rotate="0 0 0 0 0 0">i - m<tspan
    id="tspan12180"
    rotate="0 0"
    style="font-size:65%;baseline-shift:sub">1</tspan></tspan></text>
@@ -681,7 +681,7 @@
          id="tspan7631"
          x="191.88844"
          y="57.567627"
-         style="font-size:10.5833px;stroke-width:0.264583">N - X - m<tspan
+         style="font-size:10.5833px;stroke-width:0.264583">N - i - m<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan12933">2</tspan></tspan></text>
   </g>
