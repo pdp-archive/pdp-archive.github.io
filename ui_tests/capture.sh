@@ -46,13 +46,13 @@ names=(
 for idx in "${!urls[@]}"; do
   url=${urls[$idx]}
   name=${names[$idx]}
-  chrome --headless --disable-gpu --window-size=1000,600 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --screenshot="${path_to_dir}/${name}.png" "${url}"
+  chrome --headless --disable-gpu --window-size=1000,600 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --screenshot="${path_to_dir}/srcns/${name}.png" "${url}"
 done
 
 # Run for mobile screen.
 for idx in "${!urls[@]}"; do
   url=${urls[$idx]}
   name=${names[$idx]}
-  chrome --headless --disable-gpu --window-size=375,667 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --screenshot="${path_to_dir}/${name}_mobile.png" "${url}"
+  chrome --headless --disable-gpu --window-size=375,667 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 --screenshot="${path_to_dir}/srcns/${name}_mobile.png" "${url}"
 done
 
