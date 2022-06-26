@@ -16,5 +16,32 @@ TASK(
             name = "Αριστοφάνης Ροντογιάννης",
          ),
       ),
+      SOLUTION(
+         name = "supermarket_brute_force",
+         source = "supermarket_brute_force.cc",
+         passes_up_to = 11,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
+      SOLUTION(
+         name = "supermarket_dp",
+         source = "supermarket_dp.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
+      SOLUTION(
+         name = "supermarket_dp_mem",
+         source = "supermarket_dp_mem.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "geroveni",
+         ),
+      ),
    ]
 )
