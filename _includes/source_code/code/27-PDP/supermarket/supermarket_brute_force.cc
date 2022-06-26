@@ -18,7 +18,7 @@ int calculate_total_score(int total_moved) {
 
     if (moved[i]) {
       current_moved++;
-      // Τα αντικείμενα k που μετακινήθηκαν μετά από το i είναι total_moved - current_moved
+      // Τα k αντικείμενα που μετακινήθηκαν μετά από το i είναι total_moved - current_moved
       // άρα N - k = N - (total_moved - current_moved) = N - total_moved + current_moved.
       final_pos = N - total_moved + current_moved;
     } else {
@@ -34,7 +34,7 @@ int calculate_total_score(int total_moved) {
 }
 
 void iterate(int pos, int total_moved) {
-  // 'Οταν θέσουμε το moved για όλα τα αντικείμενα μπορούμε να υπολογίσουμε
+  // Αφού θέσουμε το moved για όλα τα αντικείμενα μπορούμε να υπολογίσουμε
   // την συνολική αξία των δωροεπιταγών.
   if (pos == N + 1) {
     int score = calculate_total_score(total_moved);

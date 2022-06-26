@@ -63,7 +63,7 @@ supermarket:
    solution: true
    codes_in_git: true
    points: 40
-   solution_tags: ["dp"]
+   solution_tags: ["dp", "memoisation"]
 
 sumx:
    full_name: "Άθροισμα ζευγών"

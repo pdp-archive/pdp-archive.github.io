@@ -21,7 +21,7 @@ inline int is_coupon_position(int position)
 
 inline int md(int x)
 {
-   return x % 2;
+   return x & 1;
 }
 
 int main()
