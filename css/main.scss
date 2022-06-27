@@ -54,7 +54,7 @@ body {
 /* Μορφοποίηση για τα announcements. */
 .announcement {
   margin: auto;
-  width: 600px;
+  max-width: 600px;
   background-color: #FFE387;
   padding: 10px;
   border: 2px solid #a48904;
