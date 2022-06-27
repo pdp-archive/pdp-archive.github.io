@@ -5,8 +5,11 @@ layout: default
 <link rel="stylesheet" href="/css/categorised.css">
 <script src="/js/relevant_filter.js"></script>
 
-<div style="margin-top: 40px; margin-bottom: 40px; text-align: center;">
-Codename προβλήματος: <input type="text" list="codenames" id="relevant_filter_text" onkeyup="filterRelevantEntries()" placeholder="Αναζήτηση με βάση codename προβλήματος (e.g. bankacc) .." title="Problem codename" size="55">
+<center><h1>Σχετικά προβλήματα</h1></center>
+
+<div style="margin-bottom: 40px; text-align: center;">
+<label for="relevant_filter_text">Αναζήτηση με βάση codename προβλήματος:</label><br>
+<input type="text" list="codenames" id="relevant_filter_text" onkeyup="filterRelevantEntries()" placeholder="π.χ. bankacc" title="codename προβλήματος" size="35">
   <datalist id="codenames">
 {% assign sortedCollections = site.collections %}
  {% for collection in site.collections reversed %} 
