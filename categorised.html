@@ -5,8 +5,11 @@ layout: default
 <link rel="stylesheet" href="/css/categorised.css">
 <script src="/js/categorised_filter.js"></script>
 
-<div style="margin-top: 40px; margin-bottom: 40px; text-align: center;">
-Tag λύσης: <input type="text" id="categorised_filter_text" onkeyup="filterCategorisedEntries()" placeholder="Αναζήτηση με βάση tag λύσης (π.χ. binary search, map, kmp) .." title="Solution tag" size="50">
+<center><h1>Κατηγοριοποιημένες λύσεις</h1></center>
+
+<div style="margin-bottom: 40px; text-align: center;">
+<label for="categorised_filter_text">Αναζήτηση με βάση tag λύσης:</label><br>
+<input type="text" id="categorised_filter_text" onkeyup="filterCategorisedEntries()" placeholder="π.χ. binary search, map, kmp .." title="Tag λύσης" size="35">
 </div>
 
 {% include tagged_problems.html %}
