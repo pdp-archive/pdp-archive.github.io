@@ -1,0 +1,10 @@
+coupon:
+   full_name: "Ηλεκτρονικές κάρτες αγορών"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1hY5zI48rX-f7GHoKeyXGoiYBdy2SE_Bh/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
