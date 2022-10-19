@@ -50,7 +50,10 @@ collections:
   34-PDP:
     output: true
     permalink: /:collection/:name
-    
+  35-PDP:
+    output: true
+    permalink: /:collection/:name
+
 defaults:
   - scope:
       path: ""
@@ -130,6 +133,12 @@ defaults:
     values:
       contest: "34ος ΠΔΠ"
       contest_url: "34-PDP"
+  - scope:
+      path: ""
+      type: "35-PDP"
+    values:
+      contest: "35ος ΠΔΠ"
+      contest_url: "35-PDP"
 
 exclude: [
   contributing.md,
