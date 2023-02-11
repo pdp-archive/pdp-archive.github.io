@@ -9,13 +9,13 @@ double A;
 ull B;
 FILE *fo;
 
-ull TotalMoney(ull first, bool printIt) {
+ull TotalMoney(ull X, bool printIt) {
   ull s=0;
   for(long i=1; i<=N; ++i) {
-    if (first<10) first=0;
-    s+=first*C[i];
-    if(printIt) fprintf(fo, "%llu\n", first);
-    first = (long)(A*first);    
+    if (X<10) X=0;
+    s+=X*C[i];
+    if(printIt) fprintf(fo, "%llu\n", X);
+    X = (long)(A*X);    
   }
   return s;
 }
@@ -28,12 +28,12 @@ int main() {
    }
    fclose(fi);
 
-   long val;
-   for(val=B/C[1]; TotalMoney(val,false)>B; --val);
-   
+   long X;
+   for(X=B/C[1]+10; TotalMoney(X,false)>B; --X);
+     
    fo = fopen("coupon.out", "w");
-   fprintf(fo, "%llu\n", TotalMoney(val,false));
-   TotalMoney(val,true);
+   fprintf(fo, "%llu\n", TotalMoney(X,false));
+   TotalMoney(X,true);
    fclose(fo);   
    return 0;
 }
