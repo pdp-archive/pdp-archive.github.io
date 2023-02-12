@@ -69,7 +69,7 @@ bash tester.sh
 
 ### Προσθέστε SOLUTION
 
-Ακολυθήστε τα εξής βήματα:
+Ακολουθήστε τα εξής βήματα:
   1. Βάλτε το αρχείο με την λύση στον φάκελο `_includes/source_code/code/XX-PDP/{codename}/`
   2. Προσθέστε στο αρχείο `TASK` τις λεπτομέρειες της λύσης σας:
      ```
@@ -93,7 +93,7 @@ bash tester.sh
      )
      ```
    3. Βεβαιωθείτε ότι η λύση σας περνάει τα testcases που αναφέρατε, τρέχοντας `bash tester.sh {codename}:{codename λύσης}`.
-   4. Αν αυτή είναι η πρώτη λύση που προσθέτετε, στο αρχείο `_data/XX-PDP.yml`, στο πρόβλημα για το οποίο προσθέτετε κώδικες, αλλάξτε το `codes_in_git: true`.
+   4. Αν αυτή είναι η πρώτη λύση που προσθέτετε, στο αρχείο `_data/contests/XX-PDP.yml`, στο πρόβλημα για το οποίο προσθέτετε κώδικες, αλλάξτε το `codes_in_git: true`.
 
 Δείτε ένα [παράδειγμα commit](https://github.com/pdp-archive/pdp-archive.github.io/commit/787cb9f874abab4b3ba9db1743d41cb5b5a93f53).
 
