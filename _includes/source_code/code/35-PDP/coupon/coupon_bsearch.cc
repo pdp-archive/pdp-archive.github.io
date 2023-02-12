@@ -13,7 +13,7 @@ ull TotalMoney(ull X, bool printIt) {
   ull s=0;
   for(long i=1; i<=N; ++i) {
     if (X<10) X=0;
-    s+=X*C[i];
+    s+=X*C[i]; //the product doesn't fit in type 'long' - that's why we declare X as type 'ull'
     if(printIt) fprintf(fo, "%llu\n", X);
     X = (long)(A*X);    
   }
@@ -21,6 +21,7 @@ ull TotalMoney(ull X, bool printIt) {
 }
 
 int main() {
+   long X;  
    FILE *fi = fopen("coupon.in", "r");
    fscanf(fi, "%ld %lf %llu", &N, &A, &B);
    for (long i = 1; i <= N; ++i) {
@@ -28,7 +29,7 @@ int main() {
    }
    fclose(fi);
 
-   long X, lo=0, mid, hi=B/C[1]+10;
+   long lo=0, mid, hi=B/C[1]+10;
    while (lo<hi) {
      mid = (lo+hi+1)/2;
      if(TotalMoney(mid,false)<=B) lo=mid;

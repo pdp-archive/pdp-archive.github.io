@@ -13,7 +13,7 @@ ull TotalMoney(ull X, bool printIt) {
   ull s=0;
   for(long i=1; i<=N; ++i) {
     if (X<10) X=0;
-    s+=X*C[i];
+    s+=X*C[i]; //the product doesn't fit in type 'long' - that's why we declare X as type 'ull'
     if(printIt) fprintf(fo, "%llu\n", X);
     X = (long)(A*X);    
   }
@@ -21,6 +21,7 @@ ull TotalMoney(ull X, bool printIt) {
 }
 
 int main() {
+   long X;  
    FILE *fi = fopen("coupon.in", "r");
    fscanf(fi, "%ld %lf %llu", &N, &A, &B);
    for (long i = 1; i <= N; ++i) {
@@ -28,7 +29,7 @@ int main() {
    }
    fclose(fi);
 
-   long X;
+   //the following loop does not have a main-body, it only searches for X - that's why it ends with ';'   
    for(X=1; TotalMoney(X,false)<=B; ++X);
    --X;
      
