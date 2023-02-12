@@ -3,8 +3,9 @@ coupon:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1hY5zI48rX-f7GHoKeyXGoiYBdy2SE_Bh/view"
    statement_md: true
-   testcases_url: ""
-   solution: false
-   codes_in_git: false
-   solution_tags: []
+   testcases_url: "https://drive.google.com/file/d/1OABz_L448sFp-5CNuOzJJa2TnbHpwAeu/view"
+   solution: true
+   solution_author: "Βαγγέλης Κηπουρίδης"
+   codes_in_git: true
+   solution_tags: ["ad hoc", "greedy", "linear search", "binary search"]
    on_judge: false

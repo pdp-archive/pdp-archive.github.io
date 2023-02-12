@@ -1,0 +1,37 @@
+TASK(
+   name = "coupon",
+   test_count = 12,
+   files_dir = "testdata/35-PDP/coupon/",
+   input_file = "coupon.in",
+   output_file = "coupon.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "coupon_brute",
+         source = "coupon_brute.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "coupon_brute2",
+         source = "coupon_brute2.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+      SOLUTION(
+         name = "coupon_bsearch",
+         source = "coupon_bsearch.cc",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "kipoujr",
+         ),
+      ),
+   ]
+)
