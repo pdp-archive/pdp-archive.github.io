@@ -8,4 +8,26 @@ coupon:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    solution_tags: ["ad hoc", "greedy", "linear search", "binary search"]
+   on_judge: false   
+
+fairdiv:
+   full_name: "Η σκυταλοδρομία"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1bFqBy-uCKOmkcwIYhK72WyEg7IINay-Q/view"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false   
+
+roadfix:
+   full_name: "Επισκευή δρόμου"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1OoaWL0Oi_d2RM8r64tRWpnK3VJboylPO/view"
+   statement_md: false
+   testcases_url: ""   
+   solution: false
+   codes_in_git: false
+   solution_tags: []
    on_judge: false
