@@ -14,7 +14,7 @@ fairdiv:
    full_name: "Η σκυταλοδρομία"
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/file/d/1bFqBy-uCKOmkcwIYhK72WyEg7IINay-Q/view"
-   statement_md: false
+   statement_md: true
    testcases_url: ""
    solution: false
    codes_in_git: false
