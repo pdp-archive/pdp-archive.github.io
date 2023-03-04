@@ -1,0 +1,58 @@
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+
+const size_t MAXN = 10000;
+const long INF = 0x3f3f3f3f;
+
+long N, M, qX, qY, ans[MAXN+5];
+struct segment{
+  long X, Y, C;
+} seg[MAXN+5];
+
+bool comp(segment A, segment B) {
+  return A.Y < B.Y;
+}
+
+int main() {
+   FILE *fi = fopen("roadfix.in", "r");
+   fscanf(fi, "%ld %ld", &N, &M);
+   for (long i = 1; i <= N; ++i) {
+     fscanf(fi, "%ld %ld %ld", &seg[i].X, &seg[i].Y, &seg[i].C);
+     seg[i].Y += seg[i].X; //convert length to right-end-point
+   }
+
+   sort(seg+1, seg+N+1, comp);
+
+   FILE *fo = fopen("roadfix.out", "w");
+   long sol;
+   for(long i = 1; i <= M; ++i) {
+     fscanf(fi, "%ld %ld", &qX, &qY);
+     qY += qX; //convert length to right-end-point
+     sol = INF;
+
+     for(long i=1; i<=N; ++i) {
+       //Find best j that finishes after (or exactly at) i's start
+       long best = INF;
+       for(long j=1; j<i; ++j) {
+	 if (seg[j].Y >= seg[i].X) {
+	   best = min(best, ans[j]);
+	 }
+       }
+
+       if (best==INF) { //if no previous segment finishes before i's start
+	 if (seg[i].Y <= qX) ans[i] = 0; // [qX,seg[i].Y] is trivially satisfied
+	 else if (seg[i].X <= qX) ans[i] = seg[i].C; //i is enough to satisfy it
+	 else ans[i] = INF; //i is not enough and no-one else can help
+       }
+       else ans[i] = seg[i].C + best; //recursive relation
+	 
+       if (seg[i].Y >= qY) sol = min(sol, ans[i]);
+     }
+     
+     if (sol < INF) fprintf(fo, "%ld\n", sol);
+     else fprintf(fo, "-1\n");
+   }
+   fclose(fi), fclose(fo);
+   return 0;
+}
