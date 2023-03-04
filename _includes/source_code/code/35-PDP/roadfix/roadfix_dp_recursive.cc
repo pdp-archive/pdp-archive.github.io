@@ -16,22 +16,22 @@ bool comp(segment A, segment B) {
   return A.Y < B.Y;
 }
 
-long Ans(long YtIndex, long last) {
+long Ans(long last, long YtIndex) {
   long Yt;
   if (YtIndex!=N+1) Yt = seg[YtIndex].X;
   else Yt = qY;
   
   if (qX >= Yt) return 0; //nothing left to cover
   if (last==0) return INF; //impossible to cover [qX, Yt] without any segments left
-  if (!computed[YtIndex][last]) {
-    computed[YtIndex][last] = 1;
-    if (seg[last].X > Yt) ans[YtIndex][last] = Ans(YtIndex,last-1); //last is irrelevant, ignore it
-    else if (seg[last].Y < Yt) ans[YtIndex][last] = INF; //no-one can cover Yt
+  if (!computed[last][YtIndex]) {
+    computed[last][YtIndex] = 1;
+    if (seg[last].X > Yt) ans[last][YtIndex] = Ans(last-1, YtIndex); //last is irrelevant, ignore it
+    else if (seg[last].Y < Yt) ans[last][YtIndex] = INF; //no-one can cover Yt
     else { //Recursive relation
-      ans[YtIndex][last] = min( seg[last].C + Ans(last, last-1), Ans(YtIndex, last-1) );
+      ans[last][YtIndex] = min( seg[last].C + Ans(last-1, last), Ans(last-1, YtIndex) );
     }
   }
-  return ans[YtIndex][last];
+  return ans[last][YtIndex];
 }
 
 int main() {
@@ -48,7 +48,7 @@ int main() {
    for(long i = 1; i <= M; ++i) {
      fscanf(fi, "%ld %ld", &qX, &qY);
      qY += qX; //convert length to right-end-point
-     if (Ans(N+1,N) < INF) fprintf(fo, "%ld\n", Ans(N+1, N));
+     if (Ans(N,N+1) < INF) fprintf(fo, "%ld\n", Ans(N,N+1));
      else fprintf(fo, "-1\n");
      memset(computed, 0, sizeof(computed));
    }

@@ -34,18 +34,18 @@ int main() {
        if (YtIndex!=N+1) Yt = seg[YtIndex].X;
        else Yt = qY;
        
-       ans[YtIndex][0] = (qX >= Yt) ? 0 : INF;
+       ans[0][YtIndex] = (qX >= Yt) ? 0 : INF;
        for(long last=1; last<=N; ++last) {
-	 if (qX >= Yt) ans[YtIndex][last]=0; //nothing left to cover
-	 if (seg[last].X > Yt) ans[YtIndex][last] = ans[YtIndex][last-1]; //last is irrelevant, ignore it
-	 else if (seg[last].Y < Yt) ans[YtIndex][last] = INF; //no-one can cover Yt
+	 if (qX >= Yt) ans[last][YtIndex]=0; //nothing left to cover
+	 if (seg[last].X > Yt) ans[last][YtIndex] = ans[last-1][YtIndex]; //last is irrelevant, ignore it
+	 else if (seg[last].Y < Yt) ans[last][YtIndex] = INF; //no-one can cover Yt
 	 else { //Recursive relation
-	   ans[YtIndex][last] = min( seg[last].C + ans[last][last-1], ans[YtIndex][last-1] );
+	   ans[last][YtIndex] = min( seg[last].C + ans[last-1][last], ans[last-1][YtIndex] );
 	 }
        }
      }
      
-     if (ans[N+1][N] < INF) fprintf(fo, "%ld\n", ans[N+1][N]);
+     if (ans[N][N+1] < INF) fprintf(fo, "%ld\n", ans[N][N+1]);
      else fprintf(fo, "-1\n");
    }
    fclose(fi), fclose(fo);
