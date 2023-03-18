@@ -32,14 +32,14 @@ long Right(long v) {
   return r[v];
 }
 
-long Minimum(long from, long v=1, long x=1, long y=MAXVAL) {
+long Minimum(long from, long v=1, long x=0, long y=MAXVAL) {
   if(x==from) return minim[v];
   long mid=(x+y)/2;
   if (mid < from) return Minimum(from, Right(v), mid+1, y);
   return min( Minimum(from, Left(v), x, mid), minim[Right(v)] );
 }
 
-void Add(long pos, long val, long v=1, long x=1, long y=MAXVAL) {
+void Add(long pos, long val, long v=1, long x=0, long y=MAXVAL) {
   if (x==y) {
     minim[v] = min(minim[v],val);
     return;
@@ -63,7 +63,7 @@ int main() {
 
    FILE *fo = fopen("roadfix.out", "w");
    long sol;
-   for(long i = 1; i <= M; ++i) {
+   for(long q = 1; q <= M; ++q) {
      fscanf(fi, "%ld %ld", &qX, &qY);
      qY += qX; //convert length to right-end-point
      sol = INF;
@@ -71,7 +71,8 @@ int main() {
      currNode = 1;
      for(long i=1; i<=N; ++i) {
        //Find best j that finishes after (or exactly at) i's start
-       long best = Minimum(seg[i].X);
+       long best = (seg[i].X <= qX ) ? 0 : INF;
+       best = min(best, Minimum(seg[i].X));
 
        if (best==INF) { //if no previous segment finishes before i's start
 	 if (seg[i].Y <= qX) ans[i] = 0; // [qX,seg[i].Y] is trivially satisfied

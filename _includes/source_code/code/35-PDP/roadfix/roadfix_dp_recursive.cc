@@ -45,7 +45,7 @@ int main() {
    sort(seg+1, seg+N+1, comp);
 
    FILE *fo = fopen("roadfix.out", "w");
-   for(long i = 1; i <= M; ++i) {
+   for(long q = 1; q <= M; ++q) {
      fscanf(fi, "%ld %ld", &qX, &qY);
      qY += qX; //convert length to right-end-point
      if (Ans(N,N+1) < INF) fprintf(fo, "%ld\n", Ans(N,N+1));

@@ -28,6 +28,6 @@ roadfix:
    statement_md: true
    testcases_url: ""   
    solution: true
-   codes_in_git: false
+   codes_in_git: true
    solution_tags: ["dp", "sort", "memoisation", "dp optimization"]
    on_judge: false
