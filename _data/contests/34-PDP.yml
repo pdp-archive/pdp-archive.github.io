@@ -56,7 +56,7 @@ filiki:
    statement_pdf_url: "https://drive.google.com/file/d/1XbUR8Wpl1PK25IaJ1F2UofKWaqbO6p8E/view"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1Hm5AyCuYec8cfOnsPpclDM2DheF9_GkB/view"
-   solution: false
-   codes_in_git: false
+   solution: true
+   codes_in_git: true
    points: 35
    solution_tags: ["binary search", "dfs", "trees", "dp on trees"]
