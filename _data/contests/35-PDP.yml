@@ -16,9 +16,9 @@ fairdiv:
    statement_pdf_url: "https://drive.google.com/file/d/1bFqBy-uCKOmkcwIYhK72WyEg7IINay-Q/view"
    statement_md: false
    testcases_url: ""
-   solution: false
-   codes_in_git: false
-   solution_tags: []
+   solution: true
+   codes_in_git: true
+   solution_tags: ["two-pointers", "binary search", "prefix sums"]
    on_judge: false   
 
 roadfix:

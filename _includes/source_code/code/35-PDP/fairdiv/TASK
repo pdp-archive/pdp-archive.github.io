@@ -1,0 +1,34 @@
+TASK(
+   name = "fairdiv",
+   test_count = 11,
+   files_dir = "testdata/35-PDP/fairdiv/",
+   input_file = "fairdiv.in",
+   output_file = "fairdiv.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "fairdiv_brute_force",
+         source = "fairdiv_brute_force.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fairdiv_prefix_sums",
+         source = "fairdiv_prefix_sums.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fairdiv_bsearch",
+         source = "fairdiv_bsearch.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "fairdiv_two_pointers",
+         source = "fairdiv_two_pointers.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
