@@ -6,7 +6,7 @@ using namespace std;
 const size_t MAXN = 10000;
 const long INF = 0x3f3f3f3f;
 
-long N, M, qX, qY, ans[MAXN+5], nPQA, pqa[MAXN+5], root[2*MAXN+5], par[2*MAXN+5], r[2*MAXN+5];
+long N, M, qX, qY, ans[2*MAXN+5], nPQA, pqa[MAXN+5], root[2*MAXN+5], par[2*MAXN+5], r[2*MAXN+5];
 
 struct segment{
   long X, Y, C;
@@ -59,7 +59,6 @@ int main() {
      sol = INF;
      memset(r, 0, sizeof(r));
      memset(root, 0, sizeof(root));
-     memset(par, 0, sizeof(par));
 
      nPQA = 0;
      pqa[0] = 0;
