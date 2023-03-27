@@ -5,7 +5,7 @@ using namespace std;
 const size_t MAXN = 10000;
 const long INF = 0x3f3f3f3f;
 const long MAXVAL = 1000000000;
-const long MAXNODES = 30*MAXN;
+const long MAXNODES = 60*MAXN;
 
 long N, M, qX, qY, ans[MAXN+5], l[MAXNODES], r[MAXNODES], minim[MAXNODES], currNode;
 struct segment{
