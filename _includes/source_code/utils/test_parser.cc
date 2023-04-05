@@ -236,6 +236,9 @@ struct FileReader {
    
    FileReader(const std::string& filename) : filename(filename) {
       std::ifstream t(filename);
+      if (!t) {
+         throw ParsingException("File does not exist: " + filename);
+      }
       std::string str((std::istreambuf_iterator<char>(t)),
                  std::istreambuf_iterator<char>());
       text = str;
@@ -704,7 +707,7 @@ void generateFileForTasksFilterByTaskName(std::vector<Task*>& tasks, const std::
       }
    }
    if (found == false) {
-      std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
+      std::cout << "Error: No task found with the name " << task_name << "." << std::endl;
    }
    writeToFile(builder.getCode(), "generated_execution.sh");
 }
@@ -731,9 +734,9 @@ void generateFileForTasksFilterByTaskAndSolution(std::vector<Task*>& tasks, cons
       }
    }
    if (found_task == false) {
-      std::cout << "ERROR: No task found with the name " << task_name << "." << std::endl;
+      std::cout << "Error: No task found with the name " << task_name << "." << std::endl;
    } else if (found_solution == false) {
-      std::cout << "ERROR: No solution with name " << solution_name << " found for " << task_name << "." << std::endl; 
+      std::cout << "Error: No solution with name " << solution_name << " found for " << task_name << "." << std::endl; 
    }
    writeToFile(builder.getCode(), "generated_execution.sh");
 }
@@ -777,6 +780,7 @@ void deleteTasks(const std::vector<Task*>& tasks) {
 
 int main(int argc, char *argv[]) {   
    std::vector<Task*> tasks;
+   bool found_error = false;
    try {
       if (argc > 1) {
          std::string arg(argv[1]);
@@ -791,8 +795,9 @@ int main(int argc, char *argv[]) {
          generateFileForTasks(tasks);
       }
    } catch (std::exception& ex) {
-      std::cout << ex.what() << std::endl;
+      // std::cout << ex.what() << std::endl;
+      found_error = true;
    }
    deleteTasks(tasks);
-   return 0;
+   return found_error;
 }
