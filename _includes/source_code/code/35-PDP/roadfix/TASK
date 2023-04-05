@@ -41,7 +41,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
-      ),	 
+      ),
       SOLUTION(
          name = "roadfix_dp2_pqa",
          source = "roadfix_dp2_pqa.cc",
