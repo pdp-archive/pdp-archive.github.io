@@ -14,6 +14,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
+      ),
       SOLUTION(
          name = "roadfix_dp_recursive",
          source = "roadfix_dp_recursive.cc",
@@ -22,6 +23,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
+      ),	 
       SOLUTION(
          name = "roadfix_dp2",
          source = "roadfix_dp2.cc",
@@ -30,6 +32,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
+      ),	 
       SOLUTION(
          name = "roadfix_dp2_trees",
          source = "roadfix_dp2_trees.cc",
@@ -38,6 +41,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
+      ),	 
       SOLUTION(
          name = "roadfix_dp2_pqa",
          source = "roadfix_dp2_pqa.cc",
@@ -46,6 +50,7 @@ TASK(
          author = PERSON(
             name = "kipoujr",
          ),
+      ),	 
       SOLUTION(
          name = "roadfix_dp2_pqa_improved",
          source = "roadfix_dp2_pqa_improved.cc",
