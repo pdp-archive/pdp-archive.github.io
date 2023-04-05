@@ -1,6 +1,6 @@
 TASK(
    name = "fairdiv",
-   test_count = 11,
+   test_count = 30,
    files_dir = "testdata/35-PDP/fairdiv/",
    input_file = "fairdiv.in",
    output_file = "fairdiv.out",
@@ -9,13 +9,13 @@ TASK(
       SOLUTION(
          name = "fairdiv_brute_force",
          source = "fairdiv_brute_force.cc",
-         passes_all,
+         passes_up_to = 16,
          lang = "c++",
       ),
       SOLUTION(
          name = "fairdiv_prefix_sums",
          source = "fairdiv_prefix_sums.cc",
-         passes_all,
+         passes_up_to = 16,
          lang = "c++",
       ),
       SOLUTION(
