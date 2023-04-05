@@ -15,7 +15,7 @@ TASK(
       SOLUTION(
          name = "filiki_dp_binary",
          source = "filiki_dp_binary.cc",
-         passes_up_to = 8
+         passes_up_to = 8,
          lang = "c++",
       ),
       SOLUTION(
@@ -27,7 +27,7 @@ TASK(
       SOLUTION(
          name = "filiki_bsearch",
          source = "filiki_bsearch.cc",
-	 passes_all,
+         passes_all,
          lang = "c++",
       ),
    ]
