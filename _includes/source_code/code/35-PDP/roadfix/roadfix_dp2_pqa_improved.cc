@@ -6,16 +6,16 @@ using namespace std;
 const size_t MAXN = 10000;
 const long INF = 0x3f3f3f3f;
 
-long N, M, qX, qY, ans[2*MAXN+5], nPQA, pqa[MAXN+5], root[2*MAXN+5], par[2*MAXN+5], r[2*MAXN+5];
+long N, M, qX, qY, ans[2*MAXN+1], nPQA, pqa[MAXN+1], root[2*MAXN+1], par[2*MAXN+1], r[2*MAXN+1];
 
 struct segment{
   long X, Y, C;
-} seg[MAXN+5];
+} seg[MAXN+1];
 
 struct event{
   bool type;
   long id;
-} events[2*MAXN+5];
+} events[2*MAXN+1];
 
 long getCoord(event A) {
   return A.type ? seg[ A.id ].Y : seg[ A.id ].X;

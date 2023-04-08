@@ -7,10 +7,10 @@ const long INF = 0x3f3f3f3f;
 const long MAXVAL = 1000000000;
 const long MAXNODES = 60*MAXN;
 
-long N, M, qX, qY, ans[MAXN+5], l[MAXNODES], r[MAXNODES], minim[MAXNODES], currNode;
+long N, M, qX, qY, ans[MAXN+1], l[MAXNODES], r[MAXNODES], minim[MAXNODES], currNode;
 struct segment{
   long X, Y, C;
-} seg[MAXN+5];
+} seg[MAXN+1];
 
 bool comp(segment A, segment B) {
   return A.Y < B.Y;
