@@ -8,9 +8,9 @@
 
 using namespace std;
 
-vector<long> e[MAXN+5];
-long d[MAXN+5], dp[MAXN+5][MAXN+5][MAXK+5];
-bool computed[MAXN+5][MAXN+5][MAXK+5];
+vector<long> e[MAXN+1];
+long d[MAXN+1], dp[MAXN+1][MAXN+1][MAXK+1];
+bool computed[MAXN+1][MAXN+1][MAXK+1];
 
 long Solve(long u, long y, long k) {
   if (computed[u][y][k]) return dp[u][y][k];
@@ -19,15 +19,15 @@ long Solve(long u, long y, long k) {
   if (e[u].size()==0) dp[u][y][k] = k==0 ? d[u]-d[y] : 0;
   else {
     dp[u][y][k] = INF;
-    //If we don't mark u
-    for(long kt=0; kt <= k; ++kt)
-      dp[u][y][k] = min(dp[u][y][k], max(max(d[u]-d[y], Solve(e[u][0], y, kt)),
-					 (e[u].size()>1 ? Solve(e[u][1], y, k-kt) : 0)));
     //If we mark u
     if (k>0)
       for(long kt=0; kt < k; ++kt)
 	dp[u][y][k] = min(dp[u][y][k], max(Solve(e[u][0], u, kt),
 					   (e[u].size()>1 ? Solve(e[u][1], u, k-kt-1) : 0)));
+    //If we don't mark u
+    for(long kt=0; kt <= k; ++kt)
+      dp[u][y][k] = min(dp[u][y][k], max(max(d[u]-d[y], Solve(e[u][0], y, kt)),
+					 (e[u].size()>1 ? Solve(e[u][1], y, k-kt) : 0)));    
   }
   return dp[u][y][k];
 }

@@ -59,4 +59,4 @@ filiki:
    solution: true
    codes_in_git: true
    points: 35
-   solution_tags: ["binary search", "dfs", "trees", "dp on trees"]
+   solution_tags: ["binary search", "dfs", "trees", "dp on trees", "greedy"]

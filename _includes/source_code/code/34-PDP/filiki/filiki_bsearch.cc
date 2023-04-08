@@ -9,12 +9,11 @@ vector<vector<long>> e;
 long MinK(long u, long D) {
   long ans = 0;
   d[u] = 0;
-  for (long i = 0; i < e[u].size(); ++i) {
-    long neib = e[u][i];
-    long weight = w[neib];
-    ans += MinK(neib, D);
-    if (d[neib] + weight > D) ans += 1;
-    else d[u] = max(d[u], d[neib] + weight);
+  for (auto neigh : e[u]) {
+    long weight = w[neigh];
+    ans += MinK(neigh, D);
+    if (d[neigh] + weight > D) ans += 1;
+    else d[u] = max(d[u], d[neigh] + weight);
   }
   return ans;
 }

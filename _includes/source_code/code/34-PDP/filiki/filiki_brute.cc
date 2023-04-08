@@ -9,9 +9,9 @@ vector<vector<long>> e;
 long mark[30];
 
 long Solve(long u, long ancestor) {
-  long ans = mark[u] ? 0 : d[u] - d[ancestor];  
-  for (long i = 0; i < e[u].size(); ++i)
-    ans = max(ans, Solve(e[u][i], mark[u] ? u : ancestor));  
+  long ans = mark[u] ? 0 : d[u] - d[ancestor];
+  for (auto neigh : e[u])
+    ans = max(ans, Solve(neigh, mark[u] ? u : ancestor));  
   return ans;  
 }
 

@@ -8,9 +8,9 @@
 
 using namespace std;
 
-vector<long> eOld[MAXN+5], e[2*MAXN+5];
-long d[2*MAXN+5], dp[2*MAXN+5][2*MAXN+5][MAXK+5], currNode;
-bool computed[2*MAXN+5][2*MAXN+5][MAXK+5];
+vector<long> eOld[MAXN+1], e[2*MAXN+1];
+long d[2*MAXN+1], dp[2*MAXN+1][2*MAXN+1][MAXK+1], currNode;
+bool computed[2*MAXN+1][2*MAXN+1][MAXK+1];
 
 void Convert(long uOld, long neibIndex, long uNew) {
   //if at most 2 neighbors left, append them and recurse
@@ -39,15 +39,15 @@ long Solve(long u, long y, long k) {
   if (e[u].size()==0) dp[u][y][k] = k==0 ? d[u]-d[y] : 0;
   else {
     dp[u][y][k] = INF;
-    //If we don't mark u
-    for(long kt=0; kt <= k; ++kt)
-      dp[u][y][k] = min(dp[u][y][k], max(max(d[u]-d[y], Solve(e[u][0], y, kt)),
-					 (e[u].size()>1 ? Solve(e[u][1], y, k-kt) : 0)));
     //If we mark u
     if (k>0)
       for(long kt=0; kt < k; ++kt)
 	dp[u][y][k] = min(dp[u][y][k], max(Solve(e[u][0], u, kt),
 					   (e[u].size()>1 ? Solve(e[u][1], u, k-kt-1) : 0)));
+    //If we don't mark u
+    for(long kt=0; kt <= k; ++kt)
+      dp[u][y][k] = min(dp[u][y][k], max(max(d[u]-d[y], Solve(e[u][0], y, kt)),
+					 (e[u].size()>1 ? Solve(e[u][1], y, k-kt) : 0)));    
   }
   return dp[u][y][k];
 }
