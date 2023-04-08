@@ -6,11 +6,11 @@ using namespace std;
 const size_t MAXN = 10000;
 const long INF = 0x3f3f3f3f;
 
-long N, M, qX, qY, ans[MAXN+5][MAXN+5];
-bool computed[MAXN+5][MAXN+5];
+long N, M, qX, qY, ans[MAXN+2][MAXN+2];
+bool computed[MAXN+2][MAXN+2];
 struct segment{
   long X, Y, C;
-} seg[MAXN+5];
+} seg[MAXN+1];
 
 bool comp(segment A, segment B) {
   return A.Y < B.Y;
