@@ -1,0 +1,34 @@
+TASK(
+   name = "filiki",
+   test_count = 22,
+   files_dir = "testdata/34-PDP/filiki/",
+   input_file = "filiki.in",
+   output_file = "filiki.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "filiki_brute",
+         source = "filiki_brute.cc",
+         passes_up_to = 4,	 
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "filiki_dp_binary",
+         source = "filiki_dp_binary.cc",
+         passes_up_to = 8,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "filiki_dp",
+         source = "filiki_dp.cc",
+         passes_up_to = 12,	 
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "filiki_bsearch",
+         source = "filiki_bsearch.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
