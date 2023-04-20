@@ -51,13 +51,13 @@ islands:
    full_name: "Νησιά"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
-   statement_md: false
+   statement_md: true
    testcases_url: 
    solution: false
    solution_author:    
    codes_in_git: false
    points: 35
-   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "greedy"]
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "greedy", "prefix sum", "events"]
    on_judge: false
 
 conflicts:
