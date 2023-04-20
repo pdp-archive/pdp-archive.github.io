@@ -30,7 +30,6 @@ roadfix:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
-   points: 30
    solution_tags: ["dp", "sort", "memoisation", "dp optimization"]
    on_judge: false
 
@@ -39,9 +38,9 @@ chemicals:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
-   testcases_url: 
+   testcases_url: ""
    solution: false
-   solution_author:    
+   solution_author: ""   
    codes_in_git: false
    points: 30
    solution_tags: ["set", "modulo", "sliding window", "two pointers"]
@@ -52,12 +51,12 @@ islands:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
-   testcases_url: 
+   testcases_url: ""
    solution: false
-   solution_author:    
+   solution_author: ""   
    codes_in_git: false
    points: 35
-   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "greedy", "prefix sum", "events"]
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "greedy"]
    on_judge: false
 
 conflicts:
@@ -65,11 +64,10 @@ conflicts:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
-   testcases_url: 
+   testcases_url: ""
    solution: false
-   solution_author:    
+   solution_author: ""   
    codes_in_git: false
-   points: 35
    solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
    on_judge: false
 
