@@ -30,5 +30,45 @@ roadfix:
    solution: true
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
+   points: 30
    solution_tags: ["dp", "sort", "memoisation", "dp optimization"]
    on_judge: false
+
+chemicals:
+   full_name: "Χημικές Ενώσεις"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
+   statement_md: true
+   testcases_url: 
+   solution: false
+   solution_author:    
+   codes_in_git: false
+   points: 30
+   solution_tags: ["set", "modulo", "sliding window", "two pointers"]
+   on_judge: false
+
+islands:
+   full_name: "Νησιά"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
+   statement_md: false
+   testcases_url: 
+   solution: false
+   solution_author:    
+   codes_in_git: false
+   points: 35
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "greedy"]
+   on_judge: false
+
+conflicts:
+   full_name: "Εσωτερικές Διαμάχες"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
+   statement_md: false
+   testcases_url: 
+   solution: false
+   solution_author:    
+   codes_in_git: false
+   solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
+   on_judge: false
+
