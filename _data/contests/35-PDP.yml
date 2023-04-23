@@ -38,7 +38,7 @@ chemicals:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1m-Xi5HsiYEi0sviWEvkVz3YuGZ5fQAAf/view"
    solution: false
    solution_author: ""   
    codes_in_git: false
@@ -50,24 +50,25 @@ islands:
    full_name: "Νησιά"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
-   statement_md: false
-   testcases_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1NuwxPskjE8bh2EXioTAzWQFZims8QNwV/view"
    solution: false
    solution_author: ""   
    codes_in_git: false
    points: 35
-   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "greedy"]
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "binary index tree", "greedy"]
    on_judge: false
 
 conflicts:
    full_name: "Εσωτερικές Διαμάχες"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
-   statement_md: false
-   testcases_url: ""
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1cf-UtuwUZTNSbMpO4mnmud3ZX9xP0R3V/view"
    solution: false
    solution_author: ""   
    codes_in_git: false
+   points: 35
    solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
    on_judge: false
 
