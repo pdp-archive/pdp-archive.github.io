@@ -6,3 +6,6 @@ _includes/source_code/tmp/
 _includes/source_code/generated_execution.sh
 .jek*
 *~
+Gemfile.lock
+
+
