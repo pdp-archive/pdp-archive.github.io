@@ -1,0 +1,19 @@
+TASK(
+   name = "islands",
+   test_count = 21,
+   files_dir = "testdata/35-PDP/islands/",
+   input_file = "islands.in",
+   output_file = "islands.out",
+   time_limit = 1,
+   solutions = [
+      SOLUTION(
+         name = "islands_segtree",
+         source = "islands_segtree.cpp",
+         passes_all,
+         lang = "c++",
+         author = PERSON(
+            name = "konstantinosk31",
+         ),
+      ),
+   ]
+)

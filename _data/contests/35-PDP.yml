@@ -19,7 +19,7 @@ fairdiv:
    solution: true
    codes_in_git: true
    solution_tags: ["two-pointers", "binary search", "prefix sums"]
-   on_judge: false   
+   on_judge: false
 
 roadfix:
    full_name: "Επισκευή δρόμου"
@@ -28,7 +28,7 @@ roadfix:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/16phMInEFcpsCizj9TSD8oaQZTXy37O-b/view"
    solution: true
-   solution_author: "Βαγγέλης Κηπουρίδης"   
+   solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    solution_tags: ["dp", "sort", "memoisation", "dp optimization"]
    on_judge: false
@@ -40,7 +40,7 @@ chemicals:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1m-Xi5HsiYEi0sviWEvkVz3YuGZ5fQAAf/view"
    solution: false
-   solution_author: ""   
+   solution_author: ""
    codes_in_git: false
    points: 30
    solution_tags: ["set", "modulo", "sliding window", "two pointers"]
@@ -53,8 +53,8 @@ islands:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1NuwxPskjE8bh2EXioTAzWQFZims8QNwV/view"
    solution: false
-   solution_author: ""   
-   codes_in_git: false
+   solution_author: ""
+   codes_in_git: true
    points: 35
    solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "binary index tree", "greedy"]
    on_judge: false
@@ -66,9 +66,8 @@ conflicts:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1cf-UtuwUZTNSbMpO4mnmud3ZX9xP0R3V/view"
    solution: false
-   solution_author: ""   
+   solution_author: ""
    codes_in_git: false
    points: 35
    solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
    on_judge: false
-
