@@ -8,7 +8,7 @@ coupon:
    solution_author: "Βαγγέλης Κηπουρίδης"
    codes_in_git: true
    solution_tags: ["ad hoc", "greedy", "linear search", "binary search"]
-   on_judge: false
+   on_judge: true
 
 fairdiv:
    full_name: "Η σκυταλοδρομία"
@@ -19,7 +19,7 @@ fairdiv:
    solution: true
    codes_in_git: true
    solution_tags: ["two-pointers", "binary search", "prefix sums"]
-   on_judge: false   
+   on_judge: true   
 
 roadfix:
    full_name: "Επισκευή δρόμου"
@@ -31,7 +31,7 @@ roadfix:
    solution_author: "Βαγγέλης Κηπουρίδης"   
    codes_in_git: true
    solution_tags: ["dp", "sort", "memoisation", "dp optimization"]
-   on_judge: false
+   on_judge: true
 
 chemicals:
    full_name: "Χημικές Ενώσεις"
@@ -44,7 +44,7 @@ chemicals:
    codes_in_git: false
    points: 30
    solution_tags: ["set", "modulo", "sliding window", "two pointers"]
-   on_judge: false
+   on_judge: true
 
 islands:
    full_name: "Νησιά"
@@ -57,7 +57,7 @@ islands:
    codes_in_git: false
    points: 35
    solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "binary index tree", "greedy"]
-   on_judge: false
+   on_judge: true
 
 conflicts:
    full_name: "Εσωτερικές Διαμάχες"
@@ -70,5 +70,4 @@ conflicts:
    codes_in_git: false
    points: 35
    solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
-   on_judge: false
-
+   on_judge: true
