@@ -17,15 +17,15 @@ int main() {
    long max_range = 0;
    // Δοκιμάζουμε όλα τα δυνατά διαστήματα [i, j].
    for (long i = 0; i < N; ++i) {
-      std::unordered_set<long> modula;
+      std::unordered_set<long> rems;
       bool found_pair = false;
-      long k;
-      for (k = i; k < N; ++k) {
-         if (modula.find( (K - (A[k] % K) ) % K ) != modula.end()) {
+      long j;
+      for (j = i; j < N; ++j) {
+         if (rems.find( (K - (A[j] % K) ) % K ) != rems.end()) {
             found_pair = true;
             break;
          }
-         modula.insert(A[k] % K);
+         rems.insert(A[j] % K);
       }
       max_range = std::max(max_range, k - i);
    }

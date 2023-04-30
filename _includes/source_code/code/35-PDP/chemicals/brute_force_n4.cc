@@ -17,11 +17,13 @@ int main() {
    // Δοκιμάζουμε όλα τα δυνατά διαστήματα [i, j].
    for (long i = 0; i < N; ++i) {
       for (long j = i; j < N; ++j) {
-         // Δοκιμάζουμε όλα τα δυνατά ζεύγη (k1, k2) στο [i, j].
+         // Δοκιμάζουμε όλα τα δυνατά ζεύγη (s, t) στο [i, j].
          bool found_pair = false;
-         for (long k1 = i; k1 <= j && !found_pair; ++k1) {
-            for (long k2 = k1 + 1; k2 <= j && !found_pair; ++k2) {
-               if ((A[k1] + A[k2]) % K == 0) found_pair = true;
+         for (long s = i; s <= j && !found_pair; ++s) {
+            for (long t = s + 1; t <= j && !found_pair; ++t) {
+               if ((A[s] + A[t]) % K == 0) {
+                  found_pair = true;
+               }
             }
          }
          if (!found_pair) {

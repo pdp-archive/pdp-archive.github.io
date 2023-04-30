@@ -16,15 +16,15 @@ int main() {
    
    long max_range = 0;
    // Δοκιμάζουμε όλα τα δυνατά διαστήματα [i, j].
-   std::unordered_map<long, long> modula;
+   std::unordered_map<long, long> rems;
    long left = 0;
    for (long i = 0; i < N; ++i) {
       long target = (K - (A[i] % K) ) % K;
-      while (modula[target] > 0) {
-         --modula[A[left] % K];
+      while (rems[target] > 0) {
+         --rems[A[left] % K];
          ++left;
       }
-      ++modula[A[i] % K];
+      ++rems[A[i] % K];
       max_range = std::max(max_range, i - left + 1);
    }
    

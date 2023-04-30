@@ -15,7 +15,7 @@ TASK(
       SOLUTION(
          name = "brute_force_n3",
          source = "brute_force_n3.cc",
-         passes_up_to = 4,
+         passes_only = [1, 2, 3, 4, 8],
          lang = "c++",
       ),
       SOLUTION(
