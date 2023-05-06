@@ -68,7 +68,7 @@ int main(){
 	freopen("islands.in","r",stdin);
 	freopen("islands.out","w",stdout);
 	scanf("%ld%ld",&N,&Q);
-	st.resize(N*4,0);
+	st.resize((N+1)*4,0);
 	lazy.resize(st.size(),-1);
 	while(Q--){
 		char c;long a,b;

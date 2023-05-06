@@ -32,7 +32,7 @@ long query(long si,long ss,long se,long B){//βρες τη δεξιότερη θ
 		}
 	}
 	if(B<st[si])//τα εισιτήρια μας έχουν εξαντληθεί και δεν μπορούμε να φτάσουμε στο νησί ss.
-		ss--;
+		return ss-1;
 	return ss;
 }
 

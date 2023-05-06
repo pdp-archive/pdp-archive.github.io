@@ -8,7 +8,7 @@ using namespace std;
 long N,Q,SQ;
 vector<int> Z;//1 ή 0 (Z[i]==1 αν χρειαζόμαστε εισιτήριο για να φτάσουμε στο νησί i)
 vector<long> S;//άθροισμα του bucket
-vector<int> L;//To L[id] είναι 0 αν ολα τα Z[i] στο bucket είναι 0, 1 αν όλα είναι 1 και -1 αν έχουν διάφορες τιμές
+vector<int> L;//Lazy τιμές των buckets. L[id]==-1 αν δεν έχουμε lazy τιμή. 
 
 inline long bucket_no(long pos){ return pos / SQ; }//ποιος ο αριθμός bucket του νησιού pos
 inline long bucket_begin(long id){ return (id)*SQ; }//πρώτο νησί του bucket id 
