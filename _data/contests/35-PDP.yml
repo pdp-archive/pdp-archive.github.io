@@ -43,7 +43,7 @@ chemicals:
    solution_author: ""   
    codes_in_git: false
    points: 30
-   solution_tags: ["set", "modulo", "sliding window", "two pointers"]
+   solution_tags: ["set", "modulo", "sliding window", "two pointers", "hash table"]
    on_judge: true
 
 islands:
