@@ -39,11 +39,11 @@ chemicals:
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1m-Xi5HsiYEi0sviWEvkVz3YuGZ5fQAAf/view"
-   solution: false
+   solution: true
    solution_author: ""   
-   codes_in_git: false
+   codes_in_git: true
    points: 30
-   solution_tags: ["set", "modulo", "sliding window", "two pointers", "hash table"]
+   solution_tags: ["set", "map", "modulo", "sliding window", "two pointers"]
    on_judge: true
 
 islands:
@@ -56,7 +56,7 @@ islands:
    solution_author: "Κωνσταντίνος Μποκής"   
    codes_in_git: true
    points: 35
-   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "greedy"]
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation"]
    on_judge: true
 
 conflicts:

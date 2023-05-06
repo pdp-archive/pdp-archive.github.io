@@ -183,13 +183,16 @@ $$Z$$ σε $$\sqrt{N}$$ διαστήματα (buckets) μεγέθους $$\sqrt{
 οπότε το $$S_i$$ υπολογίζεται αμέσως καθώς ισούτε με τον αριθμό στοιχείων του bucket. 
 Αν $$L_i=0$$ τότε όλα τα στοιχεία του bucket θεωρείται ότι έχουν τιμή $$0$$ 
 και το άθροισμα των στοιχείων του bucket είναι $$S_i=0$$. 
- 
+
+![απεικόνιση των buckets στο παράδειγμα της εκφώνησης](/assets/35-c-islands-sqrt-decomp1.svg){:width="100%"}
+
 {% include code.md solution_name='sqrtdecomp_NsqrtNlogN.cc' start=13 end=50 %}
 
 Μπορούμε να απαντάμε τα ερωτήματα του προβλήματος με τη λύση της δυαδικής αναζήτησης για να βρούμε τη μεγαλύτερη τιμή (νησί) που 
 μπορούμε να φτάσουμε με $$b$$ εισιτήρια. Ο απαιτούμενος χρόνος είναι της τάξης  $$\mathcal{O}(Q\cdot \sqrt{N} \cdot log{N})$$.
 
-{% include code.md solution_name='sqrtdecomp_NsqrtNlogN.cc' start=103 end=114 %}
+{% include code.md solution_name='sqrtdecomp_NsqrtNlogN.cc' start=84 end=96 %}
+
 Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='sqrtdecomp_NsqrtNlogN.cc' %})
 
 ## Πλήρης λύση με sqrt decomposition (buckets) (100%) 

@@ -5,6 +5,7 @@ TASK(
    input_file = "islands.in",
    output_file = "islands.out",
    time_limit = 1,
+   mem_limit = 256,
    solutions = [
       SOLUTION(
          name = "brute_10p",
