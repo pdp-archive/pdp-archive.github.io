@@ -8,7 +8,7 @@ int main(){
     freopen("islands.out","w",stdout);
     long N,Q,ans;
     scanf("%ld%ld",&N,&Q);
-    vector<bool> Z(N+1,false);//πίνακας με τα απαιτούμενα εισιτήρια
+    vector<bool> Z(N+1,false);//Z[i]: αν χρειάζεται εισιτήριο για μετάβαση από νησί i-1 στο i
     while(Q--){
         char c;long a,b;
         scanf(" %c%ld%ld",&c,&a,&b);

@@ -6,17 +6,17 @@ using namespace std;
 long N,Q;
 vector<long> st;
 
-long query(long si,long ss,long se,long L,long R){//υπολόγισε άθροισμα διαστήματος
+long query(long si,long ss,long se,long L,long R){//υπολόγισε άθροισμα διαστήματος [L,R]
     if(R<ss || se<L || R<L)
-        return 0;
+        return 0;//βγήκαμε εκτός διαστήματος {L,R]
     if(L<=ss && se<=R)
-        return st[si];
+        return st[si];//το διάστημα [ss,se] περιέχεται στο [L,R]
     long mid = (ss+se)/2;
     return query(si*2+1,ss,mid,L,R)+query(si*2+2,mid+1,se,L,R);
 }
 
-void upd(long si,long ss,long se,long pos,long val){
-    if(ss == se){
+void upd(long si,long ss,long se,long pos,long val){//ενημέρωσε τη θέση pos με την τιμή val
+    if(ss == se){//φτάσαμε στο φύλλο pos
         st[si] = val;
         return;
     }

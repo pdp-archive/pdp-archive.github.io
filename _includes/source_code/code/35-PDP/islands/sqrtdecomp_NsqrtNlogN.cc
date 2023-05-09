@@ -6,9 +6,9 @@
 using namespace std;
 
 long N,Q,SQ;
-vector<int> Z;//1 ή 0 (Z[i]==1 αν χρειαζόμαστε εισιτήριο για να φτάσουμε στο νησί i)
+vector<int> Z; //1 ή 0 (Z[i]==1 αν χρειαζόμαστε εισιτήριο για να φτάσουμε στο νησί i)
 vector<long> S;//άθροισμα του bucket
-vector<int> L;//Lazy τιμές των buckets. L[id]==-1 αν δεν έχουμε lazy τιμή. 
+vector<int> L; //Lazy τιμές των buckets. L[id]==-1 αν δεν έχουμε lazy τιμή. 
 
 inline long bucket_no(long pos){ return pos / SQ; }//ποιος ο αριθμός bucket του νησιού pos
 inline long bucket_begin(long id){ return (id)*SQ; }//πρώτο νησί του bucket id 
@@ -75,13 +75,13 @@ int main(){
         char c;long a,b;
         scanf(" %c%ld%ld",&c,&a,&b);
         if(c=='D'){
-            a--,b--;//τα Z[i] στα buckets είναι zero based
+            a--,b--;//τα Z[i] στα buckets είναι 0-based
             upd(a+1,b,1);
         } else if(c=='B'){
-            a--,b--;//τα Z[i] στα buckets είναι zero based
+            a--,b--;//τα Z[i] στα buckets είναι 0-based
             upd(a+1,b,0);
         } else {
-            a--;//τα Z[i] στα buckets είναι zero based
+            a--;//τα Z[i] στα buckets είναι 0-based
             b += query(0,a);//μετέτρεψε το ταξίδι από το a σε ταξίδι από το 0
             long left = a, right = N-1, ans = a;
             while(left<=right){
@@ -93,7 +93,7 @@ int main(){
                     left = mid + 1;//ας δοκιμάσουμε ακόμα δεξιότερα
                 }
             }
-            printf("%ld\n",ans+1);//κάνε απάντηση 1 based
+            printf("%ld\n",ans+1);//κάνε την απάντηση 1-based
         }
     }
     return 0;
