@@ -52,11 +52,11 @@ islands:
    statement_pdf_url: "https://drive.google.com/file/d/1J51Vu6wF3_dN7hx4EIYmIbKcPx6oJIOd/view"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1NuwxPskjE8bh2EXioTAzWQFZims8QNwV/view"
-   solution: false
-   solution_author: ""   
-   codes_in_git: false
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"   
+   codes_in_git: true
    points: 35
-   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation", "binary index tree", "greedy"]
+   solution_tags: ["range sum", "sqrt decomposition", "segment tree", "intervals", "binary search", "prefix sum", "events", "lazy propagation"]
    on_judge: true
 
 conflicts:
