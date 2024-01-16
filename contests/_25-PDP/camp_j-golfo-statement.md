@@ -23,7 +23,7 @@ codename: golfo
 
 | **golfo.in**      | **golfo.out** |
 | :--- | :--- |
-| 10<br>XXXXXXXXXX<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>X&nbsp;<b>T</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>XXXXXXXX&nbsp;X<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X<br>X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>X&nbsp;&nbsp;XXXXXXX<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>G</b>X<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>XXXXXXXXXX | 10 |
+| 10<br>XXXXXXXXXX<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>X&nbsp;<b>T</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>XXXXXXXX&nbsp;X<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X<br>X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>X&nbsp;&nbsp;XXXXXXX<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>G</b>X<br>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X<br>XXXXXXXXXX | 20 |
 {:.table_with_monospace_font}
 
 
