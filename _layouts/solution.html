@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 {% assign contest = site.data.contests[page.contest_url] %}
 {% assign task = contest[page.codename] %}
 {% if task.stage == "c" %}
@@ -20,14 +20,14 @@
 {% else %}
   {% assign contrib_salutation = "Συγγραφέας:" %}
 {% endif %}
-<html>
+<html lang="el">
   <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" href="/css/main.css">
     <title>{{ title }}</title>
+    {% include scripts.html %}
   </head>
   <body>
-    {% include scripts.html %}
     {% include announce_everywhere.html %}
   <div class="main-content">
     <div style="text-align:right">
