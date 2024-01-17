@@ -134,7 +134,7 @@ $$\min_{j: Y_j\ge X_i} \texttt{ans'}(j)$$
 ### Λύση 2Α - Δυαδικά δέντρα
 Χρησιμοποιώντας μια καλή λύση για το RMQ πρόβλημα (πχ με [δυαδικά δέντρα](https://kallinikos.github.io/Segment-Trees)) μπορούμε να πάρουμε απάντηση σε $$\mathcal{O}(\log{N})$$ χρόνο, αντί για $$\mathcal{O}(N)$$. 
 
-Καταλήγουμε ότι υπάρχουν $$N$$ καταστάσεις να υπολογίσουμε ανά ερώτημα, και για την κάθε μία χρειαζόμαστε $$\mathcal{O}(\log{N})$$ χρόνο. Η τελική πολυπλοκότητα είναι $$\mathcal{O}(MN\log{N})$$. Μπορείτε να βρείτε τον κώδικα για την παρούσα λύση  [εδώ]({% include link_to_source.md solution_name='roadfix_dp2_trees.cc' %}). Χάριν απλότητας, υλοποιούμε τα δέντρα με βάθος $$\mathcal{O}(\log{\texttt{MAX_VALUE}})$$ αντί για $$\mathcal{O}(\log{N})$$.
+Καταλήγουμε ότι υπάρχουν $$N$$ καταστάσεις να υπολογίσουμε ανά ερώτημα, και για την κάθε μία χρειαζόμαστε $$\mathcal{O}(\log{N})$$ χρόνο. Η τελική πολυπλοκότητα είναι $$\mathcal{O}(MN\log{N})$$. Μπορείτε να βρείτε τον κώδικα για την παρούσα λύση  [εδώ]({% include link_to_source.md solution_name='roadfix_dp2_trees.cc' %}). Χάριν απλότητας, υλοποιούμε τα δέντρα με βάθος $$\mathcal{O}(\log{\texttt{MAX\_VALUE}})$$ αντί για $$\mathcal{O}(\log{N})$$.
 
 ### Λύση 2Β
 Μια άλλη προσέγγιση χρησιμοποιεί Priority Queue with Attrition (στον κόσμο του competitive programming συχνά αυτή η δομή ονομάζεται [Monotonic Stack](https://medium.com/techtofreedom/algorithms-for-interview-2-monotonic-stack-462251689da8)). Ο λόγος που την προτείνουμε είναι ότι μπορεί να βελτιωθεί ακόμα περισσότερο.
