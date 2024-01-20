@@ -7,6 +7,6 @@ olivetrees:
    solution: false
    solution_author: ""
    codes_in_git: false
-   solution_tags: ["monotonic stack", "stack", "segment tree", "binary search"]
+   solution_tags:
    on_judge: false
 
