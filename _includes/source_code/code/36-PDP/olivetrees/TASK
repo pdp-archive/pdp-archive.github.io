@@ -8,8 +8,26 @@ TASK(
    mem_limit = 64,
    solutions = [
       SOLUTION(
-         name = "brute_nxn",
-         source = "brute_nxn.cc",
+         name = "brute_nxnxn",
+         source = "brute_nxnxn.cc",
+         passes_up_to = 1,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "brute_nxn2",
+         source = "brute_nxn2.cc",
+         passes_up_to = 1,
+         lang = "c++",
+      ),
+      SOLUTION(
+		 name = "brute_nxn1",
+         source = "brute_nxn1.cc",
+         passes_up_to = 1,
+         lang = "c++",
+      ),
+	  SOLUTION(
+         name = "brute_nxn2",
+         source = "brute_nxn2.cc",
          passes_up_to = 1,
          lang = "c++",
       ),
@@ -21,7 +39,7 @@ TASK(
       ),
       SOLUTION(
          name = "sqrt_NsqrtN",
-         source = "qrt_NsqrtN.cc",
+         source = "sqrt_NsqrtN.cc",
          passes_only = [2,8,9,10,11,12],
          lang = "c++",
       ),

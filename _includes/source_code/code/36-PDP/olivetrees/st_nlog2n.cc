@@ -25,13 +25,15 @@ long query(long si,long ss,long se,long L,long R){
 }
 
 int main(){
-    scanf("%ld%ld",&N,&M);
+    FILE *in = fopen("olivetrees.in","r");
+    fscanf(in,"%ld%ld",&N,&M);
     st.resize(M*4);
     H.resize(M);
     for(long i=0;i<M;i++){
-        scanf("%ld",&H[i]);
-        H[i] = N-H[i];
+        fscanf(in,"%ld",&H[i]);
+        H[i] = N - H[i];
     }
+    fclose(in);
     build(0,0,M-1);
 
     for(long i=0;i<M;i++){
@@ -60,6 +62,8 @@ int main(){
         }
         ans = max(ans,(rightmost-leftmost+1)*H[i]);
     }
-    printf("%ld\n",ans);
+    FILE *out = fopen("olivetrees.out","w");
+    fprintf(out,"%ld\n",ans);
+    fclose(out);
     return 0;
 }

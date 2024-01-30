@@ -14,7 +14,7 @@ inline long bucket_id(long x) { return x/SQRN; }//id του bucket που περ
 inline long bucket_first(long bid) { return bid*SQRN; }//πρώτη στήλη στο bucket bid
 inline long bucket_last(long bid) { return min(bid*SQRN+SQRN-1,M-1); }//τελευταία στήλη
 
-long exp_left(long left){
+long expand_left(long left){
     //αναζήτησε τις συμβατές στήλες αριστερά
     long bid = bucket_id(left), height=H[left], bf = bucket_first(bid);
     if(left<bucket_last(bid)){//δεν ξεκινάμε με ολόκληρο bucket
@@ -35,7 +35,7 @@ long exp_left(long left){
     return left;
 }
 
-long exp_right(long right){
+long expand_right(long right){
     long bid = bucket_id(right), height=H[right], bl = bucket_last(bid);
     if(right>bucket_first(bid)){
         while(right+1<=bl && H[right+1]>=height)
@@ -55,7 +55,8 @@ long exp_right(long right){
 }
 
 int main(){
-    scanf("%ld%ld",&N,&M);
+    FILE *in = fopen("olivetrees.in","r");
+    fscanf(in,"%ld%ld",&N,&M);
     SQRN = (long)ceil(sqrt(M));
     bucket.resize((M+SQRN-1)/SQRN,LONG_MAX);
     H.resize(M);
@@ -64,15 +65,18 @@ int main(){
             j=0;
             bid++;
         }
-        scanf("%ld",&H[i]);
+        fscanf(in,"%ld",&H[i]);
         H[i] = N-H[i];
         bucket[bid] = min(bucket[bid],H[i]);
     }
+    fclose(in);
     for(long i=0;i<M;i++){
-        long left = exp_left(i);
-        long right= exp_right(i);
+        long left = expand_left(i);
+        long right= expand_right(i);
         ans = max(ans,(right-left+1)*H[i]);
     }
-    printf("%ld\n",ans);
+    FILE *out = fopen("olivetrees.out","w");
+    fprintf(out,"%ld\n",ans);
+    fclose(out);
     return 0;
 }

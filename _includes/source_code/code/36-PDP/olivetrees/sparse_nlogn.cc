@@ -11,15 +11,17 @@ vector<long> H;
 long logm;
 
 int main(){
-    scanf("%ld%ld",&N,&M);
+    FILE *in = fopen("olivetrees.in","r");
+    fscanf(in,"%ld%ld",&N,&M);
     logm = (long)ceil(log2(M));
     rmq.resize(M,vector<long>(logm+1));
     H.resize(M);
     for(long i=0;i<M;i++){
-        scanf("%ld",&H[i]);
-        H[i] = N-H[i];
+        fscanf(in,"%ld",&H[i]);
+        H[i] = N - H[i];
         rmq[i][0] = H[i];
     }
+    fclose(in);
     //precompute sparse array O(M*logM)
     for(long j=1;j<=logm;j++){
         for(long i=0;i<M;i++){
@@ -43,6 +45,8 @@ int main(){
         }
         ans = max(ans,(right-left+1)*H[i]);
     }
-    printf("%ld\n",ans);
+       FILE *out = fopen("olivetrees.out","w");
+    fprintf(out,"%ld\n",ans);
+    fclose(out);
     return 0;
 }
