@@ -45,14 +45,16 @@
         <a href="/{{ page.contest_url }}">{{ page.contest }} </a>
       </div>
     </div>
-    <div id="post"> 
+    <article id="post"> 
       <h1 class="title">{{ title }}</h1>
 	  {% if task.stage == "c" %}
 	    {% assign points = " [" | append: task.points | append: " Μονάδες]" %}
 		<h4 style="text-align: right">{{points}}</h4>
       {% endif %}
+      <div style="text-align: justify">
       {{ content }}
-    </div>
+      </div>
+    </article>
   </div>
   {% include contributors_footer.html %}
   </body>

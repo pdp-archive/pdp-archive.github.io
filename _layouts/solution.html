@@ -37,11 +37,13 @@
         (<a href="/{{ page.contest_url }}/{{ task.stage }}-{{ page.codename }}-statement">εκφώνηση</a>)
       </div>
     </div>
-    <div id="post"> 
+    <article id="post"> 
       <h1 class="title">{{ title }}</h1>
       <div class="author_container"> <span class="author">{{ contrib_salutation }}</span> {{ task.solution_author }}</div>
+      <div style="text-align: justify">
       {{ content }}
-    </div>
+      </div>
+    </article>
   </div>
   <div id="footer_space"></div>
   {% include contributors_footer.html %}
