@@ -14,6 +14,7 @@ int main(){
         H[i] = N - H[i];
     }
     fclose(in);
+
     for(long i=0;i<M;i++){
         long min_height=H[i];//ελάχιστο ύψος από i έως και j
         for(long j=i;j<M;j++){
@@ -21,6 +22,7 @@ int main(){
             ans = std::max(ans, (j-i+1) * min_height);
         }
     }
+
     FILE *out = fopen("olivetrees.out","w");
     fprintf(out,"%ld\n",ans);
     fclose(out);
