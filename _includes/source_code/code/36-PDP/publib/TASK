@@ -1,0 +1,29 @@
+TASK(
+   name = "publib",
+   test_count = 23,
+   files_dir = "testdata/36-PDP/publib/",
+   input_file = "publib.in",
+   output_file = "publib.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "publib_bfs",
+         source = "publib_bfs.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "publib_bfs_with_queue",
+         source = "publib_bfs_with_queue.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "publib_bfs_with_array_queue",
+         source = "publib_bfs_with_array_queue.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
