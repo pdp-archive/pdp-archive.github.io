@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 #include <vector>
 
 int main() {
@@ -17,6 +17,8 @@ int main() {
       adj[b].push_back(a);
    }
    
+   fclose(fi);
+   
    std::vector<bool> visited(N); // Αν έχουμε επισκεφτεί έναν κόμβο.
    std::vector<long> next, cur; // Το τωρινό και το επόμενο επίπεδο.
    long best_dist = N + 1;
@@ -24,7 +26,7 @@ int main() {
       std::fill(visited.begin(), visited.end(), false);
       cur.push_back(i);
       visited[i] = true;
-      long dist = 0;
+      long max_dist = -1;
       // Τρέχουμε την BFS.
       while (!cur.empty()) {
          for (auto v : cur) {
@@ -35,16 +37,15 @@ int main() {
                }
             }
          }
-         cur.clear();
          cur = next;
          next.clear();
-         ++dist;
+         ++max_dist;
       }
-      best_dist = std::min(dist, best_dist);
+      best_dist = std::min(max_dist, best_dist);
    }
    
    FILE *fo = fopen("publib.out", "w");
-   fprintf(fo, "%ld\n", best_dist - 1);
+   fprintf(fo, "%ld\n", best_dist);
    
    
    return 0;

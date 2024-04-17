@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 #include <queue>
 #include <vector>
 
@@ -18,15 +18,17 @@ int main() {
       adj[b].push_back(a);
    }
    
+   fclose(fi);
+   
    std::vector<bool> visited(N); // Αν έχουμε επισκεφτεί έναν κόμβο.
    std::queue<std::pair<long, long>> q; // Η ουρά.
    
-   long best_dist = N + 1;
+   long graph_radius = N + 1;
    for (int i = 0; i < N; ++i) {
       std::fill(visited.begin(), visited.end(), false);
       q.push({ i, 0 });
       visited[i] = true;
-      long dist = 0;
+      long max_dist = 0;
       // Τρέχουμε την BFS.
       while (!q.empty()) {
          auto [v, d] = q.front();
@@ -38,13 +40,13 @@ int main() {
                visited[neigh] = true;
             }
          }
-         dist = d;
+         max_dist = d;
       }
-      best_dist = std::min(dist, best_dist);
+      graph_radius = std::min(max_dist, graph_radius);
    }
    
    FILE *fo = fopen("publib.out", "w");
-   fprintf(fo, "%ld\n", best_dist);
+   fprintf(fo, "%ld\n", graph_radius);
    
    
    return 0;
