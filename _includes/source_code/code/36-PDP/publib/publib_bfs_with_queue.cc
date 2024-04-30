@@ -20,11 +20,11 @@ int main() {
    
    fclose(fi);
    
-   std::vector<bool> visited(N); // Αν έχουμε επισκεφτεί έναν κόμβο.
-   std::queue<std::pair<long, long>> q; // Η ουρά.
-   
    long graph_radius = N + 1;
    for (int i = 0; i < N; ++i) {
+      std::vector<bool> visited(N); // Αν έχουμε επισκεφτεί έναν κόμβο.
+      std::queue<std::pair<long, long>> q; // Η ουρά.
+      
       std::fill(visited.begin(), visited.end(), false);
       q.push({ i, 0 });
       visited[i] = true;
@@ -47,7 +47,7 @@ int main() {
    
    FILE *fo = fopen("publib.out", "w");
    fprintf(fo, "%ld\n", graph_radius);
-   
+   fclose(fo);
    
    return 0;
 }

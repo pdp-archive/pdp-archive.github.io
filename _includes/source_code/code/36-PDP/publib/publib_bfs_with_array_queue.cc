@@ -49,7 +49,7 @@ int main() {
    
    FILE *fo = fopen("publib.out", "w");
    fprintf(fo, "%ld\n", graph_radius);
-   
+   fclose(fo);
    
    return 0;
 }

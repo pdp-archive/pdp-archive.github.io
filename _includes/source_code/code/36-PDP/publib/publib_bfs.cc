@@ -46,7 +46,7 @@ int main() {
    
    FILE *fo = fopen("publib.out", "w");
    fprintf(fo, "%ld\n", best_dist);
-   
+   fclose(fo);
    
    return 0;
 }
