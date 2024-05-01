@@ -1,0 +1,17 @@
+TASK(
+   name = "allthatjazz",
+   test_count = 32,
+   files_dir = "testdata/36-PDP/allthatjazz/",
+   input_file = "allthatjazz.in",
+   output_file = "allthatjazz.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "brute",
+         source = "brute.cc",
+         passes_up_to = 20,
+         lang = "c++",
+      ),
+   ]
+)
