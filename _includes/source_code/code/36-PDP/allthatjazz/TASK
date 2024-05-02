@@ -1,6 +1,6 @@
 TASK(
    name = "allthatjazz",
-   test_count = 32,
+   test_count = 19,
    files_dir = "testdata/36-PDP/allthatjazz/",
    input_file = "allthatjazz.in",
    output_file = "allthatjazz.out",
@@ -10,7 +10,13 @@ TASK(
       SOLUTION(
          name = "brute",
          source = "brute.cc",
-         passes_up_to = 20,
+         passes_up_to = 11,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "2pointers",
+         source = "2pointers.cc",
+         passes_all,
          lang = "c++",
       ),
    ]

@@ -15,10 +15,13 @@ int main(){
 		long K;
 		fscanf(in,"%ld",&K);
 		long ans = 0;
-		for(long i=0;i<N;i++){
+		for(long i=0,m=0;i<N;i++){//ο 1ος pointer είναι ο i (αρχή παραθύρου)
 			if(i && D[i]==D[i-1])continue;//υπολογίσαμε ξανά αρχή από την ημέρα αυτή
-			for(long m=i;m<N && D[m]-D[i]<K;m++)
+			m = std::max(m,i);//να μην προσπεράσει η αρχή (i) το τέλος (m) του παραθύρου
+			while(m<N && D[m]-D[i]<K){//ο 2ος pointer είναι ο m (τέλος παραθύρου πλάτους<=K)
 				ans = std::max(ans,m-i+1);
+				m++;
+			}
 		}
 		fprintf(out,"%ld\n",ans);
 	}
