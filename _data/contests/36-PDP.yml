@@ -3,7 +3,7 @@ olivetrees:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1UXIGPs8oujA1hyc99xM64Wmjx_IktpLg/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1yaSglvrCqK2A-vLtwwsnOY_XeB-l4xmb/view"
    solution: true
    solution_author: "Μποκής Κωνσταντίνος"
    codes_in_git: true
@@ -15,9 +15,22 @@ publib:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/file/d/1QJr4CIE3udAvji3J9YNil60uQrvbcoQx/view"
    statement_md: true
-   testcases_url: 
+   testcases_url: ""
    solution: true
    solution_author: ""
    codes_in_git: true
    solution_tags: ["bfs", "shortest-paths"]
    on_judge: false
+
+allthatjazz:
+   full_name: "All that jazz"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1zVElJ8xFOvof09tP345AAejHwfBC8c8n/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: "Μποκής Κωνσταντίνος"
+   codes_in_git: true
+   solution_tags: ["two pointers","sorting","binary search"]
+   on_judge: false
+
