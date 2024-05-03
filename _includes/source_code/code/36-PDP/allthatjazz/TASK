@@ -14,6 +14,12 @@ TASK(
          lang = "c++",
       ),
       SOLUTION(
+         name = "bsearch",
+         source = "bsearch.cc",
+         passes_all,
+         lang = "c++",
+      ),	  
+      SOLUTION(
          name = "2pointers",
          source = "2pointers.cc",
          passes_all,

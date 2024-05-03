@@ -8,7 +8,7 @@ int main(){
     long N,Q;
     fscanf(in, "%ld\n", &N);
     std::vector<long> D(N);
-    for(long i = 0; i < N; i++)fscanf(in, "%ld", &D[i]);
+    for(long i = 0; i < N; i++) fscanf(in, "%ld", &D[i]);
     std::sort(D.begin(), D.end());
     fscanf(in, "%ld\n", &Q);
     while(Q-- > 0){
@@ -16,9 +16,8 @@ int main(){
         fscanf(in, "%ld", &K);
         long ans = 0;
         for(long i = 0; i < N; i++){
-            if(i && D[i]==D[i-1])continue;//υπολογίσαμε ξανά αρχή από την ημέρα αυτή
-            for(long m = i; m<N && D[m]-D[i]<K; m++)
-                ans = std::max(ans, m-i+1);
+            long m = upper_bound(D.begin(), D.end(), D[i]+K-1) - D.begin();
+            ans = std::max(ans, m-i);
         }
         fprintf(out, "%ld\n", ans);
     }
