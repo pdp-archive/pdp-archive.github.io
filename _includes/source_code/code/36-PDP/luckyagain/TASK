@@ -1,0 +1,23 @@
+TASK(
+   name = "luckyagain",
+   test_count = 18,
+   files_dir = "testdata/36-PDP/luckyagain/",
+   input_file = "luckyagain.in",
+   output_file = "luckyagain.out",
+   time_limit = 2,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "luckyagain_efficient",
+         source = "luckyagain_efficient.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "luckyagain_brute_force",
+         source = "luckyagain_brute_force.cc",
+         passes_up_to = 11,
+         lang = "c++",
+      ),
+   ]
+)
