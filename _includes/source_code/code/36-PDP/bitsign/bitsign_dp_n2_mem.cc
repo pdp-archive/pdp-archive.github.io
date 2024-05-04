@@ -18,13 +18,13 @@ int main() {
       int N, M;
       
       fscanf(fi, "%d %d\n", &N, &M);
-      std::vector<int> seq(M);
+      std::vector<int> s(M);
       for (int i = 0; i < N; ++i) {
          fscanf(fi, "%c", &c[i+1]);
       }
       c[0] = c[N+1] = '0';
       for (int i = 0; i < M; ++i) {
-         fscanf(fi, "%d", &seq[i]);
+         fscanf(fi, "%d", &s[i]);
       }
       
       // Προϋπολογίζουμε το πρώτο μηδενικό στα δεξιά του κάθε στοιχείου.
@@ -51,8 +51,8 @@ int main() {
                dp[C(j)][i] = 0;
             } else {
                dp[C(j)][i] = dp[C(j)][i-1]; // Μπορούμε απλά να προσθέσουμε ένα 0.
-               if (i - first_zero_to_left[i - 1] - 1 >= seq[j-1]) // Υπάρχουν αρκετά '1' ή '.'?
-                  dp[C(j)][i] = (dp[C(j)][i] + dp[C(j - 1)][i - seq[j-1] - 1]) % MOD;
+               if (i - first_zero_to_left[i - 1] - 1 >= s[j-1]) // Υπάρχουν αρκετά '1' ή '.'?
+                  dp[C(j)][i] = (dp[C(j)][i] + dp[C(j - 1)][i - s[j-1] - 1]) % MOD;
             }
          }
       }
