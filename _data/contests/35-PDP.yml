@@ -71,3 +71,41 @@ conflicts:
    points: 35
    solution_tags: ["trees", "dfs", "map", "eulerian path", "greedy", "hash table"]
    on_judge: true
+
+secretpaths:
+   full_name: "Μυστικοί Δρόμοι"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1IxWUA2IFecdPA6Dp4cfM14fMM3a8NmhL/view"
+   statement_md: true
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: [ ]
+
+sumij:
+   full_name: "sumij"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1ggQCu5XyJawj-mOCyxjQzR-eZ288s6UL/view"
+   statement_md: true
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: [ ]
+
+evencycle:
+   full_name: "evencycle"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1hOutQSWs1OpbOVw7QZb1jgjbh5wz1pA3/view"
+   statement_md: true
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: [ ]
+   
+  
+oddsum:
+   full_name: "oddsum"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1gfjNdPQdHFC_jAvLvnUUEItXTiRH8jWY/view"
+   statement_md: true
+   testcases_url: ""
+   codes_in_git: false
+   solution_tags: [ ]
+   
