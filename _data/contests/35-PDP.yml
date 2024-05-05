@@ -79,7 +79,8 @@ secretpaths:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1HSFZLk8MGBYhzVr5T2Zftbafa-2lD6Ha/view"
    codes_in_git: false
-   solution_tags: [ trees, small-to-large merging, decremental connectivity, bfs, sorting, union-find ]
+   solution_tags: ["trees", "small-to-large merging", "decremental connectivity", "bfs", "sorting", "union-find" ]
+   on_judge: true
 
 sumij:
    full_name: "SUMIJ"
@@ -88,7 +89,8 @@ sumij:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1_sokO2v3_RVBAGCJ2gvlffpDcJgu7Ytq/view"
    codes_in_git: false
-   solution_tags: [ hash table, prefix sums, bst, sorting ]
+   solution_tags: ["hash table", "prefix sums", "bst", "sorting" ]
+   on_judge: true
 
 evencycle:
    full_name: "EVENCYCLE"
@@ -97,8 +99,8 @@ evencycle:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1xYNBm830H_dA02YQRcExno75XVeMNjXV/view"
    codes_in_git: false
-   solution_tags: [ dfs, dfs-tree, cycles ]
-   
+   solution_tags: ["dfs", "dfs-tree", "cycles"]
+   on_judge: true
   
 oddsum:
    full_name: "ODDSUM"
@@ -107,5 +109,5 @@ oddsum:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1ZaLdLm2JAgUn_nfdapL9BtCU8pu2hwu0/view"
    codes_in_git: false
-   solution_tags: [ greedy ]
-   
+   solution_tags: ["greedy"]
+   on_judge: true
