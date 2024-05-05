@@ -64,7 +64,7 @@ filiki:
 police:
    full_name: "POLICE"
    stage: "camp_c"
-   statement_pdf_url: "https://drive.google.com/file/d/16chGfu012htBAHtlQMo4gM8Q6t63Rtz_/view?usp=sharing"
+   statement_pdf_url: "https://drive.google.com/file/d/1YJTI8XL6TtuHb6ULfwrTXi641VvbOw8C/view"
    statement_md: true
    testcases_url: ""
    codes_in_git: false
@@ -74,7 +74,7 @@ police:
 vatraxia:
    full_name: "VATRAXIA"
    stage: "camp_c"
-   statement_pdf_url: "https://drive.google.com/file/d/1zyiliooSKSy0WCPRF1Hjpcpc0vOdNzML/view?usp=sharing"
+   statement_pdf_url: "https://drive.google.com/file/d/1ISSVOWlsWeIwafcSGQxCi5B5mFh2FegU/view"
    statement_md: true
    testcases_url: ""
    codes_in_git: false
@@ -84,7 +84,7 @@ vatraxia:
 prettytree:
    full_name: "PRETTYTREE"
    stage: "camp_c"
-   statement_pdf_url: "https://drive.google.com/file/d/1buioYOxTqnoY-LBWOSavhtzl9yRawvVP/view?usp=sharing"
+   statement_pdf_url: "https://drive.google.com/file/d/1iBUMfWITjFo9cwOVIswBY5BgpXPoPTIp/view"
    statement_md: true
    testcases_url: ""
    codes_in_git: false
@@ -94,7 +94,7 @@ prettytree:
 lights:
    full_name: "LIGHTS"
    stage: "camp_c"
-   statement_pdf_url: "https://drive.google.com/file/d/1XBlzm2QFkdGy6SMK9_Y-BHTdok7r3brC/view?usp=sharing"
+   statement_pdf_url: "https://drive.google.com/file/d/1TLs90Mpf99b36S7f9MM4mcdgm4cYjFso/view"
    statement_md: true
    testcases_url: ""
    codes_in_git: false
