@@ -73,39 +73,39 @@ conflicts:
    on_judge: true
 
 secretpaths:
-   full_name: "Μυστικοί Δρόμοι"
+   full_name: "SECRETPATHS"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1IxWUA2IFecdPA6Dp4cfM14fMM3a8NmhL/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1HSFZLk8MGBYhzVr5T2Zftbafa-2lD6Ha/view"
    codes_in_git: false
-   solution_tags: [ ]
+   solution_tags: [ trees, small-to-large merging, decremental connectivity, bfs, sorting, union-find ]
 
 sumij:
-   full_name: "sumij"
+   full_name: "SUMIJ"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1ggQCu5XyJawj-mOCyxjQzR-eZ288s6UL/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1_sokO2v3_RVBAGCJ2gvlffpDcJgu7Ytq/view"
    codes_in_git: false
-   solution_tags: [ ]
+   solution_tags: [ hash table, prefix sums, bst, sorting ]
 
 evencycle:
-   full_name: "evencycle"
+   full_name: "EVENCYCLE"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1hOutQSWs1OpbOVw7QZb1jgjbh5wz1pA3/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1xYNBm830H_dA02YQRcExno75XVeMNjXV/view"
    codes_in_git: false
-   solution_tags: [ ]
+   solution_tags: [ dfs, dfs-tree, cycles ]
    
   
 oddsum:
-   full_name: "oddsum"
+   full_name: "ODDSUM"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1gfjNdPQdHFC_jAvLvnUUEItXTiRH8jWY/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1ZaLdLm2JAgUn_nfdapL9BtCU8pu2hwu0/view"
    codes_in_git: false
-   solution_tags: [ ]
+   solution_tags: [ greedy ]
    
