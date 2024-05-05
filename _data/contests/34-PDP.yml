@@ -60,3 +60,43 @@ filiki:
    codes_in_git: true
    points: 35
    solution_tags: ["binary search", "dfs", "trees", "dp on trees", "greedy"]
+
+police:
+   full_name: "POLICE"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1YJTI8XL6TtuHb6ULfwrTXi641VvbOw8C/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1w-QnODgwNj2uhpUmuX-JUNdf3MH8pyEf/view"
+   codes_in_git: false
+   solution_tags: ["greedy", "sorting"]
+   on_judge: false
+
+vatraxia:
+   full_name: "VATRAXIA"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1ISSVOWlsWeIwafcSGQxCi5B5mFh2FegU/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/15HdlMWb8UlXF2EyaBIXzCTLJufE_hVC_/view"
+   codes_in_git: false
+   solution_tags: ["link-cut trees", "trees"]
+   on_judge: false
+
+prettytree:
+   full_name: "PRETTYTREE"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1iBUMfWITjFo9cwOVIswBY5BgpXPoPTIp/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1X1WJGO1VE7LH9tWa_LOAvIIij8KZfdJa/view"
+   codes_in_git: false
+   solution_tags: ["link-cut trees", "trees"]
+   on_judge: false
+
+lights:
+   full_name: "LIGHTS"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1TLs90Mpf99b36S7f9MM4mcdgm4cYjFso/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1O4lugBEDkUKcWzxtQjAK3dOY6MniIzaE/view"
+   codes_in_git: false
+   solution_tags: ["interactive", "binary search"]
+   on_judge: false
