@@ -22,8 +22,33 @@ bool finish();
 
 | Το πρόγραμμά σας καλεί | Η συνάρτηση επιστρέφει | Περιγραφή |
 | :--- | :--- | :--- |
-| $$\texttt{getNQ}()$$ | $$\texttt{(5, 15)}$$ | Αρχίζει ο 1ος γύρος με $$N = 5$$ λαμπτήρες και επιτρέπονται το πολύ $$Q = 15$$ κινήσεις. Ας υποθέσουμε ότι η αρχική κατάσταση είναι:<br><center><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center> |
+| $$\texttt{getNQ}()$$ | $$\texttt{\{5, 15\}}$$ | Αρχίζει ο 1ος γύρος με $$N = 5$$ λαμπτήρες και επιτρέπονται το πολύ $$Q = 15$$ κινήσεις. Ας υποθέσουμε ότι η αρχική κατάσταση είναι:<br><center><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center> |
 | $$\texttt{move(1, 3)}$$ | $$\texttt{2}$$ | Οι τρεις πρώτοι λαμπτήρες έχουν αλλάξει κατάσταση και είναι αναμμένοι $$2$$ λαμπτήρες.<br><center><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center> |
 | $$\texttt{move}(2,4)$$ | $$\texttt{3}$$ | <center><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center> |
 | $$\texttt{move}(1,3)$$ | $$\texttt{0}$$ | <center><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center> |
 | $$\texttt{finish}()$$ | $$\texttt{false}$$ | Ο 1ος γύρος τελείωσε επιτυχώς και θα υπάρξει και επόμενος. |
+| $$\texttt{getNQ}()$$ | $$\texttt{\{4, 5\}}$$ | Αρχίζει ο 2ος γύρος με $$N = 4$$ λαμπτήρες και επιτρέπονται το πολύ $$Q=5$$ κινήσεις. Ας υποθέσουμε ότι η αρχική κατάσταση είναι: <center><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center>|
+| $$\texttt{move}(1, 3)$$ | $$\texttt{1}$$ |  <center><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-on.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center>|
+| $$\texttt{move}(2, 2)$$ | $$\texttt{0}$$ |  <center><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><img width="35px" src="/assets/34-camp-lights-lightbulb-off.svg"/><center>|
+| $$\texttt{finish}()$$ | $$\texttt{true}$$ | Ο 2ος γύρος τελείωσε επιτυχώς και δε θα υπάρξει άλλος. Το πρόγραμμά σας πρέπει να τερματιστεί. |
+
+## Περιορισμοί 
+
+Το πλήθος των γύρων δε θα υπερβαίνει το $$10$$
+ - Το πλήθος των λαμπτήρων σε κάθε γύρο θα είναι $$1 \leq N \leq 100.000$$.
+ - Θεωρήστε ότι οι απαντήσεις των τριών συναρτήσεων μπορεί να εξαρτώνται από τη σειρά των κινήσεων που κάνετε (ο βαθμολογητής είναι προσαρμοστικός / adaptive).
+ - Αν παραβιάσετε το πρωτόκολλο επικοινωνίας, το πρόγραμμά σας θα τερματιστεί και θα θεωρηθεί ότι απέτυχε η περίπτωση ελέγχου. Ενδεικτικά και χάριν παραδείγματος, τα παρακάτω θεωρούνται παραβιάσεις του πρωτοκόλλου επικοινωνίας:
+   - Κλήση της $$\texttt{getNQ}$$ σε οποιαδήποτε στιγμή εκτός από την αρχή ενός γύρου.
+   - Κλήση της $$\texttt{finish}$$ σε οποιαδήποτε στιγμή εκτός όταν οι λαμπτήρες είναι όλοι σβηστοί.
+   - Κλήση της $$\texttt{move}$$ πριν τη $$\texttt{getNQ}$$ ή μετά τη $$\texttt{finish}$$ ενός γύρου.
+   - Κλήση οποιασδήποτε συνάρτησης αφότου η $$\texttt{finish}$$ επιστρέψει $$\texttt{true}$$.
+   - Κλήση της $$\texttt{move}$$ με παραμέτρους εκτός των ορίων που αναφέρονται.
+   - Κληση της $$\texttt{move}$$ περισσότερες από $$Q$$ φορές σε κάποιο γύρο.
+   - Χρήση οποιασδήποτε εντολής εισόδου/εξόδου.
+
+## Subtasks
+ - Για περιπτώσεις ελέγχου συνολικής αξίας 30%, θα είναι $$Q = 3N$$.
+ - Για τις υπόλοιπες περιπτώσεις ελέγχου, θα είναι $$Q = N + 1$$.
+
+**Μέγιστος χρόνος εκτέλεσης**: $$1$$ sec.<br>
+**Μέγιστη διαθέσιμη μνήμη**: $$64$$ MB.
