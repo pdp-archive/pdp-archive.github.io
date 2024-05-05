@@ -69,7 +69,7 @@ police:
    testcases_url: "https://drive.google.com/file/d/1w-QnODgwNj2uhpUmuX-JUNdf3MH8pyEf/view"
    codes_in_git: false
    solution_tags: ["greedy", "sorting"]
-   on_judge: false
+   on_judge: true
 
 vatraxia:
    full_name: "VATRAXIA"
@@ -79,7 +79,7 @@ vatraxia:
    testcases_url: "https://drive.google.com/file/d/15HdlMWb8UlXF2EyaBIXzCTLJufE_hVC_/view"
    codes_in_git: false
    solution_tags: ["link-cut trees", "trees"]
-   on_judge: false
+   on_judge: true
 
 prettytree:
    full_name: "PRETTYTREE"
@@ -89,7 +89,7 @@ prettytree:
    testcases_url: "https://drive.google.com/file/d/1X1WJGO1VE7LH9tWa_LOAvIIij8KZfdJa/view"
    codes_in_git: false
    solution_tags: ["link-cut trees", "trees"]
-   on_judge: false
+   on_judge: true
 
 lights:
    full_name: "LIGHTS"
@@ -99,4 +99,4 @@ lights:
    testcases_url: "https://drive.google.com/file/d/1O4lugBEDkUKcWzxtQjAK3dOY6MniIzaE/view"
    codes_in_git: false
    solution_tags: ["interactive", "binary search"]
-   on_judge: false
+   on_judge: false # Requires custom compilation (not currently supported on judge).
