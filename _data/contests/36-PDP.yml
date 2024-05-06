@@ -56,6 +56,6 @@ bitsign:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: ["dp","memoization", "exhaustive search", "precomputation"]
+   solution_tags: ["dp", "exhaustive search", "precomputation"]
    on_judge: false
    points: 30

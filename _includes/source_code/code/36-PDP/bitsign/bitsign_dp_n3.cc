@@ -16,11 +16,11 @@ int main() {
       int N, M;
       
       fscanf(fi, "%d %d\n", &N, &M);
-      std::vector<int> s(M);
       for (int i = 0; i < N; ++i) {
          fscanf(fi, "%c", &c[i+1]);
       }
       c[0] = c[N+1] = '0';
+      std::vector<int> s(M);
       for (int i = 0; i < M; ++i) {
          fscanf(fi, "%d", &s[i]);
       }
@@ -35,7 +35,7 @@ int main() {
             dp[j][i] = dp[j][i-1]; // Μπορούμε απλά να προσθέσουμε ένα 0.
             int first_zero_to_left = i - 1;
             while (c[first_zero_to_left] != '0') --first_zero_to_left;
-            if (i - first_zero_to_left - 1 >= s[j-1]) { // Υπάρχουν αρκετά '1' ή '.'?
+            if (i - first_zero_to_left - 1 >= s[j-1]) { // Υπάρχουν αρκετά ‘1' ή ‘.'?
                dp[j][i] = (dp[j][i] + dp[j - 1][i - s[j-1] - 1]) % MOD;
             }
          }
