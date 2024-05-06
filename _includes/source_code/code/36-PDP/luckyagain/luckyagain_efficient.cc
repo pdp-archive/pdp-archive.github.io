@@ -1,8 +1,9 @@
 #include <cstdio>
-#include <unordered_map>
 #include <vector>
 
 typedef long long ll;
+
+ll counts[10 /* πλήθος ψηφίων */][82 /* άθροισμα ψηφίων */]; // Πλήθος αριθμών
 
 int main() {
    FILE *fi = fopen("luckyagain.in", "r");
@@ -11,8 +12,6 @@ int main() {
    
    std::vector<std::vector<int>> digits(N);
    std::vector<int> digit_sum(N, 0);
-   std::unordered_map<int /* άθροισμα ψηφίων */, long long /* πλήθος αριθμών */> 
-      counts[10 /* πλήθος ψηφίων */];
    
    for (int i = 0; i < N; ++i) {
       long temp;
@@ -32,8 +31,8 @@ int main() {
    fclose(fi);
    
    ll total_count = 0;
-   // Οι αριθμοί με το ίδιο πλήθος ψηφίων θα μετρηθούν δύο φορές,
-   // επομένως κρατάμε το πλήθος αυτών ώστε να το αφαιρέσουμε από το σύνολο.
+   // Οι αριθμοί με το ίδιο πλήθος ψηφίων θα μετρηθούν δύο φορές. Επομένως κρατάμε 
+   // το πλήθος αυτών ώστε να το αφαιρέσουμε το μισό από το σύνολο.
    ll same_digit_count = 0;
    for (int j = 0; j < N; ++j) {
       const int sum_of_digits = digit_sum[j];
@@ -45,7 +44,9 @@ int main() {
       for (int i = 0; 2 * i < len; ++i) {
          ll cur_count = counts[len - 2 * i][sum_of_digits - 2 * suffix_sum];
          total_count += cur_count;
-         if (i == 0) same_digit_count += cur_count - 1;
+         if (i == 0) { // Το μέσο είναι στο τέλος του αριθμού.
+            same_digit_count += cur_count - 1; // -1, για να μην μετρήσουμε τον εαυτό του.
+         }
          suffix_sum += digits[j][i];
       }
       
@@ -55,7 +56,9 @@ int main() {
       for (int i = 0; 2 * i < len; ++i) {
          ll cur_count = counts[len - 2 * i][sum_of_digits - 2 * prefix_sum];
          total_count += cur_count;
-         if (i == 0) same_digit_count += cur_count - 1;
+         if (i == 0) { // Το μέσο είναι στην αρχή του αριθμού.
+            same_digit_count += cur_count - 1;
+         }
          prefix_sum += digits[j][len - i - 1];
       }
       

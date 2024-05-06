@@ -6,7 +6,7 @@ typedef long long ll;
 
 bool is_lucky(const std::vector<int>& digitsA, const std::vector<int>& digitsB) {
    int total_length = (digitsA.size() + digitsB.size());
-   if (total_length % 2 == 1) return false;
+   if (total_length % 2 == 1) return false; // Αν έχει μονό πλήθος ψηφίων, τότε δεν είναι τυχερός.
    
    int cur_sum[2]; 
    cur_sum[1] = 0; // Το άθροισμα των ψηφίων του πρώτου μισού.

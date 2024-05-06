@@ -45,3 +45,4 @@ luckyagain:
    codes_in_git: true
    solution_tags: ["map", "bst", "counting", "decimal numbers", "number bases"]
    on_judge: false
+   points: 30
