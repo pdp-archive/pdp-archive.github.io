@@ -8,7 +8,7 @@ olivetrees:
    solution_author: "Μποκής Κωνσταντίνος"
    codes_in_git: true
    solution_tags: ["monotonic stack", "RMQ",  "sqrt decomposition",  "sparse table",  "binary search", "segment tree"]
-   on_judge: false
+   on_judge: true
 
 publib:
    full_name: "Η δημόσια βιβλιοθήκη"
@@ -20,7 +20,7 @@ publib:
    solution_author: ""
    codes_in_git: true
    solution_tags: ["bfs", "shortest-paths"]
-   on_judge: false
+   on_judge: true
 
 allthatjazz:
    full_name: "All that jazz"
@@ -32,7 +32,20 @@ allthatjazz:
    solution_author: "Μποκής Κωνσταντίνος"
    codes_in_git: true
    solution_tags: ["two pointers","sorting","binary search"]
+   on_judge: true
+
+luckyagain:
+   full_name: "Τυχεροί αριθμοί"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["map", "bst", "counting", "decimal numbers", "number bases"]
    on_judge: false
+   points: 30
 
 bitsign:
    full_name: "Bits με υπογραφή"
@@ -43,6 +56,6 @@ bitsign:
    solution: true
    solution_author: ""
    codes_in_git: true
-   points: 30
    solution_tags: ["dp","memoization", "exhaustive search", "precomputation"]
    on_judge: false
+   points: 30
