@@ -34,3 +34,15 @@ allthatjazz:
    solution_tags: ["two pointers","sorting","binary search"]
    on_judge: true
 
+luckyagain:
+   full_name: "Τυχεροί αριθμοί"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["map", "bst", "counting", "decimal numbers", "number bases"]
+   on_judge: false
+   points: 30
