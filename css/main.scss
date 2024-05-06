@@ -7,6 +7,11 @@ body {
   font-family: "Segoe UI", Helvetica;
 }
 
+/* Font size of math formulas. */
+.katex { font-size: 1.1em !important; } 
+/* Font size of inline code. (Should match size of math formulas. */
+.language-plaintext { font-size: 1.1em; }
+
 code {
   font-family: 'KaTeX_Typewriter';
 }

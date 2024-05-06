@@ -46,3 +46,16 @@ luckyagain:
    solution_tags: ["map", "bst", "counting", "decimal numbers", "number bases"]
    on_judge: false
    points: 30
+
+bitsign:
+   full_name: "Bits με υπογραφή"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["dp", "exhaustive search", "precomputation"]
+   on_judge: false
+   points: 30

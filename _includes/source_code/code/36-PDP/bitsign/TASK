@@ -1,0 +1,35 @@
+TASK(
+   name = "bitsign",
+   test_count = 21,
+   files_dir = "testdata/36-PDP/bitsign/",
+   input_file = "bitsign.in",
+   output_file = "bitsign.out",
+   time_limit = 1,
+   mem_limit = 256,
+   solutions = [
+      SOLUTION(
+         name = "bitsign_dp_n2",
+         source = "bitsign_dp_n2.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "bitsign_dp_n2_mem",
+         source = "bitsign_dp_n2_mem.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "bitsign_dp_n3",
+         source = "bitsign_dp_n3.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "bitsign_brute_force",
+         source = "bitsign_brute_force.cc",
+         passes_up_to = 8,
+         lang = "c++",
+      ),
+   ]
+)
