@@ -1,0 +1,4 @@
+---
+layout: solution
+codename: bureaucracy
+---
