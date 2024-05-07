@@ -1,0 +1,17 @@
+TASK(
+   name = "bureaucracy",
+   test_count = 11,
+   files_dir = "testdata/36-PDP/bureaucracy/",
+   input_file = "bureaucracy.in",
+   output_file = "bureaucracy.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "bsearch_RlogR",
+         source = "bsearch_RlogR.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
