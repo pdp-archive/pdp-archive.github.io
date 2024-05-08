@@ -10,23 +10,22 @@ std::vector<long> W;//όλα τα βάρη των ακμών
 std::vector<bool> D;
 
 long bfs(long limit){
-    std::vector<bool> visit(N,false);
-    long dest_reach = 0, time = -1, coins = 0;
+    std::vector<bool> visit(N+1, false);
+    long dest_reach = 0, //πόσους τελικούς κόμβους φτάσαμε 
+         time = -1,//απόσταση σε ακμές από αφετηρία
+         coins = 0;//χρυσά νομίσματα που ξοδέψαμε ως τώρα
     std::queue<long> Q;
     Q.push(0); visit[0]=true;
     while(!Q.empty()){
         time++;//προχωρήσαμε ακόμα μια ακμή (ημέρα εργασίας)
-        for(long i=0,sz=Q.size(); i<sz; i++){
+        for(long i=0, sz=Q.size(); i<sz; i++){//sz: κόμβοι απόστασης time από αφετηρία
             long v = Q.front(); Q.pop();
-            for(auto e:edge[v]){
-                auto [w,u] = e;
-                if(w>limit)continue; //βάρος εκτός ορίου
-                if(visit[u])continue;//τον ανακαλύψαμε νωρίτερα
-                visit[u] = true; //μάρκαρε την ανακάλυψη του
-                if(D[u]){//είναι τελικός κόμβος;
-                    dest_reach++;
-                    coins += time;
-                }
+            for(auto [w,u]:edge[v]){//c++17 feature:structured bindings
+                if(w > limit) continue; //βάρος εκτός ορίου
+                if(visit[u]) continue;//τον ανακαλύψαμε νωρίτερα
+                visit[u] = true;
+                if(D[u])//είναι τελικός κόμβος;
+                    ++dest_reach, coins += time;
                 Q.push(u);
             }
         }
@@ -41,43 +40,41 @@ int main(){
     FILE *out= fopen("bureaucracy.out","w");    
     
     long L=-1/*min L*/, C=-1/*min νομίσματα*/;
-    fscanf(in,"%ld%ld%ld%ld",&N,&Snr,&Dnr,&R);
-    D.resize(N+1,false);
+    fscanf(in, "%ld%ld%ld%ld", &N, &Snr, &Dnr, &R);
+    D.resize(N+1, false);
     edge.resize(N+1);
     
     //ανάγνωση αρχείου εισόδου
-    for(long i=0,s;i<Snr;i++){
-        fscanf(in,"%ld",&s);
-        edge[0].push_back({0,s});
+    for(long i=0, s; i < Snr; i++){ 
+        fscanf(in, "%ld", &s); 
+        edge[0].push_back( {0, s} ); 
     }
-    for(long i=0,u;i<Dnr;i++){
-        fscanf(in,"%ld",&u);
-        D[u] = true;//ο u είναι προορισμός
+    for(long i=0, u; i < Dnr; i++){ 
+        fscanf(in, "%ld", &u); 
+        D[u] = true;/*u: τελικός κόμβος*/
     }
-    for(long v,u,e,i=0;i<R;i++){
-        fscanf(in,"%ld%ld%ld\n",&v,&u,&e);
-        edge[v].push_back({e,u});
+    for(long v, u, e, i=0; i < R; i++){
+        fscanf(in, "%ld%ld%ld\n", &v, &u, &e);
+        edge[v].push_back( {e, u} );
         W.push_back(e);
     }    
     
     //W:θα έχει όλα τα E(βάρη) σε γνησίως αύξουσα σειρά
-    std::sort(W.begin(),W.end());
+    std::sort(W.begin(), W.end());
     //πέταξε τα διπλότυπα από τον W
-    W.erase(std::unique(W.begin(),W.end()),W.end());
+    W.erase( std::unique(W.begin(), W.end()), W.end());
     
     long left = 0, right = W.size()-1;
-    while(left<=right){
-        long mid = (left+right)/2;
-        long Ctest = bfs(W[mid]);
-        if(Ctest>0L){
-            L = W[mid];
-            C = Ctest;
+    while(left <= right){
+        long mid = (left + right) / 2, Ctest = bfs(W[mid]);
+        if(Ctest > 0L){
+            L = W[mid], C = Ctest;
             right = mid-1;
         } else {
             left = mid+1;
         }
     }
-    fprintf(out,"%ld %ld\n",L,C);
+    fprintf(out, "%ld %ld\n", L, C);
     
     fclose(out);
     fclose(in);
