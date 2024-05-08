@@ -13,5 +13,11 @@ TASK(
          passes_all,
          lang = "c++",
       ),
+      SOLUTION(
+         name = "expand_graph_NxR",
+         source = "expand_graph_NxR.cc",
+         passes_up_to = 9,
+         lang = "c++",
+      ),
    ]
 )
