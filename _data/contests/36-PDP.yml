@@ -39,12 +39,12 @@ luckyagain:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1VfN6nAEuq64DTJcRjJk_Deb3YAncETBm/view"
    solution: true
    solution_author: ""
    codes_in_git: true
    solution_tags: ["map", "bst", "counting", "decimal numbers", "number bases"]
-   on_judge: false
+   on_judge: true
    points: 30
 
 bitsign:
@@ -52,12 +52,12 @@ bitsign:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1lHDarFD4KZIe0uFIpP7DtTqnTWkqBa5R/view"
    solution: true
    solution_author: ""
    codes_in_git: true
    solution_tags: ["dp", "exhaustive search", "precomputation"]
-   on_judge: false
+   on_judge: true
    points: 30
 
 bureaucracy:
@@ -65,10 +65,10 @@ bureaucracy:
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1AXuG5L4SzRkTnljViElY8qWqOvNoHOTd/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1A5kYlEWPgP2QzG6gEgnmxpySMbpbhfpd/view"
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    solution_tags: ["greedy", "bfs", "directed graph", "binary search" ]
-   on_judge: false
+   on_judge: true
    points: 40
