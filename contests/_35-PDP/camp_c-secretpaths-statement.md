@@ -64,7 +64,7 @@ codename: secretpaths
 
 <table><tr><th>Παράδειγμα 1</th><th>Παράδειγμα 2</th><th>Δίκτυο Πόλεων</th></tr> <tr><td><table> <tr><th>secretpaths.in</th><th>secretpaths.out</th></tr>
 <tr><td> 8 7 0<br>3 5<br>8 4<br>1 6<br>2 8<br>1 8<br>8 3<br>7 3<br>B 5 3<br>A 3 8<br>B 2 7<br>B 1 4<br>A 8 1<br>B 1 4<br>B 6 3<br></td><td>yes<br>no<br>yes<br>no<br>no</td></tr> </table></td>  <td><table> <tr><th>secretpaths.in</th><th>secretpaths.out</th></tr>
-<tr><td> 8 7 1<br>3 5<br>8 4<br>1 6<br>2 8<br>1 8<br>8 3<br>7 3<br>B 5 3<br>A 3 8<br>B 2 7<br>B 1 4<br>A 8 1<br>B 1 4<br>B 6 3<br></td><td>yes<br>yes<br>no<br>yes<br>no</td></tr> </table></td> <td><br><br>
+<tr><td>8 7 1<br>3 5<br>8 4<br>1 6<br>2 8<br>1 8<br>8 3<br>7 3<br>B 5 3<br>A 3 8<br>A 3 8<br>A 2 4<br>B 2 7<br>B 1 4<br>A 6 7<br></td><td>yes<br>yes<br>no<br>yes<br>no</td></tr> </table></td> <td><br><br>
 <img src="/assets/35-camp-d-d1c1.svg" alt="centered image" width="180px" />
 </td></tr></table>
 
