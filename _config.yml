@@ -56,6 +56,9 @@ collections:
   36-PDP:
     output: true
     permalink: /:collection/:name
+  37-PDP:
+    output: true
+    permalink: /:collection/:name
 
 defaults:
   - scope:
@@ -148,6 +151,12 @@ defaults:
     values:
       contest: "36ος ΠΔΠ"
       contest_url: "36-PDP"
+  - scope:
+      path: ""
+      type: "37-PDP"
+    values:
+      contest: "37ος ΠΔΠ"
+      contest_url: "37-PDP"
 
 exclude: [
   contributing.md,
