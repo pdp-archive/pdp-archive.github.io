@@ -1,0 +1,47 @@
+samepizzas:
+   full_name: "Όμοιες πίτσες"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
+
+polybox:
+   full_name: "Πολύγωνο κουτιών"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
+
+finding:
+   full_name: "Ψάχνοντας τους ανταγωνιστές"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
+
+hiring:
+   full_name: "Πρόσληψη πιτσαδόρων"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
