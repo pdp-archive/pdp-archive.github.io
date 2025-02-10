@@ -62,7 +62,7 @@ $$2B - 2 = d_1 + d_2 \Rightarrow B = \frac{d_1 + d_2}{2} + 1.$$
 
 {% include code.md solution_name='finding.cc' %}
 
-Στα τρία πρώτα testcases, που έχουμε πρόσβαση στην διαφορά $$D = B - A$$, χρειαζόμαστε μόνο το πρώτο query. Άρα, αλλάζουμε τον κώδικα ως εξής:
+Στα τρία πρώτα testcases που έχουμε πρόσβαση στην διαφορά $$D = B - A$$, χρειαζόμαστε μόνο το πρώτο query. Άρα, αλλάζουμε τον κώδικα ως εξής:
 
 {% include code.md solution_name='finding_combined.cc' %}
 
