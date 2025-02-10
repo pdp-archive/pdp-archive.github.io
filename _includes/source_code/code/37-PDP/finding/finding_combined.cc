@@ -6,8 +6,8 @@ int main() {
       int d1 = query(1);
       int d2 = (getSubtask() <= 3) ? getD() : query(d1/2 + 1);
       
-      int A = (d1 + d2) / 2;
-      int B = (d1 - d2) / 2;
+      int A = (d1 - d2) / 2 + 1;
+      int B = (d1 + d2) / 2 + 1;
       more_testcases = answer(A, B);
    }
    return 0;
