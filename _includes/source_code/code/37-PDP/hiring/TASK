@@ -39,8 +39,8 @@ TASK(
       ),
       SOLUTION(
          name = "hiring",
-         source = "hiring.cc",
-         passes_up_to = 10,
+         source = "hiring_efficient.cc",
+         passes_all,
          lang = "c++",
       ),
    ]
