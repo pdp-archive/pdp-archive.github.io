@@ -12,5 +12,5 @@ int main() {
       int B = (d1 + d2) / 2 + 1;
       more_testcases = answer(A, B);
    }
-   return true;
+   return 0;
 }
