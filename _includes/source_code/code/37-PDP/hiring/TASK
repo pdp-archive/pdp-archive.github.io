@@ -1,0 +1,47 @@
+TASK(
+   name = "hiring",
+   test_count = 60,
+   files_dir = "testdata/37-PDP/hiring/",
+   input_file = "hiring.in",
+   output_file = "hiring.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "hiring_brute_force",
+         source = "hiring_brute_force.cc",
+         passes_up_to = 7,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hiring_subtask_2",
+         source = "hiring_subtask_2.cc",
+         passes_only = [9,10,11,12,13,14,15,16,17,18],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hiring_subtask_3",
+         source = "hiring_subtask_3.cc",
+         passes_only = [19,20,21,22,23],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hiring_subtask_4",
+         source = "hiring_subtask_4.cc",
+         passes_only = [24,25,26,27,28,29,30],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hiring_subtask_5",
+         source = "hiring_subtask_5.cc",
+         passes_only = [31,32,33,34,35,36,37,38,39,40,41],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "hiring",
+         source = "hiring.cc",
+         passes_up_to = 10,
+         lang = "c++",
+      ),
+   ]
+)
