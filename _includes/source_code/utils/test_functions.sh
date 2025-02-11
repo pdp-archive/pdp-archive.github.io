@@ -27,20 +27,27 @@ function run_test() {
    
    # Step 2: Compile the executable.
    echo -e "      Compiling.."
-   comp_result=$($compilation_command ../$5$6 -oexecutable)
+   if [ "$compilation_command" = "javac" ]; then
+      # Java outputs a class file, so this needs special handling.
+      comp_result=$($compilation_command -d . ../$5$6 )
+      executable_name="Main.class"
+   else
+      comp_result=$($compilation_command ../$5$6 -oexecutable)
+      executable_name="executable"
+   fi;
    
-   if [[ ! -x ./executable ]]; then
+   if [[ ! -f ./$executable_name ]]; then
       # Check if executable is present in source dir (pascal)
-      if [[ ! -x ../$code_dir/executable ]]; then
+      if [[ ! -x ../$code_dir/$executable_name ]]; then
          echo -e "      \e[31mExecutable not produced\e[0m"
          echo -e "      Compiler exited with:"
          echo "${comp_result}"
          cd ../
-         rm -r tmp/
+         # rm -r tmp/
          return 0
       else
          # Object files need to be moved for Pascal.
-         mv ../$code_dir/executable .
+         mv ../$code_dir/$executable_name .
          mv ../$code_dir/${code_filename%.*}.o .
       fi;
    fi
@@ -57,7 +64,11 @@ function run_test() {
       # Link the input with the canonical name.
       ln -sf ../${norm1} $fixed_inp_name
       # Run the code.
-      timeout $time_limit ./executable
+      if [ "$compilation_command" = "javac" ]; then
+         timeout $time_limit java Main
+      else
+         timeout $time_limit ./$executable_name
+      fi;
       # Check that no timeout occurred.
       if [ "$?" = 124 ]; then
          echo -e "         [\e[93mtimeout\e[0m] Test $i"

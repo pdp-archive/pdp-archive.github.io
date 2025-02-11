@@ -19,7 +19,8 @@ const std::string kCacheFilename = "cache.csv";
 std::map<std::string, std::string> compilation_commands({
    { "c++", "g++ -O2 -DCONTEST -s -static -lm -w" },
    { "c", "gcc -std=c99 -O2 -DCONTEST -s -static -lm -w" },
-   { "pas", "fpc -O2 -dCONTEST -XS" }
+   { "pas", "fpc -O2 -dCONTEST -XS" },
+   { "java", "javac" }
 });
 
 struct TopLevel {

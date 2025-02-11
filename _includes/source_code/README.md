@@ -80,7 +80,7 @@ bash tester.sh
                name = "{codename λύσης - πρέπει να είναι μοναδικό}",
                source = "{όνομα αρχείου λύσης}",
                {Ένα από τα εξής: passes_all, passes_only = [1, 2, 3], passes_all_except_for = [5, 10]}, 
-               lang = "{Μία από τις: c++, c, pas}",
+               lang = "{Μία από τις: c++, c, pas, java}",
                author = PERSON(
                   name = "{Το όνομα ή ψευδόνυμό σας. Ή το όνομα του μαθητή υπέβαλε τη λύση}", 
                   school = "{To σχολείο του μαθητή αν ήταν ενδεικτική λύση}",
