@@ -54,5 +54,11 @@ TASK(
             name = "GeroVeni",
          )
       ),
+      SOLUTION(
+         name = "aris_java",
+         source = "aris.java",
+         passes_all,
+         lang = "java",
+      ),
    ]
 )
