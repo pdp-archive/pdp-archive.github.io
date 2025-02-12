@@ -4,10 +4,10 @@ samepizzas:
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
    testcases_url: ""
-   solution: false
+   solution: true
    solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   codes_in_git: true
+   solution_tags: [sorting, selection, binary search, priority queue, greedy, set]
    on_judge: false
 
 polybox:
