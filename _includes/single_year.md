@@ -8,6 +8,8 @@
 
 {% include single_stage.md stage="a" stage_title="Α' Φάση" %}
 
+{% include single_stage.md stage="b" stage_title="Β' Φάση" %}
+
 {% include single_stage.md stage="bgym" stage_title="Β' Φάση γυμνασίου" %}
 
 {% include single_stage.md stage="blyk" stage_title="Β' Φάση λυκείου" %}

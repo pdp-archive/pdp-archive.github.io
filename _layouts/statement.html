@@ -3,6 +3,8 @@
 {% assign task = contest[page.codename] %}
 {% if task.stage == "c" %}
   {% assign stage_name = "Γ' Φάση" %}
+{% elsif task.stage == "b" %}
+  {% assign stage_name = "B' Φάση" %}
 {% elsif task.stage == "bgym" %}
   {% assign stage_name = "B' Φάση Γυμνασίου" %}
 {% elsif task.stage == "blyk" %}
