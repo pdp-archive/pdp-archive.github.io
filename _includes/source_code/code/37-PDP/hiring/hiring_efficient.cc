@@ -11,7 +11,7 @@ struct Score {
 };
 
 int main(){
-   long P,N,X,Y,Z;
+   long P, N, X, Y, Z;
    
    FILE *in = fopen("hiring.in", "r");
    fscanf(in, "%ld\n", &P);
@@ -22,7 +22,6 @@ int main(){
    
    std::vector<Score> scores(N);
    for(long i = 0; i < N; ++i) {
-      long A, B, C;
       fscanf(in, "%ld%ld%ld", &scores[i].A, &scores[i].B, &scores[i].C);
    }
    fclose(in);

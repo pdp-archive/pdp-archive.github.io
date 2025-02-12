@@ -6,7 +6,7 @@
 typedef long long ll;
 
 int main(){
-   long P,N,X,Y,Z;
+   long P, N, X, Y, Z;
    ll ans = 0;
    
    FILE *in = fopen("hiring.in", "r");
