@@ -9,9 +9,7 @@ class Main {
  
    public static void main(String[] arguments) throws Exception {
       Scanner sc = new Scanner(new FileInputStream("polybox.in"));
- 
-      PrintWriter out = new PrintWriter(new File("polybox.out"));
-      
+       
       int subtask = sc.nextInt();
       int N = sc.nextInt();
       ArrayList<BigInteger> w = new ArrayList<>(), h = new ArrayList<>();
@@ -30,6 +28,7 @@ class Main {
       for(int i=0;i<N;i++)
         ans = ans.add(h.get(i).multiply(two));
  
+      PrintWriter out = new PrintWriter(new File("polybox.out"));
       out.println(ans);
       out.close();
    }
