@@ -4,8 +4,7 @@
 
 int main(){
    FILE *in = fopen("samepizzas.in", "r");
-   FILE *out= fopen("samepizzas.out", "w");
-   long P,N,K;
+   long P, N, K;
    fscanf(in, "%ld", &P);
    fscanf(in, "%ld%ld", &N, &K);
    
@@ -16,6 +15,7 @@ int main(){
       if (i == 0 || A[i] < mn) mn = A[i];
       if (i == 0 || A[i] > mx) mx = A[i];
    }
+   fclose(in);
     
    long st = mn, en = mx;
    while (st < en) {
@@ -26,8 +26,8 @@ int main(){
       else en = md - 1;
    }
     
+   FILE *out= fopen("samepizzas.out", "w");
    fprintf(out, "%ld\n", st);
    fclose(out);
-   fclose(in);
    return 0;
 }
