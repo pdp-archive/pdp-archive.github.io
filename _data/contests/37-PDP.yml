@@ -43,5 +43,5 @@ hiring:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: [sorting, greedy, local search, set]
+   solution_tags: ["sorting", "greedy", "local search", "priority queue", "set"]
    on_judge: false
