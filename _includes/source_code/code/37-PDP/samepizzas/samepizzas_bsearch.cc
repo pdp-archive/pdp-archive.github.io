@@ -6,8 +6,8 @@ int main(){
    FILE *in = fopen("samepizzas.in", "r");
    FILE *out= fopen("samepizzas.out", "w");
    long P,N,K;
-   fscanf(in, "%ld\n", &P);
-   fscanf(in, "%ld %ld\n", &N, &K);
+   fscanf(in, "%ld", &P);
+   fscanf(in, "%ld%ld", &N, &K);
    
    std::vector<long> A(N);
    long mn, mx;

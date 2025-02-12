@@ -29,7 +29,7 @@ codename: samepizzas
 
 Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='samepizzas_select.cc' %}).
 
-Υλοποιήσεις αυτής της συνάρτησης μπορούμε να κάνουμε επίσης με:
+Το $$k$$-οστό μεγαλύτερο στοιχείο μπορούμε επίσης να το βρούμε ως εξής:
  - Δυαδική αναζήτηση σε χρόνο $$O(N \log N)$$ (Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='samepizzas_bsearch.cc' %}))
 
 {% include code.md solution_name='samepizzas_pq.cc' start=20 end=27  %}
@@ -44,4 +44,4 @@ codename: samepizzas
  - **Subtask 1 $$N = 2$$:** Όταν $$K = 1$$, τότε η απάντηση είναι $$\max(A_1, A_2)$$, διαφορετικά είναι $$\min(A_1, A_2)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask1.cc' %})).
  - **Subtask 2 $$K = N$$:** Η απάντηση είναι $$\min(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask2.cc' %})).
  - **Subtask 3 $$K = 1$$:** Η απάντηση είναι $$\max(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask3.cc' %})).
- - **Subtask 4 $$N = 2$$:** Όταν $$N \leq 10.000$$, τότε περνάνε και οι λιγότερο αποδοτικοί αλγόριθμοι ταξινόμησης (όπως η insertion sort) ([κώδικας]({% include link_to_source.md solution_name='samepizzas_insertion_sort.cc' %}))
+ - **Subtask 4 $$N \leq 10.000$$:** Σε αυτή την περίπτωση περνάνε και οι λιγότερο αποδοτικοί αλγόριθμοι ταξινόμησης (όπως η insertion sort) ([κώδικας]({% include link_to_source.md solution_name='samepizzas_insertion_sort.cc' %}))
