@@ -31,11 +31,5 @@ TASK(
          passes_all,
          lang = "c++",
       ),
-	   SOLUTION(
-         name = "bigint_java",
-         source = "bigint.java",
-         passes_all,
-         lang = "java",
-      ),
    ]
 )
