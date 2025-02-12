@@ -7,10 +7,10 @@
 
 typedef long long ll;
 
-const int NPOW = 6;//αριθμητικό σύστημα που θα χρησιμοποιηθεί: 10^NPOW
+const int NPOW = 6;//Θα χρησιμοποιηθεί αριθμητικό σύστημα με βάση 10^NPOW
 const long NSYS = pow(10L,NPOW);
 
-typedef std::vector<long> bigint; //η θέση 0 περιέχει το Least Significant Digit 
+typedef std::vector<long> bigint; //η θέση 0 περιέχει το ψηφίο των μονάδων 
 
 void read(bigint& a){
     char s[45];
@@ -18,7 +18,7 @@ void read(bigint& a){
     a.clear();
     for(int i=strlen(s)-1;i>=0;i-=NPOW){//i=δεξιότερο άκρο ψηφίου
         ll d = 0;
-        for(int j=std::max(0,i-NPOW+1);j<=i;j++){
+        for(int j=std::max(0,i-NPOW+1);j<=i;j++){//το ψηφίο περιέχεται στις θέσεις j έως i
             d *= 10LL;
             d += s[j]-'0';
         }
@@ -30,7 +30,7 @@ void read(bigint& a){
 void write(const bigint& a){
     printf("%lu",a.size()==0?0:a[a.size()-1]);
     for(int i=a.size()-2;i>=0;i--)
-        printf("%0*lu",NPOW,a[i]);
+        printf("%0*lu",NPOW,a[i]);//τύπωσε το ψηφίο i σε πλάτος NPOW (συμπλήρωσε 0 αν χρειάζεται)
 }
 
 bigint operator +(const bigint& a,const bigint& b){
@@ -73,7 +73,7 @@ bool operator <= (const bigint& a,const bigint& b){
 }
 
 
-bigint operator - (const bigint& a,const bigint& b){//calculate abs(a-b)
+bigint operator - (const bigint& a,const bigint& b){
     //προσοχή λειτουργεί σωστά μόνο όταν a>=b
     assert(b<=a);
     bigint c;
@@ -92,7 +92,7 @@ bigint operator - (const bigint& a,const bigint& b){//calculate abs(a-b)
     return c;
 }
 
-bigint abs_diff(const bigint& a,const bigint& b){//calculate abs(a-b)
+bigint abs_diff(const bigint& a,const bigint& b){
     return (a<b) ? b - a : a - b;
 }
 
@@ -105,15 +105,15 @@ int main(){
     for(long i=0;i<N;i++)
         read(w[i]), read(h[i]);
     
-    //υπολόγισε στη μεταβλητή box την πιο πάνω και την πιο κάτω πλευρά της στοίβας
-    bigint box = w[0] + w[N-1];
-    //πρόσθεσε στη box όλα τα ενδιάμεσα εκτεθημένα τμήματα
+    //υπολόγισε στη μεταβλητή ans την πιο πάνω και την πιο κάτω πλευρά της στοίβας
+    bigint ans = w[0] + w[N-1];
+    //πρόσθεσε στη ans όλα τα ενδιάμεσα εκτεθειμένα τμήματα
     for(long i=0;i<N-1;i++)
-        box += abs_diff(w[i],w[i+1]);
+        ans += abs_diff(w[i],w[i+1]);
     //πρόσθεσε τα ύψη όλων των κουτιών
     for(long i=0;i<N;i++)
-        box += h[i] + h[i];
-    write(box);
+        ans += h[i] + h[i];
+    write(ans);
     putchar('\n');
     return 0;
 }

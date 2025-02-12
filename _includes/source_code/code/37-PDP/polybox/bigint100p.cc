@@ -7,7 +7,7 @@
 
 typedef long long ll;
 
-typedef std::vector<int> bigint; //η θέση 0 περιέχει το Least Significant Digit 
+typedef std::vector<int> bigint; //η θέση 0 περιέχει το ψηφίο των μονάδων 
 
 void read(bigint& a){
     char s[45];
@@ -82,7 +82,7 @@ bigint operator - (const bigint& a,const bigint& b){
     return c;
 }
 
-bigint abs_diff(const bigint& a,const bigint& b){//calculate abs(a-b)
+bigint abs_diff(const bigint& a,const bigint& b){
     return (a<b) ? b - a : a - b;
 }
 
@@ -95,15 +95,15 @@ int main(){
     for(long i=0;i<N;i++)
         read(w[i]), read(h[i]);
 
-    //υπολόγισε στη μεταβλητή box την πιο πάνω και την πιο κάτω πλευρά της στοίβας
-    bigint box = w[0] + w[N-1];
-    //πρόσθεσε στη box όλα τα ενδιάμεσα εκτεθημένα τμήματα
+    //υπολόγισε στη μεταβλητή ans την πιο πάνω και την πιο κάτω πλευρά της στοίβας
+    bigint ans = w[0] + w[N-1];
+    //πρόσθεσε στη ans όλα τα ενδιάμεσα εκτεθειμένα τμήματα
     for(long i=0;i<N-1;i++)
-        box += abs_diff(w[i],w[i+1]);
+        ans += abs_diff(w[i],w[i+1]);
     //πρόσθεσε τα ύψη όλων των κουτιών
     for(long i=0;i<N;i++)
-        box += h[i] + h[i];
-    write(box);
+        ans += h[i] + h[i];
+    write(ans);
     putchar('\n');
     return 0;
 }

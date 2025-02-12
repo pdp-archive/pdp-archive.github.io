@@ -4,10 +4,10 @@ samepizzas:
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
    testcases_url: ""
-   solution: false
+   solution: true
    solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   codes_in_git: true
+   solution_tags: [sorting, selection, binary search, priority queue, greedy, set]
    on_judge: false
 
 polybox:
@@ -19,11 +19,23 @@ polybox:
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
-   solution_tags: [greedy, big-integer, absolute value]
+   solution_tags: [greedy, big-integer, absolute value, geometry]
    on_judge: false
 
 finding:
    full_name: "Ψάχνοντας τους ανταγωνιστές"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [interactive, greedy, absolute value]
+   on_judge: false
+
+hiring:
+   full_name: "Πρόσληψη πιτσαδόρων"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
@@ -33,12 +45,36 @@ finding:
    codes_in_git: false
    solution_tags: []
    on_judge: false
-
-hiring:
-   full_name: "Πρόσληψη πιτσαδόρων"
-   stage: "a"
-   statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
+   
+shroompath:
+   full_name: "Μονοπάτι μανιταριών"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
    statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
+
+mergegame:
+   full_name: "Παιχνίδι συγχώνευσης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
+
+tiphunting:
+   full_name: "κυνήγι φιλοδωρημάτων"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
+   statement_md: false
    testcases_url: ""
    solution: false
    solution_author: ""
