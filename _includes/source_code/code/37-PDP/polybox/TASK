@@ -14,6 +14,12 @@ TASK(
          lang = "c++",
       ),
       SOLUTION(
+         name = "bigint_java",
+         source = "bigint.java",
+         passes_all,
+         lang = "java",
+      ),
+      SOLUTION(
          name = "bigint100p",
          source = "bigint100p.cc",
          passes_all,
