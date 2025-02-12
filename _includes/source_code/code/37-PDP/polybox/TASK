@@ -1,0 +1,35 @@
+TASK(
+   name = "polybox",
+   test_count = 36,
+   files_dir = "testdata/37-PDP/polybox/",
+   input_file = "polybox.in",
+   output_file = "polybox.out",
+   time_limit = 2,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "solution90p",
+         source = "solution90p.cc",
+         passes_up_to = 25,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "bigint_java",
+         source = "bigint.java",
+         passes_all,
+         lang = "java",
+      ),
+      SOLUTION(
+         name = "bigint100p",
+         source = "bigint100p.cc",
+         passes_all,
+         lang = "c++",
+      ),	  
+      SOLUTION(
+         name = "bigint100p2",
+         source = "bigint100p2.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
