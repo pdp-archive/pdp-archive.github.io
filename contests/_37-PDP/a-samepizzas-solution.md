@@ -19,7 +19,7 @@ codename: samepizzas
 
 {% include code.md solution_name='samepizzas_sort.cc'  %}
 
-Επίσης, μπορείτε να υλοποιήσετε κάποιον από τους γρήγορους αλγορίθμους ταξινόμησης όπως η mergesort, η quicksort ή η heapsort. Αν υλοποιήσετε κάποιους από τους πιο αργούς όπως η insertion sort ή η bubble sort, τότε η λύση σας θα έχει πολυπλοκότητα $$O(N^2)$$ και θα περάσει μόνο τα subtasks 1 και 4. 
+Επίσης, μπορείτε να υλοποιήσετε κάποιον από τους γρήγορους αλγορίθμους ταξινόμησης όπως η mergesort, η quicksort ή η heapsort. Αν υλοποιήσετε κάποιους από τους πιο αργούς όπως η insertion sort ή η bubble sort, τότε η λύση σας θα έχει πολυπλοκότητα $$O(N^2)$$ και θα περάσει μόνο τα υποπροβλήματα 1 και 4. 
 
 ## Λύση με select (100%)
 
@@ -29,19 +29,19 @@ codename: samepizzas
 
 Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='samepizzas_select.cc' %}).
 
-Το $$k$$-οστό μεγαλύτερο στοιχείο μπορούμε επίσης να το βρούμε ως εξής:
+Το $$k$$-οστό μεγαλύτερο στοιχείο μπορούμε επίσης να το βρούμε με:
  - Δυαδική αναζήτηση σε χρόνο $$O(N \log N)$$ (Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='samepizzas_bsearch.cc' %}))
 
-{% include code.md solution_name='samepizzas_pq.cc' start=20 end=27  %}
+{% include code.md solution_name='samepizzas_bsearch.cc' start=20 end=27  %}
 
  - Ουρά προτεραιότητας, όπου κρατάμε τα $$K$$ μεγαλύτερα στοιχεία που έχουμε συναντήσει μέχρι στιγμής, σε χρόνο $$O(N \log K)$$. (Δείτε ολόκληρο τον κώδικα [εδώ]({% include link_to_source.md solution_name='samepizzas_pq.cc' %}))
  
 {% include code.md solution_name='samepizzas_pq.cc' start=16 end=25  %}
 
-## Λύσεις για επιμέρους subtasks
+## Λύσεις για συγκεκριμένα υποπροβλήματα
 
-Για τα επιμέρους subtasks μπορείτε να κάνετε τα εξής:
- - **Subtask 1 $$N = 2$$:** Όταν $$K = 1$$, τότε η απάντηση είναι $$\max(A_1, A_2)$$, διαφορετικά είναι $$\min(A_1, A_2)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask1.cc' %})).
- - **Subtask 2 $$K = N$$:** Η απάντηση είναι $$\min(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask2.cc' %})).
- - **Subtask 3 $$K = 1$$:** Η απάντηση είναι $$\max(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask3.cc' %})).
- - **Subtask 4 $$N \leq 10.000$$:** Σε αυτή την περίπτωση περνάνε και οι λιγότερο αποδοτικοί αλγόριθμοι ταξινόμησης (όπως η insertion sort) ([κώδικας]({% include link_to_source.md solution_name='samepizzas_insertion_sort.cc' %}))
+Τα υποπροβλήματα μπορούν να λυθούν ως εξής:
+ - **Υποπρόβλημα 1 $$N = 2$$:** Όταν $$K = 1$$, τότε η απάντηση είναι $$\max(A_1, A_2)$$, διαφορετικά είναι $$\min(A_1, A_2)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask1.cc' %})).
+ - **Υποπρόβλημα 2 $$K = N$$:** Η απάντηση είναι $$\min(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask2.cc' %})).
+ - **Υποπρόβλημα 3 $$K = 1$$:** Η απάντηση είναι $$\max(A_1, \ldots, A_n)$$ ([κώδικας]({% include link_to_source.md solution_name='samepizzas_subtask3.cc' %})).
+ - **Υποπρόβλημα 4 $$N \leq 10.000$$:** Σε αυτή την περίπτωση περνάνε και οι λιγότερο αποδοτικοί αλγόριθμοι ταξινόμησης (όπως η insertion sort) ([κώδικας]({% include link_to_source.md solution_name='samepizzas_insertion_sort.cc' %}))

@@ -5,13 +5,13 @@
 
 int main(){
    FILE *in = fopen("samepizzas.in", "r");
-   FILE *out= fopen("samepizzas.out", "w");
-   long P,N,K;
+   long P, N, K;
    fscanf(in, "%ld", &P);
    fscanf(in, "%ld%ld", &N, &K);
    
    std::vector<long> A(N);
    for(long i = 0; i < N; ++i) fscanf(in, "%ld", &A[i]);
+   fclose(in);
    
    // Ορίζουμε μία ουρά προτεραιότητας που κρατάει τα Κ μεγαλύτερα στοιχεία, 
    // και το top() επιστρέφει το μικρότερο από αυτά.
@@ -24,8 +24,8 @@ int main(){
       }
    }
     
+   FILE *out= fopen("samepizzas.out", "w"); 
    fprintf(out, "%ld\n", pq.top());
    fclose(out);
-   fclose(in);
    return 0;
 }

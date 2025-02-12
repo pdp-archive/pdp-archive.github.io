@@ -4,8 +4,7 @@
 
 int main(){
    FILE *in = fopen("samepizzas.in", "r");
-   FILE *out= fopen("samepizzas.out", "w");
-   long P,N,K;
+   long P, N, K;
    fscanf(in, "%ld", &P);
    fscanf(in, "%ld%ld", &N, &K);
    
@@ -13,10 +12,12 @@ int main(){
    for(long i = 0; i < N; i++) {
       fscanf(in, "%ld", &A[i]);
    }
-   auto mn = *std::min_element(A.begin(), A.end());
-   fprintf(out, "%ld\n", mn);
-   
-   fclose(out);
    fclose(in);
+   
+   auto mn = *std::min_element(A.begin(), A.end());
+   
+   FILE *out= fopen("samepizzas.out", "w");
+   fprintf(out, "%ld\n", mn);
+   fclose(out);
    return 0;
 }
