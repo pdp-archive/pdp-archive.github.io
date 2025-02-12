@@ -20,17 +20,17 @@ class Main {
          h.add(sc.nextBigInteger());
       }
       
-      //υπολόγισε στη μεταβλητή box την πιο πάνω και την πιο κάτω πλευρά της στοίβας
-      BigInteger box = w.get(0).add(w.get(N-1));
-      //πρόσθεσε στη box όλα τα ενδιάμεσα εκτεθημένα τμήματα
+      //υπολόγισε στη μεταβλητή ans την πιο πάνω και την πιο κάτω πλευρά της στοίβας
+      BigInteger ans = w.get(0).add(w.get(N-1));
+      //πρόσθεσε στη ans όλα τα ενδιάμεσα εκτεθημένα τμήματα
       for(int i=0;i<N-1;i++)
-         box = box.add(w.get(i).subtract(w.get(i+1)).abs());
+         ans = ans.add(w.get(i).subtract(w.get(i+1)).abs());
       //πρόσθεσε τα ύψη όλων των κουτιών
       BigInteger two = new BigInteger("2");
       for(int i=0;i<N;i++)
-        box = box.add(h.get(i).multiply(two));
+        ans = ans.add(h.get(i).multiply(two));
  
-      out.println(box);
+      out.println(ans);
       out.close();
    }
 }
