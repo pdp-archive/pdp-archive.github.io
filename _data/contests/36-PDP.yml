@@ -15,7 +15,7 @@ publib:
    stage: "blyk"
    statement_pdf_url: "https://drive.google.com/file/d/1QJr4CIE3udAvji3J9YNil60uQrvbcoQx/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/143YSWtHAjN6pJzWM--1szTWFuI_-30m3/view"
    solution: true
    solution_author: ""
    codes_in_git: true
@@ -27,7 +27,7 @@ allthatjazz:
    stage: "bgym"
    statement_pdf_url: "https://drive.google.com/file/d/1zVElJ8xFOvof09tP345AAejHwfBC8c8n/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1Gech8XcelfxjHAmTyuR61HVVcVlKsSUr/view"
    solution: true
    solution_author: "Μποκής Κωνσταντίνος"
    codes_in_git: true
