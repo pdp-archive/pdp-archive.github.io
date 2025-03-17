@@ -80,7 +80,7 @@ modulo:
 coinstack:
    full_name: "Στοίβα νομισμάτων"
    stage: "camp_j"
-   statement_pdf_url: "https://drive.google.com/file/d/1GeA47NvFxww7bbWPLh8n-jc9UDGqnbzY/view?usp=sharing"
+   statement_pdf_url: "https://drive.google.com/file/d/1GeA47NvFxww7bbWPLh8n-jc9UDGqnbzY"
    statement_md: false
    testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
    codes_in_git: false
