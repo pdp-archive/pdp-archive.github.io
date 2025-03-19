@@ -52,10 +52,10 @@ cauldron:
    statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
    statement_md: true
    testcases_url: ""
-   solution: false
-   solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: [sorting, greedy]
    on_judge: false
 
 shroompath:
@@ -64,10 +64,10 @@ shroompath:
    statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
    statement_md: true
    testcases_url: ""
-   solution: false
-   solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: [greedy, modulo, binary counting]
    on_judge: false
 
 mergegame:

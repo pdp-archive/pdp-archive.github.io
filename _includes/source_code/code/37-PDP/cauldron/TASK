@@ -1,0 +1,41 @@
+TASK(
+   name = "cauldron",
+   test_count = 33,
+   files_dir = "testdata/37-PDP/cauldron/",
+   input_file = "cauldron.in",
+   output_file = "cauldron.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "cauldron_brute",
+         source = "cauldron_brute.cc",
+         passes_up_to = 9,
+         lang = "c++",
+      ),
+	  SOLUTION(
+         name = "cauldron_brute_recurse",
+         source = "cauldron_brute_recurse.cc",
+         passes_up_to = 9,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "cauldron_subtask2",
+         source = "cauldron_subtask2.cc",
+         passes_only = [3,8,10,11,12,13,14,15,17,19,23,27,31],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "cauldron_subtask3",
+         source = "cauldron_subtask3.cc",
+         passes_only = [3,8,10,11,12,13,14,15,16,17,18,19,20,21,23,27,31],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "cauldron_correct",
+         source = "cauldron_correct.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
