@@ -76,10 +76,10 @@ mergegame:
    statement_pdf_url: "https://drive.google.com/file/d/1tFvY_3m4KCz4ldE3vyLLsidE-PYt1hQs/view"
    statement_md: true
    testcases_url: ""
-   solution: false
+   solution: true
    solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   codes_in_git: true
+   solution_tags: [greedy, stack, segment tree]
    on_judge: false
 
 tiphunting:
