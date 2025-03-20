@@ -1,8 +1,8 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
+
 int t,S,X,Y;
 long ans = 1000000000;
 vector<char> Z;

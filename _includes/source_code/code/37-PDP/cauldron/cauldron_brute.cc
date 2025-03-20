@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <algorithm>
 #include <vector>
-
 using namespace std;
 
 typedef long long ll;

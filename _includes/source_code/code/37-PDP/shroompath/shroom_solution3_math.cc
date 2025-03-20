@@ -1,5 +1,4 @@
 #include <cstdio>
-using namespace std;
 
 typedef long long ll;
 const ll mod = 1000000007;
@@ -26,7 +25,7 @@ long calc(int s,int x,int y){
     }else{
         ll w = f(B);
         //το w πρέπει να είναι άρτιος ώστε να μπορεί να διαιρεθεί με το 2
-        if(w & 1)w+=mod;//μετατροπή του w σε ισοδύναμο άρτιο (ως προς mod)
+        if(w & 1)w+=mod;//αν w περιττός, μετέτρεψε το σε ισοδύναμο (ως προς mod) άρτιο
         return (p(B-1) + w/2+1)%mod;
     }
 }

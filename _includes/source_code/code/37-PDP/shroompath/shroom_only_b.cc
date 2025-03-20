@@ -1,5 +1,4 @@
 #include <cstdio>
-using namespace std;
 
 typedef long long ll;
 const ll mod = 1000000007;
