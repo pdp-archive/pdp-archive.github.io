@@ -142,13 +142,13 @@ $$p(k+1)=2^{(k+1)+1}\cdot ((k+1)-1)+2 =2^{k+2}\cdot k + 2$$
 Γνωρίζουμε ότι
 
 $$\begin{aligned}
-p(k+1) = p(k) + f(k+1)\\
-=2^{k+1}\cdot (k-1)+2 + 2^{k+1} \cdot (k+1)\\ 
-=2^{k+1}\cdot k - 2^{k+1} + 2 + 2^{k+1}\cdot k + 2^{k+1}\\
-=2^{k+1}\cdot k - \cancel{2^{k+1}} + 2 + 2^{k+1}\cdot k + \cancel{2^{k+1}}\\
-=2^{k+1}\cdot k + 2^{k+1}\cdot k + 2\\
-=2\cdot 2^{k+1} \cdot k + 2\\
-=2^{k+2}\cdot k +2
+p(k+1) &= p(k) + f(k+1)\\
+&=2^{k+1}\cdot (k-1)+2 + 2^{k+1} \cdot (k+1)\\ 
+&=2^{k+1}\cdot k - 2^{k+1} + 2 + 2^{k+1}\cdot k + 2^{k+1}\\
+&=2^{k+1}\cdot k - \cancel{2^{k+1}} + 2 + 2^{k+1}\cdot k + \cancel{2^{k+1}}\\
+&=2^{k+1}\cdot k + 2^{k+1}\cdot k + 2\\
+&=2\cdot 2^{k+1} \cdot k + 2\\
+&=2^{k+2}\cdot k +2
 \end{aligned}$$
 
 άρα καταλήγουμε ότι ισχύει η $$p(k+1)$$, άρα η σχέση μας ισχύει για όλα τα $$k\ge1$$.
