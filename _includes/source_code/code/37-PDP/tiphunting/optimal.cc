@@ -7,7 +7,7 @@
 #ifdef DEBUG
 #define debug(...) fprintf(stderr, __VA_ARGS__)
 #else
-#define debug(...)
+#define debug(...) ((void)0)
 #endif
 
 using namespace std;
