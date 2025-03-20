@@ -8,25 +8,25 @@ int main() {
   scanf("%i", &subtask);
   assert(subtask == 1);
 
-  int n, q;
-  scanf("%i%i", &n, &q);
+  long n, q;
+  scanf("%li%li", &n, &q);
   
-  long sol = 0;
-  for (int i = 0; i < n; ++i) {
-    int t;
-    scanf("%i", &t);
+  long long sol = 0;
+  for (long i = 0; i < n; ++i) {
+    long t;
+    scanf("%li", &t);
     sol += t;
   }
 
-  for (int i = 0; i < n-1; ++i) {
-    int tmp1, tmp2, tmp3;
-    scanf("%i%i%i", &tmp1, &tmp2, &tmp3);
+  for (long i = 0; i < n-1; ++i) {
+    long tmp1, tmp2, tmp3;
+    scanf("%li%li%li", &tmp1, &tmp2, &tmp3);
   }
 
-  for (int i = 0; i < q; ++i) {
-    int src, dst;
-    scanf("%i%i", &src, &dst);
-    printf("%li\n", sol);
+  for (long i = 0; i < q; ++i) {
+    long src, dst;
+    scanf("%li%li", &src, &dst);
+    printf("%lli\n", sol);
   }
 
   return 0;
