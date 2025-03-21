@@ -19,12 +19,42 @@ using vvl = vector<vector<long>>;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
-// Πρώτη διαπέραση η οποία υπολογίζει το `subtree_loop_opt` για την κορυφή `u`
-// κι όλους τους απογόνους της.
+// Διασχίζει το δέντρο `tree` ξεκινώντας από την κορυφή `u` και υπολογίζει
+// αναδρομικά τις τιμές `depth[v]`, `parent[v]` και `parent_weight[v]` για κάθε
+// κορυφή `v != u` στο υποδέντρο της `u`. Οι τιμές `depth[u]`, `parent[u]` και
+// `parent_weight[u]` θα πρέπει να έχουν ήδη υπολογισθεί από τον caller.
 //
-// subtree_loop_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
-// και καταλλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει
-// η κορυφή `u` -- με άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει
+// `depth[u]`: Το βάθος του `u` στο δέντρο, το οποίο ορίζεται ως το πλήθος
+// των ακμών στο μονοπάτι από τον `u` προς τη ρίζα. Για παράδειγμα το βάθος
+// της ρίζας είναι 0.
+// `parent[u]`: Ο γονέας του `u`.
+// `parent_weight[u]`: Κόστος του δρόμου που συνδέει τον `u` με τον γονέα του.
+void compute_auxiliary(const vvll& tree, int u, vector<long>& depth, vector<long>& parent, vector<long>& parent_weight) {
+  const long n = tree.size();
+  assert(depth.size() >= n);
+  assert(parent.size() >= n);
+  assert(parent_weight.size() >= n);
+  assert(0 <= u && u < n);
+
+  for (auto [v, w]: tree[u]) {
+    if (v == parent[u]) continue;
+    assert(0 <= v && v < n);
+
+    parent[v] = u;
+    parent_weight[v] = w;
+    depth[v] = depth[u] + 1;
+
+    compute_auxiliary(tree, v, depth, parent, parent_weight);
+  }
+}
+
+// Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
+// `subtree_loop_opt` για την κορυφή `u` κι όλους τους απογόνους της. Η τιμή της
+// `parent` είναι ο γονέας της `u`.
+//
+// `subtree_loop_opt[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
+// και καταλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει
+// η κορυφή `u`. Mε άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει
 // τον δρόμο `(u, parent)`.
 void compute_subtree_loop_opt(vector<long long> &subtree_loop_opt, const vvll &tree, const vector<long> &tip, long u, long parent) {
   subtree_loop_opt[u] = tip[u];
@@ -36,12 +66,13 @@ void compute_subtree_loop_opt(vector<long long> &subtree_loop_opt, const vvll &t
   }
 }
 
-// Δεύτερη διαπέραση η οποία υπολογίζει το `supertree_root_opt` για την κορυφή
-// `u` κι όλους τους απογόνους της, χρησιμοποιώντας τις τιμές
-// `subtree_loop_opt` που υπολογίσαμε ήδη στην πρώτη διαπέραση.
+// Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
+// `subtree_root_opt` για την κορυφή `u` κι όλους τους απογόνους της,
+// χρησιμοποιώντας τις τιμές `subtree_loop_opt` που υπολογίσαμε ήδη στην
+// προηγούμενη διάσχιση. Η τιμή της `parent` είναι ο γονέας της `u`.
 //
-// supertree_root_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
-// από την κορυφή `u`, καταλλήγει στη ρίζα τους δέντρου και
+// `supertree_root_opt[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
+// από την κορυφή `u`, καταλήγει στη ρίζα του δέντρου και
 // μένει πάντα ΕΚΤΟΣ του υποδέντρου που ορίζει η `u`. Το φιλοδώρημα της κορυφής
 // `u` ΔΕΝ προσμετράται.
 void compute_supertree_root_opt(vector<long long>& supertree_root_opt, const vector<long long>& subtree_loop_opt, const vvll& tree, long u, long parent, long w) {
@@ -58,9 +89,10 @@ void compute_supertree_root_opt(vector<long long>& supertree_root_opt, const vec
       compute_supertree_root_opt(supertree_root_opt, subtree_loop_opt, tree, v, u, w);
 }
 
-// Τρίτη διαπέραση η οποία υπολογίζει το `supertree_loop_opt` για την κορυφή
-// `u` κι όλους τους απογόνους της, χρησιμοποιώντας τις τιμές
-// `subtree_loop_opt` που υπολογίσαμε ήδη στην πρώτη διαπέραση.
+// Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
+// `subtree_loop_opt` για την κορυφή `u` κι όλους τους απογόνους της,
+// χρησιμοποιώντας τις τιμές `subtree_loop_opt` που υπολογίσαμε ήδη στην
+// προηγούμενη διάσχιση. Η τιμή της `parent` είναι ο γονέας της `u`.
 //
 // supertree_loop_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει αλλά
 // ΚΑΙ καταλήγει στην κορυφή `u`, και μένει πάντα ΕΚΤΟΣ του υποδέντρου που
@@ -79,27 +111,13 @@ void compute_supertree_loop_opt(vector<long long>& supertree_loop_opt, const vec
       compute_supertree_loop_opt(supertree_loop_opt, subtree_loop_opt, tree, v, u, w);
 }
 
-void preprocess(const vvll& tree, int u, vector<long>& depth, vector<long>& parent, vector<long>& parent_weight) {
-  const long n = tree.size();
-  assert(depth.size() >= n);
-  assert(parent.size() >= n);
-  assert(parent_weight.size() >= n);
-  assert(0 <= u && u < n);
-
-  for (auto [v, w]: tree[u]) {
-    if (v == parent[u]) continue;
-    assert(0 <= v && v < n);
-
-    parent[v] = u;
-    parent_weight[v] = w;
-    depth[v] = depth[u] + 1;
-
-    preprocess(tree, v, depth, parent, parent_weight);
-  }
-}
-
-// Set `pred[h][u] = v` when `v` is the `2^h`-th predecessor of `u`
-// according to the `parent` relation.
+// Υπολογίζει τον πίνακα `pred` έτσι ώστε:
+// `pred[h][u] == v` αν και μόνο αν ο `v` είναι ο `2^h`-πρόγονος του `u`.
+// Για παράδειγμα `pred[0][u] == parent[u]` γιατί ο γονέας του $u$
+// είναι ο `2^0 = 1`-ος πρόγονός του.
+// Ο πίνακας εισόδου `parent` θα πρέπει για κάθε κορυφή να περιέχει
+// τον γονέα της, εκτός από την ρίζα `r` για την οποία θα πρέπει να ισχύει
+// `parent[r] == r`.
 void compute_pred(const vector<long> &parent, vvl &pred)
 {
   const long H = pred.size() - 1;
@@ -116,6 +134,15 @@ void compute_pred(const vector<long> &parent, vvl &pred)
     }
 }
 
+// Υπολογίζει τρεις τιμές `(z, a, b)` όπου `z` είναι ο Ελάχιστος Κοινός Πρόγονος
+// (LCA) των `u, v`, η `a` είναι η μοναδική κορυφή στο μονοπάτι από `a` προς `z`
+// για την οποία `parent[u] == z` (ή `a == -1` αν τέτοια κορυφή δεν υπάρχει) και
+// αντίστοιχα `b` είναι η μοναδική κορυφή στο μονοπάτι από `z` προς `v` τέτοια
+// ώστε `parent[v] == z` (ή `b == -1` αν τέτοια κορυφή δεν υπάρχει).
+// 
+// Η συνάρτηση λαμβάνει ως είσοδο και τον πίνακα `pred` που υπολόγισε νωρίτερα η
+// συνάρτηση `compute_pred` καθώς και τον πίνακα `depth` που υπολόγισε νωρίτερα
+// η συνάρτηση `compute_auxiliary`.
 lll lca(const vector<vector<long>> &pred, const vector<long> &depth, long u, long v) {
   const long H = pred.size() - 1;
 
@@ -179,80 +206,74 @@ int main() {
     tree[v-1].push_back({u-1, w});
   }
 
-  debug("Read the tree\n");
-
-  // "Hang" the tree from node 0 and compute the depth of each node.
+  // Αρχικοποιώντας `depth[0] = 0`, `parent[0] = 0` θέτουμε την κορυφή
+  // 0 ως ρίζα του δέντρου. Η συνάρτηση `compute_auxiliary` συμπληρώνει
+  // τις τιμές και για τους υπόλοιπους κόμβους.
   vector<long> depth(n, 0), parent(n, 0), parent_weight(n, 0);
-  debug("Created vectors\n");
-  preprocess(tree, 0, depth, parent, parent_weight);
-  debug("preprocessed\n");
+  compute_auxiliary(tree, 0, depth, parent, parent_weight);
 
+  // Θα χρειαστούμε το μέγιστο βάθος ώστε να υπολογίσουμε τις διαστάσεις
+  // πίνακα `pred` παρακάτω.
   long max_depth = 0;
   for (long i = 0; i < n; ++i)
     max_depth = max(max_depth, depth[i]);
 
-  // Using the parent relation, compute `pred[h][u]`, the `2^h`-th predecessor
-  // of each node `u` for every `h \in {0, 1, ..., ceil(log_2(n-1))}`.
-  // const int H = int(ceil(log2(n-1)));
+  // Υπολογισμός του πίνακα `pred` από τον πίνακα `parent`.
+  // Το δέντρο έχει ύψος `max_depth` επομένως θα χρειαστούμε τους
+  // απογόνους (predecessors) το πολύ μέχρι `max_depth <= 2^H` επίπεδα παραπάνω.
   const long H = long(ceil(log2(max_depth)));
   vector<vector<long>> pred(H+1, vector<long>(n, 0));
   compute_pred(parent, pred);
-  debug("computed pred\n");
 
   vector<long long> subtree_loop_opt(n), supertree_root_opt(n), supertree_loop_opt(n);
   compute_subtree_loop_opt(subtree_loop_opt, tree, tip, 0, -1);
-  debug("done with pass1\n");
   compute_supertree_root_opt(supertree_root_opt, subtree_loop_opt, tree, 0, -1, -1);
-  debug("done with pass2\n");
   compute_supertree_loop_opt(supertree_loop_opt, subtree_loop_opt, tree, 0, -1, -1);
-  debug("done with pass3\n");
 
   for (long i = 0; i < q; ++i) {
-    long src, dst;
-    scanf("%li%li", &src, &dst);
-    src -= 1;
-    dst -= 1;
+    long L, R;
+    scanf("%li%li", &L, &R);
+    L -= 1;
+    R -= 1;
 
-    if (src == dst) {
-      printf("%lli\n", subtree_loop_opt[src] + supertree_loop_opt[src]);
+    if (L == R) {
+      printf("%lli\n", subtree_loop_opt[L] + supertree_loop_opt[L]);
       continue;
     }
 
-    auto [mid, u, v] = lca(pred, depth, src, dst);
+    auto [z, u, v] = lca(pred, depth, L, R);
     assert(u != -1 || v != -1);
-    debug("LCA(%li, %li) = (%li, %li, %li)\n", src+1, dst+1, mid+1, u+1, v+1);
 
     long long sol = 0;
     if (u == -1) {
-      // src is an ancestor of dst.
-      assert(mid == src);
-      sol = supertree_root_opt[dst] - supertree_root_opt[src] + supertree_loop_opt[src] + subtree_loop_opt[dst];
+      // Η κορυφή `L` είναι πρόγονος της `R`.
+      assert(z == L);
+      sol = supertree_root_opt[R] - supertree_root_opt[L] + supertree_loop_opt[L] + subtree_loop_opt[R];
     } else if (v == -1) {
-      // dst is an ancestor of src.
-      assert(mid == dst);
-      sol = supertree_root_opt[src] - supertree_root_opt[dst] + supertree_loop_opt[dst] + subtree_loop_opt[src];
+      // Η κορυφή `R` είναι πρόγονος της `L`.
+      assert(z == R);
+      sol = supertree_root_opt[L] - supertree_root_opt[R] + supertree_loop_opt[R] + subtree_loop_opt[L];
     } else {
-      // `src` and `dst` have a common ancestor.
-      assert(pred[0][u] == mid);
-      assert(pred[0][v] == mid);
+      // Οι κορυφές `L, R` έχουν κοινό πρόγονο τον `z != L, R`.
+      assert(pred[0][u] == z);
+      assert(pred[0][v] == z);
 
-      sol = supertree_root_opt[src] + subtree_loop_opt[src] - supertree_root_opt[u];
-      debug("%lli, ", sol);
-      sol += supertree_root_opt[dst] + subtree_loop_opt[dst] - supertree_root_opt[v];
-      debug("%lli, ", sol);
-      sol -= (parent_weight[u] + parent_weight[v]);
-      debug("%li, ", sol);
+      // (a)
+      sol = supertree_root_opt[L] - supertree_root_opt[u] + subtree_loop_opt[L] ;
 
-      sol += subtree_loop_opt[mid];
-      debug("%lli, ", sol);
+      // (b)
+      sol += supertree_root_opt[R] - supertree_root_opt[v] + subtree_loop_opt[R];
+
+      // (c)
+      sol += subtree_loop_opt[z];
       sol -= positive_part(subtree_loop_opt[u] - 2*parent_weight[u]);
-      debug("%lli, ", sol);
       sol -= positive_part(subtree_loop_opt[v] - 2*parent_weight[v]);
-      debug("%lli, ", sol);
 
-      sol += supertree_loop_opt[mid];
-      debug("%lli, ", sol);
-      debug("\n");
+      // (d)
+      sol += supertree_loop_opt[z];
+      
+      // (e)
+      sol -= (parent_weight[u] + parent_weight[v]);
     }
 
     printf("%lli\n", sol);
