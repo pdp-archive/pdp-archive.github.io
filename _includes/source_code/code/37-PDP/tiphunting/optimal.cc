@@ -2,13 +2,6 @@
 #include <cassert>
 #include <vector>
 #include <cmath>
-// #define DEBUG
-
-#ifdef DEBUG
-#define debug(...) fprintf(stderr, __VA_ARGS__)
-#else
-#define debug(...) ((void)0)
-#endif
 
 using namespace std;
 
@@ -75,7 +68,8 @@ void compute_subtree_loop_opt(long u) {
 void compute_supertree_root_opt(long u) {
   supertree_root_opt[u] = 0;
 
-  if (parent[u] != -1)
+  // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
+  if (parent[u] != u)
     supertree_root_opt[u] =
       subtree_loop_opt[parent[u]] + supertree_root_opt[parent[u]]
     - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) - parent_weight[u];
@@ -96,7 +90,8 @@ void compute_supertree_root_opt(long u) {
 void compute_supertree_loop_opt(int u) {
   supertree_loop_opt[u] = 0;
 
-  if (parent[u] != -1)
+  // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
+  if (parent[u] != u)
     supertree_loop_opt[u] =
       positive_part(subtree_loop_opt[parent[u]] + supertree_loop_opt[parent[u]]
     - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) - 2*parent_weight[u]);
@@ -210,11 +205,13 @@ int main() {
   compute_pred(H);
 
   subtree_loop_opt.resize(n);
-  supertree_loop_opt.resize(n);
-  supertree_root_opt.resize(n);
   compute_subtree_loop_opt(0);
-  compute_supertree_root_opt(0);
+
+  supertree_loop_opt.resize(n);
   compute_supertree_loop_opt(0);
+
+  supertree_root_opt.resize(n);
+  compute_supertree_root_opt(0);
 
   for (long i = 0; i < q; ++i) {
     long L, R;

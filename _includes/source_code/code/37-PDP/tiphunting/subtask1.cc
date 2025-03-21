@@ -24,8 +24,8 @@ int main() {
   }
 
   for (long i = 0; i < q; ++i) {
-    long src, dst;
-    scanf("%li%li", &src, &dst);
+    long L, R;
+    scanf("%li%li", &L, &R);
     printf("%lli\n", sol);
   }
 

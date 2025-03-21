@@ -5,7 +5,12 @@
 using namespace std;
 
 using ll = pair<long, long>;
+using vl = vector<long>;
 using vvll = vector<vector<ll>>;
+
+vvll tree;
+vl tip;
+vector<long long> subtree_loop_opt, supertree_root_opt;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
@@ -16,12 +21,12 @@ long long positive_part(long long x) { return max(0LL, x); }
 // και καταλλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει
 // η κορυφή `u` -- με άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει
 // τον δρόμο `(u, parent)`.
-void compute_subtree_loop_opt(vector<long long>& subtree_loop_opt, const vvll& tree, const vector<long>& tip, long u, long parent) {
+void compute_subtree_loop_opt(long u, long parent) {
   subtree_loop_opt[u] = tip[u];
 
   for (auto [v, w]: tree[u]) {
     if (v == parent) continue;
-    compute_subtree_loop_opt(subtree_loop_opt, tree, tip, v, u);
+    compute_subtree_loop_opt(v, u);
     subtree_loop_opt[u] += positive_part(subtree_loop_opt[v] - 2*w);
   }
 }
@@ -34,18 +39,16 @@ void compute_subtree_loop_opt(vector<long long>& subtree_loop_opt, const vvll& t
 // από την κορυφή `u`, καταλλήγει στη ρίζα τους δέντρου και
 // μένει πάντα ΕΚΤΟΣ του υποδέντρου που ορίζει η `u`. Το φιλοδώρημα της κορυφής
 // `u` ΔΕΝ προσμετράται.
-void compute_supertree_root_opt(vector<long long>& supertree_root_opt, const vector<long long>& subtree_loop_opt, const vvll& tree, long u, long parent, long w) {
-  assert(0 <= u && u < tree.size());
-  assert(-1 <= parent && parent < (long long)tree.size());
-
+void compute_supertree_root_opt(long u, long parent, long w) {
   supertree_root_opt[u] = 0;
 
-  if (parent != -1)
+  // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
+  if (parent != u)
     supertree_root_opt[u] = subtree_loop_opt[parent] + supertree_root_opt[parent] - positive_part(subtree_loop_opt[u] - 2*w) - w;
 
   for (auto [v, w]: tree[u])
     if (v != parent)
-      compute_supertree_root_opt(supertree_root_opt, subtree_loop_opt, tree, v, u, w);
+      compute_supertree_root_opt(v, u, w);
 }
 
 int main() {
@@ -56,42 +59,43 @@ int main() {
   long n, q;
   scanf("%li%li", &n, &q);
   
-  vector<long> tip(n);
+  tip.resize(n);
   for (long i = 0; i < n; ++i)
     scanf("%li", &tip[i]);
 
   // Αναπαράσταση του δέντρου με adjacency list:
   // To `tree[u]` περιέχει ένα vector με pairs `(v, w)` για κάθε κορυφή `v` που
   // συνδέεται με τη `u` με κόστός `w`.
-  vvll tree(n);
+  tree.resize(n);
   for (long i = 0; i < n-1; ++i) {
     long u, v, w;
     scanf("%li%li%li", &u, &v, &w);
-    assert(1 <= u && u <= n);
-    assert(1 <= v && v <= n);
 
     tree[u-1].push_back({v-1, w});
     tree[v-1].push_back({u-1, w});
   }
 
-  long src, dst;
-  scanf("%li%li", &src, &dst);
-  src -= 1;
-  dst -= 1;
+  long L, R;
+  scanf("%li%li", &L, &R);
+  L -= 1;
+  R -= 1;
 
-  vector<long long> subtree_loop_opt(n), supertree_root_opt(n);
-  compute_subtree_loop_opt(subtree_loop_opt, tree, tip, src, -1);
-  compute_supertree_root_opt(supertree_root_opt, subtree_loop_opt, tree, src, -1, -1);
+  subtree_loop_opt.resize(n);
+  compute_subtree_loop_opt(L, L);;
+
+  supertree_root_opt.resize(n);
+  compute_supertree_root_opt(L, L, 0);
 
   // Απάντηση στο πρώτο ερώτημα.
-  printf("%lli\n", subtree_loop_opt[dst] + supertree_root_opt[dst]);
+  printf("%lli\n", subtree_loop_opt[R] + supertree_root_opt[R]);
 
   // Απάντηση στα υπόλοιπα `q-1` ερωτήματα.
   for (long i = 1; i < q; ++i) {
-    scanf("%li%li", &src, &dst);
-    src -= 1;
-    dst -= 1;
-    printf("%lli\n", subtree_loop_opt[dst] + supertree_root_opt[dst]);
+    long new_L;
+    scanf("%li%li", &new_L, &R);
+    assert(L == new_L - 1);
+    R -= 1;
+    printf("%lli\n", subtree_loop_opt[R] + supertree_root_opt[R]);
   }
 
   return 0;
