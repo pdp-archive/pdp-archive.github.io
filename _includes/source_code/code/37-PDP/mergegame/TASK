@@ -13,7 +13,7 @@ TASK(
          passes_all_except_for = [2, 11, 12, 38, 39, 40, 42, 43, 44, 46, 47],
          lang = "c++",
       ),
-	  SOLUTION(
+     SOLUTION(
          name = "mergegame_stack",
          source = "mergegame_stack.cc",
          passes_all,
