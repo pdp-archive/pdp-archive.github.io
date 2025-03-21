@@ -17,6 +17,7 @@ int main() {
          fscanf(fi, "%ld", &A[i]);
          smallest = std::min(smallest, A[i]);
    }
+   fclose(fi);
    
    long j = N;
    // Σε κάθε γύρο βρίσκουμε το μικρότερο στοιχείο smallest.
