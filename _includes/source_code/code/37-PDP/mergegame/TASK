@@ -1,0 +1,23 @@
+TASK(
+   name = "mergegame",
+   test_count = 52,
+   files_dir = "testdata/37-PDP/mergegame/",
+   input_file = "mergegame.in",
+   output_file = "mergegame.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "mergegame_n2",
+         source = "mergegame_n2.cc",
+         passes_all_except_for = [2, 11, 12, 38, 39, 40, 42, 43, 44, 46, 47],
+         lang = "c++",
+      ),
+     SOLUTION(
+         name = "mergegame_stack",
+         source = "mergegame_stack.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
