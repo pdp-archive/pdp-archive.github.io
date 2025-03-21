@@ -91,5 +91,5 @@ tiphunting:
    solution: true
    solution_author: "Μάκης Αρσένης"
    codes_in_git: true
-   solution_tags: [lca, dfs, tree, binary lifting]
+   solution_tags: [lca, dfs, trees, binary lifting]
    on_judge: false
