@@ -13,43 +13,43 @@ TASK(
          passes_all,
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_select",
          source = "samepizzas_select.cc",
          passes_all,
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_bsearch",
          source = "samepizzas_bsearch.cc",
          passes_all,
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_pq",
          source = "samepizzas_pq.cc",
          passes_all,
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_subtask1",
          source = "samepizzas_subtask1.cc",
          passes_only = [1, 2, 3, 4, 5, 6],
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_subtask2",
          source = "samepizzas_subtask2.cc",
          passes_only = [2, 5, 7, 8, 9, 10, 11],
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_subtask3",
          source = "samepizzas_subtask3.cc",
          passes_only = [3, 4, 6, 12, 13, 14, 15, 16],
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "samepizzas_subtask4",
          source = "samepizzas_insertion_sort.cc",
          passes_only = [1,2,3,4,5,6,17,18,19,20,21,22,23,24,25,26],
