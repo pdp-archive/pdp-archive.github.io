@@ -13,9 +13,9 @@ vl tip;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
-// Επιστρέφει το κέρδος της βέλτιστης διαδρομή η οποία ξεκινάει
+// Επιστρέφει το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
 // από την κορυφή `u`, καταλήγει πίσω σε αυτή και παραμένει
-// εξ' ολοκλήρου μέσα στο υποδέντρο που ορίζει η `u` -- με άλλα λόγια,
+// εξ' ολοκλήρου μέσα στο υποδέντρο που ορίζει η `u`. Με άλλα λόγια,
 // η διαδρομή απαγορεύεται να διασχίσει το δρόμο `(u, parent)`.
 long long subtree_loop_opt(long u, long parent) {
   long long sol = tip[u];
@@ -56,9 +56,10 @@ int main() {
   for (long i = 0; i < q; ++i) {
     long L, R;
     scanf("%li%li", &L, &R);
+    L--, R--;
     assert(L == R);
 
-    printf("%lli\n", subtree_loop_opt(L-1, L-1));
+    printf("%lli\n", subtree_loop_opt(L, L));
   }
 
   return 0;

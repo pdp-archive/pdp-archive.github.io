@@ -18,6 +18,27 @@ vector<long long> subtree_loop_opt, supertree_loop_opt, supertree_root_opt;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
+// Αρχικοποίηση όλων των global vectors για ένα δέντρο με `n` κορυφές. 
+void init(int n) {
+  // ceil(log2(max_N))
+  constexpr int kMaxH = 18;
+
+  tip.resize(n);
+  tree.resize(n);
+
+  // Αρχικοποιώντας `depth[0] = 0`, `parent[0] = 0` θέτουμε την κορυφή
+  // 0 ως ρίζα του δέντρου. Η συνάρτηση `compute_auxiliary` συμπληρώνει
+  // τις τιμές και για τους υπόλοιπους κόμβους.
+  depth.resize(n, 0);
+  parent.resize(n, 0);
+  parent_weight.resize(n, 0);
+
+  pred.resize(kMaxH, vector<long>(n));
+  subtree_loop_opt.resize(n);
+  supertree_loop_opt.resize(n);
+  supertree_root_opt.resize(n);
+}
+
 // Διασχίζει το δέντρο `tree` ξεκινώντας από την κορυφή `u` και υπολογίζει
 // αναδρομικά τις τιμές `depth[v]`, `parent[v]` και `parent_weight[v]` για κάθε
 // κορυφή `v != u` στο υποδέντρο της `u`. Οι τιμές `depth[u]`, `parent[u]` και
@@ -108,8 +129,9 @@ void compute_supertree_loop_opt(int u) {
 // O caller θα πρέπει να έχει ήδη υπολογίσει τον πίνακα parent
 // (δες `compute_auxiliary`) έτσι ώστε η τιμή `parent[u]` να είναι
 // ο γονέας της `u`, εκτός από την ρίζα `r` για την οποία `r == parent[r]`.
-void compute_pred(long H) {
+void compute_pred() {
   const long n = parent.size();
+  const long H = pred.size() - 1;
 
   for (long u = 0; u < n; ++u)
     pred[0][u] = parent[u];
@@ -147,7 +169,7 @@ lll lca(long u, long v) {
     if (pred[0][u] == v)
       return { v,  u, -1 };
 
-    u =pred[0][u];
+    u = pred[0][u];
   }
 
   for (long h = H; h >= 0; --h) {
@@ -167,14 +189,14 @@ int main() {
   long n, q;
   scanf("%li%li", &n, &q);
   
-  tip.resize(n);
+  init(n);
+
   for (long i = 0; i < n; ++i)
     scanf("%li", &tip[i]);
 
   // Αναπαράσταση του δέντρου με adjacency list:
   // To `tree[u]` περιέχει ένα vector με pairs `(v, w)` για κάθε κορυφή `v` που
   // συνδέεται με τη `u` με κόστός `w`.
-  tree.resize(n);
   for (long i = 0; i < n-1; ++i) {
     long u, v, w;
     scanf("%li%li%li", &u, &v, &w);
@@ -183,41 +205,18 @@ int main() {
     tree[v-1].push_back({u-1, w});
   }
 
-  // Αρχικοποιώντας `depth[0] = 0`, `parent[0] = 0` θέτουμε την κορυφή
-  // 0 ως ρίζα του δέντρου. Η συνάρτηση `compute_auxiliary` συμπληρώνει
-  // τις τιμές και για τους υπόλοιπους κόμβους.
-  depth.resize(n, 0);
-  parent.resize(n, 0);
-  parent_weight.resize(n, 0);
   compute_auxiliary(0);
 
-  // Θα χρειαστούμε το μέγιστο βάθος ώστε να υπολογίσουμε τις διαστάσεις
-  // πίνακα `pred` παρακάτω.
-  long max_depth = 0;
-  for (long i = 0; i < n; ++i)
-    max_depth = max(max_depth, depth[i]);
+  compute_pred();
 
-  // Υπολογισμός του πίνακα `pred` από τον πίνακα `parent`.
-  // Το δέντρο έχει ύψος `max_depth` επομένως θα χρειαστούμε τους
-  // απογόνους (predecessors) το πολύ μέχρι `max_depth <= 2^H` επίπεδα παραπάνω.
-  const long H = long(ceil(log2(max_depth)));
-  pred.resize(H+1, vector<long>(n, 0));
-  compute_pred(H);
-
-  subtree_loop_opt.resize(n);
   compute_subtree_loop_opt(0);
-
-  supertree_loop_opt.resize(n);
   compute_supertree_loop_opt(0);
-
-  supertree_root_opt.resize(n);
   compute_supertree_root_opt(0);
 
   for (long i = 0; i < q; ++i) {
     long L, R;
     scanf("%li%li", &L, &R);
-    L -= 1;
-    R -= 1;
+    L--, R--;
 
     if (L == R) {
       printf("%lli\n", subtree_loop_opt[L] + supertree_loop_opt[L]);
@@ -241,22 +240,13 @@ int main() {
       assert(pred[0][u] == z);
       assert(pred[0][v] == z);
 
-      // (a)
-      sol = supertree_root_opt[L] - supertree_root_opt[u] + subtree_loop_opt[L] ;
-
-      // (b)
-      sol += supertree_root_opt[R] - supertree_root_opt[v] + subtree_loop_opt[R];
-
-      // (c)
-      sol += subtree_loop_opt[z];
-      sol -= positive_part(subtree_loop_opt[u] - 2*parent_weight[u]);
-      sol -= positive_part(subtree_loop_opt[v] - 2*parent_weight[v]);
-
-      // (d)
-      sol += supertree_loop_opt[z];
-      
-      // (e)
-      sol -= (parent_weight[u] + parent_weight[v]);
+      sol = supertree_root_opt[L] - supertree_root_opt[u] + subtree_loop_opt[L] // (a)
+            + supertree_root_opt[R] - supertree_root_opt[v] + subtree_loop_opt[R] // (b)
+            + subtree_loop_opt[z] // (c1)
+            - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) // (c2)
+            - positive_part(subtree_loop_opt[v] - 2*parent_weight[v]) // (c3)
+            + supertree_loop_opt[z] // (d)
+            - (parent_weight[u] + parent_weight[v]); // (e)
     }
 
     printf("%lli\n", sol);

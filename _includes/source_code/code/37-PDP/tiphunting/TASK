@@ -13,31 +13,31 @@ TASK(
          passes_only = [2, 3, 4, 5],
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "subtask2",
          source = "subtask2.cc",
          passes_only = [6, 7, 8, 9, 10],
          lang = "c++",
       ),
-	  SOLUTION(
+      SOLUTION(
          name = "subtask3",
          source = "subtask3.cc",
          passes_only = [1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
          lang = "c++",
       ),
-	  SOLUTION(
+     SOLUTION(
          name = "subtask4",
          source = "subtask4.cc",
          passes_only = [6, 7, 8, 9, 10, 16, 17, 18, 19, 20, 21],
          lang = "c++",
       ),
-	  SOLUTION(
+     SOLUTION(
          name = "subtask5",
          source = "subtask5.cc",
          passes_only = [22, 23, 24, 25, 26, 27],
          lang = "c++",
       ),
-	  SOLUTION(
+     SOLUTION(
          name = "subtask6",
          source = "optimal.cc",
          passes_all,
