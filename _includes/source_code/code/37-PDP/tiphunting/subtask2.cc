@@ -17,12 +17,12 @@ long long positive_part(long long x) { return max(0LL, x); }
 // από την κορυφή `u`, καταλήγει πίσω σε αυτή και παραμένει
 // εξ' ολοκλήρου μέσα στο υποδέντρο που ορίζει η `u`. Με άλλα λόγια,
 // η διαδρομή απαγορεύεται να διασχίσει το δρόμο `(u, parent)`.
-long long subtree_loop_opt(long u, long parent) {
+long long best_subtree_tour(long u, long parent) {
   long long sol = tip[u];
 
   for (auto [v, w]: tree[u]) {
     if (v == parent) continue;
-    long long s = subtree_loop_opt(v, u);
+    long long s = best_subtree_tour(v, u);
     sol += positive_part(s - 2*w);
   }
 
@@ -59,7 +59,7 @@ int main() {
     L--, R--;
     assert(L == R);
 
-    printf("%lli\n", subtree_loop_opt(L, L));
+    printf("%lli\n", best_subtree_tour(L, L));
   }
 
   return 0;

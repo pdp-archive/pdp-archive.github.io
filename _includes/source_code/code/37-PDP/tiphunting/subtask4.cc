@@ -10,46 +10,46 @@ using vvll = vector<vector<ll>>;
 
 vvll tree;
 vl tip;
-vector<long long> subtree_loop_opt, supertree_loop_opt;
+vector<long long> best_subtree_tour, best_supertree_tour;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
-// Πρώτη διάσχιση η οποία υπολογίζει το `subtree_loop_opt` για την κορυφή `u`
+// Πρώτη διάσχιση η οποία υπολογίζει το `best_subtree_tour` για την κορυφή `u`
 // κι όλους τους απογόνους της.
 //
-// subtree_loop_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
-// και καταλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει
-// η κορυφή `u`. Με άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει
-// τον δρόμο `(u, parent)`.
-void compute_subtree_loop_opt(long u, long parent) {
-  subtree_loop_opt[u] = tip[u];
+// best_subtree_tour[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει και
+// καταλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει η κορυφή
+// `u`. Με άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει τον δρόμο `(u,
+// parent)`.
+void compute_best_subtree_tour(long u, long parent) {
+  best_subtree_tour[u] = tip[u];
 
   for (auto [v, w]: tree[u]) {
     if (v == parent) continue;
-    compute_subtree_loop_opt(v, u);
-    subtree_loop_opt[u] += positive_part(subtree_loop_opt[v] - 2*w);
+    compute_best_subtree_tour(v, u);
+    best_subtree_tour[u] += positive_part(best_subtree_tour[v] - 2*w);
   }
 }
 
-// Δεύτερη διάσχιση η οποία υπολογίζει το `supertree_loop_opt` για την κορυφή
+// Δεύτερη διάσχιση η οποία υπολογίζει το `best_supertree_tour` για την κορυφή
 // `u` κι όλους τους απογόνους της, χρησιμοποιώντας τις τιμές
-// `subtree_loop_opt` που υπολογίσαμε ήδη στην πρώτη διάσχιση.
+// `best_subtree_tour` που υπολογίσαμε ήδη στην πρώτη διάσχιση.
 //
-// supertree_loop_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει αλλά
+// best_supertree_tour[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει αλλά
 // ΚΑΙ καταλήγει στην κορυφή `u`, και μένει πάντα ΕΚΤΟΣ του υποδέντρου που
 // ορίζει η `u`. Το φιλοδώρημα της κορυφής `u` ΔΕΝ προσμετράται.
-void compute_supertree_loop_opt(long u, long parent, long w) {
-  supertree_loop_opt[u] = 0;
+void compute_best_supertree_tour(long u, long parent, long w) {
+  best_supertree_tour[u] = 0;
 
   // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
   if (parent != u)
-    supertree_loop_opt[u] =
-      positive_part(subtree_loop_opt[parent] + supertree_loop_opt[parent]
-      - positive_part(subtree_loop_opt[u] - 2*w) - 2*w);
+    best_supertree_tour[u] =
+      positive_part(best_subtree_tour[parent] + best_supertree_tour[parent]
+      - positive_part(best_subtree_tour[u] - 2*w) - 2*w);
 
   for (auto [v, w]: tree[u])
     if (v != parent)
-      compute_supertree_loop_opt(v, u, w);
+      compute_best_supertree_tour(v, u, w);
 }
 
 int main() {
@@ -76,11 +76,11 @@ int main() {
     tree[v-1].push_back({u-1, w});
   }
 
-  subtree_loop_opt.resize(n);
-  compute_subtree_loop_opt(0, 0);
+  best_subtree_tour.resize(n);
+  compute_best_subtree_tour(0, 0);
 
-  supertree_loop_opt.resize(n);
-  compute_supertree_loop_opt(0, 0, 0);
+  best_supertree_tour.resize(n);
+  compute_best_supertree_tour(0, 0, 0);
 
   for (long i = 0; i < q; ++i) {
     long L, R;
@@ -88,7 +88,7 @@ int main() {
     L--, R--;
     assert(L == R);
 
-    printf("%lli\n", subtree_loop_opt[L] + supertree_loop_opt[L]);
+    printf("%lli\n", best_subtree_tour[L] + best_supertree_tour[L]);
   }
 
   return 0;

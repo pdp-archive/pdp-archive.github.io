@@ -14,7 +14,7 @@ using vvl = vector<vector<long>>;
 vvll tree;
 vl tip, depth, parent, parent_weight;
 vvl pred;
-vector<long long> subtree_loop_opt, supertree_loop_opt, supertree_root_opt;
+vector<long long> best_subtree_tour, best_supertree_tour, best_supertree_root_walk;
 
 long long positive_part(long long x) { return max(0LL, x); }
 
@@ -34,9 +34,9 @@ void init(int n) {
   parent_weight.resize(n, 0);
 
   pred.resize(kMaxH, vector<long>(n));
-  subtree_loop_opt.resize(n);
-  supertree_loop_opt.resize(n);
-  supertree_root_opt.resize(n);
+  best_subtree_tour.resize(n);
+  best_supertree_tour.resize(n);
+  best_supertree_root_walk.resize(n);
 }
 
 // Διασχίζει το δέντρο `tree` ξεκινώντας από την κορυφή `u` και υπολογίζει
@@ -44,11 +44,10 @@ void init(int n) {
 // κορυφή `v != u` στο υποδέντρο της `u`. Οι τιμές `depth[u]`, `parent[u]` και
 // `parent_weight[u]` θα πρέπει να έχουν ήδη υπολογισθεί από τον caller.
 //
-// `depth[u]`: Το βάθος του `u` στο δέντρο, το οποίο ορίζεται ως το πλήθος
-// των ακμών στο μονοπάτι από τον `u` προς τη ρίζα. Για παράδειγμα το βάθος
-// της ρίζας είναι 0.
-// `parent[u]`: Ο γονέας του `u`.
-// `parent_weight[u]`: Κόστος του δρόμου που συνδέει τον `u` με τον γονέα του.
+// `depth[u]`: Το βάθος του `u` στο δέντρο, το οποίο ορίζεται ως το πλήθος των
+// ακμών στο μονοπάτι από τον `u` προς τη ρίζα. Για παράδειγμα το βάθος της
+// ρίζας είναι 0.  `parent[u]`: Ο γονέας του `u`.  `parent_weight[u]`: Κόστος
+// του δρόμου που συνδέει τον `u` με τον γονέα του.
 void compute_auxiliary(int u) {
   for (auto [v, w]: tree[u]) {
     if (v == parent[u]) continue;
@@ -61,65 +60,65 @@ void compute_auxiliary(int u) {
 }
 
 // Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
-// `subtree_loop_opt` για την κορυφή `u` κι όλους τους απογόνους της.
+// `best_subtree_tour` για την κορυφή `u` κι όλους τους απογόνους της.
 //
-// `subtree_loop_opt[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
-// και καταλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει
-// η κορυφή `u`. Mε άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει
-// τον δρόμο `(u, parent)`.
-void compute_subtree_loop_opt(long u) {
-  subtree_loop_opt[u] = tip[u];
+// `best_subtree_tour[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
+// και καταλήγει πάλι πίσω στο `u`, παραμένοντας στο υποδέντρο που ορίζει η
+// κορυφή `u`. Mε άλλα λόγια, η διαδρομή απαγορεύεται να διασχίσει τον δρόμο
+// `(u, parent)`.
+void compute_best_subtree_tour(long u) {
+  best_subtree_tour[u] = tip[u];
 
   for (auto [v, w]: tree[u]) {
     if (v == parent[u]) continue;
-    compute_subtree_loop_opt(v);
-    subtree_loop_opt[u] += positive_part(subtree_loop_opt[v] - 2*w);
+    compute_best_subtree_tour(v);
+    best_subtree_tour[u] += positive_part(best_subtree_tour[v] - 2*w);
   }
 }
 
 // Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
 // `subtree_root_opt` για την κορυφή `u` κι όλους τους απογόνους της,
-// χρησιμοποιώντας τις τιμές `subtree_loop_opt` που υπολογίσαμε ήδη στην
+// χρησιμοποιώντας τις τιμές `best_subtree_tour` που υπολογίσαμε ήδη στην
 // προηγούμενη διάσχιση.
 //
-// `supertree_root_opt[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει
-// από την κορυφή `u`, καταλήγει στη ρίζα του δέντρου και
-// μένει πάντα ΕΚΤΟΣ του υποδέντρου που ορίζει η `u`. Το φιλοδώρημα της κορυφής
-// `u` ΔΕΝ προσμετράται.
-void compute_supertree_root_opt(long u) {
-  supertree_root_opt[u] = 0;
+// `best_supertree_root_walk[u]`: Το κέρδος της βέλτιστης διαδρομής η οποία
+// ξεκινάει από την κορυφή `u`, καταλήγει στη ρίζα του δέντρου και μένει πάντα
+// ΕΚΤΟΣ του υποδέντρου που ορίζει η `u`. Το φιλοδώρημα της κορυφής `u` ΔΕΝ
+// προσμετράται.
+void compute_best_supertree_root_walk(long u) {
+  best_supertree_root_walk[u] = 0;
 
   // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
   if (parent[u] != u)
-    supertree_root_opt[u] =
-      subtree_loop_opt[parent[u]] + supertree_root_opt[parent[u]]
-    - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) - parent_weight[u];
+    best_supertree_root_walk[u] =
+      best_subtree_tour[parent[u]] + best_supertree_root_walk[parent[u]]
+    - positive_part(best_subtree_tour[u] - 2*parent_weight[u]) - parent_weight[u];
 
   for (auto [v, w]: tree[u])
     if (v != parent[u])
-      compute_supertree_root_opt(v);
+      compute_best_supertree_root_walk(v);
 }
 
 // Διασχίζει το δέντρο `tree` και υπολογίζει αναδρομικά τις τιμές
-// `subtree_loop_opt` για την κορυφή `u` κι όλους τους απογόνους της,
-// χρησιμοποιώντας τις τιμές `subtree_loop_opt` που υπολογίσαμε ήδη στην
+// `best_subtree_tour` για την κορυφή `u` κι όλους τους απογόνους της,
+// χρησιμοποιώντας τις τιμές `best_subtree_tour` που υπολογίσαμε ήδη στην
 // προηγούμενη διάσχιση.
 //
-// supertree_loop_opt[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει αλλά
+// best_supertree_tour[u] = κέρδος της βέλτιστης διαδρομής η οποία ξεκινάει αλλά
 // ΚΑΙ καταλήγει στην κορυφή `u`, και μένει πάντα ΕΚΤΟΣ του υποδέντρου που
 // ορίζει η `u`. Το φιλοδώρημα της κορυφής `u` ΔΕΝ προσμετράται.
-void compute_supertree_loop_opt(int u) {
-  supertree_loop_opt[u] = 0;
+void compute_best_supertree_tour(int u) {
+  best_supertree_tour[u] = 0;
 
   // Αν η κορυφή `u` ΔΕΝ είναι ρίζα.
   if (parent[u] != u)
-    supertree_loop_opt[u] =
-      positive_part(subtree_loop_opt[parent[u]] + supertree_loop_opt[parent[u]]
-    - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) - 2*parent_weight[u]);
+    best_supertree_tour[u] =
+      positive_part(best_subtree_tour[parent[u]] + best_supertree_tour[parent[u]]
+    - positive_part(best_subtree_tour[u] - 2*parent_weight[u]) - 2*parent_weight[u]);
 
   for (auto [v, w]: tree[u])
     if (v != parent[u])
-      compute_supertree_loop_opt(v);
+      compute_best_supertree_tour(v);
 }
 
 // Υπολογίζει τον πίνακα `pred` έτσι ώστε για κάθε 0 <= h <= H, 0 <= u < N:
@@ -209,9 +208,9 @@ int main() {
 
   compute_pred();
 
-  compute_subtree_loop_opt(0);
-  compute_supertree_loop_opt(0);
-  compute_supertree_root_opt(0);
+  compute_best_subtree_tour(0);
+  compute_best_supertree_tour(0);
+  compute_best_supertree_root_walk(0);
 
   for (long i = 0; i < q; ++i) {
     long L, R;
@@ -219,7 +218,7 @@ int main() {
     L--, R--;
 
     if (L == R) {
-      printf("%lli\n", subtree_loop_opt[L] + supertree_loop_opt[L]);
+      printf("%lli\n", best_subtree_tour[L] + best_supertree_tour[L]);
       continue;
     }
 
@@ -230,23 +229,26 @@ int main() {
     if (u == -1) {
       // Η κορυφή `L` είναι πρόγονος της `R`.
       assert(z == L);
-      sol = supertree_root_opt[R] - supertree_root_opt[L] + supertree_loop_opt[L] + subtree_loop_opt[R];
+      sol = best_supertree_root_walk[R] - best_supertree_root_walk[L]
+            + best_supertree_tour[L] + best_subtree_tour[R];
     } else if (v == -1) {
       // Η κορυφή `R` είναι πρόγονος της `L`.
       assert(z == R);
-      sol = supertree_root_opt[L] - supertree_root_opt[R] + supertree_loop_opt[R] + subtree_loop_opt[L];
+      sol = best_supertree_root_walk[L] - best_supertree_root_walk[R]
+            + best_supertree_tour[R] + best_subtree_tour[L];
     } else {
       // Οι κορυφές `L, R` έχουν κοινό πρόγονο τον `z != L, R`.
       assert(pred[0][u] == z);
       assert(pred[0][v] == z);
 
-      sol = supertree_root_opt[L] - supertree_root_opt[u] + subtree_loop_opt[L] // (a)
-            + supertree_root_opt[R] - supertree_root_opt[v] + subtree_loop_opt[R] // (b)
-            + subtree_loop_opt[z] // (c1)
-            - positive_part(subtree_loop_opt[u] - 2*parent_weight[u]) // (c2)
-            - positive_part(subtree_loop_opt[v] - 2*parent_weight[v]) // (c3)
-            + supertree_loop_opt[z] // (d)
-            - (parent_weight[u] + parent_weight[v]); // (e)
+      sol =
+        best_supertree_root_walk[L] - best_supertree_root_walk[u] + best_subtree_tour[L] // (a)
+        + best_supertree_root_walk[R] - best_supertree_root_walk[v] + best_subtree_tour[R] // (b)
+        + best_subtree_tour[z] // (c1)
+        - positive_part(best_subtree_tour[u] - 2*parent_weight[u]) // (c2)
+        - positive_part(best_subtree_tour[v] - 2*parent_weight[v]) // (c3)
+        + best_supertree_tour[z] // (d)
+        - (parent_weight[u] + parent_weight[v]); // (e)
     }
 
     printf("%lli\n", sol);
