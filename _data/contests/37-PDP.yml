@@ -3,7 +3,7 @@ samepizzas:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1AQbEuL1y1nrKdJITpOSk5GYKosqQa397/view"
    solution: true
    solution_author: ""
    codes_in_git: true
@@ -15,7 +15,7 @@ polybox:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1G_Cv1mVj2n8D3kmwF9HRg8CqRwwnBlQ_/view"
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
@@ -27,7 +27,7 @@ finding:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/18lofMDlVVPDXjYhYpUGEHziyKpBZHJG1/view"
    solution: true
    solution_author: ""
    codes_in_git: true
@@ -39,7 +39,7 @@ hiring:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1X4XeOBpAyn75xjO81qP-B7LnjH-j_gu5/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1mmIZ225ENwk8fL7AIJi05yviqodqIKcK/view"
    solution: true
    solution_author: ""
    codes_in_git: true
