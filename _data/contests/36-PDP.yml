@@ -77,48 +77,48 @@ incint:
    full_name: "incint"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1J1-DMDL6w_g9VJYiktHXshewEKf1QKsU"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1lJunNmHxw4EfCCPttLmDW-GPIQy7dCxY"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["greedy", "two pointers", "sorting", "combinatorics"]
    on_judge: false
 
 rotation:
    full_name: "rotation"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1-AprSwoMmNBkMvOHL6KbGmJq4ngHNswz"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1MTVLBAQyLghcSu1IYM2z8CuMVgqumlrd"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["strings", "kmp", "z-algorithm", "suffix arrays", "hashing"]
    on_judge: false
 
 flood:
    full_name: "flood"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1HvjRaQ9me0bfW0Fhi8gOOqDI31CO4HoC"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1Sdd8Lc6fQNLTtJosvqTyF4YRWhpXQ6tq"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dag", "dp", "topological sort"]
    on_judge: false
 
 meeting:
    full_name: "meeting"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1Xy35RQX8X86tleMC03Z-BL1TS6lApHCO"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1XcfsUzWgDgDMCqDBa6fydjWt2WuJVfJH"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["greedy", "Manhattan distance", "median", "sorting", "grid", "geometry"]
    on_judge: false
 
 tournament:
    full_name: "tournament"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1pYjnEAfyFZlMRWfC2LQrT1B6zbjhVsVb"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1t8hPkoLbEHxwUIz3W0MzULmmj_3tq60I"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["counting", "combinatorics"]
    on_judge: false
