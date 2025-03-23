@@ -8,7 +8,7 @@ samepizzas:
    solution_author: ""
    codes_in_git: true
    solution_tags: [sorting, selection, binary search, priority queue, greedy, set]
-   on_judge: false
+   on_judge: true
 
 polybox:
    full_name: "Πολύγωνο κουτιών"
@@ -20,7 +20,7 @@ polybox:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    solution_tags: [greedy, big-integer, absolute value, geometry]
-   on_judge: false
+   on_judge: true
 
 finding:
    full_name: "Ψάχνοντας τους ανταγωνιστές"
@@ -32,7 +32,7 @@ finding:
    solution_author: ""
    codes_in_git: true
    solution_tags: [interactive, greedy, absolute value]
-   on_judge: false
+   on_judge: false # Currently, no support for interactive problems.
 
 hiring:
    full_name: "Πρόσληψη πιτσαδόρων"
@@ -44,7 +44,7 @@ hiring:
    solution_author: ""
    codes_in_git: true
    solution_tags: ["sorting", "greedy", "local search", "priority queue", "set"]
-   on_judge: false
+   on_judge: true
    
 cauldron:
    full_name: "Μαγικό καζάνι"
