@@ -1,0 +1,47 @@
+TASK(
+   name = "tiphunting",
+   test_count = 37,
+   files_dir = "testdata/37-PDP/tiphunting/",
+   input_file = "tiphunting.in",
+   output_file = "tiphunting.out",
+   time_limit = 2,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "subtask1",
+         source = "subtask1.cc",
+         passes_only = [2, 3, 4, 5],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask2",
+         source = "subtask2.cc",
+         passes_only = [6, 7, 8, 9, 10],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask3",
+         source = "subtask3.cc",
+         passes_only = [1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+         lang = "c++",
+      ),
+     SOLUTION(
+         name = "subtask4",
+         source = "subtask4.cc",
+         passes_only = [6, 7, 8, 9, 10, 16, 17, 18, 19, 20, 21],
+         lang = "c++",
+      ),
+     SOLUTION(
+         name = "subtask5",
+         source = "subtask5.cc",
+         passes_only = [22, 23, 24, 25, 26, 27],
+         lang = "c++",
+      ),
+     SOLUTION(
+         name = "subtask6",
+         source = "optimal.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
