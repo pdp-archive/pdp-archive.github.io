@@ -81,7 +81,7 @@ incint:
    testcases_url: "https://drive.google.com/file/d/1lJunNmHxw4EfCCPttLmDW-GPIQy7dCxY"
    codes_in_git: false
    solution_tags: ["greedy", "two pointers", "sorting", "combinatorics"]
-   on_judge: false
+   on_judge: true
 
 rotation:
    full_name: "rotation"
@@ -91,7 +91,7 @@ rotation:
    testcases_url: "https://drive.google.com/file/d/1MTVLBAQyLghcSu1IYM2z8CuMVgqumlrd"
    codes_in_git: false
    solution_tags: ["strings", "kmp", "z-algorithm", "suffix arrays", "hashing"]
-   on_judge: false
+   on_judge: true
 
 flood:
    full_name: "flood"
@@ -101,7 +101,7 @@ flood:
    testcases_url: "https://drive.google.com/file/d/1Sdd8Lc6fQNLTtJosvqTyF4YRWhpXQ6tq"
    codes_in_git: false
    solution_tags: ["dag", "dp", "topological sort"]
-   on_judge: false
+   on_judge: true
 
 meeting:
    full_name: "meeting"
@@ -111,7 +111,7 @@ meeting:
    testcases_url: "https://drive.google.com/file/d/1XcfsUzWgDgDMCqDBa6fydjWt2WuJVfJH"
    codes_in_git: false
    solution_tags: ["greedy", "Manhattan distance", "median", "sorting", "grid", "geometry"]
-   on_judge: false
+   on_judge: true
 
 tournament:
    full_name: "tournament"
@@ -121,4 +121,5 @@ tournament:
    testcases_url: "https://drive.google.com/file/d/1t8hPkoLbEHxwUIz3W0MzULmmj_3tq60I"
    codes_in_git: false
    solution_tags: ["counting", "combinatorics"]
-   on_judge: false
+   on_judge: true
+
