@@ -1,0 +1,53 @@
+TASK(
+   name = "counter",
+   test_count = 37,
+   files_dir = "testdata/37-PDP/counter/",
+   input_file = "counter.in",
+   output_file = "counter.out",
+   time_limit = 1,
+   mem_limit = 64,
+   solutions = [
+      SOLUTION(
+         name = "counter_sub1",
+         source = "counter_sub1.cc",
+         passes_only = [2,3,4,5,6],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_sub2",
+         source = "counter_sub2.cc",
+         passes_only = [7,8,9,10,11],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_sub3",
+         source = "counter_sub3.cc",
+         passes_only = [12,13,14,15,16],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_sub4",
+         source = "counter_sub4.cc",
+         passes_only = [17,18,19,20,21],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_sub5",
+         source = "counter_sub5.cc",
+         passes_only = [22,23,24,25,26,27],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_full1",
+         source = "counter_full1.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "counter_full2",
+         source = "counter_full2.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
