@@ -55,7 +55,7 @@ cauldron:
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
-   solution_tags: [sorting, greedy]
+   solution_tags: ["sorting", "greedy"]
    on_judge: false
 
 shroompath:
@@ -67,7 +67,7 @@ shroompath:
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
-   solution_tags: [greedy, modulo, binary counting]
+   solution_tags: ["greedy", "modulo", "binary counting"]
    on_judge: false
 
 mergegame:
@@ -92,4 +92,16 @@ tiphunting:
    solution_author: "Μάκης Αρσένης"
    codes_in_git: true
    solution_tags: [lca, dfs, trees, binary lifting]
+   on_judge: false
+
+counter:
+   full_name: "Ο μετρητής του παππού"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1JMxquPrVIASLEfNOEPMBfftRk3VLXYS3/view"
+   statement_md: true
+   testcases_url: ""
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: ["binary search", "prefix sum", "cumulative sum", "divide and conquer"]
    on_judge: false
