@@ -7,7 +7,7 @@ samepizzas:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: [sorting, selection, binary search, priority queue, greedy, set]
+   solution_tags: ["sorting", "selection", "binary search", "priority queue", "greedy", "set"]
    on_judge: true
 
 polybox:
@@ -19,7 +19,7 @@ polybox:
    solution: true
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
-   solution_tags: [greedy, big-integer, absolute value, geometry]
+   solution_tags: ["greedy", "big-integer", "absolute value", "geometry"]
    on_judge: true
 
 finding:
@@ -31,7 +31,7 @@ finding:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: [interactive, greedy, absolute value]
+   solution_tags: ["interactive", "greedy", "absolute value"]
    on_judge: false # Currently, no support for interactive problems.
 
 hiring:
@@ -79,7 +79,7 @@ mergegame:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: [greedy, stack, segment tree]
+   solution_tags: ["greedy", "stack", "segment tree"]
    on_judge: false
 
 tiphunting:
@@ -91,7 +91,7 @@ tiphunting:
    solution: true
    solution_author: "Μάκης Αρσένης"
    codes_in_git: true
-   solution_tags: [lca, dfs, trees, binary lifting]
+   solution_tags: ["lca", "dfs", "trees", "binary lifting"]
    on_judge: false
 
 counter:
