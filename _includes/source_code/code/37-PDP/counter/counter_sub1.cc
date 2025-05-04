@@ -1,19 +1,20 @@
 #include <cstdio>
 
 typedef long long ll;
-const int MAXN = 200005;
+const long MAXN = 200'000;
 
-ll a[MAXN];
-int n, q, subtask;
+ll A[MAXN+1];
+long n, q;
+int subtask;
 
-int bsearch(ll x){
-    int l = 1, r = n, counter = 0;
+int FindCounter(ll x){
+    long l = 1, r = n, counter = 0;
     while(l <= r){
         counter++;
-        int m = (l+r)/2;
-        if(a[m] == x) 
+        long m = (l+r)/2;
+        if(A[m] == x) 
             break;
-        if(a[m] < x)
+        if(A[m] < x)
             l = m+1;
         else
             r = m-1;
@@ -27,13 +28,13 @@ int main() {
     freopen("counter.out", "w", stdout);
 #endif
     scanf("%d", &subtask);
-    scanf("%d %d", &n, &q);
-    for (int i = 1; i <= n; i++) scanf("%lld", &a[i]);
+    scanf("%ld %ld", &n, &q);
+    for (long i = 1; i <= n; i++) scanf("%lld", &A[i]);
 
     while (q--) {
         ll L, R;
         scanf("%lld %lld",&L,&R);
-        printf("%d\n", bsearch(L));
+        printf("%d\n", FindCounter(L));
     }
     return 0;
 }

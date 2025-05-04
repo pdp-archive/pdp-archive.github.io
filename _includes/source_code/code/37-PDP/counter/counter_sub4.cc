@@ -3,19 +3,22 @@
 using namespace std;
 
 typedef long long ll;
-const int MAXN = 200005;
+const long MAXN = 200'000;
 
-ll a[MAXN];
-int n, q, subtask;
+ll A[MAXN+1];
+int C[MAXN+1];//FindCounter τιμές
+ll PS[MAXN+1];//prefix sums στον C
+long n, q;
+int subtask;
 
-int bsearch(ll x){
-    int l = 1, r = n, counter = 0;
+int FindCounter(ll x){
+    long l = 1, r = n, counter = 0;
     while(l <= r){
         counter++;
-        int m = (l+r)/2;
-        if(a[m] == x) 
+        long m = (l+r)/2;
+        if(A[m] == x) 
             break;
-        if(a[m] < x)
+        if(A[m] < x)
             l = m+1;
         else
             r = m-1;
@@ -23,31 +26,28 @@ int bsearch(ll x){
     return counter;
 }
 
-ll ps[MAXN];
-ll c[MAXN];
-
 int main(){
 #ifdef CONTEST    
     freopen("counter.in", "r", stdin);
     freopen("counter.out", "w", stdout);
 #endif
     scanf("%d", &subtask);
-    scanf("%d %d", &n, &q);
+    scanf("%ld %ld", &n, &q);
 
-    for (int i = 1; i <= n; i++) scanf("%lld", &a[i]);
-    for (int i = 1; i <= n; i++) c[i] = bsearch(a[i]);
-    for (int i = 1; i <= n; i++) ps[i] = ps[i-1] + c[i];
-    int outside = bsearch(a[1]-1);
+    for (long i = 1; i <= n; i++) scanf("%lld", &A[i]);
+    for (long i = 1; i <= n; i++) C[i] = FindCounter(A[i]);
+    for (long i = 1; i <= n; i++) PS[i] = PS[i-1] + C[i];
+    int outside = FindCounter(A[1]-1);
     
     while (q--) {
         ll L, R, ans;
         scanf("%lld %lld", &L, &R);
-        int j = lower_bound(a+1, a+n+1, L) - a;
-        int k = upper_bound(a+1, a+n+1, R) - a - 1;
-        if(j>n || a[j]>R || k<1){//[L,R] εκτός του a[]
+        long j = lower_bound(A+1, A+n+1, L) - A;
+        long k = upper_bound(A+1, A+n+1, R) - A - 1;
+        if(j>n || A[j]>R || k<1){//[L,R] εκτός του A[]
             ans = outside * (R-L+1);
         } else {
-            ans = ps[k] - ps[j-1];
+            ans = PS[k] - PS[j-1];
             ans += outside * ((R-L+1) - (k-j+1));
         }
         printf("%lld\n",ans);
