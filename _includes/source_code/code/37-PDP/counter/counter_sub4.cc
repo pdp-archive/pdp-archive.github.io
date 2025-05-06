@@ -37,18 +37,18 @@ int main(){
     for (long i = 1; i <= n; i++) scanf("%lld", &A[i]);
     for (long i = 1; i <= n; i++) C[i] = FindCounter(A[i]);
     for (long i = 1; i <= n; i++) PS[i] = PS[i-1] + C[i];
-    int outside = FindCounter(A[1]-1);
+    int outside = FindCounter(A[1]-1);//Η επιστρεφόμενη τιμή της FindCounter για ανύπαρκτα x
     
     while (q--) {
         ll L, R, ans;
         scanf("%lld %lld", &L, &R);
         long j = lower_bound(A+1, A+n+1, L) - A;
         long k = upper_bound(A+1, A+n+1, R) - A - 1;
-        if(j>n || A[j]>R || k<1){//[L,R] εκτός του A[]
+        if(j>n || A[j]>R || k<1){//Όλο το [L,R] εκτός του A[]
             ans = outside * (R-L+1);
         } else {
-            ans = PS[k] - PS[j-1];
-            ans += outside * ((R-L+1) - (k-j+1));
+            ans = PS[k] - PS[j-1];//Τα στοιχεία του Α εντός του ερωτήματος
+            ans += outside * ((R-L+1) - (k-j+1));//και τα εκτός ερωτήματος
         }
         printf("%lld\n",ans);
     }
