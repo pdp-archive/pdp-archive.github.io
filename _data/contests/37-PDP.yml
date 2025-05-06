@@ -103,5 +103,5 @@ reviews:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: ["graphs", "trees", "cycle", "priority queue", "set", "two pointers", "longest path"]
+   solution_tags: ["graphs", "trees", "cycle", "priority queue", "set", "two pointers", "longest path", "segment tree"]
    on_judge: false
