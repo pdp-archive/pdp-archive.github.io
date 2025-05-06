@@ -11,9 +11,9 @@ std::vector<long> index_in_cycle;
 /* Βρίσκουμε ποιοι κόμβοι ανήκουν στον κύκλο. 
    Το κάνουμε αυτό κρατώντας μία στοίβα με τους κόμβους που είναι στο μονοπάτι 
    της DFS. Όταν βρούμε δύο φορές τον ίδιο κόμβο, το μονοπάτι έγινε κύκλος. */
-std::vector<long> is_on_stack;
 void find_cycle() {
   std::stack<std::tuple<long, long, long>> st;
+  std::vector<long> is_on_stack(adj.size(), false);
   st.push({ 1, -1, 0 });
   while (!st.empty()) {
     auto [node, par, neigh_idx] = st.top();
@@ -87,7 +87,6 @@ int main() {
   fclose(fi);
 
   index_in_cycle.resize(N+1, -1);
-  is_on_stack.resize(N+1, false);
   find_cycle();
   
   std::vector<long> w(N+1, 0);
@@ -116,16 +115,16 @@ int main() {
     pos.insert({ -(w[node_j] + j), j});
     neg.insert({ -(w[node_j] - j), j});
     if (j >= cycle.size()) {
-      // Fix the first elements. 
+      // Διορθώνουμε τα μικρότερα στοιχεία. 
       while (pos.begin()->second <= (j - cycle.size())) pos.erase(pos.begin());
       while (neg.begin()->second <= (j - cycle.size())) neg.erase(neg.begin());
-      // Fix the second elements.
+      // Διορθώνουμε τα δεύτερα μικρότερα στοιχεία.
       while (second_best(pos)->second <= (j - cycle.size())) pos.erase(second_best(pos));
       while (second_best(neg)->second <= (j - cycle.size())) neg.erase(second_best(neg));
       
       long next_j = cycle[(idx_j + 1) % cycle.size()];
       long i = edges[node_j].second == next_j ? node_j : next_j;
-      if (pos.begin()->second == neg.begin()->second) { // 1η περίπτωση
+      if (pos.begin()->second != neg.begin()->second) { // 1η περίπτωση
         ans[i] = 1 + -(pos.begin()->first + neg.begin()->first);  
       } else { // 2η περίπτωση
         ans[i] = 1 + -std::min(

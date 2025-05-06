@@ -9,9 +9,9 @@ std::vector<long> index_in_cycle;
 /* Βρίσκουμε ποιοι κόμβοι ανήκουν στον κύκλο. 
    Το κάνουμε αυτό κρατώντας μία στοίβα με τους κόμβους που είναι στο μονοπάτι 
    της DFS. Όταν βρούμε δύο φορές τον ίδιο κόμβο, το μονοπάτι έγινε κύκλος. */
-std::vector<long> is_on_stack;
 void find_cycle() {
   std::stack<std::tuple<long, long, long>> st;
+  std::vector<long> is_on_stack(adj.size(), false);
   st.push({ 1, -1, 0 });
   while (!st.empty()) {
     auto [node, par, neigh_idx] = st.top();
@@ -79,7 +79,6 @@ int main() {
   fclose(fi);
   
   index_in_cycle.resize(N+1, -1);
-  is_on_stack.resize(N+1, false);
   find_cycle();
   
   std::vector<long> w(N+1, 0);
@@ -110,7 +109,7 @@ int main() {
     } else {
       long u = i, v = edges[i].second;
       if (index_in_cycle[v] == (index_in_cycle[u] + 1) % cycle.size()) u = v;
-      // Δοκιμάσουμε όλα τα δυνατά ζεύγη από κόμβους στον κύκλο:
+      // Δοκιμάζουμε όλα τα δυνατά ζεύγη από κόμβους στον κύκλο:
       // Το μονοπάτι ξεκινάει στον j-οστό κόμβο στον κύκλο και καταλήγει στον jj-οστό.
       // Στους δύο ακριανούς κόμβους επιλέγουμε το μακρύτερο μονοπάτι. 
       long mx = 0;

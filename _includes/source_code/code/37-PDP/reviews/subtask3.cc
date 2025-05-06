@@ -8,9 +8,9 @@ std::vector<long> in_cycle;
 /* Βρίσκουμε ποιοι κόμβοι ανήκουν στον κύκλο. 
    Το κάνουμε αυτό κρατώντας μία στοίβα με τους κόμβους που είναι στο μονοπάτι 
    της DFS. Όταν βρούμε δύο φορές τον ίδιο κόμβο, το μονοπάτι έγινε κύκλος. */
-std::vector<long> is_on_stack;
 void find_cycle() {
   std::stack<std::tuple<long, long, long>> st;
+  std::vector<long> is_on_stack(adj.size(), false);
   st.push({ 1, -1, 0 });
   while (!st.empty()) {
     auto [node, par, neigh_idx] = st.top();
@@ -84,7 +84,6 @@ int main() {
   fclose(fi);
   
   in_cycle.resize(N+1, false);
-  is_on_stack.resize(N+1, false);
   find_cycle();
   
   FILE *fo = fopen("reviews.out", "w");
