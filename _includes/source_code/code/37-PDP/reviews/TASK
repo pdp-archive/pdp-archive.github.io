@@ -1,0 +1,47 @@
+TASK(
+   name = "reviews",
+   test_count = 37,
+   files_dir = "testdata/37-PDP/reviews/",
+   input_file = "reviews.in",
+   output_file = "reviews.out",
+   time_limit = 1,
+   mem_limit = 128,
+   solutions = [
+      SOLUTION(
+         name = "subtask1",
+         source = "subtask1.cc",
+         passes_only = [2, 3, 4, 5],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask2",
+         source = "subtask2.cc",
+         passes_only = [6, 7, 8, 9, 10],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask3",
+         source = "subtask3.cc",
+         passes_only = [10, 11, 12, 13, 14, 15, 16],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask4",
+         source = "subtask4.cc",
+         passes_only = [18, 19, 20, 21, 22, 23, 24],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "subtask5",
+         source = "subtask5.cc",
+         passes_only = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "efficient",
+         source = "efficient.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
