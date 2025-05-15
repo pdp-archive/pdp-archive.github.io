@@ -75,7 +75,7 @@ modulo:
    testcases_url: "https://drive.google.com/file/d/1L1la1U9cVlb5WInea_AYSGwEA8KipRrL"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 coinstack:
    full_name: "Στοίβα νομισμάτων"
@@ -85,7 +85,7 @@ coinstack:
    testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 pistes:
    full_name: "Πίστες, κλειδιά κι αστέρια"
@@ -95,7 +95,7 @@ pistes:
    testcases_url: "https://drive.google.com/file/d/1TrTklcMVudClln7gO0R0lB2YRk8evk6c"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 metro:
    full_name: "Το μετρό της Θεσσαλονίκης"
@@ -105,7 +105,7 @@ metro:
    testcases_url: "https://drive.google.com/file/d/1vSxFzJYpsI_XdNVQCDZDGzc7eNCIrp1r"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 kazarma:
    full_name: "Η γέφυρα της Καζάρμας"
@@ -115,7 +115,7 @@ kazarma:
    testcases_url: "https://drive.google.com/file/d/1zbpBQxDMEmr2b-5oVuFewZLMGc2AIsHC"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 icpc:
    full_name: "Προγραμματιστικός διαγωνισμός ICPC"
@@ -125,5 +125,5 @@ icpc:
    testcases_url: "https://drive.google.com/file/d/1_A9kQRdi_8QcO8kF46-TpwVTdGMajqzu"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 

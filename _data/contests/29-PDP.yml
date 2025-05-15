@@ -75,7 +75,7 @@ twoends:
    testcases_url: "https://drive.google.com/file/d/1BjGpuqf5AfjNNcLXAscMdUnC5RKGWaiM"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 aliens:
    full_name: "Εξωγήινες συχνότητες"
@@ -85,7 +85,7 @@ aliens:
    testcases_url: "https://drive.google.com/file/d/1-BQyequn18Z-896I-kn-7VrT2RM2oe0V"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 robots:
    full_name: "Η ληστεία των ρομπότ"
@@ -95,7 +95,7 @@ robots:
    testcases_url: "https://drive.google.com/file/d/1bhfEx4e93hP2UAzi68V4zmWiFO2VxS1S"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
 
 gcdseq:
    full_name: "Μέγιστος κοινός διαιρέτης"
@@ -105,4 +105,4 @@ gcdseq:
    testcases_url: "https://drive.google.com/file/d/1SK8Hh7ZL_1ash45CDztVOPIixJzKEP5E"
    codes_in_git: false
    solution_tags: []
-   on_judge: false
+   on_judge: true
