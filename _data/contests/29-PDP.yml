@@ -71,38 +71,38 @@ twoends:
    full_name: "Άθροισμα δύο άκρων"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1fxYRN1h97aLFPViZf9LddZP0VFmKhoET"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1BjGpuqf5AfjNNcLXAscMdUnC5RKGWaiM"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["hash map", "map", "bst", "sweep", "binary search"]
    on_judge: true
 
 aliens:
    full_name: "Εξωγήινες συχνότητες"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1sHSvJDc1aTX4Bud7KQUDg5D6J7YU2PlH"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1-BQyequn18Z-896I-kn-7VrT2RM2oe0V"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dp"]
    on_judge: true
 
 robots:
    full_name: "Η ληστεία των ρομπότ"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1TIbA5V2IF6Fh7L251-B_sLLNS60dEI2R"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1bhfEx4e93hP2UAzi68V4zmWiFO2VxS1S"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["longest increasing subsequence", "greedy", "hull", "geometry"]
    on_judge: true
 
 gcdseq:
    full_name: "Μέγιστος κοινός διαιρέτης"
    stage: "camp_c"
    statement_pdf_url: "https://drive.google.com/file/d/1z9mx1hdi6qKao_lrVBEy1PYzA14GrVqt"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1SK8Hh7ZL_1ash45CDztVOPIixJzKEP5E"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["segment tree", "binary search", "gcd", "number theory"]
    on_judge: true
