@@ -1,0 +1,16 @@
+TASK(
+   name = "twoends",
+   test_count = 20,
+   files_dir = "testdata/29-PDP/twoends/",
+   input_file = "twoends.in",
+   output_file = "twoends.out",
+   time_limit = 10,
+   solutions = [
+      SOLUTION(
+         name = "twoends_cc",
+         source = "twoends.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
