@@ -71,59 +71,59 @@ modulo:
    full_name: "Μέγιστα υπόλοιπα"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/154zpbmn0ao7rTd3NzR11i3-JpA_Jz1zM"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1L1la1U9cVlb5WInea_AYSGwEA8KipRrL"
-   codes_in_git: false
-   solution_tags: []
+   codes_in_git: true
+   solution_tags: ["sieve", "set", "binary search", "lower_bound"]
    on_judge: true
 
 coinstack:
    full_name: "Στοίβα νομισμάτων"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1GeA47NvFxww7bbWPLh8n-jc9UDGqnbzY"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
-   codes_in_git: false
-   solution_tags: []
+   codes_in_git: true
+   solution_tags: ["dp", "sprague grundy"]
    on_judge: true
 
 pistes:
    full_name: "Πίστες, κλειδιά κι αστέρια"
    stage: "camp_j"
    statement_pdf_url: "https://drive.google.com/file/d/1eTpkrgDxeqf-kz9TX9jB5Wrx-qwLayR4"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1TrTklcMVudClln7gO0R0lB2YRk8evk6c"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["brute force", "next permutation"]
    on_judge: true
 
 metro:
    full_name: "Το μετρό της Θεσσαλονίκης"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/114drynB489Z4hh-67vQHJVUx2GVdKEjO"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1vSxFzJYpsI_XdNVQCDZDGzc7eNCIrp1r"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["shortest paths", "dijsktra", "auxiliary graph"]
    on_judge: true
 
 kazarma:
    full_name: "Η γέφυρα της Καζάρμας"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/11kayAu7PnnBdBmk2JyvlOxbBJ7UaNJpA"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1zbpBQxDMEmr2b-5oVuFewZLMGc2AIsHC"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["graphs", "trees", "mst"]
    on_judge: true
 
 icpc:
    full_name: "Προγραμματιστικός διαγωνισμός ICPC"
    stage: "camp_s"
    statement_pdf_url: "https://drive.google.com/file/d/1tf-rhn4vD9g0ru8oQpYyjcAr4a_v3XdT"
-   statement_md: false
+   statement_md: true
    testcases_url: "https://drive.google.com/file/d/1_A9kQRdi_8QcO8kF46-TpwVTdGMajqzu"
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dp", "prefix sums", "segment trees", "range queries"]
    on_judge: true
 
