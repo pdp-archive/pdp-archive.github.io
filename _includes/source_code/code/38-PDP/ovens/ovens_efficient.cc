@@ -1,10 +1,12 @@
-#include <algorithm>
 #include <cstdio>
-#include <vector>
 
 const size_t MAXN = 200'000;
 
-long a[MAXN], k[MAXN];
+bool a[MAXN];
+long k[MAXN];
+
+// switch_ending[i] = Το πλήθος των διακοπτών (mod 2) 
+//      που τελειώνει στην θέση i. 
 bool switch_ending[MAXN];
 
 int main(){
@@ -18,15 +20,22 @@ int main(){
     scanf("%ld", &k[i]);
   }
    
-  long num_switch = 0;
-  bool toggle = 0;
+  long num_switch = 0; // Το πλήθος των διακοπτών που πατήσαμε.
+  bool toggle = 0; // Το πλήθος των ενεργών διακοπτών mod 2.
   for (long i = 0; i < N; ++i) {
-    if ((a[i] ^ toggle) == 1) {
-      a[i] = 0;
+    bool is_current_oven_on = a[i] ^ toggle;
+    if (is_current_oven_on) { 
+      // Πατάμε τον i-οστό διακόπτη.
       ++num_switch;
+      // Δηλώνουμε ότι υπάρχει ένας διακόπτης που επηρεάζει τους φούρνους
+      // (από το i) έως το i + k[i].
       switch_ending[i + k[i]] = !switch_ending[i + k[i]];
+      // Το πλήθος των ενεργών διακοπτών αλλάζει κατά ένα
+      // (άρα το υπόλοιπο με το δύο αντιστρέφεται).
       toggle = !toggle;
     }
+    // Αν υπάρχει μονό πλήθος διακοπτών που τελειώνει στο i, 
+    // τότε αλλάζουμε το υπόλοιπο των ενεργών διακοπτών.
     if (switch_ending[i]) {
       toggle = !toggle;
     }

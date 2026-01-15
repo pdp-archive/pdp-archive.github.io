@@ -1,6 +1,6 @@
 TASK(
    name = "ovens",
-   test_count = 1,
+   test_count = 26,
    files_dir = "testdata/38-PDP/ovens/",
    input_file = "ovens.in",
    output_file = "ovens.out",
@@ -9,15 +9,33 @@ TASK(
    uses_std_in_out,
    solutions = [
       SOLUTION(
-         name = "ovens_brute_force",
-         source = "ovens_brute_force.cc",
+         name = "ovens_efficient",
+         source = "ovens_efficient.cc",
          passes_all,
          lang = "c++",
       ),
       SOLUTION(
-         name = "ovens_efficient",
-         source = "ovens_efficient.cc",
-         passes_all,
+         name = "ovens_sub_1",
+         source = "ovens_sub_1.cc",
+         passes_up_to = 4,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "ovens_sub_2",
+         source = "ovens_sub_2.cc",
+         passes_only = [5, 6, 7, 8],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "ovens_sub_3",
+         source = "ovens_sub_3.cc",
+         passes_up_to = 13,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "ovens_sub_4",
+         source = "ovens_sub_4.cc",
+         passes_only = [14, 15, 16, 17, 18, 19],
          lang = "c++",
       ),
    ]

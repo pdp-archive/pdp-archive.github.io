@@ -1,10 +1,9 @@
-#include <algorithm>
 #include <cstdio>
-#include <vector>
 
 const size_t MAXN = 200'000;
 
-long a[MAXN], k[MAXN];
+bool a[MAXN];
+long k[MAXN];
 
 int main(){
   long N;
@@ -17,13 +16,14 @@ int main(){
     scanf("%ld", &k[i]);
   }
    
-  long num_switch = 0;
+  long num_switch = 0; // Το πλήθος των διακοπτών που πατήσαμε.
   for (long i = 0; i < N; ++i) {
-    if (a[i] == 1) {
+    if (a[i]) {
       a[i] = 0;
       ++num_switch;
+      // Αλλάζουμε την κατάσταση των επόμενων k[i] διακοπτών.
       for (int j = i + 1; j <= i + k[i]; ++j) {
-        a[j] = 1 - a[j];
+        a[j] = !a[j];
       }
     }
   }
