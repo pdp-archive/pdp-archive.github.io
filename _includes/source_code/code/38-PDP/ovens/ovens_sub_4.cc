@@ -23,6 +23,7 @@ int main(){
     if ((a[i] ^ toggle) == 1) {
       a[i] = 0;
       ++num_switch;
+      toggle = !toggle;
     }
   }
     
