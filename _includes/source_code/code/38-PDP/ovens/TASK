@@ -6,6 +6,7 @@ TASK(
    output_file = "ovens.out",
    time_limit = 1,
    mem_limit = 64,
+   uses_std_in_out,
    solutions = [
       SOLUTION(
          name = "ovens_brute_force",
