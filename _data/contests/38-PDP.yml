@@ -5,9 +5,9 @@ bamboo:
    statement_md: true
    testcases_url: ""
    solution: true
-   solution_author: ""
+   solution_author: "Γιώργος Βενιζέλος"
    codes_in_git: false
-   solution_tags: ["sorting"]
+   solution_tags: ["sorting", "set", "hash table", "counting sort"]
    on_judge: false
 
 ovens:
