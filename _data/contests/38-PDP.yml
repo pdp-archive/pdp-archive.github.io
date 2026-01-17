@@ -19,7 +19,7 @@ ovens:
    solution: true
    solution_author: ""
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["sorting", "arrays", "greedy"]
    on_judge: false
 
 bqueries:

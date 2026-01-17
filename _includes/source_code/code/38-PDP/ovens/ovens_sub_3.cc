@@ -10,7 +10,9 @@ int main(){
   scanf("%ld", &N);
    
   for(long i = 0; i < N; ++i) {
-    scanf("%ld", &a[i]);
+    int temp;
+    scanf("%d", &temp);
+    a[i] = temp;
   }
   for(long i = 0; i < N; ++i) {
     scanf("%ld", &k[i]);
