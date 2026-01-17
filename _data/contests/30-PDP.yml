@@ -73,7 +73,7 @@ modulo:
    statement_pdf_url: "https://drive.google.com/file/d/154zpbmn0ao7rTd3NzR11i3-JpA_Jz1zM"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1L1la1U9cVlb5WInea_AYSGwEA8KipRrL"
-   codes_in_git: true
+   codes_in_git: false
    solution_tags: ["sieve", "set", "binary search", "lower_bound"]
    on_judge: true
 
@@ -83,7 +83,7 @@ coinstack:
    statement_pdf_url: "https://drive.google.com/file/d/1GeA47NvFxww7bbWPLh8n-jc9UDGqnbzY"
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1w-jou_aukb14xTXuTX6iqqabwItex0oK"
-   codes_in_git: true
+   codes_in_git: false
    solution_tags: ["dp", "sprague grundy"]
    on_judge: true
 
@@ -124,6 +124,6 @@ icpc:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1_A9kQRdi_8QcO8kF46-TpwVTdGMajqzu"
    codes_in_git: false
-   solution_tags: ["dp", "prefix sums", "segment trees", "range queries"]
+   solution_tags: ["dp", "prefix sums", "segment tree", "range queries"]
    on_judge: true
 
