@@ -12,7 +12,7 @@ codename: gcdseq
 ```c++
 int gcd(int a, int b) {
    if (min(a,b) == 0) return max(a,b);
-   return gcd(a, a%b);
+   return gcd(b, a%b);
 }
 ```
 Μπορείς να βοηθήσεις τον πρωταγωνιστή μας να ξαναμπεί δυναμικά στο μάθημα;
