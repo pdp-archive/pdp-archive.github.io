@@ -6,7 +6,7 @@ TASK(
    output_file = "ovens.out",
    time_limit = 1,
    mem_limit = 64,
-   uses_std_in_out,
+   uses_stdio,
    solutions = [
       SOLUTION(
          name = "ovens_efficient",
