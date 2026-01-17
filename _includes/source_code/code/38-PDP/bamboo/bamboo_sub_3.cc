@@ -1,4 +1,4 @@
-// Λύση για το τρίτο υποπρόβλημα όπου N <= 5000
+// Λύση για το τρίτο υποπρόβλημα όπου N <= 5'000
 // Επειδή ο αριθμός των μπαμπού είναι μικρός, μπορούμε να
 // απλά να προσομοιώσουμε τη διαδικασία κοπής μπαμπού
 // μέρα με τη μέρα.
@@ -9,12 +9,12 @@ const size_t MAXN = 200'000;
 
 using namespace std;
 
-long n;
+long N;
 long lengths[MAXN];
 
 int main() {
-  scanf("%ld", &n);
-  for (long i = 0; i < n; i++) {
+  scanf("%ld", &N);
+  for (long i = 0; i < N; i++) {
     scanf("%ld", &lengths[i]);
   }
 
@@ -26,7 +26,7 @@ int main() {
     current_bamboo_length = 0;
     // Βρίσκουμε κάποιο μήκος μπαμπού που δεν έχει κοπεί ακόμα και κόβουμε
     // όλα τα μπαμπού με αυτό το μήκος.
-    for (long i = 0; i < n; i++) {
+    for (long i = 0; i < N; i++) {
       if (lengths[i] == 0)
         continue;
       if (current_bamboo_length == 0)

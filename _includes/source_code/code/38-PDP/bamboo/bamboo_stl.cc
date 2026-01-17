@@ -4,14 +4,14 @@
 
 using namespace std;
 
-long n;
+long N;
 vector<long> lengths;
 
 int main() {
   // Διαβάζουμε τα μήκη των μπαμπού
-  scanf("%ld", &n);
-  lengths.resize(n);
-  for (long i = 0; i < n; i++) {
+  scanf("%ld", &N);
+  lengths.resize(N);
+  for (long i = 0; i < N; i++) {
     scanf("%ld", &lengths[i]);
   }
 

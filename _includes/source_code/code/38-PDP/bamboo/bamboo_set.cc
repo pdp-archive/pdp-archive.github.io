@@ -3,14 +3,14 @@
 
 using namespace std;
 
-long n;
+long N;
 unordered_set<long> unique_lengths;
 
 int main() {
   // Διαβάζουμε τα μήκη των μπαμπού και τα αποθηκεύουμε στο unordered_set
-  scanf("%ld", &n);
+  scanf("%ld", &N);
   long len;
-  for (long i = 0; i < n; i++) {
+  for (long i = 0; i < N; i++) {
     scanf("%ld", &len);
     unique_lengths.insert(len);
   }

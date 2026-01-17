@@ -3,33 +3,25 @@
 // έναν πίνακα συχνοτήτων για να αποθηκεύσουμε πόσα
 // μπαμπού υπάρχουν για κάθε μήκος.
 
+#include <bitset>
 #include <cstdio>
 
 const size_t MAXN = 200'000;
-const size_t MAXH = 100'005;
+const size_t MAXH = 100'000;
 
 using namespace std;
 
-long n;
-long heights_count[MAXH];
+long N;
+bitset<MAXH + 1> lengths_found;
 
 int main() {
-  scanf("%ld", &n);
+  scanf("%ld", &N);
   long len;
-  for (long i = 0; i < n; i++) {
-    // Διαβάζουμε το μήκος κάθε μπαμπού και αυξάνουμε
-    // τη συχνότητά του στον πίνακα
+  for (long i = 0; i < N; i++) {
+    // Διαβάζουμε το μήκος κάθε μπαμπού και σημειώνουμε ότι το βρήκαμε
     scanf("%ld", &len);
-    heights_count[len]++;
+    lengths_found[len] = true;
   }
 
-  // Για κάθε διαφορετικό μήκος μπαμπού που υπάρχει, χρειαζόμαστε μία μέρα
-  long total_days = 0;
-  for (long i = 0; i < MAXH; i++) {
-    if (heights_count[i] > 0) {
-      total_days++;
-    }
-  }
-
-  printf("%ld\n", total_days);
+  printf("%zu\n", lengths_found.count());
 }

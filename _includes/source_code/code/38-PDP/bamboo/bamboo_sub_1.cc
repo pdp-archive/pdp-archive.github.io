@@ -8,13 +8,13 @@ const size_t MAXN = 200'000;
 
 using namespace std;
 
-long n;
+long N;
 long lengths[MAXN];
 
 int main() {
   // Διαβάζουμε το N παρ' ότι ξέρουμε ότι σε αυτό το υποπρόβλημα είναι πάντα 2
-  scanf("%ld", &n);
-  for (long i = 0; i < n; i++) {
+  scanf("%ld", &N);
+  for (long i = 0; i < N; i++) {
     scanf("%ld", &lengths[i]);
   }
 
