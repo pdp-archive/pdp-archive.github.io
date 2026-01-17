@@ -9,7 +9,8 @@ function run_test() {
    code_filename=$6
    time_limit=$7
    mem_limit=$8
-   compilation_command=$9
+   uses_stdio=$9
+   compilation_command=${10}
    #  sed -i 's/\r//' test_functions.sh
    # Step 1: Clear the tmp/ directory.
    if [[ -x tmp/ ]]; then
@@ -56,7 +57,7 @@ function run_test() {
    echo -e "      Running the testcases.."
    did_fail="false"
    all_arguments_arr=("$@")
-   for i in "${all_arguments_arr[@]:9}";
+   for i in "${all_arguments_arr[@]:10}";
    do
       # Decode the input/output filenames.
       norm1=${testcase_inp_template_name/\#/$i}
@@ -65,9 +66,17 @@ function run_test() {
       ln -sf ../${norm1} $fixed_inp_name
       # Run the code.
       if [ "$compilation_command" = "javac" ]; then
-         timeout $time_limit java Main
+         if [ "$uses_stdio" = true ]; then 
+	    timeout $time_limit java Main < $fixed_inp_name > $fixed_out_name
+	 else
+	    timeout $time_limit java Main
+	 fi; 
       else
-         timeout $time_limit ./$executable_name
+         if [ "$uses_stdio" = true ]; then 
+	    timeout $time_limit ./$executable_name < $fixed_inp_name > $fixed_out_name
+	 else
+	    timeout $time_limit ./$executable_name
+	 fi; 
       fi;
       # Check that no timeout occurred.
       if [ "$?" = 124 ]; then
