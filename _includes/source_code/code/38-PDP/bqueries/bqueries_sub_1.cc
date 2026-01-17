@@ -4,12 +4,12 @@ using namespace std;
 
 typedef long long ll;
 
-int Q; // Αριθμός ερωτημάτων
+long Q;  // Αριθμός ερωτημάτων
 ll L, R; // Όρια ερωτήματος
 
 ll calculate_bquery(ll L, ll R) {
   // Λύση για το υποπρόβλημα με R <= 5000
-  // Σε αυτή την περίπτωση, μπορούμε να απλά να μετρήσουμε
+  // Σε αυτή την περίπτωση, μπορούμε απλά να μετρήσουμε
   // όλα τα έγκυρα ζεύγη (x, y) με L <= x, y <= R
 
   ll count = 0;
@@ -25,9 +25,9 @@ ll calculate_bquery(ll L, ll R) {
   return count;
 }
 
-int main () {
-  scanf("%d", &Q);
-  for (int q = 0; q < Q; q++) {
+int main() {
+  scanf("%ld", &Q);
+  for (long q = 0; q < Q; q++) {
     scanf("%lld %lld", &L, &R);
     ll result = calculate_bquery(L, R);
     printf("%lld\n", result);

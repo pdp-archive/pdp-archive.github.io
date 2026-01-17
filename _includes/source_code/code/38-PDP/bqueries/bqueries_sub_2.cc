@@ -4,7 +4,7 @@ using namespace std;
 
 typedef long long ll;
 
-int Q;   // Αριθμός ερωτημάτων
+long Q;  // Αριθμός ερωτημάτων
 ll L, R; // Όρια ερωτήματος
 
 ll calculate_bquery(ll L, ll R) {
@@ -50,13 +50,15 @@ ll calculate_bquery(ll L, ll R) {
       idx--;
       // Αν το bit του R είναι 1, συνεχίζουμε στο επόμενο bit
       ll rBit = R & bit;
-      if (rBit == bit) continue;
+      if (rBit == bit)
+        continue;
       // Κάθε μηδενικό του x έχει 2 επιλογές στο y οπότε προσθέτουμε
       // 2^xZeros[idx]
       count += (1LL << xZeros[idx]);
       // Αν το bit του x είναι 1, σταματάμε
       ll xBit = x & bit;
-      if (xBit == bit) break;
+      if (xBit == bit)
+        break;
     }
     totalCount += (1LL << totalXZeros) - count;
   }
@@ -65,8 +67,8 @@ ll calculate_bquery(ll L, ll R) {
 }
 
 int main() {
-  scanf("%d", &Q);
-  for (int q = 0; q < Q; q++) {
+  scanf("%ld", &Q);
+  for (long q = 0; q < Q; q++) {
     scanf("%lld %lld", &L, &R);
     ll result = calculate_bquery(L, R);
     printf("%lld\n", result);

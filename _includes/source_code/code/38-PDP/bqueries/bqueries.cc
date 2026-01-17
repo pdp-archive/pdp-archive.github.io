@@ -4,12 +4,12 @@ using namespace std;
 
 typedef long long ll;
 
-int Q; // Αριθμός ερωτημάτων
-ll L, R; // Όρια ερωτήματος
+long Q;      // Αριθμός ερωτημάτων
+ll L, R;     // Όρια ερωτήματος
 ll pow3[64]; // Δυνάμεις του 3
 
 ll calculate_bquery(ll L, ll R) {
-  ll total = 1; // Συνολικός αριθμός ζευγών
+  ll total = 1;        // Συνολικός αριθμός ζευγών
   ll upperBounded = 1; // Αριθμός ζευγών με άνω όριο
   ll lowerBounded = 1; // Αριθμός ζευγών με κάτω όριο
   ll digits = 0;
@@ -36,19 +36,18 @@ ll calculate_bquery(ll L, ll R) {
     }
   }
 
-
   return total;
 }
 
-int main () {
+int main() {
   // Προϋπολογισμός δυνάμεων του 3
   pow3[0] = 1;
-  for (int i = 1; i < 64; i++) {
+  for (int i = 1; i <= 32; i++) {
     pow3[i] = pow3[i - 1] * 3;
   }
 
-  scanf("%d", &Q);
-  for (int q = 0; q < Q; q++) {
+  scanf("%ld", &Q);
+  for (long q = 0; q < Q; q++) {
     scanf("%lld %lld", &L, &R);
     ll result = calculate_bquery(L, R);
     printf("%lld\n", result);

@@ -31,7 +31,7 @@ bqueries:
    solution: true
    solution_author: ""
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dp", "dynamic programming", "bitwise digit dp", "prefix sum"]
    on_judge: false
 
 missing:
