@@ -9,7 +9,7 @@ function run_test() {
    code_filename=$6
    time_limit=$7
    mem_limit=$8
-   uses_std_in_out=$9
+   uses_stdio=$9
    compilation_command=${10}
    #  sed -i 's/\r//' test_functions.sh
    # Step 1: Clear the tmp/ directory.
@@ -66,15 +66,14 @@ function run_test() {
       ln -sf ../${norm1} $fixed_inp_name
       # Run the code.
       command_suffix=""
-      echo $command_suffix
       if [ "$compilation_command" = "javac" ]; then
-         if [ "$uses_std_in_out" = true ]; then 
+         if [ "$uses_stdio" = true ]; then 
 	    timeout $time_limit java Main < $fixed_inp_name > $fixed_out_name
 	 else
 	    timeout $time_limit java Main
 	 fi; 
       else
-         if [ "$uses_std_in_out" = true ]; then 
+         if [ "$uses_stdio" = true ]; then 
 	    timeout $time_limit ./$executable_name < $fixed_inp_name > $fixed_out_name
 	 else
 	    timeout $time_limit ./$executable_name

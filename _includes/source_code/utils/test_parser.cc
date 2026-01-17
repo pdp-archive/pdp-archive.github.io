@@ -134,7 +134,7 @@ public:
    std::string output_file;
    double time_limit;
    size_t mem_limit = 0;
-   bool uses_std_in_out = false;
+   bool uses_stdio = false;
    
    // Automatically populated by the tool.
    std::string source_directory;
@@ -157,7 +157,7 @@ public:
    }
    
    void setFlagAttribute(const std::string& attr_name) override {
-      if (attr_name == "uses_std_in_out") uses_std_in_out = true;
+      if (attr_name == "uses_stdio") uses_stdio = true;
    }
    
    void setListCountAttribute(const std::string& attr_name, std::vector<size_t> value) override {
@@ -202,7 +202,7 @@ TopLevel task_top_level({
    { "output_file", STRING_TYPE },
    { "time_limit", DOUBLE_TYPE },
    { "mem_limit", COUNT_TYPE },
-   { "uses_std_in_out", FLAG_TYPE},
+   { "uses_stdio", FLAG_TYPE},
 });
 
 TopLevel solution_top_level({
@@ -687,7 +687,7 @@ struct ScriptBuilder {
          solution->source + "' " + 
          std::to_string(time_limit) + " " + 
          std::to_string(task->mem_limit) + " " + 
-         (task->uses_std_in_out ? "true" : "false") + " '" + 
+         (task->uses_stdio ? "true" : "false") + " '" + 
          compilation_commands[solution->lang] + 
          "' \"${array[@]}\" \n";
    }
