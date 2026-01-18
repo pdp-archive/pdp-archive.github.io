@@ -118,4 +118,4 @@ concat:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/195tFyrrywq4zGAa06ctGyUSOrEmJtMCV"
    codes_in_git: true
-   solution_tags: ["trie", "dynamic programming", "counting"]
+   solution_tags: ["trie", "dp", "counting"]
