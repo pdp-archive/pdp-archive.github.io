@@ -28,10 +28,10 @@ bqueries:
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
    testcases_url: ""
-   solution: false
+   solution: true
    solution_author: ""
    codes_in_git: false
-   solution_tags: []
+   solution_tags: ["dp", "dynamic programming", "bitwise digit dp", "prefix sum"]
    on_judge: false
 
 missing:
