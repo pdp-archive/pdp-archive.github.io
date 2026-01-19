@@ -1,0 +1,48 @@
+TASK(
+   name = "missing",
+   test_count = 26,
+   files_dir = "testdata/38-PDP/missing/",
+   input_file = "missing.in",
+   output_file = "missing.out",
+   time_limit = 1,
+   mem_limit = 64,
+   uses_stdio,
+   solutions = [
+      SOLUTION(
+         name = "missing_dac_100pt",
+         source = "missing_dac_100pt.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "missing_bsearch_100pt",
+         source = "missing_bsearch_100pt.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "missing_sub1_13pt",
+         source = "missing_sub1_13pt.cc",
+         passes_up_to = 4,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "missing_sub2_29pt",
+         source = "missing_sub2_29pt.cc",
+         passes_only = [5, 6, 7, 8],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "missing_sub3_18pt",
+         source = "missing_sub3_18pt.cc",
+         passes_only = [5, 6, 7, 8, 9, 10, 11, 12, 13],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "missing_sub4_17pt",
+         source = "missing_sub4_17pt.cc",
+         passes_up_to = 21,
+         lang = "c++",
+      ),
+   ]
+)

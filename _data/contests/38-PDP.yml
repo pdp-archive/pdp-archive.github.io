@@ -3,7 +3,7 @@ bamboo:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1z9lhg0qm_5ZZ2WpPmaQa7t9O9QLjOIQ4/view"
    solution: false
    solution_author: ""
    codes_in_git: false
@@ -15,7 +15,7 @@ ovens:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1auaGYm_sTSjobRKqD1Vz1fPuvRGJqumL/view"
    solution: true
    solution_author: ""
    codes_in_git: true
@@ -27,7 +27,7 @@ bqueries:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1ipQ9irvejQVia2SrvlW9SqFBbcavCyk5/view"
    solution: false
    solution_author: ""
    codes_in_git: false
@@ -39,9 +39,9 @@ missing:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
-   solution: false
-   solution_author: ""
-   codes_in_git: false
-   solution_tags: []
+   testcases_url: "https://drive.google.com/file/d/1Ejhwobzpftf1hBUgtulClmNe6TfklJgQ/view"
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: ["binary search","divide and conquer","interactive"]
    on_judge: false
