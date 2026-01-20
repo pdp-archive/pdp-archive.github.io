@@ -6,7 +6,7 @@ int query(int x){
     printf("? %d",x);
     fflush(stdout);
     scanf("%d",&x);
-    if(x==-1)exit(0);
+    if(x==-1) exit(0);
     return x;
 }
 

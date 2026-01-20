@@ -1,18 +1,19 @@
-#include <cstdio>
-#include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <cstdio>
+#include <vector>
 using namespace std;
 
-vector<int> mem(5001);
-int query(int x){
-    if(!mem[x]){
+const int MAXN = 5000;
+int mem[MAXN];
+int query(int x){//το memoization ενσωματώνεται στη query
+    if(!mem[x-1]){//ο αριθμός στη θέση x αποθηκεύεται στο mem[x-1]
         printf("? %d",x);
         fflush(stdout);
-        scanf("%d",&mem[x]);
-        if(mem[x]==-1)exit(0);
+        scanf("%d",&mem[x-1]);
+        if(mem[x-1]==-1) exit(0);
     }
-    return mem[x];
+    return mem[x-1];
 }
 
 int main(){
@@ -21,10 +22,10 @@ int main(){
     N = query(M);
     K = N - M;
 
-    vector<pair<int,int>> missing;    //αριθμός που λείπει, πλήθος συνεχόμενων
+    vector<pair<int,int>> missing; //θέση που λείπει αριθμός, πόσοι αριθμοί λείπουν στη θέση 
     for(int i=0;i<K;i++){
-        //δυαδική αναζήτηση για τον αριστερότερο αριθμό
-        //που βρίσκεται i θέσεις αριστερότερα από την προβλεπόμενη θέση του
+        //δυαδική αναζήτηση για τον αριθμό
+        //που βρίσκεται i θέσεις αριστερότερα από την αναμενόμενη θέση του
         int leftpos = 1, rightpos = M, missing_gap = -1;
         while(leftpos<=rightpos){
             int midpos = (leftpos+rightpos+1)/2, midval = query(midpos);
@@ -32,7 +33,7 @@ int main(){
                 //άρα λείπουν αριθμοί εδώ ή και αριστερότερα
                 missing_gap = midval;
                 rightpos = midpos-1;
-            } else {//midpos==midval
+            } else {
                 leftpos  = midpos+1;
             }
         }
