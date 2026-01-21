@@ -6,8 +6,8 @@ using namespace std;
 
 const int MAXN = 5000;
 int mem[MAXN];
-int query(int x){//το memoization ενσωματώνεται στη query
-    if(!mem[x-1]){//ο αριθμός στη θέση x αποθηκεύεται στο mem[x-1]
+int query(int x){//αποθηκεύουμε στο mem[x-1] το query(x), ώστε
+    if(!mem[x-1]){//να μην ξανακάνουμε δύο φορές το ίδιο ερώτημα
         printf("? %d",x);
         fflush(stdout);
         scanf("%d",&mem[x-1]);
@@ -22,15 +22,15 @@ int main(){
     N = query(M);
     K = N - M;
 
-    vector<pair<int,int>> missing; //θέση που λείπει αριθμός, πόσοι αριθμοί λείπουν στη θέση 
+    vector<pair<int,int>> missing; //αριστερά από τη θέση first, λείπουν second συνεχόμενοι αριθμοί.
     for(int i=0;i<K;i++){
-        //δυαδική αναζήτηση για τον αριθμό
-        //που βρίσκεται i θέσεις αριστερότερα από την αναμενόμενη θέση του
+        //δυαδική αναζήτηση για τον αριθμό που βρίσκεται 
+		//i θέσεις αριστερότερα από την αναμενόμενη θέση του.
         int leftpos = 1, rightpos = M, missing_gap = -1;
         while(leftpos<=rightpos){
             int midpos = (leftpos+rightpos+1)/2, midval = query(midpos);
             if(midpos+i < midval){//ο αριθμός δεν βρέθηκε στη θέση του,
-                //άρα λείπουν αριθμοί εδώ ή και αριστερότερα
+                //άρα λείπουν αριθμοί εδώ ή και αριστερότερα.
                 missing_gap = midval;
                 rightpos = midpos-1;
             } else {
