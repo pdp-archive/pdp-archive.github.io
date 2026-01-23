@@ -22,18 +22,6 @@ ovens:
    solution_tags: ["sorting", "arrays", "greedy"]
    on_judge: false
 
-bqueries:
-   full_name: "Δυαδικά ερωτήματα"
-   stage: "a"
-   statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
-   statement_md: true
-   testcases_url: "https://drive.google.com/file/d/1ipQ9irvejQVia2SrvlW9SqFBbcavCyk5/view"
-   solution: false
-   solution_author: ""
-   codes_in_git: false
-   solution_tags: []
-   on_judge: false
-
 missing:
    full_name: "Χαμένα κουτιά"
    stage: "a"
@@ -44,4 +32,16 @@ missing:
    solution_author: "Κωνσταντίνος Μποκής"
    codes_in_git: true
    solution_tags: ["binary search","divide and conquer","interactive"]
+   on_judge: false
+
+bqueries:
+   full_name: "Δυαδικά ερωτήματα"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1ipQ9irvejQVia2SrvlW9SqFBbcavCyk5/view"
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
    on_judge: false

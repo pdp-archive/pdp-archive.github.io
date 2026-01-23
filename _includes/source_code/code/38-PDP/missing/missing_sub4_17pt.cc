@@ -5,7 +5,7 @@
 using namespace std;
 
 int query(int x){
-    printf("? %d",x);
+    printf("? %d\n",x);
     fflush(stdout);
     scanf("%d",&x);
     if(x==-1) exit(0);
@@ -43,6 +43,7 @@ int main(){
     for(auto u:missing)
         for(int i=-u.second;i<0;i++)
             printf(" %d",u.first+i);
+    putchar('\n');
     fflush(stdout);
     return 0;
 }

@@ -8,7 +8,7 @@ const int MAXN = 5000;
 int mem[MAXN];
 int query(int x){//αποθηκεύουμε στο mem[x-1] το query(x), ώστε
     if(!mem[x-1]){//να μην ξανακάνουμε δύο φορές το ίδιο ερώτημα
-        printf("? %d",x);
+        printf("? %d\n",x);
         fflush(stdout);
         scanf("%d",&mem[x-1]);
         if(mem[x-1]==-1) exit(0);
@@ -44,10 +44,10 @@ int main(){
     }
 
     printf("! %d",K);
-    for(auto u:missing){
+    for(auto u:missing)
         for(int i=-u.second;i<0;i++)
             printf(" %d",u.first+i);
-    }
+    putchar('\n');
     fflush(stdout);
     return 0;
 }

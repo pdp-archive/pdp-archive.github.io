@@ -4,7 +4,7 @@
 using namespace std;
 
 int query(int x){
-    printf("? %d",x);
+    printf("? %d\n",x);
     fflush(stdout);
     scanf("%d",&x);
     if(x==-1) exit(0);
@@ -30,6 +30,7 @@ int main(){
         else
             printf(" %d",i);//αριθμός που λείπει
     }
+    putchar('\n');
     fflush(stdout);
     return 0;
 }

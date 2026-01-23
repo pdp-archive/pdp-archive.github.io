@@ -3,7 +3,7 @@
 using namespace std;
 
 int query(int x){
-    printf("? %d",x);
+    printf("? %d\n",x);
     fflush(stdout);
     scanf("%d",&x);
     if(x==-1) exit(0);
@@ -28,8 +28,9 @@ int main(){
         }
     }
     printf("! %d",K);
-    for(int i=missing_gap-K;i<=missing_gap;i++)
+    for(int i=missing_gap-K;i<missing_gap;i++)
         printf(" %d",i);
+    putchar('\n');
     fflush(stdout);
     return 0;
 }

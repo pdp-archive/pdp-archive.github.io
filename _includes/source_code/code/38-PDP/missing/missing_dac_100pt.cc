@@ -5,7 +5,7 @@
 using namespace std;
 
 int query(int x){
-    printf("? %d",x);
+    printf("? %d\n",x);
     fflush(stdout);
     scanf("%d",&x);
     if(x==-1) exit(0);
@@ -35,6 +35,7 @@ int main(){
     divide_and_conquer(1,1,N,M);
     printf("! %zd",missing.size());
     for(auto u:missing)printf(" %d",u);
+    putchar('\n');
     fflush(stdout);
     return 0;
 }

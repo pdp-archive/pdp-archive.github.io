@@ -3,7 +3,7 @@
 using namespace std;
 
 int query(int x){
-    printf("? %d",x);
+    printf("? %d\n",x);
     fflush(stdout);
     scanf("%d",&x);
     if(x==-1) exit(0);
@@ -24,7 +24,7 @@ int main(){
             leftpos = midpos+1;
         }
     }
-    printf("! 1 %d",missing);
+    printf("! 1 %d\n",missing-1);
     fflush(stdout);
     return 0;
 }
