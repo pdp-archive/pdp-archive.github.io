@@ -20,10 +20,6 @@ codename: missing
 (``fflush``) και διάβασμα της απάντησης. Θα χρησιμοποιήσουμε την παρακάτω βοηθητική συνάρτηση 
 ``query`` που κάνει αυτές τις εργασίες για να οργανώσουμε καλύτερα τον κώδικα. 
 {% include code.md solution_name='missing_dac_100pt.cc' start=7 end=13 %}
-Με μια επιπλέον τεχνική στην παραπάνω συνάρτηση που θα εξηγηθεί στο υποπρόβλημα $$5$$,
-θα μεταβούμε από το υποπρόβλημα $$4$$ στην πλήρη λύση. 
-χωρίς αλλαγές στον υπόλοιπο κώδικα.
-{% include code.md solution_name='missing_bsearch_100pt.cc' start=8 end=17 %}
 
 ## Λύση brute force (13%)
  
@@ -47,7 +43,7 @@ $$a,a+1,\ldots,N-1$$ αντίστοιχα.
 {% include code.md solution_name='missing_sub2_29pt.cc' start=17 end=26 %}
 
 Απαιτούνται $$\mathcal{O}(\log_2{N})$$ ερωτήματα για τη λύση αυτή. 
-Ολόκληρος ο κώδικας ([εδώ]({% include link_to_source.md solution_name='missing_sub2_29pt.cc' %}))
+Ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='missing_sub2_29pt.cc' %})
 
 ## Λύση με δυαδική αναζήτηση *ενός διαστήματος* (18%)
 
@@ -58,10 +54,10 @@ $$a,a+1,\ldots,N-1$$ αντίστοιχα.
 Για παράδειγμα, στην ακολουθία $$[1,2,3,4,6,9,10]$$ με $$K=3$$ βρίσκουμε το $$8$$ και έπειτα τυπώνουμε τους αριθμούς 
 $$5,6,7$$ αμέσως πριν το $$8$$.
  
-{% include code.md solution_name='missing_sub3_18pt.cc' start=20 end=32 %}
+{% include code.md solution_name='missing_sub3_18pt.cc' start=20 end=29 %}
 
 Απαιτούνται $$\mathcal{O}(\log_2{N})$$ ερωτήματα για τη λύση αυτή. 
-Ολόκληρος ο κώδικας ([εδώ]({% include link_to_source.md solution_name='missing_sub3_18pt.cc' %}))
+Ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='missing_sub3_18pt.cc' %})
 
 ## Υποβέλτιστη λύση με δυαδική αναζήτηση (17%)
 
@@ -79,18 +75,21 @@ $$5,6,7$$ αμέσως πριν το $$8$$.
 {% include code.md solution_name='missing_sub4_17pt.cc' start=21 end=40 %}
 
 Απαιτούνται $$\mathcal{O}(K \cdot \log_2{N})$$ ερωτήματα για τη λύση αυτή. 
-Ολόκληρος ο κώδικας ([εδώ]({% include link_to_source.md solution_name='missing_sub4_17pt.cc' %}))
+Ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='missing_sub4_17pt.cc' %})
 
 
 ## Βέλτιστη λύση με δυαδική αναζήτηση (100%)
 
 Στο προηγούμενο υποπρόβλημα, ξεκινώντας δυαδική αναζήτηση για κάθε έναν από τους $$K$$ αριθμούς, 
-κάναμε πολλές φορές ερωτήματα για τις ίδιες θέσεις αριθμών. Αν αποθηκεύσουμε τις απαντήσεις στα ερωτήματα 
-(memoization) ώστε να μην τα επαναλάβουμε, τότε μειώνουμε αρκετά τον αριθμό των ερωτημάτων ώστε ο κώδικας 
-να περνά όλα τα test cases. 	 
+κάναμε πολλές φορές ερωτήματα για τις ίδιες θέσεις. Αν αποθηκεύσουμε τις απαντήσεις στα ερωτήματα 
+(*memoization*) ώστε να μην τα επαναλάβουμε, τότε μειώνουμε αρκετά τον αριθμό των ερωτημάτων ώστε ο κώδικας 
+να περνά όλα τα test cases. Ακολουθεί η συνάρτηση ``query`` με ενσωματωμένη την τεχνική αυτή. Κάθε κλήση στην 
+``query`` ελέγχει αν υπάρχει ήδη αποθηκευμένη απάντηση στον πίνακα ``mem`` (από προηγούμενο ερώτημα) ή αν 
+πρέπει να γίνει νέο ερώτημα.  
 
 {% include code.md solution_name='missing_bsearch_100pt.cc' start=8 end=17 %}
-Ολόκληρος ο κώδικας ([εδώ]({% include link_to_source.md solution_name='missing_bsearch_100pt.cc' %}))
+
+Ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='missing_bsearch_100pt.cc' %})
 
 ## Βέλτιστη λύση με την τεχνική *διαίρει και βασίλευε* (100%)
 
@@ -120,4 +119,4 @@ $$5,6,7$$ αμέσως πριν το $$8$$.
 αλγορίθμου θα είναι $$\mathcal{O}(K\cdot\log_2{N})$$.
 
 {% include code.md solution_name='missing_dac_100pt.cc' start=15 end=28 %}
-Ολόκληρος ο κώδικας ([εδώ]({% include link_to_source.md solution_name='missing_dac_100pt.cc' %}))
+Ολόκληρος ο κώδικας [εδώ]({% include link_to_source.md solution_name='missing_dac_100pt.cc' %})
