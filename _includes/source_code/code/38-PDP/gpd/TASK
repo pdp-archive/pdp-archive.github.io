@@ -1,0 +1,19 @@
+TASK(
+   name = "gpd",
+   test_count = 50,
+   files_dir = "testdata/38-PDP/gpd/",
+   input_file = "gpd.in",
+   output_file = "gpd.out",
+   time_limit = 2,
+   mem_limit = 128,
+   uses_stdio,
+   solutions = [
+      SOLUTION(
+         name = "gpd_efficient",
+         source = "gpd_efficient.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
+

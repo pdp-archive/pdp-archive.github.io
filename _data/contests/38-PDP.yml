@@ -45,3 +45,51 @@ bqueries:
    codes_in_git: false
    solution_tags: []
    on_judge: false
+   
+mergegame2:
+   full_name: "Παιχνίδι συγχώνευσης 2"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/10etN6f_33MNyjOg80V-g1222yCODMFYn/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: []
+   on_judge: false
+
+commsystem:
+   full_name: "Σύστημα επικοινωνίας"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1bGxbZO75p4kyY8PMgN52Stk0hZ3t9yL3/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: []
+   on_judge: false
+
+constructing:
+   full_name: "Κατασκευάζοντας γράφους"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1AHNc00xUy4J5V2AOKSPrNILrarcmqVEG/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: []
+   on_judge: false
+
+gpd:
+   full_name: "Μέγιστος γνήσιος διαιρέτης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1f05ZU5z6BjtTZUcWSakX3K431y5wgizl/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: []
+   on_judge: false
