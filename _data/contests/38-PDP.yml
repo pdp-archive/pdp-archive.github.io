@@ -55,7 +55,7 @@ mergegame2:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["greedy", "heap", "multiset", "κωδικοποίηση Huffman", "number theory"]
    on_judge: false
 
 commsystem:
@@ -67,7 +67,7 @@ commsystem:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["coding theory", "brute force", "bitwise operations"]
    on_judge: false
 
 constructing:
@@ -79,7 +79,7 @@ constructing:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["articulation points","bridges","dfs","graphs","math"]
    on_judge: false
 
 gpd:
@@ -91,5 +91,5 @@ gpd:
    solution: true
    solution_author: ""
    codes_in_git: true
-   solution_tags: []
+   solution_tags: ["number theory", "sieve of Eratosthenes", "divisibility", "primes", "prime factorisation"]
    on_judge: false
