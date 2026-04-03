@@ -93,3 +93,39 @@ gpd:
    codes_in_git: true
    solution_tags: ["number theory", "sieve of Eratosthenes", "divisibility", "primes", "prime factorisation"]
    on_judge: false
+
+shopping:
+   full_name: "Ψωνίζοντας με τον Τάκη"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1c4FN4x9G3oTpjxy4FBJYMP95V7rJtW6u/view"
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   on_judge: false
+
+flips:
+   full_name: "Ταμπλέτα ζωγραφικής"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1NvJLJv89kK2-iPzNisT11STp-8R56L6u/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["hashing", "xor", "bitwise", "pigeonhole principle", "prefix sums"]
+   on_judge: false
+
+icecream:
+   full_name: "Παγωτομηχανές"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: false
+   testcases_url: "https://drive.google.com/file/d/1I-YRVMFI7DeHLg1PRcUwYa9LEyydP68Z/view"
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   on_judge: false
