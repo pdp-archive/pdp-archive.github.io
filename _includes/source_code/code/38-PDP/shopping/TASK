@@ -1,0 +1,45 @@
+TASK(
+   name = "shopping",
+   test_count = 40,
+   files_dir = "testdata/38-PDP/shopping/",
+   input_file = "shopping.in",
+   output_file = "shopping.out",
+   time_limit = 1,
+   mem_limit = 64,
+   uses_stdio,
+   solutions = [
+      SOLUTION(
+         name = "shopping_a_sub1",
+         source = "shopping_a_sub1.cc",
+         passes_only = [1,2,3,4,5,6,7,8,9,10,11,12,13,16],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "shopping_a_sub2",
+         source = "shopping_a_sub2.cc",
+         passes_only = [12,13,14,15,16],
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "shopping_a_efficient",
+         source = "shopping_a_efficient.cc",
+         passes_up_to = 28,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "shopping_b_sub4",
+         source = "shopping_b_sub4.cc",
+         passes_only = [],
+         comment = "Κανονικά πρέπει να περνάει τα testcases [29,30,31,32], αλλά δεν έχουμε grader.",
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "shopping_b_efficient",
+         source = "shopping_b_efficient.cc",
+         passes_only = [],
+         comment = "Κανονικά πρέπει να περνάει τα testcases [29,30,31,32,33,34,35,36,37,38,39,40], αλλά δεν έχουμε grader.",
+         lang = "c++",
+      ),
+   ]
+)
+
