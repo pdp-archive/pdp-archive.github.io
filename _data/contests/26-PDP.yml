@@ -101,7 +101,7 @@ driveme:
    statement_md: true
    testcases_url: "https://drive.google.com/file/d/1dKc9yQYPF2SwbBUVZkbmMZwCs0i5uheI"
    codes_in_git: false
-   solution_tags: ["shortest paths", "dynamic programming", "dijkstra", "graphs"]
+   solution_tags: ["shortest paths", "dp", "dijkstra", "graphs"]
 
 tvmatch:
    full_name: "Τηλεοπτική μετάδοση αγώνων"

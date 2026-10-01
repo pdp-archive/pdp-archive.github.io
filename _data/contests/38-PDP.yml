@@ -3,7 +3,7 @@ bamboo:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1z9lhg0qm_5ZZ2WpPmaQa7t9O9QLjOIQ4/view"
    solution: true
    solution_author: "Γιώργος Βενιζέλος"
    codes_in_git: false
@@ -15,23 +15,11 @@ ovens:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1auaGYm_sTSjobRKqD1Vz1fPuvRGJqumL/view"
    solution: true
    solution_author: ""
    codes_in_git: true
    solution_tags: ["sorting", "arrays", "greedy"]
-   on_judge: false
-
-bqueries:
-   full_name: "Δυαδικά ερωτήματα"
-   stage: "a"
-   statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
-   statement_md: true
-   testcases_url: ""
-   solution: false
-   solution_author: ""
-   codes_in_git: false
-   solution_tags: []
    on_judge: false
 
 missing:
@@ -39,9 +27,106 @@ missing:
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
    statement_md: true
-   testcases_url: ""
+   testcases_url: "https://drive.google.com/file/d/1Ejhwobzpftf1hBUgtulClmNe6TfklJgQ/view"
+   solution: true
+   solution_author: "Κωνσταντίνος Μποκής"
+   codes_in_git: true
+   solution_tags: ["binary search","divide and conquer","interactive"]
+   on_judge: false
+
+bqueries:
+   full_name: "Δυαδικά ερωτήματα"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1I8ka6S7JEFlIC8qTzowRJJdSQZWnXs14/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1ipQ9irvejQVia2SrvlW9SqFBbcavCyk5/view"
    solution: false
    solution_author: ""
    codes_in_git: false
    solution_tags: []
    on_judge: false
+   
+mergegame2:
+   full_name: "Παιχνίδι συγχώνευσης 2"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/10etN6f_33MNyjOg80V-g1222yCODMFYn/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["greedy", "heap", "multiset", "κωδικοποίηση Huffman", "number theory"]
+   on_judge: false
+
+commsystem:
+   full_name: "Σύστημα επικοινωνίας"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1bGxbZO75p4kyY8PMgN52Stk0hZ3t9yL3/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["coding theory", "brute force", "bitwise operations"]
+   on_judge: false
+
+constructing:
+   full_name: "Κατασκευάζοντας γράφους"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1AHNc00xUy4J5V2AOKSPrNILrarcmqVEG/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["articulation points","bridges","dfs","graphs","math"]
+   on_judge: false
+
+gpd:
+   full_name: "Μέγιστος γνήσιος διαιρέτης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1wgGjbknmjAqHd03Nl6mr9dTKSBLwdBji/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1f05ZU5z6BjtTZUcWSakX3K431y5wgizl/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["number theory", "sieve of Eratosthenes", "divisibility", "primes", "prime factorisation"]
+   on_judge: false
+
+shopping:
+   full_name: "Ψωνίζοντας με τον Τάκη"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1c4FN4x9G3oTpjxy4FBJYMP95V7rJtW6u/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["binary search", "simulation", "divisibility", "greedy", "dp", "binary"]
+   on_judge: false
+
+flips:
+   full_name: "Ταμπλέτα ζωγραφικής"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1NvJLJv89kK2-iPzNisT11STp-8R56L6u/view"
+   solution: true
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: ["hashing", "xor", "bitwise", "pigeonhole principle", "prefix sums"]
+   on_judge: false
+
+icecream:
+   full_name: "Παγωτομηχανές"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1vyEa6fU3SxVhG7MaQMf4Zhc3uNOPdzDU/view"
+   statement_md: true
+   testcases_url: "https://drive.google.com/file/d/1I-YRVMFI7DeHLg1PRcUwYa9LEyydP68Z/view"
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   on_judge: false
+
