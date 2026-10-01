@@ -1,0 +1,24 @@
+TASK(
+   name = "mergegame2",
+   test_count = 25,
+   files_dir = "testdata/38-PDP/mergegame2/",
+   input_file = "mergegame2.in",
+   output_file = "mergegame2.out",
+   time_limit = 1,
+   mem_limit = 64,
+   uses_stdio,
+   solutions = [
+      SOLUTION(
+         name = "mergegame2_efficient",
+         source = "mergegame2_efficient.cc",
+         passes_all,
+         lang = "c++",
+      ),
+      SOLUTION(
+         name = "mergegame2_multiset",
+         source = "mergegame2_multiset.cc",
+         passes_all,
+         lang = "c++",
+      ),
+   ]
+)
