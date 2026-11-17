@@ -11,6 +11,12 @@ kramdown:
 collections_dir: contests
 
 collections:
+  20-PDP:
+    output: true
+    permalink: /:collection/:name
+  21-PDP:
+    output: true
+    permalink: /:collection/:name
   22-PDP:
     output: true
     permalink: /:collection/:name
@@ -64,6 +70,72 @@ collections:
     permalink: /:collection/:name
 
 defaults:
+  - scope:
+      path: ""
+      type: "11-PDP"
+    values:
+      contest: "11ος ΠΔΠ"
+      contest_url: "11-PDP"
+  - scope:
+      path: ""
+      type: "12-PDP"
+    values:
+      contest: "12ος ΠΔΠ"
+      contest_url: "12-PDP"
+  - scope:
+      path: ""
+      type: "13-PDP"
+    values:
+      contest: "13ος ΠΔΠ"
+      contest_url: "13-PDP"
+  - scope:
+      path: ""
+      type: "14-PDP"
+    values:
+      contest: "14ος ΠΔΠ"
+      contest_url: "14-PDP"
+  - scope:
+      path: ""
+      type: "15-PDP"
+    values:
+      contest: "15ος ΠΔΠ"
+      contest_url: "15-PDP"
+  - scope:
+      path: ""
+      type: "16-PDP"
+    values:
+      contest: "16ος ΠΔΠ"
+      contest_url: "16-PDP"
+  - scope:
+      path: ""
+      type: "17-PDP"
+    values:
+      contest: "17ος ΠΔΠ"
+      contest_url: "17-PDP"
+  - scope:
+      path: ""
+      type: "18-PDP"
+    values:
+      contest: "18ος ΠΔΠ"
+      contest_url: "18-PDP"
+  - scope:
+      path: ""
+      type: "19-PDP"
+    values:
+      contest: "19ος ΠΔΠ"
+      contest_url: "19-PDP"
+  - scope:
+      path: ""
+      type: "20-PDP"
+    values:
+      contest: "20ος ΠΔΠ"
+      contest_url: "20-PDP"
+  - scope:
+      path: ""
+      type: "21-PDP"
+    values:
+      contest: "21ος ΠΔΠ"
+      contest_url: "21-PDP"
   - scope:
       path: ""
       type: "22-PDP"
