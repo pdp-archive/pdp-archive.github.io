@@ -1,0 +1,65 @@
+Alexander:
+   full_name: "Το Ψηφιδωτό του Μεγάλου Αλεξάνδρου"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/19Bg9GfgtXzWWw4m5pDbTM3wOp9zAsQ-U"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+airforce:
+   full_name: "Αναχαιτίσεις στο Αιγαίο"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/10jzRH4iNr6gDzZXOr-E54sMKMTJnWCI4"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+evripos:
+   full_name: "Χαλκιδικό Αλφάβητο"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1DnD5PWVavX1-aF0kc0-2odolwMz8Oca6"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+hydrologis:
+   full_name: "HydroloGIS"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1fmvpwG49AlUKlHvC0fM5qse7Od_SVcz_"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+aegean:
+   full_name: "Aegean"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1fmvpwG49AlUKlHvC0fM5qse7Od_SVcz_"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+cpu:
+   full_name: "CPU"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1fmvpwG49AlUKlHvC0fM5qse7Od_SVcz_"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
