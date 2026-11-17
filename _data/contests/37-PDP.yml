@@ -117,3 +117,15 @@ reviews:
    codes_in_git: true
    solution_tags: ["graphs", "trees", "cycle", "priority queue", "set", "two pointers", "longest path", "segment tree"]
    on_judge: false
+ 
+league:
+   full_name: "Ένα λιγότερο βαρετό πρωτάθλημα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1JMxquPrVIASLEfNOEPMBfftRk3VLXYS3/view"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: []
+   on_judge: false
