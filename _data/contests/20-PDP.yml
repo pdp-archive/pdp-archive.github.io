@@ -1,0 +1,55 @@
+friktories:
+   full_name: "Φρυκτωρίες"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1RZ_mDGv-R6NCoHjjkkqqZcJ7JPgKskTJ"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+sabotage:
+   full_name: "Σαμποτάζ στο Γοργοπόταμο"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1L6gUnB5rrAB_qaZBKKuWcML99lRldNAS"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+blocks:
+   full_name: "Data Blocks"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1MjVy91LMzq5ijabIYdjUz_jdNIBYt1UF"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+   points: 20
+
+sonar:
+   full_name: "Sonar"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1MjVy91LMzq5ijabIYdjUz_jdNIBYt1UF"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+code:
+   full_name: "Ancient Code"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1MjVy91LMzq5ijabIYdjUz_jdNIBYt1UF"
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
