@@ -1,0 +1,58 @@
+acropolis:
+   full_name: "Ακρόπολη"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1FsMhnFXVwlzFSodHzA5eAbGLHaRiYeh-"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+apollon:
+   full_name: "Απολλώνιες Διαδρομές (Αμφικτιονία των Δελφών)"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1Nu_wCQVcb9q1j_NA72U6IzUMVj8_tga1"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+cyclotron:
+   full_name: "Κυκλικός Επιταχυντής"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+   points: 25
+
+diafonies:
+   full_name: "Επιστημονικά Ενδιαφέροντα"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 35
+
+practice:
+   full_name: "Πρακτική Άσκηση"
+   stage: "c"
+   statement_pdf_url: ""
+   statement_md: true
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 40
+
