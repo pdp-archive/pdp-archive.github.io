@@ -1,0 +1,88 @@
+dekathlo:
+   full_name: "Δέκαθλο"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1k-9Av2GZa2wfQHOKZsDem-H5iRdR7M4v"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+dimokritos:
+   full_name: "Δημόκριτος"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1ZVLnMikhGSGcORw7p6qtYTDBwPJ9og4z"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+digits:
+   full_name: "Μοναδικός πολλαπλασιασμός"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1qFC64IBBxDs40iR3YjTDoUeZTcf1za6t"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+stations:
+   full_name: "Κυκλικό ταξίδι"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1a4A8IPWI55sEropOMVKK-SvUR3-y3gvr"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+land:
+   full_name: "Ένωση ιδιοκτησιών"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/17FbMkfUcpYOm4mZGzhLiaLW-4azy3uRy"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+steps:
+   full_name: "Ανάβαση κλίμακας"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1zAHaLEIzlqSayCUGqEOBJ6KhSXd2PUhf"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+dishes:
+   full_name: "Σπάσιμο πιάτων"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1OCg2f1TlN1bTapupIyD8HgbE6H5QX6la"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+crocodiles:
+   full_name: "Κροκόδειλοι"
+   stage: "camp_c"
+   statement_pdf_url: "https://drive.google.com/file/d/1SeSQbi2hLNTzHyoQqkiTseZGxDAxe8Cw"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
