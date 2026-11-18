@@ -1,0 +1,58 @@
+patroclos:
+   full_name: "Πατρόκλεια τύείχη"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1NZwWdrZUC3fnVavIlYMY99U8UTqi2Qc_"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+cyclades:
+   full_name: "Κυκλαδικές διαδρομές"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1eh5pTg3j9SXPETiNPXBZtHFRos7LKCRJ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+
+qubits:
+   full_name: "Εργαστήριο κβαντικών υπολογιστών πανεπιστημίου Αθηνών"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1GfDHV6pw-yoCT1I-X5uzEUhoyNpPX49W"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+   points: 25
+
+sonar:
+   full_name: "Μπάλες Υαλού"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1GfDHV6pw-yoCT1I-X5uzEUhoyNpPX49W"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+   points: 35
+
+code:
+   full_name: "Θέα στην θάλασσα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1GfDHV6pw-yoCT1I-X5uzEUhoyNpPX49W"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: true
+   solution_tags: [""]
+   points: 40
+
