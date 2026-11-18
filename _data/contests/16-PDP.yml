@@ -1,0 +1,46 @@
+16_a:
+   full_name: "Αγώνες ποδηλασίας"
+   stage: "a"
+   statement_pdf_url: "https://drive.google.com/file/d/1QO8vEveKDw-NFdCok9ITb6nfiysuP_MY"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+16_b:
+   full_name: "Χρωματική σήμανση τρένων"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1k_5jkyRJLX6Bv_yYQfbvwu9bsmsYvOzn"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+16_c1:
+   full_name: "Αποθήκευση προγραμμάτων"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1baCBKC0z-R94XpJE6yPdts1njHP3oQBG"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 50
+
+16_c2:
+   full_name: "Ο αρχαιολογικός χώρος"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1a4A8IPWI55sEropOMVKK-SvUR3-y3gvr"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 50
+
