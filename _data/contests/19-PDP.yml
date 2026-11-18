@@ -1,5 +1,5 @@
 patroclos:
-   full_name: "Πατρόκλεια τύείχη"
+   full_name: "Πατρόκλεια τείχη"
    stage: "a"
    statement_pdf_url: "https://drive.google.com/file/d/1NZwWdrZUC3fnVavIlYMY99U8UTqi2Qc_"
    statement_md: false
@@ -32,7 +32,7 @@ qubits:
    solution_tags: [""]
    points: 25
 
-sonar:
+balls:
    full_name: "Μπάλες Υαλού"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1GfDHV6pw-yoCT1I-X5uzEUhoyNpPX49W"
@@ -44,7 +44,7 @@ sonar:
    solution_tags: [""]
    points: 35
 
-code:
+seaview:
    full_name: "Θέα στην θάλασσα"
    stage: "c"
    statement_pdf_url: "https://drive.google.com/file/d/1GfDHV6pw-yoCT1I-X5uzEUhoyNpPX49W"

@@ -11,6 +11,36 @@ kramdown:
 collections_dir: contests
 
 collections:
+  10-PDP:
+    output: true
+    permalink: /:collection/:name
+  11-PDP:
+    output: true
+    permalink: /:collection/:name
+  12-PDP:
+    output: true
+    permalink: /:collection/:name
+  13-PDP:
+    output: true
+    permalink: /:collection/:name
+  14-PDP:
+    output: true
+    permalink: /:collection/:name
+  15-PDP:
+    output: true
+    permalink: /:collection/:name
+  16-PDP:
+    output: true
+    permalink: /:collection/:name
+  17-PDP:
+    output: true
+    permalink: /:collection/:name
+  18-PDP:
+    output: true
+    permalink: /:collection/:name
+  19-PDP:
+    output: true
+    permalink: /:collection/:name
   20-PDP:
     output: true
     permalink: /:collection/:name
