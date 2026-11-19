@@ -1,0 +1,58 @@
+13_agym:
+   full_name: "Κύβοι"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/182erOH_A0gRKu45WEntBHfLF1JFs1XHC"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+13_alyk:
+   full_name: "Αναγράμματα"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/182erOH_A0gRKu45WEntBHfLF1JFs1XHC"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+13_b1:
+   full_name: "Ενοικίαση αυτοκινήτου"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1vVyBi1eKyQLHe388Ri8AProbHATQAsVn"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 20
+
+13_b2:
+   full_name: "Το μοίρασμα"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1vVyBi1eKyQLHe388Ri8AProbHATQAsVn"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 80
+
+13_b3:
+   full_name: "Διάταξη κύβων"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1vVyBi1eKyQLHe388Ri8AProbHATQAsVn"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 20
+
