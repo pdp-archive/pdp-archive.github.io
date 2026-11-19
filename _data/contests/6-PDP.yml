@@ -1,0 +1,55 @@
+6_agym1:
+   full_name: "Θέμα 1ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1lf1Q2YGaoQFlJxmgCsQpjZZ5IEbBv5I_"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+6_agym2:
+   full_name: "Θέμα 2ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1lf1Q2YGaoQFlJxmgCsQpjZZ5IEbBv5I_"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+6_alyk1:
+   full_name: "Θέμα 1ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1lf1Q2YGaoQFlJxmgCsQpjZZ5IEbBv5I_"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+6_alyk2:
+   full_name: "Θέμα 2ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1lf1Q2YGaoQFlJxmgCsQpjZZ5IEbBv5I_"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+6_b:
+   full_name: "Θέμα τελικής φάσης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1nq1EQpp4xbiaQD3PllBGGgT3RJOeEujw"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
