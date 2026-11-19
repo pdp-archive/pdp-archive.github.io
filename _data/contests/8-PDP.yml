@@ -1,0 +1,99 @@
+8_agym1:
+   full_name: "Θέμα 1ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_agym2:
+   full_name: "Θέμα 2ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_agym3:
+   full_name: "Θέμα 3ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_alyk1:
+   full_name: "Θέμα 1ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_alyk2:
+   full_name: "Θέμα 2ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_alyk3:
+   full_name: "Θέμα 3ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/16X_VEMSlsLR5iq1DLRiIs-WP4fyrbL2J"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_blyk:
+   full_name: "NIM"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1a4Hepm_I8Nw1FZEa6zdg_JY-oduC-sdl"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_cgym:
+   full_name: "Θέμα γυμνασίου"
+   stage: "cgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1yGCxuCi24Aq05v-TWqVRpHFC8PAlsOAw"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+8_clyk:
+   full_name: "Θέμα λυκείου"
+   stage: "clyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1IdCmbNzK9GSm6xdWdSTc1mzW2pr0UMWu"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
