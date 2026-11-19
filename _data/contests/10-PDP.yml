@@ -1,0 +1,66 @@
+10_agym:
+   full_name: "Θέμα γυμνασίου Α' Φάσης"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/14VUuRVhpmf2ff04jW3hCXQOpqE0joOLH"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+10_alyk:
+   full_name: "Θέμα λυκείου Α' Φάσης"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/14VUuRVhpmf2ff04jW3hCXQOpqE0joOLH"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+10_bgym:
+   full_name: "Multi steps"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1cZL74PQjLSOU6MtEiodn6ecvyGWLN4UH"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+10_blyk:
+   full_name: "Θέμα λυκείου Β' Φάσης"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1-BWUXZ-3yQudnoDNrIDak8tNhFYgzzYS"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+10_c1:
+   full_name: "Γραμματόσημα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1Jauw-WSvb9p3xzp_DkaoY9T07ARmF5VZ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+10_c2:
+   full_name: "Σαλιγκάρι"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1YgMq23oiB5P1HL0k3bveGXipQSqSDLB9"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+

@@ -1,0 +1,88 @@
+15_agym:
+   full_name: "Άγουρες ντομάτες"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1myc4hd81BVi19nAQzgKCCClfTTRNsPjM"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_alyk:
+   full_name: "Παραγωγή ντοματών"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1myc4hd81BVi19nAQzgKCCClfTTRNsPjM"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_bgym:
+   full_name: "Δέματα"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1kHUhshErqQ1ZWPtPKbwWcDXY-EFObX_o"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_blyk:
+   full_name: "Δύο λέξεις"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1vRMtPzPYt8KCaIyEBk3zj_mMxUlNCQVv"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_c1:
+   full_name: "Τετράπλευρο φάρων"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1nxpWRiSE_3fH9m8Wy_WX19QBYPIum8gF"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_c2:
+   full_name: "Πολύγωνο φάρων"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1nxpWRiSE_3fH9m8Wy_WX19QBYPIum8gF"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_c3:
+   full_name: "Άγνωστοι φάροι"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1nxpWRiSE_3fH9m8Wy_WX19QBYPIum8gF"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+15_c4:
+   full_name: "Διάστημα"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/1nxpWRiSE_3fH9m8Wy_WX19QBYPIum8gF"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+

@@ -1,0 +1,68 @@
+14_agym:
+   full_name: "Τέλειοι αριθμοί"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/17OTWr3M7QK7ZDNaB65gVd5e2bb2omSPJ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+14_alyk:
+   full_name: "Ύλη εξετάσεων"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/17OTWr3M7QK7ZDNaB65gVd5e2bb2omSPJ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+14_bgym:
+   full_name: "Καταμέτρηση των δέντρων του δάσους"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1kHUhshErqQ1ZWPtPKbwWcDXY-EFObX_o"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+14_blyk:
+   full_name: "Ταχυδρομικό δίκτυο"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1NcUm79oyWAnfuu9sRIyWXlKxot9qvQN0"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+14_c1:
+   full_name: "Ενοικίαση αυτοκινήτου"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/12Oi4ojd9HvLWqyHjieUoRUzvWCnwcS0H"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 20
+
+14_c2:
+   full_name: "Ο δακτύλιος των λέξεων"
+   stage: "c"
+   statement_pdf_url: "https://drive.google.com/file/d/12Oi4ojd9HvLWqyHjieUoRUzvWCnwcS0H"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+   points: 80
+
