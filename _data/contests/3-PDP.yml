@@ -1,0 +1,66 @@
+3_agym1:
+   full_name: "Θέμα 1ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/17_h9yVWgWRMhkHDxL2qAAvnbXcDHO-za"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+3_agym2:
+   full_name: "Θέμα 2ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/17_h9yVWgWRMhkHDxL2qAAvnbXcDHO-za"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+3_alyk1:
+   full_name: "Θέμα 1ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/17_h9yVWgWRMhkHDxL2qAAvnbXcDHO-za"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+3_alyk2:
+   full_name: "Θέμα 2ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/17_h9yVWgWRMhkHDxL2qAAvnbXcDHO-za"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+3_alyk3:
+   full_name: "Θέμα 3ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/17_h9yVWgWRMhkHDxL2qAAvnbXcDHO-za"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+3_b:
+   full_name: "Θέμα τελικής φάσης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1Di_K8W3R8_mKVMWppoWz8gi1Wy_wIOta"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+

@@ -8,6 +8,10 @@
 
 {% include single_stage.md stage="a" stage_title="Α' Φάση" %}
 
+{% include single_stage.md stage="agym" stage_title="Α' Φάση γυμνασίου" %}
+
+{% include single_stage.md stage="alyk" stage_title="Α' Φάση λυκείου" %}
+
 {% include single_stage.md stage="b" stage_title="Β' Φάση" %}
 
 {% include single_stage.md stage="bgym" stage_title="Β' Φάση γυμνασίου" %}
@@ -15,6 +19,10 @@
 {% include single_stage.md stage="blyk" stage_title="Β' Φάση λυκείου" %}
 
 {% include single_stage.md stage="c" stage_title="Γ' Φάση" %}
+
+{% include single_stage.md stage="cgym" stage_title="Γ' Φάση γυμνασίου" %}
+
+{% include single_stage.md stage="clyk" stage_title="Γ' Φάση λυκείου" %}
 
 {% include single_stage.md stage="camp_j" stage_title="Καμπ (juniors)" %}
 

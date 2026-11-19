@@ -1,5 +1,5 @@
 ﻿title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφορικής
-description: Site για τη συλλογή εκφωνήσεων, testcases, λύσεων και κωδίκων για τους Πανελλήνιους Διαγωνισμούς Πληροφορικής (ΠΔΠ). 
+description: Ιστοσελίδα με τις εκφωνήσεις, testcases, λύσεις και κώδικες για τους Πανελλήνιους Διαγωνισμούς Πληροφορικής (ΠΔΠ). 
 timezone: Europe/Athens
 permalink: /:title
 highlighter: rouge
@@ -11,95 +11,220 @@ kramdown:
 collections_dir: contests
 
 collections:
+  1-PDP:
+    order: 1
+    output: true
+    permalink: /:collection/:name
+  2-PDP:
+    order: 2
+    output: true
+    permalink: /:collection/:name
+  3-PDP:
+    order: 3
+    output: true
+    permalink: /:collection/:name
+  4-PDP:
+    order: 4
+    output: true
+    permalink: /:collection/:name
+  5-PDP:
+    order: 5
+    output: true
+    permalink: /:collection/:name
+  6-PDP:
+    order: 6
+    output: true
+    permalink: /:collection/:name
+  7-PDP:
+    order: 7
+    output: true
+    permalink: /:collection/:name
+  8-PDP:
+    order: 8
+    output: true
+    permalink: /:collection/:name
+  9-PDP:
+    order: 9
+    output: true
+    permalink: /:collection/:name
   10-PDP:
+    order: 10
     output: true
     permalink: /:collection/:name
   11-PDP:
+    order: 11
     output: true
     permalink: /:collection/:name
   12-PDP:
+    order: 12
     output: true
     permalink: /:collection/:name
   13-PDP:
+    order: 13
     output: true
     permalink: /:collection/:name
   14-PDP:
+    order: 14
     output: true
     permalink: /:collection/:name
   15-PDP:
+    order: 15
     output: true
     permalink: /:collection/:name
   16-PDP:
+    order: 16
     output: true
     permalink: /:collection/:name
   17-PDP:
+    order: 17
     output: true
     permalink: /:collection/:name
   18-PDP:
+    order: 18
     output: true
     permalink: /:collection/:name
   19-PDP:
+    order: 19
     output: true
     permalink: /:collection/:name
   20-PDP:
+    order: 20
     output: true
     permalink: /:collection/:name
   21-PDP:
+    order: 21
     output: true
     permalink: /:collection/:name
   22-PDP:
+    order: 22
     output: true
     permalink: /:collection/:name
   23-PDP:
+    order: 23
     output: true
     permalink: /:collection/:name
   24-PDP:
+    order: 24
     output: true
     permalink: /:collection/:name
   25-PDP:
+    order: 25
     output: true
     permalink: /:collection/:name
   26-PDP:
+    order: 26
     output: true
     permalink: /:collection/:name
   27-PDP:
+    order: 27
     output: true
     permalink: /:collection/:name
   28-PDP:
+    order: 28
     output: true
     permalink: /:collection/:name
   29-PDP:
+    order: 29
     output: true
     permalink: /:collection/:name
   30-PDP:
+    order: 30
     output: true
     permalink: /:collection/:name
   31-PDP:
+    order: 31
     output: true
     permalink: /:collection/:name
   32-PDP:
+    order: 32
     output: true
     permalink: /:collection/:name
   33-PDP:
+    order: 33
     output: true
     permalink: /:collection/:name
   34-PDP:
+    order: 34
     output: true
     permalink: /:collection/:name
   35-PDP:
+    order: 35
     output: true
     permalink: /:collection/:name
   36-PDP:
+    order: 36
     output: true
     permalink: /:collection/:name
   37-PDP:
+    order: 37
     output: true
     permalink: /:collection/:name
   38-PDP:
+    order: 38
     output: true
     permalink: /:collection/:name
 
 defaults:
+  - scope:
+      path: ""
+      type: "1-PDP"
+    values:
+      contest: "1ος ΠΔΠ"
+      contest_url: "1-PDP"
+  - scope:
+      path: ""
+      type: "2-PDP"
+    values:
+      contest: "2ος ΠΔΠ"
+      contest_url: "2-PDP"
+  - scope:
+      path: ""
+      type: "3-PDP"
+    values:
+      contest: "3ος ΠΔΠ"
+      contest_url: "3-PDP"
+  - scope:
+      path: ""
+      type: "4-PDP"
+    values:
+      contest: "4ος ΠΔΠ"
+      contest_url: "4-PDP"
+  - scope:
+      path: ""
+      type: "5-PDP"
+    values:
+      contest: "5ος ΠΔΠ"
+      contest_url: "5-PDP"
+  - scope:
+      path: ""
+      type: "6-PDP"
+    values:
+      contest: "6ος ΠΔΠ"
+      contest_url: "6-PDP"
+  - scope:
+      path: ""
+      type: "7-PDP"
+    values:
+      contest: "7ος ΠΔΠ"
+      contest_url: "7-PDP"
+  - scope:
+      path: ""
+      type: "8-PDP"
+    values:
+      contest: "8ος ΠΔΠ"
+      contest_url: "8-PDP"
+  - scope:
+      path: ""
+      type: "9-PDP"
+    values:
+      contest: "9ος ΠΔΠ"
+      contest_url: "9-PDP"
+  - scope:
+      path: ""
+      type: "10-PDP"
+    values:
+      contest: "10ος ΠΔΠ"
+      contest_url: "10-PDP"
   - scope:
       path: ""
       type: "11-PDP"
