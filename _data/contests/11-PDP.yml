@@ -1,0 +1,66 @@
+palindrom:
+   full_name: "Παλινδρομικός αριθμός"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/12H_vg2LhIbNJOdsA9NCIGhUqDu5haxRJ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+maxsum:
+   full_name: "Μέγιστο άθροισμα"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/12H_vg2LhIbNJOdsA9NCIGhUqDu5haxRJ"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+11_bgym:
+   full_name: "3n + 1"
+   stage: "bgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1cZL74PQjLSOU6MtEiodn6ecvyGWLN4UH"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+clock:
+   full_name: "Ρολόι"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1LnLkF3lenuIVVMI_MhTEZDCQoE4j1e4n"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+labyrinth:
+   full_name: "Ο θησέας και ο μινώταυρος"
+   stage: "clyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1st4YRg1oSkp4zU03MiOwE60HgvmKvRMA"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+tower:
+   full_name: "Ο πύργος της Βαβυλώνας"
+   stage: "clyk"
+   statement_pdf_url: "https://drive.google.com/file/d/19Mw1Bdo0NKH_KBoj-q2i4lejnBDuG1if"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
