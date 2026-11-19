@@ -13,8 +13,18 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
     {% include header.html %}
     {% include announce_everywhere.html %}
     {% include announce_main.html %}
-    {% assign sortedCollections = site.collections %}
-    {% for collection in site.collections reversed %} 
+    <article>
+       <h4 class="title">
+         <a href="/all">Όλοι οι διαγωνισμοί</a>
+       </h4>
+    </article>
+    <article>
+       <h4 class="title">
+         <a href="/categorised">Όλα τα προβλήματα σε κατηγορίες</a>
+       </h4>
+    </article>
+    {% assign sortedCollections = site.collections | sort: 'order' %}
+    {% for collection in sortedCollections reversed %} 
 	  {% if collection.label != "posts" %}
 	    {% for post in site[collection.label] %}
           {% if post.layout == "summary" %}		
@@ -27,16 +37,6 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
 	    {% endfor %}
       {% endif %}
     {% endfor %}
-    <article>
-       <h4 class="title">
-         <a href="/all">Όλοι οι διαγωνισμοί</a>
-       </h4>
-    </article>
-    <article>
-       <h4 class="title">
-         <a href="/categorised">Όλα τα προβλήματα σε κατηγορίες</a>
-       </h4>
-    </article>
 	<div id="footer_space"></div>
 	{% include contributors_footer.html %}
    <div style="padding-top:20px"> </div>
