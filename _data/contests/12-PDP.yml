@@ -1,0 +1,66 @@
+triangle:
+   full_name: "Τρίγωνο"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1g0DFaNXz6_9uyZuJJF_fmKq6Pv-L_Ku5"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+intersect:
+   full_name: "Intersect"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1g0DFaNXz6_9uyZuJJF_fmKq6Pv-L_Ku5"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+chemy:
+   full_name: "Ισορρόπηση χημικών εξισώσεων"
+   stage: "blyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1N6OpsH4eBy8_EdVu1UWgHDy2oKb70aG5"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+triplet:
+   full_name: "Triplet"
+   stage: "cgym"
+   statement_pdf_url: "https://drive.google.com/file/d/1NY-_ODfnQ2u5vK1_LYhN6694h97w6275"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+biblio1:
+   full_name: "Η βιβλιοθήκη (μέρος 1)"
+   stage: "clyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1KIt_bbyIopkBcfVl_RrD8gbJGIAcJbgW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+biblio2:
+   full_name: "Η βιβλιοθήκη (μέρος 2)"
+   stage: "clyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1KIt_bbyIopkBcfVl_RrD8gbJGIAcJbgW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
