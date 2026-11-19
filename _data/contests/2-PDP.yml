@@ -1,0 +1,77 @@
+2_agym1:
+   full_name: "Θέμα 1ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1bevHGCSAWGNZ7WKugK_7TEoz51ewVGXW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_agym2:
+   full_name: "Θέμα 2ο γυμνασίου"
+   stage: "agym"
+   statement_pdf_url: "https://drive.google.com/file/d/1bevHGCSAWGNZ7WKugK_7TEoz51ewVGXW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_alyk1:
+   full_name: "Θέμα 1ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1bevHGCSAWGNZ7WKugK_7TEoz51ewVGXW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_alyk2:
+   full_name: "Θέμα 2ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1bevHGCSAWGNZ7WKugK_7TEoz51ewVGXW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_alyk3:
+   full_name: "Θέμα 3ο λυκείου"
+   stage: "alyk"
+   statement_pdf_url: "https://drive.google.com/file/d/1bevHGCSAWGNZ7WKugK_7TEoz51ewVGXW"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_b1:
+   full_name: "1o Θέμα τελικής φάσης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1TT8umQHeEo4Yetqql_V0yvvv87Vo5-4x"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
+2_b2:
+   full_name: "2o Θέμα τελικής φάσης"
+   stage: "b"
+   statement_pdf_url: "https://drive.google.com/file/d/1TT8umQHeEo4Yetqql_V0yvvv87Vo5-4x"
+   statement_md: false
+   testcases_url: ""
+   solution: false
+   solution_author: ""
+   codes_in_git: false
+   solution_tags: [""]
+
