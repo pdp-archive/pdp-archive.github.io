@@ -23,6 +23,11 @@ title: Αρχείο Πανελλήνιου Διαγωνισμού Πληροφο
          <a href="/categorised">Όλα τα προβλήματα σε κατηγορίες</a>
        </h4>
     </article>
+    <article>
+       <h4 class="title">
+         <a href="/international_contests">Θέματα διεθνών διαγωνισμών</a>
+       </h4>
+    </article>
     {% assign sortedCollections = site.collections | sort: 'order' %}
     {% for collection in sortedCollections reversed %} 
 	  {% if collection.label != "posts" %}
