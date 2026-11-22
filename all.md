@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% assign sortedCollections = site.collections %}
- {% for collection in site.collections reversed %} 
+{% assign sortedCollections = site.collections | sort: 'order' %}
+ {% for collection in sortedCollections reversed %} 
   {% if collection.label != "posts" %}
     {% for post in site[collection.label] %}
        {% if post.layout == "summary" %}
